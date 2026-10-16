@@ -399,8 +399,9 @@ def test_18_notice_configured_analysis_trace_persists_after_refresh(browser_app)
     from playwright.sync_api import expect
     a=browser_app;p=a['page'];p.goto(a['url']+'/#explorer')
     # Existing browser fixture record has a persisted legacy result; new execution stays separate.
-    p.locator('#search').fill(a['issuer']);p.wait_for_timeout(500)
-    p.locator('tbody tr[data-record]').first.click()
+    p.locator('#search').fill(a['record'])
+    expect(p.locator('tbody tr[data-record]')).to_have_count(1)
+    p.locator('tbody tr[data-record]').click()
     expect(p.get_by_role('button',name='Analyse notice with configured architecture')).to_be_visible()
     p.get_by_role('button',name='Analyse notice with configured architecture').click()
     expect(p.locator('#persisted-decision-trace')).to_have_attribute('open','',timeout=15000)
@@ -409,9 +410,27 @@ def test_18_notice_configured_analysis_trace_persists_after_refresh(browser_app)
     record_id=p.locator('#analyse-configured-notice').get_attribute('data-record-id')
     before=p.request.get(a['url']+'/api/notice?id='+record_id).json()['semantic_execution']
     assert before['result']['laya']['checkpoint']=='TEST_DOUBLE'
-    p.reload();p.locator('#search').fill(a['issuer']);p.wait_for_timeout(500);p.locator('tbody tr[data-record]').first.click()
+    p.reload();p.locator('#search').fill(record_id)
+    expect(p.locator('tbody tr[data-record]')).to_have_count(1)
+    expect(p.locator('tbody tr[data-record]')).to_have_attribute('data-record',record_id)
+    p.locator('tbody tr[data-record]').click()
     p.locator('#persisted-decision-trace summary').first.click()
     expect(p.locator('#persisted-decision-trace')).to_contain_text(before['run_id'])
     p.screenshot(path='artifacts/persisted-decision-trace-smoke.png',full_page=True)
     assert p.request.get(a['url']+'/api/notice?id='+record_id).json()['semantic_execution']==before
+    assert not a['errors'],a['errors']
+
+
+def test_19_phase_v2_separates_pending_study_from_historical_results(browser_app):
+    from playwright.sync_api import expect
+    a=browser_app;p=a['page']
+    if p.locator('#notice-dialog').evaluate('(e)=>e.open'):p.get_by_role('button',name='Close notice').click()
+    p.goto(a['url']+'/#model_lab')
+    expect(p.get_by_role('heading',name='Aggregation & selective cascade · v2',exact=True)).to_be_visible()
+    expect(p.get_by_text('Automation disabled. Customer accuracy unknown.',exact=False)).to_be_visible()
+    expect(p.get_by_role('heading',name='Same source · same truth · five architectures',exact=True)).to_be_visible()
+    r=p.request.get(a['url']+'/api/cascade/experiment').json()
+    assert r['customer_accuracy'] is None;assert not r['automation_enabled']
+    assert r['aggregation']['before_yes']==0;assert r['aggregation']['after_yes']==11
+    p.screenshot(path='artifacts/cascade-v2-model-lab.png',full_page=True)
     assert not a['errors'],a['errors']

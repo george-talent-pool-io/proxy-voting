@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-10-16T22:33:33.044067+00:00",
+  "scope": "Post-inference analysis and completion helpers; core inference remains in COMMON-CONDITION-FREEZE.json. Declared before new challenge inference.",
+  "files": {
+    "cascade/always_reference.py": "fcbe50fc6fef6d2c21528e1c12f7f01f1baec8cfb1da166bdd86db533d15e1bd",
+    "cascade/reporting.py": "56128877e2ef43b0668f1e15477978210949783078469c770ffc02f2a12c3823",
+    "cascade/application.py": "90d1c2f61414b1b590e140d97c3cb09236758605f56f654b3f4336f464472a6f",
+    "cascade/aggregation_controls.py": "17a246cbe61ab908b6b530e0d3b7d6ec3bdac154893b51cc8437206b2d48919e",
+    "scripts/verify_cascade_phase.py": "86ed39743f36123e280625619ed4230d2f71446cabdd2f587fb623c8be7fafed",
+    "scripts/run_cascade_phase.py": "79a1708783fb531051190c821331d5a1250ee1ad3e7d8b97b1b63c37f8d9c138",
+    "scripts/start_cascade_runtime.py": "39bf840d3166ca50f3546a2da0f20a5778f9c849684b1a2339a017cb8c4d145d",
+    "apps/api/cascade_views.py": "83c7c1e849274d19be05ef6078abfd694dd2764c2a698d66c12f214bb93fcb3b"
+  },
+  "automation_enabled": false
+}

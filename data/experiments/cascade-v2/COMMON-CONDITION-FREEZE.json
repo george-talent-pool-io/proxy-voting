@@ -1,0 +1,24 @@
+{
+  "created_at": "2026-10-16T21:36:03.525849+00:00",
+  "files": {
+    "cascade/aggregation.py": "11f6c3712fd4284c3295b0d079a6fd1576e9b00525a39032bbb76f7bbb612d93",
+    "cascade/models.py": "787424b1e8e2810afc554a563478437cfceb7f259d575964b7cec67502e3398f",
+    "cascade/aggregation_study.py": "d75deac5a61ee67977b6e5010c6917faa10f7e0e51d93616da336bad80464431",
+    "cascade/__init__.py": "240d60a5e250daa8cf6751328020f33147f195c611d60289f01f224dee372c4a",
+    "cascade/routing.py": "9b056eba3f12f3d8102ed1affd33617361f41b00629dc5e07937e1ce4e3a4e6c",
+    "cascade/pipeline.py": "5d09d63523e1f67f2b8247e412fdb322b7fe12c13a1556f95ea6584dc05e65d8",
+    "cascade/resources.py": "4d6d25f4a03f45d7c32325e200d50986e682ec5bb9456055b19560c6f67abbd3",
+    "cascade/fallback.py": "e28920832687b6b4acf8218d5464871a1ff885e3ee97e4ba25697d25ae0aa7a1",
+    "cascade/study.py": "4e47b55a35af08aa98accc16d6eded28a7fff78a408d7a7712a5a5a4022ae615",
+    "cascade/validation.py": "b1a529fa6d599acaf47d287bd017d5151bdbbc1924028b9d570f11dcb515293e",
+    "cascade/proxy_semantic_common_v1.txt": "9b2c32f2995b11a68aed478cb201d62c75c057157946c3595080c349e0340ca6",
+    "data/experiments/cascade-v2/DESIGN.json": "089fd054b6c41d728c72df7dae9cfd51d21db2966668cf61f4ddf7fdf629ada7",
+    "data/experiments/cascade-v2/LLM-CONFIGS-v3.json": "4c4ea290883c26c3d986d7f00702d2da568b7055b1d1659ce0f81a4036ce2f76",
+    "data/experiments/cascade-v2/AGGREGATION-SELECTION-v2.json": "20591f4f6b2e24c95748ff6f926fd309cb48a57cc2172a959f58c1ceac2b2927",
+    "data/experiments/cascade-v2/routing-validation-80.json": "33cb1701e454398078a7eb17b78cf984e78190ceb980481c011053b0afefc693",
+    "data/experiments/cascade-v2/LLM-validation-40.json": "6673de711fb62b7f794e2daa3e21b1d67e3bbef8167f39f92e7242b8a6727d0e",
+    "data/experiments/cascade-v2/RUNTIME-CONDITION.json": "415c48d8a8315464879637063be296099fa808293d1650e4d67d4961500992f6"
+  },
+  "no_challenge_tuning": true,
+  "automation_enabled": false
+}

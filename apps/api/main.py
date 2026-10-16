@@ -317,3 +317,6 @@ def index():return FileResponse(ROOT/'apps/web/index.html')
 # Versioned complete architecture, separate from historical frozen run format.
 from apps.api.semantic_views import router as semantic_router
 app.include_router(semantic_router)
+
+from apps.api.cascade_views import router as cascade_router
+app.include_router(cascade_router)

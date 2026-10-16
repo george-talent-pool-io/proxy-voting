@@ -44,3 +44,4 @@ def client(db):
 
 def pytest_configure(config):
     config.addinivalue_line('markers','local_llm: opt-in integration tests executing the pinned real local generative model')
+    config.addinivalue_line('markers','qwen_local: opt-in real Qwen3.8 Direct/xhigh integration inference')

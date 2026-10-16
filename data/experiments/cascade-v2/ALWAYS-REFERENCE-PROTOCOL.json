@@ -1,0 +1,8 @@
+{
+  "declared_at": "2026-10-16T22:26:36.794366+00:00",
+  "before_challenge_inference": true,
+  "purpose": "Isolate routing from the change to a capable nine-field specialist",
+  "method": "Same capable specialist + always-primary-fallback. Reuse actual identical-context invoked C_SELECTIVE results and generate every missing gate-accepted case regardless of truth. No result/prompt selection from challenge labels.",
+  "timing": "Quality reference with mixed/recomposed durations; excluded from independent timed architecture latency comparisons",
+  "automation_enabled": false
+}

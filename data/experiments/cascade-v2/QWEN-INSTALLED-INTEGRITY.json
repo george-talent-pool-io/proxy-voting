@@ -1,0 +1,31 @@
+{
+  "verified_at": "2026-10-16T21:24:26.474161+00:00",
+  "manifest_digest": "25b843619e944cd0ae6069f94ff4e5e26a16e109ccbc0a66a0f05979ed70098e",
+  "blobs": [
+    {
+      "digest": "sha256:492b2922d38e553cabc2d319345644ed482874fbf5e5c9e4495cbf8e17b0cf5f",
+      "size": 215,
+      "verified": true
+    },
+    {
+      "digest": "sha256:ac3714bfdddeca31351f2752bf1a63f266f4df87c0b68c895e44945ca704448e",
+      "size": 931146016,
+      "verified": true
+    },
+    {
+      "digest": "sha256:f5f1dd8920d417aac2718b0bda3403da274301efdd6760b4f0f4b864ff2ad57d",
+      "size": 16810714464,
+      "verified": true
+    },
+    {
+      "digest": "sha256:4c6a8e842ef0d8504549facfb03f1273a8d0022991519bc1888522cc1a5517d1",
+      "size": 11345,
+      "verified": true
+    },
+    {
+      "digest": "sha256:448d29437397713495b408d51b4ccbc5ba95240a7583643efb2304921950b111",
+      "size": 92,
+      "verified": true
+    }
+  ]
+}

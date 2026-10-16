@@ -1,0 +1,7 @@
+{
+  "validation_positive_support": 11,
+  "before_yes": 0,
+  "after_yes": 11,
+  "same_checkpoint": true,
+  "weights_retrained": false
+}

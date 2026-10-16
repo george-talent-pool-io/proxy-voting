@@ -1,0 +1,13 @@
+{
+  "recorded_at": "2026-10-16T22:09:47.846086+00:00",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "python": "3.12.12 (main, Oct  9 2025, 11:07:00) [Clang 17.0.0 (clang-1700.0.13.3)]",
+  "logical_cores": 16,
+  "physical_cores": 16,
+  "unified_memory_bytes": 68719476736,
+  "ollama_version": "0.34.3",
+  "ollama_device": "Apple Metal",
+  "client_concurrency": 1,
+  "checkpoints_retrained": false
+}

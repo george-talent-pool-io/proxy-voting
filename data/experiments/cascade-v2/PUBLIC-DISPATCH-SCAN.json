@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-16T21:54:29.647891+00:00",
+  "records": 7683,
+  "routing_counts": {
+    "NOT_APPLICABLE": 7683
+  },
+  "iso_hints": 0,
+  "tags_present": {},
+  "source_ids_text_hash_digest": "92c6126b9f30af22091462ed00f2951589a33589f780c369a8614c40d4c16593",
+  "laya_invocations": 0,
+  "llm_invocations": 0,
+  "expert_accuracy": null,
+  "method": "Read-only deterministic input-dispatch audit; only VALID/PARTIAL ISO applies structured parser path."
+}

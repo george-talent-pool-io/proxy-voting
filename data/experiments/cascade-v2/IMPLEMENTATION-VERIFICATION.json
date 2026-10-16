@@ -1,0 +1,23 @@
+{
+  "software_log": "artifacts/cascade-ready-software-tests.log",
+  "software_summary": "1979 passed, 148 deselected, 322 warnings in 11.44s",
+  "browser_log": "artifacts/cascade-browser-completion.log",
+  "browser_summary": "19 passed in 51.51s",
+  "application_conservative_defaults_verified": true,
+  "baseline_preserved": true,
+  "blocking_validation_before_after": [
+    0,
+    11
+  ],
+  "main_experiment": {
+    "state": "RUNNING",
+    "stage": "validate",
+    "pid": 49881,
+    "timestamp": "2026-10-16T21:36:42.683848+00:00",
+    "automation_enabled": false,
+    "customer_accuracy": null
+  },
+  "completion_gate": "NOT_MET_PENDING_FULL_MODEL_AND_ROUTING_EVALUATION",
+  "automation_enabled": false,
+  "customer_accuracy": null
+}

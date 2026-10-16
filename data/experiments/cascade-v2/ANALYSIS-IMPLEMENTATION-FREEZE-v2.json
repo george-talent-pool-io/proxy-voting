@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-10-16T23:25:38.062144+00:00",
+  "supersedes_analysis_manifest_sha256": "ccc2074b0f42b1a1b24631a799a76b6baa42360da250754e5c2c1de1d8830a9a",
+  "reason": "Correct verification of an append-only operational event-log prefix accidentally included in the prediction commit. Predictions remain exact-hash verified. Add requested one-shot local report/notification delivery. No inference, model, prompt, route-selection or scoring criteria change.",
+  "declared_before_new_challenge_inference": true,
+  "files": {
+    "cascade/always_reference.py": "fcbe50fc6fef6d2c21528e1c12f7f01f1baec8cfb1da166bdd86db533d15e1bd",
+    "cascade/reporting.py": "4e9990c8f83edf9072ca6eb11257498d908972eff5eb3ca7742a7e69a1101a40",
+    "cascade/application.py": "90d1c2f61414b1b590e140d97c3cb09236758605f56f654b3f4336f464472a6f",
+    "cascade/aggregation_controls.py": "17a246cbe61ab908b6b530e0d3b7d6ec3bdac154893b51cc8437206b2d48919e",
+    "scripts/verify_cascade_phase.py": "9b59a71865365383539758a292f41328874efb6452dbfee0c1a5f662f502bf97",
+    "scripts/run_cascade_phase.py": "79a1708783fb531051190c821331d5a1250ee1ad3e7d8b97b1b63c37f8d9c138",
+    "scripts/start_cascade_runtime.py": "39bf840d3166ca50f3546a2da0f20a5778f9c849684b1a2339a017cb8c4d145d",
+    "apps/api/cascade_views.py": "83c7c1e849274d19be05ef6078abfd694dd2764c2a698d66c12f214bb93fcb3b",
+    "cascade/commits.py": "24efddd8530a4ff773061d72176278f5089cdd8b5c49f062e325926a92b1bb12",
+    "scripts/watch_cascade_completion.py": "521dfef0f4a454a3e7412ac5ca4ad702eaf485b4ae82ac8e11e174581a339ace"
+  },
+  "preserved_v1_source": {
+    "data/experiments/cascade-v2/analysis-v1-source/cascade/reporting.py": "56128877e2ef43b0668f1e15477978210949783078469c770ffc02f2a12c3823",
+    "data/experiments/cascade-v2/analysis-v1-source/scripts/verify_cascade_phase.py": "86ed39743f36123e280625619ed4230d2f71446cabdd2f587fb623c8be7fafed"
+  },
+  "automation_enabled": false
+}

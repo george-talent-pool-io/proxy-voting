@@ -113,11 +113,16 @@ def analyse(request:AnalyseRequest):
         from semantic_pipeline.routing import RoutingConfig
         from semantic_runtime.fallback import configured_fallback
         selection=load(EXPERIMENT/'VALIDATION-SELECTION.json',{})
-        model=laya_for(architecture)
-        model_load_ms=(time.perf_counter()-started)*1000
-        result=run(text,architecture,laya_model=model,fallback=configured_fallback() if architecture in ('C','D','E') else None,
-            routing=RoutingConfig(**selection.get('routing',{}).get(architecture,{})),
-            reconciliation_policy=selection.get('reconciliation_policies',{}).get(architecture,{}))
+        if os.environ.get('SEMANTIC_PIPELINE_VERSION','v1')=='v2' and architecture in ('C','E'):
+            from cascade.application import classify
+            result=classify(text,architecture)
+            model_load_ms=None  # v2 total includes model construction; no fabricated warm load duration.
+        else:
+            model=laya_for(architecture)
+            model_load_ms=(time.perf_counter()-started)*1000
+            result=run(text,architecture,laya_model=model,fallback=configured_fallback() if architecture in ('C','D','E') else None,
+                routing=RoutingConfig(**selection.get('routing',{}).get(architecture,{})),
+                reconciliation_policy=selection.get('reconciliation_policies',{}).get(architecture,{}))
         result['latencies']['model_load_ms']=model_load_ms
         result['latencies']['request_wall_total_ms']=(time.perf_counter()-started)*1000
         run_id=str(uuid.uuid4());target=ROOT/'data/semantic-runs';target.mkdir(exist_ok=True)

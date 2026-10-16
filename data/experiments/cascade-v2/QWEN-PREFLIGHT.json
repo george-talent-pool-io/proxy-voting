@@ -1,0 +1,25 @@
+{
+  "verified_before_download_at": "2026-10-16T21:14:05.171462+00:00",
+  "publisher": "Qwen",
+  "upstream": "Qwen/Qwen3.8-27B",
+  "upstream_revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+  "hf_total_parameters_including_vision": 27781427952,
+  "ollama_language_parameters_approx": 27300000000,
+  "quantisation": "Q4_K_M",
+  "model": "qwen3.8:27b-q4_K_M",
+  "digest": "25b843619e944cd0ae6069f94ff4e5e26a16e109ccbc0a66a0f05979ed70098e",
+  "download_bytes": 17741872132,
+  "expected_unified_memory_bytes_range": [
+    21000000000,
+    28000000000
+  ],
+  "memory_estimate_not_measurement": true,
+  "licence": "Apache-2.0",
+  "runtime": "Ollama 0.34.3; qwen35 architecture already supported; thinking true/false available, exact controls checked after pull",
+  "sources": [
+    "https://huggingface.co/Qwen/Qwen3.8-27B",
+    "https://ollama.com/library/qwen3.8:27b-q4_K_M",
+    "https://docs.ollama.com/capabilities/thinking"
+  ],
+  "notices_transmitted": 0
+}

@@ -1,0 +1,1486 @@
+{
+  "created_at": "2026-10-16T22:30:52.523105+00:00",
+  "source_sha256": "3808d8758d5c98f20c9b8f3334ab2b58a7c24550287b8dd23eeb072736199438",
+  "selected_config_sha256_unchanged": "20591f4f6b2e24c95748ff6f926fd309cb48a57cc2172a959f58c1ceac2b2927",
+  "purpose": "Equal document-absence policy; diagnostic only, no model/routing selection",
+  "scope": "Same 180 development validation notices, never challenge data; supplied validation has historical train overlap.",
+  "selection_changed": false,
+  "candidates": [
+    {
+      "config": {
+        "strategy": "MAX_POSITIVE",
+        "min_score": 0.7,
+        "min_margin": 0.2,
+        "voting_route": null
+      },
+      "fields": {
+        "share_blocking": {
+          "assertions": 180,
+          "correct": 144,
+          "positive_support": 15,
+          "positive_detected": 15,
+          "positive_misses": 0,
+          "false_positives": 2
+        },
+        "poa_required": {
+          "assertions": 180,
+          "correct": 172,
+          "positive_support": 17,
+          "positive_detected": 17,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "registration_required": {
+          "assertions": 80,
+          "correct": 55,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "beneficial_owner_disclosure_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "holding_confirmation_required": {
+          "assertions": 80,
+          "correct": 50,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "split_voting_restricted": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 1
+        },
+        "securities_lending_recall_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "other_voting_restriction": {
+          "assertions": 80,
+          "correct": 55,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        }
+      },
+      "totals": {
+        "assertions": 840,
+        "correct": 632,
+        "positive_support": 56,
+        "positive_detected": 48,
+        "positive_misses": 8,
+        "false_positives": 8
+      }
+    },
+    {
+      "config": {
+        "strategy": "MAX_POSITIVE",
+        "min_score": 0.9,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "fields": {
+        "share_blocking": {
+          "assertions": 180,
+          "correct": 144,
+          "positive_support": 15,
+          "positive_detected": 15,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "poa_required": {
+          "assertions": 180,
+          "correct": 172,
+          "positive_support": 17,
+          "positive_detected": 17,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "registration_required": {
+          "assertions": 80,
+          "correct": 51,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "holding_confirmation_required": {
+          "assertions": 80,
+          "correct": 50,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "split_voting_restricted": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 1
+        },
+        "securities_lending_recall_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "other_voting_restriction": {
+          "assertions": 80,
+          "correct": 55,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        }
+      },
+      "totals": {
+        "assertions": 840,
+        "correct": 628,
+        "positive_support": 56,
+        "positive_detected": 44,
+        "positive_misses": 12,
+        "false_positives": 6
+      }
+    },
+    {
+      "config": {
+        "strategy": "MAX_POSITIVE",
+        "min_score": 0.98,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "fields": {
+        "share_blocking": {
+          "assertions": 180,
+          "correct": 144,
+          "positive_support": 15,
+          "positive_detected": 15,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "poa_required": {
+          "assertions": 180,
+          "correct": 172,
+          "positive_support": 17,
+          "positive_detected": 17,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "registration_required": {
+          "assertions": 80,
+          "correct": 51,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "holding_confirmation_required": {
+          "assertions": 80,
+          "correct": 50,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "split_voting_restricted": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "securities_lending_recall_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "other_voting_restriction": {
+          "assertions": 80,
+          "correct": 55,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        }
+      },
+      "totals": {
+        "assertions": 840,
+        "correct": 628,
+        "positive_support": 56,
+        "positive_detected": 44,
+        "positive_misses": 12,
+        "false_positives": 5
+      }
+    },
+    {
+      "config": {
+        "strategy": "MAX_MARGIN",
+        "min_score": 0.7,
+        "min_margin": 0.2,
+        "voting_route": null
+      },
+      "fields": {
+        "share_blocking": {
+          "assertions": 180,
+          "correct": 144,
+          "positive_support": 15,
+          "positive_detected": 15,
+          "positive_misses": 0,
+          "false_positives": 2
+        },
+        "poa_required": {
+          "assertions": 180,
+          "correct": 172,
+          "positive_support": 17,
+          "positive_detected": 17,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "registration_required": {
+          "assertions": 80,
+          "correct": 55,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "holding_confirmation_required": {
+          "assertions": 80,
+          "correct": 50,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "split_voting_restricted": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 1
+        },
+        "securities_lending_recall_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "other_voting_restriction": {
+          "assertions": 80,
+          "correct": 54,
+          "positive_support": 4,
+          "positive_detected": 3,
+          "positive_misses": 1,
+          "false_positives": 0
+        }
+      },
+      "totals": {
+        "assertions": 840,
+        "correct": 631,
+        "positive_support": 56,
+        "positive_detected": 47,
+        "positive_misses": 9,
+        "false_positives": 5
+      }
+    },
+    {
+      "config": {
+        "strategy": "MAX_MARGIN",
+        "min_score": 0.9,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "fields": {
+        "share_blocking": {
+          "assertions": 180,
+          "correct": 144,
+          "positive_support": 15,
+          "positive_detected": 15,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "poa_required": {
+          "assertions": 180,
+          "correct": 172,
+          "positive_support": 17,
+          "positive_detected": 17,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "registration_required": {
+          "assertions": 80,
+          "correct": 51,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "holding_confirmation_required": {
+          "assertions": 80,
+          "correct": 50,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "split_voting_restricted": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 1
+        },
+        "securities_lending_recall_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "other_voting_restriction": {
+          "assertions": 80,
+          "correct": 54,
+          "positive_support": 4,
+          "positive_detected": 3,
+          "positive_misses": 1,
+          "false_positives": 0
+        }
+      },
+      "totals": {
+        "assertions": 840,
+        "correct": 627,
+        "positive_support": 56,
+        "positive_detected": 43,
+        "positive_misses": 13,
+        "false_positives": 4
+      }
+    },
+    {
+      "config": {
+        "strategy": "MAX_MARGIN",
+        "min_score": 0.98,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "fields": {
+        "share_blocking": {
+          "assertions": 180,
+          "correct": 144,
+          "positive_support": 15,
+          "positive_detected": 15,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "poa_required": {
+          "assertions": 180,
+          "correct": 172,
+          "positive_support": 17,
+          "positive_detected": 17,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "registration_required": {
+          "assertions": 80,
+          "correct": 51,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "holding_confirmation_required": {
+          "assertions": 80,
+          "correct": 50,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "split_voting_restricted": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "securities_lending_recall_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "other_voting_restriction": {
+          "assertions": 80,
+          "correct": 54,
+          "positive_support": 4,
+          "positive_detected": 3,
+          "positive_misses": 1,
+          "false_positives": 0
+        }
+      },
+      "totals": {
+        "assertions": 840,
+        "correct": 627,
+        "positive_support": 56,
+        "positive_detected": 43,
+        "positive_misses": 13,
+        "false_positives": 3
+      }
+    },
+    {
+      "config": {
+        "strategy": "ANY_STRONG_POSITIVE",
+        "min_score": 0.7,
+        "min_margin": 0.2,
+        "voting_route": null
+      },
+      "fields": {
+        "share_blocking": {
+          "assertions": 180,
+          "correct": 144,
+          "positive_support": 15,
+          "positive_detected": 15,
+          "positive_misses": 0,
+          "false_positives": 2
+        },
+        "poa_required": {
+          "assertions": 180,
+          "correct": 172,
+          "positive_support": 17,
+          "positive_detected": 17,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "registration_required": {
+          "assertions": 80,
+          "correct": 55,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "beneficial_owner_disclosure_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "holding_confirmation_required": {
+          "assertions": 80,
+          "correct": 50,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "split_voting_restricted": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 1
+        },
+        "securities_lending_recall_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "other_voting_restriction": {
+          "assertions": 80,
+          "correct": 55,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        }
+      },
+      "totals": {
+        "assertions": 840,
+        "correct": 632,
+        "positive_support": 56,
+        "positive_detected": 48,
+        "positive_misses": 8,
+        "false_positives": 8
+      }
+    },
+    {
+      "config": {
+        "strategy": "ANY_STRONG_POSITIVE",
+        "min_score": 0.9,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "fields": {
+        "share_blocking": {
+          "assertions": 180,
+          "correct": 144,
+          "positive_support": 15,
+          "positive_detected": 15,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "poa_required": {
+          "assertions": 180,
+          "correct": 172,
+          "positive_support": 17,
+          "positive_detected": 17,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "registration_required": {
+          "assertions": 80,
+          "correct": 51,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "holding_confirmation_required": {
+          "assertions": 80,
+          "correct": 50,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "split_voting_restricted": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 1
+        },
+        "securities_lending_recall_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "other_voting_restriction": {
+          "assertions": 80,
+          "correct": 55,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        }
+      },
+      "totals": {
+        "assertions": 840,
+        "correct": 628,
+        "positive_support": 56,
+        "positive_detected": 44,
+        "positive_misses": 12,
+        "false_positives": 6
+      }
+    },
+    {
+      "config": {
+        "strategy": "ANY_STRONG_POSITIVE",
+        "min_score": 0.98,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "fields": {
+        "share_blocking": {
+          "assertions": 180,
+          "correct": 144,
+          "positive_support": 15,
+          "positive_detected": 15,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "poa_required": {
+          "assertions": 180,
+          "correct": 172,
+          "positive_support": 17,
+          "positive_detected": 17,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "registration_required": {
+          "assertions": 80,
+          "correct": 51,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "holding_confirmation_required": {
+          "assertions": 80,
+          "correct": 50,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "split_voting_restricted": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "securities_lending_recall_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "other_voting_restriction": {
+          "assertions": 80,
+          "correct": 55,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 1
+        }
+      },
+      "totals": {
+        "assertions": 840,
+        "correct": 628,
+        "positive_support": 56,
+        "positive_detected": 44,
+        "positive_misses": 12,
+        "false_positives": 5
+      }
+    },
+    {
+      "config": {
+        "strategy": "WEIGHTED_PASSAGE",
+        "min_score": 0.7,
+        "min_margin": 0.2,
+        "voting_route": null
+      },
+      "fields": {
+        "share_blocking": {
+          "assertions": 180,
+          "correct": 145,
+          "positive_support": 15,
+          "positive_detected": 15,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "poa_required": {
+          "assertions": 180,
+          "correct": 172,
+          "positive_support": 17,
+          "positive_detected": 17,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "registration_required": {
+          "assertions": 80,
+          "correct": 55,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "holding_confirmation_required": {
+          "assertions": 80,
+          "correct": 51,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "split_voting_restricted": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 1
+        },
+        "securities_lending_recall_required": {
+          "assertions": 80,
+          "correct": 53,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "other_voting_restriction": {
+          "assertions": 80,
+          "correct": 54,
+          "positive_support": 4,
+          "positive_detected": 3,
+          "positive_misses": 1,
+          "false_positives": 0
+        }
+      },
+      "totals": {
+        "assertions": 840,
+        "correct": 634,
+        "positive_support": 56,
+        "positive_detected": 47,
+        "positive_misses": 9,
+        "false_positives": 2
+      }
+    },
+    {
+      "config": {
+        "strategy": "WEIGHTED_PASSAGE",
+        "min_score": 0.9,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "fields": {
+        "share_blocking": {
+          "assertions": 180,
+          "correct": 145,
+          "positive_support": 15,
+          "positive_detected": 15,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "poa_required": {
+          "assertions": 180,
+          "correct": 172,
+          "positive_support": 17,
+          "positive_detected": 17,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "registration_required": {
+          "assertions": 80,
+          "correct": 51,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "holding_confirmation_required": {
+          "assertions": 80,
+          "correct": 51,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "split_voting_restricted": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 1
+        },
+        "securities_lending_recall_required": {
+          "assertions": 80,
+          "correct": 53,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "other_voting_restriction": {
+          "assertions": 80,
+          "correct": 54,
+          "positive_support": 4,
+          "positive_detected": 3,
+          "positive_misses": 1,
+          "false_positives": 0
+        }
+      },
+      "totals": {
+        "assertions": 840,
+        "correct": 630,
+        "positive_support": 56,
+        "positive_detected": 43,
+        "positive_misses": 13,
+        "false_positives": 1
+      }
+    },
+    {
+      "config": {
+        "strategy": "WEIGHTED_PASSAGE",
+        "min_score": 0.98,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "fields": {
+        "share_blocking": {
+          "assertions": 180,
+          "correct": 145,
+          "positive_support": 15,
+          "positive_detected": 15,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "poa_required": {
+          "assertions": 180,
+          "correct": 172,
+          "positive_support": 17,
+          "positive_detected": 17,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "registration_required": {
+          "assertions": 80,
+          "correct": 51,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "holding_confirmation_required": {
+          "assertions": 80,
+          "correct": 51,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "split_voting_restricted": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "securities_lending_recall_required": {
+          "assertions": 80,
+          "correct": 53,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "other_voting_restriction": {
+          "assertions": 80,
+          "correct": 54,
+          "positive_support": 4,
+          "positive_detected": 3,
+          "positive_misses": 1,
+          "false_positives": 0
+        }
+      },
+      "totals": {
+        "assertions": 840,
+        "correct": 630,
+        "positive_support": 56,
+        "positive_detected": 43,
+        "positive_misses": 13,
+        "false_positives": 0
+      }
+    },
+    {
+      "config": {
+        "strategy": "LAST_RELEVANT_STATEMENT",
+        "min_score": 0.7,
+        "min_margin": 0.2,
+        "voting_route": null
+      },
+      "fields": {
+        "share_blocking": {
+          "assertions": 180,
+          "correct": 144,
+          "positive_support": 15,
+          "positive_detected": 15,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "poa_required": {
+          "assertions": 180,
+          "correct": 172,
+          "positive_support": 17,
+          "positive_detected": 17,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "registration_required": {
+          "assertions": 80,
+          "correct": 55,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "holding_confirmation_required": {
+          "assertions": 80,
+          "correct": 50,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "split_voting_restricted": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 1
+        },
+        "securities_lending_recall_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "other_voting_restriction": {
+          "assertions": 80,
+          "correct": 54,
+          "positive_support": 4,
+          "positive_detected": 3,
+          "positive_misses": 1,
+          "false_positives": 0
+        }
+      },
+      "totals": {
+        "assertions": 840,
+        "correct": 631,
+        "positive_support": 56,
+        "positive_detected": 47,
+        "positive_misses": 9,
+        "false_positives": 2
+      }
+    },
+    {
+      "config": {
+        "strategy": "LAST_RELEVANT_STATEMENT",
+        "min_score": 0.9,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "fields": {
+        "share_blocking": {
+          "assertions": 180,
+          "correct": 144,
+          "positive_support": 15,
+          "positive_detected": 15,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "poa_required": {
+          "assertions": 180,
+          "correct": 172,
+          "positive_support": 17,
+          "positive_detected": 17,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "registration_required": {
+          "assertions": 80,
+          "correct": 51,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "holding_confirmation_required": {
+          "assertions": 80,
+          "correct": 50,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "split_voting_restricted": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 1
+        },
+        "securities_lending_recall_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "other_voting_restriction": {
+          "assertions": 80,
+          "correct": 54,
+          "positive_support": 4,
+          "positive_detected": 3,
+          "positive_misses": 1,
+          "false_positives": 0
+        }
+      },
+      "totals": {
+        "assertions": 840,
+        "correct": 627,
+        "positive_support": 56,
+        "positive_detected": 43,
+        "positive_misses": 13,
+        "false_positives": 1
+      }
+    },
+    {
+      "config": {
+        "strategy": "LAST_RELEVANT_STATEMENT",
+        "min_score": 0.98,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "fields": {
+        "share_blocking": {
+          "assertions": 180,
+          "correct": 144,
+          "positive_support": 15,
+          "positive_detected": 15,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "poa_required": {
+          "assertions": 180,
+          "correct": 172,
+          "positive_support": 17,
+          "positive_detected": 17,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "registration_required": {
+          "assertions": 80,
+          "correct": 51,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "holding_confirmation_required": {
+          "assertions": 80,
+          "correct": 50,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "split_voting_restricted": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "securities_lending_recall_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "other_voting_restriction": {
+          "assertions": 80,
+          "correct": 54,
+          "positive_support": 4,
+          "positive_detected": 3,
+          "positive_misses": 1,
+          "false_positives": 0
+        }
+      },
+      "totals": {
+        "assertions": 840,
+        "correct": 627,
+        "positive_support": 56,
+        "positive_detected": 43,
+        "positive_misses": 13,
+        "false_positives": 0
+      }
+    },
+    {
+      "config": {
+        "strategy": "SUPERSESSION_AWARE",
+        "min_score": 0.7,
+        "min_margin": 0.2,
+        "voting_route": null
+      },
+      "fields": {
+        "share_blocking": {
+          "assertions": 180,
+          "correct": 145,
+          "positive_support": 15,
+          "positive_detected": 15,
+          "positive_misses": 0,
+          "false_positives": 1
+        },
+        "poa_required": {
+          "assertions": 180,
+          "correct": 173,
+          "positive_support": 17,
+          "positive_detected": 17,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "registration_required": {
+          "assertions": 80,
+          "correct": 56,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "holding_confirmation_required": {
+          "assertions": 80,
+          "correct": 51,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "split_voting_restricted": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 1
+        },
+        "securities_lending_recall_required": {
+          "assertions": 80,
+          "correct": 53,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "other_voting_restriction": {
+          "assertions": 80,
+          "correct": 55,
+          "positive_support": 4,
+          "positive_detected": 3,
+          "positive_misses": 1,
+          "false_positives": 0
+        }
+      },
+      "totals": {
+        "assertions": 840,
+        "correct": 637,
+        "positive_support": 56,
+        "positive_detected": 47,
+        "positive_misses": 9,
+        "false_positives": 2
+      }
+    },
+    {
+      "config": {
+        "strategy": "SUPERSESSION_AWARE",
+        "min_score": 0.9,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "fields": {
+        "share_blocking": {
+          "assertions": 180,
+          "correct": 145,
+          "positive_support": 15,
+          "positive_detected": 15,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "poa_required": {
+          "assertions": 180,
+          "correct": 173,
+          "positive_support": 17,
+          "positive_detected": 17,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "registration_required": {
+          "assertions": 80,
+          "correct": 51,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "holding_confirmation_required": {
+          "assertions": 80,
+          "correct": 51,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "split_voting_restricted": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 1
+        },
+        "securities_lending_recall_required": {
+          "assertions": 80,
+          "correct": 53,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "other_voting_restriction": {
+          "assertions": 80,
+          "correct": 55,
+          "positive_support": 4,
+          "positive_detected": 3,
+          "positive_misses": 1,
+          "false_positives": 0
+        }
+      },
+      "totals": {
+        "assertions": 840,
+        "correct": 632,
+        "positive_support": 56,
+        "positive_detected": 43,
+        "positive_misses": 13,
+        "false_positives": 1
+      }
+    },
+    {
+      "config": {
+        "strategy": "SUPERSESSION_AWARE",
+        "min_score": 0.98,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "fields": {
+        "share_blocking": {
+          "assertions": 180,
+          "correct": 145,
+          "positive_support": 15,
+          "positive_detected": 15,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "poa_required": {
+          "assertions": 180,
+          "correct": 173,
+          "positive_support": 17,
+          "positive_detected": 17,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "registration_required": {
+          "assertions": 80,
+          "correct": 51,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "holding_confirmation_required": {
+          "assertions": 80,
+          "correct": 51,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "split_voting_restricted": {
+          "assertions": 80,
+          "correct": 52,
+          "positive_support": 4,
+          "positive_detected": 0,
+          "positive_misses": 4,
+          "false_positives": 0
+        },
+        "securities_lending_recall_required": {
+          "assertions": 80,
+          "correct": 53,
+          "positive_support": 4,
+          "positive_detected": 4,
+          "positive_misses": 0,
+          "false_positives": 0
+        },
+        "other_voting_restriction": {
+          "assertions": 80,
+          "correct": 55,
+          "positive_support": 4,
+          "positive_detected": 3,
+          "positive_misses": 1,
+          "false_positives": 0
+        }
+      },
+      "totals": {
+        "assertions": 840,
+        "correct": 632,
+        "positive_support": 56,
+        "positive_detected": 43,
+        "positive_misses": 13,
+        "false_positives": 0
+      }
+    }
+  ]
+}

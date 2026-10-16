@@ -1,0 +1,1587 @@
+{
+  "created_at": "2026-10-16T21:20:08.762532+00:00",
+  "validation_inputs_sha256": "8d919b0ad7adfe0da82abfca39e334a03ff9ac1c14e4d105c7def63daedf3882",
+  "no_training": true,
+  "challenge_used_for_selection": false,
+  "selection_criterion": "Minimise validation blocking/POA positive misses, then assertion agreement, then false positives; supersession-aware tie preference; lower score on remaining ties",
+  "selected": {
+    "requirements_eligible": true,
+    "eligibility_reason": "Only supersession-aware reducer satisfies all mandated conflict/conditional-route/minimal-pair contracts; other strategies are diagnostic comparators",
+    "config": {
+      "strategy": "SUPERSESSION_AWARE",
+      "min_score": 0.7,
+      "min_margin": 0.2,
+      "voting_route": null
+    },
+    "correct": 565,
+    "assertions": 840,
+    "agreement": 0.6726190476190477,
+    "positive_support": {
+      "share_blocking": 15,
+      "poa_required": 17,
+      "registration_required": 4,
+      "beneficial_owner_disclosure_required": 4,
+      "holding_confirmation_required": 4,
+      "split_voting_restricted": 4,
+      "securities_lending_recall_required": 4,
+      "other_voting_restriction": 4
+    },
+    "positive_detected": {
+      "share_blocking": 15,
+      "poa_required": 17,
+      "registration_required": 4,
+      "beneficial_owner_disclosure_required": 0,
+      "holding_confirmation_required": 4,
+      "split_voting_restricted": 0,
+      "securities_lending_recall_required": 4,
+      "other_voting_restriction": 3
+    },
+    "fields": {
+      "share_blocking": {
+        "n": 180,
+        "correct": 135,
+        "false_positive": 1,
+        "false_negative": 0
+      },
+      "poa_required": {
+        "n": 180,
+        "correct": 152,
+        "false_positive": 0,
+        "false_negative": 0
+      },
+      "registration_required": {
+        "n": 80,
+        "correct": 45,
+        "false_positive": 0,
+        "false_negative": 0
+      },
+      "beneficial_owner_disclosure_required": {
+        "n": 80,
+        "correct": 41,
+        "false_positive": 0,
+        "false_negative": 4
+      },
+      "holding_confirmation_required": {
+        "n": 80,
+        "correct": 44,
+        "false_positive": 0,
+        "false_negative": 0
+      },
+      "split_voting_restricted": {
+        "n": 80,
+        "correct": 41,
+        "false_positive": 1,
+        "false_negative": 4
+      },
+      "securities_lending_recall_required": {
+        "n": 80,
+        "correct": 43,
+        "false_positive": 0,
+        "false_negative": 0
+      },
+      "other_voting_restriction": {
+        "n": 80,
+        "correct": 64,
+        "false_positive": 0,
+        "false_negative": 1
+      }
+    }
+  },
+  "candidates": [
+    {
+      "requirements_eligible": false,
+      "eligibility_reason": "Only supersession-aware reducer satisfies all mandated conflict/conditional-route/minimal-pair contracts; other strategies are diagnostic comparators",
+      "config": {
+        "strategy": "MAX_POSITIVE",
+        "min_score": 0.7,
+        "min_margin": 0.2,
+        "voting_route": null
+      },
+      "correct": 155,
+      "assertions": 840,
+      "agreement": 0.18452380952380953,
+      "positive_support": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 4,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 4,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "positive_detected": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 0,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 0,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "fields": {
+        "share_blocking": {
+          "n": 180,
+          "correct": 38,
+          "false_positive": 2,
+          "false_negative": 0
+        },
+        "poa_required": {
+          "n": 180,
+          "correct": 34,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "registration_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "holding_confirmation_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "split_voting_restricted": {
+          "n": 80,
+          "correct": 7,
+          "false_positive": 1,
+          "false_negative": 4
+        },
+        "securities_lending_recall_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "other_voting_restriction": {
+          "n": 80,
+          "correct": 44,
+          "false_positive": 1,
+          "false_negative": 0
+        }
+      }
+    },
+    {
+      "requirements_eligible": false,
+      "eligibility_reason": "Only supersession-aware reducer satisfies all mandated conflict/conditional-route/minimal-pair contracts; other strategies are diagnostic comparators",
+      "config": {
+        "strategy": "MAX_POSITIVE",
+        "min_score": 0.9,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "correct": 151,
+      "assertions": 840,
+      "agreement": 0.17976190476190476,
+      "positive_support": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 4,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 4,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "positive_detected": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 0,
+        "beneficial_owner_disclosure_required": 0,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 0,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "fields": {
+        "share_blocking": {
+          "n": 180,
+          "correct": 38,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "poa_required": {
+          "n": 180,
+          "correct": 34,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "registration_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "beneficial_owner_disclosure_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "holding_confirmation_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "split_voting_restricted": {
+          "n": 80,
+          "correct": 7,
+          "false_positive": 1,
+          "false_negative": 4
+        },
+        "securities_lending_recall_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "other_voting_restriction": {
+          "n": 80,
+          "correct": 44,
+          "false_positive": 1,
+          "false_negative": 0
+        }
+      }
+    },
+    {
+      "requirements_eligible": false,
+      "eligibility_reason": "Only supersession-aware reducer satisfies all mandated conflict/conditional-route/minimal-pair contracts; other strategies are diagnostic comparators",
+      "config": {
+        "strategy": "MAX_POSITIVE",
+        "min_score": 0.98,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "correct": 151,
+      "assertions": 840,
+      "agreement": 0.17976190476190476,
+      "positive_support": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 4,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 4,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "positive_detected": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 0,
+        "beneficial_owner_disclosure_required": 0,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 0,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "fields": {
+        "share_blocking": {
+          "n": 180,
+          "correct": 38,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "poa_required": {
+          "n": 180,
+          "correct": 34,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "registration_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "beneficial_owner_disclosure_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "holding_confirmation_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "split_voting_restricted": {
+          "n": 80,
+          "correct": 7,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "securities_lending_recall_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "other_voting_restriction": {
+          "n": 80,
+          "correct": 44,
+          "false_positive": 1,
+          "false_negative": 0
+        }
+      }
+    },
+    {
+      "requirements_eligible": false,
+      "eligibility_reason": "Only supersession-aware reducer satisfies all mandated conflict/conditional-route/minimal-pair contracts; other strategies are diagnostic comparators",
+      "config": {
+        "strategy": "MAX_MARGIN",
+        "min_score": 0.7,
+        "min_margin": 0.2,
+        "voting_route": null
+      },
+      "correct": 154,
+      "assertions": 840,
+      "agreement": 0.18333333333333332,
+      "positive_support": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 4,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 4,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "positive_detected": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 0,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 0,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 3
+      },
+      "fields": {
+        "share_blocking": {
+          "n": 180,
+          "correct": 38,
+          "false_positive": 2,
+          "false_negative": 0
+        },
+        "poa_required": {
+          "n": 180,
+          "correct": 34,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "registration_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "holding_confirmation_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "split_voting_restricted": {
+          "n": 80,
+          "correct": 7,
+          "false_positive": 1,
+          "false_negative": 4
+        },
+        "securities_lending_recall_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "other_voting_restriction": {
+          "n": 80,
+          "correct": 43,
+          "false_positive": 0,
+          "false_negative": 1
+        }
+      }
+    },
+    {
+      "requirements_eligible": false,
+      "eligibility_reason": "Only supersession-aware reducer satisfies all mandated conflict/conditional-route/minimal-pair contracts; other strategies are diagnostic comparators",
+      "config": {
+        "strategy": "MAX_MARGIN",
+        "min_score": 0.9,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "correct": 150,
+      "assertions": 840,
+      "agreement": 0.17857142857142858,
+      "positive_support": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 4,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 4,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "positive_detected": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 0,
+        "beneficial_owner_disclosure_required": 0,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 0,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 3
+      },
+      "fields": {
+        "share_blocking": {
+          "n": 180,
+          "correct": 38,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "poa_required": {
+          "n": 180,
+          "correct": 34,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "registration_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "beneficial_owner_disclosure_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "holding_confirmation_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "split_voting_restricted": {
+          "n": 80,
+          "correct": 7,
+          "false_positive": 1,
+          "false_negative": 4
+        },
+        "securities_lending_recall_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "other_voting_restriction": {
+          "n": 80,
+          "correct": 43,
+          "false_positive": 0,
+          "false_negative": 1
+        }
+      }
+    },
+    {
+      "requirements_eligible": false,
+      "eligibility_reason": "Only supersession-aware reducer satisfies all mandated conflict/conditional-route/minimal-pair contracts; other strategies are diagnostic comparators",
+      "config": {
+        "strategy": "MAX_MARGIN",
+        "min_score": 0.98,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "correct": 150,
+      "assertions": 840,
+      "agreement": 0.17857142857142858,
+      "positive_support": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 4,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 4,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "positive_detected": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 0,
+        "beneficial_owner_disclosure_required": 0,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 0,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 3
+      },
+      "fields": {
+        "share_blocking": {
+          "n": 180,
+          "correct": 38,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "poa_required": {
+          "n": 180,
+          "correct": 34,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "registration_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "beneficial_owner_disclosure_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "holding_confirmation_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "split_voting_restricted": {
+          "n": 80,
+          "correct": 7,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "securities_lending_recall_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "other_voting_restriction": {
+          "n": 80,
+          "correct": 43,
+          "false_positive": 0,
+          "false_negative": 1
+        }
+      }
+    },
+    {
+      "requirements_eligible": false,
+      "eligibility_reason": "Only supersession-aware reducer satisfies all mandated conflict/conditional-route/minimal-pair contracts; other strategies are diagnostic comparators",
+      "config": {
+        "strategy": "ANY_STRONG_POSITIVE",
+        "min_score": 0.7,
+        "min_margin": 0.2,
+        "voting_route": null
+      },
+      "correct": 155,
+      "assertions": 840,
+      "agreement": 0.18452380952380953,
+      "positive_support": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 4,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 4,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "positive_detected": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 0,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 0,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "fields": {
+        "share_blocking": {
+          "n": 180,
+          "correct": 38,
+          "false_positive": 2,
+          "false_negative": 0
+        },
+        "poa_required": {
+          "n": 180,
+          "correct": 34,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "registration_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "holding_confirmation_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "split_voting_restricted": {
+          "n": 80,
+          "correct": 7,
+          "false_positive": 1,
+          "false_negative": 4
+        },
+        "securities_lending_recall_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "other_voting_restriction": {
+          "n": 80,
+          "correct": 44,
+          "false_positive": 1,
+          "false_negative": 0
+        }
+      }
+    },
+    {
+      "requirements_eligible": false,
+      "eligibility_reason": "Only supersession-aware reducer satisfies all mandated conflict/conditional-route/minimal-pair contracts; other strategies are diagnostic comparators",
+      "config": {
+        "strategy": "ANY_STRONG_POSITIVE",
+        "min_score": 0.9,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "correct": 151,
+      "assertions": 840,
+      "agreement": 0.17976190476190476,
+      "positive_support": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 4,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 4,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "positive_detected": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 0,
+        "beneficial_owner_disclosure_required": 0,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 0,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "fields": {
+        "share_blocking": {
+          "n": 180,
+          "correct": 38,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "poa_required": {
+          "n": 180,
+          "correct": 34,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "registration_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "beneficial_owner_disclosure_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "holding_confirmation_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "split_voting_restricted": {
+          "n": 80,
+          "correct": 7,
+          "false_positive": 1,
+          "false_negative": 4
+        },
+        "securities_lending_recall_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "other_voting_restriction": {
+          "n": 80,
+          "correct": 44,
+          "false_positive": 1,
+          "false_negative": 0
+        }
+      }
+    },
+    {
+      "requirements_eligible": false,
+      "eligibility_reason": "Only supersession-aware reducer satisfies all mandated conflict/conditional-route/minimal-pair contracts; other strategies are diagnostic comparators",
+      "config": {
+        "strategy": "ANY_STRONG_POSITIVE",
+        "min_score": 0.98,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "correct": 151,
+      "assertions": 840,
+      "agreement": 0.17976190476190476,
+      "positive_support": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 4,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 4,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "positive_detected": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 0,
+        "beneficial_owner_disclosure_required": 0,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 0,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "fields": {
+        "share_blocking": {
+          "n": 180,
+          "correct": 38,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "poa_required": {
+          "n": 180,
+          "correct": 34,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "registration_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "beneficial_owner_disclosure_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "holding_confirmation_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "split_voting_restricted": {
+          "n": 80,
+          "correct": 7,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "securities_lending_recall_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "other_voting_restriction": {
+          "n": 80,
+          "correct": 44,
+          "false_positive": 1,
+          "false_negative": 0
+        }
+      }
+    },
+    {
+      "requirements_eligible": false,
+      "eligibility_reason": "Only supersession-aware reducer satisfies all mandated conflict/conditional-route/minimal-pair contracts; other strategies are diagnostic comparators",
+      "config": {
+        "strategy": "WEIGHTED_PASSAGE",
+        "min_score": 0.7,
+        "min_margin": 0.2,
+        "voting_route": null
+      },
+      "correct": 157,
+      "assertions": 840,
+      "agreement": 0.1869047619047619,
+      "positive_support": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 4,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 4,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "positive_detected": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 0,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 0,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 3
+      },
+      "fields": {
+        "share_blocking": {
+          "n": 180,
+          "correct": 39,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "poa_required": {
+          "n": 180,
+          "correct": 34,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "registration_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "holding_confirmation_required": {
+          "n": 80,
+          "correct": 10,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "split_voting_restricted": {
+          "n": 80,
+          "correct": 7,
+          "false_positive": 1,
+          "false_negative": 4
+        },
+        "securities_lending_recall_required": {
+          "n": 80,
+          "correct": 10,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "other_voting_restriction": {
+          "n": 80,
+          "correct": 43,
+          "false_positive": 0,
+          "false_negative": 1
+        }
+      }
+    },
+    {
+      "requirements_eligible": false,
+      "eligibility_reason": "Only supersession-aware reducer satisfies all mandated conflict/conditional-route/minimal-pair contracts; other strategies are diagnostic comparators",
+      "config": {
+        "strategy": "WEIGHTED_PASSAGE",
+        "min_score": 0.9,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "correct": 153,
+      "assertions": 840,
+      "agreement": 0.18214285714285713,
+      "positive_support": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 4,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 4,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "positive_detected": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 0,
+        "beneficial_owner_disclosure_required": 0,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 0,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 3
+      },
+      "fields": {
+        "share_blocking": {
+          "n": 180,
+          "correct": 39,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "poa_required": {
+          "n": 180,
+          "correct": 34,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "registration_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "beneficial_owner_disclosure_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "holding_confirmation_required": {
+          "n": 80,
+          "correct": 10,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "split_voting_restricted": {
+          "n": 80,
+          "correct": 7,
+          "false_positive": 1,
+          "false_negative": 4
+        },
+        "securities_lending_recall_required": {
+          "n": 80,
+          "correct": 10,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "other_voting_restriction": {
+          "n": 80,
+          "correct": 43,
+          "false_positive": 0,
+          "false_negative": 1
+        }
+      }
+    },
+    {
+      "requirements_eligible": false,
+      "eligibility_reason": "Only supersession-aware reducer satisfies all mandated conflict/conditional-route/minimal-pair contracts; other strategies are diagnostic comparators",
+      "config": {
+        "strategy": "WEIGHTED_PASSAGE",
+        "min_score": 0.98,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "correct": 153,
+      "assertions": 840,
+      "agreement": 0.18214285714285713,
+      "positive_support": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 4,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 4,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "positive_detected": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 0,
+        "beneficial_owner_disclosure_required": 0,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 0,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 3
+      },
+      "fields": {
+        "share_blocking": {
+          "n": 180,
+          "correct": 39,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "poa_required": {
+          "n": 180,
+          "correct": 34,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "registration_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "beneficial_owner_disclosure_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "holding_confirmation_required": {
+          "n": 80,
+          "correct": 10,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "split_voting_restricted": {
+          "n": 80,
+          "correct": 7,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "securities_lending_recall_required": {
+          "n": 80,
+          "correct": 10,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "other_voting_restriction": {
+          "n": 80,
+          "correct": 43,
+          "false_positive": 0,
+          "false_negative": 1
+        }
+      }
+    },
+    {
+      "requirements_eligible": false,
+      "eligibility_reason": "Only supersession-aware reducer satisfies all mandated conflict/conditional-route/minimal-pair contracts; other strategies are diagnostic comparators",
+      "config": {
+        "strategy": "LAST_RELEVANT_STATEMENT",
+        "min_score": 0.7,
+        "min_margin": 0.2,
+        "voting_route": null
+      },
+      "correct": 154,
+      "assertions": 840,
+      "agreement": 0.18333333333333332,
+      "positive_support": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 4,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 4,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "positive_detected": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 0,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 0,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 3
+      },
+      "fields": {
+        "share_blocking": {
+          "n": 180,
+          "correct": 38,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "poa_required": {
+          "n": 180,
+          "correct": 34,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "registration_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "holding_confirmation_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "split_voting_restricted": {
+          "n": 80,
+          "correct": 7,
+          "false_positive": 1,
+          "false_negative": 4
+        },
+        "securities_lending_recall_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "other_voting_restriction": {
+          "n": 80,
+          "correct": 43,
+          "false_positive": 0,
+          "false_negative": 1
+        }
+      }
+    },
+    {
+      "requirements_eligible": false,
+      "eligibility_reason": "Only supersession-aware reducer satisfies all mandated conflict/conditional-route/minimal-pair contracts; other strategies are diagnostic comparators",
+      "config": {
+        "strategy": "LAST_RELEVANT_STATEMENT",
+        "min_score": 0.9,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "correct": 150,
+      "assertions": 840,
+      "agreement": 0.17857142857142858,
+      "positive_support": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 4,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 4,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "positive_detected": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 0,
+        "beneficial_owner_disclosure_required": 0,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 0,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 3
+      },
+      "fields": {
+        "share_blocking": {
+          "n": 180,
+          "correct": 38,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "poa_required": {
+          "n": 180,
+          "correct": 34,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "registration_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "beneficial_owner_disclosure_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "holding_confirmation_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "split_voting_restricted": {
+          "n": 80,
+          "correct": 7,
+          "false_positive": 1,
+          "false_negative": 4
+        },
+        "securities_lending_recall_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "other_voting_restriction": {
+          "n": 80,
+          "correct": 43,
+          "false_positive": 0,
+          "false_negative": 1
+        }
+      }
+    },
+    {
+      "requirements_eligible": false,
+      "eligibility_reason": "Only supersession-aware reducer satisfies all mandated conflict/conditional-route/minimal-pair contracts; other strategies are diagnostic comparators",
+      "config": {
+        "strategy": "LAST_RELEVANT_STATEMENT",
+        "min_score": 0.98,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "correct": 150,
+      "assertions": 840,
+      "agreement": 0.17857142857142858,
+      "positive_support": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 4,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 4,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "positive_detected": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 0,
+        "beneficial_owner_disclosure_required": 0,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 0,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 3
+      },
+      "fields": {
+        "share_blocking": {
+          "n": 180,
+          "correct": 38,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "poa_required": {
+          "n": 180,
+          "correct": 34,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "registration_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "beneficial_owner_disclosure_required": {
+          "n": 80,
+          "correct": 5,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "holding_confirmation_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "split_voting_restricted": {
+          "n": 80,
+          "correct": 7,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "securities_lending_recall_required": {
+          "n": 80,
+          "correct": 9,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "other_voting_restriction": {
+          "n": 80,
+          "correct": 43,
+          "false_positive": 0,
+          "false_negative": 1
+        }
+      }
+    },
+    {
+      "requirements_eligible": true,
+      "eligibility_reason": "Only supersession-aware reducer satisfies all mandated conflict/conditional-route/minimal-pair contracts; other strategies are diagnostic comparators",
+      "config": {
+        "strategy": "SUPERSESSION_AWARE",
+        "min_score": 0.7,
+        "min_margin": 0.2,
+        "voting_route": null
+      },
+      "correct": 565,
+      "assertions": 840,
+      "agreement": 0.6726190476190477,
+      "positive_support": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 4,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 4,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "positive_detected": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 0,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 0,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 3
+      },
+      "fields": {
+        "share_blocking": {
+          "n": 180,
+          "correct": 135,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "poa_required": {
+          "n": 180,
+          "correct": 152,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "registration_required": {
+          "n": 80,
+          "correct": 45,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "beneficial_owner_disclosure_required": {
+          "n": 80,
+          "correct": 41,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "holding_confirmation_required": {
+          "n": 80,
+          "correct": 44,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "split_voting_restricted": {
+          "n": 80,
+          "correct": 41,
+          "false_positive": 1,
+          "false_negative": 4
+        },
+        "securities_lending_recall_required": {
+          "n": 80,
+          "correct": 43,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "other_voting_restriction": {
+          "n": 80,
+          "correct": 64,
+          "false_positive": 0,
+          "false_negative": 1
+        }
+      }
+    },
+    {
+      "requirements_eligible": true,
+      "eligibility_reason": "Only supersession-aware reducer satisfies all mandated conflict/conditional-route/minimal-pair contracts; other strategies are diagnostic comparators",
+      "config": {
+        "strategy": "SUPERSESSION_AWARE",
+        "min_score": 0.9,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "correct": 560,
+      "assertions": 840,
+      "agreement": 0.6666666666666666,
+      "positive_support": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 4,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 4,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "positive_detected": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 0,
+        "beneficial_owner_disclosure_required": 0,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 0,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 3
+      },
+      "fields": {
+        "share_blocking": {
+          "n": 180,
+          "correct": 135,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "poa_required": {
+          "n": 180,
+          "correct": 152,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "registration_required": {
+          "n": 80,
+          "correct": 40,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "beneficial_owner_disclosure_required": {
+          "n": 80,
+          "correct": 41,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "holding_confirmation_required": {
+          "n": 80,
+          "correct": 44,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "split_voting_restricted": {
+          "n": 80,
+          "correct": 41,
+          "false_positive": 1,
+          "false_negative": 4
+        },
+        "securities_lending_recall_required": {
+          "n": 80,
+          "correct": 43,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "other_voting_restriction": {
+          "n": 80,
+          "correct": 64,
+          "false_positive": 0,
+          "false_negative": 1
+        }
+      }
+    },
+    {
+      "requirements_eligible": true,
+      "eligibility_reason": "Only supersession-aware reducer satisfies all mandated conflict/conditional-route/minimal-pair contracts; other strategies are diagnostic comparators",
+      "config": {
+        "strategy": "SUPERSESSION_AWARE",
+        "min_score": 0.98,
+        "min_margin": 0.4,
+        "voting_route": null
+      },
+      "correct": 560,
+      "assertions": 840,
+      "agreement": 0.6666666666666666,
+      "positive_support": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 4,
+        "beneficial_owner_disclosure_required": 4,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 4,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 4
+      },
+      "positive_detected": {
+        "share_blocking": 15,
+        "poa_required": 17,
+        "registration_required": 0,
+        "beneficial_owner_disclosure_required": 0,
+        "holding_confirmation_required": 4,
+        "split_voting_restricted": 0,
+        "securities_lending_recall_required": 4,
+        "other_voting_restriction": 3
+      },
+      "fields": {
+        "share_blocking": {
+          "n": 180,
+          "correct": 135,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "poa_required": {
+          "n": 180,
+          "correct": 152,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "registration_required": {
+          "n": 80,
+          "correct": 40,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "beneficial_owner_disclosure_required": {
+          "n": 80,
+          "correct": 41,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "holding_confirmation_required": {
+          "n": 80,
+          "correct": 44,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "split_voting_restricted": {
+          "n": 80,
+          "correct": 41,
+          "false_positive": 0,
+          "false_negative": 4
+        },
+        "securities_lending_recall_required": {
+          "n": 80,
+          "correct": 43,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "other_voting_restriction": {
+          "n": 80,
+          "correct": 64,
+          "false_positive": 0,
+          "false_negative": 1
+        }
+      }
+    }
+  ],
+  "limitations": "AI-authored synthetic validation; old supplied validation overlaps training. Native Laya passage scores are not calibrated."
+}

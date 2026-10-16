@@ -1,0 +1,54 @@
+{
+  "verified_at": "2026-10-16T22:33:54.820530+00:00",
+  "completion_gate": "NOT_MET_FULL_COMPARISON_STILL_RUNNING",
+  "main_experiment": {
+    "state": "RUNNING",
+    "stage": "validate",
+    "pid": 49881,
+    "timestamp": "2026-10-16T21:36:42.683848+00:00",
+    "automation_enabled": false,
+    "customer_accuracy": null
+  },
+  "validation_progress": {
+    "D1": {
+      "persisted": 40,
+      "schema_valid": 40
+    },
+    "C1": {
+      "persisted": 40,
+      "schema_valid": 40
+    },
+    "D2": {
+      "persisted": 40,
+      "schema_valid": 40
+    },
+    "C2": {
+      "persisted": 40,
+      "schema_valid": 40
+    },
+    "D3": {
+      "persisted": 1,
+      "schema_valid": 1
+    },
+    "C3": {
+      "persisted": 0,
+      "schema_valid": 0
+    }
+  },
+  "software_log": "artifacts/cascade-ready-software-tests-final.log",
+  "software_summary": "1982 passed, 148 deselected, 358 warnings in 11.22s",
+  "browser_log": "artifacts/cascade-browser-completion.log",
+  "browser_summary": "19 passed in 51.51s",
+  "old_and_new_inference_hashes_verified": true,
+  "supplemental_analysis_hashes_verified": true,
+  "no_retraining": true,
+  "automation_enabled": false,
+  "customer_accuracy": null,
+  "pending": [
+    "Qwen xhigh validation",
+    "model/route selection from validation",
+    "new frozen A–E/challenge and complete synthetic comparison",
+    "oracle and disagreement reports",
+    "final real-model regression gate"
+  ]
+}

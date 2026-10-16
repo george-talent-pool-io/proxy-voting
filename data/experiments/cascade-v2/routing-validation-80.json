@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "CV-001",
+    "text": "Operations circular for a company meeting. Shareholders can return voting instructions through their custodian. shares will be blocked until the meeting closes. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "YES",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "affirmative:share_blocking",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-002",
+    "text": "Custody service update: the issuer is holding its annual shareholder meeting. Proxy ballots may be submitted. shares will not be blocked. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "explicit_negative:share_blocking",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-003",
+    "text": "Issuer meeting bulletin. The beneficial owners may instruct votes electronically on the resolutions. The preliminary notice stated that shares will be blocked until the meeting closes. Final terms: shares will not be blocked. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "superseded:share_blocking",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-004",
+    "text": "A special general meeting has been convened. The intermediary accepts shareholder voting instructions. Historically, shares will be blocked until the meeting closes. The current notice supplies no information on this condition. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "UNKNOWN",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "historical_only:share_blocking",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-005",
+    "text": "Notice to nominee accounts: holders are invited to vote on the scheme resolutions at the meeting. The general market guide says shares will be blocked until the meeting closes. For this event, shares will not be blocked. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "irrelevant_reference:share_blocking",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-006",
+    "text": "Voting service terms for the upcoming extraordinary general meeting. Custodians can transmit proxy votes. shares will be blocked until the meeting closes. A different paragraph states that shares will not be blocked. No clarification is supplied. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "UNKNOWN",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "unresolved_conflict:share_blocking",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-007",
+    "text": "Custody service update: the issuer is holding its annual shareholder meeting. Proxy ballots may be submitted. a notarised power of attorney is required for voting. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "YES",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "affirmative:poa_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-008",
+    "text": "Issuer meeting bulletin. The beneficial owners may instruct votes electronically on the resolutions. no power of attorney is required. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "explicit_negative:poa_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-009",
+    "text": "A special general meeting has been convened. The intermediary accepts shareholder voting instructions. The preliminary notice stated that a notarised power of attorney is required for voting. Final terms: no power of attorney is required. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "superseded:poa_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-010",
+    "text": "Notice to nominee accounts: holders are invited to vote on the scheme resolutions at the meeting. Historically, a notarised power of attorney is required for voting. The current notice supplies no information on this condition. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "UNKNOWN",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "historical_only:poa_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-011",
+    "text": "Voting service terms for the upcoming extraordinary general meeting. Custodians can transmit proxy votes. The general market guide says a notarised power of attorney is required for voting. For this event, no power of attorney is required. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "irrelevant_reference:poa_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-012",
+    "text": "Operations circular for a company meeting. Shareholders can return voting instructions through their custodian. a notarised power of attorney is required for voting. A different paragraph states that no power of attorney is required. No clarification is supplied. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "UNKNOWN",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "unresolved_conflict:poa_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-013",
+    "text": "Issuer meeting bulletin. The beneficial owners may instruct votes electronically on the resolutions. registration of the holder is mandatory before voting. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "YES",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "affirmative:registration_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-014",
+    "text": "A special general meeting has been convened. The intermediary accepts shareholder voting instructions. registration is not required. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "explicit_negative:registration_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-015",
+    "text": "Notice to nominee accounts: holders are invited to vote on the scheme resolutions at the meeting. The preliminary notice stated that registration of the holder is mandatory before voting. Final terms: registration is not required. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "superseded:registration_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-016",
+    "text": "Voting service terms for the upcoming extraordinary general meeting. Custodians can transmit proxy votes. Historically, registration of the holder is mandatory before voting. The current notice supplies no information on this condition. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "UNKNOWN",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "historical_only:registration_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-017",
+    "text": "Operations circular for a company meeting. Shareholders can return voting instructions through their custodian. The general market guide says registration of the holder is mandatory before voting. For this event, registration is not required. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "irrelevant_reference:registration_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-018",
+    "text": "Custody service update: the issuer is holding its annual shareholder meeting. Proxy ballots may be submitted. registration of the holder is mandatory before voting. A different paragraph states that registration is not required. No clarification is supplied. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "UNKNOWN",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "unresolved_conflict:registration_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-019",
+    "text": "A special general meeting has been convened. The intermediary accepts shareholder voting instructions. beneficial owner identity disclosure is a mandatory voting condition. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "YES",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "affirmative:beneficial_owner_disclosure_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-020",
+    "text": "Notice to nominee accounts: holders are invited to vote on the scheme resolutions at the meeting. no beneficial owner identity disclosure is required. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "explicit_negative:beneficial_owner_disclosure_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-021",
+    "text": "Voting service terms for the upcoming extraordinary general meeting. Custodians can transmit proxy votes. The preliminary notice stated that beneficial owner identity disclosure is a mandatory voting condition. Final terms: no beneficial owner identity disclosure is required. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "superseded:beneficial_owner_disclosure_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-022",
+    "text": "Operations circular for a company meeting. Shareholders can return voting instructions through their custodian. Historically, beneficial owner identity disclosure is a mandatory voting condition. The current notice supplies no information on this condition. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "UNKNOWN",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "historical_only:beneficial_owner_disclosure_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-023",
+    "text": "Custody service update: the issuer is holding its annual shareholder meeting. Proxy ballots may be submitted. The general market guide says beneficial owner identity disclosure is a mandatory voting condition. For this event, no beneficial owner identity disclosure is required. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "irrelevant_reference:beneficial_owner_disclosure_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-024",
+    "text": "Issuer meeting bulletin. The beneficial owners may instruct votes electronically on the resolutions. beneficial owner identity disclosure is a mandatory voting condition. A different paragraph states that no beneficial owner identity disclosure is required. No clarification is supplied. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "UNKNOWN",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "unresolved_conflict:beneficial_owner_disclosure_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-025",
+    "text": "Notice to nominee accounts: holders are invited to vote on the scheme resolutions at the meeting. proof of holdings must accompany voting instructions. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "YES",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "affirmative:holding_confirmation_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-026",
+    "text": "Voting service terms for the upcoming extraordinary general meeting. Custodians can transmit proxy votes. proof of holdings is not required. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "explicit_negative:holding_confirmation_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-027",
+    "text": "Operations circular for a company meeting. Shareholders can return voting instructions through their custodian. The preliminary notice stated that proof of holdings must accompany voting instructions. Final terms: proof of holdings is not required. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "superseded:holding_confirmation_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-028",
+    "text": "Custody service update: the issuer is holding its annual shareholder meeting. Proxy ballots may be submitted. Historically, proof of holdings must accompany voting instructions. The current notice supplies no information on this condition. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "UNKNOWN",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "historical_only:holding_confirmation_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-029",
+    "text": "Issuer meeting bulletin. The beneficial owners may instruct votes electronically on the resolutions. The general market guide says proof of holdings must accompany voting instructions. For this event, proof of holdings is not required. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "irrelevant_reference:holding_confirmation_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-030",
+    "text": "A special general meeting has been convened. The intermediary accepts shareholder voting instructions. proof of holdings must accompany voting instructions. A different paragraph states that proof of holdings is not required. No clarification is supplied. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "UNKNOWN",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "unresolved_conflict:holding_confirmation_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-031",
+    "text": "Voting service terms for the upcoming extraordinary general meeting. Custodians can transmit proxy votes. split voting is prohibited and all shares must vote identically. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "YES",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "affirmative:split_voting_restricted",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-032",
+    "text": "Operations circular for a company meeting. Shareholders can return voting instructions through their custodian. split voting is not restricted. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "explicit_negative:split_voting_restricted",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-033",
+    "text": "Custody service update: the issuer is holding its annual shareholder meeting. Proxy ballots may be submitted. The preliminary notice stated that split voting is prohibited and all shares must vote identically. Final terms: split voting is not restricted. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "superseded:split_voting_restricted",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-034",
+    "text": "Issuer meeting bulletin. The beneficial owners may instruct votes electronically on the resolutions. Historically, split voting is prohibited and all shares must vote identically. The current notice supplies no information on this condition. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "UNKNOWN",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "historical_only:split_voting_restricted",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-035",
+    "text": "A special general meeting has been convened. The intermediary accepts shareholder voting instructions. The general market guide says split voting is prohibited and all shares must vote identically. For this event, split voting is not restricted. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "irrelevant_reference:split_voting_restricted",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-036",
+    "text": "Notice to nominee accounts: holders are invited to vote on the scheme resolutions at the meeting. split voting is prohibited and all shares must vote identically. A different paragraph states that split voting is not restricted. No clarification is supplied. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "UNKNOWN",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "unresolved_conflict:split_voting_restricted",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-037",
+    "text": "Operations circular for a company meeting. Shareholders can return voting instructions through their custodian. loaned securities must be recalled to exercise voting rights. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "YES",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "affirmative:securities_lending_recall_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-038",
+    "text": "Custody service update: the issuer is holding its annual shareholder meeting. Proxy ballots may be submitted. securities lending recall is not required for voting. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "explicit_negative:securities_lending_recall_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-039",
+    "text": "Issuer meeting bulletin. The beneficial owners may instruct votes electronically on the resolutions. The preliminary notice stated that loaned securities must be recalled to exercise voting rights. Final terms: securities lending recall is not required for voting. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "superseded:securities_lending_recall_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-040",
+    "text": "A special general meeting has been convened. The intermediary accepts shareholder voting instructions. Historically, loaned securities must be recalled to exercise voting rights. The current notice supplies no information on this condition. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "UNKNOWN",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "historical_only:securities_lending_recall_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-041",
+    "text": "Notice to nominee accounts: holders are invited to vote on the scheme resolutions at the meeting. The general market guide says loaned securities must be recalled to exercise voting rights. For this event, securities lending recall is not required for voting. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "irrelevant_reference:securities_lending_recall_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-042",
+    "text": "Voting service terms for the upcoming extraordinary general meeting. Custodians can transmit proxy votes. loaned securities must be recalled to exercise voting rights. A different paragraph states that securities lending recall is not required for voting. No clarification is supplied. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "UNKNOWN",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "unresolved_conflict:securities_lending_recall_required",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-043",
+    "text": "Custody service update: the issuer is holding its annual shareholder meeting. Proxy ballots may be submitted. only licensed professional investors are eligible to vote under an additional restriction. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "YES",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "affirmative:other_voting_restriction",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-044",
+    "text": "Issuer meeting bulletin. The beneficial owners may instruct votes electronically on the resolutions. no additional voting restriction applies. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "explicit_negative:other_voting_restriction",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-045",
+    "text": "A special general meeting has been convened. The intermediary accepts shareholder voting instructions. The preliminary notice stated that only licensed professional investors are eligible to vote under an additional restriction. Final terms: no additional voting restriction applies. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "superseded:other_voting_restriction",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-046",
+    "text": "Notice to nominee accounts: holders are invited to vote on the scheme resolutions at the meeting. Historically, only licensed professional investors are eligible to vote under an additional restriction. The current notice supplies no information on this condition. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "UNKNOWN",
+      "deadline_status": "OPEN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "historical_only:other_voting_restriction",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-047",
+    "text": "Voting service terms for the upcoming extraordinary general meeting. Custodians can transmit proxy votes. The general market guide says only licensed professional investors are eligible to vote under an additional restriction. For this event, no additional voting restriction applies. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "irrelevant_reference:other_voting_restriction",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-048",
+    "text": "Operations circular for a company meeting. Shareholders can return voting instructions through their custodian. only licensed professional investors are eligible to vote under an additional restriction. A different paragraph states that no additional voting restriction applies. No clarification is supplied. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "UNKNOWN",
+      "deadline_status": "OPEN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "unresolved_conflict:other_voting_restriction",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-049",
+    "text": "Operations circular for a company meeting. Shareholders can return voting instructions through their custodian. shares will be blocked until the meeting closes. beneficial owner identity disclosure is a mandatory voting condition. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "YES",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "YES",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "combined_restrictions",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-050",
+    "text": "Custody service update: the issuer is holding its annual shareholder meeting. Proxy ballots may be submitted. a notarised power of attorney is required for voting. proof of holdings must accompany voting instructions. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "YES",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "YES",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "combined_restrictions",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-051",
+    "text": "Issuer meeting bulletin. The beneficial owners may instruct votes electronically on the resolutions. registration of the holder is mandatory before voting. split voting is prohibited and all shares must vote identically. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "YES",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "YES",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "combined_restrictions",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-052",
+    "text": "A special general meeting has been convened. The intermediary accepts shareholder voting instructions. beneficial owner identity disclosure is a mandatory voting condition. loaned securities must be recalled to exercise voting rights. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "YES",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "YES",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "combined_restrictions",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-053",
+    "text": "Notice to nominee accounts: holders are invited to vote on the scheme resolutions at the meeting. proof of holdings must accompany voting instructions. only licensed professional investors are eligible to vote under an additional restriction. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "YES",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "YES",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "combined_restrictions",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-054",
+    "text": "Voting service terms for the upcoming extraordinary general meeting. Custodians can transmit proxy votes. split voting is prohibited and all shares must vote identically. shares will be blocked until the meeting closes. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "YES",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "YES",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "combined_restrictions",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-055",
+    "text": "Operations circular for a company meeting. Shareholders can return voting instructions through their custodian. loaned securities must be recalled to exercise voting rights. a notarised power of attorney is required for voting. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "YES",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "YES",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "combined_restrictions",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-056",
+    "text": "Custody service update: the issuer is holding its annual shareholder meeting. Proxy ballots may be submitted. only licensed professional investors are eligible to vote under an additional restriction. registration of the holder is mandatory before voting. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "YES",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "YES",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "combined_restrictions",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-057",
+    "text": "Issuer meeting bulletin. The beneficial owners may instruct votes electronically on the resolutions. shares will be blocked until the meeting closes. Final terms: no beneficial owner identity disclosure is required. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "YES",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "combined_restrictions",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-058",
+    "text": "A special general meeting has been convened. The intermediary accepts shareholder voting instructions. a notarised power of attorney is required for voting. Final terms: proof of holdings is not required. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "YES",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "combined_restrictions",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-059",
+    "text": "Notice to nominee accounts: holders are invited to vote on the scheme resolutions at the meeting. registration of the holder is mandatory before voting. Final terms: split voting is not restricted. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "YES",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "combined_restrictions",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-060",
+    "text": "Voting service terms for the upcoming extraordinary general meeting. Custodians can transmit proxy votes. beneficial owner identity disclosure is a mandatory voting condition. Final terms: securities lending recall is not required for voting. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "YES",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "combined_restrictions",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-061",
+    "text": "Operations circular for a company meeting. Shareholders can return voting instructions through their custodian. proof of holdings must accompany voting instructions. Final terms: no additional voting restriction applies. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "YES",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "combined_restrictions",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-062",
+    "text": "Custody service update: the issuer is holding its annual shareholder meeting. Proxy ballots may be submitted. split voting is prohibited and all shares must vote identically. Final terms: shares will not be blocked. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "YES",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "combined_restrictions",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-063",
+    "text": "Issuer meeting bulletin. The beneficial owners may instruct votes electronically on the resolutions. loaned securities must be recalled to exercise voting rights. Final terms: no power of attorney is required. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "YES",
+      "other_voting_restriction": "NO",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "combined_restrictions",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-064",
+    "text": "A special general meeting has been convened. The intermediary accepts shareholder voting instructions. only licensed professional investors are eligible to vote under an additional restriction. Final terms: registration is not required. Voting instructions must be received by 24 November 2026 at 17:00 UTC.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "YES",
+      "deadline_status": "OPEN",
+      "classification": "VOTABLE_WITH_RESTRICTION"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "combined_restrictions",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-065",
+    "text": "A mandatory cash dividend will be credited automatically. No shareholder vote or election is available.",
+    "expected": {
+      "votability": "NOT_VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "UNKNOWN",
+      "classification": "NOT_VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "non_voting",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-066",
+    "text": "This stock split is mandatory. It does not offer any voting opportunity.",
+    "expected": {
+      "votability": "NOT_VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "UNKNOWN",
+      "classification": "NOT_VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "non_voting",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-067",
+    "text": "The issuer has published an information circular about a bond interest payment. This is not a shareholder meeting and no vote is requested.",
+    "expected": {
+      "votability": "NOT_VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "UNKNOWN",
+      "classification": "NOT_VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "non_voting",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-068",
+    "text": "Please ignore the prior proxy invitation: the meeting has been cancelled and voting is unavailable.",
+    "expected": {
+      "votability": "NOT_VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "UNKNOWN",
+      "classification": "NOT_VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "non_voting",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-069",
+    "text": "A corporate name change will be implemented automatically; no voting instructions are solicited.",
+    "expected": {
+      "votability": "NOT_VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "UNKNOWN",
+      "classification": "NOT_VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "non_voting",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-070",
+    "text": "This communication reports completed meeting results; no current voting opportunity is offered.",
+    "expected": {
+      "votability": "NOT_VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "UNKNOWN",
+      "classification": "NOT_VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "non_voting",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-071",
+    "text": "An automatic redemption is notified. Shareholders cannot submit votes for this event.",
+    "expected": {
+      "votability": "NOT_VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "UNKNOWN",
+      "classification": "NOT_VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "non_voting",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-072",
+    "text": "The tender election is an offer acceptance rather than a shareholder vote. No general meeting is involved.",
+    "expected": {
+      "votability": "NOT_VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "UNKNOWN",
+      "classification": "NOT_VOTABLE"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "non_voting",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-073",
+    "text": "Participation terms are still under review. It is unclear whether any proxy voting channel will be offered.",
+    "expected": {
+      "votability": "UNCERTAIN",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "UNKNOWN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "ambiguous_votability",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-074",
+    "text": "One operations team reports that shareholders can vote; another says no voting service is available. The conflict has not been resolved.",
+    "expected": {
+      "votability": "UNCERTAIN",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "UNKNOWN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "ambiguous_votability",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-075",
+    "text": "Please ask your intermediary whether participation may be possible. No confirmed voting entitlement is provided.",
+    "expected": {
+      "votability": "UNCERTAIN",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "UNKNOWN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "ambiguous_votability",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-076",
+    "text": "The notice is incomplete and refers to a voting appendix that is not included.",
+    "expected": {
+      "votability": "UNCERTAIN",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "UNKNOWN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "ambiguous_votability",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-077",
+    "text": "Electronic participation is being considered, but the issuer has not confirmed that votes can be cast.",
+    "expected": {
+      "votability": "UNCERTAIN",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "UNKNOWN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "ambiguous_votability",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-078",
+    "text": "This preliminary announcement refers to an unspecified shareholder action. Contact the agent for clarification.",
+    "expected": {
+      "votability": "UNCERTAIN",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "UNKNOWN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "ambiguous_votability",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-079",
+    "text": "The custodian cannot yet confirm whether the account may lodge proxy instructions.",
+    "expected": {
+      "votability": "UNCERTAIN",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "UNKNOWN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "ambiguous_votability",
+    "not_for_training": true
+  },
+  {
+    "id": "CV-080",
+    "text": "A future meeting is contemplated; no confirmed voting offer or current instructions are supplied.",
+    "expected": {
+      "votability": "UNCERTAIN",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "registration_required": "NO",
+      "beneficial_owner_disclosure_required": "NO",
+      "holding_confirmation_required": "NO",
+      "split_voting_restricted": "NO",
+      "securities_lending_recall_required": "NO",
+      "other_voting_restriction": "NO",
+      "deadline_status": "UNKNOWN",
+      "classification": "UNCERTAIN_MANUAL_REVIEW"
+    },
+    "source_type": "SYNTHETIC_VALIDATION_ONLY",
+    "pattern": "ambiguous_votability",
+    "not_for_training": true
+  }
+]

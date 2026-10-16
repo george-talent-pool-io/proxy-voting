@@ -1,0 +1,8 @@
+{
+  "created_at": "2026-10-16T21:39:34.240323+00:00",
+  "whole_notice_votability": 176,
+  "narrow_votability": 152,
+  "n": 180,
+  "no_weights_changed": true,
+  "composition": "Whole FT votability plus fixed narrow restriction predicates; extra transfer-only question labels are not domain-supervised."
+}

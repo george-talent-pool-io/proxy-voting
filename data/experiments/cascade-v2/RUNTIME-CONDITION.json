@@ -1,0 +1,10 @@
+{
+  "client_concurrency": 1,
+  "isolated_ollama": "http://127.0.0.1:11435",
+  "version": "0.34.3",
+  "server_requested_parallel_slots": 2,
+  "qwen_effective_slots": 1,
+  "reason": "Runtime reports qwen35 architecture does not support parallel requests. All timed conditions use one client request at a time, avoiding queued-vs-unqueued latency comparisons. Two-request xhigh preflight is not part of timed model comparison.",
+  "thinking": "Explicit supported xhigh, not boolean-true runtime default medium.",
+  "hidden_reasoning_persistence": false
+}

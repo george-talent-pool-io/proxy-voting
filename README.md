@@ -482,3 +482,44 @@ RUN_LOCAL_LLM=1 .venv/bin/python -m pytest -m local_llm -q
 ```
 
 The original authored semantic ML regressions still fail 27 base / 20 fine-tuned cases under unchanged assertions. These failures remain separate from the passing software/browser suites. The in-app Browser connection was unavailable during final verification; the complete Playwright browser suite was executed successfully, with screenshots in `artifacts/`.
+
+## Aggregation / Qwen / selective-cascade phase (in progress)
+
+The pre-fix system is preserved under git tag **PRE_AGGREGATION_FIX_BASELINE** and [its manifest](data/experiments/cascade-v2/PRE_AGGREGATION_FIX_BASELINE.json). Historical challenge assertion counts remain A59/B73/C85/D58/E71 out of 95. No Laya checkpoint was retrained and the 57 challenge inputs/assertions remain unchanged.
+
+The evidence-aware reducer corrects the supplied synthetic validation blocking result **0/11 → 11/11 using identical weights**. It retains native passage states/scores/offsets, distinguishes absence from explicit negation, scopes history/background, resolves explicit later supersession, and abstains on unresolved contradictions or an unspecified voting route. Read [aggregation validation](data/reports/AGGREGATION_VALIDATION.md) and [historical C gain decomposition](data/reports/C_GAIN_DECOMPOSITION.md). Six expanded specialist predicates remain transfer-only, with important failures still visible; this is not a customer-accuracy claim.
+
+The new controlled study is asynchronous and computationally substantial. Its current operational status is [LIVE-STATUS.json](data/experiments/cascade-v2/LIVE-STATUS.json); detailed progress is in `artifacts/cascade-phase.log` and **Model Lab → Aggregation & selective cascade · v2**. No new challenge comparison or primary-model claim should be inferred until the relevant frozen evaluation artifacts exist. Final completion requires `FINAL-VERIFICATION.json` and a COMPLETE status, not merely a generated JSON answer.
+
+The real local model conditions are GLM-4.7-Flash Direct, **Qwen3.8-27B Direct**, and **Qwen3.8-27B explicit xhigh Thinking**, all with `proxy_semantic_common_v1`, the same schema and exact-evidence verifier. Qwen library quantisation `qwen3.8:27b-q4_K_M` is pinned to digest `25b843619e944cd0ae6069f94ff4e5e26a16e109ccbc0a66a0f05979ed70098e`; the manifest and installed blobs were verified. See [runtime research](data/reports/QWEN38_RUNTIME_RESEARCH.md). Thinking is mandatory, with a 16,384-token output cap and 32,768 context. It is not shortened to match Direct latency. Hidden reasoning and unvalidated free-form prose are never persisted/displayed; only structured output and permitted count/hash/timing diagnostics remain.
+
+All timed conditions use one request at a time: this Ollama version serialises qwen35 inference. The two-request xhigh pilot took 568 seconds total; native generation durations were 218 and 335 seconds. Those queued preflight latencies are excluded from sequential benchmark comparisons. Expect the full quality experiment to take many hours on this Mac; do not substitute projected numbers for measured results.
+
+The runner performs, in order: 40 complete synthetic validation notices × six independent/always-fallback conditions; repeatability; validation-only primary selection; 80 complete routing-validation notices; an interpretable routing sweep; final freeze; unchanged A/B and common C1–C3/D1–D3 evaluations on the 57 challenge and 48 complete synthetic cases; selected C/E cascades; oracle/disagreement/repair/damage/error reports; regression/real-model tests and a source archive. The old exposed/leaky 100-row synthetic test remains historical development evidence. No new training or two-LLM production ensemble is introduced.
+
+```sh
+# Resume missing work; an active-runner lock prevents a duplicate study.
+# Installed pinned models/checkpoints are required. This starts only the isolated runtime if absent.
+.venv/bin/python -u -m scripts.run_cascade_phase
+
+# Read-only status and progress
+cat data/experiments/cascade-v2/LIVE-STATUS.json
+tail -n 20 artifacts/cascade-phase.log
+
+# Ordinary software/browser checks
+.venv/bin/python -m pytest -m 'not model and not e2e and not local_llm and not qwen_local' -q
+RUN_E2E=1 .venv/bin/python -m pytest tests/e2e -q
+
+# Intentional REAL Qwen Direct/xhigh tests (slow; separate from ordinary CI)
+RUN_QWEN_LOCAL=1 .venv/bin/python -m pytest -m qwen_local -q
+```
+
+The isolated model runtime uses 127.0.0.1:11435 and preserves the normal Ollama service. An idle-sleep guard is limited to the study runner's lifetime. Operational status files can change; raw predictions, freeze manifests and earlier results are append-only/preserved. Every model comparison receives identical applicable inputs and truth; no challenge/test results select a model, prompt or route.
+
+After the selected cascade is frozen, explicit `SEMANTIC_PIPELINE_VERSION=v2` with `CLASSIFICATION_ARCHITECTURE=LAYA_LLM` or `FULL_HYBRID` enables its existing Notice Detail analysis action. **Defaults remain v1, LLM disabled, automation disabled.** Existing whole-text batch history is retained. The v2 application bridge accepts structured parsing only for recognised VALID/PARTIAL messages; ISO-like fragments inside ordinary notices retain the full semantic source. A read-only dispatch scan found **NOT_APPLICABLE for all 7,683 public excerpts**.
+
+On completion the runner produces `AGGREGATION_SELECTIVE_CASCADE_EVALUATION.md`, `GLM_VS_QWEN_DISAGREEMENTS.md`, `GLM_QWEN_MODEL_SELECTION.md`, `QWEN_THINKING_REPAIR_DAMAGE.md`, every assertion failure, full per-field confusion matrices, THREE_MODEL_ORACLE/TWO_LLM_ORACLE/ORACLE_ROUTING, and PNG/SVG validation coverage plots. No primary fallback is selected merely because a model loaded. “Not sent to LLM” and indecisive fast paths are separated from actual automation; every result remains subject to human review.
+
+The browser persistence regression now searches by the unique record ID and waits for the filtered row, replacing an ambiguous issuer/500ms timing assumption. Its persistence assertions are retained. No challenge expectation or failing model-quality test was deleted or weakened.
+
+The routing comparison also has an always-fallback quality control using the **same capable specialist** as the selected cascade. Existing identical-context invoked outputs are reused; every accepted case gets a fallback output irrespective of its expected label. This prevents attributing a specialist-composition change to routing. Its mixed/recomposed durations are excluded from independent latency benchmarks. The control protocol was declared before new challenge inference, and its outputs receive a separate hash commit.
