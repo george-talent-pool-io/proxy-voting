@@ -1,0 +1,94 @@
+{
+  "scope": "Known leaky AI-synthetic validation; only three reference-labelled predicates; NOT safe operational automation",
+  "models": {
+    "base": [
+      {
+        "threshold": 0.5,
+        "n": 69,
+        "coverage": 0.69,
+        "exact_three_predicate_accuracy": 0.057971014492753624,
+        "errors": 65
+      },
+      {
+        "threshold": 0.7,
+        "n": 7,
+        "coverage": 0.07,
+        "exact_three_predicate_accuracy": 0.0,
+        "errors": 7
+      },
+      {
+        "threshold": 0.8,
+        "n": 0,
+        "coverage": 0.0,
+        "exact_three_predicate_accuracy": null,
+        "errors": 0
+      },
+      {
+        "threshold": 0.9,
+        "n": 0,
+        "coverage": 0.0,
+        "exact_three_predicate_accuracy": null,
+        "errors": 0
+      },
+      {
+        "threshold": 0.95,
+        "n": 0,
+        "coverage": 0.0,
+        "exact_three_predicate_accuracy": null,
+        "errors": 0
+      },
+      {
+        "threshold": 0.98,
+        "n": 0,
+        "coverage": 0.0,
+        "exact_three_predicate_accuracy": null,
+        "errors": 0
+      }
+    ],
+    "fine": [
+      {
+        "threshold": 0.5,
+        "n": 66,
+        "coverage": 0.66,
+        "exact_three_predicate_accuracy": 0.8939393939393939,
+        "errors": 7
+      },
+      {
+        "threshold": 0.7,
+        "n": 66,
+        "coverage": 0.66,
+        "exact_three_predicate_accuracy": 0.8939393939393939,
+        "errors": 7
+      },
+      {
+        "threshold": 0.8,
+        "n": 66,
+        "coverage": 0.66,
+        "exact_three_predicate_accuracy": 0.8939393939393939,
+        "errors": 7
+      },
+      {
+        "threshold": 0.9,
+        "n": 66,
+        "coverage": 0.66,
+        "exact_three_predicate_accuracy": 0.8939393939393939,
+        "errors": 7
+      },
+      {
+        "threshold": 0.95,
+        "n": 66,
+        "coverage": 0.66,
+        "exact_three_predicate_accuracy": 0.8939393939393939,
+        "errors": 7
+      },
+      {
+        "threshold": 0.98,
+        "n": 66,
+        "coverage": 0.66,
+        "exact_three_predicate_accuracy": 0.8939393939393939,
+        "errors": 7
+      }
+    ]
+  },
+  "automation_enabled": false
+}

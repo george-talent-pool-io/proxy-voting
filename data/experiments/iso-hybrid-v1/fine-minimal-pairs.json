@@ -1,0 +1,5686 @@
+{
+  "kind": "New authored diagnostic/adversarial cases; not human customer labels; never training",
+  "passed": 13,
+  "n": 17,
+  "rows": [
+    {
+      "id": "blocking-positive",
+      "text": "Shares will be blocked until completion of the meeting.",
+      "expected": {
+        "share_blocking": "YES"
+      },
+      "result": {
+        "predicates": {
+          "votable": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNCERTAIN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "Shares will be blocked until completion of the meeting.",
+              "start": 0,
+              "end": 55,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "share_blocking": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "Shares will be blocked until completion of the meeting.",
+              "start": 0,
+              "end": 55,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "poa_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "registration_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.1562,
+              "NO": 0.8438,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 0.8438,
+            "margin": 0.6876,
+            "evidence": null,
+            "sdk_confidence": 0.6056,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "beneficial_owner_disclosure_required": {
+            "value": "YES",
+            "scores": {
+              "YES": 0.8895,
+              "NO": 0.1105,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 0.8895,
+            "margin": 0.7789999999999999,
+            "evidence": {
+              "text": "Shares will be blocked until completion of the meeting.",
+              "start": 0,
+              "end": 55,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 0.6835,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "split_voting_restricted": {
+            "value": "YES",
+            "scores": {
+              "YES": 0.9855,
+              "NO": 0.0144,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 0.9855,
+            "margin": 0.9711000000000001,
+            "evidence": {
+              "text": "Shares will be blocked until completion of the meeting.",
+              "start": 0,
+              "end": 55,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 0.9309,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "securities_lending_recall_required": {
+            "value": "YES",
+            "scores": {
+              "YES": 0.9996,
+              "NO": 0.0004,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 0.9996,
+            "margin": 0.9992000000000001,
+            "evidence": {
+              "text": "Shares will be blocked until completion of the meeting.",
+              "start": 0,
+              "end": 55,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 0.9968,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "other_voting_restriction": {
+            "value": "YES",
+            "scores": {
+              "YES": 0.7298,
+              "NO": 0.2687,
+              "UNKNOWN": 0.0015
+            },
+            "confidence": 0.7298,
+            "margin": 0.4611,
+            "evidence": {
+              "text": "Shares will be blocked until completion of the meeting.",
+              "start": 0,
+              "end": 55,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 0.4607,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          }
+        },
+        "passage_predictions": {
+          "votable": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNCERTAIN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "Shares will be blocked until completion of the meeting.",
+                "start": 0,
+                "end": 55,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "share_blocking": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "Shares will be blocked until completion of the meeting.",
+                "start": 0,
+                "end": 55,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "poa_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "registration_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.1562,
+                "NO": 0.8438,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.8438,
+              "margin": 0.6876,
+              "evidence": null,
+              "sdk_confidence": 0.6056,
+              "truncated": false
+            }
+          ],
+          "beneficial_owner_disclosure_required": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 0.8895,
+                "NO": 0.1105,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.8895,
+              "margin": 0.7789999999999999,
+              "evidence": {
+                "text": "Shares will be blocked until completion of the meeting.",
+                "start": 0,
+                "end": 55,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 0.6835,
+              "truncated": false
+            }
+          ],
+          "split_voting_restricted": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 0.9855,
+                "NO": 0.0144,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.9855,
+              "margin": 0.9711000000000001,
+              "evidence": {
+                "text": "Shares will be blocked until completion of the meeting.",
+                "start": 0,
+                "end": 55,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 0.9309,
+              "truncated": false
+            }
+          ],
+          "securities_lending_recall_required": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 0.9996,
+                "NO": 0.0004,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.9996,
+              "margin": 0.9992000000000001,
+              "evidence": {
+                "text": "Shares will be blocked until completion of the meeting.",
+                "start": 0,
+                "end": 55,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 0.9968,
+              "truncated": false
+            }
+          ],
+          "other_voting_restriction": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 0.7298,
+                "NO": 0.2687,
+                "UNKNOWN": 0.0015
+              },
+              "confidence": 0.7298,
+              "margin": 0.4611,
+              "evidence": {
+                "text": "Shares will be blocked until completion of the meeting.",
+                "start": 0,
+                "end": 55,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 0.4607,
+              "truncated": false
+            }
+          ]
+        },
+        "model": "local Laya narrow predicates",
+        "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+        "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+        "processing_time_ms": 194.75441612303257,
+        "chunk_count": 1,
+        "llm_escalations": 0,
+        "automation_enabled": false
+      },
+      "checks": {
+        "share_blocking": true
+      },
+      "passed": true
+    },
+    {
+      "id": "blocking-negative",
+      "text": "Shares will NOT be blocked for this meeting.",
+      "expected": {
+        "share_blocking": "NO"
+      },
+      "result": {
+        "predicates": {
+          "votable": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNCERTAIN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "Shares will NOT be blocked for this meeting.",
+              "start": 0,
+              "end": 44,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "share_blocking": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "poa_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "registration_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "beneficial_owner_disclosure_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "split_voting_restricted": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "securities_lending_recall_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "other_voting_restriction": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          }
+        },
+        "passage_predictions": {
+          "votable": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNCERTAIN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "Shares will NOT be blocked for this meeting.",
+                "start": 0,
+                "end": 44,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "share_blocking": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "poa_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "registration_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "beneficial_owner_disclosure_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "split_voting_restricted": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "securities_lending_recall_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "other_voting_restriction": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ]
+        },
+        "model": "local Laya narrow predicates",
+        "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+        "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+        "processing_time_ms": 210.10224986821413,
+        "chunk_count": 1,
+        "llm_escalations": 0,
+        "automation_enabled": false
+      },
+      "checks": {
+        "share_blocking": true
+      },
+      "passed": true
+    },
+    {
+      "id": "poa-positive",
+      "text": "A power of attorney is required to vote at this meeting.",
+      "expected": {
+        "poa_required": "YES"
+      },
+      "result": {
+        "predicates": {
+          "votable": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNCERTAIN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "A power of attorney is required to vote at this meeting.",
+              "start": 0,
+              "end": 56,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "share_blocking": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "poa_required": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "A power of attorney is required to vote at this meeting.",
+              "start": 0,
+              "end": 56,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "registration_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "beneficial_owner_disclosure_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0056,
+              "NO": 0.9943,
+              "UNKNOWN": 0.0001
+            },
+            "confidence": 0.9943,
+            "margin": 0.9886999999999999,
+            "evidence": null,
+            "sdk_confidence": 0.9675,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "split_voting_restricted": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 0.9996,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "securities_lending_recall_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "other_voting_restriction": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0001,
+              "NO": 0.9999,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 0.9999,
+            "margin": 0.9998,
+            "evidence": null,
+            "sdk_confidence": 0.9995,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          }
+        },
+        "passage_predictions": {
+          "votable": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNCERTAIN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "A power of attorney is required to vote at this meeting.",
+                "start": 0,
+                "end": 56,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "share_blocking": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "poa_required": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "A power of attorney is required to vote at this meeting.",
+                "start": 0,
+                "end": 56,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "registration_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "beneficial_owner_disclosure_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0056,
+                "NO": 0.9943,
+                "UNKNOWN": 0.0001
+              },
+              "confidence": 0.9943,
+              "margin": 0.9886999999999999,
+              "evidence": null,
+              "sdk_confidence": 0.9675,
+              "truncated": false
+            }
+          ],
+          "split_voting_restricted": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 0.9996,
+              "truncated": false
+            }
+          ],
+          "securities_lending_recall_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "other_voting_restriction": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0001,
+                "NO": 0.9999,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.9999,
+              "margin": 0.9998,
+              "evidence": null,
+              "sdk_confidence": 0.9995,
+              "truncated": false
+            }
+          ]
+        },
+        "model": "local Laya narrow predicates",
+        "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+        "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+        "processing_time_ms": 194.89545794203877,
+        "chunk_count": 1,
+        "llm_escalations": 0,
+        "automation_enabled": false
+      },
+      "checks": {
+        "poa_required": true
+      },
+      "passed": true
+    },
+    {
+      "id": "poa-negative",
+      "text": "A power of attorney is not required to vote at this meeting.",
+      "expected": {
+        "poa_required": "NO"
+      },
+      "result": {
+        "predicates": {
+          "votable": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNCERTAIN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "A power of attorney is not required to vote at this meeting.",
+              "start": 0,
+              "end": 60,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "share_blocking": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "poa_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "registration_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "beneficial_owner_disclosure_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "split_voting_restricted": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "securities_lending_recall_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "other_voting_restriction": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          }
+        },
+        "passage_predictions": {
+          "votable": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNCERTAIN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "A power of attorney is not required to vote at this meeting.",
+                "start": 0,
+                "end": 60,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "share_blocking": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "poa_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "registration_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "beneficial_owner_disclosure_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "split_voting_restricted": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "securities_lending_recall_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "other_voting_restriction": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ]
+        },
+        "model": "local Laya narrow predicates",
+        "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+        "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+        "processing_time_ms": 203.04066711105406,
+        "chunk_count": 1,
+        "llm_escalations": 0,
+        "automation_enabled": false
+      },
+      "checks": {
+        "poa_required": true
+      },
+      "passed": true
+    },
+    {
+      "id": "registration-positive",
+      "text": "Registration is required before voting at this meeting.",
+      "expected": {
+        "registration_required": "YES"
+      },
+      "result": {
+        "predicates": {
+          "votable": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNCERTAIN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "Registration is required before voting at this meeting.",
+              "start": 0,
+              "end": 55,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "share_blocking": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "poa_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "registration_required": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "Registration is required before voting at this meeting.",
+              "start": 0,
+              "end": 55,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "beneficial_owner_disclosure_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0001,
+              "NO": 0.9999,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 0.9999,
+            "margin": 0.9998,
+            "evidence": null,
+            "sdk_confidence": 0.999,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "split_voting_restricted": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "securities_lending_recall_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "other_voting_restriction": {
+            "value": "YES",
+            "scores": {
+              "YES": 0.918,
+              "NO": 0.0812,
+              "UNKNOWN": 0.0008
+            },
+            "confidence": 0.918,
+            "margin": 0.8368,
+            "evidence": {
+              "text": "Registration is required before voting at this meeting.",
+              "start": 0,
+              "end": 55,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 0.738,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          }
+        },
+        "passage_predictions": {
+          "votable": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNCERTAIN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "Registration is required before voting at this meeting.",
+                "start": 0,
+                "end": 55,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "share_blocking": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "poa_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "registration_required": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "Registration is required before voting at this meeting.",
+                "start": 0,
+                "end": 55,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "beneficial_owner_disclosure_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0001,
+                "NO": 0.9999,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.9999,
+              "margin": 0.9998,
+              "evidence": null,
+              "sdk_confidence": 0.999,
+              "truncated": false
+            }
+          ],
+          "split_voting_restricted": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "securities_lending_recall_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "other_voting_restriction": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 0.918,
+                "NO": 0.0812,
+                "UNKNOWN": 0.0008
+              },
+              "confidence": 0.918,
+              "margin": 0.8368,
+              "evidence": {
+                "text": "Registration is required before voting at this meeting.",
+                "start": 0,
+                "end": 55,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 0.738,
+              "truncated": false
+            }
+          ]
+        },
+        "model": "local Laya narrow predicates",
+        "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+        "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+        "processing_time_ms": 195.62937505543232,
+        "chunk_count": 1,
+        "llm_escalations": 0,
+        "automation_enabled": false
+      },
+      "checks": {
+        "registration_required": true
+      },
+      "passed": true
+    },
+    {
+      "id": "registration-negative",
+      "text": "Registration is not required before voting at this meeting.",
+      "expected": {
+        "registration_required": "NO"
+      },
+      "result": {
+        "predicates": {
+          "votable": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNCERTAIN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "Registration is not required before voting at this meeting.",
+              "start": 0,
+              "end": 59,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "share_blocking": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "poa_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "registration_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "beneficial_owner_disclosure_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "split_voting_restricted": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "securities_lending_recall_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "other_voting_restriction": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          }
+        },
+        "passage_predictions": {
+          "votable": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNCERTAIN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "Registration is not required before voting at this meeting.",
+                "start": 0,
+                "end": 59,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "share_blocking": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "poa_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "registration_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "beneficial_owner_disclosure_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "split_voting_restricted": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "securities_lending_recall_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "other_voting_restriction": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ]
+        },
+        "model": "local Laya narrow predicates",
+        "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+        "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+        "processing_time_ms": 195.82074997015297,
+        "chunk_count": 1,
+        "llm_escalations": 0,
+        "automation_enabled": false
+      },
+      "checks": {
+        "registration_required": true
+      },
+      "passed": true
+    },
+    {
+      "id": "disclosure-positive",
+      "text": "Beneficial owner identity disclosure is mandatory for voting.",
+      "expected": {
+        "beneficial_owner_disclosure_required": "YES"
+      },
+      "result": {
+        "predicates": {
+          "votable": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNCERTAIN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "Beneficial owner identity disclosure is mandatory for voting.",
+              "start": 0,
+              "end": 61,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "share_blocking": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "poa_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "registration_required": {
+            "value": "YES",
+            "scores": {
+              "YES": 0.9699,
+              "NO": 0.03,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 0.9699,
+            "margin": 0.9399,
+            "evidence": {
+              "text": "Beneficial owner identity disclosure is mandatory for voting.",
+              "start": 0,
+              "end": 61,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 0.877,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "beneficial_owner_disclosure_required": {
+            "value": "YES",
+            "scores": {
+              "YES": 0.6723,
+              "NO": 0.3277,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 0.6723,
+            "margin": 0.3446,
+            "evidence": null,
+            "sdk_confidence": 0.4242,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "split_voting_restricted": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "securities_lending_recall_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.1,
+              "NO": 0.9,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 0.9,
+            "margin": 0.8,
+            "evidence": null,
+            "sdk_confidence": 0.704,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "other_voting_restriction": {
+            "value": "YES",
+            "scores": {
+              "YES": 0.9944,
+              "NO": 0.0056,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 0.9944,
+            "margin": 0.9887999999999999,
+            "evidence": {
+              "text": "Beneficial owner identity disclosure is mandatory for voting.",
+              "start": 0,
+              "end": 61,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 0.9685,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          }
+        },
+        "passage_predictions": {
+          "votable": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNCERTAIN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "Beneficial owner identity disclosure is mandatory for voting.",
+                "start": 0,
+                "end": 61,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "share_blocking": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "poa_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "registration_required": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 0.9699,
+                "NO": 0.03,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.9699,
+              "margin": 0.9399,
+              "evidence": {
+                "text": "Beneficial owner identity disclosure is mandatory for voting.",
+                "start": 0,
+                "end": 61,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 0.877,
+              "truncated": false
+            }
+          ],
+          "beneficial_owner_disclosure_required": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 0.6723,
+                "NO": 0.3277,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.6723,
+              "margin": 0.3446,
+              "evidence": null,
+              "sdk_confidence": 0.4242,
+              "truncated": false
+            }
+          ],
+          "split_voting_restricted": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "securities_lending_recall_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.1,
+                "NO": 0.9,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.9,
+              "margin": 0.8,
+              "evidence": null,
+              "sdk_confidence": 0.704,
+              "truncated": false
+            }
+          ],
+          "other_voting_restriction": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 0.9944,
+                "NO": 0.0056,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.9944,
+              "margin": 0.9887999999999999,
+              "evidence": {
+                "text": "Beneficial owner identity disclosure is mandatory for voting.",
+                "start": 0,
+                "end": 61,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 0.9685,
+              "truncated": false
+            }
+          ]
+        },
+        "model": "local Laya narrow predicates",
+        "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+        "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+        "processing_time_ms": 195.0051668100059,
+        "chunk_count": 1,
+        "llm_escalations": 0,
+        "automation_enabled": false
+      },
+      "checks": {
+        "beneficial_owner_disclosure_required": true
+      },
+      "passed": true
+    },
+    {
+      "id": "disclosure-negative",
+      "text": "Beneficial owner identity disclosure is not required for voting.",
+      "expected": {
+        "beneficial_owner_disclosure_required": "NO"
+      },
+      "result": {
+        "predicates": {
+          "votable": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNCERTAIN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "Beneficial owner identity disclosure is not required for voting.",
+              "start": 0,
+              "end": 64,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "share_blocking": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "poa_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "registration_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "beneficial_owner_disclosure_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "split_voting_restricted": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "securities_lending_recall_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "other_voting_restriction": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          }
+        },
+        "passage_predictions": {
+          "votable": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNCERTAIN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "Beneficial owner identity disclosure is not required for voting.",
+                "start": 0,
+                "end": 64,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "share_blocking": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "poa_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "registration_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "beneficial_owner_disclosure_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "split_voting_restricted": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "securities_lending_recall_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "other_voting_restriction": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ]
+        },
+        "model": "local Laya narrow predicates",
+        "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+        "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+        "processing_time_ms": 195.77466696500778,
+        "chunk_count": 1,
+        "llm_escalations": 0,
+        "automation_enabled": false
+      },
+      "checks": {
+        "beneficial_owner_disclosure_required": true
+      },
+      "passed": true
+    },
+    {
+      "id": "split-positive",
+      "text": "Split voting is prohibited at this meeting.",
+      "expected": {
+        "split_voting_restricted": "YES"
+      },
+      "result": {
+        "predicates": {
+          "votable": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNCERTAIN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "Split voting is prohibited at this meeting.",
+              "start": 0,
+              "end": 43,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "share_blocking": {
+            "value": "YES",
+            "scores": {
+              "YES": 0.9982,
+              "NO": 0.0017,
+              "UNKNOWN": 0.0001
+            },
+            "confidence": 0.9982,
+            "margin": 0.9964999999999999,
+            "evidence": {
+              "text": "Split voting is prohibited at this meeting.",
+              "start": 0,
+              "end": 43,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 0.9877,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "poa_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "registration_required": {
+            "value": "YES",
+            "scores": {
+              "YES": 0.9931,
+              "NO": 0.0069,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 0.9931,
+            "margin": 0.9862,
+            "evidence": {
+              "text": "Split voting is prohibited at this meeting.",
+              "start": 0,
+              "end": 43,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 0.9623,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "beneficial_owner_disclosure_required": {
+            "value": "YES",
+            "scores": {
+              "YES": 0.6737,
+              "NO": 0.3262,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 0.6737,
+            "margin": 0.3475,
+            "evidence": null,
+            "sdk_confidence": 0.4249,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "split_voting_restricted": {
+            "value": "YES",
+            "scores": {
+              "YES": 0.9999,
+              "NO": 0.0001,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 0.9999,
+            "margin": 0.9998,
+            "evidence": {
+              "text": "Split voting is prohibited at this meeting.",
+              "start": 0,
+              "end": 43,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 0.9992,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "securities_lending_recall_required": {
+            "value": "YES",
+            "scores": {
+              "YES": 0.9998,
+              "NO": 0.0001,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 0.9998,
+            "margin": 0.9997,
+            "evidence": {
+              "text": "Split voting is prohibited at this meeting.",
+              "start": 0,
+              "end": 43,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 0.9985,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "other_voting_restriction": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          }
+        },
+        "passage_predictions": {
+          "votable": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNCERTAIN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "Split voting is prohibited at this meeting.",
+                "start": 0,
+                "end": 43,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "share_blocking": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 0.9982,
+                "NO": 0.0017,
+                "UNKNOWN": 0.0001
+              },
+              "confidence": 0.9982,
+              "margin": 0.9964999999999999,
+              "evidence": {
+                "text": "Split voting is prohibited at this meeting.",
+                "start": 0,
+                "end": 43,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 0.9877,
+              "truncated": false
+            }
+          ],
+          "poa_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "registration_required": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 0.9931,
+                "NO": 0.0069,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.9931,
+              "margin": 0.9862,
+              "evidence": {
+                "text": "Split voting is prohibited at this meeting.",
+                "start": 0,
+                "end": 43,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 0.9623,
+              "truncated": false
+            }
+          ],
+          "beneficial_owner_disclosure_required": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 0.6737,
+                "NO": 0.3262,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.6737,
+              "margin": 0.3475,
+              "evidence": null,
+              "sdk_confidence": 0.4249,
+              "truncated": false
+            }
+          ],
+          "split_voting_restricted": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 0.9999,
+                "NO": 0.0001,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.9999,
+              "margin": 0.9998,
+              "evidence": {
+                "text": "Split voting is prohibited at this meeting.",
+                "start": 0,
+                "end": 43,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 0.9992,
+              "truncated": false
+            }
+          ],
+          "securities_lending_recall_required": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 0.9998,
+                "NO": 0.0001,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.9998,
+              "margin": 0.9997,
+              "evidence": {
+                "text": "Split voting is prohibited at this meeting.",
+                "start": 0,
+                "end": 43,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 0.9985,
+              "truncated": false
+            }
+          ],
+          "other_voting_restriction": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ]
+        },
+        "model": "local Laya narrow predicates",
+        "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+        "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+        "processing_time_ms": 191.55074981972575,
+        "chunk_count": 1,
+        "llm_escalations": 0,
+        "automation_enabled": false
+      },
+      "checks": {
+        "split_voting_restricted": true
+      },
+      "passed": true
+    },
+    {
+      "id": "split-negative",
+      "text": "Split voting is permitted without restriction at this meeting.",
+      "expected": {
+        "split_voting_restricted": "NO"
+      },
+      "result": {
+        "predicates": {
+          "votable": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNCERTAIN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "Split voting is permitted without restriction at this meeting.",
+              "start": 0,
+              "end": 62,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "share_blocking": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "poa_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "registration_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "beneficial_owner_disclosure_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "split_voting_restricted": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "securities_lending_recall_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "other_voting_restriction": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          }
+        },
+        "passage_predictions": {
+          "votable": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNCERTAIN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "Split voting is permitted without restriction at this meeting.",
+                "start": 0,
+                "end": 62,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "share_blocking": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "poa_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "registration_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "beneficial_owner_disclosure_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "split_voting_restricted": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "securities_lending_recall_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "other_voting_restriction": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ]
+        },
+        "model": "local Laya narrow predicates",
+        "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+        "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+        "processing_time_ms": 210.03429195843637,
+        "chunk_count": 1,
+        "llm_escalations": 0,
+        "automation_enabled": false
+      },
+      "checks": {
+        "split_voting_restricted": true
+      },
+      "passed": true
+    },
+    {
+      "id": "recall-positive",
+      "text": "Loaned securities must be recalled before voting.",
+      "expected": {
+        "securities_lending_recall_required": "YES"
+      },
+      "result": {
+        "predicates": {
+          "votable": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNCERTAIN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "Loaned securities must be recalled before voting.",
+              "start": 0,
+              "end": 49,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "share_blocking": {
+            "value": "YES",
+            "scores": {
+              "YES": 0.967,
+              "NO": 0.0323,
+              "UNKNOWN": 0.0007
+            },
+            "confidence": 0.967,
+            "margin": 0.9347,
+            "evidence": {
+              "text": "Loaned securities must be recalled before voting.",
+              "start": 0,
+              "end": 49,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 0.8649,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "poa_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "registration_required": {
+            "value": "YES",
+            "scores": {
+              "YES": 0.9996,
+              "NO": 0.0004,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 0.9996,
+            "margin": 0.9992000000000001,
+            "evidence": {
+              "text": "Loaned securities must be recalled before voting.",
+              "start": 0,
+              "end": 49,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 0.9971,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "beneficial_owner_disclosure_required": {
+            "value": "YES",
+            "scores": {
+              "YES": 0.7371,
+              "NO": 0.2629,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 0.7371,
+            "margin": 0.47419999999999995,
+            "evidence": {
+              "text": "Loaned securities must be recalled before voting.",
+              "start": 0,
+              "end": 49,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 0.4753,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "split_voting_restricted": {
+            "value": "YES",
+            "scores": {
+              "YES": 0.8153,
+              "NO": 0.1847,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 0.8153,
+            "margin": 0.6306,
+            "evidence": {
+              "text": "Loaned securities must be recalled before voting.",
+              "start": 0,
+              "end": 49,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 0.5642,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "securities_lending_recall_required": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "Loaned securities must be recalled before voting.",
+              "start": 0,
+              "end": 49,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "other_voting_restriction": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "Loaned securities must be recalled before voting.",
+              "start": 0,
+              "end": 49,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          }
+        },
+        "passage_predictions": {
+          "votable": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNCERTAIN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "Loaned securities must be recalled before voting.",
+                "start": 0,
+                "end": 49,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "share_blocking": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 0.967,
+                "NO": 0.0323,
+                "UNKNOWN": 0.0007
+              },
+              "confidence": 0.967,
+              "margin": 0.9347,
+              "evidence": {
+                "text": "Loaned securities must be recalled before voting.",
+                "start": 0,
+                "end": 49,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 0.8649,
+              "truncated": false
+            }
+          ],
+          "poa_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "registration_required": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 0.9996,
+                "NO": 0.0004,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.9996,
+              "margin": 0.9992000000000001,
+              "evidence": {
+                "text": "Loaned securities must be recalled before voting.",
+                "start": 0,
+                "end": 49,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 0.9971,
+              "truncated": false
+            }
+          ],
+          "beneficial_owner_disclosure_required": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 0.7371,
+                "NO": 0.2629,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.7371,
+              "margin": 0.47419999999999995,
+              "evidence": {
+                "text": "Loaned securities must be recalled before voting.",
+                "start": 0,
+                "end": 49,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 0.4753,
+              "truncated": false
+            }
+          ],
+          "split_voting_restricted": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 0.8153,
+                "NO": 0.1847,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.8153,
+              "margin": 0.6306,
+              "evidence": {
+                "text": "Loaned securities must be recalled before voting.",
+                "start": 0,
+                "end": 49,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 0.5642,
+              "truncated": false
+            }
+          ],
+          "securities_lending_recall_required": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "Loaned securities must be recalled before voting.",
+                "start": 0,
+                "end": 49,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "other_voting_restriction": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "Loaned securities must be recalled before voting.",
+                "start": 0,
+                "end": 49,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ]
+        },
+        "model": "local Laya narrow predicates",
+        "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+        "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+        "processing_time_ms": 205.18275001086295,
+        "chunk_count": 1,
+        "llm_escalations": 0,
+        "automation_enabled": false
+      },
+      "checks": {
+        "securities_lending_recall_required": true
+      },
+      "passed": true
+    },
+    {
+      "id": "recall-negative",
+      "text": "Recalling loaned securities is not required to exercise this vote.",
+      "expected": {
+        "securities_lending_recall_required": "NO"
+      },
+      "result": {
+        "predicates": {
+          "votable": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNCERTAIN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "Recalling loaned securities is not required to exercise this vote.",
+              "start": 0,
+              "end": 66,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "share_blocking": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "poa_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "registration_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "beneficial_owner_disclosure_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "split_voting_restricted": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "securities_lending_recall_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "other_voting_restriction": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          }
+        },
+        "passage_predictions": {
+          "votable": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNCERTAIN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "Recalling loaned securities is not required to exercise this vote.",
+                "start": 0,
+                "end": 66,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "share_blocking": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "poa_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "registration_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "beneficial_owner_disclosure_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "split_voting_restricted": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "securities_lending_recall_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "other_voting_restriction": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ]
+        },
+        "model": "local Laya narrow predicates",
+        "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+        "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+        "processing_time_ms": 202.55974982865155,
+        "chunk_count": 1,
+        "llm_escalations": 0,
+        "automation_enabled": false
+      },
+      "checks": {
+        "securities_lending_recall_required": true
+      },
+      "passed": true
+    },
+    {
+      "id": "other-positive",
+      "text": "Only holders of at least 1000 shares may vote at this meeting.",
+      "expected": {
+        "other_voting_restriction": "YES"
+      },
+      "result": {
+        "predicates": {
+          "votable": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNCERTAIN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "Only holders of at least 1000 shares may vote at this meeting.",
+              "start": 0,
+              "end": 62,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "share_blocking": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "poa_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "registration_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "beneficial_owner_disclosure_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "split_voting_restricted": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "securities_lending_recall_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "other_voting_restriction": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          }
+        },
+        "passage_predictions": {
+          "votable": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNCERTAIN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "Only holders of at least 1000 shares may vote at this meeting.",
+                "start": 0,
+                "end": 62,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "share_blocking": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "poa_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "registration_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "beneficial_owner_disclosure_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "split_voting_restricted": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "securities_lending_recall_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "other_voting_restriction": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ]
+        },
+        "model": "local Laya narrow predicates",
+        "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+        "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+        "processing_time_ms": 210.3970421012491,
+        "chunk_count": 1,
+        "llm_escalations": 0,
+        "automation_enabled": false
+      },
+      "checks": {
+        "other_voting_restriction": false
+      },
+      "passed": false
+    },
+    {
+      "id": "other-negative",
+      "text": "All holders may vote with no minimum holding requirement.",
+      "expected": {
+        "other_voting_restriction": "NO"
+      },
+      "result": {
+        "predicates": {
+          "votable": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNCERTAIN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "All holders may vote with no minimum holding requirement.",
+              "start": 0,
+              "end": 57,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "share_blocking": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "poa_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "registration_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "beneficial_owner_disclosure_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "split_voting_restricted": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "securities_lending_recall_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "other_voting_restriction": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 1,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          }
+        },
+        "passage_predictions": {
+          "votable": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNCERTAIN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "All holders may vote with no minimum holding requirement.",
+                "start": 0,
+                "end": 57,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "share_blocking": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "poa_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "registration_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "beneficial_owner_disclosure_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "split_voting_restricted": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "securities_lending_recall_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "other_voting_restriction": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ]
+        },
+        "model": "local Laya narrow predicates",
+        "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+        "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+        "processing_time_ms": 195.33054204657674,
+        "chunk_count": 1,
+        "llm_escalations": 0,
+        "automation_enabled": false
+      },
+      "checks": {
+        "other_voting_restriction": true
+      },
+      "passed": true
+    },
+    {
+      "id": "blocking-superseded",
+      "text": "Preliminary terms required share blocking. Final terms remove share blocking; shares will NOT be blocked.",
+      "expected": {
+        "share_blocking": "NO"
+      },
+      "result": {
+        "predicates": {
+          "votable": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNCERTAIN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "Preliminary terms required share blocking.",
+              "start": 0,
+              "end": 42,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 2,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "share_blocking": {
+            "value": "UNKNOWN",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": null,
+            "margin": null,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": true,
+            "aggregation": "conflict_abstain",
+            "passage_count": 2,
+            "abstention_reason": "Opposing passage predictions; no reliable supersession established",
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "poa_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 2,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "registration_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 2,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "beneficial_owner_disclosure_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 2,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "split_voting_restricted": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 2,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "securities_lending_recall_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 2,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "other_voting_restriction": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 2,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          }
+        },
+        "passage_predictions": {
+          "votable": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNCERTAIN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "Preliminary terms required share blocking.",
+                "start": 0,
+                "end": 42,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNCERTAIN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "Final terms remove share blocking; shares will NOT be blocked.",
+                "start": 43,
+                "end": 105,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "share_blocking": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 0.999,
+                "NO": 0.0005,
+                "UNKNOWN": 0.0005
+              },
+              "confidence": 0.999,
+              "margin": 0.9985,
+              "evidence": {
+                "text": "Preliminary terms required share blocking.",
+                "start": 0,
+                "end": 42,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 0.9919,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "poa_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "registration_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.001,
+                "NO": 0.9989,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.9989,
+              "margin": 0.9979,
+              "evidence": null,
+              "sdk_confidence": 0.9922,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "beneficial_owner_disclosure_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "split_voting_restricted": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0007,
+                "NO": 0.9978,
+                "UNKNOWN": 0.0015
+              },
+              "confidence": 0.9978,
+              "margin": 0.9963000000000001,
+              "evidence": null,
+              "sdk_confidence": 0.9847,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "securities_lending_recall_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0024,
+                "NO": 0.997,
+                "UNKNOWN": 0.0007
+              },
+              "confidence": 0.997,
+              "margin": 0.9946,
+              "evidence": null,
+              "sdk_confidence": 0.9798,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "other_voting_restriction": [
+            {
+              "value": "UNKNOWN",
+              "scores": {
+                "YES": 0.0087,
+                "NO": 0.4154,
+                "UNKNOWN": 0.5759
+              },
+              "confidence": 0.5759,
+              "margin": 0.16049999999999998,
+              "evidence": null,
+              "sdk_confidence": 0.341,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ]
+        },
+        "model": "local Laya narrow predicates",
+        "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+        "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+        "processing_time_ms": 376.0658330284059,
+        "chunk_count": 2,
+        "llm_escalations": 0,
+        "automation_enabled": false
+      },
+      "checks": {
+        "share_blocking": false
+      },
+      "passed": false
+    },
+    {
+      "id": "poa-superseded",
+      "text": "The preliminary notice required a power of attorney. The final terms waive that requirement: no power of attorney is required.",
+      "expected": {
+        "poa_required": "NO"
+      },
+      "result": {
+        "predicates": {
+          "votable": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNCERTAIN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "The preliminary notice required a power of attorney.",
+              "start": 0,
+              "end": 52,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 2,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "share_blocking": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 2,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "poa_required": {
+            "value": "UNKNOWN",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": null,
+            "margin": null,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": true,
+            "aggregation": "conflict_abstain",
+            "passage_count": 2,
+            "abstention_reason": "Opposing passage predictions; no reliable supersession established",
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "registration_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 2,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "beneficial_owner_disclosure_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 2,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "split_voting_restricted": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 2,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "securities_lending_recall_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 2,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "other_voting_restriction": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 0.9998,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 2,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          }
+        },
+        "passage_predictions": {
+          "votable": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNCERTAIN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "The preliminary notice required a power of attorney.",
+                "start": 0,
+                "end": 52,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNCERTAIN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "The final terms waive that requirement: no power of attorney is required.",
+                "start": 53,
+                "end": 126,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "share_blocking": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 0.9997,
+                "UNKNOWN": 0.0003
+              },
+              "confidence": 0.9997,
+              "margin": 0.9994000000000001,
+              "evidence": null,
+              "sdk_confidence": 0.9972,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "poa_required": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "The preliminary notice required a power of attorney.",
+                "start": 0,
+                "end": 52,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "registration_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0099,
+                "NO": 0.9877,
+                "UNKNOWN": 0.0024
+              },
+              "confidence": 0.9877,
+              "margin": 0.9778,
+              "evidence": null,
+              "sdk_confidence": 0.9341,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "beneficial_owner_disclosure_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "split_voting_restricted": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0001,
+                "NO": 0.9999,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.9999,
+              "margin": 0.9998,
+              "evidence": null,
+              "sdk_confidence": 0.9988,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "securities_lending_recall_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0003,
+                "NO": 0.9997,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.9997,
+              "margin": 0.9994000000000001,
+              "evidence": null,
+              "sdk_confidence": 0.9973,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "other_voting_restriction": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 0.9998,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ]
+        },
+        "model": "local Laya narrow predicates",
+        "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+        "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+        "processing_time_ms": 402.37949998117983,
+        "chunk_count": 2,
+        "llm_escalations": 0,
+        "automation_enabled": false
+      },
+      "checks": {
+        "poa_required": false
+      },
+      "passed": false
+    },
+    {
+      "id": "blocking-late",
+      "text": "The meeting opens at noon. Directors will present the accounts. Shares submitted for voting will be blocked until the meeting ends.",
+      "expected": {
+        "share_blocking": "YES"
+      },
+      "result": {
+        "predicates": {
+          "votable": {
+            "value": "YES",
+            "scores": {
+              "YES": 1.0,
+              "NO": 0.0,
+              "UNCERTAIN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": {
+              "text": "The meeting opens at noon.",
+              "start": 0,
+              "end": 26,
+              "boundary": "sentence",
+              "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+            },
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 3,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "share_blocking": {
+            "value": "UNKNOWN",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": null,
+            "margin": null,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": true,
+            "aggregation": "conflict_abstain",
+            "passage_count": 3,
+            "abstention_reason": "Opposing passage predictions; no reliable supersession established",
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "poa_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 3,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "registration_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 3,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "beneficial_owner_disclosure_required": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 3,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "split_voting_restricted": {
+            "value": "UNKNOWN",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": null,
+            "margin": null,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": true,
+            "aggregation": "conflict_abstain",
+            "passage_count": 3,
+            "abstention_reason": "Opposing passage predictions; no reliable supersession established",
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "securities_lending_recall_required": {
+            "value": "UNKNOWN",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": null,
+            "margin": null,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": true,
+            "aggregation": "conflict_abstain",
+            "passage_count": 3,
+            "abstention_reason": "Opposing passage predictions; no reliable supersession established",
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          },
+          "other_voting_restriction": {
+            "value": "NO",
+            "scores": {
+              "YES": 0.0,
+              "NO": 1.0,
+              "UNKNOWN": 0.0
+            },
+            "confidence": 1.0,
+            "margin": 1.0,
+            "evidence": null,
+            "sdk_confidence": 1.0,
+            "truncated": false,
+            "conflict": false,
+            "aggregation": "conflict_abstain",
+            "passage_count": 3,
+            "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+          }
+        },
+        "passage_predictions": {
+          "votable": [
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNCERTAIN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "The meeting opens at noon.",
+                "start": 0,
+                "end": 26,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNCERTAIN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "Directors will present the accounts.",
+                "start": 27,
+                "end": 63,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNCERTAIN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "Shares submitted for voting will be blocked until the meeting ends.",
+                "start": 64,
+                "end": 131,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "share_blocking": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 1.0,
+                "NO": 0.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": {
+                "text": "Shares submitted for voting will be blocked until the meeting ends.",
+                "start": 64,
+                "end": 131,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "poa_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "registration_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            }
+          ],
+          "beneficial_owner_disclosure_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0001,
+                "NO": 0.9999,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.9999,
+              "margin": 0.9998,
+              "evidence": null,
+              "sdk_confidence": 0.9988,
+              "truncated": false
+            }
+          ],
+          "split_voting_restricted": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 0.9872,
+                "NO": 0.0128,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.9872,
+              "margin": 0.9743999999999999,
+              "evidence": {
+                "text": "Shares submitted for voting will be blocked until the meeting ends.",
+                "start": 64,
+                "end": 131,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 0.9377,
+              "truncated": false
+            }
+          ],
+          "securities_lending_recall_required": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 0.7923,
+                "NO": 0.2077,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 0.7923,
+              "margin": 0.5846,
+              "evidence": {
+                "text": "Shares submitted for voting will be blocked until the meeting ends.",
+                "start": 64,
+                "end": 131,
+                "boundary": "sentence",
+                "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+              },
+              "sdk_confidence": 0.535,
+              "truncated": false
+            }
+          ],
+          "other_voting_restriction": [
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "NO",
+              "scores": {
+                "YES": 0.0,
+                "NO": 1.0,
+                "UNKNOWN": 0.0
+              },
+              "confidence": 1.0,
+              "margin": 1.0,
+              "evidence": null,
+              "sdk_confidence": 1.0,
+              "truncated": false
+            },
+            {
+              "value": "YES",
+              "scores": {
+                "YES": 0.6786,
+                "NO": 0.3212,
+                "UNKNOWN": 0.0001
+              },
+              "confidence": 0.6786,
+              "margin": 0.3574,
+              "evidence": null,
+              "sdk_confidence": 0.4274,
+              "truncated": false
+            }
+          ]
+        },
+        "model": "local Laya narrow predicates",
+        "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+        "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+        "processing_time_ms": 560.4313751682639,
+        "chunk_count": 3,
+        "llm_escalations": 0,
+        "automation_enabled": false
+      },
+      "checks": {
+        "share_blocking": false
+      },
+      "passed": false
+    }
+  ]
+}

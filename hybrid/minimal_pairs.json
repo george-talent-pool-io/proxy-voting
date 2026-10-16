@@ -1,0 +1,19 @@
+[
+ {"id":"blocking-positive","text":"Shares will be blocked until completion of the meeting.","expected":{"share_blocking":"YES"}},
+ {"id":"blocking-negative","text":"Shares will NOT be blocked for this meeting.","expected":{"share_blocking":"NO"}},
+ {"id":"poa-positive","text":"A power of attorney is required to vote at this meeting.","expected":{"poa_required":"YES"}},
+ {"id":"poa-negative","text":"A power of attorney is not required to vote at this meeting.","expected":{"poa_required":"NO"}},
+ {"id":"registration-positive","text":"Registration is required before voting at this meeting.","expected":{"registration_required":"YES"}},
+ {"id":"registration-negative","text":"Registration is not required before voting at this meeting.","expected":{"registration_required":"NO"}},
+ {"id":"disclosure-positive","text":"Beneficial owner identity disclosure is mandatory for voting.","expected":{"beneficial_owner_disclosure_required":"YES"}},
+ {"id":"disclosure-negative","text":"Beneficial owner identity disclosure is not required for voting.","expected":{"beneficial_owner_disclosure_required":"NO"}},
+ {"id":"split-positive","text":"Split voting is prohibited at this meeting.","expected":{"split_voting_restricted":"YES"}},
+ {"id":"split-negative","text":"Split voting is permitted without restriction at this meeting.","expected":{"split_voting_restricted":"NO"}},
+ {"id":"recall-positive","text":"Loaned securities must be recalled before voting.","expected":{"securities_lending_recall_required":"YES"}},
+ {"id":"recall-negative","text":"Recalling loaned securities is not required to exercise this vote.","expected":{"securities_lending_recall_required":"NO"}},
+ {"id":"other-positive","text":"Only holders of at least 1000 shares may vote at this meeting.","expected":{"other_voting_restriction":"YES"}},
+ {"id":"other-negative","text":"All holders may vote with no minimum holding requirement.","expected":{"other_voting_restriction":"NO"}},
+ {"id":"blocking-superseded","text":"Preliminary terms required share blocking. Final terms remove share blocking; shares will NOT be blocked.","expected":{"share_blocking":"NO"}},
+ {"id":"poa-superseded","text":"The preliminary notice required a power of attorney. The final terms waive that requirement: no power of attorney is required.","expected":{"poa_required":"NO"}},
+ {"id":"blocking-late","text":"The meeting opens at noon. Directors will present the accounts. Shares submitted for voting will be blocked until the meeting ends.","expected":{"share_blocking":"YES"}}
+]

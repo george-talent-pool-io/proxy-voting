@@ -1,0 +1,1378 @@
+{
+  "version": "hybrid-pipeline-1",
+  "parsed": {
+    "version": "iso-subset-1",
+    "raw": "{1:F01TESTBIC0XXXX0000000000}{2:I565TESTBIC0XXXXN}{4:\n:16R:GENL\n:20C::SEME//S0000000002\n:20C::CORP//C0000000000\n:23G:NEWM\n:22F::CAEV//XMET\n:16S:GENL\n:16R:USECU\n:35B:ISIN GB0002634946\nSYNTHETIC PARSER SECURITY\n:16S:USECU\n:16R:CAINST\n:13A::CAON//001\n:22F::CAOP//NOAC\n:16S:CAINST\n:16R:ADDINFO\n:70E::COMP//Registration is required before\nvoting.\n:16S:ADDINFO\n-}",
+    "source_hash": "e7abae4cc2ff07cdeef0a9905a07108b2722d753fd238255fefbd0f815d1d845",
+    "message_type": "MT565",
+    "kind": "PARTIAL_ISO15022",
+    "fields": [
+      {
+        "id": "e7abae4cc2ff07cd:0",
+        "tag": "16R",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "GENL",
+        "raw_value": "GENL",
+        "start": 54,
+        "end": 63,
+        "value_start": 59,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 0
+      },
+      {
+        "id": "e7abae4cc2ff07cd:1",
+        "tag": "20C",
+        "qualifier": "SEME",
+        "data_source_scheme": "",
+        "value": "S0000000002",
+        "raw_value": ":SEME//S0000000002",
+        "start": 64,
+        "end": 87,
+        "value_start": 76,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 1
+      },
+      {
+        "id": "e7abae4cc2ff07cd:2",
+        "tag": "20C",
+        "qualifier": "CORP",
+        "data_source_scheme": "",
+        "value": "C0000000000",
+        "raw_value": ":CORP//C0000000000",
+        "start": 88,
+        "end": 111,
+        "value_start": 100,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 2
+      },
+      {
+        "id": "e7abae4cc2ff07cd:3",
+        "tag": "23G",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "NEWM",
+        "raw_value": "NEWM",
+        "start": 112,
+        "end": 121,
+        "value_start": 117,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 3
+      },
+      {
+        "id": "e7abae4cc2ff07cd:4",
+        "tag": "22F",
+        "qualifier": "CAEV",
+        "data_source_scheme": "",
+        "value": "XMET",
+        "raw_value": ":CAEV//XMET",
+        "start": 122,
+        "end": 138,
+        "value_start": 134,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 4
+      },
+      {
+        "id": "e7abae4cc2ff07cd:5",
+        "tag": "16S",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "GENL",
+        "raw_value": "GENL",
+        "start": 139,
+        "end": 148,
+        "value_start": 144,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 5
+      },
+      {
+        "id": "e7abae4cc2ff07cd:6",
+        "tag": "16R",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "USECU",
+        "raw_value": "USECU",
+        "start": 149,
+        "end": 159,
+        "value_start": 154,
+        "path": [
+          "USECU[1]"
+        ],
+        "occurrence": 6
+      },
+      {
+        "id": "e7abae4cc2ff07cd:7",
+        "tag": "35B",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "ISIN GB0002634946\nSYNTHETIC PARSER SECURITY",
+        "raw_value": "ISIN GB0002634946\nSYNTHETIC PARSER SECURITY",
+        "start": 160,
+        "end": 208,
+        "value_start": 165,
+        "path": [
+          "USECU[1]"
+        ],
+        "occurrence": 7
+      },
+      {
+        "id": "e7abae4cc2ff07cd:8",
+        "tag": "16S",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "USECU",
+        "raw_value": "USECU",
+        "start": 209,
+        "end": 219,
+        "value_start": 214,
+        "path": [
+          "USECU[1]"
+        ],
+        "occurrence": 8
+      },
+      {
+        "id": "e7abae4cc2ff07cd:9",
+        "tag": "16R",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "CAINST",
+        "raw_value": "CAINST",
+        "start": 220,
+        "end": 231,
+        "value_start": 225,
+        "path": [
+          "CAINST[1]"
+        ],
+        "occurrence": 9
+      },
+      {
+        "id": "e7abae4cc2ff07cd:10",
+        "tag": "13A",
+        "qualifier": "CAON",
+        "data_source_scheme": "",
+        "value": "001",
+        "raw_value": ":CAON//001",
+        "start": 232,
+        "end": 247,
+        "value_start": 244,
+        "path": [
+          "CAINST[1]"
+        ],
+        "occurrence": 10
+      },
+      {
+        "id": "e7abae4cc2ff07cd:11",
+        "tag": "22F",
+        "qualifier": "CAOP",
+        "data_source_scheme": "",
+        "value": "NOAC",
+        "raw_value": ":CAOP//NOAC",
+        "start": 248,
+        "end": 264,
+        "value_start": 260,
+        "path": [
+          "CAINST[1]"
+        ],
+        "occurrence": 11
+      },
+      {
+        "id": "e7abae4cc2ff07cd:12",
+        "tag": "16S",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "CAINST",
+        "raw_value": "CAINST",
+        "start": 265,
+        "end": 276,
+        "value_start": 270,
+        "path": [
+          "CAINST[1]"
+        ],
+        "occurrence": 12
+      },
+      {
+        "id": "e7abae4cc2ff07cd:13",
+        "tag": "16R",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "ADDINFO",
+        "raw_value": "ADDINFO",
+        "start": 277,
+        "end": 289,
+        "value_start": 282,
+        "path": [
+          "ADDINFO[1]"
+        ],
+        "occurrence": 13
+      },
+      {
+        "id": "e7abae4cc2ff07cd:14",
+        "tag": "70E",
+        "qualifier": "COMP",
+        "data_source_scheme": "",
+        "value": "Registration is required before\nvoting.",
+        "raw_value": ":COMP//Registration is required before\nvoting.",
+        "start": 290,
+        "end": 341,
+        "value_start": 302,
+        "path": [
+          "ADDINFO[1]"
+        ],
+        "occurrence": 14
+      },
+      {
+        "id": "e7abae4cc2ff07cd:15",
+        "tag": "16S",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "ADDINFO",
+        "raw_value": "ADDINFO",
+        "start": 342,
+        "end": 354,
+        "value_start": 347,
+        "path": [
+          "ADDINFO[1]"
+        ],
+        "occurrence": 15
+      }
+    ],
+    "segments": [
+      {
+        "kind": "FIELD",
+        "field_id": "e7abae4cc2ff07cd:0",
+        "start": 54,
+        "end": 64
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "e7abae4cc2ff07cd:1",
+        "start": 64,
+        "end": 88
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "e7abae4cc2ff07cd:2",
+        "start": 88,
+        "end": 112
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "e7abae4cc2ff07cd:3",
+        "start": 112,
+        "end": 122
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "e7abae4cc2ff07cd:4",
+        "start": 122,
+        "end": 139
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "e7abae4cc2ff07cd:5",
+        "start": 139,
+        "end": 149
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "e7abae4cc2ff07cd:6",
+        "start": 149,
+        "end": 160
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "e7abae4cc2ff07cd:7",
+        "start": 160,
+        "end": 209
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "e7abae4cc2ff07cd:8",
+        "start": 209,
+        "end": 220
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "e7abae4cc2ff07cd:9",
+        "start": 220,
+        "end": 232
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "e7abae4cc2ff07cd:10",
+        "start": 232,
+        "end": 248
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "e7abae4cc2ff07cd:11",
+        "start": 248,
+        "end": 265
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "e7abae4cc2ff07cd:12",
+        "start": 265,
+        "end": 277
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "e7abae4cc2ff07cd:13",
+        "start": 277,
+        "end": 290
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "e7abae4cc2ff07cd:14",
+        "start": 290,
+        "end": 342
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "e7abae4cc2ff07cd:15",
+        "start": 342,
+        "end": 355
+      }
+    ],
+    "errors": [],
+    "facts": [
+      {
+        "name": "sequence",
+        "value": "GENL",
+        "field_id": "e7abae4cc2ff07cd:0",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 54,
+        "end": 63,
+        "value_start": 59,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "seme",
+        "value": "S0000000002",
+        "field_id": "e7abae4cc2ff07cd:1",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 64,
+        "end": 87,
+        "value_start": 76,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "corp",
+        "value": "C0000000000",
+        "field_id": "e7abae4cc2ff07cd:2",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 88,
+        "end": 111,
+        "value_start": 100,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "function",
+        "value": "NEWM",
+        "field_id": "e7abae4cc2ff07cd:3",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 112,
+        "end": 121,
+        "value_start": 117,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "caev",
+        "value": "XMET",
+        "field_id": "e7abae4cc2ff07cd:4",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 122,
+        "end": 138,
+        "value_start": 134,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "sequence",
+        "value": "GENL",
+        "field_id": "e7abae4cc2ff07cd:5",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 139,
+        "end": 148,
+        "value_start": 144,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "sequence",
+        "value": "USECU",
+        "field_id": "e7abae4cc2ff07cd:6",
+        "path": [
+          "USECU[1]"
+        ],
+        "start": 149,
+        "end": 159,
+        "value_start": 154,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "security",
+        "value": {
+          "isin": "GB0002634946",
+          "description": "SYNTHETIC PARSER SECURITY"
+        },
+        "field_id": "e7abae4cc2ff07cd:7",
+        "path": [
+          "USECU[1]"
+        ],
+        "start": 160,
+        "end": 208,
+        "value_start": 165,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "sequence",
+        "value": "USECU",
+        "field_id": "e7abae4cc2ff07cd:8",
+        "path": [
+          "USECU[1]"
+        ],
+        "start": 209,
+        "end": 219,
+        "value_start": 214,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "sequence",
+        "value": "CAINST",
+        "field_id": "e7abae4cc2ff07cd:9",
+        "path": [
+          "CAINST[1]"
+        ],
+        "start": 220,
+        "end": 231,
+        "value_start": 225,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "option_number",
+        "value": "001",
+        "field_id": "e7abae4cc2ff07cd:10",
+        "path": [
+          "CAINST[1]"
+        ],
+        "start": 232,
+        "end": 247,
+        "value_start": 244,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "option_code",
+        "value": "NOAC",
+        "field_id": "e7abae4cc2ff07cd:11",
+        "path": [
+          "CAINST[1]"
+        ],
+        "start": 248,
+        "end": 264,
+        "value_start": 260,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "sequence",
+        "value": "CAINST",
+        "field_id": "e7abae4cc2ff07cd:12",
+        "path": [
+          "CAINST[1]"
+        ],
+        "start": 265,
+        "end": 276,
+        "value_start": 270,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "sequence",
+        "value": "ADDINFO",
+        "field_id": "e7abae4cc2ff07cd:13",
+        "path": [
+          "ADDINFO[1]"
+        ],
+        "start": 277,
+        "end": 289,
+        "value_start": 282,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "narrative",
+        "value": "Registration is required before\nvoting.",
+        "field_id": "e7abae4cc2ff07cd:14",
+        "path": [
+          "ADDINFO[1]"
+        ],
+        "start": 290,
+        "end": 341,
+        "value_start": 302,
+        "route": "NARRATIVE_TEXT"
+      },
+      {
+        "name": "sequence",
+        "value": "ADDINFO",
+        "field_id": "e7abae4cc2ff07cd:15",
+        "path": [
+          "ADDINFO[1]"
+        ],
+        "start": 342,
+        "end": 354,
+        "value_start": 347,
+        "route": "STRUCTURED_FACTS"
+      }
+    ],
+    "routing": [
+      {
+        "field_id": "e7abae4cc2ff07cd:0",
+        "tag": "16R",
+        "qualifier": null,
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 54,
+        "end": 63
+      },
+      {
+        "field_id": "e7abae4cc2ff07cd:1",
+        "tag": "20C",
+        "qualifier": "SEME",
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 64,
+        "end": 87
+      },
+      {
+        "field_id": "e7abae4cc2ff07cd:2",
+        "tag": "20C",
+        "qualifier": "CORP",
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 88,
+        "end": 111
+      },
+      {
+        "field_id": "e7abae4cc2ff07cd:3",
+        "tag": "23G",
+        "qualifier": null,
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 112,
+        "end": 121
+      },
+      {
+        "field_id": "e7abae4cc2ff07cd:4",
+        "tag": "22F",
+        "qualifier": "CAEV",
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 122,
+        "end": 138
+      },
+      {
+        "field_id": "e7abae4cc2ff07cd:5",
+        "tag": "16S",
+        "qualifier": null,
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 139,
+        "end": 148
+      },
+      {
+        "field_id": "e7abae4cc2ff07cd:6",
+        "tag": "16R",
+        "qualifier": null,
+        "path": [
+          "USECU[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 149,
+        "end": 159
+      },
+      {
+        "field_id": "e7abae4cc2ff07cd:7",
+        "tag": "35B",
+        "qualifier": null,
+        "path": [
+          "USECU[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 160,
+        "end": 208
+      },
+      {
+        "field_id": "e7abae4cc2ff07cd:8",
+        "tag": "16S",
+        "qualifier": null,
+        "path": [
+          "USECU[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 209,
+        "end": 219
+      },
+      {
+        "field_id": "e7abae4cc2ff07cd:9",
+        "tag": "16R",
+        "qualifier": null,
+        "path": [
+          "CAINST[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 220,
+        "end": 231
+      },
+      {
+        "field_id": "e7abae4cc2ff07cd:10",
+        "tag": "13A",
+        "qualifier": "CAON",
+        "path": [
+          "CAINST[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 232,
+        "end": 247
+      },
+      {
+        "field_id": "e7abae4cc2ff07cd:11",
+        "tag": "22F",
+        "qualifier": "CAOP",
+        "path": [
+          "CAINST[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 248,
+        "end": 264
+      },
+      {
+        "field_id": "e7abae4cc2ff07cd:12",
+        "tag": "16S",
+        "qualifier": null,
+        "path": [
+          "CAINST[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 265,
+        "end": 276
+      },
+      {
+        "field_id": "e7abae4cc2ff07cd:13",
+        "tag": "16R",
+        "qualifier": null,
+        "path": [
+          "ADDINFO[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 277,
+        "end": 289
+      },
+      {
+        "field_id": "e7abae4cc2ff07cd:14",
+        "tag": "70E",
+        "qualifier": "COMP",
+        "path": [
+          "ADDINFO[1]"
+        ],
+        "route": "NARRATIVE_TEXT",
+        "consumer": "Laya predicates",
+        "start": 290,
+        "end": 341
+      },
+      {
+        "field_id": "e7abae4cc2ff07cd:15",
+        "tag": "16S",
+        "qualifier": null,
+        "path": [
+          "ADDINFO[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 342,
+        "end": 354
+      }
+    ],
+    "subset_structure_valid": true
+  },
+  "structured_facts": {
+    "meeting_event": "YES"
+  },
+  "semantic_analysis": {
+    "predicates": {
+      "votable": {
+        "value": "YES",
+        "scores": {
+          "YES": 1.0,
+          "NO": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "confidence": 1.0,
+        "margin": 1.0,
+        "evidence": {
+          "text": "Registration is required before",
+          "start": 302,
+          "end": 333,
+          "boundary": "sentence",
+          "source": "sentence-level Laya candidate; exact substring, not human-verified explanation",
+          "field_id": "e7abae4cc2ff07cd:14"
+        },
+        "sdk_confidence": 1.0,
+        "truncated": false,
+        "conflict": false,
+        "aggregation": "conflict_abstain",
+        "passage_count": 2,
+        "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+      },
+      "share_blocking": {
+        "value": "NO",
+        "scores": {
+          "YES": 0.0,
+          "NO": 1.0,
+          "UNKNOWN": 0.0
+        },
+        "confidence": 1.0,
+        "margin": 1.0,
+        "evidence": null,
+        "sdk_confidence": 0.9998,
+        "truncated": false,
+        "conflict": false,
+        "aggregation": "conflict_abstain",
+        "passage_count": 2,
+        "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+      },
+      "poa_required": {
+        "value": "NO",
+        "scores": {
+          "YES": 0.0,
+          "NO": 1.0,
+          "UNKNOWN": 0.0
+        },
+        "confidence": 1.0,
+        "margin": 1.0,
+        "evidence": null,
+        "sdk_confidence": 1.0,
+        "truncated": false,
+        "conflict": false,
+        "aggregation": "conflict_abstain",
+        "passage_count": 2,
+        "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+      },
+      "registration_required": {
+        "value": "UNKNOWN",
+        "scores": {
+          "YES": 1.0,
+          "NO": 0.0,
+          "UNKNOWN": 0.0
+        },
+        "confidence": null,
+        "margin": null,
+        "evidence": null,
+        "sdk_confidence": 1.0,
+        "truncated": false,
+        "conflict": true,
+        "aggregation": "conflict_abstain",
+        "passage_count": 2,
+        "abstention_reason": "Opposing passage predictions; no reliable supersession established",
+        "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+      },
+      "beneficial_owner_disclosure_required": {
+        "value": "NO",
+        "scores": {
+          "YES": 0.0003,
+          "NO": 0.9996,
+          "UNKNOWN": 0.0001
+        },
+        "confidence": 0.9996,
+        "margin": 0.9993000000000001,
+        "evidence": null,
+        "sdk_confidence": 0.9964,
+        "truncated": false,
+        "conflict": false,
+        "aggregation": "conflict_abstain",
+        "passage_count": 2,
+        "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+      },
+      "split_voting_restricted": {
+        "value": "NO",
+        "scores": {
+          "YES": 0.0,
+          "NO": 1.0,
+          "UNKNOWN": 0.0
+        },
+        "confidence": 1.0,
+        "margin": 1.0,
+        "evidence": null,
+        "sdk_confidence": 1.0,
+        "truncated": false,
+        "conflict": false,
+        "aggregation": "conflict_abstain",
+        "passage_count": 2,
+        "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+      },
+      "securities_lending_recall_required": {
+        "value": "NO",
+        "scores": {
+          "YES": 0.0001,
+          "NO": 0.9998,
+          "UNKNOWN": 0.0001
+        },
+        "confidence": 0.9998,
+        "margin": 0.9997,
+        "evidence": null,
+        "sdk_confidence": 0.9979,
+        "truncated": false,
+        "conflict": false,
+        "aggregation": "conflict_abstain",
+        "passage_count": 2,
+        "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+      },
+      "other_voting_restriction": {
+        "value": "NO",
+        "scores": {
+          "YES": 0.0,
+          "NO": 1.0,
+          "UNKNOWN": 0.0
+        },
+        "confidence": 1.0,
+        "margin": 1.0,
+        "evidence": null,
+        "sdk_confidence": 1.0,
+        "truncated": false,
+        "conflict": false,
+        "aggregation": "conflict_abstain",
+        "passage_count": 2,
+        "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+      }
+    },
+    "passage_predictions": {
+      "votable": [
+        {
+          "value": "YES",
+          "scores": {
+            "YES": 1.0,
+            "NO": 0.0,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 1.0,
+          "margin": 1.0,
+          "evidence": {
+            "text": "Registration is required before",
+            "start": 302,
+            "end": 333,
+            "boundary": "sentence",
+            "source": "sentence-level Laya candidate; exact substring, not human-verified explanation",
+            "field_id": "e7abae4cc2ff07cd:14"
+          },
+          "sdk_confidence": 1.0,
+          "truncated": false
+        },
+        {
+          "value": "YES",
+          "scores": {
+            "YES": 1.0,
+            "NO": 0.0,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 1.0,
+          "margin": 1.0,
+          "evidence": {
+            "text": "voting.",
+            "start": 32,
+            "end": 39,
+            "boundary": "sentence",
+            "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+          },
+          "sdk_confidence": 1.0,
+          "truncated": false
+        }
+      ],
+      "share_blocking": [
+        {
+          "value": "NO",
+          "scores": {
+            "YES": 0.0,
+            "NO": 1.0,
+            "UNKNOWN": 0.0
+          },
+          "confidence": 1.0,
+          "margin": 1.0,
+          "evidence": null,
+          "sdk_confidence": 0.9998,
+          "truncated": false
+        },
+        {
+          "value": "UNKNOWN",
+          "scores": {
+            "YES": 0.0023,
+            "NO": 0.3375,
+            "UNKNOWN": 0.6602
+          },
+          "confidence": 0.6602,
+          "margin": 0.3227,
+          "evidence": null,
+          "sdk_confidence": 0.404,
+          "truncated": false
+        }
+      ],
+      "poa_required": [
+        {
+          "value": "NO",
+          "scores": {
+            "YES": 0.0,
+            "NO": 1.0,
+            "UNKNOWN": 0.0
+          },
+          "confidence": 1.0,
+          "margin": 1.0,
+          "evidence": null,
+          "sdk_confidence": 1.0,
+          "truncated": false
+        },
+        {
+          "value": "NO",
+          "scores": {
+            "YES": 0.0,
+            "NO": 0.9987,
+            "UNKNOWN": 0.0013
+          },
+          "confidence": 0.9987,
+          "margin": 0.9974000000000001,
+          "evidence": null,
+          "sdk_confidence": 0.9912,
+          "truncated": false
+        }
+      ],
+      "registration_required": [
+        {
+          "value": "YES",
+          "scores": {
+            "YES": 1.0,
+            "NO": 0.0,
+            "UNKNOWN": 0.0
+          },
+          "confidence": 1.0,
+          "margin": 1.0,
+          "evidence": {
+            "text": "Registration is required before",
+            "start": 0,
+            "end": 31,
+            "boundary": "sentence",
+            "source": "sentence-level Laya candidate; exact substring, not human-verified explanation"
+          },
+          "sdk_confidence": 1.0,
+          "truncated": false
+        },
+        {
+          "value": "NO",
+          "scores": {
+            "YES": 0.0,
+            "NO": 0.9984,
+            "UNKNOWN": 0.0016
+          },
+          "confidence": 0.9984,
+          "margin": 0.9967999999999999,
+          "evidence": null,
+          "sdk_confidence": 0.9889,
+          "truncated": false
+        }
+      ],
+      "beneficial_owner_disclosure_required": [
+        {
+          "value": "NO",
+          "scores": {
+            "YES": 0.0003,
+            "NO": 0.9996,
+            "UNKNOWN": 0.0001
+          },
+          "confidence": 0.9996,
+          "margin": 0.9993000000000001,
+          "evidence": null,
+          "sdk_confidence": 0.9964,
+          "truncated": false
+        },
+        {
+          "value": "NO",
+          "scores": {
+            "YES": 0.0001,
+            "NO": 0.9608,
+            "UNKNOWN": 0.0391
+          },
+          "confidence": 0.9608,
+          "margin": 0.9217,
+          "evidence": null,
+          "sdk_confidence": 0.8487,
+          "truncated": false
+        }
+      ],
+      "split_voting_restricted": [
+        {
+          "value": "NO",
+          "scores": {
+            "YES": 0.0,
+            "NO": 1.0,
+            "UNKNOWN": 0.0
+          },
+          "confidence": 1.0,
+          "margin": 1.0,
+          "evidence": null,
+          "sdk_confidence": 1.0,
+          "truncated": false
+        },
+        {
+          "value": "NO",
+          "scores": {
+            "YES": 0.0,
+            "NO": 0.9999,
+            "UNKNOWN": 0.0001
+          },
+          "confidence": 0.9999,
+          "margin": 0.9998,
+          "evidence": null,
+          "sdk_confidence": 0.9989,
+          "truncated": false
+        }
+      ],
+      "securities_lending_recall_required": [
+        {
+          "value": "NO",
+          "scores": {
+            "YES": 0.0003,
+            "NO": 0.9996,
+            "UNKNOWN": 0.0
+          },
+          "confidence": 0.9996,
+          "margin": 0.9993000000000001,
+          "evidence": null,
+          "sdk_confidence": 0.9971,
+          "truncated": false
+        },
+        {
+          "value": "NO",
+          "scores": {
+            "YES": 0.0001,
+            "NO": 0.9998,
+            "UNKNOWN": 0.0001
+          },
+          "confidence": 0.9998,
+          "margin": 0.9997,
+          "evidence": null,
+          "sdk_confidence": 0.9979,
+          "truncated": false
+        }
+      ],
+      "other_voting_restriction": [
+        {
+          "value": "NO",
+          "scores": {
+            "YES": 0.0785,
+            "NO": 0.9207,
+            "UNKNOWN": 0.0008
+          },
+          "confidence": 0.9207,
+          "margin": 0.8422,
+          "evidence": null,
+          "sdk_confidence": 0.7437,
+          "truncated": false
+        },
+        {
+          "value": "NO",
+          "scores": {
+            "YES": 0.0,
+            "NO": 1.0,
+            "UNKNOWN": 0.0
+          },
+          "confidence": 1.0,
+          "margin": 1.0,
+          "evidence": null,
+          "sdk_confidence": 1.0,
+          "truncated": false
+        }
+      ]
+    },
+    "model": "local Laya narrow predicates",
+    "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+    "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+    "processing_time_ms": 364.9867500644177,
+    "chunk_count": 2,
+    "llm_escalations": 0,
+    "automation_enabled": false
+  },
+  "deadline": {
+    "status": "UNKNOWN",
+    "comparisons": [],
+    "conflict": false,
+    "reason": "Date-only and local times require an agreed sender/timezone profile; MKDT/EARD/MEET/RDTE are not substituted for RDDT."
+  },
+  "decision_facts": {
+    "votable": "YES",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "registration_required": "UNKNOWN",
+    "beneficial_owner_disclosure_required": "NO",
+    "split_voting_restricted": "NO",
+    "securities_lending_recall_required": "NO",
+    "other_voting_restriction": "NO",
+    "deadline_status": "UNKNOWN",
+    "conflict": true
+  },
+  "decision": {
+    "classification": "UNCERTAIN_MANUAL_REVIEW",
+    "rule": "R1 conflicting, malformed or unresolved lifecycle evidence",
+    "rule_version": "hybrid-policy-1",
+    "automation_enabled": false,
+    "manual_review_required": true
+  },
+  "routing_trace": [
+    {
+      "field_id": "e7abae4cc2ff07cd:0",
+      "tag": "16R",
+      "qualifier": null,
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 54,
+      "end": 63
+    },
+    {
+      "field_id": "e7abae4cc2ff07cd:1",
+      "tag": "20C",
+      "qualifier": "SEME",
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 64,
+      "end": 87
+    },
+    {
+      "field_id": "e7abae4cc2ff07cd:2",
+      "tag": "20C",
+      "qualifier": "CORP",
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 88,
+      "end": 111
+    },
+    {
+      "field_id": "e7abae4cc2ff07cd:3",
+      "tag": "23G",
+      "qualifier": null,
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 112,
+      "end": 121
+    },
+    {
+      "field_id": "e7abae4cc2ff07cd:4",
+      "tag": "22F",
+      "qualifier": "CAEV",
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 122,
+      "end": 138
+    },
+    {
+      "field_id": "e7abae4cc2ff07cd:5",
+      "tag": "16S",
+      "qualifier": null,
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 139,
+      "end": 148
+    },
+    {
+      "field_id": "e7abae4cc2ff07cd:6",
+      "tag": "16R",
+      "qualifier": null,
+      "path": [
+        "USECU[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 149,
+      "end": 159
+    },
+    {
+      "field_id": "e7abae4cc2ff07cd:7",
+      "tag": "35B",
+      "qualifier": null,
+      "path": [
+        "USECU[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 160,
+      "end": 208
+    },
+    {
+      "field_id": "e7abae4cc2ff07cd:8",
+      "tag": "16S",
+      "qualifier": null,
+      "path": [
+        "USECU[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 209,
+      "end": 219
+    },
+    {
+      "field_id": "e7abae4cc2ff07cd:9",
+      "tag": "16R",
+      "qualifier": null,
+      "path": [
+        "CAINST[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 220,
+      "end": 231
+    },
+    {
+      "field_id": "e7abae4cc2ff07cd:10",
+      "tag": "13A",
+      "qualifier": "CAON",
+      "path": [
+        "CAINST[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 232,
+      "end": 247
+    },
+    {
+      "field_id": "e7abae4cc2ff07cd:11",
+      "tag": "22F",
+      "qualifier": "CAOP",
+      "path": [
+        "CAINST[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 248,
+      "end": 264
+    },
+    {
+      "field_id": "e7abae4cc2ff07cd:12",
+      "tag": "16S",
+      "qualifier": null,
+      "path": [
+        "CAINST[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 265,
+      "end": 276
+    },
+    {
+      "field_id": "e7abae4cc2ff07cd:13",
+      "tag": "16R",
+      "qualifier": null,
+      "path": [
+        "ADDINFO[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 277,
+      "end": 289
+    },
+    {
+      "field_id": "e7abae4cc2ff07cd:14",
+      "tag": "70E",
+      "qualifier": "COMP",
+      "path": [
+        "ADDINFO[1]"
+      ],
+      "route": "NARRATIVE_TEXT",
+      "consumer": "Laya predicates",
+      "start": 290,
+      "end": 341
+    },
+    {
+      "field_id": "e7abae4cc2ff07cd:15",
+      "tag": "16S",
+      "qualifier": null,
+      "path": [
+        "ADDINFO[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 342,
+      "end": 354
+    }
+  ],
+  "review_reasons": [],
+  "fallback": {
+    "enabled": false,
+    "external_calls": 0
+  },
+  "narrative_text": "Registration is required before\nvoting.",
+  "metrics": {
+    "structured_values": 7,
+    "narrative_passages": 1,
+    "laya_executed": true,
+    "llm_escalations": 0,
+    "manual_review": true
+  }
+}

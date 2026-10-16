@@ -1,0 +1,30 @@
+[
+  {
+    "id": "alpaca_corrective:3069",
+    "title": "Voting instructions in context",
+    "description": "A public proxy excerpt that describes shareholder voting channels.",
+    "source_file": "001_abt-20260311.htm",
+    "verification": "Unverified Laya prediction; no customer accuracy claim"
+  },
+  {
+    "id": "alpaca_corrective:3073",
+    "title": "Proxy materials and eligibility",
+    "description": "A public proxy excerpt with questions and answers about meeting participation.",
+    "source_file": "002_d85856ddef14a.htm",
+    "verification": "Unverified Laya prediction; no customer accuracy claim"
+  },
+  {
+    "id": "alpaca_corrective:339",
+    "title": "Legal power-of-attorney language",
+    "description": "A public contract excerpt containing power-of-attorney language. Inspect whether the requirement concerns voting.",
+    "source_file": "0116_udr-20250930xex10d4.htm",
+    "verification": "Unverified Laya prediction; no customer accuracy claim"
+  },
+  {
+    "id": "alpaca_corrective:3130",
+    "title": "A held-out meeting example",
+    "description": "An American Express proxy excerpt in the test split. An expert review here contributes to held-out metrics.",
+    "source_file": "008_tm2519434-8_def14a.htm",
+    "verification": "Unverified Laya prediction; no customer accuracy claim"
+  }
+]

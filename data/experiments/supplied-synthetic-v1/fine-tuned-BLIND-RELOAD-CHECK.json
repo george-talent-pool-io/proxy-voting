@@ -1,0 +1,1 @@
+{"identical": true, "keys": ["scores", "decision", "classification", "confidence", "model_version", "configuration_version", "supplied_customer_status"], "n": 100, "prediction_sha256": "95ad7ef748baf0e2345503c560e7f08697a79f488cffac2ebe6824c9b76dd728"}

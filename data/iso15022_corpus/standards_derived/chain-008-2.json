@@ -1,0 +1,17 @@
+{
+  "id": "chain-008-2",
+  "source_type": "STANDARDS_DERIVED_SYNTHETIC",
+  "source_url": "https://www.iso20022.org/15022/uhb/finmt564.htm",
+  "source_organisation": "ISO dictionary; locally authored partial chain",
+  "retrieved_at": "2026-10-16",
+  "message_type": "MT564",
+  "notes": "Generated partial event lifecycle scenario, not production data. Same sender/CORP; distinct SEME; narrative RELA linkage; replacements/cancellation PREV. Excluded from ML training.",
+  "raw": "{2:I564TESTBIC0XXXXN}{4:\n:16R:GENL\n:20C::SEME//CHAIN008S2\n:20C::CORP//CHAIN008\n:23G:REPL\n:22F::CAEV//MEET\n:22F::CAMV//VOLU\n:16R:LINK\n:13A::LINK//564\n:20C::PREV//CHAIN008S0\n:16S:LINK\n:16S:GENL\n:16R:USECU\n:35B:ISIN GB0002634946\n:16S:USECU\n:16R:CADETL\n:98A::MEET//20261030\n:16S:CADETL\n:16R:CAOPTN\n:13A::CAON//001\n:22F::CAOP//PROX\n:17B::DFLT//N\n:98E::RDDT//20261018170000,000/00\n:16S:CAOPTN\n:16R:CAOPTN\n:13A::CAON//002\n:22F::CAOP//ABST\n:17B::DFLT//N\n:98E::RDDT//20261018170000,000/00\n:16S:CAOPTN\n-}",
+  "expected": {
+    "seme": "CHAIN008S2",
+    "corp": "CHAIN008",
+    "function": "REPL",
+    "caev": "MEET",
+    "kind": "PARTIAL_ISO15022"
+  }
+}

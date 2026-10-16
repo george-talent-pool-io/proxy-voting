@@ -1,0 +1,17 @@
+{
+  "id": "chain-014-3",
+  "source_type": "STANDARDS_DERIVED_SYNTHETIC",
+  "source_url": "https://www.iso20022.org/15022/uhb/finmt564.htm",
+  "source_organisation": "ISO dictionary; locally authored partial chain",
+  "retrieved_at": "2026-10-16",
+  "message_type": "MT564",
+  "notes": "Generated partial event lifecycle scenario, not production data. Same sender/CORP; distinct SEME; narrative RELA linkage; replacements/cancellation PREV. Excluded from ML training.",
+  "raw": "{2:I564TESTBIC0XXXXN}{4:\n:16R:GENL\n:20C::SEME//CHAIN014S3\n:20C::CORP//CHAIN014\n:23G:CANC\n:22F::CAEV//MEET\n:22F::CAMV//VOLU\n:16R:LINK\n:13A::LINK//564\n:20C::PREV//CHAIN014S2\n:16S:LINK\n:16S:GENL\n-}",
+  "expected": {
+    "seme": "CHAIN014S3",
+    "corp": "CHAIN014",
+    "function": "CANC",
+    "caev": "MEET",
+    "kind": "PARTIAL_ISO15022"
+  }
+}

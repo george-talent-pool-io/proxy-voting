@@ -1,0 +1,13 @@
+{
+  "protocol": "exact-prefix-jaccard-v2",
+  "previous_protocol": "minhash-lsh-v1",
+  "source_backup": "data/history/pre-exact-grouping.sqlite",
+  "source_backup_sha256": "e057e1206a51c05e765add53b390c9cb071ec6cd8ef999166f2cf1c54f18553a",
+  "source_rows": 7683,
+  "changed_group_rows": 66,
+  "changed_split_rows": 16,
+  "original_text_and_hashes_identical": true,
+  "all_run_inputs_and_predictions_preserved": true,
+  "reviews_before_migration": 0,
+  "inference_note": "Question/option order, source text, model and raw results unchanged. Grouping is not a model input. No human labels existed at migration."
+}

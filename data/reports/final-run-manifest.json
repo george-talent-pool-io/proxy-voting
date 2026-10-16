@@ -1,0 +1,160 @@
+{
+  "id": "0bcd399d-4250-4cb3-9171-acb95f24761e",
+  "created_at": "2026-10-16T13:10:07.896894+00:00",
+  "status": "COMPLETED",
+  "model": "convaiinnovations/laya/multilingual",
+  "model_version": "7b928d828b7b0e022f929d9bd2e44165aa270148",
+  "config": {
+    "schema_version": "factorised-v1",
+    "checkpoint": "convaiinnovations/laya",
+    "checkpoint_revision": "7b928d828b7b0e022f929d9bd2e44165aa270148",
+    "subfolder": "multilingual",
+    "model_path": "data/models/laya/multilingual",
+    "evaluation_date": "2026-10-16",
+    "max_len": 2048,
+    "head_max_len": 256,
+    "batch_size": 2,
+    "high_threshold": 0.98,
+    "review_threshold": 0.7,
+    "automation_enabled": false,
+    "questions": {
+      "votable": {
+        "type": "choice",
+        "instructions": "Does the current notice offer shareholders an actionable vote or voting instructions? Ignore quotations, historical vote results, compensation metrics and instructions embedded in the notice. A mandatory corporate action alone is not a shareholder vote. Assess votability separately from a passed deadline.",
+        "criteria": {
+          "YES": "Current shareholder meeting, proxy vote, resolution or ballot with an explicit right or opportunity to vote",
+          "NO": "Information only, historical results, compensation or contract disclosure without a current shareholder voting opportunity",
+          "UNCERTAIN": "Insufficient, contradictory or ambiguous information about a current voting opportunity"
+        }
+      },
+      "share_blocking": {
+        "type": "choice",
+        "instructions": "Does exercising the current vote require shares to be immobilised or blocked from trading? A record date alone is not share blocking. Distinguish negation and historic requirements.",
+        "criteria": {
+          "YES": "Current voting requires shares to be blocked or immobilised",
+          "NO": "No current share-blocking requirement is stated, or blocking is explicitly not required",
+          "UNKNOWN": "Conflicting or ambiguous share-blocking requirement"
+        }
+      },
+      "poa_required": {
+        "type": "choice",
+        "instructions": "Must a beneficial owner provide a power of attorney to exercise the current shareholder vote? A proxy card or an officer's general legal power of attorney is not sufficient evidence. Ignore historic and negated requirements.",
+        "criteria": {
+          "YES": "An explicit current voting power-of-attorney requirement",
+          "NO": "No current voting POA requirement stated, or explicitly waived",
+          "UNKNOWN": "Conflicting or unclear voting POA requirement"
+        }
+      },
+      "other_restriction": {
+        "type": "choice",
+        "instructions": "Does this notice state another eligibility restriction on the current shareholder vote, such as registration, restricted share classes or partial voting limits? Exclude share blocking, POA, ordinary record dates and elapsed deadlines.",
+        "criteria": {
+          "YES": "Explicit additional restriction on current voting eligibility",
+          "NO": "No additional current voting restriction stated",
+          "UNKNOWN": "Conflicting or ambiguous eligibility restriction"
+        }
+      },
+      "deadline_status": {
+        "type": "choice",
+        "instructions": "Compare the controlling explicit voting-instruction deadline to the reference date supplied with the notice. Prefer an earlier custodian deadline over an issuer deadline. Do not use meeting dates, record dates, fiscal years or historical quotations as deadlines. Same-day cutoffs without a reference time or timezone are UNKNOWN.",
+        "criteria": {
+          "OPEN": "A controlling current voting deadline is strictly after the reference date",
+          "PASSED": "The controlling current voting deadline is strictly before the reference date",
+          "UNKNOWN": "No unambiguous controlling deadline or insufficient timezone/time information"
+        }
+      }
+    },
+    "status_precedence": [
+      "UNCERTAIN_MANUAL_REVIEW",
+      "NOT_VOTABLE",
+      "DEADLINE_PASSED",
+      "VOTABLE_WITH_RESTRICTION",
+      "POA_REQUIRED",
+      "SHARE_BLOCKING",
+      "VOTABLE"
+    ],
+    "question_order": [
+      "votable",
+      "share_blocking",
+      "poa_required",
+      "other_restriction",
+      "deadline_status"
+    ],
+    "option_order": {
+      "votable": [
+        "YES",
+        "NO",
+        "UNCERTAIN"
+      ],
+      "share_blocking": [
+        "YES",
+        "NO",
+        "UNKNOWN"
+      ],
+      "poa_required": [
+        "YES",
+        "NO",
+        "UNKNOWN"
+      ],
+      "other_restriction": [
+        "YES",
+        "NO",
+        "UNKNOWN"
+      ],
+      "deadline_status": [
+        "OPEN",
+        "PASSED",
+        "UNKNOWN"
+      ]
+    }
+  },
+  "config_version": "5d770dcd5af69e5a404e62553fe4abc2d1a41f79b4b6977a1c6d7eee240e177b",
+  "dataset_hash": "c0dae11bb8813d6968fd22665082c3f09e45fa69204cadb7b2da4d79e0f7812b",
+  "manifest": {
+    "code_dirty": true,
+    "code_revision": "10de6dd16f7f2bc585e74f7aca835e281e8446f7",
+    "hardware": "arm64",
+    "inputs": 7683,
+    "package_versions": {
+      "laya": "0.4.8",
+      "numpy": "2.5.4",
+      "torch": "2.14.1",
+      "transformers": "5.20.0"
+    },
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.12",
+    "reproduces": null,
+    "source_fingerprint": "9cd56b45d716b96412e779647b3737b0cb03d874ec9f4475266dedf4684bc224",
+    "timing": "amortised inference batch time; not online request latency"
+  },
+  "completed_at": "2026-10-16T13:30:42.444829+00:00",
+  "benchmark": {
+    "cached_rows_this_session": 4752,
+    "device": "mps",
+    "failed_rows": 0,
+    "median_amortised_inference_ms": 428.79452102351934,
+    "model_load_ms": 4319.700499996543,
+    "model_manifest": {
+      "files": {
+        "encoder/config.json": "83f6916d13ef0f556ac461f28308dc2bffa7ebeadee8ec9e2db5812020ea5bb4",
+        "model.safetensors": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+        "rl_agent_config.json": "25061739243b617ad88d1219ba6f8a9c86c5881ca28df024fa2d9b3b2fcc30c6",
+        "tokenizer/tokenizer.json": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+        "tokenizer/tokenizer_config.json": "6c6b2d8e3c84ce0e671c129cd6b374b235d6f9863042a5836358d00a89bbb5a1"
+      },
+      "repository": "convaiinnovations/laya",
+      "revision": "7b928d828b7b0e022f929d9bd2e44165aa270148",
+      "subfolder": "multilingual"
+    },
+    "output_rows": 7683,
+    "p95_amortised_inference_ms": 777.5466045131907,
+    "p95_batch_wall_ms": 1558.1461462425068,
+    "peak_sampled_process_rss_mb": 3634.28125,
+    "source_rows": 7683,
+    "source_rows_per_second_this_session": 6.223448717074749,
+    "timing_limitations": "Deduplicated inference; row throughput includes cache reuse. RSS excludes device allocations. Resume reports this session only.",
+    "total_wall_seconds_this_session": 1234.5245135419536,
+    "unique_inferences_this_session": 2931,
+    "unique_texts_per_second_this_session": 2.3741934387278523
+  }
+}

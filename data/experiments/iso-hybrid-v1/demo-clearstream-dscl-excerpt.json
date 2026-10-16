@@ -1,0 +1,575 @@
+{
+  "version": "hybrid-pipeline-1",
+  "parsed": {
+    "version": "iso-subset-1",
+    "raw": ":16R:GENL\n:20C::CORP//810651611\n:20C::SEME//EBDSCL00120191004\n:23G:NEWM\n:22F::CAEV//DSCL\n:22F::CAMV//MAND\n:98C::PREP//20191004094253\n:25D::PROC//COMP\n:16S:GENL\n",
+    "source_hash": "10757cda32ce02c8d6bc435adb3d56a2e03994fed3be8c85889d2f7ce7475fc6",
+    "message_type": "MT564",
+    "kind": "PARTIAL_ISO15022",
+    "fields": [
+      {
+        "id": "10757cda32ce02c8:0",
+        "tag": "16R",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "GENL",
+        "raw_value": "GENL",
+        "start": 0,
+        "end": 9,
+        "value_start": 5,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 0
+      },
+      {
+        "id": "10757cda32ce02c8:1",
+        "tag": "20C",
+        "qualifier": "CORP",
+        "data_source_scheme": "",
+        "value": "810651611",
+        "raw_value": ":CORP//810651611",
+        "start": 10,
+        "end": 31,
+        "value_start": 22,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 1
+      },
+      {
+        "id": "10757cda32ce02c8:2",
+        "tag": "20C",
+        "qualifier": "SEME",
+        "data_source_scheme": "",
+        "value": "EBDSCL00120191004",
+        "raw_value": ":SEME//EBDSCL00120191004",
+        "start": 32,
+        "end": 61,
+        "value_start": 44,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 2
+      },
+      {
+        "id": "10757cda32ce02c8:3",
+        "tag": "23G",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "NEWM",
+        "raw_value": "NEWM",
+        "start": 62,
+        "end": 71,
+        "value_start": 67,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 3
+      },
+      {
+        "id": "10757cda32ce02c8:4",
+        "tag": "22F",
+        "qualifier": "CAEV",
+        "data_source_scheme": "",
+        "value": "DSCL",
+        "raw_value": ":CAEV//DSCL",
+        "start": 72,
+        "end": 88,
+        "value_start": 84,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 4
+      },
+      {
+        "id": "10757cda32ce02c8:5",
+        "tag": "22F",
+        "qualifier": "CAMV",
+        "data_source_scheme": "",
+        "value": "MAND",
+        "raw_value": ":CAMV//MAND",
+        "start": 89,
+        "end": 105,
+        "value_start": 101,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 5
+      },
+      {
+        "id": "10757cda32ce02c8:6",
+        "tag": "98C",
+        "qualifier": "PREP",
+        "data_source_scheme": "",
+        "value": "20191004094253",
+        "raw_value": ":PREP//20191004094253",
+        "start": 106,
+        "end": 132,
+        "value_start": 118,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 6
+      },
+      {
+        "id": "10757cda32ce02c8:7",
+        "tag": "25D",
+        "qualifier": "PROC",
+        "data_source_scheme": "",
+        "value": "COMP",
+        "raw_value": ":PROC//COMP",
+        "start": 133,
+        "end": 149,
+        "value_start": 145,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 7
+      },
+      {
+        "id": "10757cda32ce02c8:8",
+        "tag": "16S",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "GENL",
+        "raw_value": "GENL",
+        "start": 150,
+        "end": 159,
+        "value_start": 155,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 8
+      }
+    ],
+    "segments": [
+      {
+        "kind": "FIELD",
+        "field_id": "10757cda32ce02c8:0",
+        "start": 0,
+        "end": 10
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "10757cda32ce02c8:1",
+        "start": 10,
+        "end": 32
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "10757cda32ce02c8:2",
+        "start": 32,
+        "end": 62
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "10757cda32ce02c8:3",
+        "start": 62,
+        "end": 72
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "10757cda32ce02c8:4",
+        "start": 72,
+        "end": 89
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "10757cda32ce02c8:5",
+        "start": 89,
+        "end": 106
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "10757cda32ce02c8:6",
+        "start": 106,
+        "end": 133
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "10757cda32ce02c8:7",
+        "start": 133,
+        "end": 150
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "10757cda32ce02c8:8",
+        "start": 150,
+        "end": 160
+      }
+    ],
+    "errors": [],
+    "facts": [
+      {
+        "name": "sequence",
+        "value": "GENL",
+        "field_id": "10757cda32ce02c8:0",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 0,
+        "end": 9,
+        "value_start": 5,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "corp",
+        "value": "810651611",
+        "field_id": "10757cda32ce02c8:1",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 10,
+        "end": 31,
+        "value_start": 22,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "function",
+        "value": "NEWM",
+        "field_id": "10757cda32ce02c8:3",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 62,
+        "end": 71,
+        "value_start": 67,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "caev",
+        "value": "DSCL",
+        "field_id": "10757cda32ce02c8:4",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 72,
+        "end": 88,
+        "value_start": 84,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "camv",
+        "value": "MAND",
+        "field_id": "10757cda32ce02c8:5",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 89,
+        "end": 105,
+        "value_start": 101,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "prep",
+        "value": {
+          "iso": "2019-10-04T09:42:53",
+          "precision": "SECOND",
+          "offset_known": false
+        },
+        "field_id": "10757cda32ce02c8:6",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 106,
+        "end": 132,
+        "value_start": 118,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "processing_status",
+        "value": {
+          "qualifier": "PROC",
+          "value": "COMP"
+        },
+        "field_id": "10757cda32ce02c8:7",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 133,
+        "end": 149,
+        "value_start": 145,
+        "route": "SEMISTRUCTURED_FACTS"
+      },
+      {
+        "name": "sequence",
+        "value": "GENL",
+        "field_id": "10757cda32ce02c8:8",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 150,
+        "end": 159,
+        "value_start": 155,
+        "route": "STRUCTURED_FACTS"
+      }
+    ],
+    "routing": [
+      {
+        "field_id": "10757cda32ce02c8:0",
+        "tag": "16R",
+        "qualifier": null,
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 0,
+        "end": 9
+      },
+      {
+        "field_id": "10757cda32ce02c8:1",
+        "tag": "20C",
+        "qualifier": "CORP",
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 10,
+        "end": 31
+      },
+      {
+        "field_id": "10757cda32ce02c8:2",
+        "tag": "20C",
+        "qualifier": "SEME",
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "UNKNOWN_FIELDS",
+        "consumer": "preserve/review",
+        "start": 32,
+        "end": 61
+      },
+      {
+        "field_id": "10757cda32ce02c8:3",
+        "tag": "23G",
+        "qualifier": null,
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 62,
+        "end": 71
+      },
+      {
+        "field_id": "10757cda32ce02c8:4",
+        "tag": "22F",
+        "qualifier": "CAEV",
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 72,
+        "end": 88
+      },
+      {
+        "field_id": "10757cda32ce02c8:5",
+        "tag": "22F",
+        "qualifier": "CAMV",
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 89,
+        "end": 105
+      },
+      {
+        "field_id": "10757cda32ce02c8:6",
+        "tag": "98C",
+        "qualifier": "PREP",
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 106,
+        "end": 132
+      },
+      {
+        "field_id": "10757cda32ce02c8:7",
+        "tag": "25D",
+        "qualifier": "PROC",
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "SEMISTRUCTURED_FACTS",
+        "consumer": "preserve/review",
+        "start": 133,
+        "end": 149
+      },
+      {
+        "field_id": "10757cda32ce02c8:8",
+        "tag": "16S",
+        "qualifier": null,
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 150,
+        "end": 159
+      }
+    ]
+  },
+  "structured_facts": {
+    "meeting_event": "NO"
+  },
+  "semantic_analysis": {
+    "predicates": {},
+    "llm_escalations": 0,
+    "reason": "No narrative"
+  },
+  "deadline": {
+    "status": "UNKNOWN",
+    "comparisons": [],
+    "conflict": false,
+    "reason": "Date-only and local times require an agreed sender/timezone profile; MKDT/EARD/MEET/RDTE are not substituted for RDDT."
+  },
+  "decision_facts": {
+    "votable": "UNCERTAIN",
+    "share_blocking": "UNKNOWN",
+    "poa_required": "UNKNOWN",
+    "registration_required": "UNKNOWN",
+    "beneficial_owner_disclosure_required": "UNKNOWN",
+    "split_voting_restricted": "UNKNOWN",
+    "securities_lending_recall_required": "UNKNOWN",
+    "other_voting_restriction": "UNKNOWN",
+    "deadline_status": "UNKNOWN",
+    "conflict": false
+  },
+  "decision": {
+    "classification": "UNCERTAIN_MANUAL_REVIEW",
+    "rule": "R4 current voting opportunity not established",
+    "rule_version": "hybrid-policy-1",
+    "automation_enabled": false,
+    "manual_review_required": true
+  },
+  "routing_trace": [
+    {
+      "field_id": "10757cda32ce02c8:0",
+      "tag": "16R",
+      "qualifier": null,
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 0,
+      "end": 9
+    },
+    {
+      "field_id": "10757cda32ce02c8:1",
+      "tag": "20C",
+      "qualifier": "CORP",
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 10,
+      "end": 31
+    },
+    {
+      "field_id": "10757cda32ce02c8:2",
+      "tag": "20C",
+      "qualifier": "SEME",
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "UNKNOWN_FIELDS",
+      "consumer": "preserve/review",
+      "start": 32,
+      "end": 61
+    },
+    {
+      "field_id": "10757cda32ce02c8:3",
+      "tag": "23G",
+      "qualifier": null,
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 62,
+      "end": 71
+    },
+    {
+      "field_id": "10757cda32ce02c8:4",
+      "tag": "22F",
+      "qualifier": "CAEV",
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 72,
+      "end": 88
+    },
+    {
+      "field_id": "10757cda32ce02c8:5",
+      "tag": "22F",
+      "qualifier": "CAMV",
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 89,
+      "end": 105
+    },
+    {
+      "field_id": "10757cda32ce02c8:6",
+      "tag": "98C",
+      "qualifier": "PREP",
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 106,
+      "end": 132
+    },
+    {
+      "field_id": "10757cda32ce02c8:7",
+      "tag": "25D",
+      "qualifier": "PROC",
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "SEMISTRUCTURED_FACTS",
+      "consumer": "preserve/review",
+      "start": 133,
+      "end": 149
+    },
+    {
+      "field_id": "10757cda32ce02c8:8",
+      "tag": "16S",
+      "qualifier": null,
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 150,
+      "end": 159
+    }
+  ],
+  "review_reasons": [],
+  "fallback": {
+    "enabled": false,
+    "external_calls": 0
+  },
+  "narrative_text": "",
+  "metrics": {
+    "structured_values": 5,
+    "narrative_passages": 0,
+    "laya_executed": false,
+    "llm_escalations": 0,
+    "manual_review": true
+  }
+}

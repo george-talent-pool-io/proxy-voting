@@ -1,1 +1,417 @@
-# proxy-voting
+# Laya Corporate Actions Voting Lab
+
+A runnable local application for testing whether **Laya**, a small specialised, non-generative decision model, can classify shareholder voting notices reliably. FastAPI, SQLite and a restrained browser GUI provide source inspection, immutable experiment history, human review, golden labels, group-separated training and evaluation.
+
+**This is an experimental product demonstrator, not a validated voting service.** Its interface reports unknown accuracy as unknown and disables automatic processing by default. It does not substitute rules or a generative LLM for Laya.
+
+Latest measured verification: **7,683 real source-row outputs, zero failures; 100 application tests and eight browser tests pass. Laya matches 30/57 authored semantic cases; 27 fail.** Automatic processing remains disabled. [Read the verification report](data/reports/VERIFICATION.md) for measurements, source limitations, the ordering/grouping fixes and real training/reproduction checks.
+
+Latest supervised research: **supplied synthetic test all-field exact match 6/100 → 100/100; unchanged semantic challenge 30/57 → 37/57.** The fine-tuned model still makes **12 challenge errors with policy score ≥98%**. The supplied test has known duplicate overlap and two previously exposed labels. **Automation remains disabled; no customer accuracy claim is supported.** See [the complete study](data/reports/LAYA_TRAINING_EVALUATION.md) and [every remaining challenge failure](data/reports/LAYA_FINETUNED_CHALLENGE_ERRORS.md).
+
+## Start the application
+
+Requires Python 3.12 and [uv](https://docs.astral.sh/uv/getting-started/installation/). Node is not required for the frontend. Run from this repository:
+
+```bash
+./scripts/start.sh
+```
+
+Open **http://127.0.0.1:8000**. The command installs locked dependencies and serves the complete application. It starts with an empty workspace on a clean checkout; it does not invent notices or predictions. `PORT=8001 ./scripts/start.sh` selects another port.
+
+To download, profile, import and classify the public corpus on a fresh checkout:
+
+```bash
+./scripts/setup_demo.sh
+./scripts/start.sh
+```
+
+Setup downloads approximately 60 MB of source data and 615 MB of model files. Model inference takes time, depending on hardware. The script prints progress and persists each completed batch. On this development Mac, inference uses MPS; CUDA is preferred where available, otherwise CPU. Use `LAYA_DEVICE=cpu` to override. Classification is resumable after interruption.
+
+With setup data already present, Docker is an alternative:
+
+```bash
+docker compose up --build
+```
+
+Docker publishes only to loopback, mounts `./data` for persistence, and uses CPU. The image does not bundle customer data or weights. Compose configuration validates, but image builds on this host timed out while fetching registry metadata (both GHCR and a Docker Hub-only retry). Docker startup remains unverified; use the native startup for the verified path.
+
+## The public example corpus
+
+The original request described 15,022 records. **No such dataset was supplied.** At the user's request, this implementation instead sources [TheTokenFactory/SEC financial extraction instructions](https://huggingface.co/datasets/TheTokenFactory/sec-contracts-financial-extraction-instructions), pinned to revision `c90ac749f9056901c8c3ed22ae1ff7c894c9b696`, licensed CC BY 4.0. Credit: TheTokenFactory, underlying SEC filings. Modifications: selection of source `input`, normalisation, provenance mapping, duplicate grouping and splitting. No extraction target is used as a voting label.
+
+The downloaded corpus contains:
+
+| Observation | Count |
+|---|---:|
+| Source rows | 7,683 |
+| Proxy-statement excerpt rows | 1,897 |
+| Contract excerpt rows, useful as distractors | 5,786 |
+| Distinct normalised texts | 2,931 |
+| Filing / duplicate groups | 1,066 |
+| Human-verified votability labels supplied by source | 0 |
+
+These are **filing excerpts repeated across extraction tasks**, not 7,683 individual events, complete filings or custodian instructions. They provide a substantial public starter corpus but are **not comprehensive coverage of global corporate-action notices**. Compensation and historical governance are overrepresented. Real operational notices and domain experts remain necessary for customer claims.
+
+The publisher generated extraction targets using Gemma. This application excludes `instruction`, `output`, publisher extraction confidence and extraction task labels from Laya input and from golden labels. Only the original `input` text and fixed reference date enter Laya. Model inference is local; source/model downloading requires internet access but uploads no notice text.
+
+Read [the profile](data/reports/PROFILE.md) and [structured profile](data/reports/profile.json) for field meanings, distributions, unknowns, repeated openings, suspicious encoding, HTML and length checks. Issuer comes from publisher metadata and can be unknown. Missing company displays are completed only from a single consistent company value for the same source filing, with a reference record ID; original metadata remains intact. Country, market, meeting dates and ISIN are not supplied reliably and are not guessed. Language identification is heuristic; short financial tables can be misidentified.
+
+Raw files are unchanged in `data/raw`, excluded from Git. SHA-256 checks verify the pinned releases. Normalised source records are stored separately in `data/normalised/public.jsonl` and SQLite. Source hashes cover the original excerpt, before HTML stripping, NFC normalisation and whitespace collapse.
+
+To reproduce individual setup steps:
+
+```bash
+uv sync --frozen
+uv run python scripts/source_public_data.py
+uv run python -m scripts.profile_data
+uv run python -m scripts.import_data data/normalised/public.jsonl
+uv run python scripts/download_model.py
+uv run python -m scripts.run_batch
+```
+
+## Architecture
+
+```mermaid
+flowchart LR
+    Browser[Browser GUI] --> API[FastAPI / same origin]
+    API --> SQLite[(SQLite WAL: notices, runs, predictions, review revisions)]
+    API --> Worker[Local batch worker]
+    Worker --> Adapter[VotingClassifier boundary]
+    Adapter --> Laya[Official Laya SDK / local checkpoint]
+    SQLite --> Evaluation[Model-independent evaluation]
+    SQLite --> Golden[Verified golden revisions]
+    Golden --> Split[Immutable group assignments]
+    Split --> Training[Official Laya fine-tuning]
+```
+
+`apps/web` is an accessible, buildless HTML/CSS/JavaScript frontend. This keeps installation small and gives the API and frontend the same origin. `apps/api` owns persistence and review transactions. `classifier` isolates SDK details behind `VotingClassifier`; evaluation consumes structured results, so future ModernBERT, rules, hybrid or separately enabled LLM experiments can use the same harness. Laya remains the only application model. The research directory also contains a separate local MiniLM encoder/logistic-head benchmark; it is never an application fallback.
+
+SQLite stores immutable source records, run input manifests, one result or explicit error per input/run, and append-only human revisions. Database triggers reject changes/deletions to predictions, reviews, input manifests and run configuration. A failed classification is visible, never replaced by a fabricated result. Run status and measured benchmark fields are the mutable job lifecycle fields. This is an audit ledger, not cryptographically tamper-proof storage against a database administrator.
+
+## Laya model and score handling
+
+Runtime: **official `laya==0.4.8`** from PyPI, pinned with the complete dependency graph in `uv.lock`. [Official implementation](https://github.com/NandhaKishorM/laya), [model family](https://huggingface.co/convaiinnovations/laya).
+
+Checkpoint: `convaiinnovations/laya`, `multilingual` subfolder, revision `7b928d828b7b0e022f929d9bd2e44165aa270148`. This is the approximately 322M parameter mmBERT-backed Laya model. We use a single multilingual checkpoint for reproducible coverage rather than routing across checkpoints. Downloaded weights must match SHA-256 `9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204`. Setup writes a file integrity manifest; subsequent loads verify it. The SDK may make a local tokenizer compatibility repair; weights are unchanged.
+
+Laya receives five typed `choice` questions in one `predict_batch` call per group of source texts. It returns choices and **native option probabilities** for each factor. The adapter:
+
+- Preserves each native factor distribution and the raw SDK answer, including entropy confidence and `answer_confidence`.
+- Uses the **minimum winning option probability** across the five factors as a conservative **policy score**. This is explicitly **not a probability of the derived status**. No seven-way probability distribution is fabricated; the GUI shows factor bars.
+- Does not use the SDK action head as an automation signal.
+- Validates finite values, bounds, score labels and sums, allowing only the SDK's four-decimal rounding error. It does not renormalise rounded values.
+- Records SDK version, checkpoint revision, configuration hash, latency, token usage and truncation.
+- Escalates truncated input, option-budget warnings, uncertain restrictions, ambiguous votes, conflicting factors and an actionable vote with an unknown deadline.
+
+The baseline uses a 2,048-token input budget and 256-token head budget. This does **not guarantee complete model coverage of every long excerpt**; the SDK reports dropped tokens and affected questions, and these records require review. The original complete excerpt is always displayed. Increasing `max_len` up to 8,192 is configurable but needs a new run and measured validation. Long inputs do not silently disappear.
+
+Laya's published limitations include raw calibration, option wording/order sensitivity and imperfect zero-shot domain performance. The actual semantic challenge report is retained even when expectations fail. A base model's advertised benchmark is not evidence of voting accuracy.
+
+## Taxonomy and deadlines
+
+[The explicit configuration](classifier/config.json) versions instructions, criteria, model/context budgets, fixed evaluation date and thresholds. The initial schema is provisionally factorised:
+
+```text
+votable: YES | NO | UNCERTAIN
+share_blocking / poa_required / other_restriction: true | false | null
+  false means “no current requirement stated or explicitly waived”
+  null means “ambiguous or conflicting”
+deadline_status: OPEN | PASSED | UNKNOWN
+manual_review_required: bool
+```
+
+Seven statuses are derived with documented precedence: uncertain voting opportunity → not votable → passed deadline → unknown restrictions → multiple/other restrictions → POA only → blocking only → votable. All factors remain visible even when a higher-priority status wins. Overlap is therefore retained. Public excerpt data does not justify mutually exclusive restriction classes. Business owners must validate both this schema and the meaning of “not stated”.
+
+The preserved v1 baseline asks Laya for deadline status. A separate research configuration, `classifier/config-factorised-v2.json`, asks Laya only about deadline presence and uses the versioned conservative parser in `classifier/deadlines.py` for extraction/comparison. It abstains on unsupported formats, unresolved conflicts and same-day comparisons without sufficient timestamp information. This ablation is separate from the supplied-label training study; neither silently changes the historical baseline. In v1, Instructions distinguish controlling custodian deadlines from issuer deadlines, record dates, meeting dates and quoted history. The reference date is **2026-10-16**, injected into inference and static regression cases. Same-day cutoffs without sufficient reference time/timezone are unknown. Changing the reference date creates a different configuration and experiment. Golden revisions retain the review's date context.
+
+## Run, reproduce and export
+
+```bash
+uv run python -m scripts.run_batch
+uv run python -m scripts.run_batch --limit 8
+uv run python -m scripts.run_batch --resume RUN_ID
+uv run python -m scripts.run_batch --reproduce RUN_ID
+uv run python -m scripts.verify_run --run RUN_ID --output artifacts/verification-UNIQUE.json
+uv run python -m evaluation.evaluate --run RUN_ID --split test --output artifacts/evaluation-UNIQUE.json
+```
+
+Every run gets a new UUID, source input hashes, ordered input membership, dataset/configuration hashes, model version, reference date, explicit question/option order, timestamps and source-code fingerprint. New runs also retain a Python source/config/lock archive in `data/run_sources`. Reproduce uses the original input membership and configuration. **For exact code reproduction, restore that run's archived code and locked environment in a separate checkout.** The current source fingerprint is always recorded; running a new code version with old inputs is not evidence of bit-identical reproduction. Different hardware or kernel versions can change floating-point results. The verification script checks output/input counts, errors, all result scores, source hashes, versions and split assignments.
+
+Exact normalised texts are inferred once per run, then their result is associated with every original row. Cache reuse records its original inference source record. Measured **source-row throughput includes this reuse**; distinct-text throughput is reported separately. Per-record inference latency is **amortised batch latency**, not online request response time. Median/p95, total wall time, load time, device and sampled process RSS are retained. RSS does not include every GPU allocation. A resumed run reports the session's timing, not an invented total across process interruptions.
+
+The GUI supports run inspection and reproduction. A job interrupted by server termination remains visible; use the CLI resume command after checking no worker is active. Errors are retained rather than edited away; rerun in a new experiment to retry failed records. Local server restart retains SQLite state. Do not run multiple API workers for this PoC's in-process batch queue.
+
+Download JSONL exports in the GUI or use:
+
+```bash
+curl 'http://127.0.0.1:8000/api/export?kind=results' -o results.jsonl
+curl 'http://127.0.0.1:8000/api/export?kind=golden' -o golden.jsonl
+curl 'http://127.0.0.1:8000/api/export?kind=audit' -o audit.jsonl
+curl 'http://127.0.0.1:8000/api/export?kind=evaluation' -o evaluation.jsonl
+```
+
+## Human review and golden data
+
+Open a notice in the explorer or review queue. Read the complete source, choose verified factors, enter a reviewer identity and confirm/correct. Flagging is separate from verification. Corrections append a new revision; optimistic revision checks reject overwriting another review. The ledger stores original text by reference, source hash, reviewer, timestamp, factor label, date context, previous prediction, exact-factor correctness and notes. Exports include the text and revision history. No authored challenge case is silently promoted to the golden dataset.
+
+Notice detail includes a **Why?** summary of source metadata, native Laya factor assessments and literal registration-related excerpts. Each item identifies its basis. It does not invent ISO15022 fields or treat model-only deadline predictions as verified calendar comparisons. Blind review hides the prediction and its summary. The summary is a versioned display artifact; historical predictions and frozen model criteria are unchanged.
+
+Reviewers can see predictions; this can bias labels. A defensible study should introduce blind first review, expert adjudication, reviewer agreement measurement and a frozen test set. The current GUI identity field is an audit attribution field, not authentication.
+
+## Training and independent evaluation
+
+```bash
+uv run python -m training.dataset artifacts/golden-v1
+uv run python -m training.train artifacts/golden-v1 data/models/laya-voting-v1 --dry-run
+uv run python -m training.train artifacts/golden-v1 data/models/laya-voting-v1 --epochs 4
+uv run python -m scripts.run_batch --config data/models/laya-voting-v1/voting-config.json
+uv run python -m evaluation.evaluate --run NEW_RUN_ID --split test --output artifacts/finetuned-test-v1.json
+```
+
+The pipeline exports only latest verified revisions, retains their source hashes and revisions, rejects conflicting duplicate labels, and separates train/validation/test files. Training refuses fewer than 20 distinct reviewed training inputs and 10 validation inputs; these are smoke-test minimums, not evidence of statistical sufficiency. No training has been claimed on unreviewed public data.
+
+Duplicate grouping uses a complete exact Jaccard threshold join of normalised five-word shingles at 0.85. Global-frequency prefix filtering reduces candidate work without sacrificing recall under this metric; integer comparisons avoid boundary rounding. Numeric masking groups templates conservatively. Transitive matches and all excerpts of the same filing are united. A stable group hash assigns approximately 60/20/20% to train/validation/test. Record proportions may differ. This is deterministic group allocation, **not label-stratified splitting**: there are initially no trustworthy category labels, and country/market are unknown. The profile exposes available split/type/language distributions. An independent exact audit found two cross-split pairs missed by the initial LSH protocol. Grouping was corrected before any human labels or training existed. The final exact audit reports zero cross-split matches at 0.85. Semantic paraphrases below that threshold still require human audit. Original profiles, audit failures and the pre-correction database are retained; model inputs and predictions remain byte-for-byte unchanged because split assignment is not an inference input.
+
+Corpus membership freezes after import and certainly after the first review. A changed corpus requires a new database and regrouping; prior reviewed split assignments are never moved. The fine-tuning wrapper invokes official `laya.train.finetune`, freezing the encoder by default and training the decision head with soft cross entropy. It verifies export file checksums and question/option order, disables the SDK's question-level internal calibration split and fits native temperatures on the group-separated validation file after optimisation. Test data is never passed into training or calibration. Output directories cannot overwrite a previous model. A trained model receives its own weight hash and inference configuration, with automation still disabled.
+
+Evaluation reports overall/balanced accuracy; per-status precision, recall, F1 and support; macro/weighted F1; a confusion matrix; current-votable recall; factor metrics; all-factor exact match; native-factor Brier/log loss/ECE; policy-score calibration diagnostics; automation curves; and operational auto/manual/wrong-auto outcomes. Errors group by prediction, truth, geography, language, document type, length and score range; high-score errors have a separate view. Repeated three-word phrases are observations, not invented causal explanations.
+
+**Threshold selection uses validation only.** A candidate for 98% precision must have at least 100 distinct source groups and a 95% Wilson lower confidence bound of at least 98%. A group's prediction counts as correct only when all selected decisions in that group match every verified factor. The curve also shows row counts and observed exact-decision accuracy. This conservative check still does not establish out-of-distribution safety. Validation supports temperature fitting and policy exploration; larger studies should reserve another policy-selection partition. Test curves are diagnostic and must not choose the policy. The GUI does not automatically enable an exploratory policy.
+
+## Tests and browser verification
+
+```bash
+uv sync --frozen --group dev
+uv run pytest tests/unit tests/integration tests/classifier -q
+RUN_E2E=1 uv run pytest tests/e2e -q
+uv run python -m scripts.semantic_benchmark artifacts/semantic-UNIQUE.json
+RUN_MODEL_TESTS=1 uv run pytest tests/classifier -q
+```
+
+The first suite covers deterministic application contracts; real-model challenges are explicitly opt-in. `RUN_MODEL_TESTS=1` asserts the semantic expectations against actual local Laya and **may fail**. Those failures are scientific findings, not application test failures to conceal. The semantic benchmark writes every expectation, observed factor, actual score and pass/fail to a new artifact without changing golden labels. Its 57 authored cases include AGMs/EGMs, schemes, proxy voting, POAs, blocking, eligibility, overlapping restrictions, negation/double negation, historic quotes, deadline precedence, multiple dates, same-day time uncertainty, mandatory/voluntary events, Unicode/HTML, adversarial instructions, German, French and Spanish. These are specifications, not independent customer labels.
+
+Browser tests use Python Playwright and installed Chrome on macOS; elsewhere install Chromium with `uv run playwright install chromium`. They start an isolated server on a free port and a snapshot of the public database. Automated reviewer corrections never enter the demo's golden data. Browser batch/reproduction tests use an explicitly named **test double** inside the test-only server; separate real local inference and full-corpus runs verify the actual model. Screenshots are saved to `artifacts/overview.png`, `notice-detail.png`, `performance.png` and `methodology.png`. They are smoke artifacts, not cross-platform pixel baselines. The in-app browser connector failed during this session, so standalone Playwright supplied the verified browser path.
+
+## Demo flow
+
+1. Open Overview: actual analysed row count, zero enabled automation, unknown verified accuracy.
+2. Open a public proxy excerpt: inspect original text, provenance, Laya factors, native scores, context truncation and fixed reference date.
+3. Open a low-score or conflicting case in Review queue. Explain the escalation reason.
+4. Confirm/correct **only if a real reviewer can verify the content**; enter identity and rationale.
+5. Open Model performance: distinguish test from validation, inspect support and errors, and export the evidence.
+6. Open Model runs & audit to show versions, source fingerprints and measured throughput.
+
+Demo mode hides technical hash details but preserves uncertainty and provenance. It never replaces real results with curated marketing numbers. Synthetic regression and E2E data are not presented as customer evidence.
+
+## Importing a future customer dataset
+
+First inspect the source schema and document the record unit. Do not infer column meanings from names alone. Preserve source files separately, create a new database via `VOTING_DB=data/customer-v1.sqlite`, and adapt the profiling importer to an explicit, reviewed field mapping. The included `scripts/profile_data.py` is deliberately specific to the documented public format, rather than a silent generic column guesser. The normalised JSONL importer expects `id`, original `text`, `source_hash`, `group_id`, `split` and provenance metadata; it rechecks grouping/isolation and rejects changed corpus membership. Run profiling and duplicate grouping before any labelling or training. An arbitrary original customer file cannot be dropped into the current public-format importer without mapping it.
+
+## What this PoC proves — and what it does not
+
+It demonstrates a local non-generative Laya integration, a usable operations interface, reproducible inference records, review revisions, measured execution, and a framework for testing the central hypothesis against verified independent data. It also exposes zero-shot errors rather than manufacturing confidence or labels.
+
+It does **not** establish voting accuracy without domain-expert labels, a safe automation percentage without validation support, comprehensive global market/language coverage, robust deadline reasoning, or production readiness. It does not claim 15,022 notices, fabricate a seven-class probability distribution, or report a publisher extraction score as voting confidence. Exact shingle checks cannot prove all semantic leakage absent. It lacks enterprise authentication/RBAC, durable distributed job scheduling, adjudication/blinded labelling, full regulatory controls, operational monitoring and disaster recovery. Bind it to localhost for demonstration, as the default scripts do.
+
+Legacy runs created before explicit question/option ordering are retained for audit and superseded by the ordered baseline. The application refuses to reproduce those legacy configurations: JSON key sorting changed option order without changing the original hash. Regression tests now check this failure mode. The failed original reproduction is preserved alongside the successful ordered reproduction.
+
+For an exact archived-source replay of an **ordered** run in a separate directory (replace the paths and ID):
+
+```bash
+mkdir /tmp/laya-replay
+cd /tmp/laya-replay
+tar -xzf /absolute/path/to/proxy-voting/data/run_sources/RUN_ID.tar.gz
+ln -s /absolute/path/to/proxy-voting/data data
+uv sync --frozen
+uv run python -m scripts.run_batch --reproduce RUN_ID
+```
+
+This creates a new run in the shared ledger while preserving the original. Never run replay commands against a database receiving a different corpus import.
+
+
+## Supplied synthetic supervised study
+
+The supplied ZIP at `data/training/laya_voting_synthetic_500.zip` contains 300 training,
+100 validation and 100 test examples. Its README explicitly identifies these as synthetic,
+not expert-labelled production data. See [the research report](data/reports/LAYA_TRAINING_EVALUATION.md)
+and [all 27 original failures](data/reports/LAYA_BASELINE_FAILURE_ANALYSIS.md).
+
+Important limitations: 37 exact / 40 near-duplicate groups cross the supplied splits;
+37 test rows overlap training and 42 overlap training or validation. The exact supplied
+memberships were retained on explicit instruction. The all-500 JSONL was opened/read by the initial inspection script before the explicit
+blind protocol; only two test labels (SYN-0001/0002) were printed in tool output. No
+other rows from that file were used for fitting or selection. The report discloses that exposure
+and a 98-case sensitivity result. No claim of fully independent or wholly unseen test
+labels is made. Synthetic test results cannot enable automation or support customer accuracy.
+The supplied customer-status precedence and OPEN definition differ from the original
+application/challenge definitions; both are explicit and reported separately.
+
+Fresh experiment, in order (requires the unchanged supplied ZIP):
+
+```bash
+# Use a new identifier to retain all previous runs/checkpoints.
+export LAYA_SYNTHETIC_EXPERIMENT=data/experiments/supplied-synthetic-v2
+uv run python -m training.synthetic_protocol prepare
+uv run python -m training.synthetic_protocol train --device mps
+uv run python -m training.learning_curve --device mps --candidate head-4ep
+# Optional conventional encoder benchmark, still before any test answer-key access:
+uv run python -m scripts.download_encoder_baseline
+uv run python -m training.encoder_baseline train
+# Freeze weights, criteria, preprocessing, dependency hashes and thresholds:
+uv run python -m training.synthetic_protocol freeze
+uv run python -m training.synthetic_protocol blind
+uv run python -m training.encoder_baseline blind
+# Both Laya blind predictions and reload checks now exist; only now read test answers:
+uv run python -m training.synthetic_protocol score
+uv run python -m training.encoder_baseline score
+uv run python -m evaluation.post_synthetic
+uv run python -m scripts.semantic_benchmark "$LAYA_SYNTHETIC_EXPERIMENT/base-challenge.json"
+# Read selected.model_config from validation-selection.json for the next command:
+uv run python -m scripts.semantic_benchmark "$LAYA_SYNTHETIC_EXPERIMENT/fine-tuned-challenge.json" --config SELECTED_MODEL_CONFIG
+uv run python -m evaluation.encoder_challenge
+uv run python -m scripts.plot_experiment
+uv run python -m scripts.report_training
+```
+
+Choose `--device cpu` when MPS is unavailable (CUDA is also supported by the SDK).
+All output paths refuse overwrites. Train/tune readers whitelist only the supplied
+training/validation CSVs; neither the labelled test CSV, answer key nor all-500 files
+can enter those readers. The explicit synthetic leakage exception verifies source IDs,
+hashes, text and targets; normal golden training retains strict isolation. Existing
+semantic challenge IDs/text hashes are blocked from training. The historical
+`synthetic-smoke-v1` challenge-trained mechanics checkpoint is excluded from this study;
+its old script is retired.
+
+`FREEZE.json` hashes the selected checkpoint, source and criterion/configuration files.
+`BLIND-COMMIT.json` commits both 100-row prediction files before scoring. Each frozen
+checkpoint is reloaded and its full blind predictions compared on native scores,
+factors, statuses and policy score; latency is excluded from equality. Never retune a
+model using scored test answers and then reuse that test as independent evidence.
+
+The learning curve uses nested 50/100/200/300-row subsets of the supplied training CSV,
+with one fixed validation set, seed and four-epoch decision-head training schedule.
+It is specifically a head-only learning curve; it must not be described as the selected
+full-encoder candidate's curve. Sizes 400/800 are unavailable without more training data.
+Figures and all matrices/failures are retained under the experiment directory.
+
+The separate real-public-data cohort is in `data/studies/laya-supervised-v1/`: 1,000
+selected records in 1,000 filing/duplicate groups, split 600/200/200. Its hashed membership
+is frozen in SQLite. The review queue selects that cohort and hides AI predictions
+while reviewing. Reviewer expertise and blindness are attestations, not authenticated
+proof; expert adjudication and agreement measurement remain necessary. No synthetic
+labels are added to human review history. After genuine test reviews, pin their exact
+revisions with `training.study.lock_test_labels()`. Later review corrections remain in
+the ledger but do not silently replace pinned test truth. A new test-label edition needs
+a new study and explicit disclosure.
+
+Proposed research quality gates are configurable in `evaluation/quality_gates.json`.
+They require independent expert evidence and sufficient positive/group support, not
+just improved synthetic accuracy. The performance page always shows the gate status
+and reasons, including in demo mode; passing a report does not activate automation.
+
+Historical research verification before the ISO phase: 145 deterministic application checks and nine browser tests passed.
+Real-model pytest deliberately retains failures: base Laya 30/57, selected fine-tuned
+Laya 37/57; together 47 failing semantic cases across the two models. Reproduce both:
+
+```bash
+RUN_MODEL_TESTS=1 RUN_FINETUNED_MODEL_TESTS=1 uv run pytest tests/classifier -q
+```
+
+These are unchanged quality specifications. A green application suite does not imply
+a green semantic suite. The customer demonstration remains a research PoC.
+
+
+## Evidence links and stage-specific metrics
+
+Every “Why?” item links to its supporting metadata, exact source passage, native
+model factor/criteria, deadline comparison or processing record. Literal source
+links preserve Unicode codepoint offsets and highlight the complete original
+passage without leaving the record. A model-score link substantiates the model
+assessment; it is not a generated causal explanation. Blind review hides both the
+prediction and its evidence summary.
+
+Overview and Model performance show **Parser accuracy**, **Semantic-model accuracy**
+and **End-to-end decision accuracy** separately, including definitions, reference
+support and denominators. `GET /api/metric-layers` exports that separation for the
+selected run. Missing independent reference labels display “Not measured”. Existing
+factor-derived status agreement is not promoted to independent final-event accuracy,
+and synthetic experiments remain separate. The filing-excerpt corpus contains no usable ISO15022 structure. A separate generated
+partial-message parser corpus is evaluated independently below.
+
+The implemented subset and public-source limitations are documented in
+[data/reports/ISO15022_PROXY_RESEARCH.md](data/reports/ISO15022_PROXY_RESEARCH.md).
+
+
+## Standards-aware hybrid experiment
+
+Read [ISO15022_HYBRID_EVALUATION.md](data/reports/ISO15022_HYBRID_EVALUATION.md)
+and [all hybrid challenge failures](data/reports/ISO15022_HYBRID_ERRORS.md).
+The preserved whole-text modes pass 30/57 (base) and 37/57 (fine-tuned); the new
+parser/rules/narrow-Laya modes pass 26/57 and 32/57. The 57 authored notices have no
+ISO fields, so these results do not establish a parsing benefit. Automation is off.
+
+`hybrid/` contains a lossless experimental ISO15022 subset parser, routing trace,
+native narrow Laya predicates, passage aggregation/evidence, explicit decision rules,
+disabled semantic fallback and an append-only SQLite event ledger. No cloud LLM is
+used. MT564/565/567/568 fields are read within the documented subset; MT566 is opaque
+confirmation history. This is not a FIN conformance validator: all structured fixtures
+remain PARTIAL, and unsupported data remains visible. Date-only/local cutoffs never
+silently become UTC. Current sender service acceptance is separate from message grammar.
+
+The separate corpus has 1,100 standards-derived **partial** fixtures, 500 mutations,
+one short official disclosure-example excerpt, and zero production messages. Its
+`sources.jsonl` commits provenance and hashes; `research_sources.json` records source
+research, version and licensing limits. It never supplies semantic training labels.
+All 7,683 existing public excerpts were parsed without crashes: 7,674 unstructured,
+nine unrecognised, zero usable ISO tags. No deterministic decision facts were resolved.
+
+A new checkpoint in `data/models/narrow-v1` trains only voting opportunity, blocking
+and POA from the supplied 300-row train CSV. The 100-row validation CSV alone supplies
+temperature fitting. Other new predicates lack compatible training labels; they are
+transfer experiments. Its files/configuration/seed/source hashes/losses are under
+`data/experiments/narrow-v1`. The earlier frozen blind test was not reused for this
+new study. The labels remain AI-synthetic, and known supplied split leakage limits
+interpretation. No new independent expert test or narrow-task learning curve exists.
+
+The performance page exposes the architecture comparison, source corpus examples,
+routing trace, source-exact evidence candidates, error explorer and a clearly labelled
+synthetic event-history demonstration. Every semantic quotation matches source text;
+quotation correctness does not prove semantic support. Missing evidence is explicit.
+Event history retains old and current deadlines and all raw messages. Complex narrative
+supersession and complete sender/account profile semantics still require review.
+Public accuracy cards remain unmeasured because independent expert labels are absent.
+
+Run the additional checks after normal setup:
+
+```bash
+uv pip install --python .venv/bin/python -r requirements-hybrid.txt
+.venv/bin/python -m pytest -m 'not model and not e2e' -q
+RUN_E2E=1 .venv/bin/python -m pytest tests/e2e -q
+.venv/bin/python -m scripts.verify_iso
+```
+
+Hypothesis is separately pinned so the historical frozen `uv.lock` remains unchanged.
+`uv sync` may remove the extra property-test dependency; reinstall it before these tests.
+The actual model-quality failures remain in the separate opt-in semantic tests above;
+a passing application suite never implies a passing semantic suite.
+
+Reproduce into a **new destination**, preserving every historical run:
+
+```bash
+# Reuse frozen weights, rerun base/fine challenge + validation/pairs and corpus audits:
+.venv/bin/python -m scripts.reproduce_hybrid /tmp/laya-hybrid-reproduction --reuse-checkpoint
+# Or retrain the three-target checkpoint from the exact supplied TRAIN/VALIDATION files:
+.venv/bin/python -m scripts.reproduce_hybrid /tmp/laya-hybrid-retraining
+```
+
+Both require the downloaded local base weights and original supplied ZIP. Add
+`--prepare-only` to inspect the command plan before running. Existing destinations
+are rejected; logs and reports remain under that destination. These commands open
+no original synthetic answer-key/test-labelled file. The original prior blind study
+remains separately reproducible through its existing documented protocol.
+
+
+Latest hybrid verification includes a fresh-directory reproduction: both models'
+57 challenge and 100 validation native outputs are identical. Application/browser
+check counts and remaining semantic failures are recorded in the hybrid report.
+The live service adds an unknown-CAEV guard without changing the frozen benchmark.

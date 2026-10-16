@@ -1,0 +1,29 @@
+{
+  "cached_rows_this_session": 4752,
+  "device": "mps",
+  "failed_rows": 0,
+  "median_amortised_inference_ms": 428.79452102351934,
+  "model_load_ms": 4319.700499996543,
+  "model_manifest": {
+    "files": {
+      "encoder/config.json": "83f6916d13ef0f556ac461f28308dc2bffa7ebeadee8ec9e2db5812020ea5bb4",
+      "model.safetensors": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "rl_agent_config.json": "25061739243b617ad88d1219ba6f8a9c86c5881ca28df024fa2d9b3b2fcc30c6",
+      "tokenizer/tokenizer.json": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+      "tokenizer/tokenizer_config.json": "6c6b2d8e3c84ce0e671c129cd6b374b235d6f9863042a5836358d00a89bbb5a1"
+    },
+    "repository": "convaiinnovations/laya",
+    "revision": "7b928d828b7b0e022f929d9bd2e44165aa270148",
+    "subfolder": "multilingual"
+  },
+  "output_rows": 7683,
+  "p95_amortised_inference_ms": 777.5466045131907,
+  "p95_batch_wall_ms": 1558.1461462425068,
+  "peak_sampled_process_rss_mb": 3634.28125,
+  "source_rows": 7683,
+  "source_rows_per_second_this_session": 6.223448717074749,
+  "timing_limitations": "Deduplicated inference; row throughput includes cache reuse. RSS excludes device allocations. Resume reports this session only.",
+  "total_wall_seconds_this_session": 1234.5245135419536,
+  "unique_inferences_this_session": 2931,
+  "unique_texts_per_second_this_session": 2.3741934387278523
+}

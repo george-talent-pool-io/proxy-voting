@@ -1,0 +1,14 @@
+{
+  "id": "mutated-0009",
+  "source_type": "STANDARDS_DERIVED_SYNTHETIC",
+  "source_url": "https://www.iso20022.org/15022/uhb/finmt568.htm",
+  "source_organisation": "ISO15022 dictionary; locally authored fixture",
+  "retrieved_at": "2026-10-16",
+  "message_type": "MT568",
+  "notes": "Mutation mode 4; may be tolerated/partial rather than rejected. No semantic ground truth.",
+  "raw": ":16R:GENL\n:20C::SEME//S0000000009\n:20C::CORP//C0000000002\n:23G:NEWM\n:22F::CAEV//XMET\n:16S:GENL\n:16R:USECU\n:35B:ISIN GB0002634946\nSYNTHETIC PARSER SECURITY\n:16S:USECU\n:16R:ADDINFO\n:70E::ADTX//Shares will be blocked until the\nmeeting.\n:16S:ADDINFO\n\n:99Z::WHAT//preserve me\n",
+  "expected": {
+    "unknown_preserved": true
+  },
+  "mutation": 4
+}

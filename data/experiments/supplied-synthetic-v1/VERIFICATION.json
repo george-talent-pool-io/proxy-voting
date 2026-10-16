@@ -1,0 +1,23 @@
+{
+  "kind": "Artifact integrity, not customer accuracy",
+  "commit_precedes_scoring": true,
+  "freeze_sha256": "b3f739e33a6691492df0250aa9102d3fba8a8e98833e55fc93c922e825350fc7",
+  "models": {
+    "base": {
+      "n": 100,
+      "source_hashes_valid": true,
+      "probabilities_valid": true,
+      "automation_enabled": false,
+      "all_100_checkpoint_reload_predictions_identical": true,
+      "prediction_sha256": "5204a7de858f3d279f92fcdadc8510747ee1812cf424680697f8247fb916422d"
+    },
+    "fine-tuned": {
+      "n": 100,
+      "source_hashes_valid": true,
+      "probabilities_valid": true,
+      "automation_enabled": false,
+      "all_100_checkpoint_reload_predictions_identical": true,
+      "prediction_sha256": "95ad7ef748baf0e2345503c560e7f08697a79f488cffac2ebe6824c9b76dd728"
+    }
+  }
+}

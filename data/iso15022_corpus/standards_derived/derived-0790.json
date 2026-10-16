@@ -1,0 +1,18 @@
+{
+  "id": "derived-0790",
+  "source_type": "STANDARDS_DERIVED_SYNTHETIC",
+  "source_url": "https://www.iso20022.org/15022/uhb/finmt565.htm",
+  "source_organisation": "ISO15022 dictionary; locally authored fixture",
+  "retrieved_at": "2026-10-16",
+  "message_type": "MT565",
+  "notes": "Structurally generated PARTIAL message. Missing full mandatory/account/network requirements; parser subset only. Never semantic training data.",
+  "raw": "{1:F01TESTBIC0XXXX0000000000}{2:I565TESTBIC0XXXXN}{4:\r\n:16R:GENL\r\n:20C::SEME//S0000000790\r\n:20C::CORP//C0000000197\r\n:23G:NEWM\r\n:22F::CAEV//TEND\r\n:16S:GENL\r\n:16R:USECU\r\n:35B:ISIN GB0002634946\r\nSYNTHETIC PARSER SECURITY\r\n:16S:USECU\r\n:16R:CAINST\r\n:13A::CAON//001\r\n:22F::CAOP//NOAC\r\n:16S:CAINST\r\n-}",
+  "expected": {
+    "seme": "S0000000790",
+    "corp": "C0000000197",
+    "caev": "TEND",
+    "function": "NEWM",
+    "kind": "PARTIAL_ISO15022",
+    "narrative": null
+  }
+}

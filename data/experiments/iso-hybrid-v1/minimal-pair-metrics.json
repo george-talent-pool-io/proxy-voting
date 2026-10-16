@@ -1,0 +1,398 @@
+{
+  "base": {
+    "share_blocking": {
+      "n": 4,
+      "correct": 3,
+      "accuracy": 0.75,
+      "macro_f1_fixed_labels": 0.48888888888888893,
+      "labels": [
+        "YES",
+        "NO",
+        "UNKNOWN"
+      ],
+      "confusion_matrix": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "poa_required": {
+      "n": 3,
+      "correct": 3,
+      "accuracy": 1.0,
+      "macro_f1_fixed_labels": 0.6666666666666666,
+      "labels": [
+        "YES",
+        "NO",
+        "UNKNOWN"
+      ],
+      "confusion_matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "registration_required": {
+      "n": 2,
+      "correct": 1,
+      "accuracy": 0.5,
+      "macro_f1_fixed_labels": 0.2222222222222222,
+      "labels": [
+        "YES",
+        "NO",
+        "UNKNOWN"
+      ],
+      "confusion_matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "beneficial_owner_disclosure_required": {
+      "n": 2,
+      "correct": 2,
+      "accuracy": 1.0,
+      "macro_f1_fixed_labels": 0.6666666666666666,
+      "labels": [
+        "YES",
+        "NO",
+        "UNKNOWN"
+      ],
+      "confusion_matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "split_voting_restricted": {
+      "n": 2,
+      "correct": 2,
+      "accuracy": 1.0,
+      "macro_f1_fixed_labels": 0.6666666666666666,
+      "labels": [
+        "YES",
+        "NO",
+        "UNKNOWN"
+      ],
+      "confusion_matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "securities_lending_recall_required": {
+      "n": 2,
+      "correct": 2,
+      "accuracy": 1.0,
+      "macro_f1_fixed_labels": 0.6666666666666666,
+      "labels": [
+        "YES",
+        "NO",
+        "UNKNOWN"
+      ],
+      "confusion_matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "other_voting_restriction": {
+      "n": 2,
+      "correct": 2,
+      "accuracy": 1.0,
+      "macro_f1_fixed_labels": 0.6666666666666666,
+      "labels": [
+        "YES",
+        "NO",
+        "UNKNOWN"
+      ],
+      "confusion_matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  },
+  "fine": {
+    "share_blocking": {
+      "n": 4,
+      "correct": 2,
+      "accuracy": 0.5,
+      "macro_f1_fixed_labels": 0.4444444444444444,
+      "labels": [
+        "YES",
+        "NO",
+        "UNKNOWN"
+      ],
+      "confusion_matrix": [
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "poa_required": {
+      "n": 3,
+      "correct": 2,
+      "accuracy": 0.6666666666666666,
+      "macro_f1_fixed_labels": 0.5555555555555555,
+      "labels": [
+        "YES",
+        "NO",
+        "UNKNOWN"
+      ],
+      "confusion_matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "registration_required": {
+      "n": 2,
+      "correct": 2,
+      "accuracy": 1.0,
+      "macro_f1_fixed_labels": 0.6666666666666666,
+      "labels": [
+        "YES",
+        "NO",
+        "UNKNOWN"
+      ],
+      "confusion_matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "beneficial_owner_disclosure_required": {
+      "n": 2,
+      "correct": 2,
+      "accuracy": 1.0,
+      "macro_f1_fixed_labels": 0.6666666666666666,
+      "labels": [
+        "YES",
+        "NO",
+        "UNKNOWN"
+      ],
+      "confusion_matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "split_voting_restricted": {
+      "n": 2,
+      "correct": 2,
+      "accuracy": 1.0,
+      "macro_f1_fixed_labels": 0.6666666666666666,
+      "labels": [
+        "YES",
+        "NO",
+        "UNKNOWN"
+      ],
+      "confusion_matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "securities_lending_recall_required": {
+      "n": 2,
+      "correct": 2,
+      "accuracy": 1.0,
+      "macro_f1_fixed_labels": 0.6666666666666666,
+      "labels": [
+        "YES",
+        "NO",
+        "UNKNOWN"
+      ],
+      "confusion_matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "other_voting_restriction": {
+      "n": 2,
+      "correct": 1,
+      "accuracy": 0.5,
+      "macro_f1_fixed_labels": 0.2222222222222222,
+      "labels": [
+        "YES",
+        "NO",
+        "UNKNOWN"
+      ],
+      "confusion_matrix": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  }
+}

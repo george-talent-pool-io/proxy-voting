@@ -1,0 +1,22 @@
+{
+  "corpus_items": 1601,
+  "provenance_counts": {
+    "OFFICIAL_EXAMPLE": 1,
+    "STANDARDS_DERIVED_SYNTHETIC": 1600
+  },
+  "exact_assertions_passed": 4402,
+  "exact_assertions_total": 4402,
+  "crashes": 0,
+  "field_source_spans_checked": 28792,
+  "routing_counts": {
+    "STRUCTURED_FACTS": 25642,
+    "UNKNOWN_FIELDS": 1099,
+    "SEMISTRUCTURED_FACTS": 751,
+    "NARRATIVE_TEXT": 1300
+  },
+  "scope": "Generated partial-message reference assertions plus one official excerpt; NOT production parser accuracy or full FIN conformance. Unknowns retained losslessly.",
+  "standards_derived_partial": 1100,
+  "malformed_mutations": 500,
+  "official_excerpts": 1,
+  "public_real_messages": 0
+}

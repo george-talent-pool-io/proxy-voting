@@ -1,0 +1,15 @@
+{
+  "id": "clearstream-dscl-excerpt",
+  "source_type": "OFFICIAL_EXAMPLE",
+  "source_url": "https://www.clearstream.com/caas/v1/media/2224604/data/9829e51a4582a1ade84615ea7d7cb3bf/c20019-c20030-l20022-l20033-d20039-mt564-example.pdf",
+  "source_organisation": "Clearstream",
+  "retrieved_at": "2026-10-16",
+  "message_type": "MT564",
+  "notes": "Short literal field excerpt from right column, page 1; not full message, not production. Copyright Clearstream, no redistribution licence identified; full PDF remains outside corpus. Published SEME is 17 characters versus dictionary 16x: preserved UNKNOWN, not normalised into compliance.",
+  "raw": ":16R:GENL\n:20C::CORP//810651611\n:20C::SEME//EBDSCL00120191004\n:23G:NEWM\n:22F::CAEV//DSCL\n:22F::CAMV//MAND\n:98C::PREP//20191004094253\n:25D::PROC//COMP\n:16S:GENL\n",
+  "expected": {
+    "corp": "810651611",
+    "caev": "DSCL",
+    "kind": "PARTIAL_ISO15022"
+  }
+}

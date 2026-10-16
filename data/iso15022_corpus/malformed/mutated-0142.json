@@ -1,0 +1,14 @@
+{
+  "id": "mutated-0142",
+  "source_type": "STANDARDS_DERIVED_SYNTHETIC",
+  "source_url": "https://www.iso20022.org/15022/uhb/finmt565.htm",
+  "source_organisation": "ISO15022 dictionary; locally authored fixture",
+  "retrieved_at": "2026-10-16",
+  "message_type": "MT565",
+  "notes": "Mutation mode 2; may be tolerated/partial rather than rejected. No semantic ground truth.",
+  "raw": "{1:F01TESTBIC0XXXX0000000000}{2:I565TESTBIC0XXXXN}{4:\n:16R:GENL\n:20C::SEME//S0000000142\n:20C::CORP//C0000000035\n:23G:NEWM\n:22F::CAEV//XMET\n:16S:GENL\n:16R:USECU\n:35B:ISIN GB0002634946\nSYNTHETIC PARSER SECURITY\n:16S:USECU\n:16R:CAINST\n:13A::CAON//001\n:22F::CAOP//NOAC\n:16S:CAINST\n:16R:ADDINFO\n:70E::REGI//Registration is required before\nvoting.\n\n-}",
+  "expected": {
+    "unknown_preserved": true
+  },
+  "mutation": 2
+}

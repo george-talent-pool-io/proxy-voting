@@ -1,0 +1,14 @@
+services:
+  voting:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - LAYA_DEVICE=cpu
+      - HF_HUB_OFFLINE=1
+      - TRANSFORMERS_OFFLINE=1
+      - HF_HUB_DISABLE_TELEMETRY=1
+      - USE_TF=0
+    restart: unless-stopped

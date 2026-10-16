@@ -1,0 +1,53 @@
+# Public dataset profile
+
+**source**: "https://huggingface.co/datasets/TheTokenFactory/sec-contracts-financial-extraction-instructions"
+
+**revision**: "c90ac749f9056901c8c3ed22ae1ff7c894c9b696"
+
+**raw_schema**: {"instruction": "str", "input": "str", "output": "str", "metadata": "dict"}
+
+**records**: 7683
+
+**unit**: "Source filing excerpts, repeated across extraction tasks; NOT events, custodian notices or voting instructions."
+
+**fields**: {"text": "input (unaltered source excerpt)", "id": "derived source filename + 1-based row", "issuer": "metadata.company or ticker; may be unknown", "event_type": "metadata.pipeline (document type, not corporate-action type)", "country": "UNKNOWN: SEC filing does not prove issuer domicile", "market": "UNKNOWN: not supplied", "dates": "not mapped; fiscal years and historic dates are not deadlines", "isin": "not supplied", "labels": "output contains generated extraction targets, NOT verified votability labels; excluded from model"}
+
+**unique_texts**: 2931
+
+**exact_duplicate_rows**: 4752
+
+**duplicate_groups**: 1072
+
+**near_duplicate_method**: "128-permutation MinHash LSH candidates at 0.85 + exact 5-word-shingle Jaccard; numeric masking; transitive union; same-filing union. Approximate candidate recall, not a proof of no semantic overlap."
+
+**largest_groups**: [["027559726d5c20e72cfd5c53cd7a99115312c3dd4372dc197a1d68ba44f1e1ca", 59], ["132df150da9fe52fc5786780f9ae430f58a33035da1981834a481d25d1c97f65", 44], ["03a24bfd7990fbeafedbc6cb304d5e08c68f117fa4317ef1b4b52c19b831f113", 43], ["0754fd8e113164562e398cb2e36d282115338bb001a90aeb52920f21559fd9b1", 41], ["0007b2ec8ec2cf6a5275795d41c689a0dcbffb5dc11252dcf46435283e470f5d", 41]]
+
+**missing_text**: 0
+
+**html_rows**: 173
+
+**replacement_character_rows**: 0
+
+**mojibake_suspect_rows**: 0
+
+**malformed_rows**: 0
+
+**language_detection**: "langdetect heuristic, seed=0; requires human verification"
+
+**languages**: {"en": 7554, "id": 4, "de": 62, "it": 2, "fr": 2, "hu": 4, "sk": 2, "et": 6, "cs": 1, "da": 2, "pl": 2, "so": 2, "es": 8, "UNKNOWN": 25, "lt": 2, "lv": 2, "sv": 3}
+
+**document_types**: {"Contract excerpt": 5786, "Proxy excerpt": 1897}
+
+**splits**: {"validation": 1564, "train": 4439, "test": 1680}
+
+**text_characters**: {"0": 50.0, "50": 6019.0, "95": 6849.0, "99": 10381.0, "100": 21422.0}
+
+**long_over_12000_chars**: 12
+
+**repeated_openings**: [["Estimated Future Payouts Under Non-Equity Incentive Plan Awards (1) | Estimated Future Payouts Under", 10], ["Category 1 | Category 2 | Category 3 | Category 4 | Category 5 Index Debt Ratings of at least A by S", 8], [": Performance Level | : Cumulative Earnings Per Share | : CAGR | : Awarded Percentage of Tranche 2 P", 8], ["Option Awards | Stock Awards Name | Grant Date | Number of Securities Underlying Unexercised Options", 8], ["EX-10.1 3 tm2529220d2_ex10-1.htm EXHIBIT 10.1 Exhibit 10.1 EXECUTION VERSION Goldman sachs bank usa ", 6], ["EX-10.(C) 5 ex10c_4q25.htm EX-10.(C) Document Exhibit 10(c) Execution Version 364-DAY REVOLVING CRED", 6], ["EX-10.(J) 8 ex10j_4q25.htm EX-10.(J) Document Exhibit 10(j) HOWMET AEROSPACE INC. AMENDED AND RESTAT", 6], ["EX-10.1 2 tm2532071d1_ex10-1.htm EXHIBIT 10.1 Exhibit 10.1 Execution Version SIXTH AMENDMENT TO CRED", 6], ["EX-10.1 3 d104936dex101.htm EX-10.1 EX-10.1 Exhibit 10.1 TAX MATTERS AGREEMENT BY AND AMONG BECTON, ", 6], ["EX-10.2 3 ex102bd2004employeeanddire.htm EX-10.2 Document Exhibit 10.2 BECTON, DICKINSON AND COMPANY", 6]]
+
+**leakage**: "Extraction instruction, output, task labels and publisher confidence never enter Laya. Same source filing and duplicate groups allocated together."
+
+**taxonomy**: "Provisional factorised schema: voting eligibility, independent restrictions, deadline status. Seven operational statuses are derived with explicit precedence. Public excerpts cannot validate exclusivity."
+
+**limitations**: ["Not the requested 15,022-record customer corpus.", "US regulatory filing excerpts overrepresent compensation and historical governance; not comprehensive global corporate-action coverage.", "No human-verified votability labels. Accuracy and safe automation remain unknown.", "Publisher generated extraction targets with Gemma; these targets are not used as ground truth or model input. No external inference in this application."]

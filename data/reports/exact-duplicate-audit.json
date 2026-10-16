@@ -1,0 +1,7 @@
+{
+  "method": "Exact global-frequency prefix-filter candidate join + exact five-word Jaccard, numeric masking; all pairs at >=0.85, without LSH recall approximation",
+  "unique_texts": 2931,
+  "near_pairs": 194,
+  "cross_split_pairs": [],
+  "ungrouped_pairs": []
+}

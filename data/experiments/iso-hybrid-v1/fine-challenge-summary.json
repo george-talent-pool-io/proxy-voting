@@ -1,0 +1,182 @@
+{
+  "name": "fine",
+  "cases": 57,
+  "passed": 32,
+  "failed": 25,
+  "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+  "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+  "scope": "Authored regression challenge; partial expected labels, not independent customer accuracy",
+  "fields": {
+    "votable": {
+      "n": 54,
+      "accuracy": 0.7037037037037037,
+      "macro_f1": 0.43070409982174684,
+      "labels": [
+        "NO",
+        "UNCERTAIN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          2,
+          6,
+          7
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          35
+        ]
+      ]
+    },
+    "share_blocking": {
+      "n": 11,
+      "accuracy": 0.7272727272727273,
+      "macro_f1": 0.5523809523809523,
+      "labels": [
+        "False",
+        "None",
+        "True"
+      ],
+      "confusion_matrix": [
+        [
+          6,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ]
+    },
+    "poa_required": {
+      "n": 8,
+      "accuracy": 0.625,
+      "macro_f1": 0.48888888888888893,
+      "labels": [
+        "False",
+        "None",
+        "True"
+      ],
+      "confusion_matrix": [
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          2
+        ]
+      ]
+    },
+    "other_restriction": {
+      "n": 4,
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "labels": [
+        "False",
+        "True"
+      ],
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ]
+    },
+    "deadline_status": {
+      "n": 14,
+      "accuracy": 0.9285714285714286,
+      "macro_f1": 0.9326599326599326,
+      "labels": [
+        "OPEN",
+        "PASSED",
+        "UNKNOWN"
+      ],
+      "confusion_matrix": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          1,
+          5
+        ]
+      ]
+    }
+  },
+  "aggregation_comparison": {
+    "conflict_abstain": {
+      "votable": {
+        "correct": 37,
+        "n": 54
+      },
+      "share_blocking": {
+        "correct": 8,
+        "n": 11
+      },
+      "poa_required": {
+        "correct": 5,
+        "n": 8
+      }
+    },
+    "any_positive": {
+      "votable": {
+        "correct": 38,
+        "n": 54
+      },
+      "share_blocking": {
+        "correct": 9,
+        "n": 11
+      },
+      "poa_required": {
+        "correct": 5,
+        "n": 8
+      }
+    },
+    "max_confidence": {
+      "votable": {
+        "correct": 38,
+        "n": 54
+      },
+      "share_blocking": {
+        "correct": 9,
+        "n": 11
+      },
+      "poa_required": {
+        "correct": 6,
+        "n": 8
+      }
+    }
+  }
+}

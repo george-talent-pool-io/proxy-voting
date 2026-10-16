@@ -1,0 +1,11 @@
+{
+  "phase": "Initial inspection before explicit supplied-dataset protocol instruction",
+  "programmatic_file_access": "synthetic_all_500.jsonl read and split into lines to print first two records",
+  "labels_surfaced_in_tool_output": [
+    "SYN-0001",
+    "SYN-0002"
+  ],
+  "other_record_text": "Loaded temporarily but not surfaced, parsed as labels, or used in training/tuning",
+  "subsequent_protocol": "Train only TRAIN CSV; tune only VALIDATION CSV; both frozen predictions committed before scoring answer-key read",
+  "limitation": "Do not claim pristine file-access-blind test independence. 98-case sensitivity excludes the two visibly inspected labels only."
+}

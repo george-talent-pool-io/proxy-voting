@@ -1,0 +1,2081 @@
+{
+  "version": "hybrid-pipeline-1",
+  "parsed": {
+    "version": "iso-subset-1",
+    "raw": "{1:F01TESTBIC0XXXX0000000000}{2:I564TESTBIC0XXXXN}{4:\n:16R:GENL\n:20C::SEME//S0000000004\n:20C::CORP//C0000000001\n:23G:NEWM\n:22F::CAEV//CMET\n:22F::CAMV//VOLU\n:25D::PROC//COMP\n:16S:GENL\n:16R:USECU\n:35B:ISIN GB0002634946\nSYNTHETIC PARSER SECURITY\n:16S:USECU\n:16R:CADETL\n:98A::MEET//20261030\n:98A::RDTE//20261001\n:16S:CADETL\n:16R:CAOPTN\n:13A::CAON//001\n:22F::CAOP//NOAC\n:17B::DFLT//N\n:98E::RDDT//20261020170000,000/01\n:16S:CAOPTN\n:16R:CAOPTN\n:13A::CAON//002\n:22F::CAOP//NOAC\n:17B::DFLT//N\n:98A::RDDT//20261020\n:16S:CAOPTN\n:16R:ADDINFO\n:70E::REGI//No power of attorney is required.\n:16S:ADDINFO\n-}",
+    "source_hash": "62276e81b1f60b3528eee0ec2282f8ee6aebab89bf3cb331cc66126335676f1c",
+    "message_type": "MT564",
+    "kind": "PARTIAL_ISO15022",
+    "fields": [
+      {
+        "id": "62276e81b1f60b35:0",
+        "tag": "16R",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "GENL",
+        "raw_value": "GENL",
+        "start": 54,
+        "end": 63,
+        "value_start": 59,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 0
+      },
+      {
+        "id": "62276e81b1f60b35:1",
+        "tag": "20C",
+        "qualifier": "SEME",
+        "data_source_scheme": "",
+        "value": "S0000000004",
+        "raw_value": ":SEME//S0000000004",
+        "start": 64,
+        "end": 87,
+        "value_start": 76,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 1
+      },
+      {
+        "id": "62276e81b1f60b35:2",
+        "tag": "20C",
+        "qualifier": "CORP",
+        "data_source_scheme": "",
+        "value": "C0000000001",
+        "raw_value": ":CORP//C0000000001",
+        "start": 88,
+        "end": 111,
+        "value_start": 100,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 2
+      },
+      {
+        "id": "62276e81b1f60b35:3",
+        "tag": "23G",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "NEWM",
+        "raw_value": "NEWM",
+        "start": 112,
+        "end": 121,
+        "value_start": 117,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 3
+      },
+      {
+        "id": "62276e81b1f60b35:4",
+        "tag": "22F",
+        "qualifier": "CAEV",
+        "data_source_scheme": "",
+        "value": "CMET",
+        "raw_value": ":CAEV//CMET",
+        "start": 122,
+        "end": 138,
+        "value_start": 134,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 4
+      },
+      {
+        "id": "62276e81b1f60b35:5",
+        "tag": "22F",
+        "qualifier": "CAMV",
+        "data_source_scheme": "",
+        "value": "VOLU",
+        "raw_value": ":CAMV//VOLU",
+        "start": 139,
+        "end": 155,
+        "value_start": 151,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 5
+      },
+      {
+        "id": "62276e81b1f60b35:6",
+        "tag": "25D",
+        "qualifier": "PROC",
+        "data_source_scheme": "",
+        "value": "COMP",
+        "raw_value": ":PROC//COMP",
+        "start": 156,
+        "end": 172,
+        "value_start": 168,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 6
+      },
+      {
+        "id": "62276e81b1f60b35:7",
+        "tag": "16S",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "GENL",
+        "raw_value": "GENL",
+        "start": 173,
+        "end": 182,
+        "value_start": 178,
+        "path": [
+          "GENL[1]"
+        ],
+        "occurrence": 7
+      },
+      {
+        "id": "62276e81b1f60b35:8",
+        "tag": "16R",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "USECU",
+        "raw_value": "USECU",
+        "start": 183,
+        "end": 193,
+        "value_start": 188,
+        "path": [
+          "USECU[1]"
+        ],
+        "occurrence": 8
+      },
+      {
+        "id": "62276e81b1f60b35:9",
+        "tag": "35B",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "ISIN GB0002634946\nSYNTHETIC PARSER SECURITY",
+        "raw_value": "ISIN GB0002634946\nSYNTHETIC PARSER SECURITY",
+        "start": 194,
+        "end": 242,
+        "value_start": 199,
+        "path": [
+          "USECU[1]"
+        ],
+        "occurrence": 9
+      },
+      {
+        "id": "62276e81b1f60b35:10",
+        "tag": "16S",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "USECU",
+        "raw_value": "USECU",
+        "start": 243,
+        "end": 253,
+        "value_start": 248,
+        "path": [
+          "USECU[1]"
+        ],
+        "occurrence": 10
+      },
+      {
+        "id": "62276e81b1f60b35:11",
+        "tag": "16R",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "CADETL",
+        "raw_value": "CADETL",
+        "start": 254,
+        "end": 265,
+        "value_start": 259,
+        "path": [
+          "CADETL[1]"
+        ],
+        "occurrence": 11
+      },
+      {
+        "id": "62276e81b1f60b35:12",
+        "tag": "98A",
+        "qualifier": "MEET",
+        "data_source_scheme": "",
+        "value": "20261030",
+        "raw_value": ":MEET//20261030",
+        "start": 266,
+        "end": 286,
+        "value_start": 278,
+        "path": [
+          "CADETL[1]"
+        ],
+        "occurrence": 12
+      },
+      {
+        "id": "62276e81b1f60b35:13",
+        "tag": "98A",
+        "qualifier": "RDTE",
+        "data_source_scheme": "",
+        "value": "20261001",
+        "raw_value": ":RDTE//20261001",
+        "start": 287,
+        "end": 307,
+        "value_start": 299,
+        "path": [
+          "CADETL[1]"
+        ],
+        "occurrence": 13
+      },
+      {
+        "id": "62276e81b1f60b35:14",
+        "tag": "16S",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "CADETL",
+        "raw_value": "CADETL",
+        "start": 308,
+        "end": 319,
+        "value_start": 313,
+        "path": [
+          "CADETL[1]"
+        ],
+        "occurrence": 14
+      },
+      {
+        "id": "62276e81b1f60b35:15",
+        "tag": "16R",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "CAOPTN",
+        "raw_value": "CAOPTN",
+        "start": 320,
+        "end": 331,
+        "value_start": 325,
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "occurrence": 15
+      },
+      {
+        "id": "62276e81b1f60b35:16",
+        "tag": "13A",
+        "qualifier": "CAON",
+        "data_source_scheme": "",
+        "value": "001",
+        "raw_value": ":CAON//001",
+        "start": 332,
+        "end": 347,
+        "value_start": 344,
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "occurrence": 16
+      },
+      {
+        "id": "62276e81b1f60b35:17",
+        "tag": "22F",
+        "qualifier": "CAOP",
+        "data_source_scheme": "",
+        "value": "NOAC",
+        "raw_value": ":CAOP//NOAC",
+        "start": 348,
+        "end": 364,
+        "value_start": 360,
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "occurrence": 17
+      },
+      {
+        "id": "62276e81b1f60b35:18",
+        "tag": "17B",
+        "qualifier": "DFLT",
+        "data_source_scheme": "",
+        "value": "N",
+        "raw_value": ":DFLT//N",
+        "start": 365,
+        "end": 378,
+        "value_start": 377,
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "occurrence": 18
+      },
+      {
+        "id": "62276e81b1f60b35:19",
+        "tag": "98E",
+        "qualifier": "RDDT",
+        "data_source_scheme": "",
+        "value": "20261020170000,000/01",
+        "raw_value": ":RDDT//20261020170000,000/01",
+        "start": 379,
+        "end": 412,
+        "value_start": 391,
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "occurrence": 19
+      },
+      {
+        "id": "62276e81b1f60b35:20",
+        "tag": "16S",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "CAOPTN",
+        "raw_value": "CAOPTN",
+        "start": 413,
+        "end": 424,
+        "value_start": 418,
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "occurrence": 20
+      },
+      {
+        "id": "62276e81b1f60b35:21",
+        "tag": "16R",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "CAOPTN",
+        "raw_value": "CAOPTN",
+        "start": 425,
+        "end": 436,
+        "value_start": 430,
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "occurrence": 21
+      },
+      {
+        "id": "62276e81b1f60b35:22",
+        "tag": "13A",
+        "qualifier": "CAON",
+        "data_source_scheme": "",
+        "value": "002",
+        "raw_value": ":CAON//002",
+        "start": 437,
+        "end": 452,
+        "value_start": 449,
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "occurrence": 22
+      },
+      {
+        "id": "62276e81b1f60b35:23",
+        "tag": "22F",
+        "qualifier": "CAOP",
+        "data_source_scheme": "",
+        "value": "NOAC",
+        "raw_value": ":CAOP//NOAC",
+        "start": 453,
+        "end": 469,
+        "value_start": 465,
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "occurrence": 23
+      },
+      {
+        "id": "62276e81b1f60b35:24",
+        "tag": "17B",
+        "qualifier": "DFLT",
+        "data_source_scheme": "",
+        "value": "N",
+        "raw_value": ":DFLT//N",
+        "start": 470,
+        "end": 483,
+        "value_start": 482,
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "occurrence": 24
+      },
+      {
+        "id": "62276e81b1f60b35:25",
+        "tag": "98A",
+        "qualifier": "RDDT",
+        "data_source_scheme": "",
+        "value": "20261020",
+        "raw_value": ":RDDT//20261020",
+        "start": 484,
+        "end": 504,
+        "value_start": 496,
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "occurrence": 25
+      },
+      {
+        "id": "62276e81b1f60b35:26",
+        "tag": "16S",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "CAOPTN",
+        "raw_value": "CAOPTN",
+        "start": 505,
+        "end": 516,
+        "value_start": 510,
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "occurrence": 26
+      },
+      {
+        "id": "62276e81b1f60b35:27",
+        "tag": "16R",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "ADDINFO",
+        "raw_value": "ADDINFO",
+        "start": 517,
+        "end": 529,
+        "value_start": 522,
+        "path": [
+          "ADDINFO[1]"
+        ],
+        "occurrence": 27
+      },
+      {
+        "id": "62276e81b1f60b35:28",
+        "tag": "70E",
+        "qualifier": "REGI",
+        "data_source_scheme": "",
+        "value": "No power of attorney is required.",
+        "raw_value": ":REGI//No power of attorney is required.",
+        "start": 530,
+        "end": 575,
+        "value_start": 542,
+        "path": [
+          "ADDINFO[1]"
+        ],
+        "occurrence": 28
+      },
+      {
+        "id": "62276e81b1f60b35:29",
+        "tag": "16S",
+        "qualifier": null,
+        "data_source_scheme": null,
+        "value": "ADDINFO",
+        "raw_value": "ADDINFO",
+        "start": 576,
+        "end": 588,
+        "value_start": 581,
+        "path": [
+          "ADDINFO[1]"
+        ],
+        "occurrence": 29
+      }
+    ],
+    "segments": [
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:0",
+        "start": 54,
+        "end": 64
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:1",
+        "start": 64,
+        "end": 88
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:2",
+        "start": 88,
+        "end": 112
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:3",
+        "start": 112,
+        "end": 122
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:4",
+        "start": 122,
+        "end": 139
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:5",
+        "start": 139,
+        "end": 156
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:6",
+        "start": 156,
+        "end": 173
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:7",
+        "start": 173,
+        "end": 183
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:8",
+        "start": 183,
+        "end": 194
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:9",
+        "start": 194,
+        "end": 243
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:10",
+        "start": 243,
+        "end": 254
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:11",
+        "start": 254,
+        "end": 266
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:12",
+        "start": 266,
+        "end": 287
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:13",
+        "start": 287,
+        "end": 308
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:14",
+        "start": 308,
+        "end": 320
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:15",
+        "start": 320,
+        "end": 332
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:16",
+        "start": 332,
+        "end": 348
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:17",
+        "start": 348,
+        "end": 365
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:18",
+        "start": 365,
+        "end": 379
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:19",
+        "start": 379,
+        "end": 413
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:20",
+        "start": 413,
+        "end": 425
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:21",
+        "start": 425,
+        "end": 437
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:22",
+        "start": 437,
+        "end": 453
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:23",
+        "start": 453,
+        "end": 470
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:24",
+        "start": 470,
+        "end": 484
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:25",
+        "start": 484,
+        "end": 505
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:26",
+        "start": 505,
+        "end": 517
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:27",
+        "start": 517,
+        "end": 530
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:28",
+        "start": 530,
+        "end": 576
+      },
+      {
+        "kind": "FIELD",
+        "field_id": "62276e81b1f60b35:29",
+        "start": 576,
+        "end": 589
+      }
+    ],
+    "errors": [],
+    "facts": [
+      {
+        "name": "sequence",
+        "value": "GENL",
+        "field_id": "62276e81b1f60b35:0",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 54,
+        "end": 63,
+        "value_start": 59,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "seme",
+        "value": "S0000000004",
+        "field_id": "62276e81b1f60b35:1",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 64,
+        "end": 87,
+        "value_start": 76,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "corp",
+        "value": "C0000000001",
+        "field_id": "62276e81b1f60b35:2",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 88,
+        "end": 111,
+        "value_start": 100,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "function",
+        "value": "NEWM",
+        "field_id": "62276e81b1f60b35:3",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 112,
+        "end": 121,
+        "value_start": 117,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "caev",
+        "value": "CMET",
+        "field_id": "62276e81b1f60b35:4",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 122,
+        "end": 138,
+        "value_start": 134,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "camv",
+        "value": "VOLU",
+        "field_id": "62276e81b1f60b35:5",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 139,
+        "end": 155,
+        "value_start": 151,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "processing_status",
+        "value": {
+          "qualifier": "PROC",
+          "value": "COMP"
+        },
+        "field_id": "62276e81b1f60b35:6",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 156,
+        "end": 172,
+        "value_start": 168,
+        "route": "SEMISTRUCTURED_FACTS"
+      },
+      {
+        "name": "sequence",
+        "value": "GENL",
+        "field_id": "62276e81b1f60b35:7",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 173,
+        "end": 182,
+        "value_start": 178,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "sequence",
+        "value": "USECU",
+        "field_id": "62276e81b1f60b35:8",
+        "path": [
+          "USECU[1]"
+        ],
+        "start": 183,
+        "end": 193,
+        "value_start": 188,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "security",
+        "value": {
+          "isin": "GB0002634946",
+          "description": "SYNTHETIC PARSER SECURITY"
+        },
+        "field_id": "62276e81b1f60b35:9",
+        "path": [
+          "USECU[1]"
+        ],
+        "start": 194,
+        "end": 242,
+        "value_start": 199,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "sequence",
+        "value": "USECU",
+        "field_id": "62276e81b1f60b35:10",
+        "path": [
+          "USECU[1]"
+        ],
+        "start": 243,
+        "end": 253,
+        "value_start": 248,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "sequence",
+        "value": "CADETL",
+        "field_id": "62276e81b1f60b35:11",
+        "path": [
+          "CADETL[1]"
+        ],
+        "start": 254,
+        "end": 265,
+        "value_start": 259,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "meet",
+        "value": {
+          "iso": "2026-10-30",
+          "precision": "DATE",
+          "offset_known": false
+        },
+        "field_id": "62276e81b1f60b35:12",
+        "path": [
+          "CADETL[1]"
+        ],
+        "start": 266,
+        "end": 286,
+        "value_start": 278,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "rdte",
+        "value": {
+          "iso": "2026-10-01",
+          "precision": "DATE",
+          "offset_known": false
+        },
+        "field_id": "62276e81b1f60b35:13",
+        "path": [
+          "CADETL[1]"
+        ],
+        "start": 287,
+        "end": 307,
+        "value_start": 299,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "sequence",
+        "value": "CADETL",
+        "field_id": "62276e81b1f60b35:14",
+        "path": [
+          "CADETL[1]"
+        ],
+        "start": 308,
+        "end": 319,
+        "value_start": 313,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "sequence",
+        "value": "CAOPTN",
+        "field_id": "62276e81b1f60b35:15",
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "start": 320,
+        "end": 331,
+        "value_start": 325,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "option_number",
+        "value": "001",
+        "field_id": "62276e81b1f60b35:16",
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "start": 332,
+        "end": 347,
+        "value_start": 344,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "option_code",
+        "value": "NOAC",
+        "field_id": "62276e81b1f60b35:17",
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "start": 348,
+        "end": 364,
+        "value_start": 360,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "rddt",
+        "value": {
+          "iso": "2026-10-20T17:00:00+01:00",
+          "precision": "MILLISECOND",
+          "offset_known": true
+        },
+        "field_id": "62276e81b1f60b35:19",
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "start": 379,
+        "end": 412,
+        "value_start": 391,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "sequence",
+        "value": "CAOPTN",
+        "field_id": "62276e81b1f60b35:20",
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "start": 413,
+        "end": 424,
+        "value_start": 418,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "sequence",
+        "value": "CAOPTN",
+        "field_id": "62276e81b1f60b35:21",
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "start": 425,
+        "end": 436,
+        "value_start": 430,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "option_number",
+        "value": "002",
+        "field_id": "62276e81b1f60b35:22",
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "start": 437,
+        "end": 452,
+        "value_start": 449,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "option_code",
+        "value": "NOAC",
+        "field_id": "62276e81b1f60b35:23",
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "start": 453,
+        "end": 469,
+        "value_start": 465,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "rddt",
+        "value": {
+          "iso": "2026-10-20",
+          "precision": "DATE",
+          "offset_known": false
+        },
+        "field_id": "62276e81b1f60b35:25",
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "start": 484,
+        "end": 504,
+        "value_start": 496,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "sequence",
+        "value": "CAOPTN",
+        "field_id": "62276e81b1f60b35:26",
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "start": 505,
+        "end": 516,
+        "value_start": 510,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "sequence",
+        "value": "ADDINFO",
+        "field_id": "62276e81b1f60b35:27",
+        "path": [
+          "ADDINFO[1]"
+        ],
+        "start": 517,
+        "end": 529,
+        "value_start": 522,
+        "route": "STRUCTURED_FACTS"
+      },
+      {
+        "name": "narrative",
+        "value": "No power of attorney is required.",
+        "field_id": "62276e81b1f60b35:28",
+        "path": [
+          "ADDINFO[1]"
+        ],
+        "start": 530,
+        "end": 575,
+        "value_start": 542,
+        "route": "NARRATIVE_TEXT"
+      },
+      {
+        "name": "sequence",
+        "value": "ADDINFO",
+        "field_id": "62276e81b1f60b35:29",
+        "path": [
+          "ADDINFO[1]"
+        ],
+        "start": 576,
+        "end": 588,
+        "value_start": 581,
+        "route": "STRUCTURED_FACTS"
+      }
+    ],
+    "routing": [
+      {
+        "field_id": "62276e81b1f60b35:0",
+        "tag": "16R",
+        "qualifier": null,
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 54,
+        "end": 63
+      },
+      {
+        "field_id": "62276e81b1f60b35:1",
+        "tag": "20C",
+        "qualifier": "SEME",
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 64,
+        "end": 87
+      },
+      {
+        "field_id": "62276e81b1f60b35:2",
+        "tag": "20C",
+        "qualifier": "CORP",
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 88,
+        "end": 111
+      },
+      {
+        "field_id": "62276e81b1f60b35:3",
+        "tag": "23G",
+        "qualifier": null,
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 112,
+        "end": 121
+      },
+      {
+        "field_id": "62276e81b1f60b35:4",
+        "tag": "22F",
+        "qualifier": "CAEV",
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 122,
+        "end": 138
+      },
+      {
+        "field_id": "62276e81b1f60b35:5",
+        "tag": "22F",
+        "qualifier": "CAMV",
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 139,
+        "end": 155
+      },
+      {
+        "field_id": "62276e81b1f60b35:6",
+        "tag": "25D",
+        "qualifier": "PROC",
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "SEMISTRUCTURED_FACTS",
+        "consumer": "preserve/review",
+        "start": 156,
+        "end": 172
+      },
+      {
+        "field_id": "62276e81b1f60b35:7",
+        "tag": "16S",
+        "qualifier": null,
+        "path": [
+          "GENL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 173,
+        "end": 182
+      },
+      {
+        "field_id": "62276e81b1f60b35:8",
+        "tag": "16R",
+        "qualifier": null,
+        "path": [
+          "USECU[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 183,
+        "end": 193
+      },
+      {
+        "field_id": "62276e81b1f60b35:9",
+        "tag": "35B",
+        "qualifier": null,
+        "path": [
+          "USECU[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 194,
+        "end": 242
+      },
+      {
+        "field_id": "62276e81b1f60b35:10",
+        "tag": "16S",
+        "qualifier": null,
+        "path": [
+          "USECU[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 243,
+        "end": 253
+      },
+      {
+        "field_id": "62276e81b1f60b35:11",
+        "tag": "16R",
+        "qualifier": null,
+        "path": [
+          "CADETL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 254,
+        "end": 265
+      },
+      {
+        "field_id": "62276e81b1f60b35:12",
+        "tag": "98A",
+        "qualifier": "MEET",
+        "path": [
+          "CADETL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 266,
+        "end": 286
+      },
+      {
+        "field_id": "62276e81b1f60b35:13",
+        "tag": "98A",
+        "qualifier": "RDTE",
+        "path": [
+          "CADETL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 287,
+        "end": 307
+      },
+      {
+        "field_id": "62276e81b1f60b35:14",
+        "tag": "16S",
+        "qualifier": null,
+        "path": [
+          "CADETL[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 308,
+        "end": 319
+      },
+      {
+        "field_id": "62276e81b1f60b35:15",
+        "tag": "16R",
+        "qualifier": null,
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 320,
+        "end": 331
+      },
+      {
+        "field_id": "62276e81b1f60b35:16",
+        "tag": "13A",
+        "qualifier": "CAON",
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 332,
+        "end": 347
+      },
+      {
+        "field_id": "62276e81b1f60b35:17",
+        "tag": "22F",
+        "qualifier": "CAOP",
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 348,
+        "end": 364
+      },
+      {
+        "field_id": "62276e81b1f60b35:18",
+        "tag": "17B",
+        "qualifier": "DFLT",
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "route": "UNKNOWN_FIELDS",
+        "consumer": "preserve/review",
+        "start": 365,
+        "end": 378
+      },
+      {
+        "field_id": "62276e81b1f60b35:19",
+        "tag": "98E",
+        "qualifier": "RDDT",
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 379,
+        "end": 412
+      },
+      {
+        "field_id": "62276e81b1f60b35:20",
+        "tag": "16S",
+        "qualifier": null,
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 413,
+        "end": 424
+      },
+      {
+        "field_id": "62276e81b1f60b35:21",
+        "tag": "16R",
+        "qualifier": null,
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 425,
+        "end": 436
+      },
+      {
+        "field_id": "62276e81b1f60b35:22",
+        "tag": "13A",
+        "qualifier": "CAON",
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 437,
+        "end": 452
+      },
+      {
+        "field_id": "62276e81b1f60b35:23",
+        "tag": "22F",
+        "qualifier": "CAOP",
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 453,
+        "end": 469
+      },
+      {
+        "field_id": "62276e81b1f60b35:24",
+        "tag": "17B",
+        "qualifier": "DFLT",
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "route": "UNKNOWN_FIELDS",
+        "consumer": "preserve/review",
+        "start": 470,
+        "end": 483
+      },
+      {
+        "field_id": "62276e81b1f60b35:25",
+        "tag": "98A",
+        "qualifier": "RDDT",
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 484,
+        "end": 504
+      },
+      {
+        "field_id": "62276e81b1f60b35:26",
+        "tag": "16S",
+        "qualifier": null,
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 505,
+        "end": 516
+      },
+      {
+        "field_id": "62276e81b1f60b35:27",
+        "tag": "16R",
+        "qualifier": null,
+        "path": [
+          "ADDINFO[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 517,
+        "end": 529
+      },
+      {
+        "field_id": "62276e81b1f60b35:28",
+        "tag": "70E",
+        "qualifier": "REGI",
+        "path": [
+          "ADDINFO[1]"
+        ],
+        "route": "NARRATIVE_TEXT",
+        "consumer": "Laya predicates",
+        "start": 530,
+        "end": 575
+      },
+      {
+        "field_id": "62276e81b1f60b35:29",
+        "tag": "16S",
+        "qualifier": null,
+        "path": [
+          "ADDINFO[1]"
+        ],
+        "route": "STRUCTURED_FACTS",
+        "consumer": "deterministic rules",
+        "start": 576,
+        "end": 588
+      }
+    ],
+    "subset_structure_valid": true
+  },
+  "structured_facts": {
+    "meeting_event": "YES"
+  },
+  "semantic_analysis": {
+    "predicates": {
+      "votable": {
+        "value": "YES",
+        "scores": {
+          "YES": 1.0,
+          "NO": 0.0,
+          "UNCERTAIN": 0.0
+        },
+        "confidence": 1.0,
+        "margin": 1.0,
+        "evidence": {
+          "text": "No power of attorney is required.",
+          "start": 542,
+          "end": 575,
+          "boundary": "sentence",
+          "source": "sentence-level Laya candidate; exact substring, not human-verified explanation",
+          "field_id": "62276e81b1f60b35:28"
+        },
+        "sdk_confidence": 1.0,
+        "truncated": false,
+        "conflict": false,
+        "aggregation": "conflict_abstain",
+        "passage_count": 1,
+        "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+      },
+      "share_blocking": {
+        "value": "NO",
+        "scores": {
+          "YES": 0.0,
+          "NO": 1.0,
+          "UNKNOWN": 0.0
+        },
+        "confidence": 1.0,
+        "margin": 1.0,
+        "evidence": null,
+        "sdk_confidence": 1.0,
+        "truncated": false,
+        "conflict": false,
+        "aggregation": "conflict_abstain",
+        "passage_count": 1,
+        "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+      },
+      "poa_required": {
+        "value": "NO",
+        "scores": {
+          "YES": 0.0,
+          "NO": 1.0,
+          "UNKNOWN": 0.0
+        },
+        "confidence": 1.0,
+        "margin": 1.0,
+        "evidence": null,
+        "sdk_confidence": 1.0,
+        "truncated": false,
+        "conflict": false,
+        "aggregation": "conflict_abstain",
+        "passage_count": 1,
+        "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+      },
+      "registration_required": {
+        "value": "NO",
+        "scores": {
+          "YES": 0.0,
+          "NO": 1.0,
+          "UNKNOWN": 0.0
+        },
+        "confidence": 1.0,
+        "margin": 1.0,
+        "evidence": null,
+        "sdk_confidence": 1.0,
+        "truncated": false,
+        "conflict": false,
+        "aggregation": "conflict_abstain",
+        "passage_count": 1,
+        "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+      },
+      "beneficial_owner_disclosure_required": {
+        "value": "NO",
+        "scores": {
+          "YES": 0.0,
+          "NO": 1.0,
+          "UNKNOWN": 0.0
+        },
+        "confidence": 1.0,
+        "margin": 1.0,
+        "evidence": null,
+        "sdk_confidence": 1.0,
+        "truncated": false,
+        "conflict": false,
+        "aggregation": "conflict_abstain",
+        "passage_count": 1,
+        "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+      },
+      "split_voting_restricted": {
+        "value": "NO",
+        "scores": {
+          "YES": 0.0,
+          "NO": 1.0,
+          "UNKNOWN": 0.0
+        },
+        "confidence": 1.0,
+        "margin": 1.0,
+        "evidence": null,
+        "sdk_confidence": 1.0,
+        "truncated": false,
+        "conflict": false,
+        "aggregation": "conflict_abstain",
+        "passage_count": 1,
+        "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+      },
+      "securities_lending_recall_required": {
+        "value": "NO",
+        "scores": {
+          "YES": 0.0,
+          "NO": 1.0,
+          "UNKNOWN": 0.0
+        },
+        "confidence": 1.0,
+        "margin": 1.0,
+        "evidence": null,
+        "sdk_confidence": 1.0,
+        "truncated": false,
+        "conflict": false,
+        "aggregation": "conflict_abstain",
+        "passage_count": 1,
+        "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+      },
+      "other_voting_restriction": {
+        "value": "NO",
+        "scores": {
+          "YES": 0.0,
+          "NO": 1.0,
+          "UNKNOWN": 0.0
+        },
+        "confidence": 1.0,
+        "margin": 1.0,
+        "evidence": null,
+        "sdk_confidence": 1.0,
+        "truncated": false,
+        "conflict": false,
+        "aggregation": "conflict_abstain",
+        "passage_count": 1,
+        "score_definition": "Native scores for selected passage; not aggregate document probabilities"
+      }
+    },
+    "passage_predictions": {
+      "votable": [
+        {
+          "value": "YES",
+          "scores": {
+            "YES": 1.0,
+            "NO": 0.0,
+            "UNCERTAIN": 0.0
+          },
+          "confidence": 1.0,
+          "margin": 1.0,
+          "evidence": {
+            "text": "No power of attorney is required.",
+            "start": 542,
+            "end": 575,
+            "boundary": "sentence",
+            "source": "sentence-level Laya candidate; exact substring, not human-verified explanation",
+            "field_id": "62276e81b1f60b35:28"
+          },
+          "sdk_confidence": 1.0,
+          "truncated": false
+        }
+      ],
+      "share_blocking": [
+        {
+          "value": "NO",
+          "scores": {
+            "YES": 0.0,
+            "NO": 1.0,
+            "UNKNOWN": 0.0
+          },
+          "confidence": 1.0,
+          "margin": 1.0,
+          "evidence": null,
+          "sdk_confidence": 1.0,
+          "truncated": false
+        }
+      ],
+      "poa_required": [
+        {
+          "value": "NO",
+          "scores": {
+            "YES": 0.0,
+            "NO": 1.0,
+            "UNKNOWN": 0.0
+          },
+          "confidence": 1.0,
+          "margin": 1.0,
+          "evidence": null,
+          "sdk_confidence": 1.0,
+          "truncated": false
+        }
+      ],
+      "registration_required": [
+        {
+          "value": "NO",
+          "scores": {
+            "YES": 0.0,
+            "NO": 1.0,
+            "UNKNOWN": 0.0
+          },
+          "confidence": 1.0,
+          "margin": 1.0,
+          "evidence": null,
+          "sdk_confidence": 1.0,
+          "truncated": false
+        }
+      ],
+      "beneficial_owner_disclosure_required": [
+        {
+          "value": "NO",
+          "scores": {
+            "YES": 0.0,
+            "NO": 1.0,
+            "UNKNOWN": 0.0
+          },
+          "confidence": 1.0,
+          "margin": 1.0,
+          "evidence": null,
+          "sdk_confidence": 1.0,
+          "truncated": false
+        }
+      ],
+      "split_voting_restricted": [
+        {
+          "value": "NO",
+          "scores": {
+            "YES": 0.0,
+            "NO": 1.0,
+            "UNKNOWN": 0.0
+          },
+          "confidence": 1.0,
+          "margin": 1.0,
+          "evidence": null,
+          "sdk_confidence": 1.0,
+          "truncated": false
+        }
+      ],
+      "securities_lending_recall_required": [
+        {
+          "value": "NO",
+          "scores": {
+            "YES": 0.0,
+            "NO": 1.0,
+            "UNKNOWN": 0.0
+          },
+          "confidence": 1.0,
+          "margin": 1.0,
+          "evidence": null,
+          "sdk_confidence": 1.0,
+          "truncated": false
+        }
+      ],
+      "other_voting_restriction": [
+        {
+          "value": "NO",
+          "scores": {
+            "YES": 0.0,
+            "NO": 1.0,
+            "UNKNOWN": 0.0
+          },
+          "confidence": 1.0,
+          "margin": 1.0,
+          "evidence": null,
+          "sdk_confidence": 1.0,
+          "truncated": false
+        }
+      ]
+    },
+    "model": "local Laya narrow predicates",
+    "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+    "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+    "processing_time_ms": 214.22558301128447,
+    "chunk_count": 1,
+    "llm_escalations": 0,
+    "automation_enabled": false
+  },
+  "deadline": {
+    "status": "UNKNOWN",
+    "comparisons": [
+      {
+        "field_id": "62276e81b1f60b35:19",
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "deadline": {
+          "iso": "2026-10-20T17:00:00+01:00",
+          "precision": "MILLISECOND",
+          "offset_known": true
+        },
+        "evaluation_time": "2026-10-16T12:00:00+00:00",
+        "status": "OPEN"
+      },
+      {
+        "field_id": "62276e81b1f60b35:25",
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "deadline": {
+          "iso": "2026-10-20",
+          "precision": "DATE",
+          "offset_known": false
+        },
+        "evaluation_time": "2026-10-16T12:00:00+00:00",
+        "status": "UNKNOWN"
+      }
+    ],
+    "conflict": true,
+    "reason": "Date-only and local times require an agreed sender/timezone profile; MKDT/EARD/MEET/RDTE are not substituted for RDDT."
+  },
+  "decision_facts": {
+    "votable": "YES",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "registration_required": "NO",
+    "beneficial_owner_disclosure_required": "NO",
+    "split_voting_restricted": "NO",
+    "securities_lending_recall_required": "NO",
+    "other_voting_restriction": "NO",
+    "deadline_status": "UNKNOWN",
+    "conflict": true
+  },
+  "decision": {
+    "classification": "UNCERTAIN_MANUAL_REVIEW",
+    "rule": "R1 conflicting, malformed or unresolved lifecycle evidence",
+    "rule_version": "hybrid-policy-1",
+    "automation_enabled": false,
+    "manual_review_required": true
+  },
+  "routing_trace": [
+    {
+      "field_id": "62276e81b1f60b35:0",
+      "tag": "16R",
+      "qualifier": null,
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 54,
+      "end": 63
+    },
+    {
+      "field_id": "62276e81b1f60b35:1",
+      "tag": "20C",
+      "qualifier": "SEME",
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 64,
+      "end": 87
+    },
+    {
+      "field_id": "62276e81b1f60b35:2",
+      "tag": "20C",
+      "qualifier": "CORP",
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 88,
+      "end": 111
+    },
+    {
+      "field_id": "62276e81b1f60b35:3",
+      "tag": "23G",
+      "qualifier": null,
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 112,
+      "end": 121
+    },
+    {
+      "field_id": "62276e81b1f60b35:4",
+      "tag": "22F",
+      "qualifier": "CAEV",
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 122,
+      "end": 138
+    },
+    {
+      "field_id": "62276e81b1f60b35:5",
+      "tag": "22F",
+      "qualifier": "CAMV",
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 139,
+      "end": 155
+    },
+    {
+      "field_id": "62276e81b1f60b35:6",
+      "tag": "25D",
+      "qualifier": "PROC",
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "SEMISTRUCTURED_FACTS",
+      "consumer": "preserve/review",
+      "start": 156,
+      "end": 172
+    },
+    {
+      "field_id": "62276e81b1f60b35:7",
+      "tag": "16S",
+      "qualifier": null,
+      "path": [
+        "GENL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 173,
+      "end": 182
+    },
+    {
+      "field_id": "62276e81b1f60b35:8",
+      "tag": "16R",
+      "qualifier": null,
+      "path": [
+        "USECU[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 183,
+      "end": 193
+    },
+    {
+      "field_id": "62276e81b1f60b35:9",
+      "tag": "35B",
+      "qualifier": null,
+      "path": [
+        "USECU[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 194,
+      "end": 242
+    },
+    {
+      "field_id": "62276e81b1f60b35:10",
+      "tag": "16S",
+      "qualifier": null,
+      "path": [
+        "USECU[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 243,
+      "end": 253
+    },
+    {
+      "field_id": "62276e81b1f60b35:11",
+      "tag": "16R",
+      "qualifier": null,
+      "path": [
+        "CADETL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 254,
+      "end": 265
+    },
+    {
+      "field_id": "62276e81b1f60b35:12",
+      "tag": "98A",
+      "qualifier": "MEET",
+      "path": [
+        "CADETL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 266,
+      "end": 286
+    },
+    {
+      "field_id": "62276e81b1f60b35:13",
+      "tag": "98A",
+      "qualifier": "RDTE",
+      "path": [
+        "CADETL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 287,
+      "end": 307
+    },
+    {
+      "field_id": "62276e81b1f60b35:14",
+      "tag": "16S",
+      "qualifier": null,
+      "path": [
+        "CADETL[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 308,
+      "end": 319
+    },
+    {
+      "field_id": "62276e81b1f60b35:15",
+      "tag": "16R",
+      "qualifier": null,
+      "path": [
+        "CAOPTN[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 320,
+      "end": 331
+    },
+    {
+      "field_id": "62276e81b1f60b35:16",
+      "tag": "13A",
+      "qualifier": "CAON",
+      "path": [
+        "CAOPTN[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 332,
+      "end": 347
+    },
+    {
+      "field_id": "62276e81b1f60b35:17",
+      "tag": "22F",
+      "qualifier": "CAOP",
+      "path": [
+        "CAOPTN[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 348,
+      "end": 364
+    },
+    {
+      "field_id": "62276e81b1f60b35:18",
+      "tag": "17B",
+      "qualifier": "DFLT",
+      "path": [
+        "CAOPTN[1]"
+      ],
+      "route": "UNKNOWN_FIELDS",
+      "consumer": "preserve/review",
+      "start": 365,
+      "end": 378
+    },
+    {
+      "field_id": "62276e81b1f60b35:19",
+      "tag": "98E",
+      "qualifier": "RDDT",
+      "path": [
+        "CAOPTN[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 379,
+      "end": 412
+    },
+    {
+      "field_id": "62276e81b1f60b35:20",
+      "tag": "16S",
+      "qualifier": null,
+      "path": [
+        "CAOPTN[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 413,
+      "end": 424
+    },
+    {
+      "field_id": "62276e81b1f60b35:21",
+      "tag": "16R",
+      "qualifier": null,
+      "path": [
+        "CAOPTN[2]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 425,
+      "end": 436
+    },
+    {
+      "field_id": "62276e81b1f60b35:22",
+      "tag": "13A",
+      "qualifier": "CAON",
+      "path": [
+        "CAOPTN[2]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 437,
+      "end": 452
+    },
+    {
+      "field_id": "62276e81b1f60b35:23",
+      "tag": "22F",
+      "qualifier": "CAOP",
+      "path": [
+        "CAOPTN[2]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 453,
+      "end": 469
+    },
+    {
+      "field_id": "62276e81b1f60b35:24",
+      "tag": "17B",
+      "qualifier": "DFLT",
+      "path": [
+        "CAOPTN[2]"
+      ],
+      "route": "UNKNOWN_FIELDS",
+      "consumer": "preserve/review",
+      "start": 470,
+      "end": 483
+    },
+    {
+      "field_id": "62276e81b1f60b35:25",
+      "tag": "98A",
+      "qualifier": "RDDT",
+      "path": [
+        "CAOPTN[2]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 484,
+      "end": 504
+    },
+    {
+      "field_id": "62276e81b1f60b35:26",
+      "tag": "16S",
+      "qualifier": null,
+      "path": [
+        "CAOPTN[2]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 505,
+      "end": 516
+    },
+    {
+      "field_id": "62276e81b1f60b35:27",
+      "tag": "16R",
+      "qualifier": null,
+      "path": [
+        "ADDINFO[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 517,
+      "end": 529
+    },
+    {
+      "field_id": "62276e81b1f60b35:28",
+      "tag": "70E",
+      "qualifier": "REGI",
+      "path": [
+        "ADDINFO[1]"
+      ],
+      "route": "NARRATIVE_TEXT",
+      "consumer": "Laya predicates",
+      "start": 530,
+      "end": 575
+    },
+    {
+      "field_id": "62276e81b1f60b35:29",
+      "tag": "16S",
+      "qualifier": null,
+      "path": [
+        "ADDINFO[1]"
+      ],
+      "route": "STRUCTURED_FACTS",
+      "consumer": "deterministic rules",
+      "start": 576,
+      "end": 588
+    }
+  ],
+  "review_reasons": [],
+  "fallback": {
+    "enabled": false,
+    "external_calls": 0
+  },
+  "narrative_text": "No power of attorney is required.",
+  "metrics": {
+    "structured_values": 14,
+    "narrative_passages": 1,
+    "laya_executed": true,
+    "llm_escalations": 0,
+    "manual_review": true
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "all_equal": true,
+  "comparisons": [
+    {
+      "id": "alpaca_corrective:1",
+      "same_factors": true,
+      "same_scores": true
+    },
+    {
+      "id": "alpaca_corrective:2",
+      "same_factors": true,
+      "same_scores": true
+    },
+    {
+      "id": "alpaca_corrective:3",
+      "same_factors": true,
+      "same_scores": true
+    },
+    {
+      "id": "alpaca_corrective:4",
+      "same_factors": true,
+      "same_scores": true
+    }
+  ],
+  "first_run": "07a94774-1621-41e0-bd6e-864884111c37",
+  "kind": "actual local Laya reproduction, no test double",
+  "records": 4,
+  "same_configuration_hash": true,
+  "same_dataset_hash": true,
+  "second_run": "ccbc891b-0953-4157-adcb-0d943b5d8412"
+}

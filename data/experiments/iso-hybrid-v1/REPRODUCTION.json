@@ -1,0 +1,12 @@
+{
+  "base": {
+    "challenge_native_predictions_identical": 57,
+    "validation_native_predictions_identical": 100,
+    "reproduction_workspace": "/tmp/laya-hybrid-verified-reproduction"
+  },
+  "fine": {
+    "challenge_native_predictions_identical": 57,
+    "validation_native_predictions_identical": 100,
+    "reproduction_workspace": "/tmp/laya-hybrid-verified-reproduction"
+  }
+}

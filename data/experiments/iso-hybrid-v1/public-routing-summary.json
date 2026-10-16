@@ -1,0 +1,15 @@
+{
+  "records": 7683,
+  "decision_fact_slots_per_record": 9,
+  "total_decision_fact_slots": 69147,
+  "deterministic_nonunknown_fact_outputs": 0,
+  "deterministic_output_fraction": 0.0,
+  "planned_laya_predicate_slots": 61392,
+  "planned_laya_slot_fraction": 0.8878476289643802,
+  "laya_executions": 0,
+  "llm_escalations": 0,
+  "human_review_cases": 7683,
+  "human_review_fraction": 1.0,
+  "elapsed_seconds": 3.748131541069597,
+  "scope": "Rule outputs and intended routing, NOT verified fact accuracy. Narrow Laya not run across public corpus. Date rule outputs require review and may reflect extraction errors. Slot denominator is vote + seven restrictions + deadline, not ISO metadata fields."
+}

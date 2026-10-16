@@ -1,0 +1,14 @@
+{
+  "id": "mutated-0055",
+  "source_type": "STANDARDS_DERIVED_SYNTHETIC",
+  "source_url": "https://www.iso20022.org/15022/uhb/finmt567.htm",
+  "source_organisation": "ISO15022 dictionary; locally authored fixture",
+  "retrieved_at": "2026-10-16",
+  "message_type": "MT567",
+  "notes": "Mutation mode 0; may be tolerated/partial rather than rejected. No semantic ground truth.",
+  "raw": ":16R:GENL\r\n:20C::SEME//S0000000055\r\n:20C::CORP//C0000000013\r\n:23G:INST\r\n:22F::CAEV//TEND\r\n:16R:LINK\r\n:20C::PREV//S0000000051\r\n:16S:LINK\r\n:16R:STAT\r\n:25D::IPRC//PACK\r\n:16S:STAT\r\n:16S:WRONG\r\n",
+  "expected": {
+    "unknown_preserved": true
+  },
+  "mutation": 0
+}

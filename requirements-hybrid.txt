@@ -1,0 +1,2 @@
+# Optional property-test dependency, separate to preserve the historical frozen uv.lock.
+hypothesis==6.151.9

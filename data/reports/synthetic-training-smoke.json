@@ -1,0 +1,15 @@
+{
+  "kind": "Real official Laya fine-tuning, calibration, export, reload and inference mechanics only",
+  "dataset_kind": "Authored synthetic specifications; not customer golden labels",
+  "counts": {
+    "train": 29,
+    "validation": 12,
+    "test": 16
+  },
+  "device": "cpu",
+  "epochs": 1,
+  "output": "data/models/synthetic-smoke-v1",
+  "model_version": "sha256:2b4d00b2458617bf9012611f3dbca8a119ae659e7de9d9b47c9d83ee27365747",
+  "classification_result_valid": true,
+  "automation_enabled": false
+}

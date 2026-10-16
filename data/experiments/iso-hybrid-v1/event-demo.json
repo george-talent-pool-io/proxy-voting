@@ -1,0 +1,3765 @@
+{
+  "source_type": "STANDARDS_DERIVED_SYNTHETIC",
+  "note": "Persisted, reloaded synthetic event; not public production data",
+  "state": {
+    "event_id": "a8d718c3181dc08b9c6d5f6a5b22283c7a3c4e91ac6d20b5becd8d112179492b",
+    "cancelled": false,
+    "active_notification_id": 3,
+    "current_facts": [
+      {
+        "name": "corp",
+        "value": "CHAIN000",
+        "field_id": "60c8eb0d06f1a5d6:2",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 58,
+        "end": 78,
+        "value_start": 70,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "caev",
+        "value": "MEET",
+        "field_id": "60c8eb0d06f1a5d6:4",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 89,
+        "end": 105,
+        "value_start": 101,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "camv",
+        "value": "VOLU",
+        "field_id": "60c8eb0d06f1a5d6:5",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 106,
+        "end": 122,
+        "value_start": 118,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "security",
+        "value": {
+          "isin": "GB0002634946",
+          "description": ""
+        },
+        "field_id": "60c8eb0d06f1a5d6:12",
+        "path": [
+          "USECU[1]"
+        ],
+        "start": 203,
+        "end": 225,
+        "value_start": 208,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "meet",
+        "value": {
+          "iso": "2026-10-30",
+          "precision": "DATE",
+          "offset_known": false
+        },
+        "field_id": "60c8eb0d06f1a5d6:15",
+        "path": [
+          "CADETL[1]"
+        ],
+        "start": 249,
+        "end": 269,
+        "value_start": 261,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "option_number",
+        "value": "001",
+        "field_id": "60c8eb0d06f1a5d6:18",
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "start": 294,
+        "end": 309,
+        "value_start": 306,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "option_code",
+        "value": "PROX",
+        "field_id": "60c8eb0d06f1a5d6:19",
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "start": 310,
+        "end": 326,
+        "value_start": 322,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "rddt",
+        "value": {
+          "iso": "2026-10-18T17:00:00+00:00",
+          "precision": "MILLISECOND",
+          "offset_known": true
+        },
+        "field_id": "60c8eb0d06f1a5d6:21",
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "start": 341,
+        "end": 374,
+        "value_start": 353,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "option_number",
+        "value": "002",
+        "field_id": "60c8eb0d06f1a5d6:24",
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "start": 399,
+        "end": 414,
+        "value_start": 411,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "option_code",
+        "value": "ABST",
+        "field_id": "60c8eb0d06f1a5d6:25",
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "start": 415,
+        "end": 431,
+        "value_start": 427,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "rddt",
+        "value": {
+          "iso": "2026-10-18T17:00:00+00:00",
+          "precision": "MILLISECOND",
+          "offset_known": true
+        },
+        "field_id": "60c8eb0d06f1a5d6:27",
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "start": 446,
+        "end": 479,
+        "value_start": 458,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "narrative",
+        "value": "A power of attorney is required\nto vote at this meeting.",
+        "field_id": "320eb52d7175aad8:11",
+        "path": [
+          "ADDINFO[1]"
+        ],
+        "start": 188,
+        "end": 256,
+        "value_start": 200,
+        "route": "NARRATIVE_TEXT",
+        "message_id": 2,
+        "source_hash": "320eb52d7175aad8e8d0057fafa67f6aa8dcd65f097560b30aeb1f46c4f6fe74",
+        "state": "APPLIED",
+        "current": true
+      }
+    ],
+    "history": [
+      {
+        "name": "corp",
+        "value": "CHAIN000",
+        "field_id": "3720963b9496596c:2",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 58,
+        "end": 78,
+        "value_start": 70,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 1,
+        "source_hash": "3720963b9496596cdd4af77e7885597ebf70b204e6384a9d04f7c613eb541bcf",
+        "state": "APPLIED",
+        "current": false
+      },
+      {
+        "name": "caev",
+        "value": "MEET",
+        "field_id": "3720963b9496596c:4",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 89,
+        "end": 105,
+        "value_start": 101,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 1,
+        "source_hash": "3720963b9496596cdd4af77e7885597ebf70b204e6384a9d04f7c613eb541bcf",
+        "state": "APPLIED",
+        "current": false
+      },
+      {
+        "name": "camv",
+        "value": "VOLU",
+        "field_id": "3720963b9496596c:5",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 106,
+        "end": 122,
+        "value_start": 118,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 1,
+        "source_hash": "3720963b9496596cdd4af77e7885597ebf70b204e6384a9d04f7c613eb541bcf",
+        "state": "APPLIED",
+        "current": false
+      },
+      {
+        "name": "security",
+        "value": {
+          "isin": "GB0002634946",
+          "description": ""
+        },
+        "field_id": "3720963b9496596c:8",
+        "path": [
+          "USECU[1]"
+        ],
+        "start": 144,
+        "end": 166,
+        "value_start": 149,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 1,
+        "source_hash": "3720963b9496596cdd4af77e7885597ebf70b204e6384a9d04f7c613eb541bcf",
+        "state": "APPLIED",
+        "current": false
+      },
+      {
+        "name": "meet",
+        "value": {
+          "iso": "2026-10-30",
+          "precision": "DATE",
+          "offset_known": false
+        },
+        "field_id": "3720963b9496596c:11",
+        "path": [
+          "CADETL[1]"
+        ],
+        "start": 190,
+        "end": 210,
+        "value_start": 202,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 1,
+        "source_hash": "3720963b9496596cdd4af77e7885597ebf70b204e6384a9d04f7c613eb541bcf",
+        "state": "APPLIED",
+        "current": false
+      },
+      {
+        "name": "option_number",
+        "value": "001",
+        "field_id": "3720963b9496596c:14",
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "start": 235,
+        "end": 250,
+        "value_start": 247,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 1,
+        "source_hash": "3720963b9496596cdd4af77e7885597ebf70b204e6384a9d04f7c613eb541bcf",
+        "state": "APPLIED",
+        "current": false
+      },
+      {
+        "name": "option_code",
+        "value": "PROX",
+        "field_id": "3720963b9496596c:15",
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "start": 251,
+        "end": 267,
+        "value_start": 263,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 1,
+        "source_hash": "3720963b9496596cdd4af77e7885597ebf70b204e6384a9d04f7c613eb541bcf",
+        "state": "APPLIED",
+        "current": false
+      },
+      {
+        "name": "rddt",
+        "value": {
+          "iso": "2026-10-15T17:00:00+00:00",
+          "precision": "MILLISECOND",
+          "offset_known": true
+        },
+        "field_id": "3720963b9496596c:17",
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "start": 282,
+        "end": 315,
+        "value_start": 294,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 1,
+        "source_hash": "3720963b9496596cdd4af77e7885597ebf70b204e6384a9d04f7c613eb541bcf",
+        "state": "APPLIED",
+        "current": false
+      },
+      {
+        "name": "option_number",
+        "value": "002",
+        "field_id": "3720963b9496596c:20",
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "start": 340,
+        "end": 355,
+        "value_start": 352,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 1,
+        "source_hash": "3720963b9496596cdd4af77e7885597ebf70b204e6384a9d04f7c613eb541bcf",
+        "state": "APPLIED",
+        "current": false
+      },
+      {
+        "name": "option_code",
+        "value": "ABST",
+        "field_id": "3720963b9496596c:21",
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "start": 356,
+        "end": 372,
+        "value_start": 368,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 1,
+        "source_hash": "3720963b9496596cdd4af77e7885597ebf70b204e6384a9d04f7c613eb541bcf",
+        "state": "APPLIED",
+        "current": false
+      },
+      {
+        "name": "rddt",
+        "value": {
+          "iso": "2026-10-15T17:00:00+00:00",
+          "precision": "MILLISECOND",
+          "offset_known": true
+        },
+        "field_id": "3720963b9496596c:23",
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "start": 387,
+        "end": 420,
+        "value_start": 399,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 1,
+        "source_hash": "3720963b9496596cdd4af77e7885597ebf70b204e6384a9d04f7c613eb541bcf",
+        "state": "APPLIED",
+        "current": false
+      },
+      {
+        "name": "corp",
+        "value": "CHAIN000",
+        "field_id": "320eb52d7175aad8:2",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 58,
+        "end": 78,
+        "value_start": 70,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 2,
+        "source_hash": "320eb52d7175aad8e8d0057fafa67f6aa8dcd65f097560b30aeb1f46c4f6fe74",
+        "state": "APPLIED",
+        "current": false
+      },
+      {
+        "name": "caev",
+        "value": "MEET",
+        "field_id": "320eb52d7175aad8:4",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 89,
+        "end": 105,
+        "value_start": 101,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 2,
+        "source_hash": "320eb52d7175aad8e8d0057fafa67f6aa8dcd65f097560b30aeb1f46c4f6fe74",
+        "state": "APPLIED",
+        "current": false
+      },
+      {
+        "name": "rela",
+        "value": "CHAIN000S0",
+        "field_id": "320eb52d7175aad8:7",
+        "path": [
+          "GENL[1]",
+          "LINK[1]"
+        ],
+        "start": 132,
+        "end": 154,
+        "value_start": 144,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 2,
+        "source_hash": "320eb52d7175aad8e8d0057fafa67f6aa8dcd65f097560b30aeb1f46c4f6fe74",
+        "state": "APPLIED",
+        "current": false
+      },
+      {
+        "name": "narrative",
+        "value": "A power of attorney is required\nto vote at this meeting.",
+        "field_id": "320eb52d7175aad8:11",
+        "path": [
+          "ADDINFO[1]"
+        ],
+        "start": 188,
+        "end": 256,
+        "value_start": 200,
+        "route": "NARRATIVE_TEXT",
+        "message_id": 2,
+        "source_hash": "320eb52d7175aad8e8d0057fafa67f6aa8dcd65f097560b30aeb1f46c4f6fe74",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "corp",
+        "value": "CHAIN000",
+        "field_id": "60c8eb0d06f1a5d6:2",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 58,
+        "end": 78,
+        "value_start": 70,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "caev",
+        "value": "MEET",
+        "field_id": "60c8eb0d06f1a5d6:4",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 89,
+        "end": 105,
+        "value_start": 101,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "camv",
+        "value": "VOLU",
+        "field_id": "60c8eb0d06f1a5d6:5",
+        "path": [
+          "GENL[1]"
+        ],
+        "start": 106,
+        "end": 122,
+        "value_start": 118,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "security",
+        "value": {
+          "isin": "GB0002634946",
+          "description": ""
+        },
+        "field_id": "60c8eb0d06f1a5d6:12",
+        "path": [
+          "USECU[1]"
+        ],
+        "start": 203,
+        "end": 225,
+        "value_start": 208,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "meet",
+        "value": {
+          "iso": "2026-10-30",
+          "precision": "DATE",
+          "offset_known": false
+        },
+        "field_id": "60c8eb0d06f1a5d6:15",
+        "path": [
+          "CADETL[1]"
+        ],
+        "start": 249,
+        "end": 269,
+        "value_start": 261,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "option_number",
+        "value": "001",
+        "field_id": "60c8eb0d06f1a5d6:18",
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "start": 294,
+        "end": 309,
+        "value_start": 306,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "option_code",
+        "value": "PROX",
+        "field_id": "60c8eb0d06f1a5d6:19",
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "start": 310,
+        "end": 326,
+        "value_start": 322,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "rddt",
+        "value": {
+          "iso": "2026-10-18T17:00:00+00:00",
+          "precision": "MILLISECOND",
+          "offset_known": true
+        },
+        "field_id": "60c8eb0d06f1a5d6:21",
+        "path": [
+          "CAOPTN[1]"
+        ],
+        "start": 341,
+        "end": 374,
+        "value_start": 353,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "option_number",
+        "value": "002",
+        "field_id": "60c8eb0d06f1a5d6:24",
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "start": 399,
+        "end": 414,
+        "value_start": 411,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "option_code",
+        "value": "ABST",
+        "field_id": "60c8eb0d06f1a5d6:25",
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "start": 415,
+        "end": 431,
+        "value_start": 427,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      },
+      {
+        "name": "rddt",
+        "value": {
+          "iso": "2026-10-18T17:00:00+00:00",
+          "precision": "MILLISECOND",
+          "offset_known": true
+        },
+        "field_id": "60c8eb0d06f1a5d6:27",
+        "path": [
+          "CAOPTN[2]"
+        ],
+        "start": 446,
+        "end": 479,
+        "value_start": 458,
+        "route": "STRUCTURED_FACTS",
+        "message_id": 3,
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "state": "APPLIED",
+        "current": true
+      }
+    ],
+    "messages": [
+      {
+        "id": 1,
+        "sender": "STANDARDS_DERIVED_SYNTHETIC_DEMO",
+        "seme": "CHAIN000S0",
+        "corp": "CHAIN000",
+        "event_id": "a8d718c3181dc08b9c6d5f6a5b22283c7a3c4e91ac6d20b5becd8d112179492b",
+        "source_hash": "3720963b9496596cdd4af77e7885597ebf70b204e6384a9d04f7c613eb541bcf",
+        "received_at": "2026-10-16T17:07:28.418873+00:00",
+        "state": "APPLIED",
+        "previous_message_id": null,
+        "payload": {
+          "parsed": {
+            "version": "iso-subset-1",
+            "raw": "{2:I564TESTBIC0XXXXN}{4:\n:16R:GENL\n:20C::SEME//CHAIN000S0\n:20C::CORP//CHAIN000\n:23G:NEWM\n:22F::CAEV//MEET\n:22F::CAMV//VOLU\n:16S:GENL\n:16R:USECU\n:35B:ISIN GB0002634946\n:16S:USECU\n:16R:CADETL\n:98A::MEET//20261030\n:16S:CADETL\n:16R:CAOPTN\n:13A::CAON//001\n:22F::CAOP//PROX\n:17B::DFLT//N\n:98E::RDDT//20261015170000,000/00\n:16S:CAOPTN\n:16R:CAOPTN\n:13A::CAON//002\n:22F::CAOP//ABST\n:17B::DFLT//N\n:98E::RDDT//20261015170000,000/00\n:16S:CAOPTN\n-}",
+            "source_hash": "3720963b9496596cdd4af77e7885597ebf70b204e6384a9d04f7c613eb541bcf",
+            "message_type": "MT564",
+            "kind": "PARTIAL_ISO15022",
+            "fields": [
+              {
+                "id": "3720963b9496596c:0",
+                "tag": "16R",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "GENL",
+                "raw_value": "GENL",
+                "start": 25,
+                "end": 34,
+                "value_start": 30,
+                "path": [
+                  "GENL[1]"
+                ],
+                "occurrence": 0
+              },
+              {
+                "id": "3720963b9496596c:1",
+                "tag": "20C",
+                "qualifier": "SEME",
+                "data_source_scheme": "",
+                "value": "CHAIN000S0",
+                "raw_value": ":SEME//CHAIN000S0",
+                "start": 35,
+                "end": 57,
+                "value_start": 47,
+                "path": [
+                  "GENL[1]"
+                ],
+                "occurrence": 1
+              },
+              {
+                "id": "3720963b9496596c:2",
+                "tag": "20C",
+                "qualifier": "CORP",
+                "data_source_scheme": "",
+                "value": "CHAIN000",
+                "raw_value": ":CORP//CHAIN000",
+                "start": 58,
+                "end": 78,
+                "value_start": 70,
+                "path": [
+                  "GENL[1]"
+                ],
+                "occurrence": 2
+              },
+              {
+                "id": "3720963b9496596c:3",
+                "tag": "23G",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "NEWM",
+                "raw_value": "NEWM",
+                "start": 79,
+                "end": 88,
+                "value_start": 84,
+                "path": [
+                  "GENL[1]"
+                ],
+                "occurrence": 3
+              },
+              {
+                "id": "3720963b9496596c:4",
+                "tag": "22F",
+                "qualifier": "CAEV",
+                "data_source_scheme": "",
+                "value": "MEET",
+                "raw_value": ":CAEV//MEET",
+                "start": 89,
+                "end": 105,
+                "value_start": 101,
+                "path": [
+                  "GENL[1]"
+                ],
+                "occurrence": 4
+              },
+              {
+                "id": "3720963b9496596c:5",
+                "tag": "22F",
+                "qualifier": "CAMV",
+                "data_source_scheme": "",
+                "value": "VOLU",
+                "raw_value": ":CAMV//VOLU",
+                "start": 106,
+                "end": 122,
+                "value_start": 118,
+                "path": [
+                  "GENL[1]"
+                ],
+                "occurrence": 5
+              },
+              {
+                "id": "3720963b9496596c:6",
+                "tag": "16S",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "GENL",
+                "raw_value": "GENL",
+                "start": 123,
+                "end": 132,
+                "value_start": 128,
+                "path": [
+                  "GENL[1]"
+                ],
+                "occurrence": 6
+              },
+              {
+                "id": "3720963b9496596c:7",
+                "tag": "16R",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "USECU",
+                "raw_value": "USECU",
+                "start": 133,
+                "end": 143,
+                "value_start": 138,
+                "path": [
+                  "USECU[1]"
+                ],
+                "occurrence": 7
+              },
+              {
+                "id": "3720963b9496596c:8",
+                "tag": "35B",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "ISIN GB0002634946",
+                "raw_value": "ISIN GB0002634946",
+                "start": 144,
+                "end": 166,
+                "value_start": 149,
+                "path": [
+                  "USECU[1]"
+                ],
+                "occurrence": 8
+              },
+              {
+                "id": "3720963b9496596c:9",
+                "tag": "16S",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "USECU",
+                "raw_value": "USECU",
+                "start": 167,
+                "end": 177,
+                "value_start": 172,
+                "path": [
+                  "USECU[1]"
+                ],
+                "occurrence": 9
+              },
+              {
+                "id": "3720963b9496596c:10",
+                "tag": "16R",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "CADETL",
+                "raw_value": "CADETL",
+                "start": 178,
+                "end": 189,
+                "value_start": 183,
+                "path": [
+                  "CADETL[1]"
+                ],
+                "occurrence": 10
+              },
+              {
+                "id": "3720963b9496596c:11",
+                "tag": "98A",
+                "qualifier": "MEET",
+                "data_source_scheme": "",
+                "value": "20261030",
+                "raw_value": ":MEET//20261030",
+                "start": 190,
+                "end": 210,
+                "value_start": 202,
+                "path": [
+                  "CADETL[1]"
+                ],
+                "occurrence": 11
+              },
+              {
+                "id": "3720963b9496596c:12",
+                "tag": "16S",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "CADETL",
+                "raw_value": "CADETL",
+                "start": 211,
+                "end": 222,
+                "value_start": 216,
+                "path": [
+                  "CADETL[1]"
+                ],
+                "occurrence": 12
+              },
+              {
+                "id": "3720963b9496596c:13",
+                "tag": "16R",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "CAOPTN",
+                "raw_value": "CAOPTN",
+                "start": 223,
+                "end": 234,
+                "value_start": 228,
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "occurrence": 13
+              },
+              {
+                "id": "3720963b9496596c:14",
+                "tag": "13A",
+                "qualifier": "CAON",
+                "data_source_scheme": "",
+                "value": "001",
+                "raw_value": ":CAON//001",
+                "start": 235,
+                "end": 250,
+                "value_start": 247,
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "occurrence": 14
+              },
+              {
+                "id": "3720963b9496596c:15",
+                "tag": "22F",
+                "qualifier": "CAOP",
+                "data_source_scheme": "",
+                "value": "PROX",
+                "raw_value": ":CAOP//PROX",
+                "start": 251,
+                "end": 267,
+                "value_start": 263,
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "occurrence": 15
+              },
+              {
+                "id": "3720963b9496596c:16",
+                "tag": "17B",
+                "qualifier": "DFLT",
+                "data_source_scheme": "",
+                "value": "N",
+                "raw_value": ":DFLT//N",
+                "start": 268,
+                "end": 281,
+                "value_start": 280,
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "occurrence": 16
+              },
+              {
+                "id": "3720963b9496596c:17",
+                "tag": "98E",
+                "qualifier": "RDDT",
+                "data_source_scheme": "",
+                "value": "20261015170000,000/00",
+                "raw_value": ":RDDT//20261015170000,000/00",
+                "start": 282,
+                "end": 315,
+                "value_start": 294,
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "occurrence": 17
+              },
+              {
+                "id": "3720963b9496596c:18",
+                "tag": "16S",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "CAOPTN",
+                "raw_value": "CAOPTN",
+                "start": 316,
+                "end": 327,
+                "value_start": 321,
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "occurrence": 18
+              },
+              {
+                "id": "3720963b9496596c:19",
+                "tag": "16R",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "CAOPTN",
+                "raw_value": "CAOPTN",
+                "start": 328,
+                "end": 339,
+                "value_start": 333,
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "occurrence": 19
+              },
+              {
+                "id": "3720963b9496596c:20",
+                "tag": "13A",
+                "qualifier": "CAON",
+                "data_source_scheme": "",
+                "value": "002",
+                "raw_value": ":CAON//002",
+                "start": 340,
+                "end": 355,
+                "value_start": 352,
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "occurrence": 20
+              },
+              {
+                "id": "3720963b9496596c:21",
+                "tag": "22F",
+                "qualifier": "CAOP",
+                "data_source_scheme": "",
+                "value": "ABST",
+                "raw_value": ":CAOP//ABST",
+                "start": 356,
+                "end": 372,
+                "value_start": 368,
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "occurrence": 21
+              },
+              {
+                "id": "3720963b9496596c:22",
+                "tag": "17B",
+                "qualifier": "DFLT",
+                "data_source_scheme": "",
+                "value": "N",
+                "raw_value": ":DFLT//N",
+                "start": 373,
+                "end": 386,
+                "value_start": 385,
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "occurrence": 22
+              },
+              {
+                "id": "3720963b9496596c:23",
+                "tag": "98E",
+                "qualifier": "RDDT",
+                "data_source_scheme": "",
+                "value": "20261015170000,000/00",
+                "raw_value": ":RDDT//20261015170000,000/00",
+                "start": 387,
+                "end": 420,
+                "value_start": 399,
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "occurrence": 23
+              },
+              {
+                "id": "3720963b9496596c:24",
+                "tag": "16S",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "CAOPTN",
+                "raw_value": "CAOPTN",
+                "start": 421,
+                "end": 432,
+                "value_start": 426,
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "occurrence": 24
+              }
+            ],
+            "segments": [
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:0",
+                "start": 25,
+                "end": 35
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:1",
+                "start": 35,
+                "end": 58
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:2",
+                "start": 58,
+                "end": 79
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:3",
+                "start": 79,
+                "end": 89
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:4",
+                "start": 89,
+                "end": 106
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:5",
+                "start": 106,
+                "end": 123
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:6",
+                "start": 123,
+                "end": 133
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:7",
+                "start": 133,
+                "end": 144
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:8",
+                "start": 144,
+                "end": 167
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:9",
+                "start": 167,
+                "end": 178
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:10",
+                "start": 178,
+                "end": 190
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:11",
+                "start": 190,
+                "end": 211
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:12",
+                "start": 211,
+                "end": 223
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:13",
+                "start": 223,
+                "end": 235
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:14",
+                "start": 235,
+                "end": 251
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:15",
+                "start": 251,
+                "end": 268
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:16",
+                "start": 268,
+                "end": 282
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:17",
+                "start": 282,
+                "end": 316
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:18",
+                "start": 316,
+                "end": 328
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:19",
+                "start": 328,
+                "end": 340
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:20",
+                "start": 340,
+                "end": 356
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:21",
+                "start": 356,
+                "end": 373
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:22",
+                "start": 373,
+                "end": 387
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:23",
+                "start": 387,
+                "end": 421
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "3720963b9496596c:24",
+                "start": 421,
+                "end": 433
+              }
+            ],
+            "errors": [],
+            "facts": [
+              {
+                "name": "sequence",
+                "value": "GENL",
+                "field_id": "3720963b9496596c:0",
+                "path": [
+                  "GENL[1]"
+                ],
+                "start": 25,
+                "end": 34,
+                "value_start": 30,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "seme",
+                "value": "CHAIN000S0",
+                "field_id": "3720963b9496596c:1",
+                "path": [
+                  "GENL[1]"
+                ],
+                "start": 35,
+                "end": 57,
+                "value_start": 47,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "corp",
+                "value": "CHAIN000",
+                "field_id": "3720963b9496596c:2",
+                "path": [
+                  "GENL[1]"
+                ],
+                "start": 58,
+                "end": 78,
+                "value_start": 70,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "function",
+                "value": "NEWM",
+                "field_id": "3720963b9496596c:3",
+                "path": [
+                  "GENL[1]"
+                ],
+                "start": 79,
+                "end": 88,
+                "value_start": 84,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "caev",
+                "value": "MEET",
+                "field_id": "3720963b9496596c:4",
+                "path": [
+                  "GENL[1]"
+                ],
+                "start": 89,
+                "end": 105,
+                "value_start": 101,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "camv",
+                "value": "VOLU",
+                "field_id": "3720963b9496596c:5",
+                "path": [
+                  "GENL[1]"
+                ],
+                "start": 106,
+                "end": 122,
+                "value_start": 118,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "GENL",
+                "field_id": "3720963b9496596c:6",
+                "path": [
+                  "GENL[1]"
+                ],
+                "start": 123,
+                "end": 132,
+                "value_start": 128,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "USECU",
+                "field_id": "3720963b9496596c:7",
+                "path": [
+                  "USECU[1]"
+                ],
+                "start": 133,
+                "end": 143,
+                "value_start": 138,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "security",
+                "value": {
+                  "isin": "GB0002634946",
+                  "description": ""
+                },
+                "field_id": "3720963b9496596c:8",
+                "path": [
+                  "USECU[1]"
+                ],
+                "start": 144,
+                "end": 166,
+                "value_start": 149,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "USECU",
+                "field_id": "3720963b9496596c:9",
+                "path": [
+                  "USECU[1]"
+                ],
+                "start": 167,
+                "end": 177,
+                "value_start": 172,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "CADETL",
+                "field_id": "3720963b9496596c:10",
+                "path": [
+                  "CADETL[1]"
+                ],
+                "start": 178,
+                "end": 189,
+                "value_start": 183,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "meet",
+                "value": {
+                  "iso": "2026-10-30",
+                  "precision": "DATE",
+                  "offset_known": false
+                },
+                "field_id": "3720963b9496596c:11",
+                "path": [
+                  "CADETL[1]"
+                ],
+                "start": 190,
+                "end": 210,
+                "value_start": 202,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "CADETL",
+                "field_id": "3720963b9496596c:12",
+                "path": [
+                  "CADETL[1]"
+                ],
+                "start": 211,
+                "end": 222,
+                "value_start": 216,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "CAOPTN",
+                "field_id": "3720963b9496596c:13",
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "start": 223,
+                "end": 234,
+                "value_start": 228,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "option_number",
+                "value": "001",
+                "field_id": "3720963b9496596c:14",
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "start": 235,
+                "end": 250,
+                "value_start": 247,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "option_code",
+                "value": "PROX",
+                "field_id": "3720963b9496596c:15",
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "start": 251,
+                "end": 267,
+                "value_start": 263,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "rddt",
+                "value": {
+                  "iso": "2026-10-15T17:00:00+00:00",
+                  "precision": "MILLISECOND",
+                  "offset_known": true
+                },
+                "field_id": "3720963b9496596c:17",
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "start": 282,
+                "end": 315,
+                "value_start": 294,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "CAOPTN",
+                "field_id": "3720963b9496596c:18",
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "start": 316,
+                "end": 327,
+                "value_start": 321,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "CAOPTN",
+                "field_id": "3720963b9496596c:19",
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "start": 328,
+                "end": 339,
+                "value_start": 333,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "option_number",
+                "value": "002",
+                "field_id": "3720963b9496596c:20",
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "start": 340,
+                "end": 355,
+                "value_start": 352,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "option_code",
+                "value": "ABST",
+                "field_id": "3720963b9496596c:21",
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "start": 356,
+                "end": 372,
+                "value_start": 368,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "rddt",
+                "value": {
+                  "iso": "2026-10-15T17:00:00+00:00",
+                  "precision": "MILLISECOND",
+                  "offset_known": true
+                },
+                "field_id": "3720963b9496596c:23",
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "start": 387,
+                "end": 420,
+                "value_start": 399,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "CAOPTN",
+                "field_id": "3720963b9496596c:24",
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "start": 421,
+                "end": 432,
+                "value_start": 426,
+                "route": "STRUCTURED_FACTS"
+              }
+            ],
+            "routing": [
+              {
+                "field_id": "3720963b9496596c:0",
+                "tag": "16R",
+                "qualifier": null,
+                "path": [
+                  "GENL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 25,
+                "end": 34
+              },
+              {
+                "field_id": "3720963b9496596c:1",
+                "tag": "20C",
+                "qualifier": "SEME",
+                "path": [
+                  "GENL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 35,
+                "end": 57
+              },
+              {
+                "field_id": "3720963b9496596c:2",
+                "tag": "20C",
+                "qualifier": "CORP",
+                "path": [
+                  "GENL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 58,
+                "end": 78
+              },
+              {
+                "field_id": "3720963b9496596c:3",
+                "tag": "23G",
+                "qualifier": null,
+                "path": [
+                  "GENL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 79,
+                "end": 88
+              },
+              {
+                "field_id": "3720963b9496596c:4",
+                "tag": "22F",
+                "qualifier": "CAEV",
+                "path": [
+                  "GENL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 89,
+                "end": 105
+              },
+              {
+                "field_id": "3720963b9496596c:5",
+                "tag": "22F",
+                "qualifier": "CAMV",
+                "path": [
+                  "GENL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 106,
+                "end": 122
+              },
+              {
+                "field_id": "3720963b9496596c:6",
+                "tag": "16S",
+                "qualifier": null,
+                "path": [
+                  "GENL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 123,
+                "end": 132
+              },
+              {
+                "field_id": "3720963b9496596c:7",
+                "tag": "16R",
+                "qualifier": null,
+                "path": [
+                  "USECU[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 133,
+                "end": 143
+              },
+              {
+                "field_id": "3720963b9496596c:8",
+                "tag": "35B",
+                "qualifier": null,
+                "path": [
+                  "USECU[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 144,
+                "end": 166
+              },
+              {
+                "field_id": "3720963b9496596c:9",
+                "tag": "16S",
+                "qualifier": null,
+                "path": [
+                  "USECU[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 167,
+                "end": 177
+              },
+              {
+                "field_id": "3720963b9496596c:10",
+                "tag": "16R",
+                "qualifier": null,
+                "path": [
+                  "CADETL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 178,
+                "end": 189
+              },
+              {
+                "field_id": "3720963b9496596c:11",
+                "tag": "98A",
+                "qualifier": "MEET",
+                "path": [
+                  "CADETL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 190,
+                "end": 210
+              },
+              {
+                "field_id": "3720963b9496596c:12",
+                "tag": "16S",
+                "qualifier": null,
+                "path": [
+                  "CADETL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 211,
+                "end": 222
+              },
+              {
+                "field_id": "3720963b9496596c:13",
+                "tag": "16R",
+                "qualifier": null,
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 223,
+                "end": 234
+              },
+              {
+                "field_id": "3720963b9496596c:14",
+                "tag": "13A",
+                "qualifier": "CAON",
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 235,
+                "end": 250
+              },
+              {
+                "field_id": "3720963b9496596c:15",
+                "tag": "22F",
+                "qualifier": "CAOP",
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 251,
+                "end": 267
+              },
+              {
+                "field_id": "3720963b9496596c:16",
+                "tag": "17B",
+                "qualifier": "DFLT",
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "route": "UNKNOWN_FIELDS",
+                "consumer": "preserve/review",
+                "start": 268,
+                "end": 281
+              },
+              {
+                "field_id": "3720963b9496596c:17",
+                "tag": "98E",
+                "qualifier": "RDDT",
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 282,
+                "end": 315
+              },
+              {
+                "field_id": "3720963b9496596c:18",
+                "tag": "16S",
+                "qualifier": null,
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 316,
+                "end": 327
+              },
+              {
+                "field_id": "3720963b9496596c:19",
+                "tag": "16R",
+                "qualifier": null,
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 328,
+                "end": 339
+              },
+              {
+                "field_id": "3720963b9496596c:20",
+                "tag": "13A",
+                "qualifier": "CAON",
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 340,
+                "end": 355
+              },
+              {
+                "field_id": "3720963b9496596c:21",
+                "tag": "22F",
+                "qualifier": "CAOP",
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 356,
+                "end": 372
+              },
+              {
+                "field_id": "3720963b9496596c:22",
+                "tag": "17B",
+                "qualifier": "DFLT",
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "route": "UNKNOWN_FIELDS",
+                "consumer": "preserve/review",
+                "start": 373,
+                "end": 386
+              },
+              {
+                "field_id": "3720963b9496596c:23",
+                "tag": "98E",
+                "qualifier": "RDDT",
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 387,
+                "end": 420
+              },
+              {
+                "field_id": "3720963b9496596c:24",
+                "tag": "16S",
+                "qualifier": null,
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 421,
+                "end": 432
+              }
+            ],
+            "subset_structure_valid": true
+          },
+          "issues": [],
+          "function": "NEWM",
+          "previous_reference": null
+        }
+      },
+      {
+        "id": 2,
+        "sender": "STANDARDS_DERIVED_SYNTHETIC_DEMO",
+        "seme": "CHAIN000S1",
+        "corp": "CHAIN000",
+        "event_id": "a8d718c3181dc08b9c6d5f6a5b22283c7a3c4e91ac6d20b5becd8d112179492b",
+        "source_hash": "320eb52d7175aad8e8d0057fafa67f6aa8dcd65f097560b30aeb1f46c4f6fe74",
+        "received_at": "2026-10-16T17:07:28.419905+00:00",
+        "state": "APPLIED",
+        "previous_message_id": null,
+        "payload": {
+          "parsed": {
+            "version": "iso-subset-1",
+            "raw": "{2:I568TESTBIC0XXXXN}{4:\n:16R:GENL\n:20C::SEME//CHAIN000S1\n:20C::CORP//CHAIN000\n:23G:NEWM\n:22F::CAEV//MEET\n:16R:LINK\n:13A::LINK//564\n:20C::RELA//CHAIN000S0\n:16S:LINK\n:16S:GENL\n:16R:ADDINFO\n:70E::ADTX//A power of attorney is required\nto vote at this meeting.\n:16S:ADDINFO\n-}",
+            "source_hash": "320eb52d7175aad8e8d0057fafa67f6aa8dcd65f097560b30aeb1f46c4f6fe74",
+            "message_type": "MT568",
+            "kind": "PARTIAL_ISO15022",
+            "fields": [
+              {
+                "id": "320eb52d7175aad8:0",
+                "tag": "16R",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "GENL",
+                "raw_value": "GENL",
+                "start": 25,
+                "end": 34,
+                "value_start": 30,
+                "path": [
+                  "GENL[1]"
+                ],
+                "occurrence": 0
+              },
+              {
+                "id": "320eb52d7175aad8:1",
+                "tag": "20C",
+                "qualifier": "SEME",
+                "data_source_scheme": "",
+                "value": "CHAIN000S1",
+                "raw_value": ":SEME//CHAIN000S1",
+                "start": 35,
+                "end": 57,
+                "value_start": 47,
+                "path": [
+                  "GENL[1]"
+                ],
+                "occurrence": 1
+              },
+              {
+                "id": "320eb52d7175aad8:2",
+                "tag": "20C",
+                "qualifier": "CORP",
+                "data_source_scheme": "",
+                "value": "CHAIN000",
+                "raw_value": ":CORP//CHAIN000",
+                "start": 58,
+                "end": 78,
+                "value_start": 70,
+                "path": [
+                  "GENL[1]"
+                ],
+                "occurrence": 2
+              },
+              {
+                "id": "320eb52d7175aad8:3",
+                "tag": "23G",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "NEWM",
+                "raw_value": "NEWM",
+                "start": 79,
+                "end": 88,
+                "value_start": 84,
+                "path": [
+                  "GENL[1]"
+                ],
+                "occurrence": 3
+              },
+              {
+                "id": "320eb52d7175aad8:4",
+                "tag": "22F",
+                "qualifier": "CAEV",
+                "data_source_scheme": "",
+                "value": "MEET",
+                "raw_value": ":CAEV//MEET",
+                "start": 89,
+                "end": 105,
+                "value_start": 101,
+                "path": [
+                  "GENL[1]"
+                ],
+                "occurrence": 4
+              },
+              {
+                "id": "320eb52d7175aad8:5",
+                "tag": "16R",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "LINK",
+                "raw_value": "LINK",
+                "start": 106,
+                "end": 115,
+                "value_start": 111,
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "occurrence": 5
+              },
+              {
+                "id": "320eb52d7175aad8:6",
+                "tag": "13A",
+                "qualifier": "LINK",
+                "data_source_scheme": "",
+                "value": "564",
+                "raw_value": ":LINK//564",
+                "start": 116,
+                "end": 131,
+                "value_start": 128,
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "occurrence": 6
+              },
+              {
+                "id": "320eb52d7175aad8:7",
+                "tag": "20C",
+                "qualifier": "RELA",
+                "data_source_scheme": "",
+                "value": "CHAIN000S0",
+                "raw_value": ":RELA//CHAIN000S0",
+                "start": 132,
+                "end": 154,
+                "value_start": 144,
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "occurrence": 7
+              },
+              {
+                "id": "320eb52d7175aad8:8",
+                "tag": "16S",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "LINK",
+                "raw_value": "LINK",
+                "start": 155,
+                "end": 164,
+                "value_start": 160,
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "occurrence": 8
+              },
+              {
+                "id": "320eb52d7175aad8:9",
+                "tag": "16S",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "GENL",
+                "raw_value": "GENL",
+                "start": 165,
+                "end": 174,
+                "value_start": 170,
+                "path": [
+                  "GENL[1]"
+                ],
+                "occurrence": 9
+              },
+              {
+                "id": "320eb52d7175aad8:10",
+                "tag": "16R",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "ADDINFO",
+                "raw_value": "ADDINFO",
+                "start": 175,
+                "end": 187,
+                "value_start": 180,
+                "path": [
+                  "ADDINFO[1]"
+                ],
+                "occurrence": 10
+              },
+              {
+                "id": "320eb52d7175aad8:11",
+                "tag": "70E",
+                "qualifier": "ADTX",
+                "data_source_scheme": "",
+                "value": "A power of attorney is required\nto vote at this meeting.",
+                "raw_value": ":ADTX//A power of attorney is required\nto vote at this meeting.",
+                "start": 188,
+                "end": 256,
+                "value_start": 200,
+                "path": [
+                  "ADDINFO[1]"
+                ],
+                "occurrence": 11
+              },
+              {
+                "id": "320eb52d7175aad8:12",
+                "tag": "16S",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "ADDINFO",
+                "raw_value": "ADDINFO",
+                "start": 257,
+                "end": 269,
+                "value_start": 262,
+                "path": [
+                  "ADDINFO[1]"
+                ],
+                "occurrence": 12
+              }
+            ],
+            "segments": [
+              {
+                "kind": "FIELD",
+                "field_id": "320eb52d7175aad8:0",
+                "start": 25,
+                "end": 35
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "320eb52d7175aad8:1",
+                "start": 35,
+                "end": 58
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "320eb52d7175aad8:2",
+                "start": 58,
+                "end": 79
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "320eb52d7175aad8:3",
+                "start": 79,
+                "end": 89
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "320eb52d7175aad8:4",
+                "start": 89,
+                "end": 106
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "320eb52d7175aad8:5",
+                "start": 106,
+                "end": 116
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "320eb52d7175aad8:6",
+                "start": 116,
+                "end": 132
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "320eb52d7175aad8:7",
+                "start": 132,
+                "end": 155
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "320eb52d7175aad8:8",
+                "start": 155,
+                "end": 165
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "320eb52d7175aad8:9",
+                "start": 165,
+                "end": 175
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "320eb52d7175aad8:10",
+                "start": 175,
+                "end": 188
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "320eb52d7175aad8:11",
+                "start": 188,
+                "end": 257
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "320eb52d7175aad8:12",
+                "start": 257,
+                "end": 270
+              }
+            ],
+            "errors": [],
+            "facts": [
+              {
+                "name": "sequence",
+                "value": "GENL",
+                "field_id": "320eb52d7175aad8:0",
+                "path": [
+                  "GENL[1]"
+                ],
+                "start": 25,
+                "end": 34,
+                "value_start": 30,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "seme",
+                "value": "CHAIN000S1",
+                "field_id": "320eb52d7175aad8:1",
+                "path": [
+                  "GENL[1]"
+                ],
+                "start": 35,
+                "end": 57,
+                "value_start": 47,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "corp",
+                "value": "CHAIN000",
+                "field_id": "320eb52d7175aad8:2",
+                "path": [
+                  "GENL[1]"
+                ],
+                "start": 58,
+                "end": 78,
+                "value_start": 70,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "function",
+                "value": "NEWM",
+                "field_id": "320eb52d7175aad8:3",
+                "path": [
+                  "GENL[1]"
+                ],
+                "start": 79,
+                "end": 88,
+                "value_start": 84,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "caev",
+                "value": "MEET",
+                "field_id": "320eb52d7175aad8:4",
+                "path": [
+                  "GENL[1]"
+                ],
+                "start": 89,
+                "end": 105,
+                "value_start": 101,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "LINK",
+                "field_id": "320eb52d7175aad8:5",
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "start": 106,
+                "end": 115,
+                "value_start": 111,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "rela",
+                "value": "CHAIN000S0",
+                "field_id": "320eb52d7175aad8:7",
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "start": 132,
+                "end": 154,
+                "value_start": 144,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "LINK",
+                "field_id": "320eb52d7175aad8:8",
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "start": 155,
+                "end": 164,
+                "value_start": 160,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "GENL",
+                "field_id": "320eb52d7175aad8:9",
+                "path": [
+                  "GENL[1]"
+                ],
+                "start": 165,
+                "end": 174,
+                "value_start": 170,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "ADDINFO",
+                "field_id": "320eb52d7175aad8:10",
+                "path": [
+                  "ADDINFO[1]"
+                ],
+                "start": 175,
+                "end": 187,
+                "value_start": 180,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "narrative",
+                "value": "A power of attorney is required\nto vote at this meeting.",
+                "field_id": "320eb52d7175aad8:11",
+                "path": [
+                  "ADDINFO[1]"
+                ],
+                "start": 188,
+                "end": 256,
+                "value_start": 200,
+                "route": "NARRATIVE_TEXT"
+              },
+              {
+                "name": "sequence",
+                "value": "ADDINFO",
+                "field_id": "320eb52d7175aad8:12",
+                "path": [
+                  "ADDINFO[1]"
+                ],
+                "start": 257,
+                "end": 269,
+                "value_start": 262,
+                "route": "STRUCTURED_FACTS"
+              }
+            ],
+            "routing": [
+              {
+                "field_id": "320eb52d7175aad8:0",
+                "tag": "16R",
+                "qualifier": null,
+                "path": [
+                  "GENL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 25,
+                "end": 34
+              },
+              {
+                "field_id": "320eb52d7175aad8:1",
+                "tag": "20C",
+                "qualifier": "SEME",
+                "path": [
+                  "GENL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 35,
+                "end": 57
+              },
+              {
+                "field_id": "320eb52d7175aad8:2",
+                "tag": "20C",
+                "qualifier": "CORP",
+                "path": [
+                  "GENL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 58,
+                "end": 78
+              },
+              {
+                "field_id": "320eb52d7175aad8:3",
+                "tag": "23G",
+                "qualifier": null,
+                "path": [
+                  "GENL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 79,
+                "end": 88
+              },
+              {
+                "field_id": "320eb52d7175aad8:4",
+                "tag": "22F",
+                "qualifier": "CAEV",
+                "path": [
+                  "GENL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 89,
+                "end": 105
+              },
+              {
+                "field_id": "320eb52d7175aad8:5",
+                "tag": "16R",
+                "qualifier": null,
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 106,
+                "end": 115
+              },
+              {
+                "field_id": "320eb52d7175aad8:6",
+                "tag": "13A",
+                "qualifier": "LINK",
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "route": "UNKNOWN_FIELDS",
+                "consumer": "preserve/review",
+                "start": 116,
+                "end": 131
+              },
+              {
+                "field_id": "320eb52d7175aad8:7",
+                "tag": "20C",
+                "qualifier": "RELA",
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 132,
+                "end": 154
+              },
+              {
+                "field_id": "320eb52d7175aad8:8",
+                "tag": "16S",
+                "qualifier": null,
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 155,
+                "end": 164
+              },
+              {
+                "field_id": "320eb52d7175aad8:9",
+                "tag": "16S",
+                "qualifier": null,
+                "path": [
+                  "GENL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 165,
+                "end": 174
+              },
+              {
+                "field_id": "320eb52d7175aad8:10",
+                "tag": "16R",
+                "qualifier": null,
+                "path": [
+                  "ADDINFO[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 175,
+                "end": 187
+              },
+              {
+                "field_id": "320eb52d7175aad8:11",
+                "tag": "70E",
+                "qualifier": "ADTX",
+                "path": [
+                  "ADDINFO[1]"
+                ],
+                "route": "NARRATIVE_TEXT",
+                "consumer": "Laya predicates",
+                "start": 188,
+                "end": 256
+              },
+              {
+                "field_id": "320eb52d7175aad8:12",
+                "tag": "16S",
+                "qualifier": null,
+                "path": [
+                  "ADDINFO[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 257,
+                "end": 269
+              }
+            ],
+            "subset_structure_valid": true
+          },
+          "issues": [],
+          "function": "NEWM",
+          "previous_reference": null
+        }
+      },
+      {
+        "id": 3,
+        "sender": "STANDARDS_DERIVED_SYNTHETIC_DEMO",
+        "seme": "CHAIN000S2",
+        "corp": "CHAIN000",
+        "event_id": "a8d718c3181dc08b9c6d5f6a5b22283c7a3c4e91ac6d20b5becd8d112179492b",
+        "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+        "received_at": "2026-10-16T17:07:28.420726+00:00",
+        "state": "APPLIED",
+        "previous_message_id": 1,
+        "payload": {
+          "parsed": {
+            "version": "iso-subset-1",
+            "raw": "{2:I564TESTBIC0XXXXN}{4:\n:16R:GENL\n:20C::SEME//CHAIN000S2\n:20C::CORP//CHAIN000\n:23G:REPL\n:22F::CAEV//MEET\n:22F::CAMV//VOLU\n:16R:LINK\n:13A::LINK//564\n:20C::PREV//CHAIN000S0\n:16S:LINK\n:16S:GENL\n:16R:USECU\n:35B:ISIN GB0002634946\n:16S:USECU\n:16R:CADETL\n:98A::MEET//20261030\n:16S:CADETL\n:16R:CAOPTN\n:13A::CAON//001\n:22F::CAOP//PROX\n:17B::DFLT//N\n:98E::RDDT//20261018170000,000/00\n:16S:CAOPTN\n:16R:CAOPTN\n:13A::CAON//002\n:22F::CAOP//ABST\n:17B::DFLT//N\n:98E::RDDT//20261018170000,000/00\n:16S:CAOPTN\n-}",
+            "source_hash": "60c8eb0d06f1a5d6f9458a26fee7d78c7e23338fca39037dbf52f0f77f183077",
+            "message_type": "MT564",
+            "kind": "PARTIAL_ISO15022",
+            "fields": [
+              {
+                "id": "60c8eb0d06f1a5d6:0",
+                "tag": "16R",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "GENL",
+                "raw_value": "GENL",
+                "start": 25,
+                "end": 34,
+                "value_start": 30,
+                "path": [
+                  "GENL[1]"
+                ],
+                "occurrence": 0
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:1",
+                "tag": "20C",
+                "qualifier": "SEME",
+                "data_source_scheme": "",
+                "value": "CHAIN000S2",
+                "raw_value": ":SEME//CHAIN000S2",
+                "start": 35,
+                "end": 57,
+                "value_start": 47,
+                "path": [
+                  "GENL[1]"
+                ],
+                "occurrence": 1
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:2",
+                "tag": "20C",
+                "qualifier": "CORP",
+                "data_source_scheme": "",
+                "value": "CHAIN000",
+                "raw_value": ":CORP//CHAIN000",
+                "start": 58,
+                "end": 78,
+                "value_start": 70,
+                "path": [
+                  "GENL[1]"
+                ],
+                "occurrence": 2
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:3",
+                "tag": "23G",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "REPL",
+                "raw_value": "REPL",
+                "start": 79,
+                "end": 88,
+                "value_start": 84,
+                "path": [
+                  "GENL[1]"
+                ],
+                "occurrence": 3
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:4",
+                "tag": "22F",
+                "qualifier": "CAEV",
+                "data_source_scheme": "",
+                "value": "MEET",
+                "raw_value": ":CAEV//MEET",
+                "start": 89,
+                "end": 105,
+                "value_start": 101,
+                "path": [
+                  "GENL[1]"
+                ],
+                "occurrence": 4
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:5",
+                "tag": "22F",
+                "qualifier": "CAMV",
+                "data_source_scheme": "",
+                "value": "VOLU",
+                "raw_value": ":CAMV//VOLU",
+                "start": 106,
+                "end": 122,
+                "value_start": 118,
+                "path": [
+                  "GENL[1]"
+                ],
+                "occurrence": 5
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:6",
+                "tag": "16R",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "LINK",
+                "raw_value": "LINK",
+                "start": 123,
+                "end": 132,
+                "value_start": 128,
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "occurrence": 6
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:7",
+                "tag": "13A",
+                "qualifier": "LINK",
+                "data_source_scheme": "",
+                "value": "564",
+                "raw_value": ":LINK//564",
+                "start": 133,
+                "end": 148,
+                "value_start": 145,
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "occurrence": 7
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:8",
+                "tag": "20C",
+                "qualifier": "PREV",
+                "data_source_scheme": "",
+                "value": "CHAIN000S0",
+                "raw_value": ":PREV//CHAIN000S0",
+                "start": 149,
+                "end": 171,
+                "value_start": 161,
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "occurrence": 8
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:9",
+                "tag": "16S",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "LINK",
+                "raw_value": "LINK",
+                "start": 172,
+                "end": 181,
+                "value_start": 177,
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "occurrence": 9
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:10",
+                "tag": "16S",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "GENL",
+                "raw_value": "GENL",
+                "start": 182,
+                "end": 191,
+                "value_start": 187,
+                "path": [
+                  "GENL[1]"
+                ],
+                "occurrence": 10
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:11",
+                "tag": "16R",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "USECU",
+                "raw_value": "USECU",
+                "start": 192,
+                "end": 202,
+                "value_start": 197,
+                "path": [
+                  "USECU[1]"
+                ],
+                "occurrence": 11
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:12",
+                "tag": "35B",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "ISIN GB0002634946",
+                "raw_value": "ISIN GB0002634946",
+                "start": 203,
+                "end": 225,
+                "value_start": 208,
+                "path": [
+                  "USECU[1]"
+                ],
+                "occurrence": 12
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:13",
+                "tag": "16S",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "USECU",
+                "raw_value": "USECU",
+                "start": 226,
+                "end": 236,
+                "value_start": 231,
+                "path": [
+                  "USECU[1]"
+                ],
+                "occurrence": 13
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:14",
+                "tag": "16R",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "CADETL",
+                "raw_value": "CADETL",
+                "start": 237,
+                "end": 248,
+                "value_start": 242,
+                "path": [
+                  "CADETL[1]"
+                ],
+                "occurrence": 14
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:15",
+                "tag": "98A",
+                "qualifier": "MEET",
+                "data_source_scheme": "",
+                "value": "20261030",
+                "raw_value": ":MEET//20261030",
+                "start": 249,
+                "end": 269,
+                "value_start": 261,
+                "path": [
+                  "CADETL[1]"
+                ],
+                "occurrence": 15
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:16",
+                "tag": "16S",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "CADETL",
+                "raw_value": "CADETL",
+                "start": 270,
+                "end": 281,
+                "value_start": 275,
+                "path": [
+                  "CADETL[1]"
+                ],
+                "occurrence": 16
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:17",
+                "tag": "16R",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "CAOPTN",
+                "raw_value": "CAOPTN",
+                "start": 282,
+                "end": 293,
+                "value_start": 287,
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "occurrence": 17
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:18",
+                "tag": "13A",
+                "qualifier": "CAON",
+                "data_source_scheme": "",
+                "value": "001",
+                "raw_value": ":CAON//001",
+                "start": 294,
+                "end": 309,
+                "value_start": 306,
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "occurrence": 18
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:19",
+                "tag": "22F",
+                "qualifier": "CAOP",
+                "data_source_scheme": "",
+                "value": "PROX",
+                "raw_value": ":CAOP//PROX",
+                "start": 310,
+                "end": 326,
+                "value_start": 322,
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "occurrence": 19
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:20",
+                "tag": "17B",
+                "qualifier": "DFLT",
+                "data_source_scheme": "",
+                "value": "N",
+                "raw_value": ":DFLT//N",
+                "start": 327,
+                "end": 340,
+                "value_start": 339,
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "occurrence": 20
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:21",
+                "tag": "98E",
+                "qualifier": "RDDT",
+                "data_source_scheme": "",
+                "value": "20261018170000,000/00",
+                "raw_value": ":RDDT//20261018170000,000/00",
+                "start": 341,
+                "end": 374,
+                "value_start": 353,
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "occurrence": 21
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:22",
+                "tag": "16S",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "CAOPTN",
+                "raw_value": "CAOPTN",
+                "start": 375,
+                "end": 386,
+                "value_start": 380,
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "occurrence": 22
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:23",
+                "tag": "16R",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "CAOPTN",
+                "raw_value": "CAOPTN",
+                "start": 387,
+                "end": 398,
+                "value_start": 392,
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "occurrence": 23
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:24",
+                "tag": "13A",
+                "qualifier": "CAON",
+                "data_source_scheme": "",
+                "value": "002",
+                "raw_value": ":CAON//002",
+                "start": 399,
+                "end": 414,
+                "value_start": 411,
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "occurrence": 24
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:25",
+                "tag": "22F",
+                "qualifier": "CAOP",
+                "data_source_scheme": "",
+                "value": "ABST",
+                "raw_value": ":CAOP//ABST",
+                "start": 415,
+                "end": 431,
+                "value_start": 427,
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "occurrence": 25
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:26",
+                "tag": "17B",
+                "qualifier": "DFLT",
+                "data_source_scheme": "",
+                "value": "N",
+                "raw_value": ":DFLT//N",
+                "start": 432,
+                "end": 445,
+                "value_start": 444,
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "occurrence": 26
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:27",
+                "tag": "98E",
+                "qualifier": "RDDT",
+                "data_source_scheme": "",
+                "value": "20261018170000,000/00",
+                "raw_value": ":RDDT//20261018170000,000/00",
+                "start": 446,
+                "end": 479,
+                "value_start": 458,
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "occurrence": 27
+              },
+              {
+                "id": "60c8eb0d06f1a5d6:28",
+                "tag": "16S",
+                "qualifier": null,
+                "data_source_scheme": null,
+                "value": "CAOPTN",
+                "raw_value": "CAOPTN",
+                "start": 480,
+                "end": 491,
+                "value_start": 485,
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "occurrence": 28
+              }
+            ],
+            "segments": [
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:0",
+                "start": 25,
+                "end": 35
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:1",
+                "start": 35,
+                "end": 58
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:2",
+                "start": 58,
+                "end": 79
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:3",
+                "start": 79,
+                "end": 89
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:4",
+                "start": 89,
+                "end": 106
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:5",
+                "start": 106,
+                "end": 123
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:6",
+                "start": 123,
+                "end": 133
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:7",
+                "start": 133,
+                "end": 149
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:8",
+                "start": 149,
+                "end": 172
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:9",
+                "start": 172,
+                "end": 182
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:10",
+                "start": 182,
+                "end": 192
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:11",
+                "start": 192,
+                "end": 203
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:12",
+                "start": 203,
+                "end": 226
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:13",
+                "start": 226,
+                "end": 237
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:14",
+                "start": 237,
+                "end": 249
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:15",
+                "start": 249,
+                "end": 270
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:16",
+                "start": 270,
+                "end": 282
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:17",
+                "start": 282,
+                "end": 294
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:18",
+                "start": 294,
+                "end": 310
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:19",
+                "start": 310,
+                "end": 327
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:20",
+                "start": 327,
+                "end": 341
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:21",
+                "start": 341,
+                "end": 375
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:22",
+                "start": 375,
+                "end": 387
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:23",
+                "start": 387,
+                "end": 399
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:24",
+                "start": 399,
+                "end": 415
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:25",
+                "start": 415,
+                "end": 432
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:26",
+                "start": 432,
+                "end": 446
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:27",
+                "start": 446,
+                "end": 480
+              },
+              {
+                "kind": "FIELD",
+                "field_id": "60c8eb0d06f1a5d6:28",
+                "start": 480,
+                "end": 492
+              }
+            ],
+            "errors": [],
+            "facts": [
+              {
+                "name": "sequence",
+                "value": "GENL",
+                "field_id": "60c8eb0d06f1a5d6:0",
+                "path": [
+                  "GENL[1]"
+                ],
+                "start": 25,
+                "end": 34,
+                "value_start": 30,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "seme",
+                "value": "CHAIN000S2",
+                "field_id": "60c8eb0d06f1a5d6:1",
+                "path": [
+                  "GENL[1]"
+                ],
+                "start": 35,
+                "end": 57,
+                "value_start": 47,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "corp",
+                "value": "CHAIN000",
+                "field_id": "60c8eb0d06f1a5d6:2",
+                "path": [
+                  "GENL[1]"
+                ],
+                "start": 58,
+                "end": 78,
+                "value_start": 70,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "function",
+                "value": "REPL",
+                "field_id": "60c8eb0d06f1a5d6:3",
+                "path": [
+                  "GENL[1]"
+                ],
+                "start": 79,
+                "end": 88,
+                "value_start": 84,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "caev",
+                "value": "MEET",
+                "field_id": "60c8eb0d06f1a5d6:4",
+                "path": [
+                  "GENL[1]"
+                ],
+                "start": 89,
+                "end": 105,
+                "value_start": 101,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "camv",
+                "value": "VOLU",
+                "field_id": "60c8eb0d06f1a5d6:5",
+                "path": [
+                  "GENL[1]"
+                ],
+                "start": 106,
+                "end": 122,
+                "value_start": 118,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "LINK",
+                "field_id": "60c8eb0d06f1a5d6:6",
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "start": 123,
+                "end": 132,
+                "value_start": 128,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "prev",
+                "value": "CHAIN000S0",
+                "field_id": "60c8eb0d06f1a5d6:8",
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "start": 149,
+                "end": 171,
+                "value_start": 161,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "LINK",
+                "field_id": "60c8eb0d06f1a5d6:9",
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "start": 172,
+                "end": 181,
+                "value_start": 177,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "GENL",
+                "field_id": "60c8eb0d06f1a5d6:10",
+                "path": [
+                  "GENL[1]"
+                ],
+                "start": 182,
+                "end": 191,
+                "value_start": 187,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "USECU",
+                "field_id": "60c8eb0d06f1a5d6:11",
+                "path": [
+                  "USECU[1]"
+                ],
+                "start": 192,
+                "end": 202,
+                "value_start": 197,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "security",
+                "value": {
+                  "isin": "GB0002634946",
+                  "description": ""
+                },
+                "field_id": "60c8eb0d06f1a5d6:12",
+                "path": [
+                  "USECU[1]"
+                ],
+                "start": 203,
+                "end": 225,
+                "value_start": 208,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "USECU",
+                "field_id": "60c8eb0d06f1a5d6:13",
+                "path": [
+                  "USECU[1]"
+                ],
+                "start": 226,
+                "end": 236,
+                "value_start": 231,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "CADETL",
+                "field_id": "60c8eb0d06f1a5d6:14",
+                "path": [
+                  "CADETL[1]"
+                ],
+                "start": 237,
+                "end": 248,
+                "value_start": 242,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "meet",
+                "value": {
+                  "iso": "2026-10-30",
+                  "precision": "DATE",
+                  "offset_known": false
+                },
+                "field_id": "60c8eb0d06f1a5d6:15",
+                "path": [
+                  "CADETL[1]"
+                ],
+                "start": 249,
+                "end": 269,
+                "value_start": 261,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "CADETL",
+                "field_id": "60c8eb0d06f1a5d6:16",
+                "path": [
+                  "CADETL[1]"
+                ],
+                "start": 270,
+                "end": 281,
+                "value_start": 275,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "CAOPTN",
+                "field_id": "60c8eb0d06f1a5d6:17",
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "start": 282,
+                "end": 293,
+                "value_start": 287,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "option_number",
+                "value": "001",
+                "field_id": "60c8eb0d06f1a5d6:18",
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "start": 294,
+                "end": 309,
+                "value_start": 306,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "option_code",
+                "value": "PROX",
+                "field_id": "60c8eb0d06f1a5d6:19",
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "start": 310,
+                "end": 326,
+                "value_start": 322,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "rddt",
+                "value": {
+                  "iso": "2026-10-18T17:00:00+00:00",
+                  "precision": "MILLISECOND",
+                  "offset_known": true
+                },
+                "field_id": "60c8eb0d06f1a5d6:21",
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "start": 341,
+                "end": 374,
+                "value_start": 353,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "CAOPTN",
+                "field_id": "60c8eb0d06f1a5d6:22",
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "start": 375,
+                "end": 386,
+                "value_start": 380,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "CAOPTN",
+                "field_id": "60c8eb0d06f1a5d6:23",
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "start": 387,
+                "end": 398,
+                "value_start": 392,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "option_number",
+                "value": "002",
+                "field_id": "60c8eb0d06f1a5d6:24",
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "start": 399,
+                "end": 414,
+                "value_start": 411,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "option_code",
+                "value": "ABST",
+                "field_id": "60c8eb0d06f1a5d6:25",
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "start": 415,
+                "end": 431,
+                "value_start": 427,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "rddt",
+                "value": {
+                  "iso": "2026-10-18T17:00:00+00:00",
+                  "precision": "MILLISECOND",
+                  "offset_known": true
+                },
+                "field_id": "60c8eb0d06f1a5d6:27",
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "start": 446,
+                "end": 479,
+                "value_start": 458,
+                "route": "STRUCTURED_FACTS"
+              },
+              {
+                "name": "sequence",
+                "value": "CAOPTN",
+                "field_id": "60c8eb0d06f1a5d6:28",
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "start": 480,
+                "end": 491,
+                "value_start": 485,
+                "route": "STRUCTURED_FACTS"
+              }
+            ],
+            "routing": [
+              {
+                "field_id": "60c8eb0d06f1a5d6:0",
+                "tag": "16R",
+                "qualifier": null,
+                "path": [
+                  "GENL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 25,
+                "end": 34
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:1",
+                "tag": "20C",
+                "qualifier": "SEME",
+                "path": [
+                  "GENL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 35,
+                "end": 57
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:2",
+                "tag": "20C",
+                "qualifier": "CORP",
+                "path": [
+                  "GENL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 58,
+                "end": 78
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:3",
+                "tag": "23G",
+                "qualifier": null,
+                "path": [
+                  "GENL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 79,
+                "end": 88
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:4",
+                "tag": "22F",
+                "qualifier": "CAEV",
+                "path": [
+                  "GENL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 89,
+                "end": 105
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:5",
+                "tag": "22F",
+                "qualifier": "CAMV",
+                "path": [
+                  "GENL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 106,
+                "end": 122
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:6",
+                "tag": "16R",
+                "qualifier": null,
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 123,
+                "end": 132
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:7",
+                "tag": "13A",
+                "qualifier": "LINK",
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "route": "UNKNOWN_FIELDS",
+                "consumer": "preserve/review",
+                "start": 133,
+                "end": 148
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:8",
+                "tag": "20C",
+                "qualifier": "PREV",
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 149,
+                "end": 171
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:9",
+                "tag": "16S",
+                "qualifier": null,
+                "path": [
+                  "GENL[1]",
+                  "LINK[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 172,
+                "end": 181
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:10",
+                "tag": "16S",
+                "qualifier": null,
+                "path": [
+                  "GENL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 182,
+                "end": 191
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:11",
+                "tag": "16R",
+                "qualifier": null,
+                "path": [
+                  "USECU[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 192,
+                "end": 202
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:12",
+                "tag": "35B",
+                "qualifier": null,
+                "path": [
+                  "USECU[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 203,
+                "end": 225
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:13",
+                "tag": "16S",
+                "qualifier": null,
+                "path": [
+                  "USECU[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 226,
+                "end": 236
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:14",
+                "tag": "16R",
+                "qualifier": null,
+                "path": [
+                  "CADETL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 237,
+                "end": 248
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:15",
+                "tag": "98A",
+                "qualifier": "MEET",
+                "path": [
+                  "CADETL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 249,
+                "end": 269
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:16",
+                "tag": "16S",
+                "qualifier": null,
+                "path": [
+                  "CADETL[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 270,
+                "end": 281
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:17",
+                "tag": "16R",
+                "qualifier": null,
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 282,
+                "end": 293
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:18",
+                "tag": "13A",
+                "qualifier": "CAON",
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 294,
+                "end": 309
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:19",
+                "tag": "22F",
+                "qualifier": "CAOP",
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 310,
+                "end": 326
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:20",
+                "tag": "17B",
+                "qualifier": "DFLT",
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "route": "UNKNOWN_FIELDS",
+                "consumer": "preserve/review",
+                "start": 327,
+                "end": 340
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:21",
+                "tag": "98E",
+                "qualifier": "RDDT",
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 341,
+                "end": 374
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:22",
+                "tag": "16S",
+                "qualifier": null,
+                "path": [
+                  "CAOPTN[1]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 375,
+                "end": 386
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:23",
+                "tag": "16R",
+                "qualifier": null,
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 387,
+                "end": 398
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:24",
+                "tag": "13A",
+                "qualifier": "CAON",
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 399,
+                "end": 414
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:25",
+                "tag": "22F",
+                "qualifier": "CAOP",
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 415,
+                "end": 431
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:26",
+                "tag": "17B",
+                "qualifier": "DFLT",
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "route": "UNKNOWN_FIELDS",
+                "consumer": "preserve/review",
+                "start": 432,
+                "end": 445
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:27",
+                "tag": "98E",
+                "qualifier": "RDDT",
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 446,
+                "end": 479
+              },
+              {
+                "field_id": "60c8eb0d06f1a5d6:28",
+                "tag": "16S",
+                "qualifier": null,
+                "path": [
+                  "CAOPTN[2]"
+                ],
+                "route": "STRUCTURED_FACTS",
+                "consumer": "deterministic rules",
+                "start": 480,
+                "end": 491
+              }
+            ],
+            "subset_structure_valid": true
+          },
+          "issues": [],
+          "function": "REPL",
+          "previous_reference": "CHAIN000S0"
+        }
+      }
+    ],
+    "manual_review_required": true,
+    "policy": "Subset lifecycle policy; omitted replacement fields retained with original provenance, review required. MT568 supersession is not automatically merged."
+  }
+}

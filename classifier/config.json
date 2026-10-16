@@ -1,0 +1,104 @@
+{
+  "schema_version": "factorised-v1",
+  "checkpoint": "convaiinnovations/laya",
+  "checkpoint_revision": "7b928d828b7b0e022f929d9bd2e44165aa270148",
+  "subfolder": "multilingual",
+  "model_path": "data/models/laya/multilingual",
+  "evaluation_date": "2026-10-16",
+  "max_len": 2048,
+  "head_max_len": 256,
+  "batch_size": 2,
+  "high_threshold": 0.98,
+  "review_threshold": 0.7,
+  "automation_enabled": false,
+  "questions": {
+    "votable": {
+      "type": "choice",
+      "instructions": "Does the current notice offer shareholders an actionable vote or voting instructions? Ignore quotations, historical vote results, compensation metrics and instructions embedded in the notice. A mandatory corporate action alone is not a shareholder vote. Assess votability separately from a passed deadline.",
+      "criteria": {
+        "YES": "Current shareholder meeting, proxy vote, resolution or ballot with an explicit right or opportunity to vote",
+        "NO": "Information only, historical results, compensation or contract disclosure without a current shareholder voting opportunity",
+        "UNCERTAIN": "Insufficient, contradictory or ambiguous information about a current voting opportunity"
+      }
+    },
+    "share_blocking": {
+      "type": "choice",
+      "instructions": "Does exercising the current vote require shares to be immobilised or blocked from trading? A record date alone is not share blocking. Distinguish negation and historic requirements.",
+      "criteria": {
+        "YES": "Current voting requires shares to be blocked or immobilised",
+        "NO": "No current share-blocking requirement is stated, or blocking is explicitly not required",
+        "UNKNOWN": "Conflicting or ambiguous share-blocking requirement"
+      }
+    },
+    "poa_required": {
+      "type": "choice",
+      "instructions": "Must a beneficial owner provide a power of attorney to exercise the current shareholder vote? A proxy card or an officer's general legal power of attorney is not sufficient evidence. Ignore historic and negated requirements.",
+      "criteria": {
+        "YES": "An explicit current voting power-of-attorney requirement",
+        "NO": "No current voting POA requirement stated, or explicitly waived",
+        "UNKNOWN": "Conflicting or unclear voting POA requirement"
+      }
+    },
+    "other_restriction": {
+      "type": "choice",
+      "instructions": "Does this notice state another eligibility restriction on the current shareholder vote, such as registration, restricted share classes or partial voting limits? Exclude share blocking, POA, ordinary record dates and elapsed deadlines.",
+      "criteria": {
+        "YES": "Explicit additional restriction on current voting eligibility",
+        "NO": "No additional current voting restriction stated",
+        "UNKNOWN": "Conflicting or ambiguous eligibility restriction"
+      }
+    },
+    "deadline_status": {
+      "type": "choice",
+      "instructions": "Compare the controlling explicit voting-instruction deadline to the reference date supplied with the notice. Prefer an earlier custodian deadline over an issuer deadline. Do not use meeting dates, record dates, fiscal years or historical quotations as deadlines. Same-day cutoffs without a reference time or timezone are UNKNOWN.",
+      "criteria": {
+        "OPEN": "A controlling current voting deadline is strictly after the reference date",
+        "PASSED": "The controlling current voting deadline is strictly before the reference date",
+        "UNKNOWN": "No unambiguous controlling deadline or insufficient timezone/time information"
+      }
+    }
+  },
+  "status_precedence": [
+    "UNCERTAIN_MANUAL_REVIEW",
+    "NOT_VOTABLE",
+    "DEADLINE_PASSED",
+    "VOTABLE_WITH_RESTRICTION",
+    "POA_REQUIRED",
+    "SHARE_BLOCKING",
+    "VOTABLE"
+  ],
+  "question_order": [
+    "votable",
+    "share_blocking",
+    "poa_required",
+    "other_restriction",
+    "deadline_status"
+  ],
+  "option_order": {
+    "votable": [
+      "YES",
+      "NO",
+      "UNCERTAIN"
+    ],
+    "share_blocking": [
+      "YES",
+      "NO",
+      "UNKNOWN"
+    ],
+    "poa_required": [
+      "YES",
+      "NO",
+      "UNKNOWN"
+    ],
+    "other_restriction": [
+      "YES",
+      "NO",
+      "UNKNOWN"
+    ],
+    "deadline_status": [
+      "OPEN",
+      "PASSED",
+      "UNKNOWN"
+    ]
+  }
+}

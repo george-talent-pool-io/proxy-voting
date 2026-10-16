@@ -1,0 +1,18 @@
+{
+  "id": "derived-0780",
+  "source_type": "STANDARDS_DERIVED_SYNTHETIC",
+  "source_url": "https://www.iso20022.org/15022/uhb/finmt564.htm",
+  "source_organisation": "ISO15022 dictionary; locally authored fixture",
+  "retrieved_at": "2026-10-16",
+  "message_type": "MT564",
+  "notes": "Structurally generated PARTIAL message. Missing full mandatory/account/network requirements; parser subset only. Never semantic training data.",
+  "raw": "{1:F01TESTBIC0XXXX0000000000}{2:I564TESTBIC0XXXXN}{4:\r\n:16R:GENL\r\n:20C::SEME//S0000000780\r\n:20C::CORP//C0000000195\r\n:23G:CANC\r\n:22F::CAEV//BMET\r\n:22F::CAMV//VOLU\r\n:25D::PROC//COMP\r\n:16R:LINK\r\n:20C::PREV//S0000000776\r\n:16S:LINK\r\n:16S:GENL\r\n:16R:USECU\r\n:35B:ISIN GB0002634946\r\nSYNTHETIC PARSER SECURITY\r\n:16S:USECU\r\n:16R:CADETL\r\n:98A::MEET//20261030\r\n:98A::RDTE//20261001\r\n:16S:CADETL\r\n:16R:CAOPTN\r\n:13A::CAON//001\r\n:22F::CAOP//NOAC\r\n:17B::DFLT//N\r\n:98C::RDDT//20261020170000\r\n:16S:CAOPTN\r\n-}",
+  "expected": {
+    "seme": "S0000000780",
+    "corp": "C0000000195",
+    "caev": "BMET",
+    "function": "CANC",
+    "kind": "PARTIAL_ISO15022",
+    "narrative": null
+  }
+}

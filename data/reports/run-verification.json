@@ -1,0 +1,12 @@
+{
+  "checks": "Pydantic score validation, immutable ledger, source hashes, group/source-file/hash split isolation",
+  "exact_grouping_recomputed": true,
+  "failed_rows": 0,
+  "invalid_probabilities": 0,
+  "limitations": "Exact grouping at the configured shingle threshold does not prove absence of all semantic paraphrases.",
+  "output_rows": 7683,
+  "run_id": "0bcd399d-4250-4cb3-9171-acb95f24761e",
+  "source_hash_mismatches": 0,
+  "split_leakage_detected": false,
+  "valid_input_rows": 7683
+}

@@ -1,0 +1,32 @@
+{
+  "application_tests": 1829,
+  "browser_tests": 12,
+  "legacy_model_pytest": {
+    "passed": 68,
+    "failed": 47
+  },
+  "hybrid_challenge": {
+    "base_passed": 26,
+    "fine_passed": 32,
+    "n": 57
+  },
+  "high_confidence_wrong_predicate_cases": {
+    "base": 0,
+    "fine": 10
+  },
+  "corpus_items": 1601,
+  "exact_reference_assertions": 4402,
+  "public_rows": 7683,
+  "public_parse_failures": 0,
+  "automation_enabled": false,
+  "expert_labels_created": 0,
+  "fresh_reproduction_identical_challenge_per_model": 57,
+  "fresh_reproduction_identical_validation_per_model": 100,
+  "limitations": [
+    "No production FIN corpus",
+    "No independent expert-labelled structured event test",
+    "Partial grammar only; full VALID conformance withheld",
+    "Only three predicates have compatible synthetic training labels",
+    "Semantic supersession and wrapped-line context remain imperfect"
+  ]
+}

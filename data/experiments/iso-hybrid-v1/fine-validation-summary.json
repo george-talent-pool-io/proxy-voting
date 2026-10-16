@@ -1,0 +1,93 @@
+{
+  "votable": {
+    "n": 100,
+    "accuracy": 0.84,
+    "macro_f1": 0.4580138036809816,
+    "labels": [
+      "NO",
+      "UNCERTAIN",
+      "UNKNOWN",
+      "YES"
+    ],
+    "confusion_matrix": [
+      [
+        3,
+        0,
+        9,
+        1
+      ],
+      [
+        0,
+        3,
+        0,
+        6
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        78
+      ]
+    ]
+  },
+  "share_blocking": {
+    "n": 100,
+    "accuracy": 0.8,
+    "macro_f1": 0.43922505307855625,
+    "labels": [
+      "NO",
+      "UNKNOWN",
+      "YES"
+    ],
+    "confusion_matrix": [
+      [
+        74,
+        6,
+        0
+      ],
+      [
+        3,
+        6,
+        0
+      ],
+      [
+        0,
+        11,
+        0
+      ]
+    ]
+  },
+  "poa_required": {
+    "n": 100,
+    "accuracy": 0.84,
+    "macro_f1": 0.5368967452300786,
+    "labels": [
+      "NO",
+      "UNKNOWN",
+      "YES"
+    ],
+    "confusion_matrix": [
+      [
+        78,
+        0,
+        0
+      ],
+      [
+        6,
+        3,
+        0
+      ],
+      [
+        0,
+        10,
+        3
+      ]
+    ]
+  }
+}

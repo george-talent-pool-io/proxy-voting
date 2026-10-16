@@ -1,0 +1,18 @@
+{
+  "id": "derived-0625",
+  "source_type": "STANDARDS_DERIVED_SYNTHETIC",
+  "source_url": "https://www.iso20022.org/15022/uhb/finmt568.htm",
+  "source_organisation": "ISO15022 dictionary; locally authored fixture",
+  "retrieved_at": "2026-10-16",
+  "message_type": "MT568",
+  "notes": "Structurally generated PARTIAL message. Missing full mandatory/account/network requirements; parser subset only. Never semantic training data.",
+  "raw": ":16R:GENL\r\n:20C::SEME//S0000000625\r\n:20C::CORP//C0000000156\r\n:23G:NEWM\r\n:22F::CAEV//XMET\r\n:16S:GENL\r\n:16R:ADDINFO\r\n:70E::REGI//Shares will be blocked until the\r\nmeeting.\r\n:16S:ADDINFO\r\n",
+  "expected": {
+    "seme": "S0000000625",
+    "corp": "C0000000156",
+    "caev": "XMET",
+    "function": "NEWM",
+    "kind": "PARTIAL_ISO15022",
+    "narrative": "Shares will be blocked until the\r\nmeeting."
+  }
+}

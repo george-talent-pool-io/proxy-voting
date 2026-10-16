@@ -1,0 +1,17 @@
+{
+  "id": "chain-023-1",
+  "source_type": "STANDARDS_DERIVED_SYNTHETIC",
+  "source_url": "https://www.iso20022.org/15022/uhb/finmt568.htm",
+  "source_organisation": "ISO dictionary; locally authored partial chain",
+  "retrieved_at": "2026-10-16",
+  "message_type": "MT568",
+  "notes": "Generated partial event lifecycle scenario, not production data. Same sender/CORP; distinct SEME; narrative RELA linkage; replacements/cancellation PREV. Excluded from ML training.",
+  "raw": "{2:I568TESTBIC0XXXXN}{4:\n:16R:GENL\n:20C::SEME//CHAIN023S1\n:20C::CORP//CHAIN023\n:23G:NEWM\n:22F::CAEV//MEET\n:16R:LINK\n:13A::LINK//564\n:20C::RELA//CHAIN023S0\n:16S:LINK\n:16S:GENL\n:16R:ADDINFO\n:70E::ADTX//A power of attorney is required\nto vote at this meeting.\n:16S:ADDINFO\n-}",
+  "expected": {
+    "seme": "CHAIN023S1",
+    "corp": "CHAIN023",
+    "function": "NEWM",
+    "caev": "MEET",
+    "kind": "PARTIAL_ISO15022"
+  }
+}

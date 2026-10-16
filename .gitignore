@@ -218,3 +218,20 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local evidence and private imports
+.venv/
+data/raw/*
+!data/raw/.gitkeep
+data/models/
+data/*.sqlite*
+data/normalised/*
+artifacts/*
+!artifacts/.gitkeep
+node_modules/
+test-results/
+playwright-report/
+__pycache__/
+.pytest_cache/
+data/run_sources/
+data/history/

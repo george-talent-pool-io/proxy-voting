@@ -1,0 +1,66 @@
+{
+  "base_passed": 30,
+  "fine_tuned_passed": 37,
+  "n": 57,
+  "fixed": [
+    "agm",
+    "blocked-and-poa",
+    "blocking",
+    "de-vote",
+    "historic-fiscal",
+    "negotiation",
+    "non-voting-bond",
+    "past-deadline",
+    "poa",
+    "poa-waived",
+    "quoted-old",
+    "record-ordinary",
+    "voluntary-tender"
+  ],
+  "regressed": [
+    "ambiguous",
+    "bank-holiday",
+    "issuer-custodian",
+    "meeting-only",
+    "registration",
+    "sell-restricted"
+  ],
+  "remaining": [
+    "blank-like",
+    "contradiction",
+    "eligibility",
+    "false-urgency",
+    "foreign-restriction",
+    "fr-poa",
+    "historic-quote-only",
+    "historical-results",
+    "no-date",
+    "partial",
+    "record-date",
+    "same-day",
+    "today-date",
+    "two-dates"
+  ],
+  "failed_assertions": {
+    "classification": 1,
+    "votable": 6,
+    "deadline_status": 9,
+    "other_restriction": 4,
+    "share_blocking": 1,
+    "poa_required": 1
+  },
+  "high_confidence_errors": [
+    "two-dates",
+    "record-date",
+    "issuer-custodian",
+    "historical-results",
+    "partial",
+    "contradiction",
+    "bank-holiday",
+    "historic-quote-only",
+    "false-urgency",
+    "no-date",
+    "today-date",
+    "foreign-restriction"
+  ]
+}

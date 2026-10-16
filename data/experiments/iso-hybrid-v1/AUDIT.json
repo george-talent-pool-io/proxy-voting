@@ -1,0 +1,3160 @@
+{
+  "recorded_at": "2026-10-16T17:17:26.055964+00:00",
+  "scope": "Post-run artifact index. Completion times come from filesystem metadata, not invented per-row inference timestamps. Immutable JSONL contains exact predictions, native scores, evidence and latency.",
+  "checkpoint_files_and_training_code_hashes_checked": 22,
+  "records": [
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "agm",
+      "source_hash": "f8b1eeb24bb4833c60e37f3842ae221306a9cbb35069a367d74ad757f6c2b92e",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 1,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "blocking",
+      "source_hash": "5c0d204722dcd83b2e6b92ed06340306426038d323d33ea84c517d1c4c9fbf6b",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 2,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "poa",
+      "source_hash": "b645db5325038f4dd56a6ed1b063cb215e0e41b92531fbf3b4948cee88ba5404",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 3,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "informational",
+      "source_hash": "584c821aaa290bcab99e115d3d7dd2d27b0c343a01fa10a6d4ed9dbb5d05b93f",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 4,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "past-deadline",
+      "source_hash": "487649e82db63cb74a3e43cf215dcde6c1db3443ae5f0a9aa796b6db3289064f",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 5,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "ambiguous",
+      "source_hash": "162363d7ea63b6cbd9ce04301cb53dfdc2c42b1aaac9b2fffc103a1e38967733",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 6,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "no-block",
+      "source_hash": "27551b4489adbf947178ce538628c000c93ee32184d38b7061bda20246ac01fa",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 7,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "no-poa",
+      "source_hash": "2ecc6844c411a35fe8b21784a6bbc1cc20242918407a2f339233ff90c5e13a6f",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 8,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "double-neg",
+      "source_hash": "30fd73044ac895463ce4e0aa3eb3f232e2f47b95528e3b03b18f2253fe1bc0fc",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 9,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "blocked-and-poa",
+      "source_hash": "89d8ca4c4a164c14f15fc9352a4bd88c546d329009231991d2ef810d9d1c463e",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 10,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "future-deadline",
+      "source_hash": "cae2fafee986e4ac5a6c4b1682eb752db0c07875c2bdf246f3127e27ab031c19",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 11,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "two-dates",
+      "source_hash": "32fba6dfb6c5b81f987bd6f7ba5dd511dab0f6c6055b278e73bb805d378366d1",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 12,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "record-date",
+      "source_hash": "7ead97e85a9d5b97b13ed94243d248349a316efe7a60a0bd6ecf22bd2b200a7c",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 13,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "issuer-custodian",
+      "source_hash": "01653898daab2ce971e12a738576a33f9bf4c83bf1c90fe72e6eb7459b930a18",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 14,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "quoted-old",
+      "source_hash": "45acc4ff2a376bb6b0dd5afcbfa1ce940b37eacef647557233ac3aad24c0fde6",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 15,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "mandatory-dividend",
+      "source_hash": "87bb6be14525773c9b4aca8f9122cb81d13d0a1f8783ab25f6142c2d5fdcab7e",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 16,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "voluntary-tender",
+      "source_hash": "1d471bc115e244a1dd72357f4a131dd56597be3d9b43fbad2b2319181de5fb44",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 17,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "scheme",
+      "source_hash": "546cc258578cac77636d2e7c9ca08266ad1b83bc7c9d391545b6c60a85af9fef",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 18,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "egm",
+      "source_hash": "39b6ed03d39893a36a41ea67104a1a8a3a8c0962f358f79108bebb90cfd3adc4",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 19,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "proxy-online",
+      "source_hash": "4171eec9dd50fae6085515169b4ad36e4e3d0d48b004a0c83a346661c52ce0ae",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 20,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "historical-results",
+      "source_hash": "3f057e29de84c46f563b5b514ca98cd95a2df885b6d8862b2b34c066cba0b512",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 21,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "comp-table",
+      "source_hash": "c5faa0e40a694d7222789d26f4a02e0e3c25c7fbef26afd7f8f7a167aee60ff3",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 22,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "legal-poa",
+      "source_hash": "bc76daa7c5af2db1aeff7fd9af602aba9048e9f99765af30768637793a29a7bb",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 23,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "eligibility",
+      "source_hash": "9ea2e12917c1f1093a151e2de272c550fdf806ab21fffd50343c45705f7dcbe8",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 24,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "partial",
+      "source_hash": "189eec36c3a5e12c6881871d8a73b36c12c8f15152f9d3730b29c3d1651614da",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 25,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "record-ordinary",
+      "source_hash": "3b8b7a4fab146d22af69cbe9bb21e8fe788d365cf89b8b52a177a8c27335f00a",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 26,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "registration",
+      "source_hash": "114cb91df1c3149a7db594a66945627e3befab3dfa5525f92a4ce47fb9f4c437",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 27,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "contradiction",
+      "source_hash": "a4047f96265d5509b1e390fbea7d55cab7f374e7221013cb5796a2c17d20f04c",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 28,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "same-day",
+      "source_hash": "096576a0075331f5d98fb9d115db97a4f119a89fbaa2b18dea3a67c24a39223f",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 29,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "meeting-only",
+      "source_hash": "e436a11d75e63e184a101c9081655de708095762c1d3637b185f4c9c3606514c",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 30,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "historic-fiscal",
+      "source_hash": "9e25d7f31b164c59ac48385360361e517421047823c86e035ae5779d49e859a2",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 31,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "withdrawn",
+      "source_hash": "7526a550876d13e103baef82e158cffd221ef809cf759f1e39d1852747d71c47",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 32,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "replacement",
+      "source_hash": "e9d858d840f56e60b30cab27959469889322a24dba995cd3c9ed5243a37391fb",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 33,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "non-voting-bond",
+      "source_hash": "ce3e772ac865f03cf8683515e2a45c48b286e9e3888beb1f6399fba94ad55f3a",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 34,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "consent",
+      "source_hash": "fbc41bd0452f4dc923927f7636fa568f3b055575a57154f6cce86888bbca8330",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 35,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "poa-waived",
+      "source_hash": "70953b599f83e9df9f74a2a95265e24e4cb3297e53d0b2895b1342bd87554d76",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 36,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "blocking-waived",
+      "source_hash": "368651b1bdeb4257bfcdbf70e14c059c3a4199cc92b7645ad48cbe002d4e91ef",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 37,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "sell-restricted",
+      "source_hash": "1ddf2752f5f6ea4e4c44bbe29d4ec50766858992e12c61c918807125c717931c",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 38,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "bank-holiday",
+      "source_hash": "1a72ac6666f5a5f7cb3d8b900f9f1a14a8d85dc1918a18548dbf6ab990419f1f",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 39,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "negated-vote",
+      "source_hash": "ab087080b84e4be0103f3160f13b48aafac20419d6660f3eb04552c8b67c748e",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 40,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "historic-quote-only",
+      "source_hash": "3f372356fe552b6ebe57fba926b42b5f3e9ce85e3b526ed13c51f77fbd1ead9c",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 41,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "injection",
+      "source_hash": "ae981579e4620ce3452bf6fce5bd85b87aaae2f12b243a19b601a39ab03d0948",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 42,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "false-urgency",
+      "source_hash": "e26d5821676913f331b8bcdbd703f92cda46f91a5b069e938a23e82b6e85a54d",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 43,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "de-vote",
+      "source_hash": "b0e3ffbdaef225e5d4d1722b7ccd16043ff8d459d196e50531487e9d52ff65f1",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 44,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "de-info",
+      "source_hash": "d679eb592bbd2f4976e340f87dbee65d68b5cc4e124819806381ddcc06c8f4f1",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 45,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "fr-poa",
+      "source_hash": "0fee341baa4c97e18d9f55fb91c7662250e7955720c0fd421569dc8b71a06345",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 46,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "es-vote",
+      "source_hash": "5a110f809f0f28dbf52f1d167dd1670baa52db0963bf541f959b2f2b98bec54c",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 47,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "fr-info",
+      "source_hash": "87825071baddf2022bd521849b169aee9e654899ced448062ceab61cbb05df35",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 48,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "de-no-block",
+      "source_hash": "6e45b8324721a7dc512fe82e233841ec428ac505962e035f58ea98002dad6916",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 49,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "html-vote",
+      "source_hash": "8c497312be3e3034aa48c2b82dc09367523186fd519e77278b7476ea360fc77d",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 50,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "unicode-vote",
+      "source_hash": "e3629f6639a7b3eeefe2fd806aa0d3c40a88c24301ef2572d19f6b1c00431b64",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 51,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "no-date",
+      "source_hash": "8f800ac76bdba03bdd5a7273084f8ed296a17d406867e286557cb19d28c72d2a",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 52,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "today-date",
+      "source_hash": "992c9a547d91eb94d5f22ef169a3ebf09b1d5e4968821e6dce01489b66527529",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 53,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "old-vote-live",
+      "source_hash": "91caed27fc528e4d2ab497497c630f5fe94664ac237973ea72e61b1850e6ba8b",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 54,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "negotiation",
+      "source_hash": "589089ef040d79d5b8d6ffe4832e985992dfa6491ef9c2c14c8bc88ab12e373d",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 55,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "foreign-restriction",
+      "source_hash": "fe0abd47ee5e744875742449a2ecef78eb2750d523e0417d41ea78f3528de514",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 56,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/challenge",
+      "record_id": "blank-like",
+      "source_hash": "9308f1bd852edcec24d1f560447cc71127147f38d337fe219ec5ca024a025eee",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-challenge.jsonl",
+      "row_number": 57,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:20.075606+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0463",
+      "source_hash": "45bc2ca1f10cb41c654c9122c725ef83c239f3241b19752e864d5d5ab10a18fd",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 1,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0043",
+      "source_hash": "f66e09509296ac5e6e6c35b17c1f932d4214782481f93792d4a079f5b110ad85",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 2,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0495",
+      "source_hash": "16ab20510129367a9e2bb364e71ad625598a5ffd679a3e367d1fe0e816fadb56",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 3,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0068",
+      "source_hash": "d559f0b22120394a28e3c93659003200c91012770c24139ac031751adaf28945",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 4,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0181",
+      "source_hash": "b3cdf24147b9d6bbaeea3e404a382b1347f7f9f2255fe83e40739817edf51201",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 5,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0144",
+      "source_hash": "d8243ea65281248f98a13a811ec19177fa10941bbd4606339e599f65c7ce4f56",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 6,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0478",
+      "source_hash": "af9535879a6f125c6ed5da85330c3442f9b76b9ecaae2a3c430599df5c78872f",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 7,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0250",
+      "source_hash": "b0d52065b249fabc56cd18a245bd272115ce1545a0b33c4a6ed60d3f31d43aa8",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 8,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0225",
+      "source_hash": "402fba942003bf808e13da421b019ed86a0da3be6536070f2b0b399168880158",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 9,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0132",
+      "source_hash": "ad06a094455f3caf54c451358cef247f7cdbe9933e9772ee9e998eea2c709e02",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 10,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0446",
+      "source_hash": "1da3b83ac2481b7d7976ceff1f65f3874751c34be52ea7e3f709eed5f8a7a3d0",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 11,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0239",
+      "source_hash": "fc51933fab9d9a49cddc334924dcbd18f0c4ee6296ecacc4765d18275e8be1ad",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 12,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0344",
+      "source_hash": "dc641ced0e70b29ea645bb6196d24198d44869222fdc01701b37136517f5882f",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 13,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0186",
+      "source_hash": "02e183d237cb1ad2e269054f1411247c46e82eb92af0b9ed8c8c564fd264c7cd",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 14,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0194",
+      "source_hash": "13d691a3663575372b756e3fbcd62e58819617d9fae85018b5e5bcd3aecb9241",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 15,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0035",
+      "source_hash": "13d691a3663575372b756e3fbcd62e58819617d9fae85018b5e5bcd3aecb9241",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 16,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0109",
+      "source_hash": "13d691a3663575372b756e3fbcd62e58819617d9fae85018b5e5bcd3aecb9241",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 17,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0411",
+      "source_hash": "8db85e83567279593e9ef5c680e541dddf0cd5b94ab23416165486e6c692a8f8",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 18,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0326",
+      "source_hash": "02e183d237cb1ad2e269054f1411247c46e82eb92af0b9ed8c8c564fd264c7cd",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 19,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0391",
+      "source_hash": "8397bb44ce46204163ac255f37e0b5b9e965ab37728b11103bafd90171cedd6a",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 20,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0384",
+      "source_hash": "13d691a3663575372b756e3fbcd62e58819617d9fae85018b5e5bcd3aecb9241",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 21,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0212",
+      "source_hash": "bb109b196c27bcaf8847badb8f09ebdcb7e7d79724f0877ecec9b2cec5be0af9",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 22,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0294",
+      "source_hash": "bb109b196c27bcaf8847badb8f09ebdcb7e7d79724f0877ecec9b2cec5be0af9",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 23,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0498",
+      "source_hash": "bb109b196c27bcaf8847badb8f09ebdcb7e7d79724f0877ecec9b2cec5be0af9",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 24,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0441",
+      "source_hash": "49bb8d6f92f3a395a7e61d070c7d19ce5daa1efa95e2751a823d695fecafdff1",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 25,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0273",
+      "source_hash": "bb109b196c27bcaf8847badb8f09ebdcb7e7d79724f0877ecec9b2cec5be0af9",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 26,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0087",
+      "source_hash": "bb109b196c27bcaf8847badb8f09ebdcb7e7d79724f0877ecec9b2cec5be0af9",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 27,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0311",
+      "source_hash": "c224c62fd6b211fb755b8e4d086d72190af5f3506dec18e7d97d76a78df272bc",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 28,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0460",
+      "source_hash": "23f4687749ed4005659037052d0157212cc05e96d533157e5ccd7d391ecd8dea",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 29,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0494",
+      "source_hash": "b6bc111498b2f0720477a4bfb11c7b58604e1a4b7b53f068fd48c08750c395d6",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 30,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0124",
+      "source_hash": "616ca14f5c7e923fd93504c2bd13f40c3968145a15b23c071cfd08a948493103",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 31,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0189",
+      "source_hash": "93ddeadc860ed5956fd58b93fda4c606d57a76358ebe776804bda8c89cb646eb",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 32,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0361",
+      "source_hash": "0f154516f81bcb15a9ece4a1f242c2aafe0157c3d21673c216f7babe8e6896cb",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 33,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0108",
+      "source_hash": "23f4687749ed4005659037052d0157212cc05e96d533157e5ccd7d391ecd8dea",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 34,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0141",
+      "source_hash": "4aad6de62cd5af4e3b41703209481e6824f612495da1c4b70d19afc25dff2892",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 35,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0265",
+      "source_hash": "9e7fa29b6d7673fa820f05e9367b18cd74b7b4a0b16d8345aafa99dee9d2d6e3",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 36,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0490",
+      "source_hash": "b07ac873cac32373bc5c33e8ccb7de05d22b4e39e5951994abcc75aeb5b33be1",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 37,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0427",
+      "source_hash": "010e871d77214afffa72fff3d0aa339a82c3722a7e883f1e4bd2ac3d1de89f73",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 38,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0069",
+      "source_hash": "37ec7cd6a91b85779a59beecf5809cb07b2d0de5baab851f48302565e3792dcb",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 39,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0263",
+      "source_hash": "010e871d77214afffa72fff3d0aa339a82c3722a7e883f1e4bd2ac3d1de89f73",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 40,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0491",
+      "source_hash": "8506f36085d7f0dc3f8e248af0ef1854c8edc680015e648c774c233ec36ca822",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 41,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0073",
+      "source_hash": "9a1d5faf1d7faeec20e9252745391e68fe106d74b7ec5fa13dd01ba2345511b8",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 42,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0383",
+      "source_hash": "df19615fad0414f9b09872e568ad64b14d9a93d83805704736f866595521a113",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 43,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0247",
+      "source_hash": "a21db970550a2c90c50131b3d02305edffa3142d06f6cddff1997855effdd1bd",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 44,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0443",
+      "source_hash": "a21db970550a2c90c50131b3d02305edffa3142d06f6cddff1997855effdd1bd",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 45,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0137",
+      "source_hash": "2790fc6cedf8f50d0a60707ee919840599c5a75472c2ac67d04efec9ef45df7d",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 46,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0089",
+      "source_hash": "9a1d5faf1d7faeec20e9252745391e68fe106d74b7ec5fa13dd01ba2345511b8",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 47,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0486",
+      "source_hash": "0bee5b0e044458c4e67210d692b2f385738ee7154707901f1b8091dee03cff7a",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 48,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0377",
+      "source_hash": "a022942d56f16b6aa506083f4c5bb69fcc4bd10ec4c8f170123d1d656fd273bd",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 49,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0094",
+      "source_hash": "35868d29f5a6efdff79fa33c384f0df2d89323fc6888df80f7a5700d152596e6",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 50,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0013",
+      "source_hash": "58679dc692f1a0bd30c6ec54d51dc771ed8408252a80761df1e938a1eebb037e",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 51,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0202",
+      "source_hash": "f841af752ca6dc33b350a66329bcfa298b94491a17d47d1fa5ecc835e1b04326",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 52,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0014",
+      "source_hash": "dc467f85ab02dfeaf9adc4a1c4af5ab174407f831aa0014076e5db36fbd314c5",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 53,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0036",
+      "source_hash": "adae476d41f82353fb47cd303102b339f4173bcef69c52286d71df03cc28fe83",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 54,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0488",
+      "source_hash": "b463bc923fbf4538baeff77e5f980ae2e2965b0f55cd0891aa36aa28f4dfe434",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 55,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0458",
+      "source_hash": "95f45df31e4d56326f3a4e7ec52537ebdcff6a3476ed85b054b1ec9f78a1951e",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 56,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0368",
+      "source_hash": "9182fec0e3d72805eecfd7f787413d17d1c89ef681afe98e50742a07111023bf",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 57,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0455",
+      "source_hash": "d90f6c4bd642f7733eda4b7863d956849aab3d82491c6e543c58dd8d3f6edfb2",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 58,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0152",
+      "source_hash": "de3b96ca7e1eeb17e1f5e600849517a09cf05a279063c57293eb1e776cebb970",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 59,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0270",
+      "source_hash": "81e2cfa43e0b5b7bb93e7016d0ddf1ed20329b241acd8da7ef6d7dce17b882a1",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 60,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0286",
+      "source_hash": "d1466808faf366f35f61b64d16281c037f220895222688fb91039e418a12a03f",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 61,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0029",
+      "source_hash": "bc45665239e8d34e3ce65847b905b5dbc04a4ed82c035139038f2ec6df4462cc",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 62,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0216",
+      "source_hash": "6e23335b38108a961a5fbf9e135d10e524662d342f4ea2117bba3a6a3848521e",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 63,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0272",
+      "source_hash": "370d76cbe5b9fcb334eb9424294bce6aa87d7fbbd57133959080cbc03dad9e5c",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 64,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0290",
+      "source_hash": "1b7da39dde795ba7224a46e3a5228b08de4057cec35d87a20000cc8c29646473",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 65,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0276",
+      "source_hash": "7d4ab2842e801ceb6262fe4d4b33b523e228d319d5ef508619a0e7d878a6e493",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 66,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0396",
+      "source_hash": "3b7b7ed2456eff9c2e4cb6d76cd7b977bd9792a5c86bca1fca7ac90c17960f19",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 67,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0392",
+      "source_hash": "41fae0ca6448ef23ffcd5c9f784c9baec4c21c8dc5c25c621ae075face6b85dc",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 68,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0142",
+      "source_hash": "3b7b7ed2456eff9c2e4cb6d76cd7b977bd9792a5c86bca1fca7ac90c17960f19",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 69,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0419",
+      "source_hash": "43b2754689e64d8653e0f1bfe78db4e220e4299f95d84ab7c9398b204a056795",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 70,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0493",
+      "source_hash": "ea0d000fe6c341708c86b135dc6019d447a5c01cabdd1f0473a275d796a5226e",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 71,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0055",
+      "source_hash": "d138a0ecc981e5edccd0212e9c7206fee357187fb645cf8e2e0891c3e7c24ccd",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 72,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0430",
+      "source_hash": "43b2754689e64d8653e0f1bfe78db4e220e4299f95d84ab7c9398b204a056795",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 73,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0165",
+      "source_hash": "5cc2ad298c8fdc599e8442c02854b0cc48929855bc6df192bddee05c83865bf0",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 74,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0378",
+      "source_hash": "70a5170c0461b7f7b8e7d6fd73a7b8970e0243e62d12fea9e3bb21803009a99a",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 75,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0154",
+      "source_hash": "95072d70550c4b99e5e1b08f422905de24f98139db738524636a312fae2769e2",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 76,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0500",
+      "source_hash": "ccc62773f2b6f24ad29e63ecbce450004e68ec14059b945f65058e837b0215b5",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 77,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0362",
+      "source_hash": "eeca4aac289c6f04cacd4ba19f85d81668a6872d07a5f47a134d344085c4aed7",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 78,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0083",
+      "source_hash": "e0734e7a081e9ceb892e044d0d68bc78cd99b8404e9249f849b135e13eeb49a7",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 79,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0022",
+      "source_hash": "70e983202884b90f839e28c7963e30779eda31fd669a03a63f861a28cfd259d3",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 80,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0208",
+      "source_hash": "3f57845915c4aac4de8cbe3fdfbc376225420aeccf28275cd429577c60c8075a",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 81,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0110",
+      "source_hash": "946f839a2b06738dbe249cd08ee41384579b3d12166cdd7075fbe2a9c1d62aca",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 82,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0062",
+      "source_hash": "2a782d6c675c26392e2ccf084c3fa4b297ae0fb4dc89ea807ecd5123aea6f0bc",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 83,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0205",
+      "source_hash": "2620647b79ab6959491d510c4a00b50ff443bed54accfc4a1d02ec3e3ef5eb5a",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 84,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0353",
+      "source_hash": "1387783a615d8a0970ad8fcf8b3659a4451b209a52427e7f409cfa0113dda882",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 85,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0306",
+      "source_hash": "032e509cc4596ffa478fa1db6a978bf82ca394fec32b645980679a4142750359",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 86,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0200",
+      "source_hash": "a815c4e7d18990f589808212424235a5524ea699d28079b74e868adebc2a0a0f",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 87,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0308",
+      "source_hash": "561219d036ba144889faa65de0c0135201feaac6aca8867fec96f6481173a0dc",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 88,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0117",
+      "source_hash": "8d0501f3c8ad79b6cfca0ed80f16045194ee36928ddcbc81c9cc2bcf0ea8cd3f",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 89,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0088",
+      "source_hash": "8d0501f3c8ad79b6cfca0ed80f16045194ee36928ddcbc81c9cc2bcf0ea8cd3f",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 90,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0215",
+      "source_hash": "e20949fd23ba2c94461945a36818c78870cd9d3ac3de0e2ac5a2da4c8442d080",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 91,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0130",
+      "source_hash": "184f2586b868a119c95ff882c5bd150dea76952bae4f77ff361d18bf9cba7e71",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 92,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0175",
+      "source_hash": "118299b709d5db3edb9f62b142b75726141d19d8f162af4d8789e6cccbce2491",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 93,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0477",
+      "source_hash": "184f2586b868a119c95ff882c5bd150dea76952bae4f77ff361d18bf9cba7e71",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 94,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0489",
+      "source_hash": "dc28524b2ae3a5eed2d99d9078d8b2f9c96ab18671833ff3c05d4b84847322ef",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 95,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0081",
+      "source_hash": "7c14ef8a0b2e1d30e5afc1b8af21d5dd03224abbcbcb1b2266db3b8cdc9286c2",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 96,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0119",
+      "source_hash": "baf83dec05452523ae0a3803c3e876f65d629194825dac0a123ef4fef9d90cf2",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 97,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0113",
+      "source_hash": "f48d72ee231e800093702003d1e7962c1f3141e62866c480b86bd23a88d4f2ba",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 98,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0293",
+      "source_hash": "c30db5b03b9806e82b868523dee9b7b98d3f2773f8d7a9e0237be9a668e488ec",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 99,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/base/validation",
+      "record_id": "SYN-0332",
+      "source_hash": "7289e4748cc5a9026fd4465cfbd8f20a91832673732eded194936d5c9e81e299",
+      "model_version": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/base-validation.jsonl",
+      "row_number": 100,
+      "artifact_completed_at_filesystem": "2026-10-16T17:01:54.635857+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "agm",
+      "source_hash": "f8b1eeb24bb4833c60e37f3842ae221306a9cbb35069a367d74ad757f6c2b92e",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 1,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "blocking",
+      "source_hash": "5c0d204722dcd83b2e6b92ed06340306426038d323d33ea84c517d1c4c9fbf6b",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 2,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "poa",
+      "source_hash": "b645db5325038f4dd56a6ed1b063cb215e0e41b92531fbf3b4948cee88ba5404",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 3,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "informational",
+      "source_hash": "584c821aaa290bcab99e115d3d7dd2d27b0c343a01fa10a6d4ed9dbb5d05b93f",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 4,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "past-deadline",
+      "source_hash": "487649e82db63cb74a3e43cf215dcde6c1db3443ae5f0a9aa796b6db3289064f",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 5,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "ambiguous",
+      "source_hash": "162363d7ea63b6cbd9ce04301cb53dfdc2c42b1aaac9b2fffc103a1e38967733",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 6,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "no-block",
+      "source_hash": "27551b4489adbf947178ce538628c000c93ee32184d38b7061bda20246ac01fa",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 7,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "no-poa",
+      "source_hash": "2ecc6844c411a35fe8b21784a6bbc1cc20242918407a2f339233ff90c5e13a6f",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 8,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "double-neg",
+      "source_hash": "30fd73044ac895463ce4e0aa3eb3f232e2f47b95528e3b03b18f2253fe1bc0fc",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 9,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "blocked-and-poa",
+      "source_hash": "89d8ca4c4a164c14f15fc9352a4bd88c546d329009231991d2ef810d9d1c463e",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 10,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "future-deadline",
+      "source_hash": "cae2fafee986e4ac5a6c4b1682eb752db0c07875c2bdf246f3127e27ab031c19",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 11,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "two-dates",
+      "source_hash": "32fba6dfb6c5b81f987bd6f7ba5dd511dab0f6c6055b278e73bb805d378366d1",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 12,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "record-date",
+      "source_hash": "7ead97e85a9d5b97b13ed94243d248349a316efe7a60a0bd6ecf22bd2b200a7c",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 13,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "issuer-custodian",
+      "source_hash": "01653898daab2ce971e12a738576a33f9bf4c83bf1c90fe72e6eb7459b930a18",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 14,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "quoted-old",
+      "source_hash": "45acc4ff2a376bb6b0dd5afcbfa1ce940b37eacef647557233ac3aad24c0fde6",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 15,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "mandatory-dividend",
+      "source_hash": "87bb6be14525773c9b4aca8f9122cb81d13d0a1f8783ab25f6142c2d5fdcab7e",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 16,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "voluntary-tender",
+      "source_hash": "1d471bc115e244a1dd72357f4a131dd56597be3d9b43fbad2b2319181de5fb44",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 17,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "scheme",
+      "source_hash": "546cc258578cac77636d2e7c9ca08266ad1b83bc7c9d391545b6c60a85af9fef",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 18,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "egm",
+      "source_hash": "39b6ed03d39893a36a41ea67104a1a8a3a8c0962f358f79108bebb90cfd3adc4",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 19,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "proxy-online",
+      "source_hash": "4171eec9dd50fae6085515169b4ad36e4e3d0d48b004a0c83a346661c52ce0ae",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 20,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "historical-results",
+      "source_hash": "3f057e29de84c46f563b5b514ca98cd95a2df885b6d8862b2b34c066cba0b512",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 21,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "comp-table",
+      "source_hash": "c5faa0e40a694d7222789d26f4a02e0e3c25c7fbef26afd7f8f7a167aee60ff3",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 22,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "legal-poa",
+      "source_hash": "bc76daa7c5af2db1aeff7fd9af602aba9048e9f99765af30768637793a29a7bb",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 23,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "eligibility",
+      "source_hash": "9ea2e12917c1f1093a151e2de272c550fdf806ab21fffd50343c45705f7dcbe8",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 24,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "partial",
+      "source_hash": "189eec36c3a5e12c6881871d8a73b36c12c8f15152f9d3730b29c3d1651614da",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 25,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "record-ordinary",
+      "source_hash": "3b8b7a4fab146d22af69cbe9bb21e8fe788d365cf89b8b52a177a8c27335f00a",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 26,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "registration",
+      "source_hash": "114cb91df1c3149a7db594a66945627e3befab3dfa5525f92a4ce47fb9f4c437",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 27,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "contradiction",
+      "source_hash": "a4047f96265d5509b1e390fbea7d55cab7f374e7221013cb5796a2c17d20f04c",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 28,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "same-day",
+      "source_hash": "096576a0075331f5d98fb9d115db97a4f119a89fbaa2b18dea3a67c24a39223f",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 29,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "meeting-only",
+      "source_hash": "e436a11d75e63e184a101c9081655de708095762c1d3637b185f4c9c3606514c",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 30,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "historic-fiscal",
+      "source_hash": "9e25d7f31b164c59ac48385360361e517421047823c86e035ae5779d49e859a2",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 31,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "withdrawn",
+      "source_hash": "7526a550876d13e103baef82e158cffd221ef809cf759f1e39d1852747d71c47",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 32,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "replacement",
+      "source_hash": "e9d858d840f56e60b30cab27959469889322a24dba995cd3c9ed5243a37391fb",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 33,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "non-voting-bond",
+      "source_hash": "ce3e772ac865f03cf8683515e2a45c48b286e9e3888beb1f6399fba94ad55f3a",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 34,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "consent",
+      "source_hash": "fbc41bd0452f4dc923927f7636fa568f3b055575a57154f6cce86888bbca8330",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 35,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "poa-waived",
+      "source_hash": "70953b599f83e9df9f74a2a95265e24e4cb3297e53d0b2895b1342bd87554d76",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 36,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "blocking-waived",
+      "source_hash": "368651b1bdeb4257bfcdbf70e14c059c3a4199cc92b7645ad48cbe002d4e91ef",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 37,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "sell-restricted",
+      "source_hash": "1ddf2752f5f6ea4e4c44bbe29d4ec50766858992e12c61c918807125c717931c",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 38,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "bank-holiday",
+      "source_hash": "1a72ac6666f5a5f7cb3d8b900f9f1a14a8d85dc1918a18548dbf6ab990419f1f",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 39,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "negated-vote",
+      "source_hash": "ab087080b84e4be0103f3160f13b48aafac20419d6660f3eb04552c8b67c748e",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 40,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "historic-quote-only",
+      "source_hash": "3f372356fe552b6ebe57fba926b42b5f3e9ce85e3b526ed13c51f77fbd1ead9c",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 41,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "injection",
+      "source_hash": "ae981579e4620ce3452bf6fce5bd85b87aaae2f12b243a19b601a39ab03d0948",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 42,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "false-urgency",
+      "source_hash": "e26d5821676913f331b8bcdbd703f92cda46f91a5b069e938a23e82b6e85a54d",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 43,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "de-vote",
+      "source_hash": "b0e3ffbdaef225e5d4d1722b7ccd16043ff8d459d196e50531487e9d52ff65f1",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 44,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "de-info",
+      "source_hash": "d679eb592bbd2f4976e340f87dbee65d68b5cc4e124819806381ddcc06c8f4f1",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 45,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "fr-poa",
+      "source_hash": "0fee341baa4c97e18d9f55fb91c7662250e7955720c0fd421569dc8b71a06345",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 46,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "es-vote",
+      "source_hash": "5a110f809f0f28dbf52f1d167dd1670baa52db0963bf541f959b2f2b98bec54c",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 47,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "fr-info",
+      "source_hash": "87825071baddf2022bd521849b169aee9e654899ced448062ceab61cbb05df35",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 48,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "de-no-block",
+      "source_hash": "6e45b8324721a7dc512fe82e233841ec428ac505962e035f58ea98002dad6916",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 49,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "html-vote",
+      "source_hash": "8c497312be3e3034aa48c2b82dc09367523186fd519e77278b7476ea360fc77d",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 50,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "unicode-vote",
+      "source_hash": "e3629f6639a7b3eeefe2fd806aa0d3c40a88c24301ef2572d19f6b1c00431b64",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 51,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "no-date",
+      "source_hash": "8f800ac76bdba03bdd5a7273084f8ed296a17d406867e286557cb19d28c72d2a",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 52,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "today-date",
+      "source_hash": "992c9a547d91eb94d5f22ef169a3ebf09b1d5e4968821e6dce01489b66527529",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 53,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "old-vote-live",
+      "source_hash": "91caed27fc528e4d2ab497497c630f5fe94664ac237973ea72e61b1850e6ba8b",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 54,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "negotiation",
+      "source_hash": "589089ef040d79d5b8d6ffe4832e985992dfa6491ef9c2c14c8bc88ab12e373d",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 55,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "foreign-restriction",
+      "source_hash": "fe0abd47ee5e744875742449a2ecef78eb2750d523e0417d41ea78f3528de514",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 56,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/challenge",
+      "record_id": "blank-like",
+      "source_hash": "9308f1bd852edcec24d1f560447cc71127147f38d337fe219ec5ca024a025eee",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-challenge.jsonl",
+      "row_number": 57,
+      "artifact_completed_at_filesystem": "2026-10-16T17:06:54.068893+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0463",
+      "source_hash": "45bc2ca1f10cb41c654c9122c725ef83c239f3241b19752e864d5d5ab10a18fd",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 1,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0043",
+      "source_hash": "f66e09509296ac5e6e6c35b17c1f932d4214782481f93792d4a079f5b110ad85",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 2,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0495",
+      "source_hash": "16ab20510129367a9e2bb364e71ad625598a5ffd679a3e367d1fe0e816fadb56",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 3,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0068",
+      "source_hash": "d559f0b22120394a28e3c93659003200c91012770c24139ac031751adaf28945",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 4,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0181",
+      "source_hash": "b3cdf24147b9d6bbaeea3e404a382b1347f7f9f2255fe83e40739817edf51201",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 5,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0144",
+      "source_hash": "d8243ea65281248f98a13a811ec19177fa10941bbd4606339e599f65c7ce4f56",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 6,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0478",
+      "source_hash": "af9535879a6f125c6ed5da85330c3442f9b76b9ecaae2a3c430599df5c78872f",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 7,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0250",
+      "source_hash": "b0d52065b249fabc56cd18a245bd272115ce1545a0b33c4a6ed60d3f31d43aa8",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 8,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0225",
+      "source_hash": "402fba942003bf808e13da421b019ed86a0da3be6536070f2b0b399168880158",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 9,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0132",
+      "source_hash": "ad06a094455f3caf54c451358cef247f7cdbe9933e9772ee9e998eea2c709e02",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 10,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0446",
+      "source_hash": "1da3b83ac2481b7d7976ceff1f65f3874751c34be52ea7e3f709eed5f8a7a3d0",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 11,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0239",
+      "source_hash": "fc51933fab9d9a49cddc334924dcbd18f0c4ee6296ecacc4765d18275e8be1ad",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 12,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0344",
+      "source_hash": "dc641ced0e70b29ea645bb6196d24198d44869222fdc01701b37136517f5882f",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 13,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0186",
+      "source_hash": "02e183d237cb1ad2e269054f1411247c46e82eb92af0b9ed8c8c564fd264c7cd",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 14,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0194",
+      "source_hash": "13d691a3663575372b756e3fbcd62e58819617d9fae85018b5e5bcd3aecb9241",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 15,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0035",
+      "source_hash": "13d691a3663575372b756e3fbcd62e58819617d9fae85018b5e5bcd3aecb9241",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 16,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0109",
+      "source_hash": "13d691a3663575372b756e3fbcd62e58819617d9fae85018b5e5bcd3aecb9241",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 17,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0411",
+      "source_hash": "8db85e83567279593e9ef5c680e541dddf0cd5b94ab23416165486e6c692a8f8",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 18,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0326",
+      "source_hash": "02e183d237cb1ad2e269054f1411247c46e82eb92af0b9ed8c8c564fd264c7cd",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 19,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0391",
+      "source_hash": "8397bb44ce46204163ac255f37e0b5b9e965ab37728b11103bafd90171cedd6a",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 20,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0384",
+      "source_hash": "13d691a3663575372b756e3fbcd62e58819617d9fae85018b5e5bcd3aecb9241",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 21,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0212",
+      "source_hash": "bb109b196c27bcaf8847badb8f09ebdcb7e7d79724f0877ecec9b2cec5be0af9",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 22,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0294",
+      "source_hash": "bb109b196c27bcaf8847badb8f09ebdcb7e7d79724f0877ecec9b2cec5be0af9",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 23,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0498",
+      "source_hash": "bb109b196c27bcaf8847badb8f09ebdcb7e7d79724f0877ecec9b2cec5be0af9",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 24,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0441",
+      "source_hash": "49bb8d6f92f3a395a7e61d070c7d19ce5daa1efa95e2751a823d695fecafdff1",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 25,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0273",
+      "source_hash": "bb109b196c27bcaf8847badb8f09ebdcb7e7d79724f0877ecec9b2cec5be0af9",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 26,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0087",
+      "source_hash": "bb109b196c27bcaf8847badb8f09ebdcb7e7d79724f0877ecec9b2cec5be0af9",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 27,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0311",
+      "source_hash": "c224c62fd6b211fb755b8e4d086d72190af5f3506dec18e7d97d76a78df272bc",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 28,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0460",
+      "source_hash": "23f4687749ed4005659037052d0157212cc05e96d533157e5ccd7d391ecd8dea",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 29,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0494",
+      "source_hash": "b6bc111498b2f0720477a4bfb11c7b58604e1a4b7b53f068fd48c08750c395d6",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 30,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0124",
+      "source_hash": "616ca14f5c7e923fd93504c2bd13f40c3968145a15b23c071cfd08a948493103",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 31,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0189",
+      "source_hash": "93ddeadc860ed5956fd58b93fda4c606d57a76358ebe776804bda8c89cb646eb",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 32,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0361",
+      "source_hash": "0f154516f81bcb15a9ece4a1f242c2aafe0157c3d21673c216f7babe8e6896cb",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 33,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0108",
+      "source_hash": "23f4687749ed4005659037052d0157212cc05e96d533157e5ccd7d391ecd8dea",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 34,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0141",
+      "source_hash": "4aad6de62cd5af4e3b41703209481e6824f612495da1c4b70d19afc25dff2892",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 35,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0265",
+      "source_hash": "9e7fa29b6d7673fa820f05e9367b18cd74b7b4a0b16d8345aafa99dee9d2d6e3",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 36,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0490",
+      "source_hash": "b07ac873cac32373bc5c33e8ccb7de05d22b4e39e5951994abcc75aeb5b33be1",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 37,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0427",
+      "source_hash": "010e871d77214afffa72fff3d0aa339a82c3722a7e883f1e4bd2ac3d1de89f73",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 38,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0069",
+      "source_hash": "37ec7cd6a91b85779a59beecf5809cb07b2d0de5baab851f48302565e3792dcb",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 39,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0263",
+      "source_hash": "010e871d77214afffa72fff3d0aa339a82c3722a7e883f1e4bd2ac3d1de89f73",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 40,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0491",
+      "source_hash": "8506f36085d7f0dc3f8e248af0ef1854c8edc680015e648c774c233ec36ca822",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 41,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0073",
+      "source_hash": "9a1d5faf1d7faeec20e9252745391e68fe106d74b7ec5fa13dd01ba2345511b8",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 42,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0383",
+      "source_hash": "df19615fad0414f9b09872e568ad64b14d9a93d83805704736f866595521a113",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 43,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0247",
+      "source_hash": "a21db970550a2c90c50131b3d02305edffa3142d06f6cddff1997855effdd1bd",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 44,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0443",
+      "source_hash": "a21db970550a2c90c50131b3d02305edffa3142d06f6cddff1997855effdd1bd",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 45,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0137",
+      "source_hash": "2790fc6cedf8f50d0a60707ee919840599c5a75472c2ac67d04efec9ef45df7d",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 46,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0089",
+      "source_hash": "9a1d5faf1d7faeec20e9252745391e68fe106d74b7ec5fa13dd01ba2345511b8",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 47,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0486",
+      "source_hash": "0bee5b0e044458c4e67210d692b2f385738ee7154707901f1b8091dee03cff7a",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 48,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0377",
+      "source_hash": "a022942d56f16b6aa506083f4c5bb69fcc4bd10ec4c8f170123d1d656fd273bd",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 49,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0094",
+      "source_hash": "35868d29f5a6efdff79fa33c384f0df2d89323fc6888df80f7a5700d152596e6",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 50,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0013",
+      "source_hash": "58679dc692f1a0bd30c6ec54d51dc771ed8408252a80761df1e938a1eebb037e",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 51,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0202",
+      "source_hash": "f841af752ca6dc33b350a66329bcfa298b94491a17d47d1fa5ecc835e1b04326",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 52,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0014",
+      "source_hash": "dc467f85ab02dfeaf9adc4a1c4af5ab174407f831aa0014076e5db36fbd314c5",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 53,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0036",
+      "source_hash": "adae476d41f82353fb47cd303102b339f4173bcef69c52286d71df03cc28fe83",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 54,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0488",
+      "source_hash": "b463bc923fbf4538baeff77e5f980ae2e2965b0f55cd0891aa36aa28f4dfe434",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 55,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0458",
+      "source_hash": "95f45df31e4d56326f3a4e7ec52537ebdcff6a3476ed85b054b1ec9f78a1951e",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 56,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0368",
+      "source_hash": "9182fec0e3d72805eecfd7f787413d17d1c89ef681afe98e50742a07111023bf",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 57,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0455",
+      "source_hash": "d90f6c4bd642f7733eda4b7863d956849aab3d82491c6e543c58dd8d3f6edfb2",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 58,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0152",
+      "source_hash": "de3b96ca7e1eeb17e1f5e600849517a09cf05a279063c57293eb1e776cebb970",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 59,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0270",
+      "source_hash": "81e2cfa43e0b5b7bb93e7016d0ddf1ed20329b241acd8da7ef6d7dce17b882a1",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 60,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0286",
+      "source_hash": "d1466808faf366f35f61b64d16281c037f220895222688fb91039e418a12a03f",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 61,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0029",
+      "source_hash": "bc45665239e8d34e3ce65847b905b5dbc04a4ed82c035139038f2ec6df4462cc",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 62,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0216",
+      "source_hash": "6e23335b38108a961a5fbf9e135d10e524662d342f4ea2117bba3a6a3848521e",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 63,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0272",
+      "source_hash": "370d76cbe5b9fcb334eb9424294bce6aa87d7fbbd57133959080cbc03dad9e5c",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 64,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0290",
+      "source_hash": "1b7da39dde795ba7224a46e3a5228b08de4057cec35d87a20000cc8c29646473",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 65,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0276",
+      "source_hash": "7d4ab2842e801ceb6262fe4d4b33b523e228d319d5ef508619a0e7d878a6e493",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 66,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0396",
+      "source_hash": "3b7b7ed2456eff9c2e4cb6d76cd7b977bd9792a5c86bca1fca7ac90c17960f19",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 67,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0392",
+      "source_hash": "41fae0ca6448ef23ffcd5c9f784c9baec4c21c8dc5c25c621ae075face6b85dc",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 68,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0142",
+      "source_hash": "3b7b7ed2456eff9c2e4cb6d76cd7b977bd9792a5c86bca1fca7ac90c17960f19",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 69,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0419",
+      "source_hash": "43b2754689e64d8653e0f1bfe78db4e220e4299f95d84ab7c9398b204a056795",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 70,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0493",
+      "source_hash": "ea0d000fe6c341708c86b135dc6019d447a5c01cabdd1f0473a275d796a5226e",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 71,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0055",
+      "source_hash": "d138a0ecc981e5edccd0212e9c7206fee357187fb645cf8e2e0891c3e7c24ccd",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 72,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0430",
+      "source_hash": "43b2754689e64d8653e0f1bfe78db4e220e4299f95d84ab7c9398b204a056795",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 73,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0165",
+      "source_hash": "5cc2ad298c8fdc599e8442c02854b0cc48929855bc6df192bddee05c83865bf0",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 74,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0378",
+      "source_hash": "70a5170c0461b7f7b8e7d6fd73a7b8970e0243e62d12fea9e3bb21803009a99a",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 75,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0154",
+      "source_hash": "95072d70550c4b99e5e1b08f422905de24f98139db738524636a312fae2769e2",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 76,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0500",
+      "source_hash": "ccc62773f2b6f24ad29e63ecbce450004e68ec14059b945f65058e837b0215b5",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 77,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0362",
+      "source_hash": "eeca4aac289c6f04cacd4ba19f85d81668a6872d07a5f47a134d344085c4aed7",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 78,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0083",
+      "source_hash": "e0734e7a081e9ceb892e044d0d68bc78cd99b8404e9249f849b135e13eeb49a7",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 79,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0022",
+      "source_hash": "70e983202884b90f839e28c7963e30779eda31fd669a03a63f861a28cfd259d3",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 80,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0208",
+      "source_hash": "3f57845915c4aac4de8cbe3fdfbc376225420aeccf28275cd429577c60c8075a",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 81,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0110",
+      "source_hash": "946f839a2b06738dbe249cd08ee41384579b3d12166cdd7075fbe2a9c1d62aca",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 82,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0062",
+      "source_hash": "2a782d6c675c26392e2ccf084c3fa4b297ae0fb4dc89ea807ecd5123aea6f0bc",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 83,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0205",
+      "source_hash": "2620647b79ab6959491d510c4a00b50ff443bed54accfc4a1d02ec3e3ef5eb5a",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 84,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0353",
+      "source_hash": "1387783a615d8a0970ad8fcf8b3659a4451b209a52427e7f409cfa0113dda882",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 85,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0306",
+      "source_hash": "032e509cc4596ffa478fa1db6a978bf82ca394fec32b645980679a4142750359",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 86,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0200",
+      "source_hash": "a815c4e7d18990f589808212424235a5524ea699d28079b74e868adebc2a0a0f",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 87,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0308",
+      "source_hash": "561219d036ba144889faa65de0c0135201feaac6aca8867fec96f6481173a0dc",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 88,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0117",
+      "source_hash": "8d0501f3c8ad79b6cfca0ed80f16045194ee36928ddcbc81c9cc2bcf0ea8cd3f",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 89,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0088",
+      "source_hash": "8d0501f3c8ad79b6cfca0ed80f16045194ee36928ddcbc81c9cc2bcf0ea8cd3f",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 90,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0215",
+      "source_hash": "e20949fd23ba2c94461945a36818c78870cd9d3ac3de0e2ac5a2da4c8442d080",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 91,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0130",
+      "source_hash": "184f2586b868a119c95ff882c5bd150dea76952bae4f77ff361d18bf9cba7e71",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 92,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0175",
+      "source_hash": "118299b709d5db3edb9f62b142b75726141d19d8f162af4d8789e6cccbce2491",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 93,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0477",
+      "source_hash": "184f2586b868a119c95ff882c5bd150dea76952bae4f77ff361d18bf9cba7e71",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 94,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0489",
+      "source_hash": "dc28524b2ae3a5eed2d99d9078d8b2f9c96ab18671833ff3c05d4b84847322ef",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 95,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0081",
+      "source_hash": "7c14ef8a0b2e1d30e5afc1b8af21d5dd03224abbcbcb1b2266db3b8cdc9286c2",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 96,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0119",
+      "source_hash": "baf83dec05452523ae0a3803c3e876f65d629194825dac0a123ef4fef9d90cf2",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 97,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0113",
+      "source_hash": "f48d72ee231e800093702003d1e7962c1f3141e62866c480b86bd23a88d4f2ba",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 98,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0293",
+      "source_hash": "c30db5b03b9806e82b868523dee9b7b98d3f2773f8d7a9e0237be9a668e488ec",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 99,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    },
+    {
+      "run_id": "iso-hybrid-v1/fine/validation",
+      "record_id": "SYN-0332",
+      "source_hash": "7289e4748cc5a9026fd4465cfbd8f20a91832673732eded194936d5c9e81e299",
+      "model_version": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b",
+      "configuration_version": "d19ff5c356e97e14bf28249cfac58fbb728f64cbb809ceecc1830e9c6955a1da",
+      "prediction_artifact": "data/experiments/iso-hybrid-v1/fine-validation.jsonl",
+      "row_number": 100,
+      "artifact_completed_at_filesystem": "2026-10-16T17:07:09.426664+00:00"
+    }
+  ],
+  "prediction_files": {
+    "data/experiments/iso-hybrid-v1/base-validation.jsonl": "cdc36700c377ecaa90d534ad2b9e81174d7b9c2c406c9fd0ef3f587255a9e579",
+    "data/experiments/iso-hybrid-v1/fine-validation.jsonl": "746bdcb29ef58e7a84c620e462064e761610b2aedecd4210cfb79158b9ef6121",
+    "data/experiments/iso-hybrid-v1/base-challenge.jsonl": "6c4035f1ab59f30086ccfcae73aca1afc2027c051b57291f6927f01056ec8fe6",
+    "data/experiments/iso-hybrid-v1/public-routing-audit.jsonl": "daa671bcff0eb7b6cacab2b8d2ba850b454a60139e154f48ec42db587d98f58d",
+    "data/experiments/iso-hybrid-v1/fine-challenge.jsonl": "2a61c6e320047f5e3741e1fa2a81219180fc1b6f8990383ce32bb83dd3616e8e",
+    "data/experiments/iso-hybrid-v1/public-parser-results.jsonl": "116ee1417f8eb7b49a373f049897ca891ec372c44b55285f66b39f358c5c6094"
+  },
+  "service_files": {
+    "hybrid/service.py": "8455443e50f378ec957ae818d11a6ffc64ae74841e5688cd5071a6077c71b525",
+    "apps/api/hybrid_views.py": "c695ceff7a084866bb743adb0fac2ea3e8dcad2c8c1028b9d39586eb63578a3c"
+  },
+  "automation_enabled": false
+}

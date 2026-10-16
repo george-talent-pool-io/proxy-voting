@@ -1,0 +1,488 @@
+[
+  {
+    "organisation": "ISO15022 public dictionary",
+    "document_title": "MT564 scope and format",
+    "url": "https://www.iso20022.org/15022/uhb/finmt564.htm",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "MT564"
+    ],
+    "fields_qualifiers": [
+      "16R/16S",
+      "20C SEME/CORP/PREV",
+      "23G",
+      "22F CAEV"
+    ],
+    "learned": "Notification structure and repeated options; preliminary, replacement and cancellation messages are distinct.",
+    "actual_message_example": false,
+    "incorporated_into_tests": true,
+    "version": "Public version retrieved 2026-10-16; release not certified",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "ISO15022 public dictionary",
+    "document_title": "MT565 scope and format",
+    "url": "https://www.iso20022.org/15022/uhb/finmt565.htm",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "MT565"
+    ],
+    "fields_qualifiers": [
+      "16R/16S",
+      "20C SEME/CORP/PREV",
+      "23G",
+      "22F CAEV"
+    ],
+    "learned": "Instruction and instruction-cancellation request, not proof of executed vote. CAINST differs from notification CAOPTN.",
+    "actual_message_example": false,
+    "incorporated_into_tests": true,
+    "version": "Public version retrieved 2026-10-16; release not certified",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "ISO15022 public dictionary",
+    "document_title": "MT567 scope and format",
+    "url": "https://www.iso20022.org/15022/uhb/finmt567.htm",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "MT567"
+    ],
+    "fields_qualifiers": [
+      "16R/16S",
+      "20C SEME/CORP/PREV",
+      "23G",
+      "22F CAEV"
+    ],
+    "learned": "Instruction/event/cancellation status advice; acknowledgement does not establish vote execution.",
+    "actual_message_example": false,
+    "incorporated_into_tests": true,
+    "version": "Public version retrieved 2026-10-16; release not certified",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "ISO15022 public dictionary",
+    "document_title": "MT568 scope and format",
+    "url": "https://www.iso20022.org/15022/uhb/finmt568.htm",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "MT568"
+    ],
+    "fields_qualifiers": [
+      "16R/16S",
+      "20C SEME/CORP/PREV",
+      "23G",
+      "22F CAEV"
+    ],
+    "learned": "Supplementary narrative and linked meeting agenda; not a substitute for structured messages.",
+    "actual_message_example": false,
+    "incorporated_into_tests": true,
+    "version": "Public version retrieved 2026-10-16; release not certified",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "ISO15022 public dictionary",
+    "document_title": "MT566 scope and format",
+    "url": "https://www.iso20022.org/15022/uhb/finmt566.htm",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "MT566"
+    ],
+    "fields_qualifiers": [
+      "16R/16S",
+      "20C SEME/CORP/PREV",
+      "23G",
+      "22F CAEV"
+    ],
+    "learned": "Corporate-action movement confirmation. Retained as confirmation lifecycle history; no inference of executed meeting vote.",
+    "actual_message_example": false,
+    "incorporated_into_tests": false,
+    "version": "Public version retrieved 2026-10-16; release not certified",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "ISO15022 public dictionary",
+    "document_title": "MT564 general event indicators",
+    "url": "https://www.iso20022.org/15022/uhb/mt564-5-field-22f.htm",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "MT564"
+    ],
+    "fields_qualifiers": [
+      "CAEV",
+      "CAMV"
+    ],
+    "learned": "Meeting identification differs from mandatory/voluntary participation; neither proves holder eligibility.",
+    "actual_message_example": false,
+    "incorporated_into_tests": true,
+    "version": "Public version retrieved 2026-10-16; release not certified",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "ISO15022 public dictionary",
+    "document_title": "MT564 event dates",
+    "url": "https://www.iso20022.org/15022/uhb/mt564-47-field-98a.htm",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "MT564"
+    ],
+    "fields_qualifiers": [
+      "MEET",
+      "RDTE",
+      "REGI"
+    ],
+    "learned": "Meeting, record and registration dates are distinct; implemented A/C/E date decoding retains precision and offset.",
+    "actual_message_example": false,
+    "incorporated_into_tests": true,
+    "version": "Public version retrieved 2026-10-16; release not certified",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "ISO15022 public dictionary",
+    "document_title": "MT564 option dates",
+    "url": "https://www.iso20022.org/15022/uhb/mt564-66-field-98a.htm",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "MT564"
+    ],
+    "fields_qualifiers": [
+      "RDDT",
+      "MKDT",
+      "EARD",
+      "BLOK",
+      "BORD",
+      "DOCD"
+    ],
+    "learned": "Account-servicer response deadline differs from market and early-incentive dates. Do not choose the earliest arbitrary date.",
+    "actual_message_example": false,
+    "incorporated_into_tests": true,
+    "version": "Public version retrieved 2026-10-16; release not certified",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "ISO15022 public dictionary",
+    "document_title": "MT564 option indicators",
+    "url": "https://www.iso20022.org/15022/uhb/mt564-61-field-22f.htm",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "MT564"
+    ],
+    "fields_qualifiers": [
+      "CAOP",
+      "CETI",
+      "OPTF",
+      "OSTA"
+    ],
+    "learned": "ABST/AMGT/MNGT/PROX are voting-related options. NOAC is no action. Option cancellation/inactivity is distinct from event cancellation. FULL identifies owner breakdown in option context.",
+    "actual_message_example": false,
+    "incorporated_into_tests": true,
+    "version": "Public version retrieved 2026-10-16; release not certified",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "ISO15022 public dictionary",
+    "document_title": "MT564 additional narrative",
+    "url": "https://www.iso20022.org/15022/uhb/mt564-106-field-70e.htm",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "MT564"
+    ],
+    "fields_qualifiers": [
+      "ADTX",
+      "REGI",
+      "COMP",
+      "INCO",
+      "PACO",
+      "DISC",
+      "TAXE"
+    ],
+    "learned": "Qualifiers route narrative; REGI presence alone does not prove registration required.",
+    "actual_message_example": false,
+    "incorporated_into_tests": true,
+    "version": "Public version retrieved 2026-10-16; release not certified",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "Clearstream",
+    "document_title": "Xact via Swift User Guide",
+    "url": "https://www.clearstream.com/resource/blob/1288716/9435c2032d2953788b97c7e2dbce2285/swift-ug-data.pdf",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "MT564",
+      "MT565",
+      "MT567",
+      "MT568"
+    ],
+    "fields_qualifiers": [
+      "CORP",
+      "SEME",
+      "PREV",
+      "RDDT",
+      "MT568 pagination"
+    ],
+    "learned": "Contains CA notification, IPAR and reversal examples and field profiles. Sender-specific reference formats are narrower than generic dictionary formats. Guide describes multiple corporate-action services: do not generalise all instructions to current meeting service.",
+    "actual_message_example": true,
+    "incorporated_into_tests": false,
+    "version": "27 March 2026; consulted local PDF/text under artifacts/iso-research, not redistributed in corpus",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "Clearstream",
+    "document_title": "SRD II connectivity enhancements \u2014 Update IV",
+    "url": "https://clearstream.com/clearstream-en/res-library/asset-services/c20019-1991462",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "MT564"
+    ],
+    "fields_qualifiers": [
+      "DSCL",
+      "CAMV MAND",
+      "17B SRDC"
+    ],
+    "learned": "Historical 2020\u20132021 interim disclosure flow; public attachment supplies an actual example. Not a meeting ballot or current universal profile.",
+    "actual_message_example": true,
+    "incorporated_into_tests": false,
+    "version": "Last updated 2 July 2021",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "Clearstream",
+    "document_title": "Disclosure Request MT564 Outbound example",
+    "url": "https://www.clearstream.com/caas/v1/media/2224604/data/9829e51a4582a1ade84615ea7d7cb3bf/c20019-c20030-l20022-l20033-d20039-mt564-example.pdf",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "MT564"
+    ],
+    "fields_qualifiers": [
+      "CORP",
+      "SEME",
+      "CAEV DSCL",
+      "CAMV MAND",
+      "PREP",
+      "PROC"
+    ],
+    "learned": "Right-column literal field excerpt retained. Published SEME EBDSCL00120191004 is 17 characters, exceeding generic 16x. Preserve unsupported value; do not silently repair. Document heading DISC differs from field DSCL; field value governs parser test.",
+    "actual_message_example": true,
+    "incorporated_into_tests": true,
+    "version": "Attachment dated 18 February 2021",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "Clearstream / LuxCSD",
+    "document_title": "General Meeting Service \u2014 Detailed Functional Specifications",
+    "url": "https://www.luxcsd.com/resource/blob/3857176/e9d61c94261acafd540251b217347187/gms-detailed-functional-specifications-data.pdf",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "MT564+",
+      "seev.001\u2013008"
+    ],
+    "fields_qualifiers": [
+      "CORP",
+      "RDDT",
+      "MEET",
+      "narrative restriction labels"
+    ],
+    "learned": "Since November 2024 current meeting instructions/status/results use ISO20022 or portal; MT564 coexistence notifications/cancellations remain. Sender-specific labels in narrative are not universal ISO15022 fields. This corrects any assumption that generic MT565 support means current Clearstream meeting acceptance.",
+    "actual_message_example": true,
+    "incorporated_into_tests": false,
+    "version": "May 2026, document 7631; copyright Clearstream all rights reserved",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "Clearstream",
+    "document_title": "OneClearstream asset servicing: CBF-issued securities",
+    "url": "https://www.clearstream.com/resource/blob/1296822/a094c0334b0fc5c77d9001bffc77b805/oneclearstream-asset-servicing-cbf-issued-securities-data.pdf",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "MT565",
+      "MT567"
+    ],
+    "fields_qualifiers": [
+      "CORP",
+      "CAON",
+      "CAOP"
+    ],
+    "learned": "Historical profile discusses option instructions and best-efforts cancellation. An instruction-cancellation request must not cancel the underlying event.",
+    "actual_message_example": false,
+    "incorporated_into_tests": false,
+    "version": "August 2017; historical, not current service acceptance",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "Clearstream",
+    "document_title": "Corporate Action Harmonisation \u2014 KADI DE Migration",
+    "url": "https://www.clearstream.com/caas/v1/media/3711980/data/afde3407d10dfef2e75d6931b762c2c7/cah-functional-specs.pdf",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "MT564",
+      "MT568",
+      "MT566"
+    ],
+    "fields_qualifiers": [
+      "23G CANC",
+      "ADDB REVR"
+    ],
+    "learned": "Reversal reporting varies by event/service; CANC and reversal must not be conflated. Unsupported movement/reversal semantics remain preserved and reviewed.",
+    "actual_message_example": false,
+    "incorporated_into_tests": false,
+    "version": "March 2024",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "SMPG",
+    "document_title": "Public market-practice website",
+    "url": "https://www.smpg.info/",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "MT56x"
+    ],
+    "fields_qualifiers": [],
+    "learned": "Public landing page was discoverable, but direct retrieval returned 403 and no authoritative proxy scenario/template file was retrieved. Third-party Scribd/Studylib mirrors were excluded as parser grammar authority. Obtain public SMPG templates in a follow-up corpus expansion.",
+    "actual_message_example": false,
+    "incorporated_into_tests": false,
+    "version": "Public version retrieved 2026-10-16; release not certified",
+    "access": "Landing page visible via search/browser fetch; direct HTTP 403; document unavailable",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "ISO TC68 / SMPG",
+    "document_title": "Reflections following SMPG Fall Meeting 2022",
+    "url": "https://committee.iso.org/files/live/sites/tc68/files/article_source/TC68_SMPG_Article_Final_29.November.2022.pdf",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "ISO15022",
+      "ISO20022"
+    ],
+    "fields_qualifiers": [],
+    "learned": "Confirms coexistence and role of securities market practices; not a source of field grammar.",
+    "actual_message_example": false,
+    "incorporated_into_tests": false,
+    "version": "29 November 2022",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "Euroclear",
+    "document_title": "Meeting and proxy voting",
+    "url": "https://www.euroclear.com/services/en/corporate-actions/corporate-actions-euroclear-uk-international/meeting-and-proxy-voting.html",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "Meeting services"
+    ],
+    "fields_qualifiers": [],
+    "learned": "Notifications, agendas, results, proxy appointment and admission requests are separate services; market-specific requirements matter. Detailed operational info links to MyEuroclear and was not accessed.",
+    "actual_message_example": false,
+    "incorporated_into_tests": false,
+    "version": "Public version retrieved 2026-10-16; release not certified",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "Euroclear",
+    "document_title": "Corporate actions notifications",
+    "url": "https://www.euroclear.com/campaigns/en/innovation/data-euroclear-information-solutions/reference_data/corporate-actions-notifications.html",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "MT564",
+      "ISO20022 meetings"
+    ],
+    "fields_qualifiers": [],
+    "learned": "Public service description distinguishes corporate-action MT564 delivery and XML meeting delivery; no actual FIN examples retrieved.",
+    "actual_message_example": false,
+    "incorporated_into_tests": false,
+    "version": "Public version retrieved 2026-10-16; release not certified",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "SIX SIS",
+    "document_title": "CAEG meeting minutes",
+    "url": "https://www.six-group.com/dam/download/sites/swiss-sptc/caeg-meeting-protokolle/2020/2020-06-08-protokoll-caeg.pdf",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "MT564",
+      "MT568"
+    ],
+    "fields_qualifiers": [
+      "70E ADTX",
+      "TAXE"
+    ],
+    "learned": "Minutes discuss moving tax information between ADTX and TAXE: narrative qualifier practices can vary. Not a complete message template or a current universal profile.",
+    "actual_message_example": false,
+    "incorporated_into_tests": false,
+    "version": "8 June 2020 minutes, historical",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "DTCC",
+    "document_title": "Proxy Services",
+    "url": "https://www.dtcc.com/products-and-services/asset-services/issuer-services/proxy-services",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "Proxy service"
+    ],
+    "fields_qualifiers": [
+      "record-date entitlement"
+    ],
+    "learned": "Omnibus proxy transfers DTC voting rights to record-date participants. Meeting identification alone cannot establish individual beneficial-owner eligibility.",
+    "actual_message_example": false,
+    "incorporated_into_tests": false,
+    "version": "Public version retrieved 2026-10-16; release not certified",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "DTCC",
+    "document_title": "Corporate Actions Technical Documentation Hub",
+    "url": "https://www.dtcc.com/products-and-services/asset-services/corporate-actions-processing/ca-documentation",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "ISO20022 corporate actions and meetings"
+    ],
+    "fields_qualifiers": [],
+    "learned": "Public documentation hub primarily covers ISO20022. Its material must not be treated as an ISO15022 raw-message corpus.",
+    "actual_message_example": false,
+    "incorporated_into_tests": false,
+    "version": "Public version retrieved 2026-10-16; release not certified",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  },
+  {
+    "organisation": "Euronext Securities",
+    "document_title": "ISO15022 Messages EN v9",
+    "url": "https://www.euronext.com/sites/default/files/2026-01/20260126_ISO%2015022%20Messages_EN_v9.pdf",
+    "retrieved_at": "2026-10-16",
+    "message_types": [
+      "MT564"
+    ],
+    "fields_qualifiers": [
+      "SEME",
+      "CORP",
+      "COAF",
+      "PREP",
+      "CAEV"
+    ],
+    "learned": "Public implementation tables support field/qualifier context and illustrate sender-profile differences. No example copied into this phase.",
+    "actual_message_example": false,
+    "incorporated_into_tests": false,
+    "version": "26 January 2026 v9",
+    "access": "Retrieved public source",
+    "copyright_licensing": "No open redistribution licence established. Link to source; locally authored fixtures are separately labelled. Only a short literal excerpt is included where stated."
+  }
+]

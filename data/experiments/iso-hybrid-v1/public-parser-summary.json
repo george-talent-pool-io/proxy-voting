@@ -1,0 +1,18 @@
+{
+  "parser_version": "iso-subset-1",
+  "source": "data/normalised/public.jsonl",
+  "source_file_sha256": "27d60bdb6cc4312859bc8a65d9e494a2487f270388b2c833a2551b21df21a4d3",
+  "records": 7683,
+  "counts": {
+    "UNSTRUCTURED_NOTICE": 7674,
+    "UNRECOGNISED": 9
+  },
+  "tags": {},
+  "elapsed_seconds": 2.710782000096515,
+  "failed_rows": 0,
+  "structured_values": 0,
+  "laya_executions": 0,
+  "llm_escalations": 0,
+  "manual_review_policy": 7683,
+  "note": "Detector/parser-only run. Potential semantic routing is not measured model execution. VALID category withheld: no full FIN conformance validator."
+}

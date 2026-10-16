@@ -1,0 +1,17 @@
+{
+  "files": {
+    "hybrid/__init__.py": "e7ae498d41d3fb38888e41accae0979542d676cd0aa963ad87c396eb61570ff9",
+    "hybrid/corpus.py": "11c7eaacb278c4654f44c160c3e812b1e8a9173c4800bab14a8f14fcdc3fdcf9",
+    "hybrid/events.py": "0726938c0b8af1193e508e5b8b5b113aad547322f9b2ede5e2e742bffeb93776",
+    "hybrid/fallback.py": "a394b2ee3222141f3f14718feb0a9869f5c298ee551c1b4544ae37a88d7b071c",
+    "hybrid/parser.py": "7e61c578ee90b6401081ece097a2e0abed864a6659ef2a5c02f31c5df60fe01c",
+    "hybrid/pipeline.py": "25c9cb26e24aa46421af3a942788f38b461dcdb987a5a8700ebf321ba4005124",
+    "hybrid/rules.py": "ad896cd64619f7935f7b68177509293ef340e61c295938eac51b8cc3c879c8d2",
+    "hybrid/semantics.py": "ca5ccf3f91e6343399b716c7084f30a213c6a807093c9f6971b0dfe9f0729557",
+    "hybrid/minimal_pairs.json": "cc142cedaf49744ac9c58856de6538127ba18d9c0ff0d83e6b2965eb2488b2f5",
+    "scripts/hybrid_benchmark.py": "4834f5bcc6d0d1faff5966eef23a51d37640588539acc39b3a792f07dea0732f"
+  },
+  "evaluation_time": "2026-10-16T12:00:00+00:00",
+  "automation_enabled": false,
+  "selection": "No challenge-driven changes. Three aggregation strategies diagnostic only; default conflict_abstain fixed before evaluation."
+}
