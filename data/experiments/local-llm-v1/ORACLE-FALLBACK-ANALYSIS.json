@@ -1,0 +1,1663 @@
+{
+  "created_at": "2026-10-16T20:12:04.959756+00:00",
+  "datasets": {
+    "challenge": {
+      "C": {
+        "cases": 57,
+        "baseline_cases_correct": 37,
+        "oracle_invocations": 20,
+        "oracle_invocation_rate": 0.3508771929824561,
+        "oracle_raw_fallback_switch_cases_correct": 50,
+        "oracle_with_frozen_reconciliation_cases_correct": 49,
+        "additional_diagnostic_invocations_this_process": 0,
+        "per_failed_specialist_case": [
+          {
+            "id": "ambiguous",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "ef9cfa542dd0ce05485e1172db63d17a38c96dcb90c9579b63b2696f3dcc8c72"
+          },
+          {
+            "id": "two-dates",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "6271f8ece9f77e137978ec7f6f1960b1c14d54950b64b5541fcb568fffeffa19"
+          },
+          {
+            "id": "record-date",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "bb50e5748d304327e7d597cecd649f7c79ea7e8ed334e6fa0f1385c66226f976"
+          },
+          {
+            "id": "issuer-custodian",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "5059307860bc7a439c6acdd55d3454dda56396b606c6f653b425e39187ee3463"
+          },
+          {
+            "id": "historical-results",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "920756bc6aec7aa06f531e143617428c8029dd86207b837c877725a4edcc8cf5"
+          },
+          {
+            "id": "eligibility",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "da9d1cd0502f5fe103404ef65ec38bd742ed69c74d92110e8da3f07c110c4ade"
+          },
+          {
+            "id": "partial",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "c079c9f6100152d99da94f75d46e3c0bdc4b64c2d966121778926200a1d26098"
+          },
+          {
+            "id": "registration",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "18e89d287b89e7128eef941e3a79ecfc3e4420a14d36c95ed0e7cc526e9ae3e3"
+          },
+          {
+            "id": "contradiction",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "14855c1f97c703be5fbf846b341bfb9d3fa70d7498912ddc7589393c8733417a"
+          },
+          {
+            "id": "same-day",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "46f371782aa809e71a026aee1a79b1faa916b03f49dcfa43be2c0fa87d457cf0"
+          },
+          {
+            "id": "meeting-only",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "e23005f7a3131b740929bf465b4135317265ec59785ef6f367e44d1b3e449b49"
+          },
+          {
+            "id": "sell-restricted",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "0da5f0219da2c46ab3f403b2de93816d77284204443f0409419cc77d5e1e3ae5"
+          },
+          {
+            "id": "bank-holiday",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "74c567198c3f2c0a2d893469804b80564578d08b4243a992b4a4c8bb0b5eec2b"
+          },
+          {
+            "id": "historic-quote-only",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "562e2e7b5eb83cc6f9893d564bcee53c64d9a4463eec03ed0550fbca289b784c"
+          },
+          {
+            "id": "false-urgency",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "239d2ee78c6e6d13de524b037066069b1e4e1533f676cdd3bd5aea9829a73eec"
+          },
+          {
+            "id": "fr-poa",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "fe3fd66eefa3f50c0130c13ad3f8693777f8daa28df24a61dcc6e2288c5ba05a"
+          },
+          {
+            "id": "no-date",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "0bd71990aade19248e1678e185fca0fce83912e4186f99b2a98b13bd23ba078a"
+          },
+          {
+            "id": "today-date",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "c01cc141b169ac2199a99692f9075759b47c94a2b6c46ad9dec21dc50c0b04bd"
+          },
+          {
+            "id": "foreign-restriction",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "6742a0e4ac3ea80c8db76dbb4ec44bcc59c1a0195809f8dbf112bc41d006f46e"
+          },
+          {
+            "id": "blank-like",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "ef79e4a1dbfb2e715c664a09041ffbe07031227dbdfaa097463bf9c3f39c326b"
+          }
+        ],
+        "scope": "Perfect truth-selected gate; not deployable; no labels supplied to models. Raw-switch bound assumes knowing when to keep a correct specialist case; within-case field damage can still prevent a case pass."
+      },
+      "E": {
+        "cases": 57,
+        "baseline_cases_correct": 32,
+        "oracle_invocations": 25,
+        "oracle_invocation_rate": 0.43859649122807015,
+        "oracle_raw_fallback_switch_cases_correct": 39,
+        "oracle_with_frozen_reconciliation_cases_correct": 38,
+        "additional_diagnostic_invocations_this_process": 13,
+        "per_failed_specialist_case": [
+          {
+            "id": "blocking",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "97b718b03e2342a64e089988dc1b169bdb0ac9fff322f98ffc06b5f1570f9603"
+          },
+          {
+            "id": "informational",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "b50fd2e9b8c8c8dc77eae6a4bb5d12f57e38c471d47ffb9af08916b6f5b95c80"
+          },
+          {
+            "id": "ambiguous",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "cfdda5482faf95720ef4a9e6ada40655e8b2d16dd6706cfacc83ff420be274ff"
+          },
+          {
+            "id": "quoted-old",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "650f6b872ca2ee1d285e40bc4883381f01687d530cd0d38d8efedab635baa20a"
+          },
+          {
+            "id": "mandatory-dividend",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "5371c4d27717fbddfb143fe0beb4d9cd8d7e8b4353fedc472ff2097d2ea7f643"
+          },
+          {
+            "id": "voluntary-tender",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "a75ba9616fab4c0f3c665ff35738bce64fae65020e7afdb168e4efaa3c61278d"
+          },
+          {
+            "id": "historical-results",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "f7441da9e8bffb4a9d350e536c119c612e988691cda3775a2acb3f0da31cab2f"
+          },
+          {
+            "id": "comp-table",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "afeab68a89cdcd8326e33094889db11a86a965844c86474b7b3b75a403cbd460"
+          },
+          {
+            "id": "legal-poa",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "a75e31db796124bb908d1a13e64c2ca9f93ffa7254236feabb47219328007a09"
+          },
+          {
+            "id": "eligibility",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "ce580beee1f7d951cfe82bcad8477f3b5be3ad3a943e8c67254f3cbce8bc8426"
+          },
+          {
+            "id": "partial",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "0f2bfc66d8c74a69586e1710a115dd04b4c0f67ffe5840bf7f73efac553f86e2"
+          },
+          {
+            "id": "registration",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "6332aa0ad496a981d252674dca477cf7355b9527a8990cf5aea6e949646ebc49"
+          },
+          {
+            "id": "same-day",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "3dc0175621445a659922ef2846dcacbe43f4a5986dc26d1022b856aa1bd04925"
+          },
+          {
+            "id": "non-voting-bond",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "d27c248c9637a8652070886b73d45cbd84bd0a19970210043868af96e7777201"
+          },
+          {
+            "id": "poa-waived",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "db217cb6210b84d546790107c847192cc075f7a5386bcc2bd57da2aa2741e68d"
+          },
+          {
+            "id": "historic-quote-only",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "75e118d1e366b4c04adda9690563c45ec1a3af081d072ba77c10211e6053a065"
+          },
+          {
+            "id": "injection",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "0b546d91e45e1f8a3a5b97dc7144f34996a82b0747e61c9e1ad10104e3f47f23"
+          },
+          {
+            "id": "false-urgency",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "9538304dfcce98102d4534daca62c5c8596ac2491933870df873587172face75"
+          },
+          {
+            "id": "de-info",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "081052c728d49816ae9108752928848305a1dd7916cc8b47c115391e510ff997"
+          },
+          {
+            "id": "fr-poa",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "4f2e2f1fc23150268bc888c56985d072a5a9f4bd71ef19d18c30314b58699c6c"
+          },
+          {
+            "id": "fr-info",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "160a2128f24ac6f7b8c6c3d76b50d84adecb49d8b0d3afc3a60ce453646c2faa"
+          },
+          {
+            "id": "html-vote",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "ae520e431218f0b61c73cbb782e38118b35bf3395725cc93037cadd0bb0d764c"
+          },
+          {
+            "id": "negotiation",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "fa1c527eea4612bf01115675574697cf6f36e2a9880765328dabfc80a3c1346a"
+          },
+          {
+            "id": "foreign-restriction",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "36ae2e3e15e5c5c1b6d5ebe0524be5250a900775cc18f6c995d57210bba60127"
+          },
+          {
+            "id": "blank-like",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "779472da195c7668fb35d3cbdbcb37cf5e9e75a83c0d728f86b2cb50e1f9566c"
+          }
+        ],
+        "scope": "Perfect truth-selected gate; not deployable; no labels supplied to models. Raw-switch bound assumes knowing when to keep a correct specialist case; within-case field damage can still prevent a case pass."
+      }
+    },
+    "synthetic-development": {
+      "C": {
+        "cases": 100,
+        "baseline_cases_correct": 100,
+        "oracle_invocations": 0,
+        "oracle_invocation_rate": 0.0,
+        "oracle_raw_fallback_switch_cases_correct": 100,
+        "oracle_with_frozen_reconciliation_cases_correct": 100,
+        "additional_diagnostic_invocations_this_process": 0,
+        "per_failed_specialist_case": [],
+        "scope": "Perfect truth-selected gate; not deployable; no labels supplied to models. Raw-switch bound assumes knowing when to keep a correct specialist case; within-case field damage can still prevent a case pass."
+      },
+      "E": {
+        "cases": 100,
+        "baseline_cases_correct": 13,
+        "oracle_invocations": 87,
+        "oracle_invocation_rate": 0.87,
+        "oracle_raw_fallback_switch_cases_correct": 15,
+        "oracle_with_frozen_reconciliation_cases_correct": 15,
+        "additional_diagnostic_invocations_this_process": 56,
+        "per_failed_specialist_case": [
+          {
+            "id": "SYN-0145",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "11616fc9d53e468c4fb96cfd0043857541bcf4d504e884ec3e66e421570fa461"
+          },
+          {
+            "id": "SYN-0199",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "02a81c25d33a668576f8c7fcae11d9200be40c134092cd5e42d9121b2a21c22f"
+          },
+          {
+            "id": "SYN-0011",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "0dabc1b63cd1ccd1825b5c4de1e3682f82732a59b3b18aa654ccaac630be420a"
+          },
+          {
+            "id": "SYN-0257",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "4230f4228e45779332966b139ff9060cce94ee74d0f70af283036b5f83d78f11"
+          },
+          {
+            "id": "SYN-0019",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "1b3acb0d3b0c536438b6630e8c7a03c1172401e08778a7a742e53d0673547b6c"
+          },
+          {
+            "id": "SYN-0007",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "b0191bbd27c32530abbd8f93c8a8f3b09a4ee8a8ded8102d23ca1f5e4e98f351"
+          },
+          {
+            "id": "SYN-0001",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "00ed136a3ae7bf7b2466f68709d861f6bb5f80839dd03426cbd4ff58b209a9af"
+          },
+          {
+            "id": "SYN-0315",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "10e653651e40a5535826b92d8532393fb827a37f168350d00b2808ad6830cc3b"
+          },
+          {
+            "id": "SYN-0002",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "ee30f923c9896b5b9c894fcb879f1bca10e5cd8d154cfda89d275df7a94a9502"
+          },
+          {
+            "id": "SYN-0462",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "9c9f26bd56e859c5f340bfb9ee71292aebdb21b03017684f9cf903f626d76844"
+          },
+          {
+            "id": "SYN-0323",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "5f8cde78ccb2ce1744fb9e0614eb96f938d8d5c880252e6931f5f23cee520b49"
+          },
+          {
+            "id": "SYN-0040",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "ca0f892c34ced1399733308bf9769f8951fb3094b5045c5eaa6ebfd74704e39c"
+          },
+          {
+            "id": "SYN-0118",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "14021bbe1195edbc3cdade90b75cb84f942e3f4cd16a60775e9b5284b30825fa"
+          },
+          {
+            "id": "SYN-0003",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "09d7802aed260bf125cd9d53ac88bb8002f256a01c33da71c696677103edc62b"
+          },
+          {
+            "id": "SYN-0435",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "493c75813f72d104254ca9d362a584ea16b4262b63f455e72d5b181ac1be7d8f"
+          },
+          {
+            "id": "SYN-0183",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "493c75813f72d104254ca9d362a584ea16b4262b63f455e72d5b181ac1be7d8f"
+          },
+          {
+            "id": "SYN-0012",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "493c75813f72d104254ca9d362a584ea16b4262b63f455e72d5b181ac1be7d8f"
+          },
+          {
+            "id": "SYN-0047",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "e218c9a85fc3f8b4db4167beba43d0c3a61861ced0e97e0f3ca0507c2a8eefcd"
+          },
+          {
+            "id": "SYN-0120",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "493c75813f72d104254ca9d362a584ea16b4262b63f455e72d5b181ac1be7d8f"
+          },
+          {
+            "id": "SYN-0006",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "493c75813f72d104254ca9d362a584ea16b4262b63f455e72d5b181ac1be7d8f"
+          },
+          {
+            "id": "SYN-0057",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "493c75813f72d104254ca9d362a584ea16b4262b63f455e72d5b181ac1be7d8f"
+          },
+          {
+            "id": "SYN-0254",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "94c973cb568529560533e724199d1552925614ec17029f07ac6c91e857e66c07"
+          },
+          {
+            "id": "SYN-0041",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "e2b45178e80763aea623edb77d89d0200e691b466f459be03ff39eb7d3f18a98"
+          },
+          {
+            "id": "SYN-0318",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "e053564f8752b5a4e928a14160922f802126257ca1b7058ec1b1bacc1bf447ec"
+          },
+          {
+            "id": "SYN-0227",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "e053564f8752b5a4e928a14160922f802126257ca1b7058ec1b1bacc1bf447ec"
+          },
+          {
+            "id": "SYN-0080",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "e2b45178e80763aea623edb77d89d0200e691b466f459be03ff39eb7d3f18a98"
+          },
+          {
+            "id": "SYN-0471",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "5c78300ce2b965e4052fcac045255402c2ce5f48c62ade7a617872d789d9c492"
+          },
+          {
+            "id": "SYN-0248",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "4a441bf263254201389d4f94e845c237b49b9f46f06d03c107ae53ad6dc24d80"
+          },
+          {
+            "id": "SYN-0005",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "b2c9f1f304cf908747837de07a78182d61776470001e2e4819d77fb97bc99ca1"
+          },
+          {
+            "id": "SYN-0267",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "ee77ad5fac22ce687385fa969fc33db0e6a798078bcf16ca69fc3ae686c054d6"
+          },
+          {
+            "id": "SYN-0335",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "4a441bf263254201389d4f94e845c237b49b9f46f06d03c107ae53ad6dc24d80"
+          },
+          {
+            "id": "SYN-0031",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "2af3ddbe1329def6ed1a1023038797526edb88b650c113dfbbbd0a44c3b07385"
+          },
+          {
+            "id": "SYN-0223",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "4a441bf263254201389d4f94e845c237b49b9f46f06d03c107ae53ad6dc24d80"
+          },
+          {
+            "id": "SYN-0349",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "c2ac517ce932cbaa0bf000edb4e590f55f268cf0ffe02df36b7fe8287f92ff00"
+          },
+          {
+            "id": "SYN-0115",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "be604e0cb09e4a7e65259e484af6fdfd19fec881139808510db1ab6577197001"
+          },
+          {
+            "id": "SYN-0009",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "3558f0652062e32ea0345ce563d1109b4a39a3d451ab9c3cf554c3e3a5e83404"
+          },
+          {
+            "id": "SYN-0146",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "64c699fc6f3e79203bad62ea7adaa0291d00d84d63f456bbf5af2b9639b88970"
+          },
+          {
+            "id": "SYN-0095",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "185118fe0ed015a4bdef76c93abc2ad89ec6e0298bbef59b923778f1339164c2"
+          },
+          {
+            "id": "SYN-0262",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "bf23b7f807d0aa8ce432bfa268d00dc1e58c5ab0b635b4d7a73d972ece4f8d9b"
+          },
+          {
+            "id": "SYN-0187",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "f2363fbab0dda07fdb337dc2e7e9929c9d1c41bb612a07c1175262fc424eda70"
+          },
+          {
+            "id": "SYN-0310",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "e3785764a8c9d7c89f1f6c4daf0bafd72e86bf4d29cc069336dd8c1e3d8f4bad"
+          },
+          {
+            "id": "SYN-0078",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "6bfdab2ef220061318e31b168bbaba9f17cf3f7cc084f87562eb14baa561226b"
+          },
+          {
+            "id": "SYN-0282",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "f2363fbab0dda07fdb337dc2e7e9929c9d1c41bb612a07c1175262fc424eda70"
+          },
+          {
+            "id": "SYN-0252",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "38a7f177c0a5f658471d891195a8ed451b717b4ad34bad7b3f3561b9302e560d"
+          },
+          {
+            "id": "SYN-0037",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "f2363fbab0dda07fdb337dc2e7e9929c9d1c41bb612a07c1175262fc424eda70"
+          },
+          {
+            "id": "SYN-0487",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "a0295c54ca0c204ce10de935270375c36758d4227d522b97b8fb417b8d9258c4"
+          },
+          {
+            "id": "SYN-0339",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "71da0dbb5d51bc998dbc16c5b3030e1effffb738ac81088082adfc7441660866"
+          },
+          {
+            "id": "SYN-0291",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "75163de907aa7e73556b5fd801497a25fceec74f1160620f13c94bd963b7332f"
+          },
+          {
+            "id": "SYN-0260",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "0ebc248861bb038aa79142c693e1f1424e710484ffaf9dac51e59a0e7817e3ef"
+          },
+          {
+            "id": "SYN-0364",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "ec62f9cf19f99d6a6602a1bb0ef4f41d17adc741840ab681b1007f41c6f43caa"
+          },
+          {
+            "id": "SYN-0198",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "9a8ef945bc70ad86f1dc74bbe10bcb6014548a11c32e3c7f6102b5b8e720c5cb"
+          },
+          {
+            "id": "SYN-0418",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "26f5712a21b50107a5e69652b9b8163c757b8d64fbfc0555ea78108b1eac20fa"
+          },
+          {
+            "id": "SYN-0172",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "55bd9f45948a286ff942bf50990d1c86de2ccfab863c0922d71f3c6e4a8b5a22"
+          },
+          {
+            "id": "SYN-0347",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "71da0dbb5d51bc998dbc16c5b3030e1effffb738ac81088082adfc7441660866"
+          },
+          {
+            "id": "SYN-0408",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "4d7276fcb4c97c22e1fa26f46a0d81453ebb92ac01f12ce6b7d68b4d208c0079"
+          },
+          {
+            "id": "SYN-0300",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "b7ee289c4e39c92c13c14e23f0b2583645136e1400a7fe7031126b904965f2bc"
+          },
+          {
+            "id": "SYN-0369",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "d7440526cebd4e07047be12335c78093c3bfb2556e979ac42e34cd59b5b30239"
+          },
+          {
+            "id": "SYN-0496",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "d7440526cebd4e07047be12335c78093c3bfb2556e979ac42e34cd59b5b30239"
+          },
+          {
+            "id": "SYN-0099",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "bb7cf5f37e45b3d9421beca089d0c3185bdcebfdf5b5addfda84cb02600fb798"
+          },
+          {
+            "id": "SYN-0038",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "6ac568de672084e164f2d4d71bff8c358f00454316d5f3682878675594aee195"
+          },
+          {
+            "id": "SYN-0070",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "0c19c44d473e5cc846ebd91b5958c3c208268b7bf876e80886e184b80717e46e"
+          },
+          {
+            "id": "SYN-0160",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "3de1904f8ea2301ea525e24b0633031c5419ce8b3f97594a16cd82aba0a0523a"
+          },
+          {
+            "id": "SYN-0253",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "fb2e7d72f15ab883e62a6c24ff0d1549fb6056f1bd755110b51ed464a62404f5"
+          },
+          {
+            "id": "SYN-0196",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "bb7cf5f37e45b3d9421beca089d0c3185bdcebfdf5b5addfda84cb02600fb798"
+          },
+          {
+            "id": "SYN-0096",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "46b27efd161eac05591c2c1c5a968d34b4c8d6abb5c5652ca6d4d80f39e82aa8"
+          },
+          {
+            "id": "SYN-0143",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "46b27efd161eac05591c2c1c5a968d34b4c8d6abb5c5652ca6d4d80f39e82aa8"
+          },
+          {
+            "id": "SYN-0221",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "6ec162414e0f2fe8bede067bb15354d14fbe20f0fe84272afad2008fe445da45"
+          },
+          {
+            "id": "SYN-0376",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "fa69ea7ed80841013f190e9e25cae4821ada9ddf08286706237103941aa1d6a5"
+          },
+          {
+            "id": "SYN-0473",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "0fff35d0208d01f207b64079ea7daa53c5fbfa1afe85fa2df2ffcb2fc832928b"
+          },
+          {
+            "id": "SYN-0312",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "0631b9a0e51d48fa27b8870d9fbd5bf5a3d4de7225cf6bb584e76d4a4272b7a2"
+          },
+          {
+            "id": "SYN-0313",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "db28b727a1e75bd98a0b166a87c7d8025de29e3b728b3196509513d1872fa640"
+          },
+          {
+            "id": "SYN-0023",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "180996c03990c9db7d9c1094280d318fa425a33f48c5762945846f80e4d8b489"
+          },
+          {
+            "id": "SYN-0097",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "4cc644e816cd6b8db358c22d396eda1fd71f462c43669cb172795696b41b4eda"
+          },
+          {
+            "id": "SYN-0028",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "ae0ae1efd1adab12e1956ac976c61372435aa4dfe1d8cd335c45869dcf0549d6"
+          },
+          {
+            "id": "SYN-0372",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "56881b2984076450b937da2d4b5ade585ff467fade1454598b06439163a084ef"
+          },
+          {
+            "id": "SYN-0125",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "56881b2984076450b937da2d4b5ade585ff467fade1454598b06439163a084ef"
+          },
+          {
+            "id": "SYN-0085",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "d913a05cfaeabf9e37770d6ee2c0e688caa825dad722a4e8e7b6694eb4ffbe9f"
+          },
+          {
+            "id": "SYN-0439",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "5251c564aeb5896c6adf53bb5010fe722a023643961c9a306cced9e719d73c47"
+          },
+          {
+            "id": "SYN-0053",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "d913a05cfaeabf9e37770d6ee2c0e688caa825dad722a4e8e7b6694eb4ffbe9f"
+          },
+          {
+            "id": "SYN-0472",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "d913a05cfaeabf9e37770d6ee2c0e688caa825dad722a4e8e7b6694eb4ffbe9f"
+          },
+          {
+            "id": "SYN-0256",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "d913a05cfaeabf9e37770d6ee2c0e688caa825dad722a4e8e7b6694eb4ffbe9f"
+          },
+          {
+            "id": "SYN-0414",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "fc6a8adc575d57280c6417a9d5015656c7c056471aa70f06047c0754b9425a7a"
+          },
+          {
+            "id": "SYN-0139",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "b298c1d0381bf4cb2cd7a0b7217b6b00833ec1376850895cf6e990ee4a672aea"
+          },
+          {
+            "id": "SYN-0338",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "da83804aff6aae12d56440c204106313aa9abc991282c94cd7758ead83bcff02"
+          },
+          {
+            "id": "SYN-0289",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "1e31ebdcbb97a675498060d35b77989db7aa7abfc4a1984e01e4784f74ad1352"
+          },
+          {
+            "id": "SYN-0201",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "81effb05056a5643a703ac7ee3bea0a0160132bfa5a2efb1c86f237460fb085d"
+          },
+          {
+            "id": "SYN-0234",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "97a18615f2c2f6b24639cf7553dd3b54dc92cc83b21c68cead1a93544cf2ff1b"
+          }
+        ],
+        "scope": "Perfect truth-selected gate; not deployable; no labels supplied to models. Raw-switch bound assumes knowing when to keep a correct specialist case; within-case field damage can still prevent a case pass."
+      }
+    },
+    "complete": {
+      "C": {
+        "cases": 48,
+        "baseline_cases_correct": 0,
+        "oracle_invocations": 48,
+        "oracle_invocation_rate": 1.0,
+        "oracle_raw_fallback_switch_cases_correct": 30,
+        "oracle_with_frozen_reconciliation_cases_correct": 29,
+        "additional_diagnostic_invocations_this_process": 0,
+        "per_failed_specialist_case": [
+          {
+            "id": "COMPLETE-001",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "397830e49a0995f9d8cc9aa88ad6779670bb5356acfac46e5976d0efc55168a1"
+          },
+          {
+            "id": "COMPLETE-002",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "f5e5fa0c443acdb701632a342891ef00eeafdb170fe338783805f308b1ea5cb0"
+          },
+          {
+            "id": "COMPLETE-003",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "e678270ab523b3230ec341454c2c06d8760bdd87fef98015b398633356bb1cc2"
+          },
+          {
+            "id": "COMPLETE-004",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "1fba8df1590f52e08c74f8af4961c65a4617f62e54311b0e24808c34c23bc85f"
+          },
+          {
+            "id": "COMPLETE-005",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "52bb3c13050c90c7e16e0158d2f7a4735dfe0ce900e0adf7d537e1e947e97268"
+          },
+          {
+            "id": "COMPLETE-006",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "22d1575a165bfd6c96f40f900b8a43723ead8c89b011be38968f9199f1c4c7cc"
+          },
+          {
+            "id": "COMPLETE-007",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "644877bdd173efb93a4cdb88d91be66d397c9c2357ffed170496048031c4cbd7"
+          },
+          {
+            "id": "COMPLETE-008",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "2b85c9a2d96b117ee4b22bd63a5d3757633b46be5cc655d9451256608e26c6d0"
+          },
+          {
+            "id": "COMPLETE-009",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "cb9599980c183839de5db1ec5fe5d516fd78f93f9e675b5c1a018ccf783a320c"
+          },
+          {
+            "id": "COMPLETE-010",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "79f3c314f21f6ef48d3e4eeaa0c213b84962e21eeada63fd8e142e137775437c"
+          },
+          {
+            "id": "COMPLETE-011",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "bb36ceec51f206778cc8b48bd1fee24e10595f7889b849bca36d52c33dfdb1fe"
+          },
+          {
+            "id": "COMPLETE-012",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "e412117408f9f13278f9b553c274d37db0eb910c1fb632b29b95c2f1601b100f"
+          },
+          {
+            "id": "COMPLETE-013",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "86af1c6d082ef8085a9b0f225cb4fd051ab6a3df2bb5cbbcbddb168363fb742a"
+          },
+          {
+            "id": "COMPLETE-014",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "b5a85dcf121f03a32f7fc57ffe8f9ce16f7579653073d464403bc63797f67adf"
+          },
+          {
+            "id": "COMPLETE-015",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "92e0157a8c9b7cef8d2cf0b55eb77c3a2ef495ffc433ba3ed3f3eb0ea0d406bd"
+          },
+          {
+            "id": "COMPLETE-016",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "56076dc9a364e8fd07c53b496314eb13df15d692cca1be6849b5a756034419e8"
+          },
+          {
+            "id": "COMPLETE-017",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "7860c168134f36e239ee74cb2249baac5e24f1a0764abb1a1b94e44752423fb8"
+          },
+          {
+            "id": "COMPLETE-018",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "f176e01be951a1096d8bb03a255fe408fed5d0141a8c917a75b712e490df694c"
+          },
+          {
+            "id": "COMPLETE-019",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "6bd161d6ec7e77bd4150a1dc194a9396a41d598b61669f7a537ab666a220caa2"
+          },
+          {
+            "id": "COMPLETE-020",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "300bbd493de85cf9781c4e213fbdc40cffc5dfa543948f12d64d78d68195fd3b"
+          },
+          {
+            "id": "COMPLETE-021",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "c98876bfe2aa071cae867c654cda366e40801881b2066bb9850ae35432bf1f7e"
+          },
+          {
+            "id": "COMPLETE-022",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "0991941987c797626b666558e710838ca890f9950d62ffca4731c9797bde746d"
+          },
+          {
+            "id": "COMPLETE-023",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "e55a1b6125a088258f7187a88eb22faed19ae12829dd58f746a689dff9190ac8"
+          },
+          {
+            "id": "COMPLETE-024",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "2ffd4d426adc8e7e77f3caa3b058faa15ceea18c663fb449a0a00f4dfd1624a3"
+          },
+          {
+            "id": "COMPLETE-025",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "d9068d2a7db013c80a50769ff22fcb0d409f6a23d3d7467e0451678d5e698c9e"
+          },
+          {
+            "id": "COMPLETE-026",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "5fe4f9859ae7918000ac6f32a3780f864a52c9a3ae9cf6f003b7416a5beeb5e5"
+          },
+          {
+            "id": "COMPLETE-027",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "73f021f494dd7295e5c28a29eacb2f176c6c2f2320a83c5c626c37c1ef573a2e"
+          },
+          {
+            "id": "COMPLETE-028",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "9ca72205f60d20967f335037e12395a8a3abf2b54e6c5b92dbcb63d859fc01e2"
+          },
+          {
+            "id": "COMPLETE-029",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "19b632bdf7c65b681584c84b86210d49545bc37debe70bb3ad0bf1d4f9f6d708"
+          },
+          {
+            "id": "COMPLETE-030",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "1f7fa28de2eb9ff06a4b1960027fede6811db6774a21b5c0092c18dbe07d2b05"
+          },
+          {
+            "id": "COMPLETE-031",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "a0cacfccbc3c074079cec9f0046e0085d907ae4402750702768394cddc07a29d"
+          },
+          {
+            "id": "COMPLETE-032",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "d145f18b199a06e90d673d8c7d06f9a80454e9f29de1f04c90e1db3f195762e2"
+          },
+          {
+            "id": "COMPLETE-033",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "976aaa25dd972c7a6a1e057f3c94e7526384804f8155ded9fe6e26edd3d91653"
+          },
+          {
+            "id": "COMPLETE-034",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "b807b31081a9b2081e6b8d506a9c7737f93b7176072fecc6bce6b9206b696c57"
+          },
+          {
+            "id": "COMPLETE-035",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "d8a3f0b4bb9e9a236b968e78a5f7490ac979b79b5e9d985c453cb08530c6fdf3"
+          },
+          {
+            "id": "COMPLETE-036",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "0bbb25cbaa655e4acf3d415f42e137887f5a377353806184458cfcb4c8e95abf"
+          },
+          {
+            "id": "COMPLETE-037",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "85238d1eb7d8e55642bdd51c70287305fa3d11a60431bf4c45969caa4eb8ab53"
+          },
+          {
+            "id": "COMPLETE-038",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "bf26db847c53efe49e955408191c2e8f3c24f9bbd689e467282341753c4f1a62"
+          },
+          {
+            "id": "COMPLETE-039",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "0e661bcd133a90aaeb0f1b454875a48edbe53ad8e1e5ddc7e74c9bc438368f0a"
+          },
+          {
+            "id": "COMPLETE-040",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "b52accbb581d5d18398d567706bc9eff80080dd823e2c0804e8b06e14a860e0d"
+          },
+          {
+            "id": "COMPLETE-041",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "000841e6776fb24eebee9bd868850fb87ecc3618ea85dbfb868a5bf5ead0a5af"
+          },
+          {
+            "id": "COMPLETE-042",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "1d41539af245c47c7977a7b96c25e61d7d897b6fe52602d5c73d4078a0aea566"
+          },
+          {
+            "id": "COMPLETE-043",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "385227b5bdaa13e3f2d24d6e65214578ec9356b2c6bc4e516c632eebec022718"
+          },
+          {
+            "id": "COMPLETE-044",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "e1639e2eb45dcd56e5085e33ae4833ec4b8f3406c2c47108dfe51c9978f31ad2"
+          },
+          {
+            "id": "COMPLETE-045",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "a11e4b6f67e1409e71193004bc4a2f004fe041d4c8ad597905b7798ba12bc474"
+          },
+          {
+            "id": "COMPLETE-046",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "290952b5ca774357263b0d2432ebc3447bf5d2d29d00a4a8836cf2cd2ad43c9f"
+          },
+          {
+            "id": "COMPLETE-047",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "46a9c85b43df5567a1d1df43b75becdaa0d48ff1c3dc63331321fd82da770319"
+          },
+          {
+            "id": "COMPLETE-048",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "450aabbd4df1dc002d785d7250ddfa422526f2c6cc6c8b9adee82ad23a078b4e"
+          }
+        ],
+        "scope": "Perfect truth-selected gate; not deployable; no labels supplied to models. Raw-switch bound assumes knowing when to keep a correct specialist case; within-case field damage can still prevent a case pass."
+      },
+      "E": {
+        "cases": 48,
+        "baseline_cases_correct": 3,
+        "oracle_invocations": 45,
+        "oracle_invocation_rate": 0.9375,
+        "oracle_raw_fallback_switch_cases_correct": 13,
+        "oracle_with_frozen_reconciliation_cases_correct": 10,
+        "additional_diagnostic_invocations_this_process": 9,
+        "per_failed_specialist_case": [
+          {
+            "id": "COMPLETE-001",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "ea099a9c93b24e045219194f9364f5ed3ddc2c6f21522b0affe001b508df1966"
+          },
+          {
+            "id": "COMPLETE-002",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "39a50ef7fce8fca9ce16cabd55dcb47ff0faf6019f406167c764b9a16398ef96"
+          },
+          {
+            "id": "COMPLETE-003",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "bba27c72dca8bb9831cb899a137a2682c054a6b5d866347ddff54b52bd71d8e4"
+          },
+          {
+            "id": "COMPLETE-004",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "c61366191fcf2863354b098f5905da09e80a3c70567b5aec9dbdd9bbfc963147"
+          },
+          {
+            "id": "COMPLETE-005",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "f76e48cfb6018de045b50dd038ae4d39f83f0b497fd33363905f1a823a3e4dfe"
+          },
+          {
+            "id": "COMPLETE-006",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "c86ea304f753694920c06a32d23ded7ba6163b5b68e883d12f9ff45f27b79acf"
+          },
+          {
+            "id": "COMPLETE-007",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "1261cdfd95273c902bf037a1e919033c4cabe6f79309bf255e5b3e6385dbde1d"
+          },
+          {
+            "id": "COMPLETE-008",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "d76a05266c88244b04145b6e0d3fcdc0b7ee20ba3ae7573e5fac410cd70ef1d1"
+          },
+          {
+            "id": "COMPLETE-009",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "8c941902b3176fbb3a55facf98ac60ae82f5d3b6ec3959e14fd727459a0b7652"
+          },
+          {
+            "id": "COMPLETE-010",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "21bc47abfc143f91b0f2edb08a8b08022e8d4464212f5816a0cb59804da0914a"
+          },
+          {
+            "id": "COMPLETE-011",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "9df5ef1a7177b0392ead6c4419ba94f53e5dcdfb3408803f3a89b98bffc6790d"
+          },
+          {
+            "id": "COMPLETE-012",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "166ec1d51dec02acd01485dd9fefd91b38f33942ae1c970c2d589e2b3f325a68"
+          },
+          {
+            "id": "COMPLETE-013",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "47850d66831be7beee9ae5b245ac767ead15c1f6193f8732099af64d3830662b"
+          },
+          {
+            "id": "COMPLETE-014",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "b6a25aaf78a5f0b59faaabcf4102cd1f8a92db8b7926748f4bf2dedd02a5ceb8"
+          },
+          {
+            "id": "COMPLETE-015",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "c332dccff2bfdc8e034cbd29bb546b8a6eb4204d375301bf305367df50f9919c"
+          },
+          {
+            "id": "COMPLETE-016",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "2cfa969a85971265954113407321c01df016190755f373e23e4d8ad9fe33629b"
+          },
+          {
+            "id": "COMPLETE-017",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "508d4fa81394d0e5fddf52ed889e34b77fe8cd59806a65d704a7e2d79660afef"
+          },
+          {
+            "id": "COMPLETE-018",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "733c52286b61539b5a967ef694c6103fa412757b47518938423c8dd78296e739"
+          },
+          {
+            "id": "COMPLETE-019",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "14bd34c6d22c8d1f4982deaf09c9c57dae78ed815b7302e45ed25ea4ee8d90cf"
+          },
+          {
+            "id": "COMPLETE-020",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "785e356e23b66d1dc773ba9cf6e020ad0bd1cfb0a53cf7b5d6963489605bdb33"
+          },
+          {
+            "id": "COMPLETE-021",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "6e368e71a82c25d68f9f088449790ea7b3190390898443a5b3f4fe7c0bae44e7"
+          },
+          {
+            "id": "COMPLETE-022",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "0ea43d054674fa1a0daa1e4ca7e5f98dbbfa2ea5a1f089f63577d12894a14249"
+          },
+          {
+            "id": "COMPLETE-023",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "952124118f57281b56587846aebcc020035ea39385bc40711efec3499af0d0cf"
+          },
+          {
+            "id": "COMPLETE-024",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "3a582ffef3084ac297d8f3ec58123568f88d92892ac3eea1dabd01ab54a37cb0"
+          },
+          {
+            "id": "COMPLETE-025",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "848fd06c05e03b236eb77083ad6e5601027fe669ed829bd1ea70415a1f8f4f21"
+          },
+          {
+            "id": "COMPLETE-026",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "9e76680ab28802f540a373aa93f5044bf8c0af3f4ce7b1182fc0e2e89f23bdc9"
+          },
+          {
+            "id": "COMPLETE-027",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "79ad8675b1d248a88d6d4de26bcc020a23b04d5252da305876b0bc9b782de44d"
+          },
+          {
+            "id": "COMPLETE-028",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "302be89ffa833467811d3ebd1a52588be9696f0db3c9e37252d7e2dbee63abca"
+          },
+          {
+            "id": "COMPLETE-030",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "07a9050ab9f8eb8a816f09b2e2f0f5475b1e8b33bbd4d30154bb9f9f99e414f9"
+          },
+          {
+            "id": "COMPLETE-031",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "a31db7cf69e4de6ec9b09d2a06e94a1fc65de56649dfb6a85bdfe2fd005169ab"
+          },
+          {
+            "id": "COMPLETE-032",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "e35bebe4426cd58832376f93dab0e8a30eb60fa06dfbb973ba41a8d55591cf81"
+          },
+          {
+            "id": "COMPLETE-033",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "c52f9517435813283163a8bc06ef2d600d077c48e4a401852b4116f8be26b051"
+          },
+          {
+            "id": "COMPLETE-034",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "05520d1ce831c92ee60518560a9c99c2aa0a7ca81833a61a1b4ef51f0124a0ed"
+          },
+          {
+            "id": "COMPLETE-035",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "44a218d00f5333319eb18b999faba3dbe02acea6f017252b4977fde75b59f5aa"
+          },
+          {
+            "id": "COMPLETE-036",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "c2cc9c41fb5ab02f5f47bfd72939ef775174b9551fd6b24556ab9ef67ca7952c"
+          },
+          {
+            "id": "COMPLETE-037",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "4dad3329ceb80d1b47cd8a5ac1ce11da0231a754f03249dc88b3c5ac23e5078b"
+          },
+          {
+            "id": "COMPLETE-038",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "c401f5dd93478b265631d7758333d752fa4e8435cdd6e6791c6fbeab28d5a164"
+          },
+          {
+            "id": "COMPLETE-041",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "c454648bf247ca1079ae66f46c8a13638594807e62e1e457727396e74eb3f70e"
+          },
+          {
+            "id": "COMPLETE-042",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "43aea946cfa75e2bcac8e36584a159c88269f92ff6f9db94f58a5115b4e908d6"
+          },
+          {
+            "id": "COMPLETE-043",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "30d973c60d412d4cb2980091c224514e3362826841d63c7161951599e980236d"
+          },
+          {
+            "id": "COMPLETE-044",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "806f757a68f0c67d1b7e6633b29c1cf5748079aa954587863a1c3418008a904f"
+          },
+          {
+            "id": "COMPLETE-045",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "ed7c10cde42392b39b2de65f97f15e1b0c52b1dbf15b184067816bd23bed9822"
+          },
+          {
+            "id": "COMPLETE-046",
+            "baseline_correct": false,
+            "raw_fallback_correct": true,
+            "frozen_reconciliation_correct": true,
+            "llm_request_hash": "ac3434b35383a14b546c11064f2ea6e0421b5501a4d637372f5a1d772223bc5e"
+          },
+          {
+            "id": "COMPLETE-047",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "9c1a456782c3d7eff35e8f21dea71ca2555d1bbe381dcd117ba2c0212be0c64a"
+          },
+          {
+            "id": "COMPLETE-048",
+            "baseline_correct": false,
+            "raw_fallback_correct": false,
+            "frozen_reconciliation_correct": false,
+            "llm_request_hash": "6426dec08926998817526a4d63c396dfdfb63ae5edfb89a2e98e031b98fb07a1"
+          }
+        ],
+        "scope": "Perfect truth-selected gate; not deployable; no labels supplied to models. Raw-switch bound assumes knowing when to keep a correct specialist case; within-case field damage can still prevent a case pass."
+      }
+    }
+  },
+  "counterfactual_hash": "a82bf11a40ae7b9de7fb7a65edbfce56a04788e9a9d1372aea9ef2f2d93b8da4",
+  "counterfactual_invocations_total": 78,
+  "excluded_from_main_timed_comparison": true,
+  "automation_enabled": false,
+  "model_prompt_thresholds_unchanged": true,
+  "must_not_be_used_for_threshold_selection": true
+}

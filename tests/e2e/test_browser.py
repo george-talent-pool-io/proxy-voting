@@ -291,3 +291,127 @@ def test_12_hybrid_errors_and_event_history(browser_app):
         expect(p.locator('#notice-content')).to_contain_text('Current')
         p.locator('#close-dialog').click()
     assert not a['errors']
+
+
+def test_13_local_llm_experiment_separates_metrics(browser_app):
+    from playwright.sync_api import expect
+    a=browser_app;p=a['page'];p.goto(a['url']+'/#performance')
+    expect(p.get_by_role('heading',name='Controlled A–E local model experiment',exact=True)).to_be_visible()
+    expect(p.get_by_text('Quality gate not met · automation disabled.',exact=True)).to_be_visible()
+    expect(p.get_by_text('NOT BLIND / DEVELOPMENT ONLY',exact=True)).to_be_visible()
+    expect(p.get_by_role('button',name='Errors & stage provenance',exact=True)).to_be_visible()
+    response=p.request.get(a['url']+'/api/semantic/experiment').json()
+    assert response['customer_accuracy'] is None
+    assert not response['automation_enabled']
+    p.screenshot(path='artifacts/local-llm-experiment.png',full_page=True)
+
+
+def test_14_local_llm_stage_provenance_and_evidence(browser_app):
+    from playwright.sync_api import expect
+    a=browser_app;p=a['page'];p.goto(a['url']+'/#performance')
+    expect(p.get_by_role('button',name='Errors & stage provenance',exact=True)).to_be_visible()
+    p.locator('#semantic-arm').select_option('D')
+    p.get_by_role('button',name='Errors & stage provenance',exact=True).click()
+    expect(p.get_by_role('heading',name='Architecture D · Errors & provenance',exact=True)).to_be_visible()
+    p.locator('#semantic-errors-only').uncheck()
+    # Run after evaluation: these rows contain actual model results, never injected LLM output.
+    expect(p.locator('[data-semantic-record]').first).to_be_visible(timeout=10000)
+    p.locator('[data-semantic-record]').first.click()
+    expect(p.get_by_role('heading',name='Local LLM',exact=True)).to_be_visible()
+    assert 'Invoked: YES' in p.locator('#notice-content').inner_text()
+    source=p.locator('.source-text').inner_text()
+    for link in p.locator('.evidence-link[data-start]').all():
+        start=int(link.get_attribute('data-start'));end=int(link.get_attribute('data-end'))
+        assert 0<=start<end<=len(source)
+        if link.inner_text().startswith('“'):assert source[start:end]==link.inner_text().strip('“”')
+    p.screenshot(path='artifacts/local-llm-provenance.png',full_page=True)
+    assert not a['errors']
+
+
+def test_15_complete_synthetic_metrics_and_exact_structured_evidence(browser_app):
+    from playwright.sync_api import expect
+    a=browser_app;p=a['page']
+    if p.locator('#notice-dialog').count() and p.locator('#notice-dialog').evaluate('(el)=>el.open'):p.locator('#close-dialog').click()
+    p.goto(a['url']+'/#performance')
+    expect(p.get_by_role('button',name='Field metrics & confusion matrices',exact=True)).to_be_visible()
+    p.locator('#semantic-dataset').select_option('complete');p.locator('#semantic-arm').select_option('E')
+    p.get_by_role('button',name='Field metrics & confusion matrices',exact=True).click()
+    expect(p.get_by_role('heading',name='Architecture E · Field metrics',exact=True)).to_be_visible()
+    p.locator('#semantic-metric-field').select_option('share_blocking')
+    expect(p.get_by_role('heading',name='Confusion matrix · exact counts',exact=True)).to_be_visible()
+    expect(p.locator('#notice-content')).to_contain_text('48 labelled assertions')
+    assert p.locator('#notice-content .matrix tbody tr').count()>=2
+    p.locator('#close-dialog').click();p.get_by_role('button',name='Errors & stage provenance',exact=True).click()
+    p.locator('#semantic-errors-only').uncheck()
+    expect(p.locator('[data-semantic-record="COMPLETE-041"]')).to_be_visible()
+    p.locator('[data-semantic-record="COMPLETE-041"]').click()
+    expect(p.get_by_role('heading',name='Parsed structure · exact source fields',exact=True)).to_be_visible()
+    p.get_by_role('link',name='Controlling RDDT field',exact=True).click()
+    expect(p.locator('#source-evidence-highlight')).to_contain_text(':98E::RDDT//20261124170000/0000')
+    p.screenshot(path='artifacts/local-llm-structured-provenance.png',full_page=True)
+    assert not a['errors']
+
+
+def test_16_unverified_model_quotations_never_render(browser_app):
+    """Browser-only hostile-output fixture; never changes saved model results."""
+    from playwright.sync_api import expect
+    a=browser_app;p=a['page']
+    if p.locator('#notice-dialog').evaluate('(el)=>el.open'):p.locator('#close-dialog').click()
+    row=p.request.get(a['url']+'/api/semantic/record?id=agm&dataset=challenge&architecture=D').json()
+    llm=row['result']['llm']
+    llm['parsed']['evidence']['share_blocking']=['FABRICATED-QUOTE-NOT-IN-SOURCE']
+    llm['evidence_validation']['predicates']['share_blocking']=[{'valid':False,'reason':'Not an exact substring'}]
+    llm['parsed']['deadline_information']['deadline_text']='FABRICATED-DEADLINE-NOT-IN-SOURCE'
+    llm['evidence_validation']['deadline']={'valid':False,'reason':'Not an exact substring'}
+    pattern='**/api/semantic/record?*';p.route(pattern,lambda route:route.fulfill(json=row))
+    try:
+        p.goto(a['url']+'/#performance')
+        p.locator('#semantic-dataset').select_option('challenge');p.locator('#semantic-arm').select_option('D')
+        p.get_by_role('button',name='Errors & stage provenance',exact=True).click()
+        p.locator('#semantic-errors-only').uncheck()
+        expect(p.locator('[data-semantic-record]').first).to_be_visible()
+        p.locator('[data-semantic-record]').first.click()
+        expect(p.get_by_role('heading',name='Local LLM',exact=True)).to_be_visible()
+        text=p.locator('#notice-content').text_content()
+        assert 'FABRICATED-QUOTE' not in text;assert 'FABRICATED-DEADLINE' not in text
+        assert not a['errors']
+    finally:p.unroute(pattern)
+
+
+def test_17_model_lab_side_by_side_and_recorded_llm_usage(browser_app):
+    from playwright.sync_api import expect
+    a=browser_app;p=a['page']
+    if p.locator('#notice-dialog').evaluate('(e)=>e.open'):p.get_by_role('button',name='Close notice').click()
+    p.goto(a['url']+'/#model_lab')
+    expect(p.get_by_role('heading',name='Model Lab',exact=True)).to_be_visible()
+    expect(p.locator('#lab-prediction-table')).to_be_visible()
+    headers=p.locator('#lab-prediction-table thead').inner_text()
+    assert all(x in headers for x in ['A','B','C','D','E'])
+    expect(p.get_by_role('heading',name='LLM usage · measured experiment')).to_be_visible()
+    p.locator('#lab-case').select_option(index=1)
+    expect(p.locator('#lab-comparison .source-text')).not_to_be_empty()
+    p.locator('#lab-errors-only').check()
+    p.screenshot(path='artifacts/model-lab-smoke.png',full_page=True)
+    assert not a['errors'],a['errors']
+
+
+def test_18_notice_configured_analysis_trace_persists_after_refresh(browser_app):
+    from playwright.sync_api import expect
+    a=browser_app;p=a['page'];p.goto(a['url']+'/#explorer')
+    # Existing browser fixture record has a persisted legacy result; new execution stays separate.
+    p.locator('#search').fill(a['issuer']);p.wait_for_timeout(500)
+    p.locator('tbody tr[data-record]').first.click()
+    expect(p.get_by_role('button',name='Analyse notice with configured architecture')).to_be_visible()
+    p.get_by_role('button',name='Analyse notice with configured architecture').click()
+    expect(p.locator('#persisted-decision-trace')).to_have_attribute('open','',timeout=15000)
+    expect(p.locator('#persisted-decision-trace')).to_contain_text('Architecture E')
+    expect(p.locator('#persisted-decision-trace')).to_contain_text('Manual review: YES')
+    record_id=p.locator('#analyse-configured-notice').get_attribute('data-record-id')
+    before=p.request.get(a['url']+'/api/notice?id='+record_id).json()['semantic_execution']
+    assert before['result']['laya']['checkpoint']=='TEST_DOUBLE'
+    p.reload();p.locator('#search').fill(a['issuer']);p.wait_for_timeout(500);p.locator('tbody tr[data-record]').first.click()
+    p.locator('#persisted-decision-trace summary').first.click()
+    expect(p.locator('#persisted-decision-trace')).to_contain_text(before['run_id'])
+    p.screenshot(path='artifacts/persisted-decision-trace-smoke.png',full_page=True)
+    assert p.request.get(a['url']+'/api/notice?id='+record_id).json()['semantic_execution']==before
+    assert not a['errors'],a['errors']

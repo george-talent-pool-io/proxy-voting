@@ -1,0 +1,8 @@
+{
+  "scope": "Unscored, unfrozen generated complete benchmark only",
+  "reason": "98E uses /0000, not /+0000; deterministic parser grammar check caught the construction error",
+  "original": "complete-benchmark-initial.json",
+  "corrected": "complete-benchmark.json",
+  "challenge_changed": false,
+  "labels_changed": false
+}

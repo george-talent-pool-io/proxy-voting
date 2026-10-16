@@ -1,0 +1,802 @@
+{
+  "SYN-0145": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0199": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0011": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0257": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0019": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0007": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0001": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0315": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0002": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "YES",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE_WITH_RESTRICTION"
+  },
+  "SYN-0462": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "YES",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE_WITH_RESTRICTION"
+  },
+  "SYN-0323": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "YES",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE_WITH_RESTRICTION"
+  },
+  "SYN-0040": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "YES",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE_WITH_RESTRICTION"
+  },
+  "SYN-0118": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "YES",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE_WITH_RESTRICTION"
+  },
+  "SYN-0003": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0435": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0183": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0012": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0047": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0120": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0006": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0057": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0254": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0041": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0318": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0227": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0080": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0471": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0248": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "YES",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "POA_REQUIRED"
+  },
+  "SYN-0005": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "YES",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "POA_REQUIRED"
+  },
+  "SYN-0267": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "YES",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "POA_REQUIRED"
+  },
+  "SYN-0335": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "YES",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "POA_REQUIRED"
+  },
+  "SYN-0031": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "YES",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "POA_REQUIRED"
+  },
+  "SYN-0223": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "YES",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "POA_REQUIRED"
+  },
+  "SYN-0349": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "YES",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "POA_REQUIRED"
+  },
+  "SYN-0115": {
+    "votability": "NOT_VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "NOT_VOTABLE"
+  },
+  "SYN-0009": {
+    "votability": "NOT_VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "NOT_VOTABLE"
+  },
+  "SYN-0146": {
+    "votability": "NOT_VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "NOT_VOTABLE"
+  },
+  "SYN-0095": {
+    "votability": "NOT_VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "NOT_VOTABLE"
+  },
+  "SYN-0262": {
+    "votability": "NOT_VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "NOT_VOTABLE"
+  },
+  "SYN-0187": {
+    "votability": "VOTABLE",
+    "share_blocking": "YES",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "SHARE_BLOCKING"
+  },
+  "SYN-0310": {
+    "votability": "VOTABLE",
+    "share_blocking": "YES",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "SHARE_BLOCKING"
+  },
+  "SYN-0078": {
+    "votability": "VOTABLE",
+    "share_blocking": "YES",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "SHARE_BLOCKING"
+  },
+  "SYN-0282": {
+    "votability": "VOTABLE",
+    "share_blocking": "YES",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "SHARE_BLOCKING"
+  },
+  "SYN-0252": {
+    "votability": "VOTABLE",
+    "share_blocking": "YES",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "SHARE_BLOCKING"
+  },
+  "SYN-0037": {
+    "votability": "VOTABLE",
+    "share_blocking": "YES",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "SHARE_BLOCKING"
+  },
+  "SYN-0487": {
+    "votability": "VOTABLE",
+    "share_blocking": "YES",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "SHARE_BLOCKING"
+  },
+  "SYN-0339": {
+    "votability": "NOT_VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "NOT_VOTABLE"
+  },
+  "SYN-0291": {
+    "votability": "NOT_VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "NOT_VOTABLE"
+  },
+  "SYN-0260": {
+    "votability": "NOT_VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "NOT_VOTABLE"
+  },
+  "SYN-0364": {
+    "votability": "NOT_VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "NOT_VOTABLE"
+  },
+  "SYN-0198": {
+    "votability": "NOT_VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "NOT_VOTABLE"
+  },
+  "SYN-0418": {
+    "votability": "NOT_VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "NOT_VOTABLE"
+  },
+  "SYN-0172": {
+    "votability": "NOT_VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "NOT_VOTABLE"
+  },
+  "SYN-0347": {
+    "votability": "NOT_VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "NOT_VOTABLE"
+  },
+  "SYN-0203": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0131": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0354": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0370": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0499": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0382": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0077": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0401": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0408": {
+    "votability": "UNCERTAIN",
+    "share_blocking": "UNKNOWN",
+    "poa_required": "UNKNOWN",
+    "other_restriction": "UNKNOWN",
+    "deadline_status": "UNKNOWN",
+    "classification": "UNCERTAIN_MANUAL_REVIEW"
+  },
+  "SYN-0180": {
+    "votability": "UNCERTAIN",
+    "share_blocking": "UNKNOWN",
+    "poa_required": "UNKNOWN",
+    "other_restriction": "UNKNOWN",
+    "deadline_status": "UNKNOWN",
+    "classification": "UNCERTAIN_MANUAL_REVIEW"
+  },
+  "SYN-0300": {
+    "votability": "UNCERTAIN",
+    "share_blocking": "UNKNOWN",
+    "poa_required": "UNKNOWN",
+    "other_restriction": "UNKNOWN",
+    "deadline_status": "UNKNOWN",
+    "classification": "UNCERTAIN_MANUAL_REVIEW"
+  },
+  "SYN-0369": {
+    "votability": "UNCERTAIN",
+    "share_blocking": "UNKNOWN",
+    "poa_required": "UNKNOWN",
+    "other_restriction": "UNKNOWN",
+    "deadline_status": "UNKNOWN",
+    "classification": "UNCERTAIN_MANUAL_REVIEW"
+  },
+  "SYN-0496": {
+    "votability": "UNCERTAIN",
+    "share_blocking": "UNKNOWN",
+    "poa_required": "UNKNOWN",
+    "other_restriction": "UNKNOWN",
+    "deadline_status": "UNKNOWN",
+    "classification": "UNCERTAIN_MANUAL_REVIEW"
+  },
+  "SYN-0122": {
+    "votability": "UNCERTAIN",
+    "share_blocking": "UNKNOWN",
+    "poa_required": "UNKNOWN",
+    "other_restriction": "UNKNOWN",
+    "deadline_status": "UNKNOWN",
+    "classification": "UNCERTAIN_MANUAL_REVIEW"
+  },
+  "SYN-0465": {
+    "votability": "UNCERTAIN",
+    "share_blocking": "UNKNOWN",
+    "poa_required": "UNKNOWN",
+    "other_restriction": "UNKNOWN",
+    "deadline_status": "UNKNOWN",
+    "classification": "UNCERTAIN_MANUAL_REVIEW"
+  },
+  "SYN-0355": {
+    "votability": "UNCERTAIN",
+    "share_blocking": "UNKNOWN",
+    "poa_required": "UNKNOWN",
+    "other_restriction": "UNKNOWN",
+    "deadline_status": "UNKNOWN",
+    "classification": "UNCERTAIN_MANUAL_REVIEW"
+  },
+  "SYN-0395": {
+    "votability": "UNCERTAIN",
+    "share_blocking": "UNKNOWN",
+    "poa_required": "UNKNOWN",
+    "other_restriction": "UNKNOWN",
+    "deadline_status": "UNKNOWN",
+    "classification": "UNCERTAIN_MANUAL_REVIEW"
+  },
+  "SYN-0099": {
+    "votability": "VOTABLE",
+    "share_blocking": "YES",
+    "poa_required": "YES",
+    "other_restriction": "YES",
+    "deadline_status": "OPEN",
+    "classification": "SHARE_BLOCKING"
+  },
+  "SYN-0038": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "YES",
+    "other_restriction": "YES",
+    "deadline_status": "OPEN",
+    "classification": "POA_REQUIRED"
+  },
+  "SYN-0070": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "YES",
+    "other_restriction": "YES",
+    "deadline_status": "OPEN",
+    "classification": "POA_REQUIRED"
+  },
+  "SYN-0160": {
+    "votability": "VOTABLE",
+    "share_blocking": "YES",
+    "poa_required": "NO",
+    "other_restriction": "YES",
+    "deadline_status": "OPEN",
+    "classification": "SHARE_BLOCKING"
+  },
+  "SYN-0253": {
+    "votability": "VOTABLE",
+    "share_blocking": "YES",
+    "poa_required": "NO",
+    "other_restriction": "YES",
+    "deadline_status": "OPEN",
+    "classification": "SHARE_BLOCKING"
+  },
+  "SYN-0196": {
+    "votability": "VOTABLE",
+    "share_blocking": "YES",
+    "poa_required": "YES",
+    "other_restriction": "YES",
+    "deadline_status": "OPEN",
+    "classification": "SHARE_BLOCKING"
+  },
+  "SYN-0096": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0143": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0221": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "PASSED",
+    "classification": "DEADLINE_PASSED"
+  },
+  "SYN-0376": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "PASSED",
+    "classification": "DEADLINE_PASSED"
+  },
+  "SYN-0473": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "PASSED",
+    "classification": "DEADLINE_PASSED"
+  },
+  "SYN-0312": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "PASSED",
+    "classification": "DEADLINE_PASSED"
+  },
+  "SYN-0313": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "PASSED",
+    "classification": "DEADLINE_PASSED"
+  },
+  "SYN-0023": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "PASSED",
+    "classification": "DEADLINE_PASSED"
+  },
+  "SYN-0097": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "PASSED",
+    "classification": "DEADLINE_PASSED"
+  },
+  "SYN-0028": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "PASSED",
+    "classification": "DEADLINE_PASSED"
+  },
+  "SYN-0372": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "YES",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE_WITH_RESTRICTION"
+  },
+  "SYN-0125": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "YES",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE_WITH_RESTRICTION"
+  },
+  "SYN-0085": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "YES",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE_WITH_RESTRICTION"
+  },
+  "SYN-0439": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "YES",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE_WITH_RESTRICTION"
+  },
+  "SYN-0053": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "YES",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE_WITH_RESTRICTION"
+  },
+  "SYN-0472": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "YES",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE_WITH_RESTRICTION"
+  },
+  "SYN-0256": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "YES",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE_WITH_RESTRICTION"
+  },
+  "SYN-0414": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0139": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0338": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0289": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "NO",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE"
+  },
+  "SYN-0201": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "YES",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE_WITH_RESTRICTION"
+  },
+  "SYN-0234": {
+    "votability": "VOTABLE",
+    "share_blocking": "NO",
+    "poa_required": "NO",
+    "other_restriction": "YES",
+    "deadline_status": "OPEN",
+    "classification": "VOTABLE_WITH_RESTRICTION"
+  }
+}

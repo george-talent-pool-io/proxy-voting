@@ -1,0 +1,943 @@
+{
+  "created_at": "2026-10-16T19:09:54.046992+00:00",
+  "routing": {
+    "C": {
+      "min_score": null,
+      "min_margin": null
+    },
+    "E": {
+      "min_score": null,
+      "min_margin": null
+    }
+  },
+  "reconciliation_policies": {
+    "C": {},
+    "E": {}
+  },
+  "preference_evidence": {
+    "C": {
+      "votability": {
+        "disagreements": 2,
+        "laya_wins": 2,
+        "llm_wins": 0
+      }
+    },
+    "E": {
+      "votability": {
+        "disagreements": 3,
+        "laya_wins": 0,
+        "llm_wins": 3
+      }
+    }
+  },
+  "sweeps": {
+    "C": [
+      {
+        "routing": {
+          "min_score": null,
+          "min_margin": null
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": null,
+          "min_margin": 0.1
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": null,
+          "min_margin": 0.2
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": null,
+          "min_margin": 0.4
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.5,
+          "min_margin": null
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.5,
+          "min_margin": 0.1
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.5,
+          "min_margin": 0.2
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.5,
+          "min_margin": 0.4
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.7,
+          "min_margin": null
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.7,
+          "min_margin": 0.1
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.7,
+          "min_margin": 0.2
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.7,
+          "min_margin": 0.4
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.8,
+          "min_margin": null
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.8,
+          "min_margin": 0.1
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.8,
+          "min_margin": 0.2
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.8,
+          "min_margin": 0.4
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.9,
+          "min_margin": null
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.9,
+          "min_margin": 0.1
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.9,
+          "min_margin": 0.2
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.9,
+          "min_margin": 0.4
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.95,
+          "min_margin": null
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.95,
+          "min_margin": 0.1
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.95,
+          "min_margin": 0.2
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.95,
+          "min_margin": 0.4
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.98,
+          "min_margin": null
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.98,
+          "min_margin": 0.1
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.98,
+          "min_margin": 0.2
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.98,
+          "min_margin": 0.4
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.995,
+          "min_margin": null
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.995,
+          "min_margin": 0.1
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.995,
+          "min_margin": 0.2
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.995,
+          "min_margin": 0.4
+        },
+        "laya_only_coverage": 0.0,
+        "llm_escalation_rate": 1.0,
+        "combined_assertion_accuracy": 0.825,
+        "votability_false_negative_rate": 0.07999999999999996,
+        "median_latency_ms": 7654.86889553722,
+        "p95_latency_ms": 10622.43837537244,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      }
+    ],
+    "E": [
+      {
+        "routing": {
+          "min_score": null,
+          "min_margin": null
+        },
+        "laya_only_coverage": 0.32499999999999996,
+        "llm_escalation_rate": 0.675,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7418.249459005892,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": null,
+          "min_margin": 0.1
+        },
+        "laya_only_coverage": 0.32499999999999996,
+        "llm_escalation_rate": 0.675,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7418.249459005892,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": null,
+          "min_margin": 0.2
+        },
+        "laya_only_coverage": 0.32499999999999996,
+        "llm_escalation_rate": 0.675,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7418.249459005892,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": null,
+          "min_margin": 0.4
+        },
+        "laya_only_coverage": 0.32499999999999996,
+        "llm_escalation_rate": 0.675,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7418.249459005892,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.5,
+          "min_margin": null
+        },
+        "laya_only_coverage": 0.32499999999999996,
+        "llm_escalation_rate": 0.675,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7418.249459005892,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.5,
+          "min_margin": 0.1
+        },
+        "laya_only_coverage": 0.32499999999999996,
+        "llm_escalation_rate": 0.675,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7418.249459005892,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.5,
+          "min_margin": 0.2
+        },
+        "laya_only_coverage": 0.32499999999999996,
+        "llm_escalation_rate": 0.675,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7418.249459005892,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.5,
+          "min_margin": 0.4
+        },
+        "laya_only_coverage": 0.32499999999999996,
+        "llm_escalation_rate": 0.675,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7418.249459005892,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.7,
+          "min_margin": null
+        },
+        "laya_only_coverage": 0.32499999999999996,
+        "llm_escalation_rate": 0.675,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7418.249459005892,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.7,
+          "min_margin": 0.1
+        },
+        "laya_only_coverage": 0.32499999999999996,
+        "llm_escalation_rate": 0.675,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7418.249459005892,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.7,
+          "min_margin": 0.2
+        },
+        "laya_only_coverage": 0.32499999999999996,
+        "llm_escalation_rate": 0.675,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7418.249459005892,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.7,
+          "min_margin": 0.4
+        },
+        "laya_only_coverage": 0.32499999999999996,
+        "llm_escalation_rate": 0.675,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7418.249459005892,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.8,
+          "min_margin": null
+        },
+        "laya_only_coverage": 0.30000000000000004,
+        "llm_escalation_rate": 0.7,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7473.115437896922,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.8,
+          "min_margin": 0.1
+        },
+        "laya_only_coverage": 0.30000000000000004,
+        "llm_escalation_rate": 0.7,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7473.115437896922,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.8,
+          "min_margin": 0.2
+        },
+        "laya_only_coverage": 0.30000000000000004,
+        "llm_escalation_rate": 0.7,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7473.115437896922,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.8,
+          "min_margin": 0.4
+        },
+        "laya_only_coverage": 0.30000000000000004,
+        "llm_escalation_rate": 0.7,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7473.115437896922,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.9,
+          "min_margin": null
+        },
+        "laya_only_coverage": 0.30000000000000004,
+        "llm_escalation_rate": 0.7,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7473.115437896922,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.9,
+          "min_margin": 0.1
+        },
+        "laya_only_coverage": 0.30000000000000004,
+        "llm_escalation_rate": 0.7,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7473.115437896922,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.9,
+          "min_margin": 0.2
+        },
+        "laya_only_coverage": 0.30000000000000004,
+        "llm_escalation_rate": 0.7,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7473.115437896922,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.9,
+          "min_margin": 0.4
+        },
+        "laya_only_coverage": 0.30000000000000004,
+        "llm_escalation_rate": 0.7,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7473.115437896922,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.95,
+          "min_margin": null
+        },
+        "laya_only_coverage": 0.30000000000000004,
+        "llm_escalation_rate": 0.7,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7473.115437896922,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.95,
+          "min_margin": 0.1
+        },
+        "laya_only_coverage": 0.30000000000000004,
+        "llm_escalation_rate": 0.7,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7473.115437896922,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.95,
+          "min_margin": 0.2
+        },
+        "laya_only_coverage": 0.30000000000000004,
+        "llm_escalation_rate": 0.7,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7473.115437896922,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.95,
+          "min_margin": 0.4
+        },
+        "laya_only_coverage": 0.30000000000000004,
+        "llm_escalation_rate": 0.7,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7473.115437896922,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.98,
+          "min_margin": null
+        },
+        "laya_only_coverage": 0.30000000000000004,
+        "llm_escalation_rate": 0.7,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7473.115437896922,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.98,
+          "min_margin": 0.1
+        },
+        "laya_only_coverage": 0.30000000000000004,
+        "llm_escalation_rate": 0.7,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7473.115437896922,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.98,
+          "min_margin": 0.2
+        },
+        "laya_only_coverage": 0.30000000000000004,
+        "llm_escalation_rate": 0.7,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7473.115437896922,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.98,
+          "min_margin": 0.4
+        },
+        "laya_only_coverage": 0.30000000000000004,
+        "llm_escalation_rate": 0.7,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7473.115437896922,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.995,
+          "min_margin": null
+        },
+        "laya_only_coverage": 0.275,
+        "llm_escalation_rate": 0.725,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7511.48439606186,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.995,
+          "min_margin": 0.1
+        },
+        "laya_only_coverage": 0.275,
+        "llm_escalation_rate": 0.725,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7511.48439606186,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.995,
+          "min_margin": 0.2
+        },
+        "laya_only_coverage": 0.275,
+        "llm_escalation_rate": 0.725,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7511.48439606186,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      },
+      {
+        "routing": {
+          "min_score": 0.995,
+          "min_margin": 0.4
+        },
+        "laya_only_coverage": 0.275,
+        "llm_escalation_rate": 0.725,
+        "combined_assertion_accuracy": 0.7,
+        "votability_false_negative_rate": 0.0,
+        "median_latency_ms": 7511.48439606186,
+        "p95_latency_ms": 8878.805291140452,
+        "labelled_assertions": 200,
+        "unsupported_expanded_truth": "Not labelled in this validation file; no expanded accuracy claim"
+      }
+    ]
+  },
+  "validation_dataset_hash": "6bda3f41d1e7e4f0e5a03af12f286023489e137947bb5b7079a238cc3778d62e",
+  "prompt_hash": "264e2fc98de4a1f9a1dfe98daed9f42bc0da0e4822fac3b43f79ab97e104b4e4",
+  "limitations": [
+    "AI-authored labels; zero new expert reviews",
+    "Supplied validation overlaps historical training",
+    "Only legacy fields labelled on old synthetic data; expanded predicate gate not validated",
+    "All customer automation disabled"
+  ]
+}

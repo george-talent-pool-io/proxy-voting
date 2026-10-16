@@ -41,3 +41,6 @@ def client(db):
     from fastapi.testclient import TestClient
     from apps.api.main import app
     with TestClient(app) as client:yield client
+
+def pytest_configure(config):
+    config.addinivalue_line('markers','local_llm: opt-in integration tests executing the pinned real local generative model')

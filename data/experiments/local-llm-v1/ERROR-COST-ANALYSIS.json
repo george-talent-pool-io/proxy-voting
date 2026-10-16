@@ -1,0 +1,1949 @@
+{
+  "created_at": "2026-10-16T20:03:31.304708+00:00",
+  "datasets": {
+    "challenge": {
+      "A": {
+        "cases": 57,
+        "decision_fact_slots": 570,
+        "fact_resolution_attribution": {
+          "LAYA": 192,
+          "NOT_SUPPORTED": 342,
+          "UNRESOLVED": 36
+        },
+        "detector_kinds": {
+          "DETECTOR_NOT_RUN": 57
+        },
+        "laya_records_executed": 57,
+        "llm_invocations": 0,
+        "llm_invocation_rate": 0.0,
+        "human_review_required": 57,
+        "policy_uncertain_status": 21,
+        "laya_accepted_without_llm": 57,
+        "accepted_cases_satisfying_all_supplied_assertions": 30,
+        "accepted_wrong_cases": 27,
+        "accepted_labelled_assertions": 95,
+        "accepted_correct_assertions": 59,
+        "raw_llm_votability_distribution": {},
+        "invalid_evidence_quotations": 0,
+        "error_patterns": [
+          {
+            "field": "votability",
+            "expected": "VOTABLE",
+            "predicted": "UNCERTAIN",
+            "count": 12
+          },
+          {
+            "field": "share_blocking",
+            "expected": "NO",
+            "predicted": "YES",
+            "count": 3
+          },
+          {
+            "field": "other_restriction",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 3
+          },
+          {
+            "field": "votability",
+            "expected": "NOT_VOTABLE",
+            "predicted": "UNCERTAIN",
+            "count": 3
+          },
+          {
+            "field": "deadline_status",
+            "expected": "OPEN",
+            "predicted": "PASSED",
+            "count": 2
+          },
+          {
+            "field": "votability",
+            "expected": "NOT_VOTABLE",
+            "predicted": "VOTABLE",
+            "count": 2
+          },
+          {
+            "field": "deadline_status",
+            "expected": "UNKNOWN",
+            "predicted": "PASSED",
+            "count": 2
+          },
+          {
+            "field": "votability",
+            "expected": "UNCERTAIN",
+            "predicted": "VOTABLE",
+            "count": 2
+          },
+          {
+            "field": "deadline_status",
+            "expected": "UNKNOWN",
+            "predicted": "OPEN",
+            "count": 2
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE",
+            "predicted": "VOTABLE_WITH_RESTRICTION",
+            "count": 1
+          },
+          {
+            "field": "deadline_status",
+            "expected": "PASSED",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE_WITH_RESTRICTION",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 1
+          },
+          {
+            "field": "votability",
+            "expected": "VOTABLE",
+            "predicted": "NOT_VOTABLE",
+            "count": 1
+          },
+          {
+            "field": "poa_required",
+            "expected": "YES",
+            "predicted": "UNKNOWN",
+            "count": 1
+          }
+        ],
+        "note": "Accepted means no generator call in this experiment, NOT production auto-processing; every result still requires review."
+      },
+      "B": {
+        "cases": 57,
+        "decision_fact_slots": 570,
+        "fact_resolution_attribution": {
+          "LAYA": 227,
+          "NOT_SUPPORTED": 342,
+          "UNRESOLVED": 1
+        },
+        "detector_kinds": {
+          "DETECTOR_NOT_RUN": 57
+        },
+        "laya_records_executed": 57,
+        "llm_invocations": 0,
+        "llm_invocation_rate": 0.0,
+        "human_review_required": 57,
+        "policy_uncertain_status": 0,
+        "laya_accepted_without_llm": 57,
+        "accepted_cases_satisfying_all_supplied_assertions": 37,
+        "accepted_wrong_cases": 20,
+        "accepted_labelled_assertions": 95,
+        "accepted_correct_assertions": 73,
+        "raw_llm_votability_distribution": {},
+        "invalid_evidence_quotations": 0,
+        "error_patterns": [
+          {
+            "field": "deadline_status",
+            "expected": "UNKNOWN",
+            "predicted": "OPEN",
+            "count": 6
+          },
+          {
+            "field": "other_restriction",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 4
+          },
+          {
+            "field": "votability",
+            "expected": "UNCERTAIN",
+            "predicted": "VOTABLE",
+            "count": 3
+          },
+          {
+            "field": "deadline_status",
+            "expected": "PASSED",
+            "predicted": "OPEN",
+            "count": 3
+          },
+          {
+            "field": "votability",
+            "expected": "NOT_VOTABLE",
+            "predicted": "VOTABLE",
+            "count": 3
+          },
+          {
+            "field": "classification",
+            "expected": "UNCERTAIN_MANUAL_REVIEW",
+            "predicted": "VOTABLE",
+            "count": 1
+          },
+          {
+            "field": "share_blocking",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 1
+          },
+          {
+            "field": "poa_required",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 1
+          }
+        ],
+        "note": "Accepted means no generator call in this experiment, NOT production auto-processing; every result still requires review."
+      },
+      "C": {
+        "cases": 57,
+        "decision_fact_slots": 570,
+        "fact_resolution_attribution": {
+          "BOTH_MODELS_AGREE": 161,
+          "LOCAL_LLM": 342,
+          "LLM_EXTRACTION_PLUS_DETERMINISTIC_DATE": 7,
+          "UNRESOLVED": 58,
+          "DETERMINISTIC_DATE": 2
+        },
+        "detector_kinds": {
+          "DETECTOR_NOT_RUN": 57
+        },
+        "laya_records_executed": 57,
+        "llm_invocations": 57,
+        "llm_invocation_rate": 1.0,
+        "human_review_required": 57,
+        "policy_uncertain_status": 31,
+        "laya_accepted_without_llm": 0,
+        "accepted_cases_satisfying_all_supplied_assertions": 0,
+        "accepted_wrong_cases": 0,
+        "accepted_labelled_assertions": 0,
+        "accepted_correct_assertions": 0,
+        "raw_llm_votability_distribution": {
+          "VOTABLE": 38,
+          "NOT_VOTABLE": 11,
+          "UNCERTAIN": 8
+        },
+        "invalid_evidence_quotations": 4,
+        "error_patterns": [
+          {
+            "field": "votability",
+            "expected": "NOT_VOTABLE",
+            "predicted": "UNCERTAIN",
+            "count": 4
+          },
+          {
+            "field": "other_restriction",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 2
+          },
+          {
+            "field": "deadline_status",
+            "expected": "UNKNOWN",
+            "predicted": "PASSED",
+            "count": 1
+          },
+          {
+            "field": "share_blocking",
+            "expected": "YES",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "poa_required",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 1
+          },
+          {
+            "field": "votability",
+            "expected": "VOTABLE",
+            "predicted": "UNCERTAIN",
+            "count": 1
+          }
+        ],
+        "note": "Accepted means no generator call in this experiment, NOT production auto-processing; every result still requires review."
+      },
+      "D": {
+        "cases": 57,
+        "decision_fact_slots": 570,
+        "fact_resolution_attribution": {
+          "LOCAL_LLM": 427,
+          "LLM_EXTRACTION_PLUS_DETERMINISTIC_DATE": 7,
+          "UNRESOLVED": 134,
+          "DETERMINISTIC_DATE": 2
+        },
+        "detector_kinds": {
+          "DETECTOR_NOT_RUN": 57
+        },
+        "laya_records_executed": 0,
+        "llm_invocations": 57,
+        "llm_invocation_rate": 1.0,
+        "human_review_required": 57,
+        "policy_uncertain_status": 49,
+        "laya_accepted_without_llm": 0,
+        "accepted_cases_satisfying_all_supplied_assertions": 0,
+        "accepted_wrong_cases": 0,
+        "accepted_labelled_assertions": 0,
+        "accepted_correct_assertions": 0,
+        "raw_llm_votability_distribution": {
+          "VOTABLE": 17,
+          "UNCERTAIN": 40
+        },
+        "invalid_evidence_quotations": 2,
+        "error_patterns": [
+          {
+            "field": "votability",
+            "expected": "VOTABLE",
+            "predicted": "UNCERTAIN",
+            "count": 19
+          },
+          {
+            "field": "votability",
+            "expected": "NOT_VOTABLE",
+            "predicted": "UNCERTAIN",
+            "count": 15
+          },
+          {
+            "field": "classification",
+            "expected": "NOT_VOTABLE",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 1
+          },
+          {
+            "field": "other_restriction",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 1
+          },
+          {
+            "field": "deadline_status",
+            "expected": "UNKNOWN",
+            "predicted": "PASSED",
+            "count": 1
+          }
+        ],
+        "note": "Accepted means no generator call in this experiment, NOT production auto-processing; every result still requires review."
+      },
+      "E": {
+        "cases": 57,
+        "decision_fact_slots": 570,
+        "fact_resolution_attribution": {
+          "LAYA": 378,
+          "DETERMINISTIC_DATE": 8,
+          "BOTH_MODELS_AGREE": 102,
+          "LOCAL_LLM": 11,
+          "UNRESOLVED": 70,
+          "LLM_EXTRACTION_PLUS_DETERMINISTIC_DATE": 1
+        },
+        "detector_kinds": {
+          "UNSTRUCTURED_NOTICE": 57
+        },
+        "laya_records_executed": 57,
+        "llm_invocations": 15,
+        "llm_invocation_rate": 0.2631578947368421,
+        "human_review_required": 57,
+        "policy_uncertain_status": 43,
+        "laya_accepted_without_llm": 42,
+        "accepted_cases_satisfying_all_supplied_assertions": 29,
+        "accepted_wrong_cases": 13,
+        "accepted_labelled_assertions": 71,
+        "accepted_correct_assertions": 57,
+        "raw_llm_votability_distribution": {
+          "VOTABLE": 5,
+          "UNCERTAIN": 10
+        },
+        "invalid_evidence_quotations": 3,
+        "error_patterns": [
+          {
+            "field": "votability",
+            "expected": "NOT_VOTABLE",
+            "predicted": "UNCERTAIN",
+            "count": 7
+          },
+          {
+            "field": "votability",
+            "expected": "NOT_VOTABLE",
+            "predicted": "VOTABLE",
+            "count": 6
+          },
+          {
+            "field": "other_restriction",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 4
+          },
+          {
+            "field": "votability",
+            "expected": "UNCERTAIN",
+            "predicted": "VOTABLE",
+            "count": 2
+          },
+          {
+            "field": "classification",
+            "expected": "NOT_VOTABLE",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 1
+          },
+          {
+            "field": "poa_required",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "votability",
+            "expected": "VOTABLE",
+            "predicted": "UNCERTAIN",
+            "count": 1
+          },
+          {
+            "field": "deadline_status",
+            "expected": "UNKNOWN",
+            "predicted": "PASSED",
+            "count": 1
+          },
+          {
+            "field": "poa_required",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 1
+          }
+        ],
+        "note": "Accepted means no generator call in this experiment, NOT production auto-processing; every result still requires review."
+      }
+    },
+    "synthetic-development": {
+      "A": {
+        "cases": 100,
+        "decision_fact_slots": 1000,
+        "fact_resolution_attribution": {
+          "LAYA": 361,
+          "UNRESOLVED": 39,
+          "NOT_SUPPORTED": 600
+        },
+        "detector_kinds": {
+          "DETECTOR_NOT_RUN": 100
+        },
+        "laya_records_executed": 100,
+        "llm_invocations": 0,
+        "llm_invocation_rate": 0.0,
+        "human_review_required": 100,
+        "policy_uncertain_status": 26,
+        "laya_accepted_without_llm": 100,
+        "accepted_cases_satisfying_all_supplied_assertions": 6,
+        "accepted_wrong_cases": 94,
+        "accepted_labelled_assertions": 600,
+        "accepted_correct_assertions": 316,
+        "raw_llm_votability_distribution": {},
+        "invalid_evidence_quotations": 0,
+        "error_patterns": [
+          {
+            "field": "share_blocking",
+            "expected": "NO",
+            "predicted": "YES",
+            "count": 56
+          },
+          {
+            "field": "deadline_status",
+            "expected": "OPEN",
+            "predicted": "PASSED",
+            "count": 29
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE",
+            "predicted": "VOTABLE_WITH_RESTRICTION",
+            "count": 21
+          },
+          {
+            "field": "other_restriction",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 19
+          },
+          {
+            "field": "votability",
+            "expected": "VOTABLE",
+            "predicted": "UNCERTAIN",
+            "count": 17
+          },
+          {
+            "field": "poa_required",
+            "expected": "NO",
+            "predicted": "YES",
+            "count": 14
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE_WITH_RESTRICTION",
+            "predicted": "DEADLINE_PASSED",
+            "count": 11
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE_WITH_RESTRICTION",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 10
+          },
+          {
+            "field": "deadline_status",
+            "expected": "OPEN",
+            "predicted": "UNKNOWN",
+            "count": 9
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 8
+          },
+          {
+            "field": "other_restriction",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 8
+          },
+          {
+            "field": "other_restriction",
+            "expected": "NO",
+            "predicted": "YES",
+            "count": 8
+          },
+          {
+            "field": "poa_required",
+            "expected": "UNKNOWN",
+            "predicted": "NO",
+            "count": 8
+          },
+          {
+            "field": "other_restriction",
+            "expected": "UNKNOWN",
+            "predicted": "NO",
+            "count": 6
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE",
+            "predicted": "DEADLINE_PASSED",
+            "count": 5
+          },
+          {
+            "field": "share_blocking",
+            "expected": "UNKNOWN",
+            "predicted": "NO",
+            "count": 5
+          },
+          {
+            "field": "votability",
+            "expected": "UNCERTAIN",
+            "predicted": "VOTABLE",
+            "count": 5
+          },
+          {
+            "field": "deadline_status",
+            "expected": "UNKNOWN",
+            "predicted": "PASSED",
+            "count": 5
+          },
+          {
+            "field": "classification",
+            "expected": "UNCERTAIN_MANUAL_REVIEW",
+            "predicted": "DEADLINE_PASSED",
+            "count": 5
+          },
+          {
+            "field": "classification",
+            "expected": "DEADLINE_PASSED",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 5
+          },
+          {
+            "field": "share_blocking",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 4
+          },
+          {
+            "field": "votability",
+            "expected": "VOTABLE",
+            "predicted": "NOT_VOTABLE",
+            "count": 4
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE_WITH_RESTRICTION",
+            "predicted": "NOT_VOTABLE",
+            "count": 4
+          },
+          {
+            "field": "votability",
+            "expected": "UNCERTAIN",
+            "predicted": "NOT_VOTABLE",
+            "count": 3
+          },
+          {
+            "field": "classification",
+            "expected": "UNCERTAIN_MANUAL_REVIEW",
+            "predicted": "NOT_VOTABLE",
+            "count": 3
+          },
+          {
+            "field": "share_blocking",
+            "expected": "UNKNOWN",
+            "predicted": "YES",
+            "count": 3
+          },
+          {
+            "field": "votability",
+            "expected": "NOT_VOTABLE",
+            "predicted": "UNCERTAIN",
+            "count": 2
+          },
+          {
+            "field": "classification",
+            "expected": "NOT_VOTABLE",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 2
+          },
+          {
+            "field": "votability",
+            "expected": "NOT_VOTABLE",
+            "predicted": "VOTABLE",
+            "count": 2
+          },
+          {
+            "field": "classification",
+            "expected": "NOT_VOTABLE",
+            "predicted": "DEADLINE_PASSED",
+            "count": 2
+          },
+          {
+            "field": "poa_required",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 1
+          }
+        ],
+        "note": "Accepted means no generator call in this experiment, NOT production auto-processing; every result still requires review."
+      },
+      "B": {
+        "cases": 100,
+        "decision_fact_slots": 1000,
+        "fact_resolution_attribution": {
+          "LAYA": 364,
+          "NOT_SUPPORTED": 600,
+          "UNRESOLVED": 36
+        },
+        "detector_kinds": {
+          "DETECTOR_NOT_RUN": 100
+        },
+        "laya_records_executed": 100,
+        "llm_invocations": 0,
+        "llm_invocation_rate": 0.0,
+        "human_review_required": 100,
+        "policy_uncertain_status": 9,
+        "laya_accepted_without_llm": 100,
+        "accepted_cases_satisfying_all_supplied_assertions": 100,
+        "accepted_wrong_cases": 0,
+        "accepted_labelled_assertions": 600,
+        "accepted_correct_assertions": 600,
+        "raw_llm_votability_distribution": {},
+        "invalid_evidence_quotations": 0,
+        "error_patterns": [],
+        "note": "Accepted means no generator call in this experiment, NOT production auto-processing; every result still requires review."
+      },
+      "C": {
+        "cases": 100,
+        "decision_fact_slots": 1000,
+        "fact_resolution_attribution": {
+          "BOTH_MODELS_AGREE": 262,
+          "LOCAL_LLM": 545,
+          "UNRESOLVED": 183,
+          "LLM_EXTRACTION_PLUS_DETERMINISTIC_DATE": 6,
+          "DETERMINISTIC_DATE": 4
+        },
+        "detector_kinds": {
+          "DETECTOR_NOT_RUN": 100
+        },
+        "laya_records_executed": 100,
+        "llm_invocations": 100,
+        "llm_invocation_rate": 1.0,
+        "human_review_required": 100,
+        "policy_uncertain_status": 53,
+        "laya_accepted_without_llm": 0,
+        "accepted_cases_satisfying_all_supplied_assertions": 0,
+        "accepted_wrong_cases": 0,
+        "accepted_labelled_assertions": 0,
+        "accepted_correct_assertions": 0,
+        "raw_llm_votability_distribution": {
+          "VOTABLE": 78,
+          "NOT_VOTABLE": 12,
+          "UNCERTAIN": 10
+        },
+        "invalid_evidence_quotations": 12,
+        "error_patterns": [
+          {
+            "field": "deadline_status",
+            "expected": "OPEN",
+            "predicted": "UNKNOWN",
+            "count": 73
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 26
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE_WITH_RESTRICTION",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 9
+          },
+          {
+            "field": "deadline_status",
+            "expected": "PASSED",
+            "predicted": "UNKNOWN",
+            "count": 8
+          },
+          {
+            "field": "classification",
+            "expected": "DEADLINE_PASSED",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 8
+          },
+          {
+            "field": "other_restriction",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 7
+          },
+          {
+            "field": "votability",
+            "expected": "VOTABLE",
+            "predicted": "UNCERTAIN",
+            "count": 6
+          },
+          {
+            "field": "share_blocking",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 3
+          },
+          {
+            "field": "votability",
+            "expected": "NOT_VOTABLE",
+            "predicted": "UNCERTAIN",
+            "count": 1
+          },
+          {
+            "field": "classification",
+            "expected": "NOT_VOTABLE",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 1
+          },
+          {
+            "field": "share_blocking",
+            "expected": "YES",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "other_restriction",
+            "expected": "YES",
+            "predicted": "UNKNOWN",
+            "count": 1
+          }
+        ],
+        "note": "Accepted means no generator call in this experiment, NOT production auto-processing; every result still requires review."
+      },
+      "D": {
+        "cases": 100,
+        "decision_fact_slots": 1000,
+        "fact_resolution_attribution": {
+          "UNRESOLVED": 297,
+          "LOCAL_LLM": 695,
+          "LLM_EXTRACTION_PLUS_DETERMINISTIC_DATE": 3,
+          "DETERMINISTIC_DATE": 5
+        },
+        "detector_kinds": {
+          "DETECTOR_NOT_RUN": 100
+        },
+        "laya_records_executed": 0,
+        "llm_invocations": 100,
+        "llm_invocation_rate": 1.0,
+        "human_review_required": 100,
+        "policy_uncertain_status": 67,
+        "laya_accepted_without_llm": 0,
+        "accepted_cases_satisfying_all_supplied_assertions": 0,
+        "accepted_wrong_cases": 0,
+        "accepted_labelled_assertions": 0,
+        "accepted_correct_assertions": 0,
+        "raw_llm_votability_distribution": {
+          "UNCERTAIN": 40,
+          "VOTABLE": 60
+        },
+        "invalid_evidence_quotations": 37,
+        "error_patterns": [
+          {
+            "field": "deadline_status",
+            "expected": "OPEN",
+            "predicted": "UNKNOWN",
+            "count": 75
+          },
+          {
+            "field": "votability",
+            "expected": "VOTABLE",
+            "predicted": "UNCERTAIN",
+            "count": 31
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 28
+          },
+          {
+            "field": "votability",
+            "expected": "NOT_VOTABLE",
+            "predicted": "UNCERTAIN",
+            "count": 13
+          },
+          {
+            "field": "classification",
+            "expected": "NOT_VOTABLE",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 13
+          },
+          {
+            "field": "share_blocking",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 12
+          },
+          {
+            "field": "poa_required",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 11
+          },
+          {
+            "field": "other_restriction",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 11
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE_WITH_RESTRICTION",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 9
+          },
+          {
+            "field": "deadline_status",
+            "expected": "PASSED",
+            "predicted": "UNKNOWN",
+            "count": 8
+          },
+          {
+            "field": "classification",
+            "expected": "DEADLINE_PASSED",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 8
+          },
+          {
+            "field": "other_restriction",
+            "expected": "YES",
+            "predicted": "UNKNOWN",
+            "count": 5
+          },
+          {
+            "field": "other_restriction",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 4
+          },
+          {
+            "field": "share_blocking",
+            "expected": "UNKNOWN",
+            "predicted": "NO",
+            "count": 2
+          },
+          {
+            "field": "other_restriction",
+            "expected": "UNKNOWN",
+            "predicted": "NO",
+            "count": 2
+          },
+          {
+            "field": "poa_required",
+            "expected": "UNKNOWN",
+            "predicted": "NO",
+            "count": 1
+          },
+          {
+            "field": "poa_required",
+            "expected": "UNKNOWN",
+            "predicted": "YES",
+            "count": 1
+          },
+          {
+            "field": "poa_required",
+            "expected": "YES",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "share_blocking",
+            "expected": "YES",
+            "predicted": "UNKNOWN",
+            "count": 1
+          }
+        ],
+        "note": "Accepted means no generator call in this experiment, NOT production auto-processing; every result still requires review."
+      },
+      "E": {
+        "cases": 100,
+        "decision_fact_slots": 1000,
+        "fact_resolution_attribution": {
+          "LAYA": 576,
+          "UNRESOLVED": 167,
+          "BOTH_MODELS_AGREE": 216,
+          "LOCAL_LLM": 33,
+          "DETERMINISTIC_DATE": 8
+        },
+        "detector_kinds": {
+          "UNSTRUCTURED_NOTICE": 100
+        },
+        "laya_records_executed": 100,
+        "llm_invocations": 36,
+        "llm_invocation_rate": 0.36,
+        "human_review_required": 100,
+        "policy_uncertain_status": 80,
+        "laya_accepted_without_llm": 64,
+        "accepted_cases_satisfying_all_supplied_assertions": 8,
+        "accepted_wrong_cases": 56,
+        "accepted_labelled_assertions": 384,
+        "accepted_correct_assertions": 252,
+        "raw_llm_votability_distribution": {
+          "VOTABLE": 19,
+          "UNCERTAIN": 16,
+          "NOT_VOTABLE": 1
+        },
+        "invalid_evidence_quotations": 2,
+        "error_patterns": [
+          {
+            "field": "deadline_status",
+            "expected": "OPEN",
+            "predicted": "UNKNOWN",
+            "count": 75
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 28
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE_WITH_RESTRICTION",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 22
+          },
+          {
+            "field": "other_restriction",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 14
+          },
+          {
+            "field": "classification",
+            "expected": "NOT_VOTABLE",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 13
+          },
+          {
+            "field": "votability",
+            "expected": "NOT_VOTABLE",
+            "predicted": "UNCERTAIN",
+            "count": 10
+          },
+          {
+            "field": "other_restriction",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 8
+          },
+          {
+            "field": "deadline_status",
+            "expected": "PASSED",
+            "predicted": "UNKNOWN",
+            "count": 8
+          },
+          {
+            "field": "classification",
+            "expected": "DEADLINE_PASSED",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 8
+          },
+          {
+            "field": "votability",
+            "expected": "UNCERTAIN",
+            "predicted": "VOTABLE",
+            "count": 4
+          },
+          {
+            "field": "share_blocking",
+            "expected": "UNKNOWN",
+            "predicted": "NO",
+            "count": 4
+          },
+          {
+            "field": "poa_required",
+            "expected": "UNKNOWN",
+            "predicted": "NO",
+            "count": 4
+          },
+          {
+            "field": "other_restriction",
+            "expected": "UNKNOWN",
+            "predicted": "NO",
+            "count": 4
+          },
+          {
+            "field": "share_blocking",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 2
+          },
+          {
+            "field": "votability",
+            "expected": "NOT_VOTABLE",
+            "predicted": "VOTABLE",
+            "count": 2
+          },
+          {
+            "field": "other_restriction",
+            "expected": "YES",
+            "predicted": "UNKNOWN",
+            "count": 2
+          },
+          {
+            "field": "other_restriction",
+            "expected": "NO",
+            "predicted": "YES",
+            "count": 1
+          },
+          {
+            "field": "votability",
+            "expected": "VOTABLE",
+            "predicted": "UNCERTAIN",
+            "count": 1
+          }
+        ],
+        "note": "Accepted means no generator call in this experiment, NOT production auto-processing; every result still requires review."
+      }
+    },
+    "complete": {
+      "A": {
+        "cases": 48,
+        "decision_fact_slots": 480,
+        "fact_resolution_attribution": {
+          "UNRESOLVED": 12,
+          "LAYA": 180,
+          "NOT_SUPPORTED": 288
+        },
+        "detector_kinds": {
+          "DETECTOR_NOT_RUN": 48
+        },
+        "laya_records_executed": 48,
+        "llm_invocations": 0,
+        "llm_invocation_rate": 0.0,
+        "human_review_required": 48,
+        "policy_uncertain_status": 9,
+        "laya_accepted_without_llm": 48,
+        "accepted_cases_satisfying_all_supplied_assertions": 0,
+        "accepted_wrong_cases": 48,
+        "accepted_labelled_assertions": 528,
+        "accepted_correct_assertions": 90,
+        "raw_llm_votability_distribution": {},
+        "invalid_evidence_quotations": 0,
+        "error_patterns": [
+          {
+            "field": "registration_required",
+            "expected": "NO",
+            "predicted": "NOT_SUPPORTED",
+            "count": 45
+          },
+          {
+            "field": "beneficial_owner_disclosure_required",
+            "expected": "NO",
+            "predicted": "NOT_SUPPORTED",
+            "count": 45
+          },
+          {
+            "field": "holding_confirmation_required",
+            "expected": "NO",
+            "predicted": "NOT_SUPPORTED",
+            "count": 45
+          },
+          {
+            "field": "split_voting_restricted",
+            "expected": "NO",
+            "predicted": "NOT_SUPPORTED",
+            "count": 45
+          },
+          {
+            "field": "other_voting_restriction",
+            "expected": "NO",
+            "predicted": "NOT_SUPPORTED",
+            "count": 45
+          },
+          {
+            "field": "securities_lending_recall_required",
+            "expected": "NO",
+            "predicted": "NOT_SUPPORTED",
+            "count": 44
+          },
+          {
+            "field": "share_blocking",
+            "expected": "NO",
+            "predicted": "YES",
+            "count": 39
+          },
+          {
+            "field": "deadline_status",
+            "expected": "OPEN",
+            "predicted": "PASSED",
+            "count": 38
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE_WITH_RESTRICTION",
+            "predicted": "DEADLINE_PASSED",
+            "count": 16
+          },
+          {
+            "field": "poa_required",
+            "expected": "NO",
+            "predicted": "YES",
+            "count": 14
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE",
+            "predicted": "DEADLINE_PASSED",
+            "count": 13
+          },
+          {
+            "field": "votability",
+            "expected": "VOTABLE",
+            "predicted": "UNCERTAIN",
+            "count": 6
+          },
+          {
+            "field": "securities_lending_recall_required",
+            "expected": "YES",
+            "predicted": "NOT_SUPPORTED",
+            "count": 4
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE_WITH_RESTRICTION",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 3
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 3
+          },
+          {
+            "field": "registration_required",
+            "expected": "YES",
+            "predicted": "NOT_SUPPORTED",
+            "count": 3
+          },
+          {
+            "field": "beneficial_owner_disclosure_required",
+            "expected": "YES",
+            "predicted": "NOT_SUPPORTED",
+            "count": 3
+          },
+          {
+            "field": "holding_confirmation_required",
+            "expected": "YES",
+            "predicted": "NOT_SUPPORTED",
+            "count": 3
+          },
+          {
+            "field": "split_voting_restricted",
+            "expected": "YES",
+            "predicted": "NOT_SUPPORTED",
+            "count": 3
+          },
+          {
+            "field": "other_voting_restriction",
+            "expected": "YES",
+            "predicted": "NOT_SUPPORTED",
+            "count": 3
+          },
+          {
+            "field": "deadline_status",
+            "expected": "UNKNOWN",
+            "predicted": "PASSED",
+            "count": 3
+          },
+          {
+            "field": "classification",
+            "expected": "UNCERTAIN_MANUAL_REVIEW",
+            "predicted": "DEADLINE_PASSED",
+            "count": 2
+          },
+          {
+            "field": "votability",
+            "expected": "VOTABLE",
+            "predicted": "NOT_VOTABLE",
+            "count": 1
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE",
+            "predicted": "NOT_VOTABLE",
+            "count": 1
+          },
+          {
+            "field": "poa_required",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 1
+          },
+          {
+            "field": "deadline_status",
+            "expected": "UNKNOWN",
+            "predicted": "OPEN",
+            "count": 1
+          },
+          {
+            "field": "votability",
+            "expected": "NOT_VOTABLE",
+            "predicted": "UNCERTAIN",
+            "count": 1
+          },
+          {
+            "field": "classification",
+            "expected": "NOT_VOTABLE",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 1
+          },
+          {
+            "field": "share_blocking",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "poa_required",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "votability",
+            "expected": "UNCERTAIN",
+            "predicted": "VOTABLE",
+            "count": 1
+          },
+          {
+            "field": "poa_required",
+            "expected": "UNKNOWN",
+            "predicted": "NO",
+            "count": 1
+          },
+          {
+            "field": "share_blocking",
+            "expected": "UNKNOWN",
+            "predicted": "YES",
+            "count": 1
+          },
+          {
+            "field": "deadline_status",
+            "expected": "PASSED",
+            "predicted": "OPEN",
+            "count": 1
+          },
+          {
+            "field": "classification",
+            "expected": "DEADLINE_PASSED",
+            "predicted": "VOTABLE_WITH_RESTRICTION",
+            "count": 1
+          }
+        ],
+        "note": "Accepted means no generator call in this experiment, NOT production auto-processing; every result still requires review."
+      },
+      "B": {
+        "cases": 48,
+        "decision_fact_slots": 480,
+        "fact_resolution_attribution": {
+          "LAYA": 187,
+          "NOT_SUPPORTED": 288,
+          "UNRESOLVED": 5
+        },
+        "detector_kinds": {
+          "DETECTOR_NOT_RUN": 48
+        },
+        "laya_records_executed": 48,
+        "llm_invocations": 0,
+        "llm_invocation_rate": 0.0,
+        "human_review_required": 48,
+        "policy_uncertain_status": 2,
+        "laya_accepted_without_llm": 48,
+        "accepted_cases_satisfying_all_supplied_assertions": 0,
+        "accepted_wrong_cases": 48,
+        "accepted_labelled_assertions": 528,
+        "accepted_correct_assertions": 199,
+        "raw_llm_votability_distribution": {},
+        "invalid_evidence_quotations": 0,
+        "error_patterns": [
+          {
+            "field": "registration_required",
+            "expected": "NO",
+            "predicted": "NOT_SUPPORTED",
+            "count": 45
+          },
+          {
+            "field": "beneficial_owner_disclosure_required",
+            "expected": "NO",
+            "predicted": "NOT_SUPPORTED",
+            "count": 45
+          },
+          {
+            "field": "holding_confirmation_required",
+            "expected": "NO",
+            "predicted": "NOT_SUPPORTED",
+            "count": 45
+          },
+          {
+            "field": "split_voting_restricted",
+            "expected": "NO",
+            "predicted": "NOT_SUPPORTED",
+            "count": 45
+          },
+          {
+            "field": "other_voting_restriction",
+            "expected": "NO",
+            "predicted": "NOT_SUPPORTED",
+            "count": 45
+          },
+          {
+            "field": "securities_lending_recall_required",
+            "expected": "NO",
+            "predicted": "NOT_SUPPORTED",
+            "count": 44
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE_WITH_RESTRICTION",
+            "predicted": "VOTABLE",
+            "count": 19
+          },
+          {
+            "field": "deadline_status",
+            "expected": "UNKNOWN",
+            "predicted": "OPEN",
+            "count": 5
+          },
+          {
+            "field": "securities_lending_recall_required",
+            "expected": "YES",
+            "predicted": "NOT_SUPPORTED",
+            "count": 4
+          },
+          {
+            "field": "share_blocking",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 3
+          },
+          {
+            "field": "registration_required",
+            "expected": "YES",
+            "predicted": "NOT_SUPPORTED",
+            "count": 3
+          },
+          {
+            "field": "beneficial_owner_disclosure_required",
+            "expected": "YES",
+            "predicted": "NOT_SUPPORTED",
+            "count": 3
+          },
+          {
+            "field": "holding_confirmation_required",
+            "expected": "YES",
+            "predicted": "NOT_SUPPORTED",
+            "count": 3
+          },
+          {
+            "field": "split_voting_restricted",
+            "expected": "YES",
+            "predicted": "NOT_SUPPORTED",
+            "count": 3
+          },
+          {
+            "field": "other_voting_restriction",
+            "expected": "YES",
+            "predicted": "NOT_SUPPORTED",
+            "count": 3
+          },
+          {
+            "field": "poa_required",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 2
+          },
+          {
+            "field": "deadline_status",
+            "expected": "PASSED",
+            "predicted": "OPEN",
+            "count": 2
+          },
+          {
+            "field": "classification",
+            "expected": "DEADLINE_PASSED",
+            "predicted": "VOTABLE",
+            "count": 2
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE",
+            "predicted": "VOTABLE_WITH_RESTRICTION",
+            "count": 1
+          },
+          {
+            "field": "share_blocking",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "votability",
+            "expected": "UNCERTAIN",
+            "predicted": "VOTABLE",
+            "count": 1
+          },
+          {
+            "field": "poa_required",
+            "expected": "UNKNOWN",
+            "predicted": "NO",
+            "count": 1
+          },
+          {
+            "field": "classification",
+            "expected": "UNCERTAIN_MANUAL_REVIEW",
+            "predicted": "VOTABLE",
+            "count": 1
+          },
+          {
+            "field": "share_blocking",
+            "expected": "UNKNOWN",
+            "predicted": "NO",
+            "count": 1
+          },
+          {
+            "field": "classification",
+            "expected": "UNCERTAIN_MANUAL_REVIEW",
+            "predicted": "VOTABLE_WITH_RESTRICTION",
+            "count": 1
+          },
+          {
+            "field": "poa_required",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 1
+          }
+        ],
+        "note": "Accepted means no generator call in this experiment, NOT production auto-processing; every result still requires review."
+      },
+      "C": {
+        "cases": 48,
+        "decision_fact_slots": 480,
+        "fact_resolution_attribution": {
+          "BOTH_MODELS_AGREE": 133,
+          "UNRESOLVED": 34,
+          "LOCAL_LLM": 279,
+          "DETERMINISTIC_DATE": 26,
+          "LLM_EXTRACTION_PLUS_DETERMINISTIC_DATE": 8
+        },
+        "detector_kinds": {
+          "DETECTOR_NOT_RUN": 48
+        },
+        "laya_records_executed": 48,
+        "llm_invocations": 48,
+        "llm_invocation_rate": 1.0,
+        "human_review_required": 48,
+        "policy_uncertain_status": 11,
+        "laya_accepted_without_llm": 0,
+        "accepted_cases_satisfying_all_supplied_assertions": 0,
+        "accepted_wrong_cases": 0,
+        "accepted_labelled_assertions": 0,
+        "accepted_correct_assertions": 0,
+        "raw_llm_votability_distribution": {
+          "VOTABLE": 42,
+          "NOT_VOTABLE": 4,
+          "UNCERTAIN": 2
+        },
+        "invalid_evidence_quotations": 6,
+        "error_patterns": [
+          {
+            "field": "deadline_status",
+            "expected": "OPEN",
+            "predicted": "UNKNOWN",
+            "count": 8
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE_WITH_RESTRICTION",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 5
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE_WITH_RESTRICTION",
+            "predicted": "VOTABLE",
+            "count": 3
+          },
+          {
+            "field": "share_blocking",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 3
+          },
+          {
+            "field": "poa_required",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 3
+          },
+          {
+            "field": "other_voting_restriction",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 3
+          },
+          {
+            "field": "share_blocking",
+            "expected": "YES",
+            "predicted": "UNKNOWN",
+            "count": 2
+          },
+          {
+            "field": "registration_required",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 2
+          },
+          {
+            "field": "holding_confirmation_required",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 2
+          },
+          {
+            "field": "registration_required",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 2
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 2
+          },
+          {
+            "field": "other_voting_restriction",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 2
+          },
+          {
+            "field": "share_blocking",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 1
+          },
+          {
+            "field": "beneficial_owner_disclosure_required",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "holding_confirmation_required",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "split_voting_restricted",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "securities_lending_recall_required",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "share_blocking",
+            "expected": "UNKNOWN",
+            "predicted": "NO",
+            "count": 1
+          },
+          {
+            "field": "poa_required",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 1
+          }
+        ],
+        "note": "Accepted means no generator call in this experiment, NOT production auto-processing; every result still requires review."
+      },
+      "D": {
+        "cases": 48,
+        "decision_fact_slots": 480,
+        "fact_resolution_attribution": {
+          "LOCAL_LLM": 410,
+          "DETERMINISTIC_DATE": 27,
+          "LLM_EXTRACTION_PLUS_DETERMINISTIC_DATE": 7,
+          "UNRESOLVED": 36
+        },
+        "detector_kinds": {
+          "DETECTOR_NOT_RUN": 48
+        },
+        "laya_records_executed": 0,
+        "llm_invocations": 48,
+        "llm_invocation_rate": 1.0,
+        "human_review_required": 48,
+        "policy_uncertain_status": 13,
+        "laya_accepted_without_llm": 0,
+        "accepted_cases_satisfying_all_supplied_assertions": 0,
+        "accepted_wrong_cases": 0,
+        "accepted_labelled_assertions": 0,
+        "accepted_correct_assertions": 0,
+        "raw_llm_votability_distribution": {
+          "VOTABLE": 35,
+          "UNCERTAIN": 13
+        },
+        "invalid_evidence_quotations": 0,
+        "error_patterns": [
+          {
+            "field": "deadline_status",
+            "expected": "OPEN",
+            "predicted": "UNKNOWN",
+            "count": 8
+          },
+          {
+            "field": "votability",
+            "expected": "VOTABLE",
+            "predicted": "UNCERTAIN",
+            "count": 7
+          },
+          {
+            "field": "votability",
+            "expected": "NOT_VOTABLE",
+            "predicted": "UNCERTAIN",
+            "count": 4
+          },
+          {
+            "field": "classification",
+            "expected": "NOT_VOTABLE",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 4
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE_WITH_RESTRICTION",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 4
+          },
+          {
+            "field": "classification",
+            "expected": "DEADLINE_PASSED",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 2
+          },
+          {
+            "field": "share_blocking",
+            "expected": "NO",
+            "predicted": "YES",
+            "count": 1
+          },
+          {
+            "field": "other_voting_restriction",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 1
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE_WITH_RESTRICTION",
+            "predicted": "VOTABLE",
+            "count": 1
+          },
+          {
+            "field": "registration_required",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 1
+          },
+          {
+            "field": "share_blocking",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "poa_required",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "registration_required",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "beneficial_owner_disclosure_required",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "holding_confirmation_required",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "split_voting_restricted",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "securities_lending_recall_required",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "other_voting_restriction",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "share_blocking",
+            "expected": "UNKNOWN",
+            "predicted": "YES",
+            "count": 1
+          },
+          {
+            "field": "classification",
+            "expected": "UNCERTAIN_MANUAL_REVIEW",
+            "predicted": "VOTABLE_WITH_RESTRICTION",
+            "count": 1
+          }
+        ],
+        "note": "Accepted means no generator call in this experiment, NOT production auto-processing; every result still requires review."
+      },
+      "E": {
+        "cases": 48,
+        "decision_fact_slots": 480,
+        "fact_resolution_attribution": {
+          "BOTH_MODELS_AGREE": 217,
+          "LOCAL_LLM": 31,
+          "UNRESOLVED": 77,
+          "DETERMINISTIC_DATE": 40,
+          "LLM_EXTRACTION_PLUS_DETERMINISTIC_DATE": 2,
+          "LAYA": 105,
+          "AUTHORITATIVE_STRUCTURE": 8
+        },
+        "detector_kinds": {
+          "UNSTRUCTURED_NOTICE": 40,
+          "PARTIAL_ISO15022": 8
+        },
+        "laya_records_executed": 48,
+        "llm_invocations": 36,
+        "llm_invocation_rate": 0.75,
+        "human_review_required": 48,
+        "policy_uncertain_status": 30,
+        "laya_accepted_without_llm": 12,
+        "accepted_cases_satisfying_all_supplied_assertions": 3,
+        "accepted_wrong_cases": 9,
+        "accepted_labelled_assertions": 132,
+        "accepted_correct_assertions": 112,
+        "raw_llm_votability_distribution": {
+          "VOTABLE": 31,
+          "UNCERTAIN": 5
+        },
+        "invalid_evidence_quotations": 1,
+        "error_patterns": [
+          {
+            "field": "securities_lending_recall_required",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 23
+          },
+          {
+            "field": "registration_required",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 22
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 15
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE_WITH_RESTRICTION",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 9
+          },
+          {
+            "field": "classification",
+            "expected": "VOTABLE_WITH_RESTRICTION",
+            "predicted": "VOTABLE",
+            "count": 6
+          },
+          {
+            "field": "holding_confirmation_required",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 5
+          },
+          {
+            "field": "beneficial_owner_disclosure_required",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 4
+          },
+          {
+            "field": "other_voting_restriction",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 4
+          },
+          {
+            "field": "classification",
+            "expected": "NOT_VOTABLE",
+            "predicted": "UNCERTAIN_MANUAL_REVIEW",
+            "count": 4
+          },
+          {
+            "field": "other_voting_restriction",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 3
+          },
+          {
+            "field": "votability",
+            "expected": "NOT_VOTABLE",
+            "predicted": "UNCERTAIN",
+            "count": 3
+          },
+          {
+            "field": "beneficial_owner_disclosure_required",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 2
+          },
+          {
+            "field": "share_blocking",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 2
+          },
+          {
+            "field": "registration_required",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 2
+          },
+          {
+            "field": "securities_lending_recall_required",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 2
+          },
+          {
+            "field": "split_voting_restricted",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 2
+          },
+          {
+            "field": "classification",
+            "expected": "UNCERTAIN_MANUAL_REVIEW",
+            "predicted": "VOTABLE",
+            "count": 2
+          },
+          {
+            "field": "split_voting_restricted",
+            "expected": "YES",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "beneficial_owner_disclosure_required",
+            "expected": "YES",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "holding_confirmation_required",
+            "expected": "YES",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "split_voting_restricted",
+            "expected": "YES",
+            "predicted": "NO",
+            "count": 1
+          },
+          {
+            "field": "votability",
+            "expected": "NOT_VOTABLE",
+            "predicted": "VOTABLE",
+            "count": 1
+          },
+          {
+            "field": "poa_required",
+            "expected": "NO",
+            "predicted": "UNKNOWN",
+            "count": 1
+          },
+          {
+            "field": "poa_required",
+            "expected": "UNKNOWN",
+            "predicted": "NO",
+            "count": 1
+          },
+          {
+            "field": "share_blocking",
+            "expected": "UNKNOWN",
+            "predicted": "NO",
+            "count": 1
+          }
+        ],
+        "note": "Accepted means no generator call in this experiment, NOT production auto-processing; every result still requires review."
+      }
+    }
+  },
+  "fact_denominator": "Nine semantic predicates plus deadline for every record, including non-votable notices. Structure/rules do not receive credit for unrelated ISIN/reference fields. LLM date extraction plus deterministic comparison is not counted as purely deterministic.",
+  "source": "Attribution of non-UNKNOWN reported values, not certification that model facts are correct. Descriptive counts from actual frozen predictions; no generated causal explanations"
+}

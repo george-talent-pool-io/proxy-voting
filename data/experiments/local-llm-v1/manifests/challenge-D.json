@@ -1,0 +1,18 @@
+{
+  "run_id": "857af484-ca47-447b-92ad-6e3b6cb24b7f",
+  "architecture": "D",
+  "dataset": "challenge",
+  "dataset_hash": "2191a12968fdf3511ceaf2ded540b9d9dbfce3fd57b1a9e5c187e16a0f0d7ae7",
+  "prediction_file_sha256": "8d7e3db2b6fd1b598641c2ea2541453f1d43b99ab6e2c521c77b8c8ca11fa316",
+  "laya_checkpoint": null,
+  "llm_model": "glm-4.7-flash:latest",
+  "llm_quantisation": "Q4_K_M",
+  "prompt_version": "264e2fc98de4a1f9a1dfe98daed9f42bc0da0e4822fac3b43f79ab97e104b4e4",
+  "routing_config": null,
+  "rule_version": "semantic-decision-2",
+  "seed": 42,
+  "timestamp": "2026-10-16T19:17:53.601321+00:00",
+  "freeze_sha256": "c9f428087f3e5085ffb0a36e1cfbaf14a4470635e3b1c8b6f6f79644fc81aa12",
+  "posthoc_manifest_created_at": "2026-10-16T20:30:59.958706+00:00",
+  "runtime_nondeterminism": "Temperature zero / fixed seed; finite reproducibility probes do not guarantee universal device determinism."
+}

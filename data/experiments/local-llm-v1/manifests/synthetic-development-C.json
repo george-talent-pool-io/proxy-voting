@@ -1,0 +1,26 @@
+{
+  "run_id": "673677a8-2389-4238-abe0-7a21224daf20",
+  "architecture": "C",
+  "dataset": "synthetic-development",
+  "dataset_hash": "a0e0c10489a8e37b17b8c1b436de9b2b9ea54d76949396a111d11614af2bc4d7",
+  "prediction_file_sha256": "1b09c9ad726a1816fe0fc61d6cd7e2e3cd91f18779be0086d456fc4d3978afe4",
+  "laya_checkpoint": "data/models/supplied-synthetic-v1/encoder-4ep",
+  "llm_model": "glm-4.7-flash:latest",
+  "llm_quantisation": "Q4_K_M",
+  "prompt_version": "264e2fc98de4a1f9a1dfe98daed9f42bc0da0e4822fac3b43f79ab97e104b4e4",
+  "routing_config": {
+    "min_score": null,
+    "min_margin": null,
+    "unknown": true,
+    "unsupported": true,
+    "conflict": true,
+    "max_chars": 12000,
+    "require_positive_evidence": false
+  },
+  "rule_version": "semantic-decision-2",
+  "seed": 42,
+  "timestamp": "2026-10-16T19:24:46.957300+00:00",
+  "freeze_sha256": "c9f428087f3e5085ffb0a36e1cfbaf14a4470635e3b1c8b6f6f79644fc81aa12",
+  "posthoc_manifest_created_at": "2026-10-16T20:31:00.407730+00:00",
+  "runtime_nondeterminism": "Temperature zero / fixed seed; finite reproducibility probes do not guarantee universal device determinism."
+}

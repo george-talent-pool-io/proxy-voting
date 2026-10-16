@@ -1,0 +1,86 @@
+{
+  "verified_at": "2026-10-16T20:41:44.947472+00:00",
+  "phase_completion_gate": "MET_FOR_RESEARCH_IMPLEMENTATION_AND_REQUESTED_CONTROLLED_EXPERIMENT_NOT_PRODUCTION",
+  "frozen_inference_files_verified": 60,
+  "prediction_rows": 1025,
+  "timed_real_llm_invocations": 497,
+  "all_five_arms_same_inputs_truth": true,
+  "per_arm_manifests": 15,
+  "raw_model_scores_and_evidence_preserved": true,
+  "real_local_model_tests": {
+    "passed": 13,
+    "runtime_seconds": 86.56,
+    "model": {
+      "runtime": "ollama",
+      "base_url": "http://127.0.0.1:11434",
+      "runtime_version": "0.34.3",
+      "model": "glm-4.7-flash:latest",
+      "checkpoint": "zai-org/GLM-4.7-Flash",
+      "model_digest": "d1a8a26252f18b34301218d22abd2620a65b85ba4b78987842eb157e01321222",
+      "parameter_count": 29943393920,
+      "quantisation": "Q4_K_M",
+      "licence": "MIT",
+      "num_ctx": 16384,
+      "num_predict": 2048,
+      "temperature": 0,
+      "seed": 42,
+      "think": false,
+      "timeout_seconds": 180,
+      "keep_alive": "30m"
+    }
+  },
+  "software_tests_passed": 1920,
+  "browser_tests_passed": 18,
+  "old_software_and_browser_regressions": 0,
+  "unchanged_authored_model_quality_failures": {
+    "base": 27,
+    "fine_tuned": 20,
+    "total": 47,
+    "failures_are_retained": true
+  },
+  "repeatability": {
+    "raw_text_stable": 17,
+    "parsed_result_stable": 17,
+    "semantic_labels_stable": 20,
+    "final_decision_stable": 20
+  },
+  "repeatability_cases": 20,
+  "repetitions_per_case": 3,
+  "oracle_analysis_completed": true,
+  "blocking_investigation_completed": true,
+  "latency_resource_probes_completed": true,
+  "live_notice_path_and_restart": {
+    "record_id": "alpaca_corrective:2009",
+    "run_id": "8165ffe5-e91c-43a2-8c74-2fe52d8281cc",
+    "trace_identical_after_restart": true,
+    "default_architecture": "LEGACY_LAYA",
+    "llm_enabled": false,
+    "automation_enabled": false,
+    "historical_source_count": 7683
+  },
+  "gui_trace_from_persisted_data": true,
+  "gui_model_lab_same_case_comparison": true,
+  "default_architecture": "LEGACY_LAYA",
+  "llm_enabled_default": false,
+  "automation_enabled": false,
+  "customer_accuracy": null,
+  "limitations": [
+    "No representative expert-labelled production benchmark",
+    "Old synthetic test is exposed and duplicate-contaminated",
+    "Challenge partial assertion counts are not final-status accuracy",
+    "Optional schema repair is a later application-only condition, unused in frozen A–E",
+    "Configured new architecture is invoked by explicit per-notice action; historical bulk benchmark endpoint remains legacy"
+  ],
+  "required_reports_sha256": {
+    "LOCAL_LLM_SELECTION.md": "e8f43f6093b3ea15d814b94aad4416700c9b2f7b2d2174163f190b23792d931d",
+    "LAYA_LLM_ARCHITECTURE_EVALUATION.md": "2af552bb67821ef117c3c8844735464140b54332ab2fb770494d698261b841c4",
+    "ARCHITECTURE_COMPARISON_ERRORS.md": "7393fa2986e0e698e48f7630c2929946c37c1bd5769e3919117e3abbfc16f7d9",
+    "BLOCKING_FALSE_NEGATIVE_ANALYSIS.md": "9dec6ecb03a15633d0879f126e87c06a7bf082318c1a53608330173bb27bcec3"
+  },
+  "test_logs_sha256": {
+    "software": "55532e7a99ba38fa366c3c8bfa516a8ee884ba720a9f7714c46bb91a12dbf666",
+    "browser": "a049c03bd4228b63b91a54f12db436b9cbf0801edc4fe2a3cb3b3d2731dce270",
+    "real_local_model": "698ba77238a1f72b80b871cb41ea7bfabf29c228341ce0008e466b947bf6b853",
+    "retained_model_quality": "1f555e9e124934e6f4fa54acb452f57db132d7f54758671bfa803f9f9d896990"
+  }
+}

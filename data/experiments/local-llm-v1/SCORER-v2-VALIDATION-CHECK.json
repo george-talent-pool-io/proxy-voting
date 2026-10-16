@@ -1,0 +1,9 @@
+{
+  "C_corrected_assertion_accuracy": 0.81,
+  "C_original_assertion_accuracy": 0.825,
+  "C_all_routing_settings_escalate_every_case": true,
+  "C_selected_threshold_ranking_unchanged": true,
+  "E_projection_unchanged": true,
+  "disagreement_preferences": "Unchanged; none selected on direct common predicates",
+  "models_prompts_training_criteria_unchanged": true
+}

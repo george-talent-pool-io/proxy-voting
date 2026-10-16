@@ -12,3 +12,18 @@ def test_run(*args,**kwargs):
     return original_run(*args,config=config,classifier_factory=lambda c:LayaClassifier(c,agent=ContractAgent()),**kwargs)
 batches.run_batch=test_run
 from apps.api.main import app
+
+# Explicit software-contract fixture for persisted Notice Detail execution tests.
+# Real-model inference is tested separately under the local_llm marker.
+os.environ['CLASSIFICATION_ARCHITECTURE']='FULL_HYBRID'
+os.environ['LLM_ENABLED']='false'
+import semantic_pipeline.experiment as semantic_experiment
+_original_laya_for=semantic_experiment.laya_for
+class _SemanticContractModel:
+    def analyse(self,text):
+        from tests.unit.test_semantic_pipeline import specialist
+        return specialist('UNKNOWN')
+semantic_experiment.laya_for=lambda arm:_SemanticContractModel() if arm=='E' else _original_laya_for(arm)
+from apps.api import semantic_views
+semantic_views.ROOT=Path(os.environ['VOTING_DB']).parent
+(semantic_views.ROOT/'data').mkdir(exist_ok=True)

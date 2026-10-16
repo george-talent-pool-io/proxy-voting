@@ -1,0 +1,18 @@
+{
+  "runtime": "ollama",
+  "base_url": "http://127.0.0.1:11434",
+  "runtime_version": "0.34.3",
+  "model": "glm-4.7-flash:latest",
+  "checkpoint": "zai-org/GLM-4.7-Flash",
+  "model_digest": "d1a8a26252f18b34301218d22abd2620a65b85ba4b78987842eb157e01321222",
+  "parameter_count": 29943393920,
+  "quantisation": "Q4_K_M",
+  "licence": "MIT",
+  "num_ctx": 16384,
+  "num_predict": 2048,
+  "temperature": 0,
+  "seed": 42,
+  "think": false,
+  "timeout_seconds": 180,
+  "keep_alive": "30m"
+}

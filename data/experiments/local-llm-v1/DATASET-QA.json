@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-10-16T19:55:40.185727+00:00",
+  "source_only": true,
+  "answer_key_opened": false,
+  "historical_unique_normalised_texts": {
+    "train": 214,
+    "validation": 84,
+    "blind": 80
+  },
+  "historical_test_rows_seen_in_train_or_validation": 39,
+  "selected_validation_n": 40,
+  "selected_validation_unique": 40,
+  "selected_validation_rows_seen_in_historical_training": 11,
+  "complete_n": 48,
+  "complete_unique": 48,
+  "complete_exact_overlap_ids": {
+    "train": [],
+    "validation": [],
+    "blind": [],
+    "challenge": []
+  },
+  "complete_near_overlap_85": [],
+  "maximum_complete_reference_word5_jaccard": 0.02,
+  "new_training": "NONE; benchmark labels never enter supervised training",
+  "limits": "Exact/lexical overlap checks do not prove absence of semantic paraphrases or pretraining exposure. The supplied old split remains leaky; it was not silently repartitioned."
+}

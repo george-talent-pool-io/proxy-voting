@@ -1,0 +1,22 @@
+{
+  "created_at": "2026-10-16T20:03:18.942053+00:00",
+  "files": {
+    "data/experiments/local-llm-v1/synthetic-development-C.jsonl": "1b09c9ad726a1816fe0fc61d6cd7e2e3cd91f18779be0086d456fc4d3978afe4",
+    "data/experiments/local-llm-v1/synthetic-development-A.jsonl": "4a075ac8ee34979e89c971159ed03f2f15a32ed5373b8e37eaecfa246dcc5b4f",
+    "data/experiments/local-llm-v1/synthetic-development-E.jsonl": "037d044f3bbf104129246ebb235ad9cb449decfd86b446fe9396c513e22c27b3",
+    "data/experiments/local-llm-v1/synthetic-development-B.jsonl": "81c2844200bdf79109188968a222ad3d0440c3bba1c9bf321bf24c3383135d76",
+    "data/experiments/local-llm-v1/MODEL-LOADS.jsonl": "d3a45ffdf2dc9fa8acce746400cbc14b29be786a6c60aa40889167916fece119",
+    "data/experiments/local-llm-v1/synthetic-development-D.jsonl": "a7363d5639d587c5e90d4dd9289be6b50f920bfc92c1a81abac7e5138c0aa4fc",
+    "data/experiments/local-llm-v1/challenge-E.jsonl": "3be2f3543ed0701bf330f517d8c096d5411ac7983668ecf586682847fc791578",
+    "data/experiments/local-llm-v1/complete-D.jsonl": "1b138a90ac39f61d391276b6b9a08472873bd2739a5ae1cdb73eb52f4aa5fa52",
+    "data/experiments/local-llm-v1/challenge-A.jsonl": "311320d99b2c86ec198c6e39a287bec1e396c7644300f4121fb0694fa83d457d",
+    "data/experiments/local-llm-v1/challenge-C.jsonl": "00ea20a4b075e73ae4bd81d19865362b6afe320fa147f40fed7cabb6ace6cf62",
+    "data/experiments/local-llm-v1/complete-B.jsonl": "12341b07719bac424dd6274ce271cddc0146507a2ffc7991fb36aaac87734703",
+    "data/experiments/local-llm-v1/challenge-D.jsonl": "8d7e3db2b6fd1b598641c2ea2541453f1d43b99ab6e2c521c77b8c8ca11fa316",
+    "data/experiments/local-llm-v1/complete-E.jsonl": "c3fd306ce090e3d1a633323583b6335db616aa422161dc6f44308a00bbedec91",
+    "data/experiments/local-llm-v1/challenge-B.jsonl": "cfc44a488fb04a92a1827b69b3242d211636e4b94227d9f45a4b2cbb7b57dc0c",
+    "data/experiments/local-llm-v1/complete-C.jsonl": "22dcd74381aa4995ef14672a95b359acf98442be76b3843b0bee98e6c68bc468",
+    "data/experiments/local-llm-v1/complete-A.jsonl": "525d48430d72011e97ad190b6e1139c8d44c2abfacaa0a5a5c414f55051fbfbd"
+  },
+  "synthetic_key_status": "Previously exposed; NOT BLIND / DEVELOPMENT ONLY"
+}

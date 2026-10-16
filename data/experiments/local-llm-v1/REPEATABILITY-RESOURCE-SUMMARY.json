@@ -1,0 +1,200 @@
+{
+  "created_at": "2026-10-16T20:34:02.660037+00:00",
+  "cases": [
+    {
+      "id": "SYN-0460",
+      "raw_text_stable": true,
+      "parsed_result_stable": true,
+      "semantic_labels_stable": true,
+      "final_decision_stable": true
+    },
+    {
+      "id": "SYN-0427",
+      "raw_text_stable": true,
+      "parsed_result_stable": true,
+      "semantic_labels_stable": true,
+      "final_decision_stable": true
+    },
+    {
+      "id": "SYN-0490",
+      "raw_text_stable": true,
+      "parsed_result_stable": true,
+      "semantic_labels_stable": true,
+      "final_decision_stable": true
+    },
+    {
+      "id": "SYN-0477",
+      "raw_text_stable": true,
+      "parsed_result_stable": true,
+      "semantic_labels_stable": true,
+      "final_decision_stable": true
+    },
+    {
+      "id": "SYN-0494",
+      "raw_text_stable": true,
+      "parsed_result_stable": true,
+      "semantic_labels_stable": true,
+      "final_decision_stable": true
+    },
+    {
+      "id": "SYN-0306",
+      "raw_text_stable": false,
+      "parsed_result_stable": false,
+      "semantic_labels_stable": true,
+      "final_decision_stable": true
+    },
+    {
+      "id": "SYN-0396",
+      "raw_text_stable": true,
+      "parsed_result_stable": true,
+      "semantic_labels_stable": true,
+      "final_decision_stable": true
+    },
+    {
+      "id": "SYN-0311",
+      "raw_text_stable": true,
+      "parsed_result_stable": true,
+      "semantic_labels_stable": true,
+      "final_decision_stable": true
+    },
+    {
+      "id": "SYN-0353",
+      "raw_text_stable": false,
+      "parsed_result_stable": false,
+      "semantic_labels_stable": true,
+      "final_decision_stable": true
+    },
+    {
+      "id": "SYN-0200",
+      "raw_text_stable": true,
+      "parsed_result_stable": true,
+      "semantic_labels_stable": true,
+      "final_decision_stable": true
+    },
+    {
+      "id": "SYN-0110",
+      "raw_text_stable": true,
+      "parsed_result_stable": true,
+      "semantic_labels_stable": true,
+      "final_decision_stable": true
+    },
+    {
+      "id": "SYN-0202",
+      "raw_text_stable": true,
+      "parsed_result_stable": true,
+      "semantic_labels_stable": true,
+      "final_decision_stable": true
+    },
+    {
+      "id": "SYN-0094",
+      "raw_text_stable": true,
+      "parsed_result_stable": true,
+      "semantic_labels_stable": true,
+      "final_decision_stable": true
+    },
+    {
+      "id": "SYN-0488",
+      "raw_text_stable": true,
+      "parsed_result_stable": true,
+      "semantic_labels_stable": true,
+      "final_decision_stable": true
+    },
+    {
+      "id": "SYN-0493",
+      "raw_text_stable": false,
+      "parsed_result_stable": false,
+      "semantic_labels_stable": true,
+      "final_decision_stable": true
+    },
+    {
+      "id": "SYN-0055",
+      "raw_text_stable": true,
+      "parsed_result_stable": true,
+      "semantic_labels_stable": true,
+      "final_decision_stable": true
+    },
+    {
+      "id": "SYN-0430",
+      "raw_text_stable": true,
+      "parsed_result_stable": true,
+      "semantic_labels_stable": true,
+      "final_decision_stable": true
+    },
+    {
+      "id": "SYN-0446",
+      "raw_text_stable": true,
+      "parsed_result_stable": true,
+      "semantic_labels_stable": true,
+      "final_decision_stable": true
+    },
+    {
+      "id": "SYN-0486",
+      "raw_text_stable": true,
+      "parsed_result_stable": true,
+      "semantic_labels_stable": true,
+      "final_decision_stable": true
+    },
+    {
+      "id": "SYN-0362",
+      "raw_text_stable": true,
+      "parsed_result_stable": true,
+      "semantic_labels_stable": true,
+      "final_decision_stable": true
+    }
+  ],
+  "unique_cases": 20,
+  "repetitions": 3,
+  "mode": "INDEPENDENT",
+  "calls": 60,
+  "wall_seconds_this_process": 324.1722092081327,
+  "process_peak_rss_bytes": {
+    "9271:Ollama": 44613632,
+    "9329:ollama": 35160064,
+    "66257:Python": 134463488
+  },
+  "memory_caveat": "Process RSS sampling, not total Apple unified model allocation; 100ms samples may miss shorter peaks.",
+  "runtime_model_allocation": {
+    "models": [
+      {
+        "name": "glm-4.7-flash:latest",
+        "model": "glm-4.7-flash:latest",
+        "size": 19989916548,
+        "digest": "d1a8a26252f18b34301218d22abd2620a65b85ba4b78987842eb157e01321222",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "glm4moelite",
+          "families": [
+            "glm4moelite"
+          ],
+          "parameter_size": "29.9B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-16T22:03:55.981648+01:00",
+        "size_vram": 19989916548,
+        "context_length": 16384
+      }
+    ]
+  },
+  "time_to_first_token": "NOT_AVAILABLE: nonstreaming runtime requests",
+  "model": {
+    "runtime": "ollama",
+    "base_url": "http://127.0.0.1:11434",
+    "runtime_version": "0.34.3",
+    "model": "glm-4.7-flash:latest",
+    "checkpoint": "zai-org/GLM-4.7-Flash",
+    "model_digest": "d1a8a26252f18b34301218d22abd2620a65b85ba4b78987842eb157e01321222",
+    "parameter_count": 29943393920,
+    "quantisation": "Q4_K_M",
+    "licence": "MIT",
+    "num_ctx": 16384,
+    "num_predict": 2048,
+    "temperature": 0,
+    "seed": 42,
+    "think": false,
+    "timeout_seconds": 180,
+    "keep_alive": "30m"
+  },
+  "settings_identical": true,
+  "scope": "Validation-only post-study diagnostic; finite repeatability is not proof of universal determinism."
+}

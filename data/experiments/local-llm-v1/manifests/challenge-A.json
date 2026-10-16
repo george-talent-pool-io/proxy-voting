@@ -1,0 +1,18 @@
+{
+  "run_id": "a5376bb1-7fa5-41d4-99ab-55bd92584ca4",
+  "architecture": "A",
+  "dataset": "challenge",
+  "dataset_hash": "2191a12968fdf3511ceaf2ded540b9d9dbfce3fd57b1a9e5c187e16a0f0d7ae7",
+  "prediction_file_sha256": "311320d99b2c86ec198c6e39a287bec1e396c7644300f4121fb0694fa83d457d",
+  "laya_checkpoint": "data/models/laya/multilingual",
+  "llm_model": null,
+  "llm_quantisation": null,
+  "prompt_version": null,
+  "routing_config": null,
+  "rule_version": "legacy-factorised-1",
+  "seed": 42,
+  "timestamp": "2026-10-16T19:11:48.023431+00:00",
+  "freeze_sha256": "c9f428087f3e5085ffb0a36e1cfbaf14a4470635e3b1c8b6f6f79644fc81aa12",
+  "posthoc_manifest_created_at": "2026-10-16T20:30:59.769268+00:00",
+  "runtime_nondeterminism": "Temperature zero / fixed seed; finite reproducibility probes do not guarantee universal device determinism."
+}

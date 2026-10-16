@@ -2,11 +2,11 @@
 
 A runnable local application for testing whether **Laya**, a small specialised, non-generative decision model, can classify shareholder voting notices reliably. FastAPI, SQLite and a restrained browser GUI provide source inspection, immutable experiment history, human review, golden labels, group-separated training and evaluation.
 
-**This is an experimental product demonstrator, not a validated voting service.** Its interface reports unknown accuracy as unknown and disables automatic processing by default. It does not substitute rules or a generative LLM for Laya.
+**This is an experimental product demonstrator, not a validated voting service.** Its interface reports unknown accuracy as unknown and disables automatic processing by default. Laya remains the primary specialist; an optional real local generative fallback and an explicitly separate LLM-only benchmark are available.
 
-Latest measured verification: **7,683 real source-row outputs, zero failures; 100 application tests and eight browser tests pass. Laya matches 30/57 authored semantic cases; 27 fail.** Automatic processing remains disabled. [Read the verification report](data/reports/VERIFICATION.md) for measurements, source limitations, the ordering/grouping fixes and real training/reproduction checks.
+Current verification: **1,920 software tests, 18 browser tests and 13 live local-model integration tests pass.** The controlled A–E experiment persisted **1,025 predictions** over 205 authored/synthetic records, including 497 actual local LLM invocations. The historical public baseline remains **7,683 unlabelled source-row outputs with zero failed rows**. Authored semantic quality failures remain visible; they are not software-test passes. Automatic processing remains disabled. [Read the controlled evaluation](data/reports/LAYA_LLM_ARCHITECTURE_EVALUATION.md) and [historical public-corpus verification](data/reports/VERIFICATION.md).
 
-Latest supervised research: **supplied synthetic test all-field exact match 6/100 → 100/100; unchanged semantic challenge 30/57 → 37/57.** The fine-tuned model still makes **12 challenge errors with policy score ≥98%**. The supplied test has known duplicate overlap and two previously exposed labels. **Automation remains disabled; no customer accuracy claim is supported.** See [the complete study](data/reports/LAYA_TRAINING_EVALUATION.md) and [every remaining challenge failure](data/reports/LAYA_FINETUNED_CHALLENGE_ERRORS.md).
+Historical supervised research: **supplied synthetic test all-supplied-field exact match 6/100 → 100/100; unchanged semantic challenge cases satisfying supplied partial assertions 30/57 → 37/57.** The fine-tuned model still makes **12 challenge errors with policy score ≥98%**. The supplied test has known duplicate overlap and two previously exposed labels. **Automation remains disabled; no customer accuracy claim is supported.** See [the complete study](data/reports/LAYA_TRAINING_EVALUATION.md) and [every remaining challenge failure](data/reports/LAYA_FINETUNED_CHALLENGE_ERRORS.md).
 
 ## Start the application
 
@@ -84,7 +84,7 @@ flowchart LR
     Split --> Training[Official Laya fine-tuning]
 ```
 
-`apps/web` is an accessible, buildless HTML/CSS/JavaScript frontend. This keeps installation small and gives the API and frontend the same origin. `apps/api` owns persistence and review transactions. `classifier` isolates SDK details behind `VotingClassifier`; evaluation consumes structured results, so future ModernBERT, rules, hybrid or separately enabled LLM experiments can use the same harness. Laya remains the only application model. The research directory also contains a separate local MiniLM encoder/logistic-head benchmark; it is never an application fallback.
+`apps/web` is an accessible, buildless HTML/CSS/JavaScript frontend. This keeps installation small and gives the API and frontend the same origin. `apps/api` owns persistence and review transactions. `classifier` isolates SDK details behind `VotingClassifier`; evaluation consumes structured results, so future ModernBERT, rules, hybrid or separately enabled LLM experiments can use the same harness. The historical batch path uses Laya. The versioned `semantic_pipeline` additionally supports real local fallback, explicit escalation/reconciliation and a separate independent-LLM benchmark. The research directory also contains a separate local MiniLM encoder/logistic-head benchmark; it is never an application fallback.
 
 SQLite stores immutable source records, run input manifests, one result or explicit error per input/run, and append-only human revisions. Database triggers reject changes/deletions to predictions, reviews, input manifests and run configuration. A failed classification is visible, never replaced by a fabricated result. Run status and measured benchmark fields are the mutable job lifecycle fields. This is an audit ledger, not cryptographically tamper-proof storage against a database administrator.
 
@@ -352,7 +352,7 @@ ISO fields, so these results do not establish a parsing benefit. Automation is o
 
 `hybrid/` contains a lossless experimental ISO15022 subset parser, routing trace,
 native narrow Laya predicates, passage aggregation/evidence, explicit decision rules,
-disabled semantic fallback and an append-only SQLite event ledger. No cloud LLM is
+disabled semantic fallback and an append-only SQLite event ledger in that historical namespace. The complete real local fallback is in `semantic_pipeline/` (see below). No cloud LLM is
 used. MT564/565/567/568 fields are read within the documented subset; MT566 is opaque
 confirmation history. This is not a FIN conformance validator: all structured fixtures
 remain PARTIAL, and unsupported data remains visible. Date-only/local cutoffs never
@@ -385,7 +385,7 @@ Run the additional checks after normal setup:
 
 ```bash
 uv pip install --python .venv/bin/python -r requirements-hybrid.txt
-.venv/bin/python -m pytest -m 'not model and not e2e' -q
+.venv/bin/python -m pytest -m 'not model and not e2e and not local_llm' -q
 RUN_E2E=1 .venv/bin/python -m pytest tests/e2e -q
 .venv/bin/python -m scripts.verify_iso
 ```
@@ -415,3 +415,70 @@ Latest hybrid verification includes a fresh-directory reproduction: both models'
 57 challenge and 100 validation native outputs are identical. Application/browser
 check counts and remaining semantic failures are recorded in the hybrid report.
 The live service adds an unknown-CAEV guard without changing the frozen benchmark.
+
+## Real local LLM and controlled A–E study
+
+The complete semantic route is implemented separately in `semantic_pipeline/`; the historical frozen `classifier/` and `hybrid/` remain benchmarkable. It uses a real local Ollama generator, not the earlier `DisabledFallback` stub. See [model selection](data/reports/LOCAL_LLM_SELECTION.md) and [controlled evaluation](data/reports/LAYA_LLM_ARCHITECTURE_EVALUATION.md).
+
+The initial checkpoint is `glm-4.7-flash:latest`, **Q4_K_M**, exact Ollama manifest `d1a8a26252f18b34301218d22abd2620a65b85ba4b78987842eb157e01321222`, Ollama **0.34.3**, on Apple Metal. The tag and runtime are verified before each call. A different digest/version requires a new experiment/configuration, not silent substitution. These weights were already installed; this phase downloads no model. The client accepts literal loopback addresses only, disables proxy/redirect handling and has no hosted inference path.
+
+Normal operation defaults to `LLM_ENABLED=false`. To allow explicit local semantic analyses, start with `LLM_ENABLED=true ./scripts/start.sh` after the pinned Ollama model/runtime is available. This enables model calls, **not automation**. POST `/api/semantic/analyse` with `{"text":"...","architecture":"E"}` runs the complete optional-parser / narrow-Laya / fallback / reconciliation / rules path and persists an append-only audit record under `data/semantic-runs/`. A/B remain frozen historical whole-text routes; C uses whole-text fine-tuned Laya with fallback; D uses the generator independently. No model gets expected labels. Large inputs that cannot fit the explicit context budget abstain; they are never silently truncated into LLM requests.
+
+The Model Performance page adds the controlled comparison and a source-linked stage-provenance/error view. Exact API evidence includes both model outputs, escalation reasons, original scores, validated quotes, conflicts, rules and final status. No LLM probability is invented. A source-exact quotation is provenance, not proof of correct interpretation.
+
+The staged experiment commands are:
+
+```sh
+# Use a NEW directory for another run. Existing files cannot be overwritten.
+export LAYA_AE_EXPERIMENT=data/experiments/local-llm-v2
+.venv/bin/python -m semantic_pipeline.experiment prepare
+.venv/bin/python -m scripts.snapshot_local_llm_runtime
+.venv/bin/python -m semantic_pipeline.experiment validate
+.venv/bin/python -m semantic_pipeline.experiment freeze
+.venv/bin/python -m semantic_pipeline.experiment evaluate
+.venv/bin/python -m scripts.score_local_llm_run --oracle  # saves EVALUATION.md inside this NEW run
+.venv/bin/python -m scripts.verify_local_llm_experiment
+.venv/bin/python -m semantic_pipeline.experiment verify
+```
+
+Validation uses 40 unique, deterministically stratified examples from the supplied validation CSV; no challenge/test tuning. Actual counterfactual fallback calls enable the threshold sweep. Independent and fallback prompts are separate. The code, criteria, prompt/schema, routing, reconciliation and checkpoint hashes freeze before test inference. Completed record prefixes can resume, with input-ID checks and one persisted run ID. Scoring checks all prediction commits before opening the historical answer key. For scored `v1`, use only `verify` and read its immutable artifacts; use a new directory for reproduction. The scoring wrapper keeps each new report inside its own experiment directory and preserves its original frozen-scorer report. The v1 customer-facing summary remains under `data/reports/`.
+
+Evaluation sources stay separate: **57 frozen authored cases with partial assertions**, the **100 previously exposed, duplicate-contaminated synthetic examples (NOT BLIND / DEVELOPMENT ONLY)**, and **48 newly authored fully labelled synthetic benchmark cases**, including eight standards-derived partial messages. Unlabelled predicates never count as correct; unsupported capabilities count as failures. Parser tests, raw semantic agreement and end-to-end status agreement have separate denominators. These sources establish no customer accuracy. All decisions still require human review.
+
+Additional real-model verification (requires the pinned local runtime/checkpoints): Reinstall `requirements-hybrid.txt` after any `uv sync`, as described above.
+
+```sh
+RUN_LOCAL_LLM=1 .venv/bin/python -m pytest tests/classifier/test_real_local_llm.py -q
+RUN_E2E=1 .venv/bin/python -m pytest tests/e2e -q
+.venv/bin/python -m pytest -m 'not model and not e2e and not local_llm' -q
+```
+
+The ordinary suite includes explicit test doubles for software contracts; those tests are never described as real-LLM evaluation. The opt-in generator and complete-path tests execute actual local models. Historical authored semantic failures remain visible and their expected labels are unchanged.
+
+
+### Configured application path and Decision Trace
+
+`CLASSIFICATION_ARCHITECTURE` selects `LEGACY_LAYA` (default), `FT_LAYA`, `LAYA_LLM`, `LLM_ONLY`, or `FULL_HYBRID`. `LLM_ENABLED=false` and automation disabled remain defaults. To explicitly exercise the local fallback application path:
+
+```sh
+LLM_ENABLED=true CLASSIFICATION_ARCHITECTURE=LAYA_LLM ./scripts/start.sh
+```
+
+Open a Notice Detail and use **Analyse notice with configured architecture**. The source is read from the persisted notice, a separate execution is saved, and the expandable **Decision Trace** shows both models, escalation, evidence, reconciliation, deadline/rules and review reasons. Reading/refreshing the trace never runs a model. Blind expert review hides it. Existing baseline batch jobs keep their original whole-text implementation; this flag controls the explicit per-notice action, not silent replacement of old batch history.
+
+`POST /api/semantic/analyse` accepts `{"record_id":"..."}` to use that configured architecture; an explicit A–E `architecture` overrides it for a local experiment. Text-only requests remain supported. Source text supplied with an existing record ID must match the saved source exactly. Every execution remains append-only and readable after restart. No new analysis becomes a golden label automatically.
+
+**Model Lab · internal** compares saved A–E outputs for the same notice/ground truth, highlights failed assertions, exposes each recorded trace, and reports LLM calls, semantic repairs/damage, schema failures and recorded latency. Its metrics are research results; customer accuracy remains unknown.
+
+`LLM_SCHEMA_REPAIR=true` optionally permits one bounded schema repair in this application path. It is disabled by default, preserves both attempts and a distinct prompt hash, never retries runtime/context/truncation failures, and was **not used in the frozen A–E experiment** (497/497 first-pass schema-valid outputs). No retry changes those historical results.
+
+### Extended diagnostics
+
+The main [30-question report](data/reports/LAYA_LLM_ARCHITECTURE_EVALUATION.md) links the [11-case blocking investigation](data/reports/BLOCKING_FALSE_NEGATIVE_ANALYSIS.md) and [every A–E assertion failure](data/reports/ARCHITECTURE_COMPARISON_ERRORS.md). The study directory includes per-predicate oracle/disagreement/asymmetric-error metrics, 15 run manifests, validation-only routing strategies, 20×3 repeatability calls, warm latency/token statistics and actual Mac process/unified-memory samples. Post-study diagnostics never change the frozen operating points. Exact native scores are not calibrated correctness probabilities.
+
+```sh
+# Small intentional REAL local-model suite (13 tests, ~87 seconds on this Mac)
+RUN_LOCAL_LLM=1 .venv/bin/python -m pytest -m local_llm -q
+```
+
+The original authored semantic ML regressions still fail 27 base / 20 fine-tuned cases under unchanged assertions. These failures remain separate from the passing software/browser suites. The in-app Browser connection was unavailable during final verification; the complete Playwright browser suite was executed successfully, with screenshots in `artifacts/`.

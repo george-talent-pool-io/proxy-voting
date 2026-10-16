@@ -1,0 +1,2376 @@
+{
+  "created_at": "2026-10-16T20:30:59.722322+00:00",
+  "datasets": {
+    "challenge": {
+      "C": {
+        "ORACLE_ROUTING": {
+          "deployable": false,
+          "scope": "Assertion-wise oracle can switch per labelled field; candidate uses actual fallback context with exact-evidence validation and deterministic date/status derivation. More optimistic than case-wise switching.",
+          "per_field": {
+            "classification": {
+              "labelled_assertions": 4,
+              "laya_correct": 3,
+              "laya_errors": 1,
+              "llm_correct_on_laya_errors": 1,
+              "llm_incorrect_on_laya_errors": 0,
+              "maximum_theoretical_repairs": 1,
+              "maximum_combined_correct": 4
+            },
+            "votability": {
+              "labelled_assertions": 54,
+              "laya_correct": 48,
+              "laya_errors": 6,
+              "llm_correct_on_laya_errors": 3,
+              "llm_incorrect_on_laya_errors": 3,
+              "maximum_theoretical_repairs": 3,
+              "maximum_combined_correct": 51
+            },
+            "share_blocking": {
+              "labelled_assertions": 11,
+              "laya_correct": 10,
+              "laya_errors": 1,
+              "llm_correct_on_laya_errors": 1,
+              "llm_incorrect_on_laya_errors": 0,
+              "maximum_theoretical_repairs": 1,
+              "maximum_combined_correct": 11
+            },
+            "poa_required": {
+              "labelled_assertions": 8,
+              "laya_correct": 7,
+              "laya_errors": 1,
+              "llm_correct_on_laya_errors": 0,
+              "llm_incorrect_on_laya_errors": 1,
+              "maximum_theoretical_repairs": 0,
+              "maximum_combined_correct": 7
+            },
+            "deadline_status": {
+              "labelled_assertions": 14,
+              "laya_correct": 5,
+              "laya_errors": 9,
+              "llm_correct_on_laya_errors": 8,
+              "llm_incorrect_on_laya_errors": 1,
+              "maximum_theoretical_repairs": 8,
+              "maximum_combined_correct": 13
+            },
+            "other_restriction": {
+              "labelled_assertions": 4,
+              "laya_correct": 0,
+              "laya_errors": 4,
+              "llm_correct_on_laya_errors": 2,
+              "llm_incorrect_on_laya_errors": 2,
+              "maximum_theoretical_repairs": 2,
+              "maximum_combined_correct": 2
+            }
+          },
+          "all_labelled_assertions": {
+            "labelled_assertions": 95,
+            "laya_correct": 73,
+            "laya_errors": 22,
+            "llm_correct_on_laya_errors": 15,
+            "llm_incorrect_on_laya_errors": 7,
+            "maximum_theoretical_repairs": 15,
+            "maximum_combined_correct": 88
+          }
+        },
+        "independent_disagreement": {
+          "classification": {
+            "agree_correct": 2,
+            "n": 4,
+            "disagree_laya_correct": 1,
+            "disagree_llm_correct": 1,
+            "disagree_both_wrong": 0,
+            "disagree_total": 2,
+            "disagree_laya_wrong": 1
+          },
+          "votability": {
+            "agree_correct": 17,
+            "n": 54,
+            "disagree_laya_correct": 31,
+            "disagree_llm_correct": 3,
+            "disagree_both_wrong": 3,
+            "disagree_total": 37,
+            "disagree_laya_wrong": 6
+          },
+          "share_blocking": {
+            "agree_correct": 10,
+            "n": 11,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 1,
+            "disagree_both_wrong": 0,
+            "disagree_total": 1,
+            "disagree_laya_wrong": 1
+          },
+          "poa_required": {
+            "agree_correct": 7,
+            "n": 8,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 1,
+            "disagree_both_wrong": 0,
+            "disagree_total": 1,
+            "disagree_laya_wrong": 1
+          },
+          "deadline_status": {
+            "agree_correct": 5,
+            "n": 14,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 8,
+            "disagree_both_wrong": 1,
+            "disagree_total": 9,
+            "disagree_laya_wrong": 9
+          },
+          "other_restriction": {
+            "agree_wrong": 1,
+            "n": 4,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 3,
+            "disagree_both_wrong": 0,
+            "disagree_total": 3,
+            "disagree_laya_wrong": 3
+          }
+        },
+        "fallback_context_disagreement_observed_and_oracle": {
+          "classification": {
+            "agree_correct": 3,
+            "n": 4,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 1,
+            "disagree_both_wrong": 0,
+            "disagree_total": 1,
+            "disagree_laya_wrong": 1
+          },
+          "votability": {
+            "agree_correct": 46,
+            "n": 54,
+            "disagree_laya_correct": 2,
+            "disagree_llm_correct": 3,
+            "disagree_both_wrong": 3,
+            "disagree_total": 8,
+            "disagree_laya_wrong": 6
+          },
+          "share_blocking": {
+            "agree_correct": 10,
+            "n": 11,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 1,
+            "disagree_both_wrong": 0,
+            "disagree_total": 1,
+            "disagree_laya_wrong": 1
+          },
+          "poa_required": {
+            "agree_correct": 7,
+            "n": 8,
+            "agree_wrong": 1
+          },
+          "deadline_status": {
+            "agree_correct": 5,
+            "n": 14,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 8,
+            "disagree_both_wrong": 1,
+            "disagree_total": 9,
+            "disagree_laya_wrong": 9
+          },
+          "other_restriction": {
+            "agree_wrong": 2,
+            "n": 4,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 2,
+            "disagree_both_wrong": 0,
+            "disagree_total": 2,
+            "disagree_laya_wrong": 2
+          }
+        },
+        "fallback_disagreement_caveat": "E includes truth-selected oracle cases and is selection-biased. Independent D covers every identical case and is the complete-population diagnostic.",
+        "actual_invocation_transitions_per_field": {
+          "classification": {
+            "correct -> correct": 3,
+            "wrong -> correct": 1
+          },
+          "votability": {
+            "correct -> correct": 46,
+            "wrong -> correct": 3,
+            "wrong -> wrong": 3,
+            "correct -> wrong": 2
+          },
+          "share_blocking": {
+            "correct -> correct": 10,
+            "wrong -> wrong": 1
+          },
+          "poa_required": {
+            "correct -> correct": 7,
+            "wrong -> wrong": 1
+          },
+          "deadline_status": {
+            "correct -> correct": 5,
+            "wrong -> correct": 8,
+            "wrong -> wrong": 1
+          },
+          "other_restriction": {
+            "wrong -> wrong": 2,
+            "wrong -> correct": 2
+          }
+        }
+      },
+      "E": {
+        "ORACLE_ROUTING": {
+          "deployable": false,
+          "scope": "Assertion-wise oracle can switch per labelled field; candidate uses actual fallback context with exact-evidence validation and deterministic date/status derivation. More optimistic than case-wise switching.",
+          "per_field": {
+            "classification": {
+              "labelled_assertions": 4,
+              "laya_correct": 3,
+              "laya_errors": 1,
+              "llm_correct_on_laya_errors": 0,
+              "llm_incorrect_on_laya_errors": 1,
+              "maximum_theoretical_repairs": 0,
+              "maximum_combined_correct": 3
+            },
+            "votability": {
+              "labelled_assertions": 54,
+              "laya_correct": 38,
+              "laya_errors": 16,
+              "llm_correct_on_laya_errors": 2,
+              "llm_incorrect_on_laya_errors": 14,
+              "maximum_theoretical_repairs": 2,
+              "maximum_combined_correct": 40
+            },
+            "share_blocking": {
+              "labelled_assertions": 11,
+              "laya_correct": 8,
+              "laya_errors": 3,
+              "llm_correct_on_laya_errors": 3,
+              "llm_incorrect_on_laya_errors": 0,
+              "maximum_theoretical_repairs": 3,
+              "maximum_combined_correct": 11
+            },
+            "poa_required": {
+              "labelled_assertions": 8,
+              "laya_correct": 5,
+              "laya_errors": 3,
+              "llm_correct_on_laya_errors": 1,
+              "llm_incorrect_on_laya_errors": 2,
+              "maximum_theoretical_repairs": 1,
+              "maximum_combined_correct": 6
+            },
+            "deadline_status": {
+              "labelled_assertions": 14,
+              "laya_correct": 13,
+              "laya_errors": 1,
+              "llm_correct_on_laya_errors": 0,
+              "llm_incorrect_on_laya_errors": 1,
+              "maximum_theoretical_repairs": 0,
+              "maximum_combined_correct": 13
+            },
+            "other_restriction": {
+              "labelled_assertions": 4,
+              "laya_correct": 0,
+              "laya_errors": 4,
+              "llm_correct_on_laya_errors": 1,
+              "llm_incorrect_on_laya_errors": 3,
+              "maximum_theoretical_repairs": 1,
+              "maximum_combined_correct": 1
+            }
+          },
+          "all_labelled_assertions": {
+            "labelled_assertions": 95,
+            "laya_correct": 67,
+            "laya_errors": 28,
+            "llm_correct_on_laya_errors": 7,
+            "llm_incorrect_on_laya_errors": 21,
+            "maximum_theoretical_repairs": 7,
+            "maximum_combined_correct": 74
+          }
+        },
+        "independent_disagreement": {
+          "classification": {
+            "agree_correct": 3,
+            "n": 4,
+            "agree_wrong": 1
+          },
+          "votability": {
+            "agree_correct": 18,
+            "n": 54,
+            "disagree_laya_correct": 20,
+            "disagree_llm_correct": 2,
+            "disagree_both_wrong": 7,
+            "disagree_total": 29,
+            "disagree_laya_wrong": 9,
+            "both_effectively_uncertain": 8,
+            "agree_wrong": 7
+          },
+          "share_blocking": {
+            "agree_correct": 8,
+            "n": 11,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 3,
+            "disagree_both_wrong": 0,
+            "disagree_total": 3,
+            "disagree_laya_wrong": 3
+          },
+          "poa_required": {
+            "agree_correct": 5,
+            "n": 8,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 3,
+            "disagree_both_wrong": 0,
+            "disagree_total": 3,
+            "disagree_laya_wrong": 3
+          },
+          "deadline_status": {
+            "agree_correct": 13,
+            "n": 14,
+            "both_effectively_uncertain": 5,
+            "agree_wrong": 1
+          },
+          "other_restriction": {
+            "agree_wrong": 1,
+            "n": 4,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 3,
+            "disagree_both_wrong": 0,
+            "disagree_total": 3,
+            "disagree_laya_wrong": 3
+          }
+        },
+        "fallback_context_disagreement_observed_and_oracle": {
+          "votability": {
+            "agree_correct": 10,
+            "n": 26,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 2,
+            "disagree_both_wrong": 7,
+            "disagree_total": 9,
+            "disagree_laya_wrong": 9,
+            "both_effectively_uncertain": 8,
+            "agree_wrong": 7
+          },
+          "share_blocking": {
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 3,
+            "disagree_both_wrong": 0,
+            "disagree_total": 3,
+            "disagree_laya_wrong": 3,
+            "n": 3
+          },
+          "classification": {
+            "agree_wrong": 1,
+            "n": 2,
+            "agree_correct": 1
+          },
+          "deadline_status": {
+            "agree_correct": 4,
+            "n": 5,
+            "both_effectively_uncertain": 3,
+            "agree_wrong": 1
+          },
+          "poa_required": {
+            "both_effectively_uncertain": 1,
+            "agree_wrong": 2,
+            "n": 3,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 1,
+            "disagree_both_wrong": 0,
+            "disagree_total": 1,
+            "disagree_laya_wrong": 1
+          },
+          "other_restriction": {
+            "agree_wrong": 3,
+            "n": 4,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 1,
+            "disagree_both_wrong": 0,
+            "disagree_total": 1,
+            "disagree_laya_wrong": 1
+          }
+        },
+        "fallback_disagreement_caveat": "E includes truth-selected oracle cases and is selection-biased. Independent D covers every identical case and is the complete-population diagnostic.",
+        "actual_invocation_transitions_per_field": {
+          "votability": {
+            "correct -> correct": 6,
+            "wrong -> wrong": 8
+          },
+          "share_blocking": {
+            "wrong -> correct": 3
+          },
+          "deadline_status": {
+            "correct -> correct": 4
+          },
+          "poa_required": {
+            "wrong -> wrong": 1,
+            "wrong -> correct": 1
+          },
+          "other_restriction": {
+            "wrong -> wrong": 1
+          }
+        }
+      },
+      "critical_asymmetry": {
+        "A": {
+          "votability": {
+            "positive_support": 36,
+            "negative_support": 15,
+            "false_negative_including_abstention": 13,
+            "explicit_positive_to_negative": 1,
+            "false_positive": 4
+          },
+          "share_blocking": {
+            "positive_support": 3,
+            "negative_support": 8,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 3
+          },
+          "poa_required": {
+            "positive_support": 3,
+            "negative_support": 5,
+            "false_negative_including_abstention": 1,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          }
+        },
+        "B": {
+          "votability": {
+            "positive_support": 36,
+            "negative_support": 15,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 6
+          },
+          "share_blocking": {
+            "positive_support": 3,
+            "negative_support": 8,
+            "false_negative_including_abstention": 1,
+            "explicit_positive_to_negative": 1,
+            "false_positive": 0
+          },
+          "poa_required": {
+            "positive_support": 3,
+            "negative_support": 5,
+            "false_negative_including_abstention": 1,
+            "explicit_positive_to_negative": 1,
+            "false_positive": 0
+          }
+        },
+        "C": {
+          "votability": {
+            "positive_support": 36,
+            "negative_support": 15,
+            "false_negative_including_abstention": 1,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "share_blocking": {
+            "positive_support": 3,
+            "negative_support": 8,
+            "false_negative_including_abstention": 1,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "poa_required": {
+            "positive_support": 3,
+            "negative_support": 5,
+            "false_negative_including_abstention": 1,
+            "explicit_positive_to_negative": 1,
+            "false_positive": 0
+          }
+        },
+        "D": {
+          "votability": {
+            "positive_support": 36,
+            "negative_support": 15,
+            "false_negative_including_abstention": 19,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "share_blocking": {
+            "positive_support": 3,
+            "negative_support": 8,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "poa_required": {
+            "positive_support": 3,
+            "negative_support": 5,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          }
+        },
+        "E": {
+          "votability": {
+            "positive_support": 36,
+            "negative_support": 15,
+            "false_negative_including_abstention": 1,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 8
+          },
+          "share_blocking": {
+            "positive_support": 3,
+            "negative_support": 8,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "poa_required": {
+            "positive_support": 3,
+            "negative_support": 5,
+            "false_negative_including_abstention": 1,
+            "explicit_positive_to_negative": 1,
+            "false_positive": 0
+          }
+        }
+      },
+      "native_score_margin_diagnostics": {
+        "B": {
+          "votability": {
+            "n": 54,
+            "correct": 48,
+            "score_correctness_auc": 0.5902777777777778,
+            "margin_correctness_auc": 0.5902777777777778
+          },
+          "share_blocking": {
+            "n": 11,
+            "correct": 10,
+            "score_correctness_auc": 0.45,
+            "margin_correctness_auc": 0.45
+          },
+          "poa_required": {
+            "n": 8,
+            "correct": 7,
+            "score_correctness_auc": 0.42857142857142855,
+            "margin_correctness_auc": 0.42857142857142855
+          },
+          "deadline_status": {
+            "n": 14,
+            "correct": 5,
+            "score_correctness_auc": 0.4,
+            "margin_correctness_auc": 0.4
+          },
+          "other_restriction": {
+            "n": 4,
+            "correct": 0,
+            "score_correctness_auc": null,
+            "margin_correctness_auc": null
+          }
+        },
+        "E": {
+          "votability": {
+            "n": 46,
+            "correct": 37,
+            "score_correctness_auc": 0.4864864864864865,
+            "margin_correctness_auc": 0.4864864864864865
+          },
+          "share_blocking": {
+            "n": 8,
+            "correct": 8,
+            "score_correctness_auc": null,
+            "margin_correctness_auc": null
+          },
+          "poa_required": {
+            "n": 6,
+            "correct": 5,
+            "score_correctness_auc": 0.5,
+            "margin_correctness_auc": 0.5
+          }
+        }
+      }
+    },
+    "synthetic-development": {
+      "C": {
+        "ORACLE_ROUTING": {
+          "deployable": false,
+          "scope": "Assertion-wise oracle can switch per labelled field; candidate uses actual fallback context with exact-evidence validation and deterministic date/status derivation. More optimistic than case-wise switching.",
+          "per_field": {
+            "votability": {
+              "labelled_assertions": 100,
+              "laya_correct": 100,
+              "maximum_theoretical_repairs": 0,
+              "maximum_combined_correct": 100
+            },
+            "share_blocking": {
+              "labelled_assertions": 100,
+              "laya_correct": 100,
+              "maximum_theoretical_repairs": 0,
+              "maximum_combined_correct": 100
+            },
+            "poa_required": {
+              "labelled_assertions": 100,
+              "laya_correct": 100,
+              "maximum_theoretical_repairs": 0,
+              "maximum_combined_correct": 100
+            },
+            "other_restriction": {
+              "labelled_assertions": 100,
+              "laya_correct": 100,
+              "maximum_theoretical_repairs": 0,
+              "maximum_combined_correct": 100
+            },
+            "deadline_status": {
+              "labelled_assertions": 100,
+              "laya_correct": 100,
+              "maximum_theoretical_repairs": 0,
+              "maximum_combined_correct": 100
+            },
+            "classification": {
+              "labelled_assertions": 100,
+              "laya_correct": 100,
+              "maximum_theoretical_repairs": 0,
+              "maximum_combined_correct": 100
+            }
+          },
+          "all_labelled_assertions": {
+            "labelled_assertions": 600,
+            "laya_correct": 600,
+            "maximum_theoretical_repairs": 0,
+            "maximum_combined_correct": 600
+          }
+        },
+        "independent_disagreement": {
+          "votability": {
+            "disagree_laya_correct": 44,
+            "disagree_llm_correct": 0,
+            "disagree_both_wrong": 0,
+            "disagree_total": 44,
+            "disagree_laya_wrong": 0,
+            "n": 100,
+            "agree_correct": 56,
+            "both_effectively_uncertain": 9
+          },
+          "share_blocking": {
+            "agree_correct": 85,
+            "n": 100,
+            "disagree_laya_correct": 15,
+            "disagree_llm_correct": 0,
+            "disagree_both_wrong": 0,
+            "disagree_total": 15,
+            "disagree_laya_wrong": 0,
+            "both_effectively_uncertain": 7
+          },
+          "poa_required": {
+            "agree_correct": 86,
+            "n": 100,
+            "disagree_laya_correct": 14,
+            "disagree_llm_correct": 0,
+            "disagree_both_wrong": 0,
+            "disagree_total": 14,
+            "disagree_laya_wrong": 0,
+            "both_effectively_uncertain": 7
+          },
+          "other_restriction": {
+            "agree_correct": 78,
+            "n": 100,
+            "disagree_laya_correct": 22,
+            "disagree_llm_correct": 0,
+            "disagree_both_wrong": 0,
+            "disagree_total": 22,
+            "disagree_laya_wrong": 0,
+            "both_effectively_uncertain": 7
+          },
+          "deadline_status": {
+            "disagree_laya_correct": 83,
+            "disagree_llm_correct": 0,
+            "disagree_both_wrong": 0,
+            "disagree_total": 83,
+            "disagree_laya_wrong": 0,
+            "n": 100,
+            "agree_correct": 17,
+            "both_effectively_uncertain": 9
+          },
+          "classification": {
+            "disagree_laya_correct": 58,
+            "disagree_llm_correct": 0,
+            "disagree_both_wrong": 0,
+            "disagree_total": 58,
+            "disagree_laya_wrong": 0,
+            "n": 100,
+            "agree_correct": 42
+          }
+        },
+        "fallback_context_disagreement_observed_and_oracle": {
+          "votability": {
+            "agree_correct": 93,
+            "n": 100,
+            "disagree_laya_correct": 7,
+            "disagree_llm_correct": 0,
+            "disagree_both_wrong": 0,
+            "disagree_total": 7,
+            "disagree_laya_wrong": 0,
+            "both_effectively_uncertain": 9
+          },
+          "share_blocking": {
+            "agree_correct": 96,
+            "n": 100,
+            "disagree_laya_correct": 4,
+            "disagree_llm_correct": 0,
+            "disagree_both_wrong": 0,
+            "disagree_total": 4,
+            "disagree_laya_wrong": 0,
+            "both_effectively_uncertain": 9
+          },
+          "poa_required": {
+            "agree_correct": 100,
+            "n": 100,
+            "both_effectively_uncertain": 9
+          },
+          "other_restriction": {
+            "agree_correct": 92,
+            "n": 100,
+            "disagree_laya_correct": 8,
+            "disagree_llm_correct": 0,
+            "disagree_both_wrong": 0,
+            "disagree_total": 8,
+            "disagree_laya_wrong": 0,
+            "both_effectively_uncertain": 9
+          },
+          "deadline_status": {
+            "disagree_laya_correct": 81,
+            "disagree_llm_correct": 0,
+            "disagree_both_wrong": 0,
+            "disagree_total": 81,
+            "disagree_laya_wrong": 0,
+            "n": 100,
+            "agree_correct": 19,
+            "both_effectively_uncertain": 9
+          },
+          "classification": {
+            "disagree_laya_correct": 44,
+            "disagree_llm_correct": 0,
+            "disagree_both_wrong": 0,
+            "disagree_total": 44,
+            "disagree_laya_wrong": 0,
+            "n": 100,
+            "agree_correct": 56
+          }
+        },
+        "fallback_disagreement_caveat": "E includes truth-selected oracle cases and is selection-biased. Independent D covers every identical case and is the complete-population diagnostic.",
+        "actual_invocation_transitions_per_field": {
+          "votability": {
+            "correct -> correct": 93,
+            "correct -> wrong": 7
+          },
+          "share_blocking": {
+            "correct -> correct": 96,
+            "correct -> wrong": 4
+          },
+          "poa_required": {
+            "correct -> correct": 100
+          },
+          "other_restriction": {
+            "correct -> correct": 92,
+            "correct -> wrong": 8
+          },
+          "deadline_status": {
+            "correct -> wrong": 81,
+            "correct -> correct": 19
+          },
+          "classification": {
+            "correct -> wrong": 44,
+            "correct -> correct": 56
+          }
+        }
+      },
+      "E": {
+        "ORACLE_ROUTING": {
+          "deployable": false,
+          "scope": "Assertion-wise oracle can switch per labelled field; candidate uses actual fallback context with exact-evidence validation and deterministic date/status derivation. More optimistic than case-wise switching.",
+          "per_field": {
+            "votability": {
+              "labelled_assertions": 100,
+              "laya_correct": 83,
+              "laya_errors": 17,
+              "llm_correct_on_laya_errors": 4,
+              "llm_incorrect_on_laya_errors": 13,
+              "maximum_theoretical_repairs": 4,
+              "maximum_combined_correct": 87
+            },
+            "share_blocking": {
+              "labelled_assertions": 100,
+              "laya_correct": 82,
+              "laya_errors": 18,
+              "llm_correct_on_laya_errors": 12,
+              "llm_incorrect_on_laya_errors": 6,
+              "maximum_theoretical_repairs": 12,
+              "maximum_combined_correct": 94
+            },
+            "poa_required": {
+              "labelled_assertions": 100,
+              "laya_correct": 89,
+              "laya_errors": 11,
+              "llm_correct_on_laya_errors": 7,
+              "llm_incorrect_on_laya_errors": 4,
+              "maximum_theoretical_repairs": 7,
+              "maximum_combined_correct": 96
+            },
+            "other_restriction": {
+              "labelled_assertions": 100,
+              "laya_correct": 63,
+              "laya_errors": 37,
+              "llm_correct_on_laya_errors": 17,
+              "llm_incorrect_on_laya_errors": 20,
+              "maximum_theoretical_repairs": 17,
+              "maximum_combined_correct": 80
+            },
+            "deadline_status": {
+              "labelled_assertions": 100,
+              "laya_correct": 17,
+              "laya_errors": 83,
+              "llm_correct_on_laya_errors": 2,
+              "llm_incorrect_on_laya_errors": 81,
+              "maximum_theoretical_repairs": 2,
+              "maximum_combined_correct": 19
+            },
+            "classification": {
+              "labelled_assertions": 100,
+              "laya_correct": 22,
+              "laya_errors": 78,
+              "llm_correct_on_laya_errors": 16,
+              "llm_incorrect_on_laya_errors": 62,
+              "maximum_theoretical_repairs": 16,
+              "maximum_combined_correct": 38
+            }
+          },
+          "all_labelled_assertions": {
+            "labelled_assertions": 600,
+            "laya_correct": 356,
+            "laya_errors": 244,
+            "llm_correct_on_laya_errors": 58,
+            "llm_incorrect_on_laya_errors": 186,
+            "maximum_theoretical_repairs": 58,
+            "maximum_combined_correct": 414
+          }
+        },
+        "independent_disagreement": {
+          "votability": {
+            "disagree_laya_correct": 32,
+            "disagree_llm_correct": 5,
+            "disagree_both_wrong": 2,
+            "disagree_total": 39,
+            "disagree_laya_wrong": 7,
+            "n": 100,
+            "agree_correct": 51,
+            "both_effectively_uncertain": 15,
+            "agree_wrong": 10
+          },
+          "share_blocking": {
+            "agree_correct": 70,
+            "n": 100,
+            "disagree_laya_correct": 12,
+            "disagree_llm_correct": 15,
+            "disagree_both_wrong": 0,
+            "disagree_total": 27,
+            "disagree_laya_wrong": 15,
+            "agree_wrong": 3,
+            "both_effectively_uncertain": 6
+          },
+          "poa_required": {
+            "agree_correct": 77,
+            "n": 100,
+            "disagree_laya_correct": 12,
+            "disagree_llm_correct": 9,
+            "disagree_both_wrong": 0,
+            "disagree_total": 21,
+            "disagree_laya_wrong": 9,
+            "agree_wrong": 2,
+            "both_effectively_uncertain": 5
+          },
+          "other_restriction": {
+            "agree_correct": 52,
+            "n": 100,
+            "disagree_laya_correct": 11,
+            "disagree_llm_correct": 26,
+            "disagree_both_wrong": 3,
+            "disagree_total": 40,
+            "disagree_laya_wrong": 29,
+            "agree_wrong": 8,
+            "both_effectively_uncertain": 7
+          },
+          "deadline_status": {
+            "both_effectively_uncertain": 92,
+            "agree_wrong": 83,
+            "n": 100,
+            "agree_correct": 17
+          },
+          "classification": {
+            "agree_wrong": 57,
+            "n": 100,
+            "disagree_laya_correct": 1,
+            "disagree_llm_correct": 21,
+            "disagree_both_wrong": 0,
+            "disagree_total": 22,
+            "disagree_laya_wrong": 21,
+            "agree_correct": 21
+          }
+        },
+        "fallback_context_disagreement_observed_and_oracle": {
+          "votability": {
+            "agree_correct": 75,
+            "n": 92,
+            "both_effectively_uncertain": 16,
+            "agree_wrong": 11,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 4,
+            "disagree_both_wrong": 2,
+            "disagree_total": 6,
+            "disagree_laya_wrong": 6
+          },
+          "share_blocking": {
+            "agree_correct": 74,
+            "n": 92,
+            "both_effectively_uncertain": 7,
+            "agree_wrong": 6,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 12,
+            "disagree_both_wrong": 0,
+            "disagree_total": 12,
+            "disagree_laya_wrong": 12
+          },
+          "poa_required": {
+            "agree_correct": 81,
+            "n": 92,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 7,
+            "disagree_both_wrong": 0,
+            "disagree_total": 7,
+            "disagree_laya_wrong": 7,
+            "agree_wrong": 4,
+            "both_effectively_uncertain": 5
+          },
+          "other_restriction": {
+            "agree_correct": 55,
+            "n": 92,
+            "agree_wrong": 20,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 17,
+            "disagree_both_wrong": 0,
+            "disagree_total": 17,
+            "disagree_laya_wrong": 17,
+            "both_effectively_uncertain": 13
+          },
+          "deadline_status": {
+            "both_effectively_uncertain": 90,
+            "agree_wrong": 81,
+            "n": 92,
+            "agree_correct": 9,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 2,
+            "disagree_both_wrong": 0,
+            "disagree_total": 2,
+            "disagree_laya_wrong": 2
+          },
+          "classification": {
+            "agree_wrong": 62,
+            "n": 92,
+            "agree_correct": 13,
+            "disagree_laya_correct": 1,
+            "disagree_llm_correct": 16,
+            "disagree_both_wrong": 0,
+            "disagree_total": 17,
+            "disagree_laya_wrong": 16
+          }
+        },
+        "fallback_disagreement_caveat": "E includes truth-selected oracle cases and is selection-biased. Independent D covers every identical case and is the complete-population diagnostic.",
+        "actual_invocation_transitions_per_field": {
+          "votability": {
+            "correct -> correct": 25,
+            "wrong -> wrong": 11
+          },
+          "share_blocking": {
+            "correct -> correct": 22,
+            "wrong -> wrong": 2,
+            "wrong -> correct": 12
+          },
+          "poa_required": {
+            "wrong -> correct": 7,
+            "correct -> correct": 29
+          },
+          "other_restriction": {
+            "wrong -> correct": 8,
+            "correct -> correct": 17,
+            "wrong -> wrong": 11
+          },
+          "deadline_status": {
+            "wrong -> wrong": 31,
+            "correct -> correct": 5
+          },
+          "classification": {
+            "wrong -> correct": 8,
+            "wrong -> wrong": 22,
+            "correct -> wrong": 1,
+            "correct -> correct": 5
+          }
+        }
+      },
+      "critical_asymmetry": {
+        "A": {
+          "votability": {
+            "positive_support": 78,
+            "negative_support": 13,
+            "false_negative_including_abstention": 21,
+            "explicit_positive_to_negative": 4,
+            "false_positive": 7
+          },
+          "share_blocking": {
+            "positive_support": 11,
+            "negative_support": 80,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 59
+          },
+          "poa_required": {
+            "positive_support": 11,
+            "negative_support": 80,
+            "false_negative_including_abstention": 1,
+            "explicit_positive_to_negative": 1,
+            "false_positive": 14
+          }
+        },
+        "B": {
+          "votability": {
+            "positive_support": 78,
+            "negative_support": 13,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "share_blocking": {
+            "positive_support": 11,
+            "negative_support": 80,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "poa_required": {
+            "positive_support": 11,
+            "negative_support": 80,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          }
+        },
+        "C": {
+          "votability": {
+            "positive_support": 78,
+            "negative_support": 13,
+            "false_negative_including_abstention": 6,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "share_blocking": {
+            "positive_support": 11,
+            "negative_support": 80,
+            "false_negative_including_abstention": 1,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "poa_required": {
+            "positive_support": 11,
+            "negative_support": 80,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          }
+        },
+        "D": {
+          "votability": {
+            "positive_support": 78,
+            "negative_support": 13,
+            "false_negative_including_abstention": 31,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "share_blocking": {
+            "positive_support": 11,
+            "negative_support": 80,
+            "false_negative_including_abstention": 1,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "poa_required": {
+            "positive_support": 11,
+            "negative_support": 80,
+            "false_negative_including_abstention": 1,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 1
+          }
+        },
+        "E": {
+          "votability": {
+            "positive_support": 78,
+            "negative_support": 13,
+            "false_negative_including_abstention": 1,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 6
+          },
+          "share_blocking": {
+            "positive_support": 11,
+            "negative_support": 80,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "poa_required": {
+            "positive_support": 11,
+            "negative_support": 80,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          }
+        }
+      },
+      "native_score_margin_diagnostics": {
+        "B": {
+          "votability": {
+            "n": 100,
+            "correct": 100,
+            "score_correctness_auc": null,
+            "margin_correctness_auc": null
+          },
+          "share_blocking": {
+            "n": 100,
+            "correct": 100,
+            "score_correctness_auc": null,
+            "margin_correctness_auc": null
+          },
+          "poa_required": {
+            "n": 100,
+            "correct": 100,
+            "score_correctness_auc": null,
+            "margin_correctness_auc": null
+          },
+          "other_restriction": {
+            "n": 100,
+            "correct": 100,
+            "score_correctness_auc": null,
+            "margin_correctness_auc": null
+          },
+          "deadline_status": {
+            "n": 100,
+            "correct": 100,
+            "score_correctness_auc": null,
+            "margin_correctness_auc": null
+          }
+        },
+        "E": {
+          "votability": {
+            "n": 89,
+            "correct": 83,
+            "score_correctness_auc": 0.5732931726907631,
+            "margin_correctness_auc": 0.5732931726907631
+          },
+          "share_blocking": {
+            "n": 86,
+            "correct": 82,
+            "score_correctness_auc": 0.5,
+            "margin_correctness_auc": 0.5
+          },
+          "poa_required": {
+            "n": 93,
+            "correct": 89,
+            "score_correctness_auc": 0.5,
+            "margin_correctness_auc": 0.5
+          }
+        }
+      }
+    },
+    "complete": {
+      "C": {
+        "ORACLE_ROUTING": {
+          "deployable": false,
+          "scope": "Assertion-wise oracle can switch per labelled field; candidate uses actual fallback context with exact-evidence validation and deterministic date/status derivation. More optimistic than case-wise switching.",
+          "per_field": {
+            "votability": {
+              "labelled_assertions": 48,
+              "laya_correct": 47,
+              "laya_errors": 1,
+              "llm_correct_on_laya_errors": 1,
+              "llm_incorrect_on_laya_errors": 0,
+              "maximum_theoretical_repairs": 1,
+              "maximum_combined_correct": 48
+            },
+            "share_blocking": {
+              "labelled_assertions": 48,
+              "laya_correct": 43,
+              "laya_errors": 5,
+              "llm_correct_on_laya_errors": 2,
+              "llm_incorrect_on_laya_errors": 3,
+              "maximum_theoretical_repairs": 2,
+              "maximum_combined_correct": 45
+            },
+            "poa_required": {
+              "labelled_assertions": 48,
+              "laya_correct": 44,
+              "laya_errors": 4,
+              "llm_correct_on_laya_errors": 1,
+              "llm_incorrect_on_laya_errors": 3,
+              "maximum_theoretical_repairs": 1,
+              "maximum_combined_correct": 45
+            },
+            "registration_required": {
+              "labelled_assertions": 48,
+              "laya_correct": 0,
+              "laya_errors": 48,
+              "llm_correct_on_laya_errors": 44,
+              "llm_incorrect_on_laya_errors": 4,
+              "maximum_theoretical_repairs": 44,
+              "maximum_combined_correct": 44
+            },
+            "beneficial_owner_disclosure_required": {
+              "labelled_assertions": 48,
+              "laya_correct": 0,
+              "laya_errors": 48,
+              "llm_correct_on_laya_errors": 47,
+              "llm_incorrect_on_laya_errors": 1,
+              "maximum_theoretical_repairs": 47,
+              "maximum_combined_correct": 47
+            },
+            "holding_confirmation_required": {
+              "labelled_assertions": 48,
+              "laya_correct": 0,
+              "laya_errors": 48,
+              "llm_correct_on_laya_errors": 45,
+              "llm_incorrect_on_laya_errors": 3,
+              "maximum_theoretical_repairs": 45,
+              "maximum_combined_correct": 45
+            },
+            "split_voting_restricted": {
+              "labelled_assertions": 48,
+              "laya_correct": 0,
+              "laya_errors": 48,
+              "llm_correct_on_laya_errors": 47,
+              "llm_incorrect_on_laya_errors": 1,
+              "maximum_theoretical_repairs": 47,
+              "maximum_combined_correct": 47
+            },
+            "securities_lending_recall_required": {
+              "labelled_assertions": 48,
+              "laya_correct": 0,
+              "laya_errors": 48,
+              "llm_correct_on_laya_errors": 47,
+              "llm_incorrect_on_laya_errors": 1,
+              "maximum_theoretical_repairs": 47,
+              "maximum_combined_correct": 47
+            },
+            "other_voting_restriction": {
+              "labelled_assertions": 48,
+              "laya_correct": 0,
+              "laya_errors": 48,
+              "llm_correct_on_laya_errors": 43,
+              "llm_incorrect_on_laya_errors": 5,
+              "maximum_theoretical_repairs": 43,
+              "maximum_combined_correct": 43
+            },
+            "deadline_status": {
+              "labelled_assertions": 48,
+              "laya_correct": 41,
+              "laya_errors": 7,
+              "llm_correct_on_laya_errors": 7,
+              "llm_incorrect_on_laya_errors": 0,
+              "maximum_theoretical_repairs": 7,
+              "maximum_combined_correct": 48
+            },
+            "classification": {
+              "labelled_assertions": 48,
+              "laya_correct": 24,
+              "laya_errors": 24,
+              "llm_correct_on_laya_errors": 18,
+              "llm_incorrect_on_laya_errors": 6,
+              "maximum_theoretical_repairs": 18,
+              "maximum_combined_correct": 42
+            }
+          },
+          "all_labelled_assertions": {
+            "labelled_assertions": 528,
+            "laya_correct": 199,
+            "laya_errors": 329,
+            "llm_correct_on_laya_errors": 302,
+            "llm_incorrect_on_laya_errors": 27,
+            "maximum_theoretical_repairs": 302,
+            "maximum_combined_correct": 501
+          }
+        },
+        "independent_disagreement": {
+          "votability": {
+            "agree_correct": 36,
+            "n": 48,
+            "disagree_laya_correct": 11,
+            "disagree_llm_correct": 1,
+            "disagree_both_wrong": 0,
+            "disagree_total": 12,
+            "disagree_laya_wrong": 1,
+            "both_effectively_uncertain": 1
+          },
+          "share_blocking": {
+            "disagree_laya_correct": 2,
+            "disagree_llm_correct": 4,
+            "disagree_both_wrong": 1,
+            "disagree_total": 7,
+            "disagree_laya_wrong": 5,
+            "n": 48,
+            "agree_correct": 41
+          },
+          "poa_required": {
+            "agree_correct": 44,
+            "n": 48,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 3,
+            "disagree_both_wrong": 0,
+            "disagree_total": 3,
+            "disagree_laya_wrong": 3,
+            "both_effectively_uncertain": 1,
+            "agree_wrong": 1
+          },
+          "registration_required": {
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 46,
+            "disagree_both_wrong": 2,
+            "disagree_total": 48,
+            "disagree_laya_wrong": 48,
+            "n": 48,
+            "both_effectively_uncertain": 1
+          },
+          "beneficial_owner_disclosure_required": {
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 47,
+            "disagree_both_wrong": 1,
+            "disagree_total": 48,
+            "disagree_laya_wrong": 48,
+            "n": 48,
+            "both_effectively_uncertain": 1
+          },
+          "holding_confirmation_required": {
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 47,
+            "disagree_both_wrong": 1,
+            "disagree_total": 48,
+            "disagree_laya_wrong": 48,
+            "n": 48,
+            "both_effectively_uncertain": 1
+          },
+          "split_voting_restricted": {
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 47,
+            "disagree_both_wrong": 1,
+            "disagree_total": 48,
+            "disagree_laya_wrong": 48,
+            "n": 48,
+            "both_effectively_uncertain": 1
+          },
+          "securities_lending_recall_required": {
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 47,
+            "disagree_both_wrong": 1,
+            "disagree_total": 48,
+            "disagree_laya_wrong": 48,
+            "n": 48,
+            "both_effectively_uncertain": 1
+          },
+          "other_voting_restriction": {
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 46,
+            "disagree_both_wrong": 2,
+            "disagree_total": 48,
+            "disagree_laya_wrong": 48,
+            "n": 48,
+            "both_effectively_uncertain": 1
+          },
+          "deadline_status": {
+            "agree_correct": 33,
+            "n": 48,
+            "disagree_laya_correct": 8,
+            "disagree_llm_correct": 7,
+            "disagree_both_wrong": 0,
+            "disagree_total": 15,
+            "disagree_laya_wrong": 7,
+            "both_effectively_uncertain": 1
+          },
+          "classification": {
+            "disagree_laya_correct": 4,
+            "disagree_llm_correct": 16,
+            "disagree_both_wrong": 6,
+            "disagree_total": 26,
+            "disagree_laya_wrong": 22,
+            "n": 48,
+            "agree_correct": 20,
+            "agree_wrong": 2
+          }
+        },
+        "fallback_context_disagreement_observed_and_oracle": {
+          "votability": {
+            "agree_correct": 47,
+            "n": 48,
+            "both_effectively_uncertain": 1,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 1,
+            "disagree_both_wrong": 0,
+            "disagree_total": 1,
+            "disagree_laya_wrong": 1
+          },
+          "share_blocking": {
+            "disagree_laya_correct": 2,
+            "disagree_llm_correct": 2,
+            "disagree_both_wrong": 0,
+            "disagree_total": 4,
+            "disagree_laya_wrong": 2,
+            "n": 48,
+            "agree_correct": 41,
+            "agree_wrong": 3,
+            "both_effectively_uncertain": 1
+          },
+          "poa_required": {
+            "agree_correct": 43,
+            "n": 48,
+            "disagree_laya_correct": 1,
+            "disagree_llm_correct": 1,
+            "disagree_both_wrong": 0,
+            "disagree_total": 2,
+            "disagree_laya_wrong": 1,
+            "both_effectively_uncertain": 2,
+            "agree_wrong": 3
+          },
+          "registration_required": {
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 44,
+            "disagree_both_wrong": 4,
+            "disagree_total": 48,
+            "disagree_laya_wrong": 48,
+            "n": 48,
+            "both_effectively_uncertain": 2
+          },
+          "beneficial_owner_disclosure_required": {
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 47,
+            "disagree_both_wrong": 1,
+            "disagree_total": 48,
+            "disagree_laya_wrong": 48,
+            "n": 48,
+            "both_effectively_uncertain": 1
+          },
+          "holding_confirmation_required": {
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 45,
+            "disagree_both_wrong": 3,
+            "disagree_total": 48,
+            "disagree_laya_wrong": 48,
+            "n": 48,
+            "both_effectively_uncertain": 1
+          },
+          "split_voting_restricted": {
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 47,
+            "disagree_both_wrong": 1,
+            "disagree_total": 48,
+            "disagree_laya_wrong": 48,
+            "n": 48,
+            "both_effectively_uncertain": 1
+          },
+          "securities_lending_recall_required": {
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 47,
+            "disagree_both_wrong": 1,
+            "disagree_total": 48,
+            "disagree_laya_wrong": 48,
+            "n": 48,
+            "both_effectively_uncertain": 1
+          },
+          "other_voting_restriction": {
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 43,
+            "disagree_both_wrong": 5,
+            "disagree_total": 48,
+            "disagree_laya_wrong": 48,
+            "n": 48,
+            "both_effectively_uncertain": 3
+          },
+          "deadline_status": {
+            "agree_correct": 33,
+            "n": 48,
+            "disagree_laya_correct": 8,
+            "disagree_llm_correct": 7,
+            "disagree_both_wrong": 0,
+            "disagree_total": 15,
+            "disagree_laya_wrong": 7,
+            "both_effectively_uncertain": 1
+          },
+          "classification": {
+            "disagree_laya_correct": 2,
+            "disagree_llm_correct": 18,
+            "disagree_both_wrong": 3,
+            "disagree_total": 23,
+            "disagree_laya_wrong": 21,
+            "n": 48,
+            "agree_correct": 22,
+            "agree_wrong": 3
+          }
+        },
+        "fallback_disagreement_caveat": "E includes truth-selected oracle cases and is selection-biased. Independent D covers every identical case and is the complete-population diagnostic.",
+        "actual_invocation_transitions_per_field": {
+          "votability": {
+            "correct -> correct": 47,
+            "wrong -> correct": 1
+          },
+          "share_blocking": {
+            "wrong -> wrong": 5,
+            "correct -> correct": 41,
+            "correct -> wrong": 2
+          },
+          "poa_required": {
+            "correct -> correct": 43,
+            "correct -> wrong": 1,
+            "wrong -> wrong": 3,
+            "wrong -> correct": 1
+          },
+          "registration_required": {
+            "wrong -> correct": 44,
+            "wrong -> wrong": 4
+          },
+          "beneficial_owner_disclosure_required": {
+            "wrong -> correct": 47,
+            "wrong -> wrong": 1
+          },
+          "holding_confirmation_required": {
+            "wrong -> correct": 45,
+            "wrong -> wrong": 3
+          },
+          "split_voting_restricted": {
+            "wrong -> correct": 47,
+            "wrong -> wrong": 1
+          },
+          "securities_lending_recall_required": {
+            "wrong -> correct": 47,
+            "wrong -> wrong": 1
+          },
+          "other_voting_restriction": {
+            "wrong -> correct": 43,
+            "wrong -> wrong": 5
+          },
+          "deadline_status": {
+            "correct -> correct": 33,
+            "wrong -> correct": 7,
+            "correct -> wrong": 8
+          },
+          "classification": {
+            "wrong -> wrong": 8,
+            "correct -> correct": 22,
+            "wrong -> correct": 16,
+            "correct -> wrong": 2
+          }
+        }
+      },
+      "E": {
+        "ORACLE_ROUTING": {
+          "deployable": false,
+          "scope": "Assertion-wise oracle can switch per labelled field; candidate uses actual fallback context with exact-evidence validation and deterministic date/status derivation. More optimistic than case-wise switching.",
+          "per_field": {
+            "votability": {
+              "labelled_assertions": 48,
+              "laya_correct": 42,
+              "laya_errors": 6,
+              "llm_correct_on_laya_errors": 2,
+              "llm_incorrect_on_laya_errors": 4,
+              "maximum_theoretical_repairs": 2,
+              "maximum_combined_correct": 44
+            },
+            "share_blocking": {
+              "labelled_assertions": 48,
+              "laya_correct": 40,
+              "laya_errors": 8,
+              "llm_correct_on_laya_errors": 5,
+              "llm_incorrect_on_laya_errors": 3,
+              "maximum_theoretical_repairs": 5,
+              "maximum_combined_correct": 45
+            },
+            "poa_required": {
+              "labelled_assertions": 48,
+              "laya_correct": 42,
+              "laya_errors": 6,
+              "llm_correct_on_laya_errors": 5,
+              "llm_incorrect_on_laya_errors": 1,
+              "maximum_theoretical_repairs": 5,
+              "maximum_combined_correct": 47
+            },
+            "registration_required": {
+              "labelled_assertions": 48,
+              "laya_correct": 16,
+              "laya_errors": 32,
+              "llm_correct_on_laya_errors": 8,
+              "llm_incorrect_on_laya_errors": 24,
+              "maximum_theoretical_repairs": 8,
+              "maximum_combined_correct": 24
+            },
+            "beneficial_owner_disclosure_required": {
+              "labelled_assertions": 48,
+              "laya_correct": 40,
+              "laya_errors": 8,
+              "llm_correct_on_laya_errors": 2,
+              "llm_incorrect_on_laya_errors": 6,
+              "maximum_theoretical_repairs": 2,
+              "maximum_combined_correct": 42
+            },
+            "holding_confirmation_required": {
+              "labelled_assertions": 48,
+              "laya_correct": 38,
+              "laya_errors": 10,
+              "llm_correct_on_laya_errors": 4,
+              "llm_incorrect_on_laya_errors": 6,
+              "maximum_theoretical_repairs": 4,
+              "maximum_combined_correct": 42
+            },
+            "split_voting_restricted": {
+              "labelled_assertions": 48,
+              "laya_correct": 42,
+              "laya_errors": 6,
+              "llm_correct_on_laya_errors": 3,
+              "llm_incorrect_on_laya_errors": 3,
+              "maximum_theoretical_repairs": 3,
+              "maximum_combined_correct": 45
+            },
+            "securities_lending_recall_required": {
+              "labelled_assertions": 48,
+              "laya_correct": 16,
+              "laya_errors": 32,
+              "llm_correct_on_laya_errors": 8,
+              "llm_incorrect_on_laya_errors": 24,
+              "maximum_theoretical_repairs": 8,
+              "maximum_combined_correct": 24
+            },
+            "other_voting_restriction": {
+              "labelled_assertions": 48,
+              "laya_correct": 41,
+              "laya_errors": 7,
+              "llm_correct_on_laya_errors": 1,
+              "llm_incorrect_on_laya_errors": 6,
+              "maximum_theoretical_repairs": 1,
+              "maximum_combined_correct": 42
+            },
+            "deadline_status": {
+              "labelled_assertions": 48,
+              "laya_correct": 48,
+              "maximum_theoretical_repairs": 0,
+              "maximum_combined_correct": 48
+            },
+            "classification": {
+              "labelled_assertions": 48,
+              "laya_correct": 5,
+              "laya_errors": 43,
+              "llm_correct_on_laya_errors": 12,
+              "llm_incorrect_on_laya_errors": 31,
+              "maximum_theoretical_repairs": 12,
+              "maximum_combined_correct": 17
+            }
+          },
+          "all_labelled_assertions": {
+            "labelled_assertions": 528,
+            "laya_correct": 370,
+            "laya_errors": 158,
+            "llm_correct_on_laya_errors": 50,
+            "llm_incorrect_on_laya_errors": 108,
+            "maximum_theoretical_repairs": 50,
+            "maximum_combined_correct": 420
+          }
+        },
+        "independent_disagreement": {
+          "votability": {
+            "agree_correct": 35,
+            "n": 48,
+            "both_effectively_uncertain": 3,
+            "agree_wrong": 3,
+            "disagree_laya_correct": 7,
+            "disagree_llm_correct": 2,
+            "disagree_both_wrong": 1,
+            "disagree_total": 10,
+            "disagree_laya_wrong": 3
+          },
+          "share_blocking": {
+            "disagree_laya_correct": 2,
+            "disagree_llm_correct": 7,
+            "disagree_both_wrong": 1,
+            "disagree_total": 10,
+            "disagree_laya_wrong": 8,
+            "n": 48,
+            "agree_correct": 38
+          },
+          "poa_required": {
+            "agree_correct": 41,
+            "n": 48,
+            "disagree_laya_correct": 1,
+            "disagree_llm_correct": 6,
+            "disagree_both_wrong": 0,
+            "disagree_total": 7,
+            "disagree_laya_wrong": 6
+          },
+          "registration_required": {
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 30,
+            "disagree_both_wrong": 0,
+            "disagree_total": 30,
+            "disagree_laya_wrong": 30,
+            "n": 48,
+            "agree_wrong": 2,
+            "agree_correct": 16,
+            "both_effectively_uncertain": 1
+          },
+          "beneficial_owner_disclosure_required": {
+            "agree_correct": 40,
+            "n": 48,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 7,
+            "disagree_both_wrong": 0,
+            "disagree_total": 7,
+            "disagree_laya_wrong": 7,
+            "both_effectively_uncertain": 1,
+            "agree_wrong": 1
+          },
+          "holding_confirmation_required": {
+            "agree_correct": 38,
+            "n": 48,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 9,
+            "disagree_both_wrong": 0,
+            "disagree_total": 9,
+            "disagree_laya_wrong": 9,
+            "both_effectively_uncertain": 1,
+            "agree_wrong": 1
+          },
+          "split_voting_restricted": {
+            "agree_correct": 42,
+            "n": 48,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 5,
+            "disagree_both_wrong": 0,
+            "disagree_total": 5,
+            "disagree_laya_wrong": 5,
+            "both_effectively_uncertain": 1,
+            "agree_wrong": 1
+          },
+          "securities_lending_recall_required": {
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 31,
+            "disagree_both_wrong": 0,
+            "disagree_total": 31,
+            "disagree_laya_wrong": 31,
+            "n": 48,
+            "agree_correct": 16,
+            "both_effectively_uncertain": 1,
+            "agree_wrong": 1
+          },
+          "other_voting_restriction": {
+            "agree_correct": 41,
+            "n": 48,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 5,
+            "disagree_both_wrong": 0,
+            "disagree_total": 5,
+            "disagree_laya_wrong": 5,
+            "agree_wrong": 2,
+            "both_effectively_uncertain": 1
+          },
+          "deadline_status": {
+            "agree_correct": 40,
+            "n": 48,
+            "both_effectively_uncertain": 6,
+            "disagree_laya_correct": 8,
+            "disagree_llm_correct": 0,
+            "disagree_both_wrong": 0,
+            "disagree_total": 8,
+            "disagree_laya_wrong": 0
+          },
+          "classification": {
+            "disagree_laya_correct": 2,
+            "disagree_llm_correct": 33,
+            "disagree_both_wrong": 4,
+            "disagree_total": 39,
+            "disagree_laya_wrong": 37,
+            "n": 48,
+            "agree_correct": 3,
+            "agree_wrong": 6
+          }
+        },
+        "fallback_context_disagreement_observed_and_oracle": {
+          "votability": {
+            "agree_correct": 39,
+            "n": 45,
+            "both_effectively_uncertain": 3,
+            "agree_wrong": 3,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 2,
+            "disagree_both_wrong": 1,
+            "disagree_total": 3,
+            "disagree_laya_wrong": 3
+          },
+          "share_blocking": {
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 5,
+            "disagree_both_wrong": 0,
+            "disagree_total": 5,
+            "disagree_laya_wrong": 5,
+            "n": 45,
+            "agree_correct": 37,
+            "both_effectively_uncertain": 2,
+            "agree_wrong": 3
+          },
+          "poa_required": {
+            "agree_correct": 39,
+            "n": 45,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 5,
+            "disagree_both_wrong": 0,
+            "disagree_total": 5,
+            "disagree_laya_wrong": 5,
+            "both_effectively_uncertain": 1,
+            "agree_wrong": 1
+          },
+          "registration_required": {
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 8,
+            "disagree_both_wrong": 0,
+            "disagree_total": 8,
+            "disagree_laya_wrong": 8,
+            "n": 45,
+            "both_effectively_uncertain": 22,
+            "agree_wrong": 24,
+            "agree_correct": 13
+          },
+          "beneficial_owner_disclosure_required": {
+            "agree_correct": 37,
+            "n": 45,
+            "agree_wrong": 6,
+            "both_effectively_uncertain": 5,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 2,
+            "disagree_both_wrong": 0,
+            "disagree_total": 2,
+            "disagree_laya_wrong": 2
+          },
+          "holding_confirmation_required": {
+            "agree_correct": 35,
+            "n": 45,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 4,
+            "disagree_both_wrong": 0,
+            "disagree_total": 4,
+            "disagree_laya_wrong": 4,
+            "both_effectively_uncertain": 6,
+            "agree_wrong": 6
+          },
+          "split_voting_restricted": {
+            "agree_correct": 39,
+            "n": 45,
+            "both_effectively_uncertain": 3,
+            "agree_wrong": 3,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 3,
+            "disagree_both_wrong": 0,
+            "disagree_total": 3,
+            "disagree_laya_wrong": 3
+          },
+          "securities_lending_recall_required": {
+            "both_effectively_uncertain": 23,
+            "agree_wrong": 24,
+            "n": 45,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 8,
+            "disagree_both_wrong": 0,
+            "disagree_total": 8,
+            "disagree_laya_wrong": 8,
+            "agree_correct": 13
+          },
+          "other_voting_restriction": {
+            "agree_correct": 38,
+            "n": 45,
+            "both_effectively_uncertain": 4,
+            "agree_wrong": 6,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 1,
+            "disagree_both_wrong": 0,
+            "disagree_total": 1,
+            "disagree_laya_wrong": 1
+          },
+          "deadline_status": {
+            "agree_correct": 45,
+            "n": 45,
+            "both_effectively_uncertain": 6
+          },
+          "classification": {
+            "agree_wrong": 31,
+            "n": 45,
+            "disagree_laya_correct": 0,
+            "disagree_llm_correct": 12,
+            "disagree_both_wrong": 0,
+            "disagree_total": 12,
+            "disagree_laya_wrong": 12,
+            "agree_correct": 2
+          }
+        },
+        "fallback_disagreement_caveat": "E includes truth-selected oracle cases and is selection-biased. Independent D covers every identical case and is the complete-population diagnostic.",
+        "actual_invocation_transitions_per_field": {
+          "votability": {
+            "correct -> correct": 31,
+            "wrong -> wrong": 3,
+            "wrong -> correct": 2
+          },
+          "share_blocking": {
+            "wrong -> correct": 5,
+            "correct -> correct": 29,
+            "wrong -> wrong": 2
+          },
+          "poa_required": {
+            "correct -> correct": 31,
+            "wrong -> correct": 4,
+            "wrong -> wrong": 1
+          },
+          "registration_required": {
+            "wrong -> correct": 8,
+            "wrong -> wrong": 22,
+            "correct -> correct": 6
+          },
+          "beneficial_owner_disclosure_required": {
+            "correct -> correct": 29,
+            "wrong -> wrong": 6,
+            "wrong -> correct": 1
+          },
+          "holding_confirmation_required": {
+            "correct -> correct": 26,
+            "wrong -> correct": 4,
+            "wrong -> wrong": 6
+          },
+          "split_voting_restricted": {
+            "correct -> correct": 31,
+            "wrong -> wrong": 3,
+            "wrong -> correct": 2
+          },
+          "securities_lending_recall_required": {
+            "wrong -> wrong": 23,
+            "wrong -> correct": 7,
+            "correct -> correct": 6
+          },
+          "other_voting_restriction": {
+            "correct -> correct": 31,
+            "wrong -> wrong": 5
+          },
+          "deadline_status": {
+            "correct -> correct": 36
+          },
+          "classification": {
+            "wrong -> wrong": 27,
+            "wrong -> correct": 7,
+            "correct -> correct": 2
+          }
+        }
+      },
+      "critical_asymmetry": {
+        "A": {
+          "votability": {
+            "positive_support": 42,
+            "negative_support": 4,
+            "false_negative_including_abstention": 7,
+            "explicit_positive_to_negative": 1,
+            "false_positive": 1
+          },
+          "share_blocking": {
+            "positive_support": 3,
+            "negative_support": 44,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 40
+          },
+          "poa_required": {
+            "positive_support": 3,
+            "negative_support": 44,
+            "false_negative_including_abstention": 1,
+            "explicit_positive_to_negative": 1,
+            "false_positive": 14
+          },
+          "registration_required": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 3,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "beneficial_owner_disclosure_required": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 3,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "holding_confirmation_required": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 3,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "split_voting_restricted": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 3,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "securities_lending_recall_required": {
+            "positive_support": 4,
+            "negative_support": 44,
+            "false_negative_including_abstention": 4,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "other_voting_restriction": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 3,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          }
+        },
+        "B": {
+          "votability": {
+            "positive_support": 42,
+            "negative_support": 4,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 1
+          },
+          "share_blocking": {
+            "positive_support": 3,
+            "negative_support": 44,
+            "false_negative_including_abstention": 3,
+            "explicit_positive_to_negative": 3,
+            "false_positive": 0
+          },
+          "poa_required": {
+            "positive_support": 3,
+            "negative_support": 44,
+            "false_negative_including_abstention": 1,
+            "explicit_positive_to_negative": 1,
+            "false_positive": 0
+          },
+          "registration_required": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 3,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "beneficial_owner_disclosure_required": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 3,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "holding_confirmation_required": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 3,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "split_voting_restricted": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 3,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "securities_lending_recall_required": {
+            "positive_support": 4,
+            "negative_support": 44,
+            "false_negative_including_abstention": 4,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "other_voting_restriction": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 3,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          }
+        },
+        "C": {
+          "votability": {
+            "positive_support": 42,
+            "negative_support": 4,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "share_blocking": {
+            "positive_support": 3,
+            "negative_support": 44,
+            "false_negative_including_abstention": 3,
+            "explicit_positive_to_negative": 1,
+            "false_positive": 0
+          },
+          "poa_required": {
+            "positive_support": 3,
+            "negative_support": 44,
+            "false_negative_including_abstention": 1,
+            "explicit_positive_to_negative": 1,
+            "false_positive": 0
+          },
+          "registration_required": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 2,
+            "explicit_positive_to_negative": 2,
+            "false_positive": 0
+          },
+          "beneficial_owner_disclosure_required": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "holding_confirmation_required": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 2,
+            "explicit_positive_to_negative": 2,
+            "false_positive": 0
+          },
+          "split_voting_restricted": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "securities_lending_recall_required": {
+            "positive_support": 4,
+            "negative_support": 44,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "other_voting_restriction": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 2,
+            "explicit_positive_to_negative": 2,
+            "false_positive": 0
+          }
+        },
+        "D": {
+          "votability": {
+            "positive_support": 42,
+            "negative_support": 4,
+            "false_negative_including_abstention": 7,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "share_blocking": {
+            "positive_support": 3,
+            "negative_support": 44,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 2
+          },
+          "poa_required": {
+            "positive_support": 3,
+            "negative_support": 44,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "registration_required": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 1,
+            "explicit_positive_to_negative": 1,
+            "false_positive": 0
+          },
+          "beneficial_owner_disclosure_required": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "holding_confirmation_required": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "split_voting_restricted": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "securities_lending_recall_required": {
+            "positive_support": 4,
+            "negative_support": 44,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "other_voting_restriction": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 1,
+            "explicit_positive_to_negative": 1,
+            "false_positive": 0
+          }
+        },
+        "E": {
+          "votability": {
+            "positive_support": 42,
+            "negative_support": 4,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 1
+          },
+          "share_blocking": {
+            "positive_support": 3,
+            "negative_support": 44,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "poa_required": {
+            "positive_support": 3,
+            "negative_support": 44,
+            "false_negative_including_abstention": 0,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "registration_required": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 2,
+            "explicit_positive_to_negative": 2,
+            "false_positive": 0
+          },
+          "beneficial_owner_disclosure_required": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 3,
+            "explicit_positive_to_negative": 2,
+            "false_positive": 0
+          },
+          "holding_confirmation_required": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 1,
+            "explicit_positive_to_negative": 0,
+            "false_positive": 0
+          },
+          "split_voting_restricted": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 2,
+            "explicit_positive_to_negative": 1,
+            "false_positive": 0
+          },
+          "securities_lending_recall_required": {
+            "positive_support": 4,
+            "negative_support": 44,
+            "false_negative_including_abstention": 2,
+            "explicit_positive_to_negative": 2,
+            "false_positive": 0
+          },
+          "other_voting_restriction": {
+            "positive_support": 3,
+            "negative_support": 45,
+            "false_negative_including_abstention": 3,
+            "explicit_positive_to_negative": 3,
+            "false_positive": 0
+          }
+        }
+      },
+      "native_score_margin_diagnostics": {
+        "B": {
+          "votability": {
+            "n": 48,
+            "correct": 47,
+            "score_correctness_auc": 1.0,
+            "margin_correctness_auc": 1.0
+          },
+          "share_blocking": {
+            "n": 48,
+            "correct": 43,
+            "score_correctness_auc": 0.5906976744186045,
+            "margin_correctness_auc": 0.5906976744186045
+          },
+          "poa_required": {
+            "n": 48,
+            "correct": 44,
+            "score_correctness_auc": 0.5994318181818181,
+            "margin_correctness_auc": 0.5994318181818181
+          },
+          "deadline_status": {
+            "n": 48,
+            "correct": 41,
+            "score_correctness_auc": 0.5609756097560976,
+            "margin_correctness_auc": 0.5609756097560976
+          }
+        },
+        "E": {
+          "votability": {
+            "n": 45,
+            "correct": 42,
+            "score_correctness_auc": 0.5,
+            "margin_correctness_auc": 0.5
+          },
+          "poa_required": {
+            "n": 44,
+            "correct": 42,
+            "score_correctness_auc": 0.4880952380952381,
+            "margin_correctness_auc": 0.4880952380952381
+          },
+          "beneficial_owner_disclosure_required": {
+            "n": 44,
+            "correct": 40,
+            "score_correctness_auc": 0.625,
+            "margin_correctness_auc": 0.625
+          },
+          "holding_confirmation_required": {
+            "n": 40,
+            "correct": 38,
+            "score_correctness_auc": 0.75,
+            "margin_correctness_auc": 0.75
+          },
+          "split_voting_restricted": {
+            "n": 45,
+            "correct": 42,
+            "score_correctness_auc": 0.5,
+            "margin_correctness_auc": 0.5
+          },
+          "other_voting_restriction": {
+            "n": 46,
+            "correct": 41,
+            "score_correctness_auc": 0.6,
+            "margin_correctness_auc": 0.6
+          },
+          "share_blocking": {
+            "n": 42,
+            "correct": 40,
+            "score_correctness_auc": 0.4875,
+            "margin_correctness_auc": 0.4875
+          },
+          "securities_lending_recall_required": {
+            "n": 20,
+            "correct": 16,
+            "score_correctness_auc": 0.5,
+            "margin_correctness_auc": 0.5
+          },
+          "registration_required": {
+            "n": 20,
+            "correct": 16,
+            "score_correctness_auc": 0.5,
+            "margin_correctness_auc": 0.5
+          }
+        }
+      }
+    }
+  },
+  "automation_enabled": false,
+  "post_test_diagnostic_not_routing_selection": true
+}

@@ -1,0 +1,18 @@
+{
+  "run_id": "ac191104-6637-447a-bbfa-47038cf569cd",
+  "architecture": "B",
+  "dataset": "complete",
+  "dataset_hash": "e3d9af3c44b0ce6ba6496d9d2d54d6aac07b2d70d6bfd39aa98bf3c5f259fb96",
+  "prediction_file_sha256": "12341b07719bac424dd6274ce271cddc0146507a2ffc7991fb36aaac87734703",
+  "laya_checkpoint": "data/models/supplied-synthetic-v1/encoder-4ep",
+  "llm_model": null,
+  "llm_quantisation": null,
+  "prompt_version": null,
+  "routing_config": null,
+  "rule_version": "legacy-factorised-1",
+  "seed": 42,
+  "timestamp": "2026-10-16T19:48:26.482479+00:00",
+  "freeze_sha256": "c9f428087f3e5085ffb0a36e1cfbaf14a4470635e3b1c8b6f6f79644fc81aa12",
+  "posthoc_manifest_created_at": "2026-10-16T20:31:00.707979+00:00",
+  "runtime_nondeterminism": "Temperature zero / fixed seed; finite reproducibility probes do not guarantee universal device determinism."
+}

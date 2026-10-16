@@ -1,0 +1,33 @@
+{
+  "verified_at": "2026-10-16T20:03:33.941865+00:00",
+  "frozen_files": 60,
+  "prediction_records": 1025,
+  "expected_prediction_records": 1025,
+  "run_ids": [
+    "0a8235dd-888a-4da3-bcb7-a74ab9d36a1b",
+    "0a99e47f-dd22-4d06-a131-c7a5e250ae25",
+    "0da87b1e-42ff-4932-b53d-93806b315987",
+    "4523c2ba-3200-4beb-849f-e71a958019b2",
+    "5897d5c0-5be5-4afc-83c8-6ca1169f6c32",
+    "673677a8-2389-4238-abe0-7a21224daf20",
+    "76925528-08c1-4496-92ad-55cd1acbf2cc",
+    "7bbb5812-4715-4e51-9b70-9897599dfd1f",
+    "857af484-ca47-447b-92ad-6e3b6cb24b7f",
+    "a5376bb1-7fa5-41d4-99ab-55bd92584ca4",
+    "a80ccadc-c8c3-4631-ab37-10f57a73bb7e",
+    "abeace9b-3cc9-4fa2-8577-6aea1e54053e",
+    "ac191104-6637-447a-bbfa-47038cf569cd",
+    "e57da58c-adbb-47eb-99bd-17295f0fb0a5",
+    "f7346d17-9724-4242-96e1-ad13e023b91c"
+  ],
+  "llm_attempts": 497,
+  "llm_completed_responses": 497,
+  "invalid_llm_results": 0,
+  "llm_errors": [],
+  "displayable_exact_substring_evidence": 935,
+  "unsupported_factors_retained": 2460,
+  "input_counts_hashes_pins_timestamps_scores_evidence_verified": true,
+  "automation_enabled": false,
+  "customer_accuracy": null,
+  "scope": "Artifact integrity and software conformance, not semantic correctness. Semantic failures remain in SUMMARY.json."
+}

@@ -1,0 +1,442 @@
+[
+  {
+    "id": "SYN-0500",
+    "text": "Voting is available for Pacific Components Ltd's Extraordinary General Meeting. As conditions of participation, a valid power of attorney must be on file; beneficial-owner details must be disclosed.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "YES",
+      "deadline_status": "OPEN",
+      "other_restriction": "YES"
+    }
+  },
+  {
+    "id": "SYN-0493",
+    "text": "Voting information for Pacific Components Ltd is inconsistent: the summary says instructions may be submitted, but the detailed notice states that participation requirements remain to be confirmed.",
+    "expected": {
+      "votability": "UNCERTAIN",
+      "share_blocking": "UNKNOWN",
+      "poa_required": "UNKNOWN",
+      "deadline_status": "UNKNOWN",
+      "other_restriction": "UNKNOWN"
+    }
+  },
+  {
+    "id": "SYN-0491",
+    "text": "Voting instructions may be submitted for Helios Medical NV's Scheme Meeting. Once a valid instruction is received, the instructed shares will be blocked and cannot be sold or transferred until the meeting has concluded.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "YES",
+      "poa_required": "NO",
+      "deadline_status": "OPEN",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0490",
+    "text": "Dividend reinvestment election for Nova Energy ASA: holders may choose cash or shares. This election does not constitute proxy voting.",
+    "expected": {
+      "votability": "NOT_VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "deadline_status": "OPEN",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0430",
+    "text": "Nova Energy ASA has announced a Annual General Meeting. One section says proxy instructions are available, while a later operational note says voting eligibility is still unconfirmed. No clarification has been issued.",
+    "expected": {
+      "votability": "UNCERTAIN",
+      "share_blocking": "UNKNOWN",
+      "poa_required": "UNKNOWN",
+      "deadline_status": "UNKNOWN",
+      "other_restriction": "UNKNOWN"
+    }
+  },
+  {
+    "id": "SYN-0353",
+    "text": "Voting instructions for Nova Energy ASA's Annual General Meeting were required no later than 13 July 2026. Instructions received after that deadline cannot be accepted.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "deadline_status": "PASSED",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0362",
+    "text": "Voting is available for Helios Medical NV's Extraordinary General Meeting. As conditions of participation, the instructed shares will be blocked until the meeting ends; a valid power of attorney must be on file; beneficial-owner details must be disclosed.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "YES",
+      "poa_required": "YES",
+      "deadline_status": "OPEN",
+      "other_restriction": "YES"
+    }
+  },
+  {
+    "id": "SYN-0396",
+    "text": "Please contact the account operator regarding potential voting rights for Orchid Technologies Ltd. Eligibility and instruction requirements could not be confirmed.",
+    "expected": {
+      "votability": "UNCERTAIN",
+      "share_blocking": "UNKNOWN",
+      "poa_required": "UNKNOWN",
+      "deadline_status": "UNKNOWN",
+      "other_restriction": "UNKNOWN"
+    }
+  },
+  {
+    "id": "SYN-0488",
+    "text": "Reminder of historical information only. The deadline for the previous Annual General Meeting of Northbridge Industries plc expired last year; this message does not relate to a current vote.",
+    "expected": {
+      "votability": "NOT_VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "deadline_status": "OPEN",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0154",
+    "text": "Voting is available for Alpine Systems AG's Extraordinary General Meeting. As conditions of participation, the instructed shares will be blocked until the meeting ends; a valid power of attorney must be on file; beneficial-owner details must be disclosed.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "YES",
+      "poa_required": "YES",
+      "deadline_status": "OPEN",
+      "other_restriction": "YES"
+    }
+  },
+  {
+    "id": "SYN-0306",
+    "text": "Voting instructions for Alpine Systems AG's Scheme Meeting were required no later than 02 July 2026. Instructions received after that deadline cannot be accepted.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "deadline_status": "PASSED",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0392",
+    "text": "Please contact the account operator regarding potential voting rights for Meridian Holdings SA. Eligibility and instruction requirements could not be confirmed.",
+    "expected": {
+      "votability": "UNCERTAIN",
+      "share_blocking": "UNKNOWN",
+      "poa_required": "UNKNOWN",
+      "deadline_status": "UNKNOWN",
+      "other_restriction": "UNKNOWN"
+    }
+  },
+  {
+    "id": "SYN-0290",
+    "text": "Northbridge Industries plc: information concerning possible participation in the forthcoming Special General Meeting is available from your custodian. The notice does not state whether instructions can currently be submitted.",
+    "expected": {
+      "votability": "UNCERTAIN",
+      "share_blocking": "UNKNOWN",
+      "poa_required": "UNKNOWN",
+      "deadline_status": "UNKNOWN",
+      "other_restriction": "UNKNOWN"
+    }
+  },
+  {
+    "id": "SYN-0458",
+    "text": "Corporate action notification: cash dividend payment by Northbridge Industries plc. This is a mandatory distribution and is not a shareholder meeting or voting solicitation.",
+    "expected": {
+      "votability": "NOT_VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "deadline_status": "OPEN",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0378",
+    "text": "Voting is available for Danube Infrastructure SA's Scheme Meeting. As conditions of participation, the instructed shares will be blocked until the meeting ends; beneficial-owner details must be disclosed.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "YES",
+      "poa_required": "NO",
+      "deadline_status": "OPEN",
+      "other_restriction": "YES"
+    }
+  },
+  {
+    "id": "SYN-0208",
+    "text": "Voting instructions for Alpine Systems AG's Scheme Meeting were required no later than 11 September 2026. Instructions received after that deadline cannot be accepted.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "deadline_status": "PASSED",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0276",
+    "text": "A Extraordinary General Meeting has been announced for Orchid Technologies Ltd; operational voting details have not yet been received.",
+    "expected": {
+      "votability": "UNCERTAIN",
+      "share_blocking": "UNKNOWN",
+      "poa_required": "UNKNOWN",
+      "deadline_status": "UNKNOWN",
+      "other_restriction": "UNKNOWN"
+    }
+  },
+  {
+    "id": "SYN-0165",
+    "text": "Voting is available for Silverline Logistics SE's Scheme Meeting. As conditions of participation, a valid power of attorney must be on file; beneficial-owner details must be disclosed.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "YES",
+      "deadline_status": "OPEN",
+      "other_restriction": "YES"
+    }
+  },
+  {
+    "id": "SYN-0055",
+    "text": "Voting information for Danube Infrastructure SA is inconsistent: the summary says instructions may be submitted, but the detailed notice states that participation requirements remain to be confirmed.",
+    "expected": {
+      "votability": "UNCERTAIN",
+      "share_blocking": "UNKNOWN",
+      "poa_required": "UNKNOWN",
+      "deadline_status": "UNKNOWN",
+      "other_restriction": "UNKNOWN"
+    }
+  },
+  {
+    "id": "SYN-0427",
+    "text": "Mandatory stock split notification for Silverline Logistics SE. No election and no shareholder voting instruction is requested.",
+    "expected": {
+      "votability": "NOT_VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "deadline_status": "OPEN",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0205",
+    "text": "Voting instructions for Nova Energy ASA's Special General Meeting were required no later than 27 August 2026. Instructions received after that deadline cannot be accepted.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "deadline_status": "PASSED",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0083",
+    "text": "Voting is available for Meridian Holdings SA's Special General Meeting. As conditions of participation, a valid power of attorney must be on file; beneficial-owner details must be disclosed.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "YES",
+      "deadline_status": "OPEN",
+      "other_restriction": "YES"
+    }
+  },
+  {
+    "id": "SYN-0486",
+    "text": "Voting instructions may be submitted for Silverline Logistics SE's Extraordinary General Meeting. Once a valid instruction is received, the instructed shares will be blocked and cannot be sold or transferred until the meeting has concluded.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "YES",
+      "poa_required": "NO",
+      "deadline_status": "OPEN",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0377",
+    "text": "Corporate action notification: cash dividend payment by Helios Medical NV. This is a mandatory distribution and is not a shareholder meeting or voting solicitation.",
+    "expected": {
+      "votability": "NOT_VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "deadline_status": "OPEN",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0200",
+    "text": "Voting instructions for Silverline Logistics SE's Scheme Meeting were required no later than 15 August 2026. Instructions received after that deadline cannot be accepted.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "deadline_status": "PASSED",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0494",
+    "text": "Voting is available for Pacific Components Ltd's Scheme Meeting. A valid Power of Attorney must be on file before proxy voting instructions can be executed.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "YES",
+      "deadline_status": "OPEN",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0443",
+    "text": "The event is votable. Securities corresponding to the instructed quantity will be blocked in the account until the securities blocking period end date.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "YES",
+      "poa_required": "NO",
+      "deadline_status": "OPEN",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0265",
+    "text": "Mandatory stock split notification for Meridian Holdings SA. No election and no shareholder voting instruction is requested.",
+    "expected": {
+      "votability": "NOT_VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "deadline_status": "OPEN",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0110",
+    "text": "Voting instructions for Northbridge Industries plc's Scheme Meeting were required no later than 02 October 2026. Instructions received after that deadline cannot be accepted.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "deadline_status": "PASSED",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0477",
+    "text": "Voting is permitted, subject to prior registration for meeting participation. An instruction without completed registration cannot be executed.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "deadline_status": "OPEN",
+      "other_restriction": "YES"
+    }
+  },
+  {
+    "id": "SYN-0460",
+    "text": "To participate through the custodian, the shareholder is required to grant the designated agent a POA for vote execution.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "YES",
+      "deadline_status": "OPEN",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0383",
+    "text": "Eligible holders may vote by proxy. Positions instructed for voting are immobilised from receipt of the instruction through the end of the Annual General Meeting.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "YES",
+      "poa_required": "NO",
+      "deadline_status": "OPEN",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0202",
+    "text": "Reminder of historical information only. The deadline for the previous Scheme Meeting of Northbridge Industries plc expired last year; this message does not relate to a current vote.",
+    "expected": {
+      "votability": "NOT_VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "deadline_status": "OPEN",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0062",
+    "text": "Voting instructions for Meridian Holdings SA's Extraordinary General Meeting were required no later than 20 July 2026. Instructions received after that deadline cannot be accepted.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "deadline_status": "PASSED",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0446",
+    "text": "Eligible shareholders may vote at Silverline Logistics SE's Scheme Meeting. Shares out on loan on the record date are not part of the votable position unless recalled in time. Voting itself does not immobilise the position.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "deadline_status": "OPEN",
+      "other_restriction": "YES"
+    }
+  },
+  {
+    "id": "SYN-0361",
+    "text": "Beneficial owners may vote, provided an executed power of attorney authorising the local representative is delivered with the instruction.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "YES",
+      "deadline_status": "OPEN",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0137",
+    "text": "Eligible holders may vote by proxy. Positions instructed for voting are immobilised from receipt of the instruction through the end of the Extraordinary General Meeting.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "YES",
+      "poa_required": "NO",
+      "deadline_status": "OPEN",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0094",
+    "text": "Reminder of historical information only. The deadline for the previous Extraordinary General Meeting of Alpine Systems AG expired last year; this message does not relate to a current vote.",
+    "expected": {
+      "votability": "NOT_VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "deadline_status": "OPEN",
+      "other_restriction": "NO"
+    }
+  },
+  {
+    "id": "SYN-0344",
+    "text": "Voting instructions are accepted for Pacific Components Ltd. The record date determines entitlement; acquiring shares after the record date does not create voting entitlement for this meeting.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "NO",
+      "deadline_status": "OPEN",
+      "other_restriction": "YES"
+    }
+  },
+  {
+    "id": "SYN-0311",
+    "text": "Voting is available for Cedar Financial Group SA's Annual General Meeting. A valid Power of Attorney must be on file before proxy voting instructions can be executed.",
+    "expected": {
+      "votability": "VOTABLE",
+      "share_blocking": "NO",
+      "poa_required": "YES",
+      "deadline_status": "OPEN",
+      "other_restriction": "NO"
+    }
+  }
+]

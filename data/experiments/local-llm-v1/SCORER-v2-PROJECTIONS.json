@@ -1,0 +1,3101 @@
+{
+  "challenge": {
+    "A": [],
+    "B": [],
+    "C": [
+      {
+        "id": "agm",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "blocking",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "poa",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "informational",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "past-deadline",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "ambiguous",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "no-block",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "no-poa",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "double-neg",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "blocked-and-poa",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "YES"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "future-deadline",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "two-dates",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "record-date",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "issuer-custodian",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "quoted-old",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "mandatory-dividend",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "voluntary-tender",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "scheme",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "egm",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "proxy-online",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "historical-results",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "comp-table",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "legal-poa",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "eligibility",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "partial",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "YES",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "record-ordinary",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "registration",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "YES",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "contradiction",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "same-day",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "meeting-only",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "historic-fiscal",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "withdrawn",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "replacement",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "non-voting-bond",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "consent",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "poa-waived",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "blocking-waived",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "sell-restricted",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "YES"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "bank-holiday",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "negated-vote",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "historic-quote-only",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "injection",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "false-urgency",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "de-vote",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "de-info",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "fr-poa",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "YES"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "es-vote",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "fr-info",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "de-no-block",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "html-vote",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "unicode-vote",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "no-date",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "today-date",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "old-vote-live",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "negotiation",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "foreign-restriction",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "blank-like",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      }
+    ],
+    "D": [],
+    "E": []
+  },
+  "synthetic-development": {
+    "A": [],
+    "B": [],
+    "C": [
+      {
+        "id": "SYN-0145",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0199",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0011",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0257",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0019",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0007",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0001",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0315",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0002",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0462",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0323",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0040",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0118",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0003",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0435",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0183",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0012",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0047",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0120",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0006",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0057",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0254",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0041",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0318",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0227",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0080",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0471",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0248",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0005",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0267",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0335",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0031",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0223",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0349",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0115",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0009",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0146",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0095",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0262",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0187",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0310",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0078",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0282",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0252",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0037",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0487",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0339",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0291",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0260",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0364",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0198",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0418",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0172",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0347",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0203",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0131",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0354",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0370",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0499",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0382",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0077",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0401",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0408",
+        "old_broad_value": "UNKNOWN",
+        "canonical_broad_value": "UNKNOWN",
+        "named_values": {
+          "registration_required": "UNKNOWN",
+          "beneficial_owner_disclosure_required": "UNKNOWN",
+          "holding_confirmation_required": "UNKNOWN",
+          "split_voting_restricted": "UNKNOWN",
+          "securities_lending_recall_required": "UNKNOWN",
+          "other_voting_restriction": "UNKNOWN"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0180",
+        "old_broad_value": "UNKNOWN",
+        "canonical_broad_value": "UNKNOWN",
+        "named_values": {
+          "registration_required": "UNKNOWN",
+          "beneficial_owner_disclosure_required": "UNKNOWN",
+          "holding_confirmation_required": "UNKNOWN",
+          "split_voting_restricted": "UNKNOWN",
+          "securities_lending_recall_required": "UNKNOWN",
+          "other_voting_restriction": "UNKNOWN"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0300",
+        "old_broad_value": "UNKNOWN",
+        "canonical_broad_value": "UNKNOWN",
+        "named_values": {
+          "registration_required": "UNKNOWN",
+          "beneficial_owner_disclosure_required": "UNKNOWN",
+          "holding_confirmation_required": "UNKNOWN",
+          "split_voting_restricted": "UNKNOWN",
+          "securities_lending_recall_required": "UNKNOWN",
+          "other_voting_restriction": "UNKNOWN"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0369",
+        "old_broad_value": "UNKNOWN",
+        "canonical_broad_value": "UNKNOWN",
+        "named_values": {
+          "registration_required": "UNKNOWN",
+          "beneficial_owner_disclosure_required": "UNKNOWN",
+          "holding_confirmation_required": "UNKNOWN",
+          "split_voting_restricted": "UNKNOWN",
+          "securities_lending_recall_required": "UNKNOWN",
+          "other_voting_restriction": "UNKNOWN"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0496",
+        "old_broad_value": "UNKNOWN",
+        "canonical_broad_value": "UNKNOWN",
+        "named_values": {
+          "registration_required": "UNKNOWN",
+          "beneficial_owner_disclosure_required": "UNKNOWN",
+          "holding_confirmation_required": "UNKNOWN",
+          "split_voting_restricted": "UNKNOWN",
+          "securities_lending_recall_required": "UNKNOWN",
+          "other_voting_restriction": "UNKNOWN"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0122",
+        "old_broad_value": "UNKNOWN",
+        "canonical_broad_value": "UNKNOWN",
+        "named_values": {
+          "registration_required": "UNKNOWN",
+          "beneficial_owner_disclosure_required": "UNKNOWN",
+          "holding_confirmation_required": "UNKNOWN",
+          "split_voting_restricted": "UNKNOWN",
+          "securities_lending_recall_required": "UNKNOWN",
+          "other_voting_restriction": "UNKNOWN"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0465",
+        "old_broad_value": "UNKNOWN",
+        "canonical_broad_value": "UNKNOWN",
+        "named_values": {
+          "registration_required": "UNKNOWN",
+          "beneficial_owner_disclosure_required": "UNKNOWN",
+          "holding_confirmation_required": "UNKNOWN",
+          "split_voting_restricted": "UNKNOWN",
+          "securities_lending_recall_required": "UNKNOWN",
+          "other_voting_restriction": "UNKNOWN"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0355",
+        "old_broad_value": "UNKNOWN",
+        "canonical_broad_value": "UNKNOWN",
+        "named_values": {
+          "registration_required": "UNKNOWN",
+          "beneficial_owner_disclosure_required": "UNKNOWN",
+          "holding_confirmation_required": "UNKNOWN",
+          "split_voting_restricted": "UNKNOWN",
+          "securities_lending_recall_required": "UNKNOWN",
+          "other_voting_restriction": "UNKNOWN"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0395",
+        "old_broad_value": "UNKNOWN",
+        "canonical_broad_value": "UNKNOWN",
+        "named_values": {
+          "registration_required": "UNKNOWN",
+          "beneficial_owner_disclosure_required": "UNKNOWN",
+          "holding_confirmation_required": "UNKNOWN",
+          "split_voting_restricted": "UNKNOWN",
+          "securities_lending_recall_required": "UNKNOWN",
+          "other_voting_restriction": "UNKNOWN"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0099",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "YES",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0038",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "YES",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0070",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "YES",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0160",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "YES",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0253",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "YES",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0196",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "YES",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0096",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0143",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0221",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0376",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0473",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0312",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0313",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0023",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0097",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0028",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0372",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "YES",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "YES"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0125",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "YES",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "YES"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0085",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "YES",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0439",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "UNKNOWN",
+        "named_values": {
+          "registration_required": "UNKNOWN",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0053",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "YES",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0472",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "YES",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0256",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "YES",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0414",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0139",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0338",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0289",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0201",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "SYN-0234",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      }
+    ],
+    "D": [],
+    "E": []
+  },
+  "complete": {
+    "A": [],
+    "B": [],
+    "C": [
+      {
+        "id": "COMPLETE-001",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-002",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-003",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-004",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-005",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-006",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-007",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-008",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-009",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-010",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "YES",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-011",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-012",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-013",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-014",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-015",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "UNKNOWN",
+        "named_values": {
+          "registration_required": "UNKNOWN",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "UNKNOWN"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-016",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "YES",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-017",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-018",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-019",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "YES",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-020",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-021",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "UNKNOWN",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "UNKNOWN"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-022",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-023",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-024",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-025",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "YES",
+          "holding_confirmation_required": "YES",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-026",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-027",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "YES",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-028",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "YES",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "YES"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-029",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-030",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "YES",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-031",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-032",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-033",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-034",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-035",
+        "old_broad_value": "UNKNOWN",
+        "canonical_broad_value": "UNKNOWN",
+        "named_values": {
+          "registration_required": "UNKNOWN",
+          "beneficial_owner_disclosure_required": "UNKNOWN",
+          "holding_confirmation_required": "UNKNOWN",
+          "split_voting_restricted": "UNKNOWN",
+          "securities_lending_recall_required": "UNKNOWN",
+          "other_voting_restriction": "UNKNOWN"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-036",
+        "old_broad_value": "UNKNOWN",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-037",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-038",
+        "old_broad_value": "YES",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-039",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-040",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-041",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-042",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-043",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "YES",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-044",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "YES",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-045",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-046",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "YES",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-047",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "YES",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "YES",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": true,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      },
+      {
+        "id": "COMPLETE-048",
+        "old_broad_value": "NO",
+        "canonical_broad_value": "NO",
+        "named_values": {
+          "registration_required": "NO",
+          "beneficial_owner_disclosure_required": "NO",
+          "holding_confirmation_required": "NO",
+          "split_voting_restricted": "NO",
+          "securities_lending_recall_required": "NO",
+          "other_voting_restriction": "NO"
+        },
+        "value_changed": false,
+        "reason": "Evaluate the new reconciled schema, not the stale legacy auxiliary head"
+      }
+    ],
+    "D": [],
+    "E": []
+  }
+}

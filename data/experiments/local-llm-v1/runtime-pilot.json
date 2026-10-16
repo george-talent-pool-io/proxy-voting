@@ -1,0 +1,68 @@
+{
+  "request": {
+    "model": "glm-4.7-flash:latest",
+    "stream": false,
+    "think": false,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Extract the current voting condition. Return JSON only."
+      },
+      {
+        "role": "user",
+        "content": "For the upcoming meeting, voting is available. No power of attorney is needed. A proof of holding is mandatory."
+      }
+    ],
+    "format": {
+      "type": "object",
+      "properties": {
+        "poa_required": {
+          "type": "string",
+          "enum": [
+            "YES",
+            "NO",
+            "UNKNOWN"
+          ]
+        },
+        "holding_confirmation_required": {
+          "type": "string",
+          "enum": [
+            "YES",
+            "NO",
+            "UNKNOWN"
+          ]
+        }
+      },
+      "required": [
+        "poa_required",
+        "holding_confirmation_required"
+      ],
+      "additionalProperties": false
+    },
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 8192,
+      "num_predict": 256
+    },
+    "keep_alive": "30m"
+  },
+  "response": {
+    "model": "glm-4.7-flash:latest",
+    "created_at": "2026-10-16T18:48:29.770555Z",
+    "message": {
+      "role": "assistant",
+      "content": "{\n  \"poa_required\": \"NO\",\n  \"holding_confirmation_required\": \"YES\"\n}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 11402046875,
+    "load_duration": 10621591542,
+    "prompt_eval_count": 39,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 441320000,
+    "eval_count": 21,
+    "eval_duration": 336055000
+  },
+  "wall_seconds": 11.413959834026173
+}

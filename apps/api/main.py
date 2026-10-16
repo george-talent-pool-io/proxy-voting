@@ -184,6 +184,10 @@ def detail(id:str,run_id:str|None=None,blind:bool=False):
         result['decision_configuration']=None if blind or not config else json.loads(config[0])
         from apps.api.hybrid_views import inspect
         result['hybrid_inspection']=None if blind else inspect(result['text'])
+        from apps.api.semantic_views import latest_notice_analysis
+        from semantic_runtime.config import configured_architecture
+        result['semantic_execution']=None if blind else latest_notice_analysis(id)
+        result['classification_architecture']=configured_architecture()[0]
     return result
 
 class ReviewRequest(BaseModel):
@@ -309,3 +313,7 @@ def start_run(body:RunRequest):
 app.mount('/assets',StaticFiles(directory=ROOT/'apps/web'),name='assets')
 @app.get('/')
 def index():return FileResponse(ROOT/'apps/web/index.html')
+
+# Versioned complete architecture, separate from historical frozen run format.
+from apps.api.semantic_views import router as semantic_router
+app.include_router(semantic_router)

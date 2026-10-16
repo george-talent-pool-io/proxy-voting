@@ -1,0 +1,15 @@
+{"dataset": "challenge", "architecture": "A", "timestamp": "2026-10-16T19:11:47.850057+00:00", "load_ms": 4796.278791967779}
+{"dataset": "challenge", "architecture": "B", "timestamp": "2026-10-16T19:11:54.403278+00:00", "load_ms": 2200.59262518771}
+{"dataset": "challenge", "architecture": "C", "timestamp": "2026-10-16T19:11:59.909248+00:00", "load_ms": 995.7116669975221}
+{"dataset": "challenge", "architecture": "D", "timestamp": "2026-10-16T19:17:47.866445+00:00", "load_ms": 69.50283306650817}
+{"dataset": "challenge", "architecture": "E", "timestamp": "2026-10-16T19:22:29.326395+00:00", "load_ms": 2073.6030410043895}
+{"dataset": "synthetic-development", "architecture": "A", "timestamp": "2026-10-16T19:24:24.900682+00:00", "load_ms": 886.9024999439716}
+{"dataset": "synthetic-development", "architecture": "B", "timestamp": "2026-10-16T19:24:33.084967+00:00", "load_ms": 963.439374929294}
+{"dataset": "synthetic-development", "architecture": "C", "timestamp": "2026-10-16T19:24:40.621863+00:00", "load_ms": 965.4621249064803}
+{"dataset": "synthetic-development", "architecture": "D", "timestamp": "2026-10-16T19:35:17.474754+00:00", "load_ms": 71.69350003823638}
+{"dataset": "synthetic-development", "architecture": "E", "timestamp": "2026-10-16T19:43:38.227941+00:00", "load_ms": 937.8670419100672}
+{"dataset": "complete", "architecture": "A", "timestamp": "2026-10-16T19:48:20.829871+00:00", "load_ms": 1128.3522499725223}
+{"dataset": "complete", "architecture": "B", "timestamp": "2026-10-16T19:48:26.423448+00:00", "load_ms": 892.1898750122637}
+{"dataset": "complete", "architecture": "C", "timestamp": "2026-10-16T19:48:32.120218+00:00", "load_ms": 968.499124981463}
+{"dataset": "complete", "architecture": "D", "timestamp": "2026-10-16T19:54:08.753679+00:00", "load_ms": 64.95558400638402}
+{"dataset": "complete", "architecture": "E", "timestamp": "2026-10-16T19:58:36.412224+00:00", "load_ms": 931.7789999768138}

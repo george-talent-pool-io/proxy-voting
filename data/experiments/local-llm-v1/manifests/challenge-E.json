@@ -1,0 +1,26 @@
+{
+  "run_id": "a80ccadc-c8c3-4631-ab37-10f57a73bb7e",
+  "architecture": "E",
+  "dataset": "challenge",
+  "dataset_hash": "2191a12968fdf3511ceaf2ded540b9d9dbfce3fd57b1a9e5c187e16a0f0d7ae7",
+  "prediction_file_sha256": "3be2f3543ed0701bf330f517d8c096d5411ac7983668ecf586682847fc791578",
+  "laya_checkpoint": "data/models/narrow-v1",
+  "llm_model": "glm-4.7-flash:latest",
+  "llm_quantisation": "Q4_K_M",
+  "prompt_version": "264e2fc98de4a1f9a1dfe98daed9f42bc0da0e4822fac3b43f79ab97e104b4e4",
+  "routing_config": {
+    "min_score": null,
+    "min_margin": null,
+    "unknown": true,
+    "unsupported": true,
+    "conflict": true,
+    "max_chars": 12000,
+    "require_positive_evidence": false
+  },
+  "rule_version": "semantic-decision-2",
+  "seed": 42,
+  "timestamp": "2026-10-16T19:22:29.479723+00:00",
+  "freeze_sha256": "c9f428087f3e5085ffb0a36e1cfbaf14a4470635e3b1c8b6f6f79644fc81aa12",
+  "posthoc_manifest_created_at": "2026-10-16T20:31:00.068961+00:00",
+  "runtime_nondeterminism": "Temperature zero / fixed seed; finite reproducibility probes do not guarantee universal device determinism."
+}
