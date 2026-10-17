@@ -1,0 +1,18 @@
+{
+  "backend": "TRANSFORMERS_PEFT",
+  "family": "QWEN",
+  "model_path": "data/models/trainable-qwen",
+  "base_model_id": "Qwen/Qwen3.8-27B",
+  "base_revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+  "epochs": 1,
+  "learning_rate": 0.00002,
+  "batch_size": 1,
+  "gradient_accumulation": 8,
+  "max_length": 8192,
+  "target_modules": ["q_proj", "v_proj"],
+  "lora_rank": 8,
+  "lora_alpha": 16,
+  "device": "mps",
+  "dtype": "float16",
+  "seed": 42
+}

@@ -1,0 +1,72 @@
+{
+  "timestamp": "2026-10-17T16:36:25.109111+00:00",
+  "scope": "Training framework engineering, not exact Qwen/GLM training qualification or customer accuracy",
+  "software_regression": {
+    "passed": 2141,
+    "skipped": 1,
+    "deselected": 155,
+    "seconds": 38.18
+  },
+  "focused_after_final_backend_changes": {
+    "passed": 37
+  },
+  "browser": {
+    "passed": 24,
+    "seconds": 56.3
+  },
+  "real_cpu_lora": {
+    "scope": "REAL TRAINER EXECUTION ONLY; random tiny CPU model, not Qwen/GLM compatibility or quality",
+    "versions": {
+      "laya": "0.4.8",
+      "torch": "2.14.1",
+      "transformers": "5.20.0",
+      "peft": "0.21.2",
+      "tokenizers": "0.23.3",
+      "safetensors": "0.8.0"
+    },
+    "result": {
+      "backend": "TRANSFORMERS_PEFT",
+      "optimiser_steps": 1,
+      "curve": [
+        {
+          "epoch": 1,
+          "optimiser_steps": 1,
+          "train_token_cross_entropy": 6.0772318840026855,
+          "validation_token_cross_entropy": 6.086535930633545
+        }
+      ],
+      "elapsed_seconds": 0.18120729108341038,
+      "trainable_parameters": 128,
+      "validation_kind": "Teacher-forced JSON token loss; not semantic classification accuracy",
+      "reload_parity": {
+        "passed": true,
+        "max_absolute_logit_difference": 0.0,
+        "absolute_relative_tolerance": 1e-05,
+        "probe": "First validation input, final-position logits"
+      },
+      "determinism": "Seeded training; accelerator/kernel determinism is not guaranteed"
+    },
+    "automation_enabled": false,
+    "customer_accuracy": null,
+    "weights_downloaded": false
+  },
+  "bundle": {
+    "counts": {
+      "TRAIN": 2160,
+      "VALIDATION": 480
+    },
+    "label_origins": {
+      "AI_AUTHORED": 2640
+    },
+    "manifest_sha256": "3a22da71d329b12cb7f9a79470fc06983383d4eb90d14b94436291cf577f3fa2"
+  },
+  "log_sha256": {
+    "software": "8784e59dbeb8e8c1f560d74a541b93b7512ee46e8ca34e3adc3a22274279a827",
+    "focused_final": "32aa3d5d2e58de2d5d384f5b18ab01ad2de695ddc61594042b3d699853a81189",
+    "browser_final": "b06413f979f053bd9117c7597beecab3a81cc9c950197967fdf0184f1d3d0685",
+    "real_cpu_lora": "99bb41a9b8cd0b786f007245cafd7f5305cb9d2a80738223229b3ebf9263fc10"
+  },
+  "new_laya_qwen_glm_weights_trained": false,
+  "automation_enabled": false,
+  "customer_accuracy": null
+}

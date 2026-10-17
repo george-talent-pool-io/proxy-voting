@@ -4,7 +4,15 @@ A runnable local application for testing whether **Laya**, a small specialised, 
 
 **This is an experimental product demonstrator, not a validated voting service.** Its interface reports unknown accuracy as unknown and disables automatic processing by default. Laya remains the primary specialist; an optional real local generative fallback and an explicitly separate LLM-only benchmark are available.
 
-Current verification: **1,920 software tests, 18 browser tests and 13 live local-model integration tests pass.** The controlled A–E experiment persisted **1,025 predictions** over 205 authored/synthetic records, including 497 actual local LLM invocations. The historical public baseline remains **7,683 unlabelled source-row outputs with zero failed rows**. Authored semantic quality failures remain visible; they are not software-test passes. Automatic processing remains disabled. [Read the controlled evaluation](data/reports/LAYA_LLM_ARCHITECTURE_EVALUATION.md) and [historical public-corpus verification](data/reports/VERIFICATION.md).
+The product scope is the **end-to-end classification and training framework**:
+versioned labels → isolated data exports → Laya or local-LLM training → checkpoint
+registration → evaluation/calibration → explicit model selection. AI-authored and
+AI-reviewed labels are supported for framework development and remain visibly
+distinct from human/expert reviews. See the [training framework guide](training/framework/README.md)
+and Model Lab. Building and testing this workflow does not require waiting for
+expert customer labels; establishing customer accuracy still does.
+
+Latest framework verification: **2,150 software tests and 25 browser tests pass**, with real official Laya and Qwen3.8-27B quantised training/save/reload/API execution qualified separately. [Read the engineering qualification](data/reports/QWEN_TRAINABLE_CHECKPOINT_QUALIFICATION.md). The earlier controlled experiment also recorded13 live local-model integration test passes. The controlled A–E experiment persisted **1,025 predictions** over 205 authored/synthetic records, including 497 actual local LLM invocations. The historical public baseline remains **7,683 unlabelled source-row outputs with zero failed rows**. Authored semantic quality failures remain visible; they are not software-test passes. Automatic processing remains disabled. [Read the controlled evaluation](data/reports/LAYA_LLM_ARCHITECTURE_EVALUATION.md) and [historical public-corpus verification](data/reports/VERIFICATION.md).
 
 Historical supervised research: **supplied synthetic test all-supplied-field exact match 6/100 → 100/100; unchanged semantic challenge cases satisfying supplied partial assertions 30/57 → 37/57.** The fine-tuned model still makes **12 challenge errors with policy score ≥98%**. The supplied test has known duplicate overlap and two previously exposed labels. **Automation remains disabled; no customer accuracy claim is supported.** See [the complete study](data/reports/LAYA_TRAINING_EVALUATION.md) and [every remaining challenge failure](data/reports/LAYA_FINETUNED_CHALLENGE_ERRORS.md).
 

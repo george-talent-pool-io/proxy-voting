@@ -14,6 +14,7 @@ import pytest
 
 pytestmark=[pytest.mark.e2e,pytest.mark.skipif(os.environ.get('RUN_E2E')!='1',reason='RUN_E2E=1 enables isolated browser acceptance suite')]
 
+
 @pytest.fixture(scope='module')
 def browser_app(tmp_path_factory):
     from playwright.sync_api import sync_playwright
@@ -512,3 +513,57 @@ def test_23_notice_renders_persisted_cascade_and_refresh_keeps_it(browser_app):
     p.screenshot(path='artifacts/laya-first-persisted-trace.png',full_page=True)
     p.reload()
     assert p.request.get(a['url']+'/api/notice?id='+a['record']).json()['fast_cascade_execution']['id']=='browser-cascade-contract'
+
+def test_24_training_framework_and_ai_review_provenance(browser_app):
+    from playwright.sync_api import expect
+    a = browser_app; p = a['page']
+    p.goto(a['url'] + '/#model_lab')
+    expect(p.get_by_role('heading', name='Training framework · Laya + local LLM', exact=True)).to_be_visible()
+    expect(p.locator('#training-framework-panel')).to_contain_text('AI-authored and AI-reviewed labels')
+    p.get_by_role('link', name='Notice explorer', exact=True).click()
+    p.get_by_role('searchbox', name='Search notices').fill(a['record'])
+    expect(p.locator('tbody tr')).to_have_count(1)
+    p.locator('tbody tr').click()
+    p.locator('#domain-review-panel summary').click()
+    form = p.locator('#domain-review-form')
+    expect(p.locator('#domain-review-revision')).not_to_contain_text('Loading')
+    form.locator('[name=reviewer]').fill('AI workflow test — isolated database')
+    form.locator('[name=label_origin]').select_option('AI_REVIEWED')
+    form.locator('[name=reviewer_model]').fill('browser-contract-only-not-a-real-annotation-model')
+    form.locator('[name=domain_expert_attested]').uncheck()
+    form.get_by_role('button', name='Save complete predicate review', exact=True).click()
+    expect(p.locator('#domain-review-revision')).to_contain_text('saved')
+    last = p.request.get(a['url'] + '/api/domain/reviews/' + a['record']).json()['items'][-1]
+    assert last['context']['label_origin'] == 'AI_REVIEWED'
+    assert last['context']['validation_type'] == 'AI_ASSISTED_NOT_HUMAN_GOLD'
+    assert not last['context']['domain_expert_attested']
+    p.get_by_role('button', name='Close notice').click()
+
+
+def test_25_registered_candidate_trace_persists_in_notice_detail(browser_app):
+    from playwright.sync_api import expect
+    from apps.api.training_views import execution_tables
+    from classifier.preprocessing import source_hash
+    from semantic_pipeline.schema import PREDICATES
+    from semantic_pipeline.decision import decide
+    a=browser_app;p=a['page']
+    with sqlite3.connect(a['db']) as c:
+        text=c.execute('SELECT text FROM notices WHERE id=?',(a['record'],)).fetchone()[0]
+        f={k:{'value':'NOT_VOTABLE' if k=='votability' else 'NO','source':'BROWSER_CONTRACT_ONLY',
+              'evidence':[],'confidence':None} for k in PREDICATES}
+        result={'architecture':'REGISTERED_QWEN','input_type':'UNSTRUCTURED_NOTICE','parser':None,
+                'reconciliation':{'predicates':f,'conflicts':[]},'decision':decide(f,{'status':'UNKNOWN'}),
+                'deadline':{'status':'UNKNOWN'},'checkpoint_manifest_sha256':'browser-contract-only'}
+        execution_tables(c)
+        c.execute('INSERT INTO framework_executions VALUES(?,?,?,?,?,?,?)',('browser-trained-contract',a['record'],source_hash(text),text,
+                  '2026-10-17T18:00:00+00:00','browser-contract-job',json.dumps(result)));c.commit()
+    p.goto(a['url']+'/#explorer');p.get_by_role('searchbox',name='Search notices').fill(a['record'])
+    expect(p.locator('tbody tr')).to_have_count(1);p.locator('tbody tr').click()
+    trace=p.locator('.framework-decision-trace');trace.locator('summary').click()
+    expect(trace).to_contain_text('browser-trained-contract')
+    expect(trace).to_contain_text('Calibrated confidence unavailable')
+    expect(trace).to_contain_text('Review required')
+    p.screenshot(path='artifacts/registered-candidate-trace.png',full_page=True)
+    p.reload()
+    saved=p.request.get(a['url']+'/api/notice?id='+a['record']).json()['framework_execution']
+    assert saved['id']=='browser-trained-contract'

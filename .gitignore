@@ -235,3 +235,4 @@ __pycache__/
 .pytest_cache/
 data/run_sources/
 data/history/
+data/training-workspace/

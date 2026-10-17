@@ -1,0 +1,15 @@
+{
+  "backend": "LAYA_SDK",
+  "family": "LAYA",
+  "model_path": "data/models/laya/multilingual",
+  "base_model_id": "convaiinnovations/laya:multilingual",
+  "base_revision": "7b928d828b7b0e022f929d9bd2e44165aa270148",
+  "epochs": 1,
+  "learning_rate": 0.00002,
+  "batch_size": 1,
+  "gradient_accumulation": 8,
+  "max_length": 4096,
+  "freeze_encoder": true,
+  "device": "mps",
+  "seed": 42
+}

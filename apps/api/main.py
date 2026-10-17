@@ -192,6 +192,8 @@ def detail(id:str,run_id:str|None=None,blind:bool=False):
         from apps.api.fast_cascade_views import latest as latest_cascade
         result['fast_cascade_execution']=None if blind else latest_cascade(id)
         result['fast_cascade_enabled']=not blind and os.environ.get('LAYA_FIRST_ENABLED','false').lower()=='true'
+        from apps.api.training_views import latest as latest_framework
+        result['framework_execution']=None if blind else latest_framework(id)
         result['classification_architecture']=configured_architecture()[0]
     return result
 
@@ -331,3 +333,6 @@ app.include_router(domain_router)
 
 from apps.api.fast_cascade_views import router as fast_cascade_router
 app.include_router(fast_cascade_router)
+
+from apps.api.training_views import router as training_router
+app.include_router(training_router)

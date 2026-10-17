@@ -80,6 +80,11 @@ class FullReview(BaseModel):
     domain_expert_attested:bool=False
     blind_review:bool=False
     evaluation_time:str='2026-10-17T12:00:00+00:00'
+    label_origin:Literal['AI_AUTHORED','AI_REVIEWED','HUMAN_REVIEWED','EXPERT_REVIEWED']='HUMAN_REVIEWED'
+    reviewer_model:str|None=Field(default=None,max_length=240)
+    evidence:dict[str,list[str]]=Field(default_factory=dict)
+    deadline_mentioned:bool=False
+    deadline_text:str|None=None
 
 @router.get('/reviews/{record_id}')
 def reviews(record_id:str):
@@ -95,6 +100,12 @@ def review(body:FullReview):
     from datetime import datetime
     from semantic_pipeline.decision import decide
     if not body.reviewer.strip():raise HTTPException(422,'Reviewer identity required')
+    if body.label_origin.startswith('AI_') and (not body.reviewer_model or body.domain_expert_attested):
+        raise HTTPException(422,'AI reviews require model identity and cannot attest human expertise')
+    if body.label_origin=='EXPERT_REVIEWED' and not body.domain_expert_attested:
+        raise HTTPException(422,'Expert review requires explicit expertise attestation')
+    from semantic_pipeline.schema import PREDICATES
+    if not set(body.evidence)<=set(PREDICATES):raise HTTPException(422,'Unknown evidence predicate')
     try:
         ref=datetime.fromisoformat(body.evaluation_time.replace('Z','+00:00'))
         if ref.tzinfo is None:raise ValueError()
@@ -103,16 +114,25 @@ def review(body:FullReview):
     from apps.api.fast_cascade_views import latest as latest_cascade
     cascade_prediction=latest_cascade(body.record_id)
     if cascade_prediction and (prediction is None or cascade_prediction['created_at']>prediction['created_at']):prediction=cascade_prediction
+    from apps.api.training_views import latest as latest_framework
+    trained_prediction=latest_framework(body.record_id)
+    if trained_prediction and (prediction is None or trained_prediction['created_at']>prediction['created_at']):prediction=trained_prediction
     with store.connect() as c:
         tables(c);c.execute('BEGIN IMMEDIATE')
-        record=c.execute('SELECT source_hash,group_id,split FROM notices WHERE id=?',(body.record_id,)).fetchone()
+        record=c.execute('SELECT source_hash,group_id,split,text FROM notices WHERE id=?',(body.record_id,)).fetchone()
         if not record:raise HTTPException(404,'Notice not found')
+        quotes=[q for spans in body.evidence.values() for q in spans]
+        if body.deadline_text is not None:quotes.append(body.deadline_text)
+        if any(not q or q not in record['text'] for q in quotes):raise HTTPException(422,'Evidence must be an exact nonempty source substring')
         old=c.execute('SELECT id FROM domain_reviews WHERE record_id=? ORDER BY id DESC LIMIT 1',(body.record_id,)).fetchone()
         previous=old['id'] if old else None
         if previous!=body.expected_revision:raise HTTPException(409,'Review changed; reload before saving')
         label=body.label.model_dump();status=decide({k:{'value':v} for k,v in label.items() if k!='deadline_status'},{'status':label['deadline_status']})['classification']
         context={'schema':'domain-nine-predicate-v1','evaluation_time':ref.isoformat(),'classification':status,'split':record['split'],'duplicate_group':record['group_id'],
-            'domain_expert_attested':body.domain_expert_attested,'blind_review_attested':body.blind_review,'validation_type':'HUMAN_ENTRY_EXPERTISE_NOT_INDEPENDENTLY_AUTHENTICATED','notes':body.notes,'source_hash':record['source_hash'],
+            'domain_expert_attested':body.domain_expert_attested,'blind_review_attested':body.blind_review,
+            'label_origin':body.label_origin,'reviewer_model':body.reviewer_model,
+            'semantic_evidence':body.evidence,'deadline_information':{'deadline_mentioned':body.deadline_mentioned,'deadline_text':body.deadline_text},
+            'validation_type':'AI_ASSISTED_NOT_HUMAN_GOLD' if body.label_origin.startswith('AI_') else 'HUMAN_ENTRY_EXPERTISE_NOT_INDEPENDENTLY_AUTHENTICATED','notes':body.notes,'source_hash':record['source_hash'],
             'training_eligible':record['split']=='train','previous_prediction_execution_id':prediction['id'] if prediction else None,
             'previous_prediction_architecture':prediction['result'].get('architecture') if prediction else None,
             'ai_exact_match':all(prediction['result']['predicates'].get(k,{}).get('value')==v for k,v in label.items()) if prediction else None}
