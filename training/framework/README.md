@@ -1,5 +1,13 @@
 # Classification and training framework
 
+The connected event-level workflow is described in
+[`ISO15022_EVENT_LEARNING_VERIFICATION.md`](../../data/reports/ISO15022_EVENT_LEARNING_VERIFICATION.md).
+Model Lab includes event import/history/review, versioned exports, local job
+queue/dispatch/cancel, same-input comparison, and experimental selection/rollback.
+Execution requires `TRAINING_EXECUTION_ENABLED=true`; the default stays disabled.
+Cancelled/interrupted attempts are retained. **Prepare new attempt** starts from
+base weights under a new ID; optimizer resume is not implemented or implied.
+
 The product is the reusable workflow: source → optional ISO adapter → semantic
 models → deterministic decision → review → versioned labels → isolated training
 → registered checkpoint → evaluation → calibration → explicit deployment choice.

@@ -309,11 +309,18 @@ def start_run(body:RunRequest):
             if not parent:raise HTTPException(404,'Unknown run')
             if 'option_order' not in json.loads(parent[0]):raise HTTPException(422,'Legacy run predates explicit option ordering; use its source archive to inspect the original schema and start a new run')
     if not job_lock.acquire(blocking=False):raise HTTPException(409,'A batch is already starting')
+    from training.framework.resources import model_resource
+    resource=model_resource('legacy-batch-inference')
+    try:resource.__enter__()
+    except ValueError as exc:
+        job_lock.release();raise HTTPException(409,str(exc))
     def work():
         try:
             from scripts.run_batch import run_batch
             run_batch(reproduce=body.reproduce,resume=body.resume)
-        finally:job_lock.release()
+        finally:
+            resource.__exit__(None,None,None)
+            job_lock.release()
     threading.Thread(target=work,daemon=True).start()
     return {'status':'starting'}
 
@@ -336,3 +343,6 @@ app.include_router(fast_cascade_router)
 
 from apps.api.training_views import router as training_router
 app.include_router(training_router)
+
+from apps.api.learning_views import router as learning_router
+app.include_router(learning_router)

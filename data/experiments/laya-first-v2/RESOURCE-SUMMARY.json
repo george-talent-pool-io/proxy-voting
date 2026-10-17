@@ -1,13 +1,19 @@
 {
-  "sampled_notice_intervals": 71,
-  "minimum_system_available_bytes": 7611383808,
+  "sampled_notice_intervals": 145,
+  "minimum_system_available_bytes": 2923118592,
   "peak_rss_bytes_by_process": {
     "2937:Python": 2005270528,
     "9329:ollama": 20283392,
     "51027:ollama": 32030720,
     "51030:llama-server": 5247647744,
     "86434:Python": 2180431872,
-    "86652:llama-server": 29951836160
+    "86652:llama-server": 29951836160,
+    "187:Python": 2175598592,
+    "537:llama-server": 23282974720,
+    "9351:llama-server": 2840379392,
+    "9796:llama-server": 8418361344,
+    "16702:llama-server": 2899099648,
+    "17183:llama-server": 8431927296
   },
   "caveat": "Apple unified memory; RSS must not be summed across shared mappings. Includes other machine activity. Cache-only references have no new full-model resource measurement."
 }

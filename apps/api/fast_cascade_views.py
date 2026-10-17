@@ -70,7 +70,11 @@ def analyse(body:Analyse):
         if not r:raise HTTPException(404,'Notice not found')
     global _pipeline
     with _lock:
+        resource=None
         try:
+            from training.framework.resources import model_resource
+            resource=model_resource('fast-cascade-inference')
+            resource.__enter__()
             from fast_cascade.study import verify
             from fast_cascade.pipeline import Pipeline
             from fast_cascade.models import SharedQwen
@@ -85,3 +89,5 @@ def analyse(body:Analyse):
             result=_pipeline.analyse(r['text'],language=json.loads(r['metadata']).get('language','en'))
             return persist(body.record_id,r['text'],result)
         except (ValueError,RuntimeError,OSError) as e:raise HTTPException(503,str(e))
+        finally:
+            if resource is not None:resource.__exit__(None,None,None)

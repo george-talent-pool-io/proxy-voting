@@ -27,3 +27,54 @@ semantic_experiment.laya_for=lambda arm:_SemanticContractModel() if arm=='E' els
 from apps.api import semantic_views
 semantic_views.ROOT=Path(os.environ['VOTING_DB']).parent
 (semantic_views.ROOT/'data').mkdir(exist_ok=True)
+
+# Event-lifecycle browser contracts use an isolated workspace and explicit model
+# doubles. The separate real qualification receipt executes official models and
+# the detached process worker; these browser doubles make NO model-quality claim.
+import json
+from apps.api import store, training_views
+from training.framework import jobs, queue
+from training.framework import trainers, runtime
+from training.framework.bundle import create_bundle
+from tests.unit.test_training_framework import example
+jobs.WORKSPACE=Path(os.environ['VOTING_DB']).parent/'framework'
+training_views.WORKSPACE=jobs.WORKSPACE
+jobs.active_experiments=lambda:[]
+os.environ['TRAINING_EXECUTION_ENABLED']='true'
+queue.tables()
+with store.connect() as c:
+    for row in c.execute("SELECT id FROM learning_tasks WHERE state IN ('QUEUED','RUNNING')").fetchall():
+        queue.transition(c,row['id'],'INTERRUPTED',{'reason':'Copied snapshot; no browser fixture may resume a real training task'})
+_base=jobs.WORKSPACE/'contract-base';_base.mkdir(parents=True,exist_ok=True)
+(_base/'EXPLICIT_TEST_DOUBLE.txt').write_text('Browser contract, not a pretrained model')
+_bundle=jobs.WORKSPACE/'bundles/browser-seed'
+if not _bundle.exists():create_bundle([example(),example('b','VALIDATION')],_bundle)
+def _preflight(bundle,spec):
+    from training.framework.bundle import load_bundle
+    m,_=load_bundle(bundle)
+    return {'ready':True,'reasons':[],'label_origins':m['label_origins'],'versions':{'runtime':'BROWSER_CONTRACT_DOUBLE'},'hardware':{'device':'TEST_DOUBLE'}}
+jobs.preflight=_preflight
+def _train(bundle,output,spec):
+    output.mkdir();(output/'BROWSER_CONTRACT.txt').write_text('Explicit model execution double; no ML training')
+    return {'runtime':'BROWSER_CONTRACT_DOUBLE','weights_updated':False}
+trainers.train_laya=_train
+def _dispatch(database=None):
+    for t in queue.listing():
+        if t['state']!='QUEUED':continue
+        with store.connect() as c:queue.transition(c,t['id'],'RUNNING',{'backend':'EXPLICIT_BROWSER_DOUBLE'})
+        jobs.execute(jobs.WORKSPACE/'jobs'/t['job_id'])
+        with store.connect() as c:queue.transition(c,t['id'],'COMPLETED',{'backend':'EXPLICIT_BROWSER_DOUBLE'})
+    return {'worker':'EXPLICIT_SYNCHRONOUS_BROWSER_DOUBLE'}
+queue.spawn=_dispatch
+class _RegisteredContract:
+    def __init__(self,job):self.job=job
+    def analyse(self,text,**kw):
+        from tests.unit.test_learning_comparison import result
+        from classifier.preprocessing import source_hash
+        from semantic_pipeline.evidence import verify_evidence
+        r=result();r.update(input_hash=source_hash(text),input_type='UNSTRUCTURED_NOTICE',parser=None,
+                             checkpoint_manifest_sha256='BROWSER_CONTRACT_ONLY')
+        if 'Shareholders can vote.' in text:r['predicates']['votability']['evidence']=[verify_evidence(text,'Shareholders can vote.')]
+        return r
+    def close(self):pass
+runtime.RegisteredModel=_RegisteredContract

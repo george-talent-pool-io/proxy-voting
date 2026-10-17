@@ -1,3 +1,4 @@
+import {installEventLearning} from './learning.js';
 const $ = (s, root = document) => root.querySelector(s);
 const $$ = (s, root = document) => [...root.querySelectorAll(s)];
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -20,6 +21,7 @@ function heading(eyebrow,title,subtitle,actions=''){return `<div class="page-hea
 function metric(label,value,note,teal=false){return `<div class="metric"><div class="metric-label">${esc(label)}</div><div class="metric-value ${teal?'teal':''}">${esc(value)}</div><small>${esc(note)}</small></div>`;}
 function empty(title,text,link=''){return `<div class="empty"><strong>${esc(title)}</strong><span>${esc(text)}</span>${link}</div>`;}
 function panel(title,body,sub=''){return `<section class="panel"><div class="panel-head"><h2>${esc(title)}</h2><small>${esc(sub)}</small></div>${body}</section>`;}
+const eventLearningPanel=installEventLearning({api,panel,esc,$,toast,frameworkExecutionTrace});
 function notice(text,warning=false){return `<div class="notice ${warning?'warning':''}"><span class="label">${warning?'VALIDATION REQUIRED':'RESEARCH NOTE'}</span><div>${text}</div></div>`;}
 function exportLink(kind='results'){return `<a class="button" href="/api/export?kind=${kind}${state.run?'&run_id='+encodeURIComponent(state.run):''}" download>Export ${kind}</a>`;}
 function runQuery(){return state.run?`run_id=${encodeURIComponent(state.run)}`:'';}
@@ -364,9 +366,9 @@ document.addEventListener('click',async e=>{
 async function modelLab(){
  const e=await api('semantic/experiment'),v2=await api('cascade/experiment'),dataset=state.labDataset||'challenge';
  const rows=await api('semantic/records?'+new URLSearchParams({dataset,architecture:'A',page_size:100}));
- const fastPanel=await fastCascadePanel(),trainingPanel=await trainingFrameworkPanel();
+ const fastPanel=await fastCascadePanel(),trainingPanel=await trainingFrameworkPanel(),learningPanel=await eventLearningPanel();
  setTimeout(bindModelLab,0);
- return `<div class="page-heading"><p class="eyebrow">INTERNAL EXPERIMENT</p><h1>Model Lab</h1><p>Synthetic and authored benchmarks. Production/customer accuracy UNKNOWN. Automation disabled.</p></div>${trainingPanel}${cascadeV2Panel(v2)}${fastPanel}<div class="filters"><label>Benchmark<select id="lab-dataset">${['challenge','complete','synthetic-development'].map(v=>`<option value="${v}" ${v===dataset?'selected':''}>${esc(human(v))}</option>`).join('')}</select></label><label>Case<select id="lab-case">${rows.items.map(r=>`<option value="${esc(r.id)}">${esc(r.id)} · ${esc(r.text.slice(0,80))}</option>`).join('')}</select></label><label><input type="checkbox" id="lab-errors-only"> Show disagreements / errors only</label></div><div id="lab-comparison"></div>${modelLabUsage(e,dataset)}`;
+ return `<div class="page-heading"><p class="eyebrow">INTERNAL EXPERIMENT</p><h1>Model Lab</h1><p>Synthetic and authored benchmarks. Production/customer accuracy UNKNOWN. Automation disabled.</p></div>${learningPanel}${trainingPanel}${cascadeV2Panel(v2)}${fastPanel}<div class="filters"><label>Benchmark<select id="lab-dataset">${['challenge','complete','synthetic-development'].map(v=>`<option value="${v}" ${v===dataset?'selected':''}>${esc(human(v))}</option>`).join('')}</select></label><label>Case<select id="lab-case">${rows.items.map(r=>`<option value="${esc(r.id)}">${esc(r.id)} · ${esc(r.text.slice(0,80))}</option>`).join('')}</select></label><label><input type="checkbox" id="lab-errors-only"> Show disagreements / errors only</label></div><div id="lab-comparison"></div>${modelLabUsage(e,dataset)}`;
 }
 async function trainingFrameworkPanel(){
  const d=await api('training/status');
@@ -378,7 +380,7 @@ function modelLabUsage(e,dataset){
 }
 function frameworkExecutionTrace(row){
  const r=row.result,fields=r.reconciliation?.predicates||{};
- return `<details class="framework-decision-trace"><summary>Trained candidate · persisted decision trace</summary><p>Checkpoint job: ${esc(row.job_id)} · Execution ${esc(row.id)}<br>Source type: ${esc(r.source_type||'Prior contract fixture')}<br>Input: ${esc(r.input_type)} · Parser: ${esc(r.parser?.parser||'Not applicable')}<br>Final decision: ${esc(human(r.decision.classification))} · Review required</p>${Object.entries(fields).map(([k,p])=>`<p><strong>${esc(human(k))}: ${esc(p.value)}</strong><br>Source: ${esc(p.source)} · Calibrated confidence unavailable${p.native_score!=null?` · Native model score ${pct(p.native_score)}`:''}${(p.evidence||[]).filter(v=>v.valid).map(v=>`<br>“${esc(v.text)}”`).join('')||'<br>Evidence span unavailable'}</p>`).join('')}<p>Conflicts: ${esc((r.reconciliation?.conflicts||[]).join(' · ')||'None recorded')}<br>Deterministic deadline: ${esc(r.deadline?.status)}<br>Source hash: ${esc(row.source_hash)}<br>Training manifest: ${esc(r.checkpoint_manifest_sha256)}</p></details>`;
+ return `<details class="framework-decision-trace"><summary>Trained candidate · persisted decision trace</summary><p>Checkpoint job: ${esc(row.job_id)} · Execution ${esc(row.id)}<br>Source type: ${esc(r.source_type||'Prior contract fixture')}<br>Input: ${esc(r.input_type)} · Parser: ${esc(r.parser?.parser||'Not applicable')}<br>Final decision: ${esc(human(r.decision.classification))} · Review required<br>Decision rule: ${esc(r.decision.rule||"Not recorded in this historical trace")}<br>Review reasons: ${esc((r.decision.review_reasons||[]).join(" · ")||"Review required by the recorded policy")}</p>${Object.entries(fields).map(([k,p])=>`<p><strong>${esc(human(k))}: ${esc(p.value)}</strong><br>Source: ${esc(p.source)} · Calibrated confidence unavailable${p.native_score!=null?` · Native model score ${pct(p.native_score)}`:''}${r.confidence?.[k]?` · Trust band: ${esc(r.confidence[k].heuristic_band)} (heuristic)`:''}${(p.evidence||[]).filter(v=>v.valid).map(v=>`<br>“${esc(v.text)}” ${(v.event_source_links||[]).map(l=>`<a href="#model_lab" data-learning-source="${l.message_id}">${esc(l.seme)} [${l.start}:${l.end}]</a>`).join(' · ')}`).join('')||'<br>Evidence span unavailable'}</p>`).join('')}<p>Conflicts: ${esc((r.reconciliation?.conflicts||[]).join(' · ')||'None recorded')}<br>Deterministic deadline: ${esc(r.deadline?.status)}<br>Source hash: ${esc(row.source_hash)}<br>Training manifest: ${esc(r.checkpoint_manifest_sha256)}</p></details>`;
 }
 document.addEventListener('submit',async e=>{
  if(e.target.id!=='trained-candidate-form')return;

@@ -1,5 +1,9 @@
 # Next step: an event-level ISO15022 learning loop
 
+**Implementation:** this acceptance specification is now connected in the
+application; see [verification](ISO15022_EVENT_LEARNING_VERIFICATION.md).
+The follow-on proposal is [trainable cascade release campaigns](ISO15022_LEARNING_FRAMEWORK_NEXT_CAMPAIGN.md).
+
 The next product milestone is **one reproducible application workflow from a
 versioned ISO event through review, training, comparison and reversible model
 selection**. It can be developed with AI-authored/AI-reviewed data. Human expert

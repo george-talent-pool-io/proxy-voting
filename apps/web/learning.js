@@ -1,0 +1,72 @@
+export function installEventLearning({api,panel,esc,$,toast,frameworkExecutionTrace}){
+const domainPredicates=["votability","share_blocking","poa_required","registration_required","beneficial_owner_disclosure_required","holding_confirmation_required","split_voting_restricted","securities_lending_recall_required","other_voting_restriction","deadline_status"];
+/* Event lifecycle controls use saved backend state; no reconstructed model trace. */
+let learningState=null,learningEvent=null;
+async function eventLearningPanel(){
+ const d=await api('learning/status'),t=await api('training/status');learningState=d;
+ const candidates=t.jobs.filter(j=>j.state==='COMPLETED');
+ const options=candidates.map(j=>`<option value="${esc(j.id)}">${esc(j.family)} · ${esc(j.id)}</option>`).join('');
+ return panel('Event learning loop',`<div class="panel-body" id="event-learning-panel"><p>Linked messages → current state → revisioned review → versioned dataset → local training → comparison → experimental selection / rollback.</p><p>AI labels are development annotations, never independent expert validation. Calibrated confidence is unavailable until separate calibration support and quality gates pass. Automation remains disabled.</p>
+ <details><summary>Import a message</summary><form id="learning-import-form"><label>Import JSON<textarea name="payload" required rows="8" aria-label="Message import JSON" placeholder='{"raw":"...","sender":"...","source_type":"STANDARDS_DERIVED_SYNTHETIC","source_reference":"...","group_id":"...","family":"...","split":"TRAIN"}'></textarea></label><button>Import and preserve raw source</button></form></details>
+ <label>Learning event<select id="learning-event-id"><option value="">Select an event</option>${d.events.filter(v=>['TRAIN','VALIDATION'].includes(v.split)).map(v=>`<option value="${esc(v.id)}">${esc(v.corp)} · ${esc(v.split)}</option>`).join('')}</select></label><div id="learning-event-detail"></div>
+ <details><summary>Versioned exports</summary><form id="learning-export-form"><label>New version ID<input name="id" required value="event-reviews-${Date.now()}"></label><button name="action" value="exports">Export TRAIN / VALIDATION bundle</button><button name="action" value="datasets">Freeze all reviewed role assignments</button></form></details>
+ <details><summary>Prepare a local training job</summary><form id="learning-prepare-form"><label>Bundle<select name="bundle_id">${t.bundles.map(v=>`<option value="${esc(v.id)}">${esc(v.id)}</option>`).join('')}</select></label><label>Training specification JSON<textarea name="spec" required rows="8" aria-label="Training specification JSON">${esc(JSON.stringify({backend:'LAYA_SDK',family:'LAYA',model_path:'data/models/laya/multilingual',base_model_id:'convaiinnovations/laya:multilingual',base_revision:'7b928d828b7b0e022f929d9bd2e44165aa270148',epochs:1,batch_size:1,gradient_accumulation:8,max_length:4096,device:'mps',freeze_encoder:true,seed:42},null,2))}</textarea></label><button>Prepare immutable plan</button></form><p>Preparing does not start training. Queue and dispatch are explicit; API restart never launches a job. Interrupted jobs require a new attempt from the base checkpoint.</p></details>
+ <h4>Durable training queue</h4>${t.jobs.filter(j=>j.state==='PREPARED').map(j=>`<button data-learning-enqueue="${esc(j.id)}" ${d.execution_enabled?'':'disabled'}>Queue ${esc(j.family)} · ${esc(j.id)}</button>`).join('')}
+ <button id="learning-dispatch" ${d.execution_enabled?'':'disabled'}>Dispatch queued jobs locally</button><p>${d.execution_enabled?'Local model resource guard is active.':'Execution disabled. Set TRAINING_EXECUTION_ENABLED=true to opt in.'}</p>
+ <div id="learning-tasks">${d.tasks.map(v=>`<p>${esc(v.job_id)} · <strong>${esc(v.state)}</strong> ${['RUNNING','QUEUED'].includes(v.state)?`<button data-learning-cancel="${esc(v.id)}">Cancel task</button>`:''}${['FAILED','CANCELLED','INTERRUPTED'].includes(v.state)?`<button data-learning-restart="${esc(v.job_id)}">Prepare new attempt</button>`:''}</p>`).join('')||'No queued tasks.'}</div>
+ <details><summary>Compare registered checkpoints</summary><form id="learning-comparison-form"><label>Frozen dataset<select name="dataset_id">${d.datasets.map(v=>`<option>${esc(v)}</option>`).join('')}</select></label><label>First candidate<select name="first">${options}</select></label><label>Second candidate<select name="second">${options}</select></label><label>Evaluation role<select name="role"><option>VALIDATION</option><option>CALIBRATION</option><option>FROZEN_TEST</option></select></label><button ${d.execution_enabled?'':'disabled'}>Run local same-input comparison</button></form><p>Predictions are persisted before scoring. Frozen-test scoring requires a prior model selection. Small calibration sets retain null confidence.</p></details>
+ <div id="learning-comparison">${d.comparisons.map(v=>`<button data-learning-comparison="${esc(v)}">Saved comparison ${esc(v)}</button>`).join('')}</div>
+ <details><summary>Experimental model selection</summary><form id="learning-selection-form"><label>Checkpoint<select name="job_id">${options}</select></label><label>Actor<input name="actor" required></label><label>Reason<input name="reason" required></label><button>Select experimental checkpoint</button></form><p>Selection affects the opt-in event workspace only. Default customer architecture and automation do not change.</p><div id="learning-selections">${d.selections.map(v=>`<p>Selection ${v.id}: ${esc(v.job_id)} · ${esc(v.action)}${v.id!==d.selections.at(-1)?.id?` <button data-learning-rollback="${v.id}">Roll back to selection ${v.id}</button>`:''}</p>`).join('')||'No experimental selection.'}</div></details><div id="learning-feedback" role="status"></div></div>`);
+}
+async function openLearningEvent(id){
+ const v=await api('learning/events/'+encodeURIComponent(id));learningEvent=v;
+ const r=v.reviews.at(-1),target=r?.payload.target||{votability:'UNCERTAIN',...Object.fromEntries(domainPredicates.filter(k=>k!=='votability'&&k!=='deadline_status').map(k=>[k,'UNKNOWN'])),deadline_information:{deadline_mentioned:false,deadline_text:null},evidence:Object.fromEntries(domainPredicates.filter(k=>k!=='deadline_status').map(k=>[k,[]])),ambiguities:[]};
+ $('#learning-event-detail').innerHTML=`<h4>${esc(v.corp)} · current event state</h4><p>Policy ${esc(v.policy)} · Snapshot ${esc(v.snapshot_hash)}<br>${v.cancelled?'Cancelled':v.context_kind==='RECOVERED_REVIEW_CONTEXT'?'Recovered context · review required':'Active'} · ${v.messages.length} preserved messages</p><div class="source-text">${esc(v.current_text)}</div>
+ <details><summary>Raw messages and provenance</summary>${v.messages.map(m=>`<details id="learning-message-${m.id}"><summary>${esc(m.seme)} · ${esc(m.payload.message_type)} · ${esc(m.state)} · ${v.operative_message_ids.includes(m.id)?'current':v.context_kind==='RECOVERED_REVIEW_CONTEXT'?'recovered context':'historical'}</summary><p>Parser: ${esc(m.payload.parser)} · Source: ${esc(m.payload.source_type)}<br>SHA-256: ${esc(m.source_hash)}</p><pre>${esc(m.raw_source)}</pre></details>`).join('')}</details>
+ <details><summary>Structured fact history</summary>${v.facts.map(f=>`<p>${esc(f.name)}: ${esc(JSON.stringify(f.value))} · ${f.current?'current':'superseded / historical'} · <a href="#model_lab" data-learning-source="${f.message_id}">${esc(f.seme)}</a> · ${esc(f.source)} / ${esc(f.tag)}</p>`).join('')}</details>
+ <button id="learning-analyse" ${learningState.execution_enabled?'':'disabled'}>Classify with selected experimental checkpoint</button>
+ <div id="learning-event-executions">${v.executions.map(x=>frameworkExecutionTrace({id:x.id,job_id:x.job_id,source_hash:v.current_text_hash,result:x.payload.result})).join('')}</div>
+ <form id="learning-review-form"><h4>Append a review revision</h4><label>Complete semantic label JSON<textarea name="target" required rows="10" aria-label="Event semantic label JSON">${esc(JSON.stringify(target,null,2))}</textarea></label><label>Label origin<select name="origin"><option>AI_REVIEWED</option><option>HUMAN_REVIEWED</option><option>EXPERT_REVIEWED</option></select></label><label>Reviewer<input name="author" required value="AI development reviewer"></label><label>Reviewer model (required for AI)<input name="model_id" value="GPT-6 / Codex"></label><label><input type="checkbox" name="expert_attested"> I attest relevant human domain expertise (expert review only)</label><label>Notes<input name="notes" value="AI-assisted development review; not an expert label"></label><button>Save event review revision</button></form><p>All positive labels require exact operative-source evidence. Existing revisions remain unchanged.</p><div id="learning-review-history">${v.reviews.map(x=>`<p>Revision ${x.id} · ${esc(x.payload.provenance.origin)} · ${esc(x.payload.provenance.author)} · ${esc(x.payload.validation_type)}</p>`).join('')}</div>`;
+}
+document.addEventListener('change',e=>{if(e.target.getAttribute('id')==='learning-event-id'&&e.target.value)openLearningEvent(e.target.value).catch(x=>toast(x.message));});
+function learningFeedback(value){const el=$('#learning-feedback');if(el)el.textContent=typeof value==='string'?value:JSON.stringify(value);}
+document.addEventListener('submit',async e=>{
+ const formId=e.target.getAttribute('id')||'';
+ if(!formId.startsWith('learning-'))return;
+ e.preventDefault();const v=Object.fromEntries(new FormData(e.target));const button=e.submitter;if(button)button.disabled=true;
+ try{
+  let result;
+  if(formId==='learning-import-form'){result=await api('learning/messages',{method:'POST',body:JSON.stringify(JSON.parse(v.payload))});await openLearningEvent(result.event_id);}
+  if(formId==='learning-review-form'){
+   const old=learningEvent.reviews.at(-1);
+   result=await api(`learning/events/${learningEvent.id}/reviews`,{method:'POST',body:JSON.stringify({snapshot_hash:learningEvent.snapshot_hash,expected_revision:old?.id||null,target:JSON.parse(v.target),notes:v.notes,provenance:{origin:v.origin,author:v.author,model_id:v.model_id||null,expert_attested:v.expert_attested==='on',method:'Explicit event-workspace review',source_reference:learningEvent.id,revision:crypto.randomUUID(),reviewed_at:new Date().toISOString()}})});await openLearningEvent(learningEvent.id);
+  }
+  if(formId==='learning-export-form')result=await api('learning/'+e.submitter.value,{method:'POST',body:JSON.stringify({id:v.id})});
+  if(formId==='learning-prepare-form')result=await api('training/jobs',{method:'POST',body:JSON.stringify({bundle_id:v.bundle_id,spec:JSON.parse(v.spec)})});
+  if(formId==='learning-selection-form')result=await api('learning/selections',{method:'POST',body:JSON.stringify({...v,expected_previous_id:learningState.selections.at(-1)?.id||null})});
+  if(formId==='learning-comparison-form'){
+   result=await api('learning/comparisons',{method:'POST',body:JSON.stringify({dataset_id:v.dataset_id,candidates:{first:v.first,second:v.second},role:v.role,selection_id:learningState.selections.at(-1)?.id||null})});
+   $('#learning-comparison').innerHTML=learningComparison(result.report);
+  }
+  learningFeedback(result);if(['learning-selection-form','learning-prepare-form'].includes(formId)){learningState=await api('learning/status');toast('Saved. Refresh Model Lab to view the updated ledger.');}
+ }catch(error){toast(error.message);learningFeedback(error.message);}finally{if(button)button.disabled=false;}
+});
+function learningComparison(r){return `<h4>${esc(r.role)} · same inputs / explicit truth</h4><table><thead><tr><th>Candidate</th><th>Assertions</th><th>All-nine exact match</th><th>Final status</th><th>Median latency</th></tr></thead><tbody>${Object.entries(r.metrics).map(([k,m])=>`<tr><td>${esc(k)}</td><td>${m.correct_assertions}/${m.assertions}</td><td>${m.cases_satisfying_all_supplied_assertions}/${m.cases}</td><td>${m.final_status.correct}/${m.final_status.support}</td><td>${Math.round(m.median_latency_ms)} ms</td></tr>`).join('')}</tbody></table><p>Benchmark performance only. Customer accuracy unknown; automation disabled.</p><details><summary>Every failure and repair/damage</summary><pre>${esc(JSON.stringify({failures:r.failures,repair_damage:r.repair_damage},null,2))}</pre></details>`;}
+document.addEventListener('click',async e=>{
+ const source=e.target.closest('[data-learning-source]');if(source){e.preventDefault();const raw=$('#learning-message-'+source.dataset.learningSource);if(raw){raw.open=true;raw.parentElement.closest('details').open=true;raw.scrollIntoView({block:'center'});}return;}
+ const b=e.target.closest('[data-learning-enqueue],[data-learning-cancel],[data-learning-restart],[data-learning-rollback],[data-learning-comparison],#learning-dispatch,#learning-analyse');if(!b)return;b.disabled=true;
+ try{
+  let r;
+  if(b.dataset.learningEnqueue)r=await api(`learning/jobs/${encodeURIComponent(b.dataset.learningEnqueue)}/enqueue`,{method:'POST'});
+  if(b.dataset.learningCancel)r=await api(`learning/tasks/${b.dataset.learningCancel}/cancel`,{method:'POST'});
+  if(b.dataset.learningRestart)r=await api(`learning/jobs/${b.dataset.learningRestart}/restart`,{method:'POST'});
+  if(b.id==='learning-dispatch')r=await api('learning/dispatch',{method:'POST'});
+  if(b.id==='learning-analyse'){r=await api(`learning/events/${learningEvent.id}/analyse`,{method:'POST',body:'{}'});await openLearningEvent(learningEvent.id);}
+  if(b.dataset.learningComparison){r=await api('learning/comparisons/'+b.dataset.learningComparison);$('#learning-comparison').innerHTML=learningComparison(r);}
+  if(b.dataset.learningRollback){const target=learningState.selections.find(x=>x.id===Number(b.dataset.learningRollback));r=await api('learning/selections',{method:'POST',body:JSON.stringify({job_id:target.job_id,actor:'Explicit workspace rollback',reason:'User requested previous experimental artifact',expected_previous_id:learningState.selections.at(-1)?.id||null,rollback_id:target.id})});learningState=await api('learning/status');}
+  learningFeedback(r);toast('Ledger updated. Refresh Model Lab for queue/selection status.');
+ }catch(error){toast(error.message);learningFeedback(error.message);}finally{b.disabled=false;}
+});
+
+return eventLearningPanel;
+}

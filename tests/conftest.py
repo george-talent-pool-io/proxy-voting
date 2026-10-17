@@ -25,6 +25,12 @@ def config():return load_config()
 def classifier(config):return LayaClassifier(config,agent=ContractAgent())
 @pytest.fixture
 def db(tmp_path,monkeypatch):
+    # Contract API tests must never acquire the real application's model lease.
+    from training.framework import jobs
+    from apps.api import training_views
+    monkeypatch.setattr(jobs,'WORKSPACE',tmp_path/'framework')
+    monkeypatch.setattr(training_views,'WORKSPACE',tmp_path/'framework')
+    monkeypatch.setattr(jobs,'active_experiments',lambda:[])
     path=str(tmp_path/'test.sqlite');monkeypatch.setattr(store,'DB_PATH',path);store.initialise()
     rows=[]
     # Find distinct deterministic groups in each partition.

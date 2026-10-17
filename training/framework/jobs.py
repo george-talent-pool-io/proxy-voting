@@ -4,6 +4,7 @@ import os
 import subprocess
 import sys
 import uuid
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -12,11 +13,19 @@ from training.framework.bundle import ROOT, sha, write, load_bundle
 from training.framework.schema import TrainSpec
 from training.framework.trainers import preflight, snapshot
 
-WORKSPACE = ROOT / 'data/training-workspace'
+WORKSPACE = Path(os.environ.get('VOTING_TRAINING_WORKSPACE', ROOT / 'data/training-workspace')).resolve()
 
 
 def now():
     return datetime.now(timezone.utc).isoformat()
+
+
+def member(kind, name):
+    if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]{0,119}', name):
+        raise ValueError('Invalid workspace identifier')
+    path = (WORKSPACE / kind / name).resolve()
+    if path.parent != (WORKSPACE / kind).resolve(): raise ValueError('Workspace boundary violation')
+    return path
 
 
 def events(root, event):

@@ -138,7 +138,11 @@ def analyse_candidate(ident: str, body: CandidateInput):
     if not text or not text.strip() or len(text) > 2_000_000: raise HTTPException(422, 'Nonempty source within input limit required')
     if not _execution_lock.acquire(blocking=False): raise HTTPException(409, 'Candidate inference already running')
     model = None
+    lease = None
     try:
+        from training.framework.resources import model_resource
+        lease = model_resource('registered-candidate-inference', workspace=WORKSPACE)
+        lease.__enter__()
         from training.framework.runtime import RegisteredModel
         model = RegisteredModel(path)
         result = model.analyse(text, reference=body.reference)
@@ -157,4 +161,6 @@ def analyse_candidate(ident: str, body: CandidateInput):
     finally:
         try:
             if model is not None: model.close()
-        finally: _execution_lock.release()
+        finally:
+            if lease is not None: lease.__exit__(None, None, None)
+            _execution_lock.release()

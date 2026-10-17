@@ -96,4 +96,6 @@ class TrainSpec(BaseModel):
             raise ValueError('Laya uses its official SDK; generative models use the PEFT backend')
         if self.device == 'cpu' and self.dtype == 'float16':
             raise ValueError('Use float32 or supported bfloat16 on CPU')
+        if self.backend == 'LAYA_SDK' and self.max_steps is not None:
+            raise ValueError('Laya SDK uses epochs; max_steps is not supported')
         return self

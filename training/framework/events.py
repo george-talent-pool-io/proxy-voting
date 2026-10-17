@@ -7,7 +7,9 @@ order cannot repair a stale PREV reference. Sender is an explicit namespace.
 """
 import json
 import uuid
+import time
 from pathlib import Path
+from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -59,7 +61,7 @@ def _view(c, event_id):
     if not meta:
         raise ValueError('Learning event not found')
     rows = [decode(r) for r in c.execute('SELECT * FROM learning_messages WHERE event_id=? ORDER BY id', (event_id,))]
-    active = None; supplements = {}; cancelled = False
+    active = None; supplements = {}; cancelled = False; additive_chain = False
     for row in rows:
         p = row['payload']
         if row['state'] != 'APPLIED':
@@ -70,29 +72,39 @@ def _view(c, event_id):
             else:
                 active = row; supplements = {}; cancelled = False
         elif p['message_type'] == 'MT568':
-            if p['previous_message_id'] in supplements:
+            if p['function'] == 'NEWM' and p['previous_message_id'] in supplements:
+                additive_chain = True
+            if p['function'] in ('REPL', 'CANC') and p['previous_message_id'] in supplements:
                 supplements.pop(p['previous_message_id'])
             if p['function'] != 'CANC':
                 supplements[row['id']] = row
     operative = [] if cancelled or active is None else [active, *supplements.values()]
     current_ids = {m['id'] for m in operative}
+    recovery_only = active is None and not cancelled
+    semantic_messages = ([m for m in rows if m['payload']['message_type'] == 'RECOVERED']
+                         if recovery_only else operative)
     history = [{**f, 'message_id': m['id'], 'seme': m['seme'], 'source_hash': m['source_hash'],
                 'current': m['id'] in current_ids}
                for m in rows for f in m['payload']['facts']]
     pieces = []; spans = []; offset = 0
-    for m in operative:
+    for m in semantic_messages:
         prefix = f"[Message {m['seme']} | {m['payload']['message_type']}]\n"
-        body = m['payload']['narrative']
+        body = m['raw_source'] if recovery_only else m['payload']['narrative']
         segment = prefix + body
         pieces.append(segment)
         spans.append({'message_id': m['id'], 'seme': m['seme'], 'start': offset + len(prefix),
                       'end': offset + len(segment), 'source_hash': m['source_hash']})
         offset += len(segment) + 2
     text = '\n\n'.join(pieces)
-    snapshot = source_hash(store.dumps({'policy': VERSION, 'messages': [(m['id'], m['source_hash'], m['state']) for m in rows]}))
-    return {**dict(meta), 'snapshot_hash': snapshot, 'policy': VERSION, 'cancelled': cancelled,
+    # New additive-chain resolution invalidates any old review of an affected
+    # chain. Unaffected existing event snapshots/labels retain their identity.
+    policy = VERSION + '+supplement-additions-v2' if additive_chain else VERSION
+    snapshot = source_hash(store.dumps({'policy': policy, 'messages': [(m['id'], m['source_hash'], m['state']) for m in rows]}))
+    return {**dict(meta), 'snapshot_hash': snapshot, 'policy': policy, 'cancelled': cancelled,
             'active_notification_id': active['id'] if active else None,
             'operative_message_ids': sorted(current_ids), 'current_text': text,
+            'semantic_message_ids': [m['id'] for m in semantic_messages],
+            'context_kind': 'RECOVERED_REVIEW_CONTEXT' if recovery_only and semantic_messages else 'OPERATIVE_EVENT',
             'current_text_hash': source_hash(text), 'source_ranges': spans,
             'facts': history, 'messages': rows,
             'warnings': [i for m in rows if m['state'] == 'QUARANTINED' for i in m['payload']['issues']],
@@ -188,13 +200,13 @@ def ingest(raw, *, sender, source_type, group_id, family, split, source_referenc
         return decode(c.execute('SELECT * FROM learning_messages WHERE id=?', (cur.lastrowid,)).fetchone())
 
 
-def evidence_links(view, quote):
+def evidence_links(view, quote, *, require_context=True):
     """Evidence must occur in an operative raw message AND the operative context."""
-    if not quote or quote not in view['current_text']:
+    if not quote or (require_context and quote not in view['current_text']):
         return []
     links = []
     for m in view['messages']:
-        if m['id'] not in view['operative_message_ids']: continue
+        if m['id'] not in view.get('semantic_message_ids', view['operative_message_ids']): continue
         start = m['raw_source'].find(quote)
         if start >= 0:
             links.append({'message_id': m['id'], 'seme': m['seme'], 'source_hash': m['source_hash'],
@@ -209,6 +221,8 @@ class Review(BaseModel):
     target: SemanticResult
     provenance: Provenance
     notes: str = Field(default='', max_length=10000)
+    expected_deadline_status: Literal['OPEN', 'PASSED', 'UNKNOWN'] | None = None
+    expected_final_status: Literal['VOTABLE', 'NOT_VOTABLE', 'VOTABLE_WITH_RESTRICTION', 'DEADLINE_PASSED', 'UNCERTAIN_MANUAL_REVIEW'] | None = None
 
 
 def review(event_id, value, database=None):
@@ -248,8 +262,8 @@ def classify(event_id, job, *, reference, database=None, model=None):
     view = get(event_id, database)
     if view['cancelled'] or not view['current_text']: raise ValueError('Event has no operative classification context')
     from iso_adapter.facts import semantic_facts, deadline
-    active = next(m for m in view['messages'] if m['id'] == view['active_notification_id'])
-    structure = active['payload'].get('structure') if active['payload']['parser'] == 'PROWIDE' else None
+    active = next((m for m in view['messages'] if m['id'] == view['active_notification_id']), None)
+    structure = active['payload'].get('structure') if active and active['payload']['parser'] == 'PROWIDE' else None
     structured = semantic_facts(structure) if structure else {}
     explicit = deadline(structure, reference) if structure else None
     if explicit and not explicit['comparisons']: explicit = None
@@ -258,19 +272,48 @@ def classify(event_id, job, *, reference, database=None, model=None):
         from training.framework.runtime import RegisteredModel
         model = RegisteredModel(job)
     try:
-        result = model.analyse(view['current_text'], reference=reference, use_iso=False,
-                               structured_context=structured, deadline_override=explicit)
+        started = time.perf_counter()
+        try:
+            result = model.analyse(view['current_text'], reference=reference, use_iso=False,
+                                   structured_context=structured, deadline_override=explicit)
+        except (ValueError, RuntimeError, OSError) as exc:
+            # A failed inference is still an auditable event. Do not fabricate a
+            # successful model answer or discard an otherwise valid source.
+            from semantic_pipeline.decision import decide
+            factors = {k: {'value': 'UNCERTAIN' if k == 'votability' else 'UNKNOWN',
+                          'source': 'MODEL_EXECUTION_FAILED', 'confidence': None, 'scores': {}, 'evidence': []} for k in PREDICATES}
+            d = explicit or {'status': 'UNKNOWN'}
+            result = {'architecture': 'REGISTERED_EXECUTION_FAILED', 'predicates': factors,
+                      'reconciliation': {'predicates': factors, 'conflicts': ['MODEL_EXECUTION_FAILED']},
+                      'deadline': d, 'decision': decide(factors, d, ['MODEL_EXECUTION_FAILED']),
+                      'execution_error': {'type': type(exc).__name__, 'message': str(exc)},
+                      'llm': None, 'latencies': {'total_ms': (time.perf_counter() - started) * 1000},
+                      'automation_enabled': False, 'customer_accuracy': None}
     finally:
         if owns: model.close()
     for key in PREDICATES:
         pred = result['predicates'][key]
         for ev in pred.get('evidence', []):
-            links = evidence_links(view, ev.get('text'))
+            links = evidence_links(view, ev.get('text'), require_context=not pred.get('source', '').startswith('PROWIDE'))
             ev['event_source_links'] = links
             ev['valid'] = bool(links)
+            if not links:
+                result['reconciliation']['conflicts'].append(key + ':EVENT_EVIDENCE_INVALID')
+    if result['reconciliation']['conflicts']:
+        from semantic_pipeline.decision import decide
+        result['decision'] = decide(result['predicates'], result['deadline'], result['reconciliation']['conflicts'])
+    if view['context_kind'] == 'RECOVERED_REVIEW_CONTEXT':
+        from semantic_pipeline.decision import decide
+        result['reconciliation']['conflicts'].append('RECOVERED_CONTEXT_NOT_AUTHORITATIVE')
+        result['decision'] = decide(result['predicates'], result['deadline'], result['reconciliation']['conflicts'], quarantined=True)
     if view['warnings']:
         result['decision']['review_reasons'].extend(view['warnings'])
-    result.update(event_id=event_id, event_snapshot_hash=view['snapshot_hash'], event_policy=VERSION)
+    result.update(event_id=event_id, event_snapshot_hash=view['snapshot_hash'], event_policy=view['policy'],
+                  event_context_kind=view['context_kind'])
+    from qwen_domain.confidence import confidence_output, decision_confidence
+    result['confidence'] = {k: confidence_output(view['current_text'], k, result['predicates'][k],
+                            deterministic_conflict=bool(result['reconciliation']['conflicts'])) for k in PREDICATES}
+    result['decision_confidence'] = decision_confidence(result['decision']['classification'], result['confidence'])
     ident = str(uuid.uuid4())
     payload = {'result': result, 'input': view['current_text'], 'source_ranges': view['source_ranges'],
                'operative_message_ids': view['operative_message_ids']}

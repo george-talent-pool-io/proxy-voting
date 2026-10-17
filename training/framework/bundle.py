@@ -79,6 +79,8 @@ def messages(example, prompt):
 
 
 def check_isolation(examples, *, check_near_duplicates=True):
+    from training.framework.event_data import reject_protected
+    reject_protected(examples)
     seen_ids = set()
     identities = {}
     for e in examples:

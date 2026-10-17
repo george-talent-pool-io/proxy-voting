@@ -47,7 +47,8 @@ def browser_app(tmp_path_factory):
     with socket.socket() as sock:sock.bind(('127.0.0.1',0));port=sock.getsockname()[1]
     env={**os.environ,'VOTING_DB':str(db)}
     def start():
-        p=subprocess.Popen([sys.executable,'-m','uvicorn','tests.e2e.server:app','--host','127.0.0.1','--port',str(port)],env=env,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+        with (root/'server.log').open('ab') as log:
+            p=subprocess.Popen([sys.executable,'-m','uvicorn','tests.e2e.server:app','--host','127.0.0.1','--port',str(port)],env=env,stdout=log,stderr=log)
         for i in range(100):
             try:
                 urllib.request.urlopen(f'http://127.0.0.1:{port}/api/health',timeout=1);return p
@@ -567,3 +568,84 @@ def test_25_registered_candidate_trace_persists_in_notice_detail(browser_app):
     p.reload()
     saved=p.request.get(a['url']+'/api/notice?id='+a['record']).json()['framework_execution']
     assert saved['id']=='browser-trained-contract'
+
+
+def test_26_event_review_train_compare_select_rollback(browser_app):
+    """Real browser/API/SQLite; server explicitly doubles ONLY model execution."""
+    from playwright.sync_api import expect
+    from scripts.build_event_learning_corpus import message
+    from semantic_pipeline.schema import PREDICATES
+    a=browser_app;p=a['page'];p.goto(a['url']+'/#model_lab')
+    expect(p.get_by_role('heading',name='Event learning loop',exact=True)).to_be_visible()
+    ids=[]
+    for name,role,text,vote in [('TRAIN','TRAIN','Shareholders can vote. No share blocking is required.','VOTABLE'),
+                                ('VALID','VALIDATION','This treasury advice reports only a distribution; there is no voting opportunity.','NOT_VOTABLE')]:
+        form=p.locator('#learning-import-form');form.locator('xpath=..').evaluate('(el)=>el.open=true')
+        payload={'raw':message('BROWSER'+name,'BROWSER'+name,'NEWM',text,voting=vote=='VOTABLE'),
+                 'sender':'BROWSER-CONTRACT','source_type':'STANDARDS_DERIVED_SYNTHETIC','source_reference':'Isolated browser fixture',
+                 'group_id':'browser-family-'+name,'family':'browser-family-'+name,'split':role}
+        form.locator('[name=payload]').fill(json.dumps(payload));form.get_by_role('button').click()
+        expect(p.locator('#learning-event-detail')).to_contain_text('BROWSER'+name)
+        target={k:vote if k=='votability' else 'NO' for k in PREDICATES}
+        target.update(evidence={k:['Shareholders can vote.'] if k=='votability' and vote=='VOTABLE' else [] for k in PREDICATES},
+                      deadline_information={'deadline_mentioned':False,'deadline_text':None},ambiguities=[])
+        review=p.locator('#learning-review-form');review.locator('[name=target]').fill(json.dumps(target))
+        review.locator('[name=model_id]').fill('EXPLICIT_BROWSER_ANNOTATION_DOUBLE')
+        review.get_by_role('button',name='Save event review revision').click()
+        expect(p.locator('#learning-review-history')).to_contain_text('AI_REVIEWED')
+        rows=p.request.get(a['url']+'/api/learning/status').json()['events'];ids.append(next(v['id'] for v in rows if v['corp']=='BROWSER'+name))
+    export=p.locator('#learning-export-form');export.locator('xpath=..').evaluate('(el)=>el.open=true')
+    export.locator('[name=id]').fill('browser-event-reviews');export.get_by_role('button',name='Export TRAIN / VALIDATION bundle',exact=True).click()
+    expect(p.locator('#learning-feedback')).to_contain_text('VERSIONED_EVENT_REVIEWS')
+    export.locator('[name=id]').fill('browser-event-dataset');export.get_by_role('button',name='Freeze all reviewed role assignments').click()
+    expect(p.locator('#learning-feedback')).to_contain_text('event-dataset-v1')
+    p.reload();expect(p.locator('#event-learning-panel')).to_be_visible()
+    prepared=[]
+    for _ in range(2):
+        form=p.locator('#learning-prepare-form');form.locator('xpath=..').evaluate('(el)=>el.open=true')
+        form.locator('[name=bundle_id]').select_option('browser-event-reviews')
+        spec={'backend':'LAYA_SDK','family':'LAYA','model_path':str(Path(a['db']).parent/'framework/contract-base'),
+              'base_model_id':'EXPLICIT_BROWSER_CONTRACT_DOUBLE','base_revision':'no-real-training'}
+        form.locator('[name=spec]').fill(json.dumps(spec))
+        with p.expect_response(lambda r:r.url.endswith('/api/training/jobs') and r.request.method=='POST') as response:
+            form.get_by_role('button',name='Prepare immutable plan').click()
+        prepared.append(response.value.json()['id'])
+    p.reload();expect(p.locator('#event-learning-panel')).to_be_visible()
+    for ident in prepared:
+        with p.expect_response(lambda r:r.url.endswith(f'/api/learning/jobs/{ident}/enqueue')) as queued:
+            p.locator(f'[data-learning-enqueue="{ident}"]').click()
+        assert queued.value.json()['state']=='QUEUED'
+    p.locator('#learning-dispatch').click()
+    expect(p.locator('#learning-feedback')).to_contain_text('EXPLICIT_SYNCHRONOUS_BROWSER_DOUBLE')
+    tasks=p.request.get(a['url']+'/api/learning/status').json()['tasks']
+    assert all(t['state']=='COMPLETED' for t in tasks if t['job_id'] in prepared)
+    p.reload();expect(p.locator('#event-learning-panel')).to_be_visible()
+    form=p.locator('#learning-comparison-form');form.locator('xpath=..').evaluate('(el)=>el.open=true')
+    form.locator('[name=dataset_id]').select_option('browser-event-dataset')
+    form.locator('[name=first]').select_option(prepared[0]);form.locator('[name=second]').select_option(prepared[1])
+    form.get_by_role('button',name='Run local same-input comparison').click()
+    expect(p.locator('#learning-comparison')).to_contain_text('All-nine exact match')
+    choose=p.locator('#learning-selection-form');choose.locator('xpath=..').evaluate('(el)=>el.open=true')
+    choose.locator('[name=actor]').fill('Browser workflow double');choose.locator('[name=reason]').fill('Contract validation, no model-quality claim')
+    selections=[]
+    for ident in prepared:
+        choose.locator('[name=job_id]').select_option(ident);choose.get_by_role('button',name='Select experimental checkpoint').click()
+        expect(p.locator('#learning-feedback')).to_contain_text(ident)
+        selections.append(p.request.get(a['url']+'/api/learning/status').json()['selections'][-1])
+    p.locator('#learning-event-id').select_option(ids[0]);expect(p.locator('#learning-event-detail')).to_contain_text('BROWSERTRAIN')
+    p.locator('#learning-analyse').click();expect(p.locator('#learning-event-executions')).to_contain_text('persisted decision trace')
+    p.locator('#learning-event-executions details').first.evaluate('(el)=>el.open=true')
+    expect(p.locator('#learning-event-executions')).to_contain_text('Calibrated confidence unavailable')
+    source_link=p.locator('#learning-event-executions [data-learning-source]').first
+    source_id=source_link.get_attribute('data-learning-source');source_link.click()
+    expect(p.locator('#learning-message-'+source_id+' pre')).to_be_visible()
+    assert p.url.endswith('#model_lab')
+    p.reload();expect(p.locator('#event-learning-panel')).to_be_visible()
+    p.locator(f'[data-learning-rollback="{selections[0]["id"]}"]').evaluate('(el)=>el.closest("details").open=true')
+    p.locator(f'[data-learning-rollback="{selections[0]["id"]}"]').click()
+    expect(p.locator('#learning-feedback')).to_contain_text('ROLLBACK')
+    history=p.request.get(a['url']+'/api/learning/status').json()['selections']
+    assert history[-1]['job_id']==prepared[0] and history[-1]['action']=='ROLLBACK'
+    p.locator('#learning-event-id').select_option(ids[0]);expect(p.locator('#learning-review-history')).to_contain_text('AI_REVIEWED')
+    p.screenshot(path='artifacts/event-learning-workflow.png',full_page=True)
+    assert not a['errors']

@@ -1,5 +1,13 @@
 # Laya Corporate Actions Voting Lab
 
+The event-level learning milestone connects linked Prowide messages, append-only
+AI/human reviews, protected dataset versions, durable local Laya/Qwen jobs, common
+evaluation and experimental selection/rollback. See
+[the verification report](data/reports/ISO15022_EVENT_LEARNING_VERIFICATION.md).
+Use **Model Lab → Event learning loop**. Explicit local execution requires
+`TRAINING_EXECUTION_ENABLED=true`; `AUTOMATION_ENABLED=false` remains the default.
+Confidence stays null when separate calibration support is insufficient.
+
 A runnable local application for testing whether **Laya**, a small specialised, non-generative decision model, can classify shareholder voting notices reliably. FastAPI, SQLite and a restrained browser GUI provide source inspection, immutable experiment history, human review, golden labels, group-separated training and evaluation.
 
 **This is an experimental product demonstrator, not a validated voting service.** Its interface reports unknown accuracy as unknown and disables automatic processing by default. Laya remains the primary specialist; an optional real local generative fallback and an explicitly separate LLM-only benchmark are available.
@@ -12,7 +20,7 @@ distinct from human/expert reviews. See the [training framework guide](training/
 and Model Lab. Building and testing this workflow does not require waiting for
 expert customer labels; establishing customer accuracy still does.
 
-Latest framework verification: **2,150 software tests and 25 browser tests pass**, with real official Laya and Qwen3.8-27B quantised training/save/reload/API execution qualified separately. [Read the engineering qualification](data/reports/QWEN_TRAINABLE_CHECKPOINT_QUALIFICATION.md). The earlier controlled experiment also recorded13 live local-model integration test passes. The controlled A–E experiment persisted **1,025 predictions** over 205 authored/synthetic records, including 497 actual local LLM invocations. The historical public baseline remains **7,683 unlabelled source-row outputs with zero failed rows**. Authored semantic quality failures remain visible; they are not software-test passes. Automatic processing remains disabled. [Read the controlled evaluation](data/reports/LAYA_LLM_ARCHITECTURE_EVALUATION.md) and [historical public-corpus verification](data/reports/VERIFICATION.md).
+Latest framework verification: **2,175 software tests and 26 browser tests pass**, with real official Laya and Qwen3.8-27B quantised training/save/reload/API execution qualified separately. [Read the event-learning verification](data/reports/ISO15022_EVENT_LEARNING_VERIFICATION.md) and [earlier checkpoint qualification](data/reports/QWEN_TRAINABLE_CHECKPOINT_QUALIFICATION.md). The earlier controlled experiment also recorded13 live local-model integration test passes. The controlled A–E experiment persisted **1,025 predictions** over 205 authored/synthetic records, including 497 actual local LLM invocations. The historical public baseline remains **7,683 unlabelled source-row outputs with zero failed rows**. Authored semantic quality failures remain visible; they are not software-test passes. Automatic processing remains disabled. [Read the controlled evaluation](data/reports/LAYA_LLM_ARCHITECTURE_EVALUATION.md) and [historical public-corpus verification](data/reports/VERIFICATION.md).
 
 Historical supervised research: **supplied synthetic test all-supplied-field exact match 6/100 → 100/100; unchanged semantic challenge cases satisfying supplied partial assertions 30/57 → 37/57.** The fine-tuned model still makes **12 challenge errors with policy score ≥98%**. The supplied test has known duplicate overlap and two previously exposed labels. **Automation remains disabled; no customer accuracy claim is supported.** See [the complete study](data/reports/LAYA_TRAINING_EVALUATION.md) and [every remaining challenge failure](data/reports/LAYA_FINETUNED_CHALLENGE_ERRORS.md).
 
@@ -176,7 +184,7 @@ uv run python -m scripts.run_batch --config data/models/laya-voting-v1/voting-co
 uv run python -m evaluation.evaluate --run NEW_RUN_ID --split test --output artifacts/finetuned-test-v1.json
 ```
 
-The pipeline exports only latest verified revisions, retains their source hashes and revisions, rejects conflicting duplicate labels, and separates train/validation/test files. Training refuses fewer than 20 distinct reviewed training inputs and 10 validation inputs; these are smoke-test minimums, not evidence of statistical sufficiency. No training has been claimed on unreviewed public data.
+The pipeline exports only latest verified revisions, retains their source hashes and revisions, rejects conflicting duplicate labels, and separates train/validation/test files. The legacy public-notice trainer refuses fewer than 20 distinct reviewed training inputs and 10 validation inputs. The separate experimental framework permits explicitly labelled bounded engineering cohorts (including the 8/4 qualification); these demonstrate execution, not statistical sufficiency. No training has been claimed on unreviewed public data.
 
 Duplicate grouping uses a complete exact Jaccard threshold join of normalised five-word shingles at 0.85. Global-frequency prefix filtering reduces candidate work without sacrificing recall under this metric; integer comparisons avoid boundary rounding. Numeric masking groups templates conservatively. Transitive matches and all excerpts of the same filing are united. A stable group hash assigns approximately 60/20/20% to train/validation/test. Record proportions may differ. This is deterministic group allocation, **not label-stratified splitting**: there are initially no trustworthy category labels, and country/market are unknown. The profile exposes available split/type/language distributions. An independent exact audit found two cross-split pairs missed by the initial LSH protocol. Grouping was corrected before any human labels or training existed. The final exact audit reports zero cross-split matches at 0.85. Semantic paraphrases below that threshold still require human audit. Original profiles, audit failures and the pre-correction database are retained; model inputs and predictions remain byte-for-byte unchanged because split assignment is not an inference input.
 

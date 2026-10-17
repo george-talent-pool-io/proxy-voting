@@ -28,3 +28,23 @@ To import another corpus, create a new database with `VOTING_DB`, explicitly map
 - `iso15022-demo.sqlite`: persistent, explicitly synthetic event-history demonstration. Never merge it into the real-public-source or human golden ledger.
 
 Parser fixtures never enter ML training. Public excerpts are not reclassified as SWIFT messages. Unknown fields and unsupported message/profile semantics are preserved for review. Existing source data and the historical blind study remain unchanged.
+
+## Event-level learning qualification
+
+`training-workspace/event-datasets/event-learning-v1/` contains 160 AI-authored,
+standards-derived synthetic event chains: 96 train / 32 validation / 16 calibration
+/ 16 frozen test, grouped into 20 linguistic families before splitting. These are
+640 linked notification/supplement/replacement messages, not real SWIFT traffic.
+Original raw messages and review revisions are immutable in the separate
+`learning_*` SQLite tables. Existing public-source notices are unchanged.
+
+Rebuild a NEW version after building the local Prowide helper:
+
+```sh
+uv run python -m scripts.build_event_learning_corpus --database data/voting.sqlite --output data/training-workspace/event-datasets/NEW_VERSION
+```
+
+Training exports are separate from checksum-frozen private answer files.
+`event-loop-v1` is a preselected 8-train/4-validation/4-calibration/4-frozen
+engineering cohort, not a model-quality benchmark. Models/artifacts are local
+and ignored by Git; source generators, tests and reports are versionable.

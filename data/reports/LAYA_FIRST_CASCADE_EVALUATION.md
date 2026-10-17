@@ -1,10 +1,10 @@
 # Laya-first cascade evaluation
 
 
-Updated: 2026-10-17T17:05:37.128841+00:00
+Updated: 2026-10-17T18:30:22.254824+00:00
 
 
-**State: RUNNING — VALIDATION_CONSTRAINED**. Completion gate remains open until all measurements and regressions are recorded.
+**State: RUNNING — VALIDATION_QWEN_REFERENCE**. Completion gate remains open until all measurements and regressions are recorded.
 
 
 Automation is disabled. Every result remains subject to human review. Customer accuracy is unknown. Synthetic and authored results below do not estimate customer quality.
@@ -136,7 +136,7 @@ No safe customer acceptance coverage, customer error rate or production readines
 ## Completion gate
 
 
-Current persisted state: `{"timestamp": "2026-10-17T17:05:36.745848+00:00", "state": "RUNNING", "stage": "TRAIN_NATIVE_CACHE_BENCHMARK", "persisted_rows": {"VALIDATION-GEAR2": 19, "VALIDATION-LAYA": 80, "VALIDATION-FULL": 19}, "automation_enabled": false, "customer_accuracy": null}`
+Current persisted state: `{"timestamp": "2026-10-17T18:30:21.865253+00:00", "state": "RUNNING", "stage": "TRAIN_NATIVE_CACHE_BENCHMARK", "persisted_rows": {"VALIDATION-GEAR2": 58, "VALIDATION-LAYA": 80, "VALIDATION-FULL": 58}, "automation_enabled": false, "customer_accuracy": null}`
 
 
 Regression/browser results are recorded separately in `REGRESSION-RESULTS.json` when executed. This report is deliberately a live report until every required measurement completes.
@@ -146,9 +146,9 @@ Regression/browser results are recorded separately in `REGRESSION-RESULTS.json` 
 
 ## Measurement interpretation and current completion status
 
-Data-only report revision: 2026-10-17T17:53:15.167373+00:00. Inference source, models, predictions and selection criteria are unchanged.
+Data-only report revision: 2026-10-17T18:49:28.270497+00:00. Inference source, models, predictions and selection criteria are unchanged.
 
-Current stage: `VALIDATION_CONSTRAINED`. Persisted rows: `{"VALIDATION-GEAR2": 52, "VALIDATION-LAYA": 80, "VALIDATION-FULL": 52}`.
+Current stage: `VALIDATION_QWEN_REFERENCE`. Persisted rows: `{"VALIDATION-GEAR2": 69, "VALIDATION-LAYA": 80, "VALIDATION-FULL": 68}`.
 
 For actual prefix reuse use `raw_runtime_response.timings.cache_n`; `tokens_cached` is retained state after prompt evaluation. The measured short/medium notices reused zero tokens. The longest TRAIN notice reused663–667tokens per call; three-call wall time fell28.78→17.53seconds. This single sequential probe does not establish a general speedup. See [runtime notes](LAYA_FIRST_CASCADE_RUNTIME_NOTES.md).
 

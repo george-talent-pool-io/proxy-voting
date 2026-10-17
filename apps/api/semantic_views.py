@@ -105,7 +105,11 @@ def analyse(request:AnalyseRequest):
         text=notice['text']
     if text is None or not text.strip():raise HTTPException(422,'Nonempty notice text required')
     if not LOCK.acquire(blocking=False):raise HTTPException(409,'Another semantic analysis is active')
+    resource=None
     try:
+        from training.framework.resources import model_resource
+        resource=model_resource('legacy-semantic-inference')
+        resource.__enter__()
         started=time.perf_counter()
         from semantic_pipeline.experiment import laya_for
         from semantic_runtime.persistence import persist
@@ -131,7 +135,9 @@ def analyse(request:AnalyseRequest):
         return row
     except ValueError as e:raise HTTPException(422,str(e))
     except Exception as e:raise HTTPException(503,f'Local semantic inference unavailable: {type(e).__name__}: {e}')
-    finally:LOCK.release()
+    finally:
+        if resource is not None:resource.__exit__(None,None,None)
+        LOCK.release()
 
 @router.get('/analyses')
 def analyses():

@@ -15,9 +15,15 @@ from training.framework.jobs import verify_plan
 from training.framework.schema import TrainSpec
 from training.framework.trainers import offline, snapshot
 
+_LOADED_SOURCE = Path(__file__).read_bytes()
+RUNTIME_SHA256 = hashlib.sha256(_LOADED_SOURCE).hexdigest()
+
 
 def verify_checkpoint(job):
     root, plan = verify_plan(job, check_sources=False)
+    from training.framework.jobs import status
+    if status(root)['state'] != 'COMPLETED':
+        raise ValueError('Only a completed registered job can serve; interrupted/failed artifacts remain quarantined')
     manifest = json.loads((root / 'model-manifest.json').read_text())
     if manifest['job_id'] != plan['job_id'] or manifest['bundle_manifest_sha256'] != plan['bundle_manifest_sha256']:
         raise ValueError('Checkpoint training lineage mismatch')
@@ -32,6 +38,12 @@ class RegisteredModel:
     """Both backends yield the same factors; numerical LLM confidence stays null."""
     def __init__(self, job):
         self.root, self.plan, self.manifest = verify_checkpoint(job)
+        archive = self.root / 'runtime-sources' / (RUNTIME_SHA256 + '.py')
+        archive.parent.mkdir(exist_ok=True)
+        try:
+            with archive.open('xb') as f: f.write(_LOADED_SOURCE)
+        except FileExistsError:
+            if sha(archive) != RUNTIME_SHA256: raise ValueError('Archived inference runtime changed')
         self.spec = TrainSpec.model_validate(self.plan['spec'])
         offline()
         if self.spec.backend == 'LAYA_SDK':
@@ -173,7 +185,7 @@ class RegisteredModel:
             deadline = deadline_override
         decision = decide(factors, deadline, conflicts)
         return {'architecture': 'REGISTERED_' + self.spec.family, 'job_id': self.plan['job_id'],
-                'runtime_version': 'registered-candidate-v3', 'runtime_source_sha256': sha(__file__),
+                'runtime_version': 'registered-candidate-v4', 'runtime_source_sha256': RUNTIME_SHA256,
                 'checkpoint_manifest_sha256': sha(self.root / 'model-manifest.json'),
                 'input_hash': hashlib.sha256(text.encode()).hexdigest(), 'parser': parser,
                 'input_type': parser['input_type'] if parser else 'UNSTRUCTURED_NOTICE',
