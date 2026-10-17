@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-10-17T09:53:06.246396+00:00",
+  "change": "Only initial FIN envelopes can promote structure; embedded FIN examples stay non-authoritative recovery. Nonstandard70F/PACO recovered with explicit warning.",
+  "scanner_version": "lenient-narrative-recovery-v1.1",
+  "source_hashes": {
+    "iso_adapter/scanner.py": "bd59b12e04b94cdb42dcaf642f4517d5686516d28370bc0af735137e46343185",
+    "iso_adapter/routing.py": "8a4f0d7ced45fc48d4b22fe01066f844d068dcf14b313fbad3afd423e26f3041",
+    "iso_adapter/prowide.py": "3870d747b61b4d9442d7cbad905fbec62f5e15d7eb7a2a3a633948d28067e61c",
+    "iso_adapter/facts.py": "46814f17d332d1563fc0127fcf7eac2fd4d989aea810a767b80cdc33cdabe91b",
+    "tools/prowide/src/main/java/local/proxyvoting/Main.java": "cf0315d589730b5961cc4cfdffffc47172d674d953d35092575a124fc171b5c8"
+  },
+  "source_changes_affect_qwen_domain_frozen_condition": false,
+  "targeted_tests": {
+    "passed": 39,
+    "log": "artifacts/prowide-scanner-final-tests.log"
+  },
+  "prior_comparison_outputs_retained": true
+}

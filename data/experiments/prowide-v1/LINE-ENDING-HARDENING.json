@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-17T09:56:05.622083+00:00",
+  "normalizer_version": "prowide-jsonl-v1.1",
+  "helper_version": "prowide-jsonl-v1",
+  "LF_CRLF": "Prowide parsing with exact original spans",
+  "lone_CR": "Core field-boundary mismatch -> lenient recovery",
+  "source_hashes": {
+    "iso_adapter/scanner.py": "bd59b12e04b94cdb42dcaf642f4517d5686516d28370bc0af735137e46343185",
+    "iso_adapter/routing.py": "8a4f0d7ced45fc48d4b22fe01066f844d068dcf14b313fbad3afd423e26f3041",
+    "iso_adapter/prowide.py": "62c7dda3471699e321d45f009e629e501f501aeef383dd5a8b9762db787e49c2"
+  },
+  "qwen_domain_benchmark_unchanged": true
+}

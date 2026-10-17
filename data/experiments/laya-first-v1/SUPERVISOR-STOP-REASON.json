@@ -1,0 +1,5 @@
+{
+  "timestamp": "2026-10-17T15:55:41.698653+00:00",
+  "reason": "Validation-only software defect: affirmative native blocking evidence rejected by lexical anchor whitelist in all12 positives. No frozen challenge/test inspected. Preserve v1; re-reduce existing native predictions in v2; no retraining.",
+  "not_a_user_stop_request": true
+}

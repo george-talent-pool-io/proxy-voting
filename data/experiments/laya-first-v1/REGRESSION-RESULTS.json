@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-10-17T15:47:09.966715+00:00",
+  "software": {
+    "passed": 2101,
+    "deselected": 154,
+    "seconds": 19.66,
+    "log": "artifacts/laya-first-software-tests.log"
+  },
+  "browser": {
+    "passed": 23,
+    "seconds": 36.44,
+    "log": "artifacts/laya-first-browser-tests.log"
+  },
+  "real_local_models": {
+    "tests": 1,
+    "passed": 1,
+    "seconds": 57.42,
+    "model": "qwen3.8:27b-q4_K_M",
+    "model_digest": "25b843619e944cd0ae6069f94ff4e5e26a16e109ccbc0a66a0f05979ed70098e",
+    "runtime": "Shared pinned Ollama native runner",
+    "source": "tests/integration/test_fast_cascade_real.py",
+    "executes_real_laya_constrained_and_full": true
+  },
+  "scope": "Software contracts and explicit real-model smoke, not semantic quality; authored model-quality failures remain separate and unchanged."
+}

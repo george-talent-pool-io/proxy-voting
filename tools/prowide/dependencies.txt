@@ -1,0 +1,8 @@
+
+The following files have been resolved:
+   com.prowidesoftware:pw-swift-core:jar:SRU2025-10.3.20:compile[36m -- module com.prowidesoftware.core[0;1m [auto][m
+   org.apache.commons:commons-lang3:jar:3.20.0:runtime[36m -- module org.apache.commons.lang3[m
+   org.apache.commons:commons-text:jar:1.15.0:runtime[36m -- module org.apache.commons.text[m
+   com.google.code.gson:gson:jar:2.13.2:compile[36m -- module com.google.gson[m
+   com.google.errorprone:error_prone_annotations:jar:2.41.0:compile[36m -- module com.google.errorprone.annotations[m
+

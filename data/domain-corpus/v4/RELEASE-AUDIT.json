@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-10-17T09:41:26.604643+00:00",
+  "manifest_sha256": "4d7d2164ccdc14e58582f98be46b3b0268200eb90ae6201c9af77dfa02735581",
+  "n": 5760,
+  "unique_source_hashes": 5760,
+  "duplicate_groups": 40,
+  "generation_families": 48,
+  "cross_split_groups": 0,
+  "cross_split_families": 0,
+  "cross_split_exact_duplicates": 0,
+  "challenge_exact_duplicates": 0,
+  "maximum_challenge_lexical_tfidf_cosine": 0.3010819063239125,
+  "maximum_challenge_minilm_cosine": 0.8454657196998596,
+  "challenge_labels_used": false,
+  "limitations": "Similarity is a guard, not a proof of no semantic paraphrase. Construction uses domain concepts but no challenge text or answer as a generator input."
+}

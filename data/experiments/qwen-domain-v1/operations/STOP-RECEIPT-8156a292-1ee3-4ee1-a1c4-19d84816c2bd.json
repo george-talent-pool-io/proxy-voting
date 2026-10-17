@@ -1,0 +1,34 @@
+{
+  "stopped_at": "2026-10-17T10:21:44.195965+00:00",
+  "request": "data/experiments/qwen-domain-v1/operations/STOP-REQUEST-8156a292-1ee3-4ee1-a1c4-19d84816c2bd.json",
+  "state": "STOPPED_BY_USER",
+  "predictions": {
+    "data/experiments/qwen-domain-v1/predictions/BASE_QWEN_DIRECT-VALIDATION.jsonl": {
+      "n": 55,
+      "sha256": "3030647c66cba7373fce269114b6b4b8c025a9223f32bc49d19abecc845ed126",
+      "bytes": 1852675,
+      "jsonl_valid": true,
+      "complete_dataset": false
+    }
+  },
+  "counts": {
+    "BASE_QWEN_DIRECT-VALIDATION": 55
+  },
+  "frozen_formulation_sha256": "e9a01583be8ca143989e9266fcb53bc93c163f6c004d6b2531871b002bacaa8c",
+  "frozen_inputs_and_code_verified": true,
+  "experiment_processes_running": [],
+  "isolated_runtime_ports": {
+    "11435": "CLOSED",
+    "11436": "CLOSED"
+  },
+  "application": {
+    "http_status": 200,
+    "body": "{\"status\":\"ok\",\"mode\":\"local\",\"external_inference\":false}"
+  },
+  "interrupted_request": "The in-flight model request was cancelled; only complete persisted records are counted. Resume reprocesses unsaved inputs.",
+  "coordinator_shutdown_log": "KeyboardInterrupt was intentional; its preserved FAILED shutdown entry is superseded operationally by STOPPED_BY_USER.",
+  "checkpoints": "Existing model files/checkpoints were not changed; no Qwen training had started.",
+  "automatic_restart": false,
+  "automation_enabled": false,
+  "customer_accuracy": null
+}

@@ -1,0 +1,11 @@
+{
+  "created_at": "2026-10-17T09:14:11.223598+00:00",
+  "manifest_sha256": "967973fc94869f0e4e8cd32683e1e1ec14a915d89d5e3e158aa4a5229328083b",
+  "protected_splits": {
+    "ADVERSARIAL_TEST": "af0259caacbe18edda8fcc377b82d83660e47d17ea02296408395c7ba8d32a19",
+    "SYNTHETIC_FROZEN_TEST": "26f1e7b8464fd3b6397a873223d4dac10d4b15142454d71bb97da860f3e125b7",
+    "CALIBRATION": "c9bc9a0ba5fea6f0212d9cdc5c7bc3e4b81b2cad51b457b6da8513663e30f5ad",
+    "OOD_TEST": "6fb48ec6ea4c238aeb7925a2540a45f49c139f59728aa4b8830cf81d6673ddf9"
+  },
+  "no_expert_label_claim": true
+}

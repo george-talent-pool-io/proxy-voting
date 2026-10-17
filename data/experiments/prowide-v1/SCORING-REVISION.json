@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-10-17T09:37:45.699117+00:00",
+  "reason": "Original summary incorrectly counted expected narrative=null as a mismatch when no narrative was present, and source_type alone did not distinguish mutations. Original preserved. No parser changed for this re-score.",
+  "counts": {
+    "OFFICIAL_EXAMPLE": 2,
+    "CUSTOM_assertions": 5406,
+    "CUSTOM_correct": 5406,
+    "PROWIDE_assertions": 5406,
+    "PROWIDE_correct": 5404,
+    "STANDARDS_DERIVED_SYNTHETIC": 1100,
+    "SCANNER_assertions": 1000,
+    "SCANNER_correct": 1000,
+    "MUTATED": 500
+  },
+  "disagreements": [
+    {
+      "id": "clearstream-dscl-excerpt",
+      "field": "corp",
+      "truth": "810651611",
+      "parser": "PROWIDE",
+      "values": []
+    },
+    {
+      "id": "clearstream-dscl-excerpt",
+      "field": "caev",
+      "truth": "DSCL",
+      "parser": "PROWIDE",
+      "values": []
+    }
+  ],
+  "isolated_publisher_example_warm_timing": {
+    "PROWIDE": {
+      "n": 1000,
+      "median_ms": 0.33693748991936445,
+      "p95_ms": 0.732750166207552,
+      "records_per_second": 2504.8941680191747
+    },
+    "CUSTOM": {
+      "n": 1000,
+      "median_ms": 0.11300004553049803,
+      "p95_ms": 0.12770900502800941,
+      "records_per_second": 8606.952775444775
+    },
+    "SCANNER": {
+      "n": 1000,
+      "median_ms": 0.05237502045929432,
+      "p95_ms": 0.061916885897517204,
+      "records_per_second": 18026.708650456298
+    }
+  },
+  "java_rss_bytes": 138985472,
+  "sample_n": 1000,
+  "limitations": "Warm repetition of one publisher fixture; not a production throughput claim. The earlier mixed-corpus cold/warm run briefly overlapped software tests. No model inference overlapped either run."
+}

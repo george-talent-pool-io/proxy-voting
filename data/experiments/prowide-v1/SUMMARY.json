@@ -1,0 +1,4167 @@
+{
+  "created_at": "2026-10-17T09:37:15.991172+00:00",
+  "dependency": "com.prowidesoftware:pw-swift-core:SRU2025-10.3.20",
+  "standards_release": "SRU2025",
+  "adapter": "prowide-jsonl-v1",
+  "java": "java version \"21.0.1\" 2023-10-17\nJava(TM) SE Runtime Environment Oracle GraalVM 21.0.1+12.1 (build 21.0.1+12-jvmci-23.1-b19)\nJava HotSpot(TM) 64-Bit Server VM Oracle GraalVM 21.0.1+12.1 (build 21.0.1+12-jvmci-23.1-b19, mixed mode, sharing)",
+  "helper_sha256": "e9b68adfcec79f6ffdda46f465f4110576c9f578edf6f962584314808b2b30a2",
+  "source_manifest_sha256": "1d32cf96543699742d9522ce3a47db800c2f7cd2573c875320d94b1f4862a46b",
+  "corpus_counts": {
+    "OFFICIAL_EXAMPLE": 2,
+    "route_LENIENT_ISO_RECOVERABLE": 951,
+    "prowide_FAILED": 751,
+    "STANDARDS_DERIVED_SYNTHETIC": 1600,
+    "prowide_PARSED_NOT_VALIDATED": 851,
+    "synthetic_envelope_PARSED_NOT_VALIDATED": 1600,
+    "route_PROWIDE_PARSEABLE": 651
+  },
+  "expected_assertions": {
+    "CUSTOM_n": 5400,
+    "CUSTOM_correct": 5250,
+    "PROWIDE_WRAPPED_n": 5400,
+    "PROWIDE_WRAPPED_correct": 5250,
+    "SCANNER_n": 1000,
+    "SCANNER_correct": 850
+  },
+  "disagreements": [
+    {
+      "id": "derived-0000",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0000",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0000",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0010",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0010",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0010",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0015",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0015",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0015",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0020",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0020",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0020",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0030",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0030",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0030",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0035",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0035",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0035",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0040",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0040",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0040",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0050",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0050",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0050",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0055",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0055",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0055",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0060",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0060",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0060",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0070",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0070",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0070",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0075",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0075",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0075",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0080",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0080",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0080",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0090",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0090",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0090",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0095",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0095",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0095",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0100",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0100",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0100",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0110",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0110",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0110",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0115",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0115",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0115",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0120",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0120",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0120",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0130",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0130",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0130",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0135",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0135",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0135",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0140",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0140",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0140",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0150",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0150",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0150",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0155",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0155",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0155",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0160",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0160",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0160",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0170",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0170",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0170",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0175",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0175",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0175",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0180",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0180",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0180",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0190",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0190",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0190",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0195",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0195",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0195",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0200",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0200",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0200",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0210",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0210",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0210",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0215",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0215",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0215",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0220",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0220",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0220",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0230",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0230",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0230",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0235",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0235",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0235",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0240",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0240",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0240",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0250",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0250",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0250",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0255",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0255",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0255",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0260",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0260",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0260",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0270",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0270",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0270",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0275",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0275",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0275",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0280",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0280",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0280",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0290",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0290",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0290",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0295",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0295",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0295",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0300",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0300",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0300",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0310",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0310",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0310",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0315",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0315",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0315",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0320",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0320",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0320",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0330",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0330",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0330",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0335",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0335",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0335",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0340",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0340",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0340",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0350",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0350",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0350",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0355",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0355",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0355",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0360",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0360",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0360",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0370",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0370",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0370",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0375",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0375",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0375",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0380",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0380",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0380",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0390",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0390",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0390",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0395",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0395",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0395",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0400",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0400",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0400",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0410",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0410",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0410",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0415",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0415",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0415",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0420",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0420",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0420",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0430",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0430",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0430",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0435",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0435",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0435",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0440",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0440",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0440",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0450",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0450",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0450",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0455",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0455",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0455",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0460",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0460",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0460",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0470",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0470",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0470",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0475",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0475",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0475",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0480",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0480",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0480",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0490",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0490",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0490",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0495",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0495",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0495",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0500",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0500",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0500",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0510",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0510",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0510",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0515",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0515",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0515",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0520",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0520",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0520",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0530",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0530",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0530",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0535",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0535",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0535",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0540",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0540",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0540",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0550",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0550",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0550",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0555",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0555",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0555",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0560",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0560",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0560",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0570",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0570",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0570",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0575",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0575",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0575",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0580",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0580",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0580",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0590",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0590",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0590",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0595",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0595",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0595",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0600",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0600",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0600",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0610",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0610",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0610",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0615",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0615",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0615",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0620",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0620",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0620",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0630",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0630",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0630",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0635",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0635",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0635",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0640",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0640",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0640",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0650",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0650",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0650",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0655",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0655",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0655",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0660",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0660",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0660",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0670",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0670",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0670",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0675",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0675",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0675",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0680",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0680",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0680",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0690",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0690",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0690",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0695",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0695",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0695",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0700",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0700",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0700",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0710",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0710",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0710",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0715",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0715",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0715",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0720",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0720",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0720",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0730",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0730",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0730",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0735",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0735",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0735",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0740",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0740",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0740",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0750",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0750",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0750",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0755",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0755",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0755",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0760",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0760",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0760",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0770",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0770",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0770",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0775",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0775",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0775",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0780",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0780",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0780",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0790",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0790",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0790",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0795",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0795",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0795",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0800",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0800",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0800",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0810",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0810",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0810",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0815",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0815",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0815",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0820",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0820",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0820",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0830",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0830",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0830",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0835",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0835",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0835",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0840",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0840",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0840",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0850",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0850",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0850",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0855",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0855",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0855",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0860",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0860",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0860",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0870",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0870",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0870",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0875",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0875",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0875",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0880",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0880",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0880",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0890",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0890",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0890",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0895",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0895",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0895",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0900",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0900",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0900",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0910",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0910",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0910",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0915",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0915",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0915",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0920",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0920",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0920",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0930",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0930",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0930",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0935",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0935",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0935",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0940",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0940",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0940",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0950",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0950",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0950",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0955",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0955",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0955",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0960",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0960",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0960",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0970",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0970",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0970",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0975",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0975",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0975",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0980",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0980",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0980",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0990",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0990",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0990",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0995",
+      "field": "narrative",
+      "truth": null,
+      "parser": "CUSTOM",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0995",
+      "field": "narrative",
+      "truth": null,
+      "parser": "SCANNER",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    },
+    {
+      "id": "derived-0995",
+      "field": "narrative",
+      "truth": null,
+      "parser": "PROWIDE_WRAPPED",
+      "values": [],
+      "source_type": "STANDARDS_DERIVED_SYNTHETIC"
+    }
+  ],
+  "timing": {
+    "PROWIDE": {
+      "n": 1602,
+      "median_ms": 0.1077083870768547,
+      "p95_ms": 0.298874918371439,
+      "records_per_second": 3988.827961901623
+    },
+    "CUSTOM": {
+      "n": 1602,
+      "median_ms": 0.05393708124756813,
+      "p95_ms": 0.14283321797847748,
+      "records_per_second": 13569.057449063683
+    },
+    "SCANNER": {
+      "n": 1602,
+      "median_ms": 0.024916487745940685,
+      "p95_ms": 0.050791073590517044,
+      "records_per_second": 34278.29331426281
+    },
+    "ROUTER": {
+      "n": 1602,
+      "median_ms": 0.03722903784364462,
+      "p95_ms": 0.3669171128422022,
+      "records_per_second": 5835.741261991484
+    }
+  },
+  "cold_parse_ms": [
+    232.5810408219695,
+    227.36762510612607,
+    191.94662501104176,
+    187.4750421848148,
+    172.8554170113057
+  ],
+  "cold": {
+    "n": 5,
+    "median_ms": 191.94662501104176,
+    "p95_ms": 232.5810408219695,
+    "records_per_second": 4.939609567660059
+  },
+  "peak_sampled_java_rss_bytes": 185810944,
+  "java_heap_cap_bytes": 268435456,
+  "public": {
+    "n": 7683,
+    "source_sha256": "331b535482b51bb22333412c1796b54894c5b46b303fe42c10aa43538f908db9",
+    "counts": {
+      "UNSTRUCTURED_NOTICE": 7683
+    },
+    "total_routing_ms": 691.8829169590026,
+    "iso_like_records": [],
+    "forced_prowide_controls": [
+      {
+        "id": "alpaca_corrective:4222",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:605",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:179",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:537",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:773",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:3153",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:3948",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:3678",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:3496",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:755",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:2605",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:3455",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:3306",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:3340",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:107",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:2304",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:3423",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:2981",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:3179",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:3924",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:3396",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:3020",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:2829",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:1750",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:3744",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:1800",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:3541",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:2897",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:1655",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:3244",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:3266",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:3300",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:3236",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:2999",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:1663",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:2082",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:2074",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:1945",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:1942",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:368",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:1346",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:2151",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:1810",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:445",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:1936",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:1591",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:118",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:625",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:2614",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:778",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:1391",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:699",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:1136",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:530",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:1749",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:2255",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:2434",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:2760",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:2227",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:965",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:3011",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:1306",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:1932",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:2270",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:522",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:299",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:320",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:1578",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:2650",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:1400",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:753",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:2494",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:533",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:814",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:201",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:2522",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_corrective:2809",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:1183",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:3336",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:3271",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      },
+      {
+        "id": "alpaca_financial_extraction:1679",
+        "parse_status": "FAILED",
+        "error": "IllegalArgumentException: FIN block2/block4 unavailable",
+        "message_type": null
+      }
+    ]
+  },
+  "scope": "Parseability/component extraction, not SWIFT network/business validation. Wrapped partial examples are synthetic, not official messages. No Qwen run was active during these measurements."
+}

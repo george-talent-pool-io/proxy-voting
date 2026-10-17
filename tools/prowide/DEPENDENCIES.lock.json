@@ -1,0 +1,32 @@
+{
+  "created_at": "2026-10-17T09:43:08.635301+00:00",
+  "java_release": 11,
+  "adapter_version": "prowide-jsonl-v1",
+  "dependencies": [
+    {
+      "coordinate": "com.prowidesoftware:pw-swift-core:jar:SRU2025-10.3.20",
+      "scope": "compile",
+      "sha256": "a07ce01b0ad0294a0ea8e84e2c6603383f20f534e29408ea04f8eb195befd622"
+    },
+    {
+      "coordinate": "org.apache.commons:commons-lang3:jar:3.20.0",
+      "scope": "runtime",
+      "sha256": "69e5c9fa35da7a51a5fd2099dfe56a2d8d32cf233e2f6d770e796146440263f4"
+    },
+    {
+      "coordinate": "org.apache.commons:commons-text:jar:1.15.0",
+      "scope": "runtime",
+      "sha256": "58d2da30f058512a1e7f914e39241deca4dff5c27a085b4ed2faa9e7208067f6"
+    },
+    {
+      "coordinate": "com.google.code.gson:gson:jar:2.13.2",
+      "scope": "compile",
+      "sha256": "dd0ce1b55a3ed2080cb70f9c655850cda86c206862310009dcb5e5c95265a5e0"
+    },
+    {
+      "coordinate": "com.google.errorprone:error_prone_annotations:jar:2.41.0",
+      "scope": "compile",
+      "sha256": "a56e782b5b50811ac204073a355a21d915a2107fce13ec711331ad036f660fcc"
+    }
+  ]
+}

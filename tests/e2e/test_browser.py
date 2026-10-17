@@ -434,3 +434,81 @@ def test_19_phase_v2_separates_pending_study_from_historical_results(browser_app
     assert r['aggregation']['before_yes']==0;assert r['aggregation']['after_yes']==11
     p.screenshot(path='artifacts/cascade-v2-model-lab.png',full_page=True)
     assert not a['errors'],a['errors']
+
+
+def test_20_domain_confidence_is_explicitly_not_customer_accuracy(browser_app):
+    from playwright.sync_api import expect
+    a=browser_app;p=a['page']
+    p.goto(a['url']+'/#confidence')
+    expect(p.get_by_role('heading',name='Confidence & Automation',exact=True)).to_be_visible()
+    expect(p.get_by_text('AUTOMATION DISABLED · Customer accuracy UNKNOWN.',exact=True)).to_be_visible()
+    expect(p.get_by_role('heading',name='Protected synthetic corpus',exact=True)).to_be_visible()
+    response=p.request.get(a['url']+'/api/domain/status').json()
+    assert response['customer_accuracy'] is None and response['confidence'] is None and not response['automation_enabled']
+    p.screenshot(path='artifacts/domain-confidence-smoke.png',full_page=True)
+    assert not a['errors'],a['errors']
+
+
+def test_21_complete_predicate_review_persists_without_changing_legacy_label(browser_app):
+    from playwright.sync_api import expect
+    a=browser_app;p=a['page'];p.goto(a['url']+'/#explorer')
+    p.locator('#search').fill(a['record']);expect(p.locator('tbody tr[data-record]')).to_have_count(1)
+    record=p.locator('tbody tr[data-record]').get_attribute('data-record')
+    legacy=p.request.get(a['url']+'/api/notice?id='+record).json()['review']
+    p.locator('tbody tr[data-record]').click()
+    p.locator('#domain-review-panel summary').click()
+    expect(p.locator('#domain-review-revision')).to_have_text('No complete predicate label saved.')
+    form=p.locator('#domain-review-form');form.locator('[name=reviewer]').fill('Browser domain reviewer')
+    form.locator('[name=votability]').select_option('VOTABLE');form.locator('[name=poa_required]').select_option('YES')
+    form.get_by_role('button',name='Save complete predicate review',exact=True).click()
+    expect(p.locator('#domain-review-revision')).to_contain_text('saved')
+    p.reload();p.locator('#search').fill(record);expect(p.locator('tbody tr[data-record]')).to_have_count(1);p.locator('tbody tr[data-record]').click()
+    p.locator('#domain-review-panel summary').click()
+    expect(p.locator('#domain-review-form [name=poa_required]')).to_have_value('YES')
+    history=p.request.get(a['url']+'/api/domain/reviews/'+record).json()['items'];assert len(history)==1
+    assert p.request.get(a['url']+'/api/notice?id='+record).json()['review']==legacy
+    p.screenshot(path='artifacts/domain-full-review-smoke.png',full_page=True)
+    assert not a['errors'],a['errors']
+
+
+def test_22_laya_first_panel_shows_pending_and_no_customer_claim(browser_app):
+    from playwright.sync_api import expect
+    a=browser_app;p=a['page'];p.goto(a['url']+'/#model_lab')
+    expect(p.get_by_role('heading',name='Laya-first cascade · measured experiment',exact=True)).to_be_visible()
+    expect(p.get_by_text('Raw scores and token probabilities are not calibrated confidence.',exact=False)).to_be_visible()
+    d=p.request.get(a['url']+'/api/fast-cascade/status').json()
+    assert d['automation_enabled'] is False and d['customer_accuracy'] is None
+    assert p.request.post(a['url']+'/api/fast-cascade/analyse',data={'record_id':a['record']}).status==403
+    p.screenshot(path='artifacts/laya-first-model-lab.png',full_page=True)
+
+
+def test_23_notice_renders_persisted_cascade_and_refresh_keeps_it(browser_app):
+    from playwright.sync_api import expect
+    from apps.api.fast_cascade_views import tables
+    from fast_cascade.pipeline import Pipeline
+    from fast_cascade.routing import Policy
+    from fast_cascade.protocol import digest
+    from semantic_pipeline.schema import PREDICATES
+    from semantic_pipeline.evidence import verify_evidence
+    a=browser_app;p=a['page']
+    with sqlite3.connect(a['db']) as c:
+        text=c.execute('SELECT text FROM notices WHERE id=?',(a['record'],)).fetchone()[0]
+        preds={k:{'value':'VOTABLE' if k=='votability' else 'NO','scores':{'YES':.999 if k=='votability' else .0005,'NO':.0005 if k=='votability' else .999,'UNKNOWN':.0005},'evidence':[verify_evidence(text,text[:80])],'source':'BROWSER_CONTRACT_FIXTURE_NOT_A_MODEL'} for k in PREDICATES}
+        raw={'predicates':preds,'input_hash':digest(text),'latency_ms':1.}
+        result=Pipeline(Policy()).analyse(text,precomputed_laya=raw)
+        tables(c);c.execute('INSERT INTO fast_cascade_executions VALUES(?,?,?,?,?)',('browser-cascade-contract',a['record'],digest(text),'2026-10-17T12:00:00+00:00',json.dumps(result)));c.commit()
+    if p.locator('#notice-dialog').evaluate('(el)=>el.open'):p.get_by_role('button',name='Close notice').click()
+    p.goto(a['url']+'/#explorer')
+    p.get_by_role('searchbox',name='Search notices').fill(a['record'])
+    expect(p.locator('tbody tr')).to_have_count(1)
+    p.locator('tr[data-record]').first.click()
+    expect(p.locator('#fast-cascade-trace')).to_be_visible()
+    p.locator('#fast-cascade-trace summary').first.click()
+    expect(p.locator('#fast-cascade-trace')).to_contain_text('browser-cascade-contract')
+    expect(p.locator('#fast-cascade-trace')).to_contain_text('NOT INVOKED')
+    expect(p.locator('#fast-cascade-trace')).to_contain_text('HEURISTIC / NOT YET CALIBRATED')
+    d=p.request.get(a['url']+'/api/notice?id='+a['record']).json()
+    assert d['fast_cascade_execution']['id']=='browser-cascade-contract'
+    p.screenshot(path='artifacts/laya-first-persisted-trace.png',full_page=True)
+    p.reload()
+    assert p.request.get(a['url']+'/api/notice?id='+a['record']).json()['fast_cascade_execution']['id']=='browser-cascade-contract'

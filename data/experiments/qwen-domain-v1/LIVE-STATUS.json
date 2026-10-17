@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-17T10:21:44.195471+00:00",
+  "state": "STOPPED_BY_USER",
+  "stage": "Stopped safely at explicit user request; completed predictions preserved; no automatic restart",
+  "persisted_rows": {
+    "BASE_QWEN_DIRECT-VALIDATION": 55
+  },
+  "automation_enabled": false,
+  "customer_accuracy": null,
+  "stopped_at": "2026-10-17T10:21:44.194692+00:00",
+  "last_active_stage": "BASE_QWEN_DIRECT / VALIDATION",
+  "partial_predictions": true,
+  "model_runtime_stopped": true
+}

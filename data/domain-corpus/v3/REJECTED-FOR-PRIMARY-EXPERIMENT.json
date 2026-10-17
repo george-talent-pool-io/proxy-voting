@@ -1,0 +1,6 @@
+{
+  "created_at": "2026-10-17T09:17:25.148700+00:00",
+  "reason": "CALIBRATION had only one English group; its held-out evaluation fold contained no English. Detected before calibration fit or any validation/frozen model inference. TRAIN-only software probes are retained separately.",
+  "replacement": "v4 with16 English generation banks and mandatory English fit/evaluation coverage",
+  "thresholds_weakened": false
+}

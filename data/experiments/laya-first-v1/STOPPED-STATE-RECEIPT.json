@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-17T15:56:44.209216+00:00",
+  "state": "STOPPED_BY_USER",
+  "stage": "Completed rows preserved",
+  "persisted_rows": {
+    "VALIDATION-GEAR2": 2,
+    "VALIDATION-LAYA": 80,
+    "VALIDATION-FULL": 2
+  },
+  "automation_enabled": false,
+  "customer_accuracy": null
+}

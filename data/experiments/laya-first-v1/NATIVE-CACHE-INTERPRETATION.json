@@ -1,0 +1,99 @@
+{
+  "timestamp": "2026-10-17T15:50:40.151081+00:00",
+  "source_sha256": "20561a0c67435a08371e34b42db4f2eacdc8ff717bc009cdd4230f92bca64a19",
+  "measurements": [
+    {
+      "chars": 474,
+      "cache_requested": false,
+      "wall_ms": 9576.33666601032,
+      "reused_prefix_tokens": [
+        0,
+        0,
+        0
+      ],
+      "prompt_tokens_processed": [
+        606,
+        608,
+        604
+      ]
+    },
+    {
+      "chars": 474,
+      "cache_requested": true,
+      "wall_ms": 9693.077417090535,
+      "reused_prefix_tokens": [
+        0,
+        0,
+        0
+      ],
+      "prompt_tokens_processed": [
+        606,
+        608,
+        604
+      ]
+    },
+    {
+      "chars": 1191,
+      "cache_requested": false,
+      "wall_ms": 12219.205291941762,
+      "reused_prefix_tokens": [
+        0,
+        0,
+        0
+      ],
+      "prompt_tokens_processed": [
+        732,
+        734,
+        730
+      ]
+    },
+    {
+      "chars": 1191,
+      "cache_requested": true,
+      "wall_ms": 12492.674833862111,
+      "reused_prefix_tokens": [
+        0,
+        0,
+        0
+      ],
+      "prompt_tokens_processed": [
+        732,
+        734,
+        730
+      ]
+    },
+    {
+      "chars": 6152,
+      "cache_requested": false,
+      "wall_ms": 28782.67658315599,
+      "reused_prefix_tokens": [
+        0,
+        0,
+        0
+      ],
+      "prompt_tokens_processed": [
+        1689,
+        1691,
+        1687
+      ]
+    },
+    {
+      "chars": 6152,
+      "cache_requested": true,
+      "wall_ms": 17531.131791882217,
+      "reused_prefix_tokens": [
+        663,
+        665,
+        667
+      ],
+      "prompt_tokens_processed": [
+        1026,
+        1026,
+        1020
+      ]
+    }
+  ],
+  "correct_reuse_counter": "raw_runtime_response.timings.cache_n",
+  "not_reuse_counter": "tokens_cached is retained state after processing, not necessarily reused prefix tokens",
+  "scope": "3 TRAIN notices, 3 predicates each; descriptive capability/performance probe, not quality or a representative throughput benchmark"
+}

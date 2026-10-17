@@ -1,0 +1,104 @@
+{
+  "created_at": "2026-10-17T10:21:44.196664+00:00",
+  "state": {
+    "timestamp": "2026-10-17T10:21:44.195471+00:00",
+    "state": "STOPPED_BY_USER",
+    "stage": "Stopped safely at explicit user request; completed predictions preserved; no automatic restart",
+    "persisted_rows": {
+      "BASE_QWEN_DIRECT-VALIDATION": 55
+    },
+    "automation_enabled": false,
+    "customer_accuracy": null,
+    "stopped_at": "2026-10-17T10:21:44.194692+00:00",
+    "last_active_stage": "BASE_QWEN_DIRECT / VALIDATION",
+    "partial_predictions": true,
+    "model_runtime_stopped": true
+  },
+  "splits": {
+    "TRAIN": {
+      "n": 3120,
+      "groups": 20,
+      "languages": {
+        "en": 2160,
+        "fr": 240,
+        "es": 300,
+        "nl": 240,
+        "de": 60,
+        "it": 120
+      },
+      "difficulty": {
+        "HARD": 1524,
+        "MEDIUM": 1263,
+        "EASY": 333
+      }
+    },
+    "SYNTHETIC_FROZEN_TEST": {
+      "n": 840,
+      "groups": 5,
+      "languages": {
+        "en": 720,
+        "de": 60,
+        "fr": 60
+      },
+      "difficulty": {
+        "HARD": 415,
+        "EASY": 82,
+        "MEDIUM": 343
+      }
+    },
+    "CALIBRATION": {
+      "n": 660,
+      "groups": 4,
+      "languages": {
+        "en": 480,
+        "it": 180
+      },
+      "difficulty": {
+        "HARD": 292,
+        "EASY": 73,
+        "MEDIUM": 295
+      }
+    },
+    "VALIDATION": {
+      "n": 660,
+      "groups": 3,
+      "languages": {
+        "en": 480,
+        "de": 180
+      },
+      "difficulty": {
+        "HARD": 330,
+        "MEDIUM": 271,
+        "EASY": 59
+      }
+    },
+    "ADVERSARIAL_TEST": {
+      "n": 240,
+      "groups": 4,
+      "languages": {
+        "en": 180,
+        "fr": 60
+      },
+      "difficulty": {
+        "ADVERSARIAL": 240
+      }
+    },
+    "OOD_TEST": {
+      "n": 240,
+      "groups": 4,
+      "languages": {
+        "en": 180,
+        "fr": 60
+      },
+      "difficulty": {
+        "HARD": 106,
+        "MEDIUM": 111,
+        "EASY": 23
+      }
+    }
+  },
+  "training_decision": "PENDING_BASE_AND_CONSTRAINED_VALIDATION",
+  "frozen_metrics": null,
+  "automation_enabled": false,
+  "customer_accuracy": null
+}

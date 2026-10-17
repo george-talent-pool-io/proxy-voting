@@ -523,3 +523,105 @@ On completion the runner produces `AGGREGATION_SELECTIVE_CASCADE_EVALUATION.md`,
 The browser persistence regression now searches by the unique record ID and waits for the filtered row, replacing an ambiguous issuer/500ms timing assumption. Its persistence assertions are retained. No challenge expectation or failing model-quality test was deleted or weakened.
 
 The routing comparison also has an always-fallback quality control using the **same capable specialist** as the selected cascade. Existing identical-context invoked outputs are reused; every accepted case gets a fallback output irrespective of its expected label. This prevents attributing a specialist-composition change to routing. Its mixed/recomposed durations are excluded from independent latency benchmarks. The control protocol was declared before new challenge inference, and its outputs receive a separate hash commit.
+
+## Qwen domain optimisation and constrained decoding
+
+The new, separate study is `data/experiments/qwen-domain-v1`. Its historical Direct baseline is frozen in `QWEN_DIRECT_PRE_DOMAIN_TRAINING.json`; the57-case partial-assertion challenge is unchanged. No Qwen adapter has yet been trained. Numerical confidence remains null until independent support/calibration gates pass. Automation remains disabled and customer accuracy unknown.
+
+The5,760-text fact-first synthetic corpus is documented in [data/domain-corpus/README.md](data/domain-corpus/README.md). It has six protected roles, group-isolated calibration fit/evaluation, exact/lexical/semantic duplicate checks, and known shared-atom/foreign-language limitations. It is not expert-labelled production data. Three separately attributed public explicit snippets seed a partial-label audit set; they cannot establish real-world performance.
+
+```sh
+# Freeze once, then run/resume one local model runtime at a time.
+.venv/bin/python -m qwen_domain.study freeze
+.venv/bin/python -m scripts.run_qwen_domain
+
+# Progress and append-only results
+cat data/experiments/qwen-domain-v1/LIVE-STATUS.json
+tail -n 10 artifacts/qwen-domain-study.log
+
+# Software/browser regressions; real-model test is intentionally separate.
+.venv/bin/python -m pytest -m 'not model and not e2e and not local_llm and not qwen_local' -q
+RUN_E2E=1 .venv/bin/python -m pytest tests/e2e -q
+RUN_DOMAIN_LOCAL=1 .venv/bin/python -m pytest tests/integration/test_domain_real_model.py -q
+```
+
+Normal Direct uses installed Qwen/Ollama. The constrained arm reuses the same Q4_K_M GGUF through pinned llama.cpp10210, with verified single-token A/B/C labels and native scores for all alternatives. Raw token probability is never displayed as calibrated confidence. Evidence scoring and repeated prompt ingestion count in its measured latency; a one-token answer alone does not guarantee speed. See [QWEN_CONSTRAINED_DECODING.md](data/reports/QWEN_CONSTRAINED_DECODING.md).
+
+The resumable runner performs validation, the training-decision gate, isolated calibration,200×3 repeatability and sealed frozen/OOD/adversarial prediction collection. It refuses frozen scoring/model selection if training requires a further data/trainer audit. A rejected or unsupported calibrator returns null, not a made-up probability. [DOMAIN_TRAINING_DECISION.md](data/reports/DOMAIN_TRAINING_DECISION.md) and [QWEN_DOMAIN_OPTIMISATION.md](data/reports/QWEN_DOMAIN_OPTIMISATION.md) distinguish pending from measured results. Large local benchmarks can take many hours; no completion or accuracy claim follows from starting the job.
+
+The GUI has **Confidence & Automation** and a separate complete-predicate review form in Notice Detail. Domain reviews have append-only revision history, source hash, reference time, reviewer attestations, original prediction and fixed training partition. Review Queue hides AI output for blind entry. Legacy five-factor labels are retained separately. `DOMAIN_QWEN_ENABLED=true` explicitly enables new Notice Detail API analyses; it is disabled by default to preserve the conservative demo and avoid interfering with timed studies.
+
+## Optional Prowide reference parser
+
+Java11+ and Maven are needed only for this optional adapter:
+
+```sh
+mvn -f tools/prowide/pom.xml package
+.venv/bin/python -m pytest tests/unit/test_iso_adapter.py tests/integration/test_prowide.py -q
+```
+
+`pw-swift-core:SRU2025-10.3.20` is pinned with Apache-2.0 attribution and dependency checksums. A local persistent JSONL helper supplies typed components; the lenient scanner recovers partial/damaged narratives. Ordinary notices bypass Java. Core parse success is **not full SWIFT network validation**. `DOMAIN_ISO_ADAPTER=true` enables the new boundary only in the opt-in domain application path, with a different model identity; it remains off in the frozen Qwen benchmark. The current Python-only Docker image does not include the optional JVM.
+
+The existing custom parser remains unchanged for historical reproduction. The measured comparison and repeated zero-ISO finding on7,683 public excerpts are in [ISO15022_PROWIDE_EVALUATION.md](data/reports/ISO15022_PROWIDE_EVALUATION.md). No semantic improvement from ISO metadata is claimed before separate validation.
+
+## Laya-first three-gear experiment
+
+This is a separate experiment from the user-stopped domain study. Historical
+Laya/GLM/Qwen results and that study's completed rows remain unchanged. No
+weights are retrained. The pipeline tests corrected Laya → selectively requested
+one-token Qwen predicates → full independent Qwen only for unresolved facts.
+Disagreements require validation support or human review. Acceptance is a
+research simulation; automation remains disabled.
+
+```sh
+# New, resumable study; does not resume scripts/run_qwen_domain.py.
+.venv/bin/python -m scripts.run_laya_first
+cat data/experiments/laya-first-v2/LIVE-STATUS.json
+
+# Safe stop: finishes the current model request/row, then preserves results.
+touch data/experiments/laya-first-v2/STOP
+
+# Explicit small real-model integration suite, separate from ordinary tests.
+RUN_FAST_CASCADE_LOCAL=1 .venv/bin/python -m pytest tests/integration/test_fast_cascade_real.py -q
+```
+
+The first preparation freezes source/configuration/checkpoint hashes and
+input-only stratified subsets: 80 validation, 100/60 calibration fit/evaluation,
+80 synthetic frozen, 24 adversarial, 24 OOD, and the unchanged57challenge cases.
+These are controlled subsets, not completion of the larger domain-corpus study.
+Routing/model preference is selected on validation only. Numeric correctness
+confidence stays null when independent calibration support or quality fails.
+`PROTOCOL.json` and `SELECTION.json` preserve the operating criteria.
+
+The pinned Ollama Qwen runner's local native endpoint supplies all three token
+scores for Gear2, sharing the same weights/process as Gear3. A/B/C tokenizer IDs
+are verified. This internal endpoint is version-dependent; upgrades require
+compatibility verification. Raw class probabilities are not calibrated confidence.
+Prefix reuse, evidence calls and prompt ingestion count in measured costs.
+
+Actual100/1,000public-notice workloads execute the selected policy without an
+answer cache. Model-reference reuse and policy replay are labelled separately
+and never reported as actual cascade latency. Large benchmarks may take hours;
+starting the runner does not establish completion. The live report is
+[data/reports/LAYA_FIRST_CASCADE_EVALUATION.md](data/reports/LAYA_FIRST_CASCADE_EVALUATION.md).
+
+Model Lab displays the study state, validation routing comparison and persisted
+case comparisons. Notice Detail displays saved three-gear traces, raw scores,
+confidence status and exact evidence. `LAYA_FIRST_ENABLED=true` explicitly enables
+`POST /api/fast-cascade/analyse` after selection is frozen; it is off by default.
+Opening a page never invokes the models. Every new execution is append-only and
+blind review hides predictions. Optional ISO/Prowide routing remains isolated;
+ordinary notices require no ISO parser.
+
+The exact prefix-reuse counter is `raw_runtime_response.timings.cache_n`.
+The native `tokens_cached` counter describes retained state after evaluation and
+must not be interpreted as tokens actually reused. Measured values and the
+hybrid/recurrent-cache limitation are explained in
+[LAYA_FIRST_CASCADE_RUNTIME_NOTES.md](data/reports/LAYA_FIRST_CASCADE_RUNTIME_NOTES.md).
+
+The initial Laya-first v1 validation exposed a second aggregation defect: all12
+blocking positives had native passage YES=1.0, but an anchor whitelist vetoed the
+evidence. V1 is archived with source snapshots and its completed predictions.
+V2 removes that whitelist for native affirmative predictions, retains current/
+historical/supersession/conflict handling, and reuses the exact native80-record
+inferences to isolate the software change. No weights or challenge labels change.

@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-17T15:57:24.834681+00:00",
+  "state": "STOPPED_FOR_VALIDATION_BUGFIX",
+  "stage": "Supervisor stopped v1 after validation exposed lexical veto; user did not request this stop",
+  "persisted_rows": {
+    "VALIDATION-GEAR2": 2,
+    "VALIDATION-LAYA": 80,
+    "VALIDATION-FULL": 2
+  },
+  "automation_enabled": false,
+  "customer_accuracy": null
+}

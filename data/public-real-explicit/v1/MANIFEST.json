@@ -1,0 +1,10 @@
+{
+  "created_at": "2026-10-17T09:47:19.618153+00:00",
+  "n": 3,
+  "inputs_sha256": "60d04bcc744338781298ef50e9555b6243789170a300d38b4c8c41da15cf4c13",
+  "labels_sha256": "822ab8224d763da09ba7d5e37e53ef0f22fc52200580a1669de3ea84fc2e2baa",
+  "sources_sha256": "db3dd1da44d106f3881fdf23dc4de97796a008400d6672ad4cafa6fa8936c807",
+  "annotation_type": "AI_ASSISTED / CONSTRUCTIONALLY_VERIFIED, not expert labels",
+  "customer_accuracy": null,
+  "training_eligible": false
+}

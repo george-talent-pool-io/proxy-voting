@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-10-17T15:56:59.109046+00:00",
+  "execution_state": "STOPPED_BY_USER",
+  "completion_gate": "OPEN",
+  "remaining": [
+    "SELECTION.json",
+    "CALIBRATION.json",
+    "CONFIDENCE-COVERAGE.json",
+    "OPERATING-CONFIGURATION-FREEZE.json",
+    "SYNTHETIC_FROZEN_TEST-METRICS.json",
+    "ADVERSARIAL_TEST-METRICS.json",
+    "OOD_TEST-METRICS.json",
+    "CHALLENGE-METRICS.json",
+    "THROUGHPUT_100-MEASUREMENT.json",
+    "THROUGHPUT_1000-MEASUREMENT.json",
+    "Complete corrected base-Laya challenge inference"
+  ],
+  "report": "data/reports/LAYA_FIRST_CASCADE_EVALUATION.md",
+  "automation_enabled": false,
+  "customer_accuracy": null
+}

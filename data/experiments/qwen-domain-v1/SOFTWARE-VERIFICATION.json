@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-10-17T09:51:01.745077+00:00",
+  "ordinary_software_tests": {
+    "passed": 2071,
+    "deselected": 151,
+    "seconds": 17.29,
+    "command": "pytest -m 'not model and not e2e and not local_llm and not qwen_local' -q",
+    "log": "artifacts/domain-regression-tests-v2.log"
+  },
+  "browser_tests": {
+    "passed": 21,
+    "seconds": 33.84,
+    "log": "artifacts/domain-browser-tests-v2.log"
+  },
+  "real_constrained_qwen_tests": {
+    "passed": 1,
+    "seconds": 6.12,
+    "log": "artifacts/domain-real-model-tests.log"
+  },
+  "parser_domain_targeted": {
+    "passed": 78,
+    "seconds": 11.16
+  },
+  "post_change_contracts": {
+    "passed": 32,
+    "seconds": 1.33
+  },
+  "known_authored_model_quality_tests": "Not claimed to pass; frozen challenge inference/scoring is a later separate stage. No expectations changed.",
+  "python_packages": {
+    "torch": "2.14.1",
+    "transformers": "5.20.0",
+    "tokenizers": "0.23.3",
+    "scikit-learn": "1.9.1",
+    "hypothesis": "6.151.9",
+    "fastapi": "0.143.2",
+    "laya": "0.4.8",
+    "psutil": "7.2.2"
+  },
+  "automation_enabled": false,
+  "customer_accuracy": null
+}

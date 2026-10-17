@@ -1,0 +1,32 @@
+{
+  "records": 5760,
+  "families": 41,
+  "minimal_pairs": 2880,
+  "unique_texts": 5760,
+  "languages": {
+    "en": 4200,
+    "de": 300,
+    "fr": 420,
+    "it": 300,
+    "es": 300,
+    "nl": 240
+  },
+  "difficulty": {
+    "HARD": 2667,
+    "MEDIUM": 2283,
+    "EASY": 570,
+    "ADVERSARIAL": 240
+  },
+  "limitations": [
+    "Deterministic semantic-atom composition, not 5,760 independent human-authored notices.",
+    "Shared semantic atoms across families must be audited for template leakage.",
+    "Foreign-language labels are not native-expert verified.",
+    "No synthetic construction proves customer accuracy."
+  ],
+  "created_at": "2026-10-17T09:09:47.379125+00:00",
+  "source_sha256": "4d611173e7c3c6ee21ed21ace6f5b8626820528dba4b14c26665e3c4e89ec81f",
+  "generator_sha256": "72a3291c895028569f6f553093c95470bbf18ce8163ff5aaac418db3929e1fd3",
+  "material_sha256": "7eea26f3b55063ed612891f798f1ce6e82f950a48d8e0210567d8091a60f5de0",
+  "criteria": "Restrictions NO means explicitly waived/optional or no mandatory condition stated, consistent with frozen common prompt. UNKNOWN requires genuine relevant uncertainty/conflict. Not a legal guarantee of absence.",
+  "qc_status": "CONSTRUCTION_CHECKS_PASSED_DUPLICATE_SPLIT_QC_PENDING"
+}

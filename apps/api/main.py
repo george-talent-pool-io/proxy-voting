@@ -187,6 +187,11 @@ def detail(id:str,run_id:str|None=None,blind:bool=False):
         from apps.api.semantic_views import latest_notice_analysis
         from semantic_runtime.config import configured_architecture
         result['semantic_execution']=None if blind else latest_notice_analysis(id)
+        from apps.api.domain_views import latest
+        result['domain_execution']=None if blind else latest(id)
+        from apps.api.fast_cascade_views import latest as latest_cascade
+        result['fast_cascade_execution']=None if blind else latest_cascade(id)
+        result['fast_cascade_enabled']=not blind and os.environ.get('LAYA_FIRST_ENABLED','false').lower()=='true'
         result['classification_architecture']=configured_architecture()[0]
     return result
 
@@ -320,3 +325,9 @@ app.include_router(semantic_router)
 
 from apps.api.cascade_views import router as cascade_router
 app.include_router(cascade_router)
+
+from apps.api.domain_views import router as domain_router
+app.include_router(domain_router)
+
+from apps.api.fast_cascade_views import router as fast_cascade_router
+app.include_router(fast_cascade_router)

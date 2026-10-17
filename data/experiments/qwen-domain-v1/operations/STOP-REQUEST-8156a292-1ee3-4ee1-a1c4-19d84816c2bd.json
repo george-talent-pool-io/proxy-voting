@@ -1,0 +1,18 @@
+{
+  "id": "8156a292-1ee3-4ee1-a1c4-19d84816c2bd",
+  "requested_at": "2026-10-17T10:20:42.142021+00:00",
+  "reason": "Explicit user instruction: stop safely all running experiments now",
+  "runner_pid": 46805,
+  "prior_status": {
+    "timestamp": "2026-10-17T10:20:25.317133+00:00",
+    "state": "RUNNING",
+    "stage": "BASE_QWEN_DIRECT / VALIDATION",
+    "persisted_rows": {
+      "BASE_QWEN_DIRECT-VALIDATION": 54
+    },
+    "automation_enabled": false,
+    "customer_accuracy": null,
+    "pid": 46805
+  },
+  "action": "SIGINT to experiment coordinator; completed rows/checkpoints remain unchanged"
+}

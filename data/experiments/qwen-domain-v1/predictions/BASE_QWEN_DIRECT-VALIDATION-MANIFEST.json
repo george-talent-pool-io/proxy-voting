@@ -1,0 +1,16 @@
+{
+  "run_id": "d3c4b6e5-0bdb-4ea8-a9cf-79839403bda0",
+  "created_at": "2026-10-17T09:50:03.107094+00:00",
+  "architecture": "BASE_QWEN_DIRECT",
+  "split": "VALIDATION",
+  "inputs_sha256": "ba3e021b703e0b4e46a45e15d8ff6edb9d148a3750abbaf557c32063c1eeed1c",
+  "formulation_sha256": "e9a01583be8ca143989e9266fcb53bc93c163f6c004d6b2531871b002bacaa8c",
+  "model_identity": "8465448c6683f4dd34f60f255f2f9502b97bdfbba42297a5d104419ad97b6733",
+  "prompt_version": "proxy_semantic_common_v1:50936441eb841698b29d8b3e308565fdcb4f5b05e1409e14cc2483942a714a08",
+  "concurrency": 1,
+  "generation_seed": 42,
+  "ground_truth_supplied_to_model": false,
+  "runtime_switch_wall_ms": 160.0027079693973,
+  "adapter_initialization_ms": 58.32737497985363,
+  "cold_start_note": "Native server load is included in switch time when newly started; normal Ollama raw load_duration is retained per call. These are separate from warm notice latency."
+}

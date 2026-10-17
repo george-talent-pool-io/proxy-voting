@@ -1,0 +1,17 @@
+{
+  "id": "prowide-official-mt564-test564-1",
+  "source_type": "OFFICIAL_EXAMPLE",
+  "source_url": "https://raw.githubusercontent.com/prowide/prowide-core/34514beab84c9f9fa134c9f9b0e05e340e38de87/src/test/java/com/prowidesoftware/swift/io/parser/MT564ParserTest.java",
+  "source_organisation": "Prowide",
+  "retrieved_at": "2026-10-17T09:36:44.277229+00:00",
+  "message_type": "MT564",
+  "notes": "Exact concatenated test564_1 Java string, Apache-2.0; publisher parser example, not production data. Source release may predate current SRU. No claim of full current network validation.",
+  "licence": "Apache-2.0; Copyright 2006-2023 Prowide",
+  "raw": "{1:F01MTGSUS6SAXXX3206837054}{2:O5641435070316CHASGB2LDGST07128160300703160735N}{3:{108:000255CQ8272245}}{4:\n:16R:GENL\n:20C::CORP//D455103\n:20C::SEME//029206016\n:23G:NEWM\n:22F::CAEV//DVCA\n:22F::CAMV//MAND\n:98C::PREP//20070316143348\n:25D::PROC//COMP\n:16S:GENL\n:16R:USECU\n:35B:ISIN CH0011075394\n/XX/5983816\nZURICH FIN SVS GRP\nCHF0.10\n:16R:ACCTINFO\n:97A::SAFE//760043140\n:94F::SAFE//CUST/UBSWCHZH80A\n:93B::ELIG//UNIT/7000,\n:16S:ACCTINFO\n:16S:USECU\n:16R:CADETL\n:98A::XDTE//20111111\n:98A::PAYD//20111111\n:98A::RDTE//20111111\n:92A::WITF//35,\n:92A::GRSS//0,000001000\n:16S:CADETL\n:16R:CAOPTN\n:13A::CAON//001\n:22F::CAOP//CASH\n:11A::OPTN//CHF\n:17B::DFLT//Y\n:98A::XDTE//20111111\n:98A::PAYD//20111111\n:98A::RDTE//20111111\n:92A::GRSS//0,000001000\n:16R:CASHMOVE\n:22H::CRDB//CRED\n:19B::ENTL//CHF0,01\n:19B::GRSS//CHF0,01\n:19B::NETT//CHF0,01\n:98A::PAYD//20111111\n:98A::VALU//20111111\n:16S:CASHMOVE\n:16S:CAOPTN\n-}",
+  "expected": {
+    "corp": "D455103",
+    "seme": "029206016",
+    "caev": "DVCA",
+    "sequence_open_count": 6
+  }
+}

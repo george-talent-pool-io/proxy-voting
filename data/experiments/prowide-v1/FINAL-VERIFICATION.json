@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-10-17T09:57:57.967762+00:00",
+  "parser_and_scanner_tests": 59,
+  "log": "artifacts/prowide-final-verification.log",
+  "old_comparison_preserved": true,
+  "normalizer": "prowide-jsonl-v1.1",
+  "scanner": "lenient-narrative-recovery-v1.1",
+  "local_only": true,
+  "source_hashes": {
+    "iso_adapter/facts.py": "46814f17d332d1563fc0127fcf7eac2fd4d989aea810a767b80cdc33cdabe91b",
+    "iso_adapter/scanner.py": "bd59b12e04b94cdb42dcaf642f4517d5686516d28370bc0af735137e46343185",
+    "iso_adapter/benchmark.py": "1b0bcb6ca45fce1215b90a24adfab2b907801d61a9b906ce449b06c5ac8ad72a",
+    "iso_adapter/prowide.py": "62c7dda3471699e321d45f009e629e501f501aeef383dd5a8b9762db787e49c2",
+    "iso_adapter/__init__.py": "cd16e02bb89cfc551ab89c0ad25e9130d32e4140e031c4aaa3d3f1251df3f7e3",
+    "iso_adapter/routing.py": "8a4f0d7ced45fc48d4b22fe01066f844d068dcf14b313fbad3afd423e26f3041"
+  },
+  "qwen_source_changed": false
+}
