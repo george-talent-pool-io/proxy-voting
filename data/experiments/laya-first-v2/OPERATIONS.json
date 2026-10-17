@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-10-17T16:05:40.439238+00:00",
+  "worker_pid": 2937,
+  "api_pid": 2914,
+  "isolated_ollama_parent_pid": 51027,
+  "normal_ollama_pid_untouched": 9329,
+  "stop": "Create data/experiments/laya-first-v2/STOP to stop at the next completed record boundary.",
+  "old_domain_study": "Remains STOPPED_BY_USER; never resumed.",
+  "previous_cascade_revision": "laya-first-v1 stopped by supervisor for documented validation-only aggregation defect; results/sources retained."
+}

@@ -3,7 +3,7 @@
 The inference protocol/source files remain frozen. This observer clarifies runtime
 counters and writes delivery status as the independent study completes.
 """
-import argparse,time,json,os
+import argparse,time,json,os,re
 from pathlib import Path
 from fast_cascade.protocol import ROOT,STUDY,read,now,atomic
 
@@ -16,9 +16,11 @@ def annotate():
     if not report.exists():return
     marker='\n\n<!-- data-only-results-interpretation-v1 -->'
     text=report.read_text().split(marker)[0]
+    text=re.sub(r'\*\*State: [^\n]*?\*\*',f"**State: {status.get('state','UNKNOWN')} — {status.get('stage','Not recorded')}**",text,count=1)
     # Native tokens_cached is retained state, not reused prefix count.
     text=text.replace('Native prompt cache tokens','Retained state tokens (not reused prefix)')
     extra=['## Measurement interpretation and current completion status',f"Data-only report revision: {now()}. Inference source, models, predictions and selection criteria are unchanged.",
+        f"Current stage: `{status.get('stage')}`. Persisted rows: `{json.dumps(status.get('persisted_rows',{}))}`.",
         'For actual prefix reuse use `raw_runtime_response.timings.cache_n`; `tokens_cached` is retained state after prompt evaluation. The measured short/medium notices reused zero tokens. The longest TRAIN notice reused663–667tokens per call; three-call wall time fell28.78→17.53seconds. This single sequential probe does not establish a general speedup. See [runtime notes](LAYA_FIRST_CASCADE_RUNTIME_NOTES.md).']
     pending=[]
     expected=['PROTOCOL.json','LAYA-BATCH-BENCHMARK.json','NATIVE-CACHE-EVIDENCE-BENCHMARK.json','SELECTION.json','CALIBRATION.json','CONFIDENCE-COVERAGE.json','OPERATING-CONFIGURATION-FREEZE.json','SYNTHETIC_FROZEN_TEST-METRICS.json','ADVERSARIAL_TEST-METRICS.json','OOD_TEST-METRICS.json','CHALLENGE-METRICS.json','THROUGHPUT_100-MEASUREMENT.json','THROUGHPUT_1000-MEASUREMENT.json','REGRESSION-RESULTS.json']
@@ -60,9 +62,9 @@ def main():
     parser=argparse.ArgumentParser();parser.add_argument('--pid',type=int);args=parser.parse_args();import psutil
     stamp=None
     while True:
-        p=ROOT/'data/reports/LAYA_FIRST_CASCADE_EVALUATION.md';current=p.stat().st_mtime_ns if p.exists() else None
+        p=ROOT/'data/reports/LAYA_FIRST_CASCADE_EVALUATION.md';s=STUDY/'LIVE-STATUS.json';current=(p.stat().st_mtime_ns if p.exists() else None,s.stat().st_mtime_ns if s.exists() else None)
         status=optional(STUDY/'LIVE-STATUS.json') or {}
-        if current!=stamp:annotate();stamp=p.stat().st_mtime_ns if p.exists() else None
+        if current!=stamp:annotate();stamp=(p.stat().st_mtime_ns if p.exists() else None,s.stat().st_mtime_ns if s.exists() else None)
         if args.pid is None or not psutil.pid_exists(args.pid):
             annotate();break
         time.sleep(15)

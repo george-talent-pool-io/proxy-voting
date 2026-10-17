@@ -1,16 +1,16 @@
 # Laya-first cascade evaluation
 
 
-Updated: 2026-10-17T15:56:44.213753+00:00
+Updated: 2026-10-17T16:07:08.741642+00:00
 
 
-**State: STOPPED_BY_USER — Completed rows preserved**. Completion gate remains open until all measurements and regressions are recorded.
+**State: RUNNING — VALIDATION_CONSTRAINED**. Completion gate remains open until all measurements and regressions are recorded.
 
 
 Automation is disabled. Every result remains subject to human review. Customer accuracy is unknown. Synthetic and authored results below do not estimate customer quality.
 
 
-The stopped Qwen domain study is preserved. This is a separately versioned experiment in `data/experiments/laya-first-v1`; no model is retrained.
+The stopped Qwen domain study is preserved. This is a separately versioned experiment in `data/experiments/laya-first-v2`; no model is retrained.
 
 
 ## Historical quality ceiling
@@ -33,17 +33,20 @@ Same native passage inference is reduced before/after, avoiding checkpoint or ba
 
 ### VALIDATION-LAYA
 
-| Predicate | Support | Before correct | After correct | Before positive recall | After positive recall |
-|---|---|---|---|---|---|
-| votability | 80 | 78 | 78 | 100.0% | 100.0% |
-| share_blocking | 80 | 63 | 20 | 0.0% | 0.0% |
-| poa_required | 80 | 65 | 40 | 0.0% | 100.0% |
-| registration_required | 80 | 35 | 45 | 0.0% | 50.0% |
-| beneficial_owner_disclosure_required | 80 | 46 | 54 | 0.0% | 100.0% |
-| holding_confirmation_required | 80 | 39 | 54 | 0.0% | 100.0% |
-| split_voting_restricted | 80 | 54 | 47 | 0.0% | 0.0% |
-| securities_lending_recall_required | 80 | 44 | 62 | 0.0% | 100.0% |
-| other_voting_restriction | 80 | 43 | 42 | 0.0% | 18.8% |
+| Predicate | Support | Old reducer correct | Lexical-veto reducer correct | Native-positive reducer correct | Old positive recall | Current positive recall |
+|---|---|---|---|---|---|---|
+| votability | 80 | 78 | 78 | 78 | 100.0% | 100.0% |
+| share_blocking | 80 | 63 | 20 | 38 | 0.0% | 100.0% |
+| poa_required | 80 | 65 | 40 | 40 | 0.0% | 100.0% |
+| registration_required | 80 | 35 | 45 | 42 | 0.0% | 72.2% |
+| beneficial_owner_disclosure_required | 80 | 46 | 54 | 53 | 0.0% | 100.0% |
+| holding_confirmation_required | 80 | 39 | 54 | 46 | 0.0% | 100.0% |
+| split_voting_restricted | 80 | 54 | 47 | 46 | 0.0% | 0.0% |
+| securities_lending_recall_required | 80 | 44 | 62 | 55 | 0.0% | 100.0% |
+| other_voting_restriction | 80 | 43 | 42 | 41 | 0.0% | 25.0% |
+
+
+The first Laya-first revision found all12 blocking-positive validation passages scored native YES=1.0 but vetoed by keyword relevance. Revision2 accepts native semantic affirmative evidence without requiring that vocabulary whitelist. History/background/supersession/current conflicts remain explicit. This correction used validation only; no weights changed. The12positives largely share controlled semantic wording, so they are not12independent linguistic tests.
 
 
 ## Trust signals and safe coverage
@@ -58,10 +61,10 @@ Routing comparison and safe-coverage estimate pending. No coverage percentage is
 
 | SDK batch | Notices/sec | Seconds | Label changes vs batch1 |
 |---|---|---|---|
-| 1 | 0.665 | 24.06 | 0 |
-| 8 | 0.786 | 20.34 | 0 |
-| 16 | 0.66 | 24.23 | 0 |
-| 32 | 0.514 | 31.1 | 0 |
+| 1 | 0.655 | 24.41 | 0 |
+| 8 | 0.78 | 20.51 | 0 |
+| 16 | 0.705 | 22.68 | 0 |
+| 32 | 0.674 | 23.73 | 0 |
 
 
 Selected batch: 8; batch-amortised latency is explicitly separate from completion latency.
@@ -133,7 +136,7 @@ No safe customer acceptance coverage, customer error rate or production readines
 ## Completion gate
 
 
-Current persisted state: `{"timestamp": "2026-10-17T15:56:44.209216+00:00", "state": "STOPPED_BY_USER", "stage": "Completed rows preserved", "persisted_rows": {"VALIDATION-GEAR2": 2, "VALIDATION-LAYA": 80, "VALIDATION-FULL": 2}, "automation_enabled": false, "customer_accuracy": null}`
+Current persisted state: `{"timestamp": "2026-10-17T16:07:08.326151+00:00", "state": "RUNNING", "stage": "TRAIN_NATIVE_CACHE_BENCHMARK", "persisted_rows": {"VALIDATION-LAYA": 80, "VALIDATION-FULL": 2}, "automation_enabled": false, "customer_accuracy": null}`
 
 
 Regression/browser results are recorded separately in `REGRESSION-RESULTS.json` when executed. This report is deliberately a live report until every required measurement completes.
@@ -143,11 +146,13 @@ Regression/browser results are recorded separately in `REGRESSION-RESULTS.json` 
 
 ## Measurement interpretation and current completion status
 
-Data-only report revision: 2026-10-17T15:56:59.107257+00:00. Inference source, models, predictions and selection criteria are unchanged.
+Data-only report revision: 2026-10-17T16:19:17.369958+00:00. Inference source, models, predictions and selection criteria are unchanged.
+
+Current stage: `VALIDATION_CONSTRAINED`. Persisted rows: `{"VALIDATION-GEAR2": 7, "VALIDATION-LAYA": 80, "VALIDATION-FULL": 7}`.
 
 For actual prefix reuse use `raw_runtime_response.timings.cache_n`; `tokens_cached` is retained state after prompt evaluation. The measured short/medium notices reused zero tokens. The longest TRAIN notice reused663–667tokens per call; three-call wall time fell28.78→17.53seconds. This single sequential probe does not establish a general speedup. See [runtime notes](LAYA_FIRST_CASCADE_RUNTIME_NOTES.md).
 
-Recorded verification: 2101 ordinary tests;23 browser tests;1 real Laya/native-Qwen/full-Qwen integration test (57.42s). Authored model-quality failures are benchmark outcomes, not deleted or counted as software passes.
+Recorded verification: 2109 ordinary tests;23 browser tests;1 real Laya/native-Qwen/full-Qwen integration test (54.72s). Authored model-quality failures are benchmark outcomes, not deleted or counted as software passes.
 
 **Completion gate OPEN.** Remaining artefacts/measurements: SELECTION.json, CALIBRATION.json, CONFIDENCE-COVERAGE.json, OPERATING-CONFIGURATION-FREEZE.json, SYNTHETIC_FROZEN_TEST-METRICS.json, ADVERSARIAL_TEST-METRICS.json, OOD_TEST-METRICS.json, CHALLENGE-METRICS.json, THROUGHPUT_100-MEASUREMENT.json, THROUGHPUT_1000-MEASUREMENT.json, Complete corrected base-Laya challenge inference.
 

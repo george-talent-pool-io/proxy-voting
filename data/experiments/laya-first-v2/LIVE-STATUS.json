@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-17T16:19:16.498614+00:00",
+  "state": "RUNNING",
+  "stage": "VALIDATION_CONSTRAINED",
+  "persisted_rows": {
+    "VALIDATION-GEAR2": 7,
+    "VALIDATION-LAYA": 80,
+    "VALIDATION-FULL": 7
+  },
+  "automation_enabled": false,
+  "customer_accuracy": null,
+  "next_id": "QD1-042-013-0"
+}

@@ -1,0 +1,34 @@
+{
+  "created_at": "2026-10-17T16:00:44.337706+00:00",
+  "previous_protocol_sha256": "8236e816ce83e111be0d524c371aa2bd9ed71f727ec1fa2330289a61ff91c371",
+  "unchanged_weights": {
+    "data/models/laya/multilingual/model.safetensors": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+    "data/models/supplied-synthetic-v1/encoder-4ep/model.safetensors": "71f2eebab410793aeddf7475acc82aea27aacc047d1f43980c5dfcfe616982ab",
+    "data/models/narrow-v1/model.safetensors": "e034d36e9ee229f109d88ff06e3365c9e024cccdbfca8429f5d33a4496d7b58b"
+  },
+  "validation_native_sha256": "30857bc7355b1a75fea84e2f8d892d57a89bb65719da00a8eef9de17b5488eec",
+  "reuse": {
+    "NATIVE-CACHE-EVIDENCE-BENCHMARK.json": {
+      "path": "data/experiments/laya-first-v1/NATIVE-CACHE-EVIDENCE-BENCHMARK.json",
+      "sha256": "20561a0c67435a08371e34b42db4f2eacdc8ff717bc009cdd4230f92bca64a19",
+      "scope": "Identical Qwen weights, neutral prompt, input, native runtime and request; no aggregation dependency. Historical measured time, not a new execution."
+    },
+    "NATIVE-CACHE-INTERPRETATION.json": {
+      "path": "data/experiments/laya-first-v1/NATIVE-CACHE-INTERPRETATION.json",
+      "sha256": "2821aabf4cb0126db3cc31e3575fd86ef484675cfbe9932ddb8433fdab19ebf2",
+      "scope": "Identical Qwen weights, neutral prompt, input, native runtime and request; no aggregation dependency. Historical measured time, not a new execution."
+    },
+    "SHARED-NATIVE-TOKEN-PROBE.json": {
+      "path": "data/experiments/laya-first-v1/SHARED-NATIVE-TOKEN-PROBE.json",
+      "sha256": "c42255a37bb1b2e1fee9adb7f26744ee4967ffbf641b7fd8706a5e798745c794",
+      "scope": "Identical Qwen weights, neutral prompt, input, native runtime and request; no aggregation dependency. Historical measured time, not a new execution."
+    },
+    "SHARED-RUNTIME-PROBE.json": {
+      "path": "data/experiments/laya-first-v1/SHARED-RUNTIME-PROBE.json",
+      "sha256": "1fd8f5cafbd3e22851a107803d424d96aba5e624a2a5e6c2a2e41cdea53f1293",
+      "scope": "Identical Qwen weights, neutral prompt, input, native runtime and request; no aggregation dependency. Historical measured time, not a new execution."
+    }
+  },
+  "seed_script_sha256": "3ecc263cc0e648c3fbbdd4a9f9ba8673f631334233c7ede26fa45694a7cb650a",
+  "challenge_or_frozen_labels_used": false
+}

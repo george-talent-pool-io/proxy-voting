@@ -1,0 +1,11 @@
+{
+  "sampled_notice_intervals": 7,
+  "minimum_system_available_bytes": 9597435904,
+  "peak_rss_bytes_by_process": {
+    "2937:Python": 2005270528,
+    "9329:ollama": 20283392,
+    "51027:ollama": 29704192,
+    "51030:llama-server": 4417830912
+  },
+  "caveat": "Apple unified memory; RSS must not be summed across shared mappings. Includes other machine activity. Cache-only references have no new full-model resource measurement."
+}

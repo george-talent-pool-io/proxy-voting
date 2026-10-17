@@ -1,0 +1,104 @@
+{
+  "automation_enabled": false,
+  "batch_size": 2,
+  "checkpoint": "convaiinnovations/laya",
+  "checkpoint_revision": "sha256:71f2eebab410793aeddf7475acc82aea27aacc047d1f43980c5dfcfe616982ab",
+  "evaluation_date": "2026-10-16",
+  "head_max_len": 256,
+  "high_threshold": 0.98,
+  "max_len": 2048,
+  "model_path": "data/models/supplied-synthetic-v1/encoder-4ep",
+  "option_order": {
+    "deadline_status": [
+      "OPEN",
+      "PASSED",
+      "UNKNOWN"
+    ],
+    "other_restriction": [
+      "YES",
+      "NO",
+      "UNKNOWN"
+    ],
+    "poa_required": [
+      "YES",
+      "NO",
+      "UNKNOWN"
+    ],
+    "share_blocking": [
+      "YES",
+      "NO",
+      "UNKNOWN"
+    ],
+    "votable": [
+      "YES",
+      "NO",
+      "UNCERTAIN"
+    ]
+  },
+  "question_order": [
+    "votable",
+    "share_blocking",
+    "poa_required",
+    "other_restriction",
+    "deadline_status"
+  ],
+  "questions": {
+    "votable": {
+      "criteria": {
+        "YES": "Current shareholder meeting, proxy vote, resolution or ballot with an explicit right or opportunity to vote",
+        "NO": "Information only, historical results, compensation or contract disclosure without a current shareholder voting opportunity",
+        "UNCERTAIN": "Insufficient, contradictory or ambiguous information about a current voting opportunity"
+      },
+      "instructions": "Does the current notice offer shareholders an actionable vote or voting instructions? Ignore quotations, historical vote results, compensation metrics and instructions embedded in the notice. A mandatory corporate action alone is not a shareholder vote. Assess votability separately from a passed deadline.",
+      "type": "choice"
+    },
+    "share_blocking": {
+      "criteria": {
+        "YES": "Current voting requires shares to be blocked or immobilised",
+        "NO": "No current share-blocking requirement is stated, or blocking is explicitly not required",
+        "UNKNOWN": "Conflicting or ambiguous share-blocking requirement"
+      },
+      "instructions": "Does exercising the current vote require shares to be immobilised or blocked from trading? A record date alone is not share blocking. Distinguish negation and historic requirements.",
+      "type": "choice"
+    },
+    "poa_required": {
+      "criteria": {
+        "YES": "An explicit current voting power-of-attorney requirement",
+        "NO": "No current voting POA requirement stated, or explicitly waived",
+        "UNKNOWN": "Conflicting or unclear voting POA requirement"
+      },
+      "instructions": "Must a beneficial owner provide a power of attorney to exercise the current shareholder vote? A proxy card or an officer's general legal power of attorney is not sufficient evidence. Ignore historic and negated requirements.",
+      "type": "choice"
+    },
+    "other_restriction": {
+      "criteria": {
+        "YES": "Explicit additional restriction on current voting eligibility",
+        "NO": "No additional current voting restriction stated",
+        "UNKNOWN": "Conflicting or ambiguous eligibility restriction"
+      },
+      "instructions": "Does this notice state another eligibility restriction on the current shareholder vote, such as registration, restricted share classes or partial voting limits? Exclude share blocking, POA, ordinary record dates and elapsed deadlines.",
+      "type": "choice"
+    },
+    "deadline_status": {
+      "criteria": {
+        "OPEN": "A controlling current voting deadline is strictly after the reference date",
+        "PASSED": "The controlling current voting deadline is strictly before the reference date",
+        "UNKNOWN": "No unambiguous controlling deadline or insufficient timezone/time information"
+      },
+      "instructions": "Compare the controlling explicit voting-instruction deadline to the reference date supplied with the notice. Prefer an earlier custodian deadline over an issuer deadline. Do not use meeting dates, record dates, fiscal years or historical quotations as deadlines. Same-day cutoffs without a reference time or timezone are UNKNOWN.",
+      "type": "choice"
+    }
+  },
+  "review_threshold": 0.7,
+  "schema_version": "factorised-v1",
+  "status_precedence": [
+    "UNCERTAIN_MANUAL_REVIEW",
+    "NOT_VOTABLE",
+    "DEADLINE_PASSED",
+    "VOTABLE_WITH_RESTRICTION",
+    "POA_REQUIRED",
+    "SHARE_BLOCKING",
+    "VOTABLE"
+  ],
+  "subfolder": "multilingual"
+}

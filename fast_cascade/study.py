@@ -43,7 +43,7 @@ def calibration_metadata(data):
 
 def prepare():
     frozen=STUDY/'PROTOCOL.json'
-    if frozen.exists():verify();return read(frozen)
+    if frozen.exists():verify();return effective_protocol()
     freeze_baseline();m=read(CORPUS/'MANIFEST.json');selected={}
     for split,n in [('VALIDATION',80),('SYNTHETIC_FROZEN_TEST',80),('ADVERSARIAL_TEST',24),('OOD_TEST',24)]:
         pool=load_inputs(CORPUS/'MANIFEST.json',split)
@@ -75,8 +75,16 @@ def prepare():
         'benchmark_scope':'Controlled input-stratified subsets of synthetic corpus, unchanged authored challenge; actual public 100/1000 throughput workloads are unlabelled.'}
     write(frozen,protocol);return protocol
 
+def effective_protocol():
+    revision=STUDY/'PROTOCOL-REVISION-2.json'
+    if revision.exists():
+        value=read(revision)
+        if value['parent_protocol_sha256']!=sha(STUDY/'PROTOCOL.json'):raise ValueError('Protocol amendment parent changed')
+        return value
+    return read(STUDY/'PROTOCOL.json')
+
 def verify():
-    p=read(STUDY/'PROTOCOL.json')
+    p=effective_protocol()
     for name,h in p['sources'].items():
         if sha(ROOT/name)!=h:raise ValueError('Frozen experimental source changed: '+name+'; create a new experiment version')
     for name,h in p['weights'].items():
@@ -136,7 +144,7 @@ def old_reference(c):
         for r in rows(pool):
             if r['id']==c['id'] and r['input_hash']==digest(c['text']):options.append((r['result']['raw_model_result'],str(pool.relative_to(ROOT))))
     old=ROOT/'data/experiments/cascade-v2/challenge-D2.jsonl'
-    if old.exists():
+    if old.exists() and (STUDY/'OPERATING-CONFIGURATION-FREEZE.json').exists() and c['id'] in {r['id'] for r in inputs('CHALLENGE')}:
         for r in rows(old):
             if r['id']==c['id'] and r['text']==c['text']:options.append((r['result']['llm'],str(old.relative_to(ROOT))))
     for raw,origin in options:
@@ -288,7 +296,7 @@ def run():
         collect_laya('VALIDATION',laya);report();collect_models('VALIDATION',qwen);select();report()
         cal=calibration(laya,qwen);report()
         operating=STUDY/'OPERATING-CONFIGURATION-FREEZE.json'
-        if not operating.exists():write(operating,{'created_at':now(),'protocol_sha256':sha(STUDY/'PROTOCOL.json'),'selection_sha256':sha(STUDY/'SELECTION.json'),'calibrator_sha256':sha(STUDY/'calibrator.joblib'),'calibration_report_sha256':sha(STUDY/'CALIBRATION.json'),'model_identity':read(STUDY/'SELECTION.json')['model_identity'],'scope':'Frozen before protected evaluation; no challenge/test answers used for policy or calibration'})
+        if not operating.exists():write(operating,{'created_at':now(),'protocol_sha256':sha(STUDY/'PROTOCOL.json'),'effective_protocol_sha256':digest(effective_protocol()),'selection_sha256':sha(STUDY/'SELECTION.json'),'calibrator_sha256':sha(STUDY/'calibrator.joblib'),'calibration_report_sha256':sha(STUDY/'CALIBRATION.json'),'model_identity':read(STUDY/'SELECTION.json')['model_identity'],'scope':'Frozen before protected evaluation; no challenge/test answers used for policy or calibration'})
         for split in ['SYNTHETIC_FROZEN_TEST','ADVERSARIAL_TEST','OOD_TEST','CHALLENGE']:evaluate(split,laya,qwen,cal);report()
         base=BatchedLaya(batch['selected_sdk_batch_size'],fine=False);collect_laya('CHALLENGE',base,base=True);del base
         for n in [100,1000]:throughput(n,laya,qwen,cal);report()

@@ -155,3 +155,17 @@ def test_native_positive_aggregation_preserves_supersession_and_conflict():
     result=aggregate(text,'share_blocking',[n('YES'),n('NO')]);assert result['value']=='NO' and not result['conflict']
     text='Voting positions are blocked.\n\nNo share blocking applies.'
     result=aggregate(text,'share_blocking',[n('YES'),n('NO')]);assert result['value']=='UNKNOWN' and result['conflict']
+
+@pytest.mark.parametrize('operating_frozen',[False,True])
+def test_validation_reference_lookup_never_opens_historical_challenge_answers(tmp_path,monkeypatch,operating_frozen):
+    import fast_cascade.study as s
+    from fast_cascade.protocol import write
+    monkeypatch.setattr(s,'STUDY',tmp_path)
+    if operating_frozen:
+        write(tmp_path/'OPERATING-CONFIGURATION-FREEZE.json',{})
+        write(tmp_path/'inputs/CHALLENGE.json',[{'id':'challenge-only-id','text':'Unlabelled input'}])
+    def guarded_rows(path):
+        assert path.name!='challenge-D2.jsonl','Validation accessed historical challenge answers'
+        return []
+    monkeypatch.setattr(s,'rows',guarded_rows)
+    assert s.old_reference({'id':'validation-only-id','text':'No labels in reference lookup'})==(None,None)

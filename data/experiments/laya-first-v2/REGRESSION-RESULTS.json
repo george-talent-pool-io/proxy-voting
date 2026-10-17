@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-10-17T16:04:15.363564+00:00",
+  "software": {
+    "passed": 2109,
+    "deselected": 154,
+    "log": "artifacts/laya-first-v2-software-tests-final.log"
+  },
+  "browser": {
+    "passed": 23,
+    "seconds": 36.2,
+    "log": "artifacts/laya-first-v2-browser-tests.log"
+  },
+  "real_local_models": {
+    "tests": 1,
+    "passed": 1,
+    "seconds": 54.72,
+    "model": "qwen3.8:27b-q4_K_M",
+    "model_digest": "25b843619e944cd0ae6069f94ff4e5e26a16e109ccbc0a66a0f05979ed70098e",
+    "executes_real_laya_constrained_and_full": true,
+    "log": "artifacts/laya-first-v2-real-model-tests.log"
+  },
+  "scope": "Software and real-model execution contracts, not semantic quality. Quality failures are retained in benchmark results."
+}
