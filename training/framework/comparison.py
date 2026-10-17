@@ -11,7 +11,7 @@ from pathlib import Path
 from semantic_pipeline.metrics import summarize
 from semantic_pipeline.schema import PREDICATES
 from training.framework.bundle import sha, write
-from training.framework.event_data import load_inputs
+from training.framework.event_data import load_inputs, load_answers
 from training.framework import jobs, events
 
 
@@ -72,9 +72,7 @@ def compare(dataset, candidates, output, *, role='VALIDATION', reference='2026-1
     # First label access in this function happens strictly AFTER every candidate's
     # predictions and their immutable checksum receipt have been flushed to disk.
     dataset = Path(dataset)
-    if manifest['answer_file'] != 'private/answer_keys.jsonl' or sha(dataset / manifest['answer_file']) != manifest['answer_sha256']:
-        raise ValueError('Frozen answer-key checksum changed')
-    truth = {r['id']: r for r in (json.loads(line) for line in (dataset / manifest['answer_file']).read_text().splitlines())}
+    truth = load_answers(dataset, manifest, role, inputs)
     for r in inputs:
         if r['id'] not in truth or truth[r['id']]['snapshot_hash'] != r['snapshot_hash']:
             raise ValueError('Truth/input snapshot mismatch')

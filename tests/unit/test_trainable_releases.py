@@ -189,6 +189,19 @@ def test_campaign_spec_rejects_unbound_stages():
                                candidates=[{'name': 'test', 'mode': 'QWEN_ONLY', 'llm_stage': 'missing'}])
 
 
+def test_mixed_legacy_answers_are_rejected_before_any_labels_are_read(tmp_path, monkeypatch):
+    from training.framework.event_data import load_answers, load_inputs
+    root = tmp_path / 'mixed'; dataset(root, 'VALIDATION')
+    manifest, inputs = load_inputs(root, 'VALIDATION')
+    manifest['roles']['FROZEN_TEST'] = 1
+    original = Path.read_text
+    def guarded(path, *a, **kw):
+        if path.name == 'answer_keys.jsonl': pytest.fail('Mixed labels were read')
+        return original(path, *a, **kw)
+    monkeypatch.setattr(Path, 'read_text', guarded)
+    with pytest.raises(ValueError, match='migration'): load_answers(root, manifest, 'VALIDATION', inputs)
+
+
 def test_registered_passage_layer_retains_scores_and_exact_source(monkeypatch):
     from training.framework.passage_runtime import RegisteredPassages
     from training.framework.bundle import laya_questions
@@ -229,6 +242,8 @@ def test_complete_campaign_orders_selection_calibration_and_frozen_scoring(regis
     write(data / 'manifest.json', {'roles': {r['split']: 1 for r in rows}, 'input_file': 'inputs.jsonl',
           'input_sha256': sha(data / 'inputs.jsonl'), 'answer_file': 'private/answer_keys.jsonl',
           'answer_sha256': sha(data / 'private/answer_keys.jsonl')})
+    from training.framework.event_data import separate_answers
+    legacy = tmp_path / 'legacy-dataset'; data.rename(legacy); separate_answers(legacy, data)
     bundle = jobs.member('bundles', 'test'); bundle.mkdir(parents=True); write(bundle / 'manifest.json', {})
     from types import SimpleNamespace
     monkeypatch.setattr(campaigns, 'load_bundle', lambda p: ({'label_origins': {'AI_AUTHORED': 2}},

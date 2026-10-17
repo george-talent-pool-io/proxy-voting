@@ -1,7 +1,8 @@
 """Opt-in REAL registered Laya/Qwen release inference, never a model double.
 
 RUN_RELEASE_REAL_MODEL=1 uv run pytest tests/classifier/test_registered_release_real.py -q
-Requires the completed release-learning-v1 campaign; never trains implicitly.
+Requires a completed registered-release campaign (default release-learning-v3);
+never trains implicitly.
 """
 import os
 import pytest
@@ -15,7 +16,7 @@ def actual_release():
     from training.framework import jobs, campaigns, releases
     from training.framework.event_data import load_inputs
     from training.framework.resources import model_resource
-    state = campaigns.status(jobs.member('campaigns', 'release-learning-v1'))
+    state = campaigns.status(jobs.member('campaigns', os.environ.get('RELEASE_CAMPAIGN', 'release-learning-v3')))
     assert state['state'] == 'COMPLETED'
     root = jobs.member('releases', state['report']['candidates']['CASCADE_CONSERVATIVE'])
     _, inputs = load_inputs(jobs.member('event-datasets', state['plan']['spec']['dataset_id']), 'VALIDATION')

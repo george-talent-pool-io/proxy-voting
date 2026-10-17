@@ -71,7 +71,8 @@ def test_pinned_reference_facts_take_precedence_and_remain_traceable(tmp_path):
 
 
 @pytest.mark.parametrize('second_valid', [True, False])
-def test_registered_mlx_schema_repair_is_bounded_and_keeps_review(tmp_path, second_valid):
+@pytest.mark.parametrize('fenced', [True, False])
+def test_registered_mlx_schema_repair_is_bounded_and_keeps_review(tmp_path, second_valid, fenced):
     from training.framework.runtime import RegisteredModel
     model = RegisteredModel.__new__(RegisteredModel)
     model.root = tmp_path
@@ -86,7 +87,9 @@ def test_registered_mlx_schema_repair_is_bounded_and_keeps_review(tmp_path, seco
     class Worker:
         def generate(self, messages):
             calls.append(messages)
-            return {'answer': json.dumps(valid) if len(calls) == 2 and second_valid else '{bad-json', 'latency_ms': .1}
+            answer = json.dumps(valid) if len(calls) == 2 and second_valid else '{bad-json'
+            if fenced and len(calls) == 2: answer = '```json\n' + answer + '\n```'
+            return {'answer': answer, 'latency_ms': .1}
     model.worker = Worker()
     result = model.analyse('Custody ledger balance advice.', use_iso=False)
     assert len(calls) == 2

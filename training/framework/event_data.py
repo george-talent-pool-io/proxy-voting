@@ -98,22 +98,89 @@ def freeze_dataset(output, database=None, *, event_ids=None):
         base['active_structure'] = active['payload'].get('structure') if active and active['payload']['parser'] == 'PROWIDE' else None
         public.append(base)
         answers.append({'id': v['id'], 'snapshot_hash': v['snapshot_hash'], 'target': r['payload']['target'],
+                        'split': v['split'],
                         'expected_deadline_status': r['payload'].get('expected_deadline_status'),
                         'expected_final_status': r['payload'].get('expected_final_status'),
                         'provenance': r['payload']['provenance']})
     jsonl(root / 'inputs.jsonl', public)
     private = root / 'private'; private.mkdir(mode=0o700)
-    jsonl(private / 'answer_keys.jsonl', answers)
-    (private / 'answer_keys.jsonl').chmod(0o600)
-    manifest = {'version': 'event-dataset-v1', 'created_at': jobs.now(), 'input_file': 'inputs.jsonl',
-                'input_sha256': sha(root / 'inputs.jsonl'), 'answer_file': 'private/answer_keys.jsonl',
-                'answer_sha256': sha(private / 'answer_keys.jsonl'),
+    answer_files = write_role_answers(root, public, answers)
+    manifest = {'version': 'event-dataset-v2', 'created_at': jobs.now(), 'input_file': 'inputs.jsonl',
+                'input_sha256': sha(root / 'inputs.jsonl'),
+                'answer_files': answer_files,
                 'roles': dict(Counter(v['split'] for v, _ in selected)),
                 'origins': dict(Counter(r['payload']['provenance']['origin'] for _, r in selected)),
                 'event_state_policy': events.VERSION, 'automation_enabled': False, 'customer_accuracy': None}
     write(root / 'manifest.json', manifest)
     register_protected([v for v, _ in selected])
     return manifest
+
+
+def write_role_answers(root, inputs, answers):
+    """Curation-only writer; no aggregate cross-role answer file is emitted."""
+    by_id = {r['id']: r for r in answers}
+    if len(by_id) != len(answers) or set(by_id) != {r['id'] for r in inputs}:
+        raise ValueError('Answer/input membership mismatch')
+    files = {}
+    for role in sorted({r['split'] for r in inputs}):
+        path = Path(root) / 'private' / (role.lower() + '-answers.jsonl')
+        selected = [{**by_id[r['id']], 'split': role} for r in inputs if r['split'] == role]
+        jsonl(path, selected); path.chmod(0o600)
+        files[role] = {'file': 'private/' + path.name, 'sha256': sha(path), 'count': len(selected)}
+    return files
+
+
+def load_answers(dataset, manifest, role, inputs):
+    """Open only the requested role, after the caller's prediction receipt."""
+    root = Path(dataset)
+    if 'answer_files' in manifest:
+        entry = manifest['answer_files'].get(role)
+        expected_name = f'private/{role.lower()}-answers.jsonl'
+        if not entry or entry['file'] != expected_name: raise ValueError('Missing/invalid role answer file')
+        path = root / entry['file']
+        if sha(path) != entry['sha256']: raise ValueError('Role answer-key checksum changed')
+    else:
+        # Old single-role fixtures are intrinsically isolated. Multi-role v1
+        # archives must be explicitly migrated; never read their mixed labels.
+        if set(manifest['roles']) != {role}:
+            raise ValueError('Mixed-role legacy keys require explicit separate_answers migration')
+        if manifest['answer_file'] != 'private/answer_keys.jsonl': raise ValueError('Invalid legacy answer path')
+        path = root / manifest['answer_file']
+        if sha(path) != manifest['answer_sha256']: raise ValueError('Answer-key checksum changed')
+    rows = [json.loads(s) for s in path.read_text().splitlines()]
+    keys = {r['id']: r for r in rows}
+    if len(keys) != len(rows) or set(keys) != {r['id'] for r in inputs}:
+        raise ValueError('Role answer membership mismatch')
+    for r in inputs:
+        if keys[r['id']]['snapshot_hash'] != r['snapshot_hash'] or keys[r['id']].get('split', role) != role:
+            raise ValueError('Role answer snapshot/split mismatch')
+    return keys
+
+
+def separate_answers(source, output):
+    """Explicit data-curation migration. Preserves v1 unchanged; not training.
+
+    The curator necessarily reads existing labels. It grants no blindness claim.
+    New scoring processes can thereafter access one role without others.
+    """
+    import shutil
+    source = Path(source); manifest = json.loads((source / 'manifest.json').read_text())
+    inputs = []
+    for role in manifest['roles']:
+        _, rows = load_inputs(source, role); inputs.extend(rows)
+    if 'answer_files' in manifest: raise ValueError('Dataset already has role-isolated keys')
+    if manifest['answer_file'] != 'private/answer_keys.jsonl' or sha(source / manifest['answer_file']) != manifest['answer_sha256']:
+        raise ValueError('Original answer-key checksum changed')
+    answers = list(map(json.loads, (source / manifest['answer_file']).read_text().splitlines()))
+    root = Path(output); root.mkdir(parents=True, exist_ok=False); (root / 'private').mkdir(mode=0o700)
+    shutil.copyfile(source / 'inputs.jsonl', root / 'inputs.jsonl')
+    files = write_role_answers(root, inputs, answers)
+    new = {k: v for k, v in manifest.items() if k not in ('answer_file', 'answer_sha256')}
+    new.update(version='event-dataset-v2', answer_files=files, created_at=jobs.now(),
+               migrated_from_manifest_sha256=sha(source / 'manifest.json'),
+               migration_scope='Explicit curation; no model training/tuning; not a new blind dataset')
+    write(root / 'manifest.json', new)
+    return new
 
 
 def export_reviews(output, database=None):

@@ -146,6 +146,27 @@ def test_event_review_export_only_reads_development_roles(learning, tmp_path):
     assert result['source_manifest']['held_out_answers_opened'] is False
 
 
+def test_frozen_dataset_keeps_role_answer_files_physically_separate(learning, tmp_path, monkeypatch):
+    for f, role in enumerate(['TRAIN', 'VALIDATION', 'CALIBRATION', 'FROZEN_TEST']):
+        spec = specification(f, 1)
+        r = ingest(learning, f'ROLE{f}', corp=f'ROLE{f}', raw=message(f'ROLE{f}', f'ROLE{f}', 'NEWM', spec['narrative']), split=role, group=f'RF{f}')
+        v = events.get(r['event_id'], learning)
+        events.review(v['id'], {'snapshot_hash': v['snapshot_hash'], 'target': spec['target'],
+            'provenance': {'origin': 'AI_AUTHORED', 'author': 'Explicit test fixture', 'model_id': 'TEST_DOUBLE',
+                           'method': 'Construction', 'source_reference': 'test', 'revision': '1'}}, learning)
+    root = tmp_path / 'role-dataset'; manifest = event_data.freeze_dataset(root, learning)
+    assert set(manifest['answer_files']) == {'TRAIN', 'VALIDATION', 'CALIBRATION', 'FROZEN_TEST'}
+    original = Path.read_text
+    def guarded(path, *a, **kw):
+        if path.name == 'frozen_test-answers.jsonl': pytest.fail('Development read opened frozen test answers')
+        return original(path, *a, **kw)
+    monkeypatch.setattr(Path, 'read_text', guarded)
+    for role in ['VALIDATION', 'CALIBRATION']:
+        _, rows = event_data.load_inputs(root, role)
+        answers = event_data.load_answers(root, manifest, role, rows)
+        assert set(answers) == {r['id'] for r in rows}
+
+
 def test_job_cancel_is_durable_and_no_implicit_resume(learning, tmp_path, monkeypatch):
     from tests.unit.test_training_framework import example
     from training.framework.bundle import create_bundle

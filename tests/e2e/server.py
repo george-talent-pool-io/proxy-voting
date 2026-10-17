@@ -45,6 +45,11 @@ queue.tables()
 with store.connect() as c:
     for row in c.execute("SELECT id FROM learning_tasks WHERE state IN ('QUEUED','RUNNING')").fetchall():
         queue.transition(c,row['id'],'INTERRUPTED',{'reason':'Copied snapshot; no browser fixture may resume a real training task'})
+    # A real application's selected release refers to artifacts outside this
+    # isolated fixture workspace. Keep it inactive in the copied DB; the real
+    # selection/restart path is qualified separately, without model doubles.
+    if c.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='learning_release_history'").fetchone():
+        c.executescript('DROP TRIGGER IF EXISTS immutable_release_update; DROP TRIGGER IF EXISTS immutable_release_delete; DELETE FROM learning_release_history;')
 _base=jobs.WORKSPACE/'contract-base';_base.mkdir(parents=True,exist_ok=True)
 (_base/'EXPLICIT_TEST_DOUBLE.txt').write_text('Browser contract, not a pretrained model')
 _bundle=jobs.WORKSPACE/'bundles/browser-seed'

@@ -7,7 +7,7 @@ from pathlib import Path
 from semantic_pipeline.metrics import summarize
 from semantic_pipeline.schema import PREDICATES
 from training.framework import jobs, releases
-from training.framework.event_data import load_inputs
+from training.framework.event_data import load_inputs, load_answers
 from training.framework.bundle import sha, write
 
 
@@ -51,10 +51,7 @@ def evaluate(dataset, release, output, *, role='VALIDATION', reference='2026-10-
     write(output / 'BLIND_PREDICTIONS_PERSISTED.json', {'prediction_sha256': sha(output / 'predictions.jsonl'),
           'n': len(predictions), 'release_identity': config['identity'], 'persisted_at': jobs.now(), 'keys_opened': False})
     # This is deliberately the first label access, after durable predictions.
-    keys = Path(dataset) / 'private/answer_keys.jsonl'
-    if m['answer_file'] != 'private/answer_keys.jsonl' or sha(keys) != m['answer_sha256']:
-        raise ValueError('Answer key checksum changed')
-    truth = {r['id']: r for r in map(json.loads, keys.read_text().splitlines())}
+    truth = load_answers(dataset, m, role, rows)
     for row in rows:
         if truth[row['id']]['snapshot_hash'] != row['snapshot_hash']: raise ValueError('Evaluation truth snapshot mismatch')
     scored = [{**r, 'expected': {k: truth[r['id']]['target'][k] for k in PREDICATES}} for r in predictions]

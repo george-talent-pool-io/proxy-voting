@@ -22,6 +22,7 @@ def main():
     c = sub.add_parser('prepare-campaign'); c.add_argument('spec'); c.add_argument('id')
     c = sub.add_parser('run-campaign'); c.add_argument('id')
     c = sub.add_parser('campaign-status'); c.add_argument('id')
+    c = sub.add_parser('separate-answers'); c.add_argument('source_id'); c.add_argument('new_id')
     args = p.parse_args()
     if args.command == 'export-corpus':
         from training.framework.bundle import from_domain_corpus
@@ -42,6 +43,10 @@ def main():
     elif args.command == 'evaluate-validation':
         from training.framework.evaluate import evaluate_validation
         result = evaluate_validation(args.job, args.output)
+    elif args.command == 'separate-answers':
+        from training.framework import jobs
+        from training.framework.event_data import separate_answers
+        result = separate_answers(jobs.member('event-datasets', args.source_id), jobs.member('event-datasets', args.new_id))
     elif args.command in ('prepare-campaign', 'run-campaign', 'campaign-status'):
         from training.framework import campaigns, jobs
         root = jobs.member('campaigns', args.id)

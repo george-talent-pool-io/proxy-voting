@@ -19,6 +19,12 @@ _LOADED_SOURCE = Path(__file__).read_bytes()
 RUNTIME_SHA256 = hashlib.sha256(_LOADED_SOURCE).hexdigest()
 
 
+def normalise_json_wrapper(output):
+    """Only unwrap a complete fenced response; never hunt for an inner object."""
+    fenced = re.fullmatch(r'\s*```(?:json)?\s*\n([\s\S]*?)\n```\s*', output)
+    return (fenced[1], 'WHOLE_RESPONSE_JSON_FENCE_V1') if fenced else (output, None)
+
+
 def verify_checkpoint(job):
     root, plan = verify_plan(job, check_sources=False)
     from training.framework.jobs import status
@@ -115,10 +121,7 @@ class RegisteredModel:
             handling = {'first_pass_success': True, 'repair_attempts': 0, 'repair_success': False,
                         'normalisation': None, 'first_output_sha256': hashlib.sha256(output.encode()).hexdigest()}
             original_output = output
-            fenced = re.fullmatch(r'\s*```(?:json)?\s*\n([\s\S]*?)\n```\s*', output)
-            if fenced:
-                output = fenced[1]
-                handling['normalisation'] = 'WHOLE_RESPONSE_JSON_FENCE_V1'
+            output, handling['normalisation'] = normalise_json_wrapper(output)
             schema_valid = True
             try:
                 parsed = SemanticResult.model_validate_json(output).model_dump()
@@ -133,6 +136,8 @@ class RegisteredModel:
                         fixed = self.worker.generate(chat + [{'role': 'assistant', 'content': original_output},
                                                               {'role': 'user', 'content': repair}])
                         output = fixed['answer']
+                        handling['repair_output_sha256'] = hashlib.sha256(output.encode()).hexdigest()
+                        output, handling['repair_normalisation'] = normalise_json_wrapper(output)
                         handling['repair_generation'] = {k: v for k, v in fixed.items() if k != 'answer'}
                         parsed = SemanticResult.model_validate_json(output).model_dump()
                         handling['repair_success'] = True
@@ -185,7 +190,7 @@ class RegisteredModel:
             deadline = deadline_override
         decision = decide(factors, deadline, conflicts)
         return {'architecture': 'REGISTERED_' + self.spec.family, 'job_id': self.plan['job_id'],
-                'runtime_version': 'registered-candidate-v4', 'runtime_source_sha256': RUNTIME_SHA256,
+                'runtime_version': 'registered-candidate-v5', 'runtime_source_sha256': RUNTIME_SHA256,
                 'checkpoint_manifest_sha256': sha(self.root / 'model-manifest.json'),
                 'input_hash': hashlib.sha256(text.encode()).hexdigest(), 'parser': parser,
                 'input_type': parser['input_type'] if parser else 'UNSTRUCTURED_NOTICE',

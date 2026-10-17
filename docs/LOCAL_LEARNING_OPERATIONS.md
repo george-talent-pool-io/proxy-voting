@@ -85,6 +85,7 @@ do not run it concurrently with training/timing qualification.
 
 ```sh
 uv run python -m training.framework.operations readiness
+umask 077
 uv run python -m training.framework.operations backup /safe/path/snapshot-id
 ```
 
@@ -123,3 +124,33 @@ Tiny real-model cohorts cannot establish a reliable
 calibrator, model superiority or customer accuracy. Real custodian profile
 acceptance, expert-labelled real held-out data and deployment-specific security
 remain later qualification gates.
+
+## Reproducible source delivery
+
+`scripts/package_learning_source.py` creates a timestamp-normalised source bundle
+and SHA-256 inventory, including current source files even before a Git commit.
+It excludes operational datasets, answer keys, model weights and credentials;
+input-only challenge exclusion fingerprints remain included as configuration.
+Use a normal Git checkout for training-job preparation (plans record the Git
+revision). An extracted source delivery should be placed in a local Git
+repository before preparing jobs; do not fabricate the original commit history.
+The source manifest preserves the original workspace commit and content hashes.
+A source bundle is not the operational backup described above. Model download,
+MLX environment qualification and real-data import remain explicit setup steps.
+
+## Role-isolated answer-key upgrade
+
+New event datasets use `event-dataset-v2`: each role has a separate private answer
+file and checksum. Validation/calibration scoring never opens frozen-test keys.
+Mixed-role v1 archives are rejected by scoring/campaigns until explicit curation:
+
+```sh
+uv run python -m training.framework separate-answers OLD_DATASET_ID NEW_DATASET_ID
+```
+
+The curator necessarily reads the old labels to separate them. This operation
+preserves the original archive, produces a new manifest and does not make an
+already exposed engineering fixture newly blind. Single-role legacy test
+fixtures remain supported because they contain no other role's labels. The
+browser schema-version assertion was intentionally updated from v1 to v2;
+semantic expected answers were unchanged.

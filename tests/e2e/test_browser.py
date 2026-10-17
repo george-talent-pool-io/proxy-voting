@@ -598,7 +598,7 @@ def test_26_event_review_train_compare_select_rollback(browser_app):
     export.locator('[name=id]').fill('browser-event-reviews');export.get_by_role('button',name='Export TRAIN / VALIDATION bundle',exact=True).click()
     expect(p.locator('#learning-feedback')).to_contain_text('VERSIONED_EVENT_REVIEWS')
     export.locator('[name=id]').fill('browser-event-dataset');export.get_by_role('button',name='Freeze all reviewed role assignments').click()
-    expect(p.locator('#learning-feedback')).to_contain_text('event-dataset-v1')
+    expect(p.locator('#learning-feedback')).to_contain_text('event-dataset-v2')
     p.reload();expect(p.locator('#event-learning-panel')).to_be_visible()
     prepared=[]
     for _ in range(2):

@@ -69,6 +69,9 @@ def prepare(spec, output):
     from training.framework.event_data import load_inputs
     dataset = jobs.member('event-datasets', spec.dataset_id)
     _, development = load_inputs(dataset, 'TRAIN'); _, validation = load_inputs(dataset, 'VALIDATION')
+    dataset_manifest = json.loads((dataset / 'manifest.json').read_text())
+    if 'answer_files' not in dataset_manifest:
+        raise ValueError('Campaign requires role-isolated answer files; migrate legacy dataset explicitly')
     ids = {r['id']: r for r in development + validation}
     for e in examples:
         if e.id not in ids or ids[e.id]['source_hash'] != e.source_hash or ids[e.id]['split'] != e.split:
