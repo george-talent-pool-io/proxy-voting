@@ -1,1 +1,18 @@
 {"state": "RUNNING", "stage": "validate", "pid": 49881, "timestamp": "2026-10-16T21:36:42.683848+00:00", "automation_enabled": false, "customer_accuracy": null}
+{"state": "RUNNING", "stage": "validate", "pid": 49881, "timestamp": "2026-10-17T05:56:00.959262+00:00", "automation_enabled": false, "customer_accuracy": null, "stage_completed": true}
+{"state": "RUNNING", "stage": "repeat", "pid": 49881, "timestamp": "2026-10-17T05:56:00.960042+00:00", "automation_enabled": false, "customer_accuracy": null}
+{"state": "RUNNING", "stage": "repeat", "pid": 49881, "timestamp": "2026-10-17T06:15:33.500160+00:00", "automation_enabled": false, "customer_accuracy": null, "stage_completed": true}
+{"state": "RUNNING", "stage": "select-model", "pid": 49881, "timestamp": "2026-10-17T06:15:33.501416+00:00", "automation_enabled": false, "customer_accuracy": null}
+{"state": "RUNNING", "stage": "select-model", "pid": 49881, "timestamp": "2026-10-17T06:15:34.689099+00:00", "automation_enabled": false, "customer_accuracy": null, "stage_completed": true}
+{"state": "RUNNING", "stage": "routing-validation", "pid": 49881, "timestamp": "2026-10-17T06:15:34.690300+00:00", "automation_enabled": false, "customer_accuracy": null}
+{"state": "RUNNING", "stage": "routing-validation", "pid": 49881, "timestamp": "2026-10-17T06:56:26.850964+00:00", "automation_enabled": false, "customer_accuracy": null, "stage_completed": true}
+{"state": "RUNNING", "stage": "select-routing", "pid": 49881, "timestamp": "2026-10-17T06:56:26.851689+00:00", "automation_enabled": false, "customer_accuracy": null}
+{"state": "RUNNING", "stage": "select-routing", "pid": 49881, "timestamp": "2026-10-17T06:56:32.402116+00:00", "automation_enabled": false, "customer_accuracy": null, "stage_completed": true}
+{"state": "RUNNING", "stage": "freeze-final", "pid": 49881, "timestamp": "2026-10-17T06:56:32.402675+00:00", "automation_enabled": false, "customer_accuracy": null}
+{"state": "RUNNING", "stage": "freeze-final", "pid": 49881, "timestamp": "2026-10-17T06:56:33.178577+00:00", "automation_enabled": false, "customer_accuracy": null, "stage_completed": true}
+{"state": "RUNNING", "stage": "evaluation-specialists", "pid": 49881, "timestamp": "2026-10-17T06:56:33.179223+00:00", "automation_enabled": false, "customer_accuracy": null}
+{"state": "RUNNING", "stage": "evaluation-specialists", "pid": 49881, "timestamp": "2026-10-17T06:57:08.218673+00:00", "automation_enabled": false, "customer_accuracy": null, "stage_completed": true}
+{"state": "RUNNING", "stage": "legacy", "pid": 49881, "timestamp": "2026-10-17T06:57:08.219454+00:00", "automation_enabled": false, "customer_accuracy": null}
+{"state": "RUNNING", "stage": "legacy", "pid": 49881, "timestamp": "2026-10-17T06:57:26.248615+00:00", "automation_enabled": false, "customer_accuracy": null, "stage_completed": true}
+{"state": "RUNNING", "stage": "evaluate-common", "pid": 49881, "timestamp": "2026-10-17T06:57:26.249088+00:00", "automation_enabled": false, "customer_accuracy": null}
+{"state": "FAILED", "stage": "EXPLICIT_FAILURE", "pid": 49881, "timestamp": "2026-10-17T08:40:18.286860+00:00", "automation_enabled": false, "customer_accuracy": null, "error": "CalledProcessError: Command '['/Users/georgebilchev/wavionex/proxy-voting/.venv/bin/python', '-u', '-m', 'cascade.study', 'evaluate-common']' returned non-zero exit status 1."}

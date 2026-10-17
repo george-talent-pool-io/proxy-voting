@@ -1,8 +1,9 @@
 {
-  "state": "RUNNING",
-  "stage": "validate",
+  "state": "FAILED",
+  "stage": "EXPLICIT_FAILURE",
   "pid": 49881,
-  "timestamp": "2026-10-16T21:36:42.683848+00:00",
+  "timestamp": "2026-10-17T08:40:18.286860+00:00",
   "automation_enabled": false,
-  "customer_accuracy": null
+  "customer_accuracy": null,
+  "error": "CalledProcessError: Command '['/Users/georgebilchev/wavionex/proxy-voting/.venv/bin/python', '-u', '-m', 'cascade.study', 'evaluate-common']' returned non-zero exit status 1."
 }

@@ -1,0 +1,8 @@
+{
+  "run_id": "500b02b9-1ab6-4d7a-b774-2f97533eade8",
+  "created_at": "2026-10-17T06:57:23.231898+00:00",
+  "architecture": "B",
+  "checkpoint": "data/models/supplied-synthetic-v1/encoder-4ep",
+  "condition": "UNCHANGED_LEGACY_RERUN",
+  "common_freeze_sha256": "15961746dfc830b4ab554de3707ee156dd5f39c5e37153f4eb48247f3b9527de"
+}

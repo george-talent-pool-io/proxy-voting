@@ -1,0 +1,8 @@
+{
+  "run_id": "dd9948cb-1036-4ee7-8b0c-4aca590e99ee",
+  "created_at": "2026-10-17T06:57:16.013597+00:00",
+  "architecture": "A",
+  "checkpoint": "data/models/laya/multilingual",
+  "condition": "UNCHANGED_LEGACY_RERUN",
+  "common_freeze_sha256": "15961746dfc830b4ab554de3707ee156dd5f39c5e37153f4eb48247f3b9527de"
+}
