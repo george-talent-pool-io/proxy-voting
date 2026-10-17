@@ -1,13 +1,12 @@
 {
-  "timestamp": "2026-10-17T18:49:21.497270+00:00",
-  "state": "RUNNING",
-  "stage": "VALIDATION_QWEN_REFERENCE",
+  "timestamp": "2026-10-17T18:57:57.185605+00:00",
+  "state": "STOPPED_BY_USER",
+  "stage": "Completed rows preserved",
   "persisted_rows": {
-    "VALIDATION-GEAR2": 69,
+    "VALIDATION-GEAR2": 73,
     "VALIDATION-LAYA": 80,
-    "VALIDATION-FULL": 68
+    "VALIDATION-FULL": 73
   },
   "automation_enabled": false,
-  "customer_accuracy": null,
-  "next_id": "QD1-037-000-1"
+  "customer_accuracy": null
 }

@@ -649,3 +649,28 @@ def test_26_event_review_train_compare_select_rollback(browser_app):
     p.locator('#learning-event-id').select_option(ids[0]);expect(p.locator('#learning-review-history')).to_contain_text('AI_REVIEWED')
     p.screenshot(path='artifacts/event-learning-workflow.png',full_page=True)
     assert not a['errors']
+
+
+def test_27_campaign_prepare_cancel_and_refresh(browser_app):
+    """Campaign controls in real browser; no hidden training on preparation/GET."""
+    from playwright.sync_api import expect
+    a=browser_app;p=a['page'];p.goto(a['url']+'/#model_lab')
+    expect(p.locator('#learning-campaign-panel')).to_be_visible()
+    p.locator('#learning-campaign-panel').evaluate('(el)=>el.open=true')
+    state=p.request.get(a['url']+'/api/learning/status').json()
+    job=state['selections'][-1]['job_id']
+    spec={'bundle_id':'browser-event-reviews','dataset_id':'browser-event-dataset',
+          'actor':'EXPLICIT_BROWSER_CONTRACT','stages':[{'name':'saved','reuse_job':job}],
+          'candidates':[{'name':'specialist','mode':'LAYA_ONLY','laya_stage':'saved'}]}
+    form=p.locator('#learning-campaign-form');form.locator('[name=id]').fill('browser-campaign')
+    form.locator('[name=spec]').fill(json.dumps(spec));form.get_by_role('button').click()
+    expect(p.locator('#learning-feedback')).to_contain_text('PREPARED')
+    p.reload();expect(p.locator('#learning-campaign-panel')).to_be_visible()
+    p.locator('#learning-campaign-panel').evaluate('(el)=>el.open=true')
+    p.locator('[data-learning-campaign-cancel="browser-campaign"]').click()
+    expect(p.locator('#learning-feedback')).to_contain_text('CANCELLED')
+    p.reload();p.locator('#learning-campaign-panel').evaluate('(el)=>el.open=true')
+    expect(p.locator('#learning-campaign-panel')).to_contain_text('CANCELLED')
+    assert p.request.get(a['url']+'/api/learning/campaigns/browser-campaign').json()['state']=='CANCELLED'
+    p.screenshot(path='artifacts/release-campaign-controls.png',full_page=True)
+    assert not a['errors']

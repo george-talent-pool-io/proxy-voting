@@ -27,6 +27,19 @@ job_lock=threading.Lock()
 async def local_boundary(request,call_next):
     host=request.headers.get('host','').split(':')[0]
     if host not in ['localhost','127.0.0.1','testserver','[']:return __import__('starlette.responses',fromlist=['JSONResponse']).JSONResponse({'detail':'Local access only'},status_code=403)
+    # Optional single-operator boundary for a local deployment. Browser-native
+    # HTTP Basic works without placing credentials in JS/localStorage. A shared
+    # multi-user service still needs a separate identity/RBAC deployment design.
+    password=os.environ.get('LOCAL_OPERATOR_PASSWORD')
+    if password and request.url.path!='/api/health':
+        import base64,secrets
+        supplied=''
+        try:
+            scheme,encoded=request.headers.get('authorization','').split(' ',1)
+            if scheme.lower()=='basic':supplied=base64.b64decode(encoded,validate=True).decode('utf-8')
+        except (ValueError,UnicodeError):pass
+        if not secrets.compare_digest(supplied.encode(),('operator:'+password).encode()):
+            return __import__('starlette.responses',fromlist=['JSONResponse']).JSONResponse({'detail':'Local operator authentication required'},status_code=401,headers={'WWW-Authenticate':'Basic realm="Voting learning workspace", charset="UTF-8"'})
     if request.method not in ['GET','HEAD','OPTIONS']:
         origin=request.headers.get('origin')
         if origin and origin not in [f'http://{request.headers.get("host")}',f'https://{request.headers.get("host")}']:

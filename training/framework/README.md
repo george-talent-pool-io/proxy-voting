@@ -162,3 +162,21 @@ References checked 2026-10-17:
 [PEFT LoRA API](https://huggingface.co/docs/peft/main/package_reference/lora),
 [PEFT save/load](https://huggingface.co/docs/peft/main/developer_guides/peft_model),
 [MLX LoRA/QLoRA](https://github.com/ml-explore/mlx-lm/blob/main/mlx_lm/LORA.md).
+
+## Trainable releases and campaigns
+
+`campaigns.py` connects fixed training stages, validation model/routing selection,
+separate confidence calibration, immutable complete-release selection, protected
+scoring and application serving. `releases.py` pins both checkpoints together
+with prompt/schema, evidence-aware Laya aggregation, parser/event/rule sources,
+routing, dependency locks and calibrator. Complete-release selection and rollback
+are append-only and separate from the earlier single-checkpoint selection.
+
+Run `prepare-campaign`, `run-campaign`, and `campaign-status` through the CLI or
+use the Model Lab campaign controls. See
+[local operations](../../docs/LOCAL_LEARNING_OPERATIONS.md) for the exact
+single-operator deployment, access boundary, worker recovery and verified
+backup/restore procedure. The existing three-gear study remains a separate
+benchmark: the qualified trainable MLX adapter does not expose a constrained
+logit interface. Registered releases therefore support Laya → Qwen Direct →
+review without inventing Gear-2 probability support.

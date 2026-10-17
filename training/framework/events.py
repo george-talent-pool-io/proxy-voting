@@ -311,7 +311,15 @@ def classify(event_id, job, *, reference, database=None, model=None):
     result.update(event_id=event_id, event_snapshot_hash=view['snapshot_hash'], event_policy=view['policy'],
                   event_context_kind=view['context_kind'])
     from qwen_domain.confidence import confidence_output, decision_confidence
-    result['confidence'] = {k: confidence_output(view['current_text'], k, result['predicates'][k],
+    if result.get('release_identity'):
+        from training.framework.calibration import predicate_confidence
+        result['confidence'] = {k: predicate_confidence(view['current_text'], k, result['predicates'][k],
+                                calibrator=getattr(model, 'calibrator', None), identity=result['release_identity'],
+                                conflict=bool(result['reconciliation']['conflicts'])) for k in PREDICATES}
+    else:
+        result['confidence'] = {k: confidence_output(view['current_text'], k, result['predicates'][k],
+                            calibrator=getattr(model, 'calibrator', None),
+                            identity=getattr(model, 'manifest', {}).get('identity'),
                             deterministic_conflict=bool(result['reconciliation']['conflicts'])) for k in PREDICATES}
     result['decision_confidence'] = decision_confidence(result['decision']['classification'], result['confidence'])
     ident = str(uuid.uuid4())

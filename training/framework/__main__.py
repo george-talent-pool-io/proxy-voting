@@ -19,6 +19,9 @@ def main():
     c = sub.add_parser('evaluate-validation')
     c.add_argument('job'); c.add_argument('output')
     sub.add_parser('capabilities')
+    c = sub.add_parser('prepare-campaign'); c.add_argument('spec'); c.add_argument('id')
+    c = sub.add_parser('run-campaign'); c.add_argument('id')
+    c = sub.add_parser('campaign-status'); c.add_argument('id')
     args = p.parse_args()
     if args.command == 'export-corpus':
         from training.framework.bundle import from_domain_corpus
@@ -39,6 +42,12 @@ def main():
     elif args.command == 'evaluate-validation':
         from training.framework.evaluate import evaluate_validation
         result = evaluate_validation(args.job, args.output)
+    elif args.command in ('prepare-campaign', 'run-campaign', 'campaign-status'):
+        from training.framework import campaigns, jobs
+        root = jobs.member('campaigns', args.id)
+        if args.command == 'prepare-campaign': result = campaigns.prepare(json.loads(Path(args.spec).read_text()), root)
+        elif args.command == 'run-campaign': result = campaigns.run(root)
+        else: result = campaigns.status(root)
     else:
         from training.framework.trainers import versions
         result = {'versions': versions(), 'backends': ['LAYA_SDK', 'TRANSFORMERS_PEFT', 'MLX_QLORA'],

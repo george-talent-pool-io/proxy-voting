@@ -641,3 +641,13 @@ evidence. V1 is archived with source snapshots and its completed predictions.
 V2 removes that whitelist for native affirmative predictions, retains current/
 historical/supersession/conflict handling, and reuses the exact native80-record
 inferences to isolate the software change. No weights or challenge labels change.
+
+### Event-level training campaigns and complete releases
+
+The learning workspace now supports fixed Laya/Qwen training campaigns,
+validation-selected routing, separate correctness calibration, protected test
+scoring, serving of registered artifacts and complete-release rollback.
+AI-authored labels remain explicitly AI-authored. See
+[local learning operations](docs/LOCAL_LEARNING_OPERATIONS.md) for startup,
+operator authentication, campaign commands, cancellation and backup/restore.
+Automation remains disabled; customer accuracy remains unknown.

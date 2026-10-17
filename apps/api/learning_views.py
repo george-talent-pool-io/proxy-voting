@@ -6,10 +6,16 @@ from typing import Literal
 
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field, ConfigDict
-from training.framework import events, event_data, queue, selection, jobs
+from training.framework import events, event_data, queue, selection, jobs, releases, campaigns
 from apps.api.training_views import member
 
 router = APIRouter(prefix='/api/learning')
+
+
+@router.get('/readiness')
+def readiness():
+    from training.framework.operations import readiness
+    return readiness()
 
 
 def enabled():
@@ -24,6 +30,7 @@ def fail(exc):
 @router.get('/status')
 def overview():
     return {'events': events.listing(), 'tasks': queue.listing(), 'selections': selection.history(),
+            'release_history': releases.history(), 'campaigns': campaigns.listing(),
             'execution_enabled': os.environ.get('TRAINING_EXECUTION_ENABLED', 'false').lower() == 'true',
             'automation_enabled': False, 'customer_accuracy': None,
             'datasets': [p.parent.name for p in sorted((jobs.WORKSPACE / 'event-datasets').glob('*/manifest.json'))],
@@ -142,6 +149,7 @@ def choose(body: Choose):
 
 class Analyse(BaseModel):
     job_id: str | None = None
+    release_id: str | None = None
     reference: str = '2026-10-17T12:00:00+00:00'
 
 
@@ -152,6 +160,16 @@ def analyse(ident: str, body: Analyse):
         value = events.get(ident)
         if value['split'] in event_data.PROTECTED: raise ValueError('Use the protected comparison runner for held-out inputs')
         chosen = selection.history()
+        release_history = releases.history()
+        if body.job_id and body.release_id: raise ValueError('Choose checkpoint OR complete release')
+        release_id = body.release_id or (release_history[-1]['release_id'] if release_history and not body.job_id else None)
+        if release_id:
+            from training.framework.resources import model_resource
+            with model_resource('event-release-classification'):
+                path = member('releases', release_id)
+                model = releases.ReleaseModel(path)
+                try: return events.classify(ident, path, reference=body.reference, model=model)
+                finally: model.close()
         job_id = body.job_id or (chosen[-1]['job_id'] if chosen else None)
         if not job_id: raise ValueError('Select an experimental candidate or specify job_id')
         from training.framework.resources import model_resource
@@ -185,3 +203,56 @@ def compare(body: Comparison):
 def comparison(ident: str):
     try: return json.loads((member('comparisons', ident) / 'comparison.json').read_text())
     except (ValueError, FileNotFoundError) as exc: raise HTTPException(404, str(exc))
+
+
+class CampaignRequest(BaseModel):
+    id: str
+    spec: campaigns.CampaignSpec
+
+
+@router.post('/campaigns', status_code=201)
+def prepare_campaign(body: CampaignRequest):
+    try: return campaigns.prepare(body.spec.model_dump(), member('campaigns', body.id))
+    except (ValueError, FileExistsError, FileNotFoundError) as exc: raise fail(exc)
+
+
+@router.get('/campaigns/{ident}')
+def campaign_status(ident: str):
+    try: return campaigns.status(member('campaigns', ident))
+    except (ValueError, FileNotFoundError) as exc: raise fail(exc)
+
+
+@router.post('/campaigns/{ident}/dispatch', status_code=202)
+def dispatch_campaign(ident: str):
+    enabled()
+    try: return campaigns.spawn(member('campaigns', ident))
+    except (ValueError, FileNotFoundError) as exc: raise fail(exc)
+
+
+@router.post('/campaigns/{ident}/cancel')
+def cancel_campaign(ident: str):
+    try: return campaigns.cancel(member('campaigns', ident))
+    except (ValueError, FileNotFoundError) as exc: raise fail(exc)
+
+
+class SelectRelease(BaseModel):
+    release_id: str
+    actor: str = Field(min_length=1)
+    reason: str = Field(min_length=1)
+    expected_previous_id: int | None = None
+    rollback_id: int | None = None
+
+
+@router.post('/releases/select', status_code=201)
+def select_release(body: SelectRelease):
+    try: return releases.select(**body.model_dump())
+    except (ValueError, FileNotFoundError) as exc: raise fail(exc)
+
+
+@router.get('/releases/{ident}')
+def release_detail(ident: str):
+    try:
+        root = member('releases', ident)
+        return {'manifest': json.loads((root / 'release.json').read_text()),
+                'seal': json.loads((root / 'SEALED.json').read_text()) if (root / 'SEALED.json').exists() else None}
+    except (ValueError, FileNotFoundError) as exc: raise fail(exc)
