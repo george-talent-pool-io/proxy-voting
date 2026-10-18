@@ -651,3 +651,6 @@ AI-authored labels remain explicitly AI-authored. See
 [local learning operations](docs/LOCAL_LEARNING_OPERATIONS.md) for startup,
 operator authentication, campaign commands, cancellation and backup/restore.
 Automation remains disabled; customer accuracy remains unknown.
+# Client Linux deployment
+
+The single-tenant customer service is defined in [deploy/compose.yml](deploy/compose.yml), with named identities, protected reviews, training campaigns, customer-specific calibration and independent release qualification. Read [the deployment and acceptance guide](docs/CLIENT_LINUX_DEPLOYMENT.md) before installation. The separate research application remains available. Customer automation is disabled by default; AI-authored qualification does not establish customer accuracy or a low review rate.

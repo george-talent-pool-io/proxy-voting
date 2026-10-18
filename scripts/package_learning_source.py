@@ -19,11 +19,15 @@ def package(output):
     output = Path(output); output.parent.mkdir(parents=True, exist_ok=True)
     paths = set()
     for folder in ['apps', 'classifier', 'training', 'evaluation', 'semantic_pipeline', 'hybrid',
-                   'cascade', 'fast_cascade', 'qwen_domain', 'iso15022', 'iso_adapter', 'scripts', 'docs', 'tests']:
+                   'cascade', 'fast_cascade', 'qwen_domain', 'iso15022', 'iso_adapter', 'scripts', 'docs', 'tests', 'production', 'deploy']:
         for p in (ROOT / folder).rglob('*'):
             if p.is_file() and not any(s in p.parts for s in ['__pycache__', '.pytest_cache']) and p.suffix in (
-                    '.py', '.js', '.css', '.html', '.json', '.txt', '.md', '.sh', '.yml', '.yaml'):
+                    '.py', '.js', '.css', '.html', '.json', '.txt', '.md', '.sh', '.yml', '.yaml', '.lock', '.conf'):
+                if any(s in p.relative_to(ROOT).parts for s in ('secrets', 'tls')): continue
                 paths.add(p.relative_to(ROOT))
+    paths.add(Path('deploy/Dockerfile'))
+    paths.update(Path('data/reports') / name for name in ('CLIENT_PRODUCTION_GAP_PLAN.md', 'CLIENT_PRODUCTION_READINESS.md')
+                 if (ROOT / 'data/reports' / name).is_file())
     for name in ['README.md', 'LICENSE', 'pyproject.toml', 'uv.lock', 'Dockerfile', 'docker-compose.yml']:
         if (ROOT / name).is_file(): paths.add(Path(name))
     paths.add(Path('tools/prowide/pom.xml'))

@@ -236,3 +236,5 @@ __pycache__/
 data/run_sources/
 data/history/
 data/training-workspace/
+deploy/secrets/
+deploy/tls/

@@ -1,0 +1,3 @@
+# Final CPU runtime override, CPython 3.12 / Linux only. Publisher wheel hashes.
+torch @ https://download-r2.pytorch.org/whl/cpu/torch-2.14.1%2Bcpu-cp312-cp312-manylinux_2_28_aarch64.whl#sha256=2af649994b36dffc627175c3f306d9e513a309b58d4619ac7107577613336454 ; platform_machine == 'aarch64'
+torch @ https://download-r2.pytorch.org/whl/cpu/torch-2.14.1%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl#sha256=5a6363570c753812540a05eb82380e329469cbe668643e88111414c12627711f ; platform_machine == 'x86_64'
