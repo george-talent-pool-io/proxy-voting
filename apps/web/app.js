@@ -21,7 +21,7 @@ function heading(eyebrow,title,subtitle,actions=''){return `<div class="page-hea
 function metric(label,value,note,teal=false){return `<div class="metric"><div class="metric-label">${esc(label)}</div><div class="metric-value ${teal?'teal':''}">${esc(value)}</div><small>${esc(note)}</small></div>`;}
 function empty(title,text,link=''){return `<div class="empty"><strong>${esc(title)}</strong><span>${esc(text)}</span>${link}</div>`;}
 function panel(title,body,sub=''){return `<section class="panel"><div class="panel-head"><h2>${esc(title)}</h2><small>${esc(sub)}</small></div>${body}</section>`;}
-const eventLearningPanel=installEventLearning({api,panel,esc,$,toast,frameworkExecutionTrace});
+const eventLearningPanel=installEventLearning({api,panel,esc,$,toast,frameworkExecutionTrace,invalidatePendingRender:()=>{renderGeneration++;clearTimeout(state.searchTimer);}});
 function notice(text,warning=false){return `<div class="notice ${warning?'warning':''}"><span class="label">${warning?'VALIDATION REQUIRED':'RESEARCH NOTE'}</span><div>${text}</div></div>`;}
 function exportLink(kind='results'){return `<a class="button" href="/api/export?kind=${kind}${state.run?'&run_id='+encodeURIComponent(state.run):''}" download>Export ${kind}</a>`;}
 function runQuery(){return state.run?`run_id=${encodeURIComponent(state.run)}`:'';}
@@ -228,7 +228,7 @@ $('#close-dialog').addEventListener('click',()=>$('#notice-dialog').close());
 $('#notice-dialog').addEventListener('click',e=>{if(e.target===$('#notice-dialog'))$('#notice-dialog').close();});
 $('#demo-mode').checked=localStorage.getItem('demoMode')==='true';document.body.classList.toggle('demo',$('#demo-mode').checked);
 $('#demo-mode').addEventListener('change',e=>{document.body.classList.toggle('demo',e.target.checked);localStorage.setItem('demoMode',e.target.checked);});
-window.addEventListener('hashchange',()=>{if($('#notice-dialog').open)$('#notice-dialog').close();state.tablePage=1;render();});
+window.addEventListener('hashchange',()=>{clearTimeout(state.searchTimer);if($('#notice-dialog').open)$('#notice-dialog').close();state.tablePage=1;render();});
 api('facets').then(v=>{facets=v;render();}).catch(()=>render());
 
 async function hybridSummaryPanel(full){

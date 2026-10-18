@@ -120,6 +120,19 @@ def test_independent_llm_only_never_loads_laya(registered):
     assert ExplicitModelDouble.calls == ['qwen'] and out['laya'] is None
 
 
+def test_upstream_iso_input_type_reaches_calibrated_routing_without_reparsing(registered,monkeypatch):
+    from production import cascade_policy
+    root=prepared();ExplicitModelDouble.values={};seen=[]
+    model=releases.ReleaseModel(root,sealed=False,laya_factory=ExplicitModelDouble,llm_factory=ExplicitModelDouble)
+    model.stage_routing=({'EXPLICIT_CALIBRATOR_DOUBLE':True},{'EXPLICIT_POLICY_DOUBLE':True})
+    def gate(text,result,cal,point,**meta):
+        seen.append(meta);return {'accept':True,'reasons':[],'confidence':.995}
+    monkeypatch.setattr(cascade_policy,'assess',gate)
+    out=model.analyse('Upstream narrative',use_iso=False,language='en',population='TEST_ONLY',input_type_context='PROWIDE_PARSEABLE')
+    assert seen[0]['input_type']=='PROWIDE_PARSEABLE' and out['input_type']=='PROWIDE_PARSEABLE'
+    assert out['parser'] is None and not out['escalation']['escalated']
+
+
 def test_release_evaluation_keys_open_only_after_durable_predictions(registered, tmp_path, monkeypatch):
     data = tmp_path / 'data'; dataset(data, 'CALIBRATION'); root = prepared(mode='QWEN_ONLY')
     output = tmp_path / 'eval'; original = Path.read_text

@@ -258,7 +258,7 @@ def review(event_id, value, database=None):
         return decode(c.execute('SELECT * FROM learning_reviews WHERE id=?', (cur.lastrowid,)).fetchone())
 
 
-def classify(event_id, job, *, reference, database=None, model=None):
+def classify(event_id, job, *, reference, database=None, model=None, inference_context=None):
     view = get(event_id, database)
     if view['cancelled'] or not view['current_text']: raise ValueError('Event has no operative classification context')
     from iso_adapter.facts import semantic_facts, deadline
@@ -275,7 +275,7 @@ def classify(event_id, job, *, reference, database=None, model=None):
         started = time.perf_counter()
         try:
             result = model.analyse(view['current_text'], reference=reference, use_iso=False,
-                                   structured_context=structured, deadline_override=explicit)
+                                   structured_context=structured, deadline_override=explicit, **(inference_context or {}))
         except (ValueError, RuntimeError, OSError) as exc:
             # A failed inference is still an auditable event. Do not fabricate a
             # successful model answer or discard an otherwise valid source.

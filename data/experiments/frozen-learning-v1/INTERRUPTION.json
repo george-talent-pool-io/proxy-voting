@@ -1,0 +1,6 @@
+{
+  "reason": "Engineering correction: explicitly represent complete-source negative evidence before calibration; not model/threshold tuning on test outcomes",
+  "protected_test_answers_opened": false,
+  "resume": false,
+  "next_condition": "frozen-learning-v2"
+}

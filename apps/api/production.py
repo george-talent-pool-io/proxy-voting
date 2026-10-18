@@ -11,7 +11,7 @@ from urllib.parse import urlsplit
 from fastapi import FastAPI, Request, Depends, HTTPException
 from fastapi.responses import JSONResponse, FileResponse, Response
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 from apps.api import store
 from production import security, storage, service, worker, qualification
 from training.framework import jobs, events, event_data, campaigns, releases
@@ -160,12 +160,33 @@ def create_app():
     def bundle(body: Export, user=Depends(train)):
         result = event_data.export_reviews(jobs.member('bundles', body.id)); storage.audit(user['name'], 'TRAINING_BUNDLE_EXPORTED', {'id': body.id}); return result
 
+    @app.get('/api/client/starting-checkpoints')
+    def starting_checkpoints(user=Depends(read)):
+        return [{'id': p.parent.name, **json.loads(p.read_text())} for p in (jobs.WORKSPACE / 'seeds').glob('*/seed.json')]
+
+    @app.get('/api/client/calibrators')
+    def calibrators(user=Depends(read)):
+        return [{'id':p.stem, **{k:v for k,v in json.loads(p.read_text()).items() if k!='models'}}
+                for p in (jobs.WORKSPACE/'customer-calibrators').glob('*.json')]
+
+    @app.post('/api/client/operating-points/{ident}', status_code=201)
+    def operating_point(ident: str, body: OperatingPointBody, user=Depends(train)):
+        return service.select_operating_point(ident,**body.model_dump(),actor=user['name'])
+
+    @app.post('/api/client/releases/{ident}', status_code=201)
+    def prepare_release(ident: str, body: releases.ReleaseSpec, user=Depends(train)):
+        result = releases.prepare(body, jobs.member('releases', ident))
+        storage.audit(user['name'], 'RELEASE_PREPARED', {'id': ident, 'identity': result['identity']})
+        return result
+
     @app.post('/api/client/campaigns/{ident}', status_code=201)
     def campaign(ident: str, body: dict, user=Depends(train)):
         spec = campaigns.CampaignSpec.model_validate({**body, 'actor': user['name']})
         models = Path(os.environ.get('VOTING_MODELS_ROOT', ROOT / 'data/models')).resolve()
         for stage in spec.stages:
             if stage.training:
+                if stage.training.parent_seed_path and Path(stage.training.parent_seed_path).resolve().parent != (jobs.WORKSPACE/'seeds').resolve():
+                    raise ValueError('Training parent must be a managed frozen starting checkpoint')
                 if stage.training.backend == 'MLX_QLORA' or stage.training.runtime_python: raise ValueError('Linux uses LAYA_SDK or TRANSFORMERS_PEFT; executable paths are not accepted')
                 path = Path(stage.training.model_path).resolve()
                 if models not in path.parents: raise ValueError('Training base must be inside the managed model volume')
@@ -190,7 +211,7 @@ def create_app():
         payload = body.payload
         if body.kind == 'INFERENCE':
             request = Inference.model_validate(payload); payload = request.model_dump()
-            releases.verify_seal(jobs.member('releases', request.release_id))
+            (releases.verify if request.review_only_unsealed else releases.verify_seal)(jobs.member('releases', request.release_id))
             inference_admission(jobs.member('releases', request.release_id))
             for eid in request.event_ids:
                 if events.get(eid)['split'] in ('CALIBRATION', 'FROZEN_TEST'): raise ValueError('Protected input cannot be explored through inference')
@@ -246,12 +267,22 @@ class Inference(StrictBody):
     release_id: str
     event_ids: list[str] = Field(min_length=1, max_length=1000)
     qualification_id: str | None = None
+    calibrator_id: str | None = None
+    simulation_threshold: float = Field(default=.99, ge=.5, le=1)
+    review_only_unsealed: bool = False
+
+    @model_validator(mode='after')
+    def bootstrap_is_review_only(self):
+        if self.review_only_unsealed and (self.qualification_id or self.calibrator_id):
+            raise ValueError('Unsealed bootstrap cannot attach qualification/calibration')
+        return self
 class Calibration(StrictBody):
     ident: str
     dataset_id: str
     release_id: str
     population: str
     reference: str
+    stage: Literal['FINAL','LAYA'] = 'FINAL'
 class QualificationRun(StrictBody):
     id: str
 class QualificationBody(StrictBody):
@@ -263,5 +294,13 @@ class QualificationBody(StrictBody):
     policy: qualification.Policy
 class PromotionBody(StrictBody):
     expected_previous_id: int | None = None
+
+class OperatingPointBody(StrictBody):
+    campaign_id: str
+    candidate: str
+    dataset_id: str
+    calibrator_id: str
+    population: str
+    stage: Literal['FINAL','LAYA']='FINAL'
 
 app = create_app()

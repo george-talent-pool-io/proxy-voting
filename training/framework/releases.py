@@ -18,6 +18,7 @@ from semantic_pipeline.decision import decide
 from fast_cascade.routing import Policy, assess, reconcile
 from training.framework import jobs, events
 from training.framework.bundle import sha, write, ROOT
+from production.evidence_basis import valid_negative_basis
 
 VERSION = 'trainable-release-v1'
 
@@ -31,14 +32,25 @@ class ReleaseSpec(BaseModel):
     mode: Literal['LAYA_ONLY', 'QWEN_ONLY', 'LAYA_QWEN']
     laya_job: str | None = None
     llm_job: str | None = None
+    laya_seed: str | None = None
+    llm_seed: str | None = None
+    laya_inference: Literal['PASSAGES', 'WHOLE_NOTICE_WITH_PASSAGE_EVIDENCE', 'WHOLE_NOTICE_SCOPED_EVIDENCE'] = 'PASSAGES'
+    laya_calibrator_id: str | None = None
+    laya_operating_point_id: str | None = None
     policy: dict = Field(default_factory=lambda: asdict(Policy(gear2=False)))
     aggregation: dict = Field(default_factory=lambda: {'strategy': 'SUPERSESSION_AWARE', 'min_score': .7, 'min_margin': .2})
 
     @model_validator(mode='after')
     def compatible(self):
-        if bool(self.laya_job) != (self.mode in ('LAYA_ONLY', 'LAYA_QWEN')):
+        if self.laya_job and self.laya_seed or self.llm_job and self.llm_seed:
+            raise ValueError('Choose one frozen seed or derivative per model')
+        if bool(self.laya_calibrator_id) != bool(self.laya_operating_point_id):
+            raise ValueError('Calibrated routing needs both stage calibrator and operating point')
+        if self.laya_calibrator_id and self.mode!='LAYA_QWEN':
+            raise ValueError('Stage routing calibration belongs to the cascade')
+        if bool(self.laya_job or self.laya_seed) != (self.mode in ('LAYA_ONLY', 'LAYA_QWEN')):
             raise ValueError('Release mode/Laya checkpoint mismatch')
-        if bool(self.llm_job) != (self.mode in ('QWEN_ONLY', 'LAYA_QWEN')):
+        if bool(self.llm_job or self.llm_seed) != (self.mode in ('QWEN_ONLY', 'LAYA_QWEN')):
             raise ValueError('Release mode/LLM checkpoint mismatch')
         if Policy(**self.policy).gear2:
             raise ValueError('Registered MLX adapters have no qualified constrained-token backend; use two gears')
@@ -49,7 +61,7 @@ class ReleaseSpec(BaseModel):
 
 def source_files():
     names = set()
-    for folder in ['training/framework', 'iso_adapter', 'semantic_pipeline']:
+    for folder in ['training/framework', 'iso_adapter', 'semantic_pipeline', 'production']:
         names.update(p.relative_to(ROOT).as_posix() for p in (ROOT / folder).glob('*.py'))
     names.update(['cascade/aggregation.py', 'hybrid/semantics.py', 'fast_cascade/aggregation.py',
                   'fast_cascade/routing.py', 'fast_cascade/laya.py', 'classifier/deadlines.py',
@@ -76,10 +88,25 @@ def prepare(spec, output):
         models[kind] = {'job_id': ident, 'manifest_sha256': sha(path / 'model-manifest.json'),
                         'prompt_sha256': sha(Path(plan['bundle']) / 'semantic-prompt.txt'),
                         'base_revision': plan['spec']['base_revision'], 'base_model_id': plan['spec']['base_model_id']}
+    from training.framework import seeds
+    for kind, ident in [('laya', spec.laya_seed), ('llm', spec.llm_seed)]:
+        if ident is None: continue
+        path = jobs.member('seeds', ident); seed = seeds.verify(path)
+        if (kind == 'laya') != (seed['spec']['backend'] == 'LAYA_SDK'):
+            raise ValueError('Release seed backend mismatch')
+        models[kind] = {'seed_id': ident, 'identity': seed['identity'], 'manifest_sha256': sha(path / 'seed.json'),
+                        'prompt_sha256': seed['prompt_sha256'], 'base_revision': seed['spec']['base_revision'],
+                        'base_model_id': seed['spec']['base_model_id']}
     sources = source_files()
     condition = {'version': VERSION, 'spec': spec.model_dump(), 'models': models, 'sources': sources,
                  'schema_sha256': digest(SemanticResult.model_json_schema()), 'event_policy': events.VERSION,
                  'rule_version': 'semantic-decision-2', 'confidence_features': 'registered-release-confidence-v1'}
+    if spec.laya_calibrator_id:
+        from production.cascade_policy import load as load_routing
+        cal_path=jobs.member('customer-calibrators',spec.laya_calibrator_id).with_suffix('.json')
+        point_path=jobs.member('customer-operating-points',spec.laya_operating_point_id).with_suffix('.json')
+        load_routing(cal_path,point_path,condition)
+        condition['routing_artifacts']={'calibrator_sha256':sha(cal_path),'point_sha256':sha(point_path)}
     root = Path(output); root.mkdir(parents=True, exist_ok=False)
     for name in sources:
         archive = root / 'source-snapshot' / name; archive.parent.mkdir(parents=True, exist_ok=True)
@@ -95,8 +122,16 @@ def verify(root):
     m = json.loads((root / 'release.json').read_text())
     condition = {k: m[k] for k in ['version', 'spec', 'models', 'sources', 'schema_sha256',
                                    'event_policy', 'rule_version', 'confidence_features']}
+    if 'routing_artifacts' in m:condition['routing_artifacts']=m['routing_artifacts']
     if digest(condition) != m['identity']: raise ValueError('Release manifest identity changed')
     ReleaseSpec.model_validate(m['spec'])
+    if m['spec'].get('laya_calibrator_id'):
+        cal=jobs.member('customer-calibrators',m['spec']['laya_calibrator_id']).with_suffix('.json')
+        point=jobs.member('customer-operating-points',m['spec']['laya_operating_point_id']).with_suffix('.json')
+        if m['routing_artifacts']!={'calibrator_sha256':sha(cal),'point_sha256':sha(point)}:
+            raise ValueError('Frozen stage routing artifacts changed')
+        from production.cascade_policy import load as load_routing
+        load_routing(cal,point,m)
     for name, expected in m['sources'].items():
         if sha(ROOT / name) != expected or sha(root / 'source-snapshot' / name) != expected:
             raise ValueError('Release source changed; build a new release (no silent source upgrade)')
@@ -104,6 +139,12 @@ def verify(root):
         raise ValueError('Release event/schema identity mismatch')
     from training.framework.runtime import verify_checkpoint
     for model in m['models'].values():
+        if model.get('seed_id'):
+            from training.framework.seeds import verify as verify_seed
+            path = jobs.member('seeds', model['seed_id']); seed = verify_seed(path)
+            if seed['identity'] != model['identity'] or sha(path / 'seed.json') != model['manifest_sha256']:
+                raise ValueError('Release seed changed')
+            continue
         job = jobs.member('jobs', model['job_id']); _, plan, _ = verify_checkpoint(job)
         if sha(job / 'model-manifest.json') != model['manifest_sha256'] or sha(Path(plan['bundle']) / 'semantic-prompt.txt') != model['prompt_sha256']:
             raise ValueError('Release model/prompt changed')
@@ -184,17 +225,29 @@ class ReleaseModel:
         self.policy = Policy(**self.spec.policy); self.laya = None; self.llm = None
         from training.framework.passage_runtime import RegisteredPassages
         from training.framework.runtime import RegisteredModel
-        self.laya_factory = laya_factory or (lambda job: RegisteredPassages(job, config=self.spec.aggregation))
-        self.llm_factory = llm_factory or RegisteredModel
+        from training.framework.seeds import FrozenModel
+        from training.framework.whole_runtime import WholeNotice
+        self.laya_factory = laya_factory or ((lambda job:WholeNotice(job,model_factory=FrozenModel if self.spec.laya_seed else RegisteredModel))
+            if self.spec.laya_inference=='WHOLE_NOTICE_SCOPED_EVIDENCE' else (lambda job: RegisteredPassages(job, config=self.spec.aggregation,
+                                               model_factory=FrozenModel if self.spec.laya_seed else RegisteredModel,
+                                               whole_notice=self.spec.laya_inference != 'PASSAGES')))
+        self.llm_factory = llm_factory or (FrozenModel if self.spec.llm_seed else RegisteredModel)
         self.calibrator = None
+        self.stage_routing=None
+        if self.spec.laya_calibrator_id:
+            from production.cascade_policy import load as load_routing
+            self.stage_routing=load_routing(jobs.member('customer-calibrators',self.spec.laya_calibrator_id).with_suffix('.json'),
+                jobs.member('customer-operating-points',self.spec.laya_operating_point_id).with_suffix('.json'),self.manifest)
         if receipt and receipt['calibration']:
             from qwen_domain.confidence import CorrectnessCalibrator
             # Hash validation above precedes deserialisation of our own local file.
             self.calibrator = CorrectnessCalibrator.load(self.root / 'calibrator.joblib', self.manifest['identity'])
 
     def analyse(self, text, *, reference='2026-10-17T12:00:00+00:00', use_iso=True,
-                structured_context=None, deadline_override=None):
+                structured_context=None, deadline_override=None, language='UNKNOWN', population='UNDECLARED',input_type_context=None):
         if not isinstance(text, str) or not text.strip() or len(text) > 2_000_000: raise ValueError('Invalid release input')
+        if input_type_context not in (None,'UNSTRUCTURED_NOTICE','PROWIDE_PARSEABLE','LENIENT_ISO_RECOVERABLE','UNRECOGNISED'):
+            raise ValueError('Unknown upstream input type')
         start = time.perf_counter(); parser = None; structured = structured_context or {}
         if use_iso:
             from iso_adapter.routing import route
@@ -204,26 +257,33 @@ class ReleaseModel:
                 explicit = iso_deadline(parser['structure'], reference)
                 if explicit['comparisons']: deadline_override = explicit
         laya = None; llm = None; gates = {}; trace = []; conflicts = []
+        effective_input_type=parser['input_type'] if parser else input_type_context or 'UNSTRUCTURED_NOTICE'
+        if parser and input_type_context and parser['input_type']!=input_type_context:conflicts.append('INPUT_TYPE_CONTEXT_CONFLICT')
         current = {k: {'value': 'UNCERTAIN' if k == 'votability' else 'UNKNOWN', 'source': 'NOT_INVOKED',
                        'confidence': None, 'scores': {}, 'evidence': []} for k in PREDICATES}
         loads = {}
-        if self.spec.laya_job:
+        if self.spec.laya_job or self.spec.laya_seed:
             if self.laya is None:
-                loaded_at = time.perf_counter(); self.laya = self.laya_factory(jobs.member('jobs', self.spec.laya_job))
+                loaded_at = time.perf_counter(); self.laya = self.laya_factory(jobs.member('seeds' if self.spec.laya_seed else 'jobs', self.spec.laya_seed or self.spec.laya_job))
                 loads['laya_ms'] = (time.perf_counter() - loaded_at) * 1000
             laya = self.laya.analyse(text, use_iso=False, reference=reference)
             current = copy.deepcopy({k: laya['predicates'][k] for k in PREDICATES})
             gates = {k: assess(text, k, p, self.policy) for k, p in current.items() if k not in structured}
+            if self.stage_routing:
+                from production.cascade_policy import assess as calibrated_routing
+                stage=calibrated_routing(text,laya,*self.stage_routing,language=language,
+                        input_type=effective_input_type,population=population)
+                gates={k:{'accepted_for_research':stage['accept'],'calibrated_routing':stage,'reasons':stage['reasons']} for k in current if k not in structured}
         pending = [k for k in PREDICATES if k not in structured and not gates.get(k, {}).get('accepted_for_research')]
-        if self.spec.llm_job and pending:
+        if (self.spec.llm_job or self.spec.llm_seed) and pending:
             if self.llm is None:
-                loaded_at = time.perf_counter(); self.llm = self.llm_factory(jobs.member('jobs', self.spec.llm_job))
+                loaded_at = time.perf_counter(); self.llm = self.llm_factory(jobs.member('seeds' if self.spec.llm_seed else 'jobs', self.spec.llm_seed or self.spec.llm_job))
                 loads['llm_ms'] = (time.perf_counter() - loaded_at) * 1000
             llm = self.llm.analyse(text, use_iso=False, reference=reference, structured_context=structured)
             valid = not llm.get('execution_error') and not (llm.get('llm') and not llm['llm']['valid'])
             for key in pending:
                 later = llm['predicates'][key]
-                supported = valid and later['value'] not in ('UNKNOWN', 'UNCERTAIN', 'NOT_SUPPORTED') and any(e.get('valid') for e in later.get('evidence', []))
+                supported = valid and later['value'] not in ('UNKNOWN', 'UNCERTAIN', 'NOT_SUPPORTED') and (any(e.get('valid') for e in later.get('evidence', [])) or valid_negative_basis(text,later))
                 merged, c, t = reconcile(current[key], later, key, right_accepted=supported)
                 current[key] = merged; conflicts.extend(c); trace.append({'stage': 'LLM', **t, 'supported': supported})
             conflicts.extend(llm['reconciliation']['conflicts'])
@@ -249,10 +309,10 @@ class ReleaseModel:
                        conflict=bool(conflicts)) for k, p in current.items()}
         decision_trust = decision_confidence(decision['classification'], confidence)
         unresolved = [k for k, p in current.items() if p['value'] in ('UNKNOWN', 'UNCERTAIN') or
-                      (p.get('source') != 'PROWIDE' and not any(e.get('valid') for e in p.get('evidence', [])))]
+                      (p.get('source') != 'PROWIDE' and not any(e.get('valid') for e in p.get('evidence', [])) and not valid_negative_basis(text,p))]
         return {'architecture': self.spec.mode, 'release_id': self.root.name, 'release_identity': self.manifest['identity'],
                 'checkpoint_manifest_sha256': digest(self.manifest['models']), 'input_hash': hashlib.sha256(text.encode()).hexdigest(),
-                'parser': parser, 'input_type': parser['input_type'] if parser else 'UNSTRUCTURED_NOTICE',
+                'parser': parser, 'input_type': effective_input_type,
                 'structured_facts': structured, 'predicates': preds, 'laya': laya, 'llm_stage': llm,
                 'llm': llm.get('llm') if llm else None, 'gear1_gates': gates,
                 'escalation': {'escalated': bool(llm), 'requested_predicates': pending,

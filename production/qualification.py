@@ -85,11 +85,13 @@ def assess(text, result, meta, calibrator, identity, threshold):
         out[key] = {'value': pred['value'], 'confidence': probability,
                     'kind': 'CALIBRATED_IN_DECLARED_POPULATION' if probability is not None else 'HEURISTIC / NOT YET CALIBRATED',
                     'band': f['heuristic_band'], 'evidence': pred.get('evidence', []), 'explanation': f['confidence_explanation']}
+        out[key]['negative_basis']=pred.get('negative_basis') if f['features']['complete_source_negative'] else None
         # For operational processing, all requested fields matter, even when a
         # final-status rule could short circuit a restriction.
         if probability is None or probability < threshold: reasons.append(key + ':LOW_OR_UNSUPPORTED_TRUST')
         if f['force_review']: reasons.append(key + ':UNRESOLVED_OR_OOD')
-        if not any(e.get('valid') for e in pred.get('evidence', [])): reasons.append(key + ':EVIDENCE_UNAVAILABLE')
+        if not any(e.get('valid') for e in pred.get('evidence', [])) and not f['features']['complete_source_negative']:
+            reasons.append(key + ':EVIDENCE_UNAVAILABLE')
     final_feature = decision_feature(text, result, meta)
     final = confidence.predict(calibrator, 'final_decision', final_feature, identity=identity, population=meta['population']) if scope_ok else None
     if final is None or final < threshold: reasons.append('FINAL_DECISION_TRUST_NOT_ESTABLISHED')
@@ -241,6 +243,8 @@ def evaluate(ident, check=None):
             pred['truth'] = {k: truth[k] for k in PREDICATES}
             pred['exact_correct'] = (all(pred['prediction'][k] == truth[k] for k in PREDICATES) and pred['final'] == target.get('expected_final_status') and pred['deadline'] == target.get('expected_deadline_status'))
     if set(cal['label_origins']) != {'EXPERT_REVIEWED'}: eligibility.append('EXPERT_CALIBRATION_REQUIRED')
+    if cal.get('support_policy', confidence.SupportPolicy().model_dump()) != confidence.SupportPolicy().model_dump():
+        eligibility.append('NON_STANDARD_CALIBRATION_SUPPORT_POLICY')
     metrics = statistics(rows, plan['policy'])
     reasons = sorted(set(metrics['reasons'] + eligibility))
     receipt = {'id': ident, 'plan_sha256': sha(r / 'plan.json'), 'predictions_sha256': sha(r / 'blind' / 'predictions.jsonl'),

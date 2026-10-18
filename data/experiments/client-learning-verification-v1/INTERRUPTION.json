@@ -1,0 +1,6 @@
+{
+  "status": "PAUSED_BY_USER",
+  "timestamp": "2026-10-18T14:13:55.393435+00:00",
+  "reason": "Dependent watcher stopped before qualification worker, preventing model tests from starting on interruption.",
+  "model_checks_started": false
+}

@@ -106,6 +106,8 @@ def execute(root):
         check = preflight(plan['bundle'], spec)
         if not check['ready']:
             raise ValueError('; '.join(check['reasons']))
+        if check.get('parent_checkpoint_identity') != plan['preflight'].get('parent_checkpoint_identity'):
+            raise ValueError('Frozen parent identity changed after preparation')
         lease.parent.mkdir(parents=True, exist_ok=True)
         try:
             with lease.open('x') as f:

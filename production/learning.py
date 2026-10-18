@@ -57,9 +57,11 @@ def run(root):
         try:
             if sha(bundle/'manifest.json') != plan['bundle_sha256'] or sha(dataset/'manifest.json') != plan['dataset_sha256'] or releases.source_files()!=plan['source_hashes']:
                 raise ValueError('Campaign data/source changed')
-            trained={}
+            trained={};seed_stages={}
             for stage in spec.stages:
                 check()
+                if stage.reuse_seed:
+                    seed_stages[stage.name]=stage.reuse_seed;continue
                 if stage.reuse_job: trained[stage.name]=stage.reuse_job; continue
                 ident=str(uuid.uuid4()); job=jobs.member('jobs',ident); jobs.prepare(bundle,stage.training,job)
                 note_job(job)
@@ -86,7 +88,10 @@ def run(root):
             for candidate in spec.candidates:
                 check(); ident=root.name+'-'+candidate.name; release=jobs.member('releases',ident)
                 releases.prepare({'mode':candidate.mode,'laya_job':trained.get(candidate.laya_stage),
-                                  'llm_job':trained.get(candidate.llm_stage),'policy':candidate.policy},release)
+                                  'llm_job':trained.get(candidate.llm_stage),'policy':candidate.policy,
+                                  'laya_seed':seed_stages.get(candidate.laya_stage),'llm_seed':seed_stages.get(candidate.llm_stage),
+                                  'laya_inference':candidate.laya_inference,'laya_calibrator_id':candidate.laya_calibrator_id,
+                                  'laya_operating_point_id':candidate.laya_operating_point_id},release)
                 out=root/('validation-'+candidate.name)
                 with model_resource('customer-validation'):
                     manifest,inputs,predictions=predict(dataset,'VALIDATION',release,out,spec.reference,check)
@@ -101,7 +106,7 @@ def run(root):
                 return {(f['id'],f['field']) for f in report['metrics']['failures'] if f['field'] in ('votability','share_blocking','poa_required','registration_required') and f['expected'] in ('YES','VOTABLE')}
             eligible=[k for k,v in reports.items() if not critical_errors(v)-critical_errors(reports[baseline])]
             winner=max(eligible,key=lambda k:(reports[k]['metrics']['correct_assertions'],-reports[k]['metrics']['median_latency_ms']))
-            report={'stage_jobs':trained,'candidates':candidates,'validation':reports,'selected':winner,
+            report={'stage_jobs':trained,'stage_seeds':seed_stages,'candidates':candidates,'validation':reports,'selected':winner,
                     'selected_release':candidates[winner],'calibration_or_test_answers_opened':False,
                     'scope':'DEVELOPMENT_ONLY_NOT_CUSTOMER_QUALIFICATION','automation_enabled':False}
             write(root/'result.json',report);jobs.events(root,{'state':'COMPLETED','result_sha256':sha(root/'result.json')})

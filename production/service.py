@@ -179,7 +179,7 @@ def freeze(ident, event_ids, actor):
     return manifest
 
 
-def calibrate(ident, *, dataset_id, release_id, population, reference, actor, check=None):
+def calibrate(ident, *, dataset_id, release_id, population, reference, actor, check=None, stage='FINAL'):
     from production import confidence
     from production.qualification import decision_feature
     from training.framework.event_data import load_inputs, load_answers
@@ -188,14 +188,27 @@ def calibrate(ident, *, dataset_id, release_id, population, reference, actor, ch
     manifest, inputs = load_inputs(dataset, 'CALIBRATION')
     if not inputs: raise ValueError('Calibration inputs required')
     release = jobs.member('releases', release_id); m, _ = releases.verify_seal(release)
+    if stage not in ('FINAL','LAYA'):raise ValueError('Unknown calibration stage')
+    if stage=='LAYA' and m['spec']['mode']!='LAYA_ONLY':raise ValueError('Specialist routing calibration requires a LAYA_ONLY release')
+    from production.cascade_policy import stage_identity
+    identity=stage_identity(m) if stage=='LAYA' else m['identity']
+    partition='LAYA_STAGE' if stage=='LAYA' else 'CASCADE_FINAL' if m['spec'].get('laya_calibrator_id') else None
+    if partition=='CASCADE_FINAL':
+        prior=confidence.load(jobs.member('customer-calibrators',m['spec']['laya_calibrator_id']).with_suffix('.json'),stage_identity(m))
+        if (prior.get('context') or {}).get('dataset_sha256')!=sha(dataset/'manifest.json'):
+            raise ValueError('Cascade stage/final calibration requires disjoint partitions of the same frozen cohort')
     work = jobs.member('customer-calibration-runs', ident)
     from production.qualification import independent_groups
     groups = independent_groups(inputs)
     from production.evaluation import predict
     # Input-only loader; no live event/review capability is used here.
-    manifest, inputs, predictions = predict(dataset, 'CALIBRATION', release, work, reference, check)
+    manifest, inputs, predictions = predict(dataset, 'CALIBRATION', release, work, reference, check, calibration_partition=partition)
     if any(r['meta']['population'] != population for r in predictions): raise ValueError('Calibration population mismatch')
-    truth = load_answers(dataset, manifest, 'CALIBRATION', inputs)
+    if partition:
+        from training.framework.event_data import load_calibration_answers
+        truth=load_calibration_answers(dataset,manifest,partition,inputs)
+    else:truth = load_answers(dataset, manifest, 'CALIBRATION', inputs)
+    groups=independent_groups(inputs)
     records = []
     for row in predictions:
         key = truth[row['id']]; result = row['result']; meta = row['meta']
@@ -219,9 +232,11 @@ def calibrate(ident, *, dataset_id, release_id, population, reference, actor, ch
                             'features': f['features'], 'correct': correct, 'origin': origin})
     out = jobs.WORKSPACE / 'customer-calibrators'; out.mkdir(parents=True, exist_ok=True)
     jobs.member('customer-calibrators', ident)
-    payload = confidence.fit(records, identity=m['identity'], population=population, output=out / (ident + '.json'))
+    payload = confidence.fit(records, identity=identity, population=population, output=out / (ident + '.json'),
+                             context={'dataset_sha256':sha(dataset/'manifest.json'),'calibration_partition':partition or 'STANDALONE_FINAL'})
     write(work / 'features.json', records)
-    audit(actor, 'CALIBRATOR_FITTED', {'id': ident, 'identity': m['identity'], 'sha256': payload['sha256']})
+    audit(actor, 'CALIBRATOR_FITTED', {'id': ident, 'identity': identity, 'sha256': payload['sha256'],
+                                    'stage':stage,'calibration_partition':partition or 'STANDALONE_FINAL'})
     return payload
 
 
@@ -240,3 +255,51 @@ def promote(ident, actor, expected_previous_id):
                   store.dumps({'actor': actor, 'qualification_sha256': digest(receipt), 'release_identity': plan['release_identity']})))
     audit(actor, 'CUSTOMER_RELEASE_PROMOTED', {'id': ident})
     return {'qualification_id': ident, 'promoted': True, 'automation_enabled': os.environ.get('AUTOMATION_ENABLED', 'false') == 'true'}
+
+
+def select_operating_point(ident, *, campaign_id, candidate, dataset_id, calibrator_id, population, actor, stage='FINAL'):
+    """Use persisted validation predictions only; never run/select on test data."""
+    from production import confidence, operating
+    from production.cascade_policy import stage_identity
+    from training.framework.event_data import load_inputs, load_answers
+    campaign=jobs.member('campaigns',campaign_id)
+    state=json.loads((campaign/'result.json').read_text())
+    if candidate not in state['candidates']:raise ValueError('Unknown validated candidate')
+    release_id=state['candidates'][candidate]
+    release=jobs.member('releases',release_id);m,_=releases.verify_seal(release)
+    if stage not in ('FINAL','LAYA') or stage=='LAYA' and m['spec']['mode']!='LAYA_ONLY':
+        raise ValueError('Invalid operating point stage')
+    identity=stage_identity(m) if stage=='LAYA' else m['identity']
+    cal=confidence.load(jobs.member('customer-calibrators',calibrator_id).with_suffix('.json'),identity)
+    if cal['population']!=population:raise ValueError('Calibration population mismatch')
+    out=campaign/('validation-'+candidate)
+    report=json.loads((out/'evaluation.json').read_text());receipt=json.loads((out/'PREDICTIONS_SAVED.json').read_text())
+    if report['role']!='VALIDATION' or report['release_identity']!=m['identity'] or sha(out/'predictions.jsonl')!=receipt['sha256']:
+        raise ValueError('Validation prediction identity/integrity mismatch')
+    dataset=jobs.member('event-datasets',dataset_id);manifest,inputs=load_inputs(dataset,'VALIDATION')
+    if sha(dataset/'manifest.json')!=receipt['dataset_sha256']:raise ValueError('Validation dataset mismatch')
+    truth=load_answers(dataset,manifest,'VALIDATION',inputs);members={r['id']:r for r in inputs}
+    from production.qualification import assess, independent_groups
+    groups=independent_groups(inputs);rows=[]
+    predictions=[json.loads(line) for line in (out/'predictions.jsonl').read_text().splitlines()]
+    if {r['id'] for r in predictions}!=set(members) or len(predictions)!=len(members):raise ValueError('Validation membership mismatch')
+    for row in predictions:
+        if row['snapshot_hash']!=members[row['id']]['snapshot_hash'] or row['text']!=members[row['id']]['text']:
+            raise ValueError('Validation source mismatch')
+        answer=truth[row['id']]
+        if answer.get('expected_final_status') is None or answer.get('expected_deadline_status') is None:
+            raise ValueError('Complete final/deadline truth needed for operating point selection')
+        result=row['result'];a=assess(row['text'],result,row['meta'],cal,identity,.5)
+        probs=[p['confidence'] for p in a['predicates'].values()]+[a['final_decision_confidence']]
+        p=min(probs) if all(v is not None for v in probs) else None
+        reasons=[r for r in a['review_reasons'] if not r.endswith(':LOW_OR_UNSUPPORTED_TRUST') and r!='FINAL_DECISION_TRUST_NOT_ESTABLISHED']
+        pred={k:result['predicates'][k]['value'] for k in __import__('semantic_pipeline.schema',fromlist=['PREDICATES']).PREDICATES}
+        target={k:answer['target'][k] for k in pred}
+        exact=pred==target and result['decision']['classification']==answer['expected_final_status'] and result['deadline']['status']==answer['expected_deadline_status']
+        rows.append({'id':row['id'],'role':'VALIDATION','group':groups[row['id']],'confidence':p,'force_review':bool(reasons),
+                     'exact_correct':exact,'truth':target,'prediction':pred})
+    folder=jobs.WORKSPACE/'customer-operating-points';folder.mkdir(parents=True,exist_ok=True)
+    path=jobs.member('customer-operating-points',ident).with_suffix('.json')
+    point=operating.select(rows,identity=identity,calibrator_hash=cal['sha256'],output=path)
+    audit(actor,'OPERATING_POINT_SELECTED',{'id':ident,'sha256':point['sha256'],'status':point['status']})
+    return point

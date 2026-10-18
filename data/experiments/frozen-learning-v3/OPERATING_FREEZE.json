@@ -1,0 +1,23 @@
+{
+  "selection_sha256": "853f8fd03345492e9ec18af658b0909395eef46dbb086c3f76b7bed3d30a1d4b",
+  "calibrator_sha256": "f0404c2b0f5e052171e13761a0574fbe05a7aaa33ea2d7481fd8dca154cde9fd",
+  "operating_point_sha256": "1504aaaa70ada60aee689db29f05a32be29c9ba2c75b02a0559dfed9236a9659",
+  "source_corpus_sha256": "da1e7faadc1286b67a421fbbb64605a9657f4364c89d838b629e71b935498e23",
+  "source_hashes": {
+    "production/worker.py": "150d0f2f6d3edbed65e39c471d19daf70a62f32eea320aa79ddb7ca1ef546a24",
+    "production/service.py": "201e23e468462bf698fbec7a1895a7bb56b70106020c3135208a4d67811f77ec",
+    "production/evidence_basis.py": "937ac9596ef9117f2f5b00836bd902cc7ce4af07ba50bc8f40412d483420167d",
+    "production/cascade_policy.py": "19c31db2b61e0eea9de55e0191790314212c7a8a2ea2772f5018500d6c72bd39",
+    "production/confidence.py": "27eb96f254c1874c7cba4209e099477be914fc525c4ff1ea207a6286b699533d",
+    "production/installation.py": "4489bc7b44426b5c09055c9dd8cff01bf0ad3a45564082205e40d8e9adc7babb",
+    "production/evaluation.py": "984ce54389954f1037d9c8cb5418aa408dea9bf3a062ba73e0a4c4ce10853b68",
+    "production/security.py": "baad5d7ccd761dd60b8fda561fa7f7df18b5f6dcabf0710a5b99615a439eaeb0",
+    "production/__init__.py": "ca184e30743620c454c819a450d3ee18da2eebff064d3d0c49a67b14ffeaebb0",
+    "production/qualification.py": "b7399fcfb38e415d96476f376dc3f0e9d358be594578cb403389f7c5f9124f08",
+    "production/storage.py": "27cfa221f7a4d12e2d05d52acb0df72fab45275d90d24d5b6904269a5b90c2dc",
+    "production/resources.py": "2f602e6a0dce849f74266a8fcec3f742c869068f850079f45bd6706c8d24d1a9",
+    "production/learning.py": "919de9fc4e7e80d415b9ffac22ba93e46cd6c082b4135ae1c75917438af7adc6",
+    "production/operating.py": "65e888485d03c955f58c9b6a9d059592b1d2a0f7442489cf3e376c0797d010dd"
+  },
+  "automation_enabled": false
+}

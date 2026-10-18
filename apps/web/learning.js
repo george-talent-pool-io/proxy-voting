@@ -1,4 +1,4 @@
-export function installEventLearning({api,panel,esc,$,toast,frameworkExecutionTrace}){
+export function installEventLearning({api,panel,esc,$,toast,frameworkExecutionTrace,invalidatePendingRender=()=>{}}){
 const domainPredicates=["votability","share_blocking","poa_required","registration_required","beneficial_owner_disclosure_required","holding_confirmation_required","split_voting_restricted","securities_lending_recall_required","other_voting_restriction","deadline_status"];
 /* Event lifecycle controls use saved backend state; no reconstructed model trace. */
 let learningState=null,learningEvent=null;
@@ -20,7 +20,7 @@ async function eventLearningPanel(){
  <details><summary>Experimental model selection</summary><form id="learning-selection-form"><label>Checkpoint<select name="job_id">${options}</select></label><label>Actor<input name="actor" required></label><label>Reason<input name="reason" required></label><button>Select experimental checkpoint</button></form><p>Selection affects the opt-in event workspace only. Default customer architecture and automation do not change.</p><div id="learning-selections">${d.selections.map(v=>`<p>Selection ${v.id}: ${esc(v.job_id)} · ${esc(v.action)}${v.id!==d.selections.at(-1)?.id?` <button data-learning-rollback="${v.id}">Roll back to selection ${v.id}</button>`:''}</p>`).join('')||'No experimental selection.'}</div></details><div id="learning-feedback" role="status"></div></div>`);
 }
 async function openLearningEvent(id){
- const v=await api('learning/events/'+encodeURIComponent(id));learningEvent=v;
+ const v=await api('learning/events/'+encodeURIComponent(id));invalidatePendingRender();learningEvent=v;
  const r=v.reviews.at(-1),target=r?.payload.target||{votability:'UNCERTAIN',...Object.fromEntries(domainPredicates.filter(k=>k!=='votability'&&k!=='deadline_status').map(k=>[k,'UNKNOWN'])),deadline_information:{deadline_mentioned:false,deadline_text:null},evidence:Object.fromEntries(domainPredicates.filter(k=>k!=='deadline_status').map(k=>[k,[]])),ambiguities:[]};
  $('#learning-event-detail').innerHTML=`<h4>${esc(v.corp)} · current event state</h4><p>Policy ${esc(v.policy)} · Snapshot ${esc(v.snapshot_hash)}<br>${v.cancelled?'Cancelled':v.context_kind==='RECOVERED_REVIEW_CONTEXT'?'Recovered context · review required':'Active'} · ${v.messages.length} preserved messages</p><div class="source-text">${esc(v.current_text)}</div>
  <details><summary>Raw messages and provenance</summary>${v.messages.map(m=>`<details id="learning-message-${m.id}"><summary>${esc(m.seme)} · ${esc(m.payload.message_type)} · ${esc(m.state)} · ${v.operative_message_ids.includes(m.id)?'current':v.context_kind==='RECOVERED_REVIEW_CONTEXT'?'recovered context':'historical'}</summary><p>Parser: ${esc(m.payload.parser)} · Source: ${esc(m.payload.source_type)}<br>SHA-256: ${esc(m.source_hash)}</p><pre>${esc(m.raw_source)}</pre></details>`).join('')}</details>
@@ -34,7 +34,7 @@ function learningFeedback(value){const el=$('#learning-feedback');if(el)el.textC
 document.addEventListener('submit',async e=>{
  const formId=e.target.getAttribute('id')||'';
  if(!formId.startsWith('learning-'))return;
- e.preventDefault();const v=Object.fromEntries(new FormData(e.target));const button=e.submitter;if(button)button.disabled=true;
+ e.preventDefault();invalidatePendingRender();const v=Object.fromEntries(new FormData(e.target));const button=e.submitter;if(button)button.disabled=true;
  try{
   let result;
   if(formId==='learning-import-form'){result=await api('learning/messages',{method:'POST',body:JSON.stringify(JSON.parse(v.payload))});await openLearningEvent(result.event_id);}

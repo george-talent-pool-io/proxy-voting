@@ -1,0 +1,6 @@
+{
+  "reason": "Engineering latency finding: avoid unconditional repeated sentence inference in whole-notice mode; preserve native passage aggregation as benchmark. Tighten missing-positive-evidence review before selecting confidence operating points.",
+  "protected_test_answers_opened": false,
+  "resume": false,
+  "next_condition": "frozen-learning-v3"
+}

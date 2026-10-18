@@ -19,12 +19,25 @@ def main():
     c = sub.add_parser('evaluate-validation')
     c.add_argument('job'); c.add_argument('output')
     sub.add_parser('capabilities')
+    c = sub.add_parser('freeze-starting-checkpoint'); c.add_argument('spec'); c.add_argument('output')
+    c = sub.add_parser('verify-starting-checkpoint'); c.add_argument('checkpoint')
+    c = sub.add_parser('prepare-from-checkpoint'); c.add_argument('checkpoint'); c.add_argument('bundle'); c.add_argument('overrides'); c.add_argument('output')
     c = sub.add_parser('prepare-campaign'); c.add_argument('spec'); c.add_argument('id')
     c = sub.add_parser('run-campaign'); c.add_argument('id')
     c = sub.add_parser('campaign-status'); c.add_argument('id')
     c = sub.add_parser('separate-answers'); c.add_argument('source_id'); c.add_argument('new_id')
     args = p.parse_args()
-    if args.command == 'export-corpus':
+    if args.command == 'freeze-starting-checkpoint':
+        from training.framework.seeds import freeze
+        result = freeze(json.loads(Path(args.spec).read_text()), args.output)
+    elif args.command == 'verify-starting-checkpoint':
+        from training.framework.seeds import verify
+        result = verify(args.checkpoint)
+    elif args.command == 'prepare-from-checkpoint':
+        from training.framework.seeds import training_spec
+        from training.framework.jobs import prepare
+        result = prepare(args.bundle, training_spec(args.checkpoint, json.loads(Path(args.overrides).read_text())), args.output)
+    elif args.command == 'export-corpus':
         from training.framework.bundle import from_domain_corpus
         result = from_domain_corpus(args.manifest, args.output, language=args.language,
                                     limit_per_split=args.limit_per_split)

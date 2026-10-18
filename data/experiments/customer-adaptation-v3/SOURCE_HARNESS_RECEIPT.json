@@ -1,0 +1,8 @@
+{
+  "script": "scripts/qualify_customer_adaptation.py",
+  "sha256": "d9fd240db622b1ad391dcc51975649aaa78d2cdfedcb51736e99a53c2aedc7f0",
+  "recorded_during": "VALIDATION_PREDICTIONS_ONLY",
+  "frozen_answers_inspected": false,
+  "model_training_already_complete": true,
+  "purpose": "Pin unchanged running driver; reporting-only diagnostics are a separate hash-pinned analysis"
+}

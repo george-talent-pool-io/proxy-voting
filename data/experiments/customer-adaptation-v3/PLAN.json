@@ -1,0 +1,336 @@
+{
+  "protocol_sha256": "8484a524234b371e3a8fc85504f067bfd58d0b6ed4a30b425450ecd00f60de82",
+  "corpus_sha256": "da1e7faadc1286b67a421fbbb64605a9657f4364c89d838b629e71b935498e23",
+  "source_hashes": {
+    "training/framework/queue.py": "78c581bf4c2027681579e44159dc52852624aaeb0f5b6561fad95958a7876642",
+    "training/framework/bundle.py": "9e88f0759b408169a5f08aa244e1eb7ad16f764ed88c3f546ae533667b6bfc15",
+    "training/framework/reviews.py": "3641f865a1d7346e45b95d805b789b100894d05749e30df0aee79e3af9509660",
+    "training/framework/events.py": "7ede74a2abf7f075ebae4da54f62e755870c3da4c56788195cd031d15eb0a328",
+    "training/framework/mlx_worker.py": "f35daf11cc72b93e49a3d9280a4d1bcc5ddd1460764487c2df3dee8371880d19",
+    "training/framework/passage_runtime.py": "03cbe3ab498a7dda1a3b80f124aac8d361137004f413772700ab1c26f33bbf84",
+    "training/framework/__init__.py": "84a950a8e035d2264f12fba4b85b4ab1cf543f0541c822a59814962379325cf2",
+    "training/framework/release_evaluation.py": "1503e10ab6e86d56fb6fade3b52440ef59855a0d164553645ce7bcce9e82d17c",
+    "training/framework/campaigns.py": "746d4bff2eca1b1791981e659606266ba74bd583845d90e4e37ae8df9051f466",
+    "training/framework/runtime.py": "a958a5eb86ff680171048509b9d13fc588b89e807222f104d1f6a086461178a8",
+    "training/framework/comparison.py": "25a5baa57c5f0d8c599adb0c6d382d932c8a9baf1e7e67f49d6208d51647f0cc",
+    "training/framework/jobs.py": "36f1bc49ea0e7f43073b9188a458a88b5d841fbf78efa61d987ffb1ccb95c9b4",
+    "training/framework/operations.py": "0569d25b39fa07b8b6c2eaef15fcd4b8f546dd28759286552486165b804675e3",
+    "training/framework/releases.py": "16baa27fda687347b3e4e7cb33ad87819c64d42eb32968a9272064376611d27e",
+    "training/framework/trainers.py": "8ce7db52f75c9ba8b45afd6e7728566c42c5e884d3632b7ca0b69c6c6f2cbd06",
+    "training/framework/resources.py": "4187eea24f53581e5174bee747214d2ff63a20b2f2e9e5f58ac2b64e4c39791a",
+    "training/framework/evaluate.py": "5122d05b8fe27a9172be26e07f7b39139c29e17035b2f376f7437a239617ed62",
+    "training/framework/seeds.py": "75193dd10337742de9cca9c25ccf8a51b1e1fc04ee8922c86ea2a9a961ffa392",
+    "training/framework/mlx_process.py": "351b74b58307ec41f9d8b359a59c70c8f27263e07d6f37a3642fec2c5ca0d2b8",
+    "training/framework/selection.py": "90bdde0cd4020dabd2022100fd06c9df62703b36161adf4f82039d36cafdef22",
+    "training/framework/event_data.py": "69498d98ece8a364be1d13b29af0827fec7b979fd62d84decceb4d4218d7571e",
+    "training/framework/whole_runtime.py": "3c4b4e4efd22ee106a4962fb4e0f07abe3b387fbc1e4781a296615981904be1d",
+    "training/framework/__main__.py": "c157bc9df7f5f9b1cf486c9b0080824c6530e90221056a5778fff5cfeca6aa29",
+    "training/framework/calibration.py": "da1931305d3b4b008b6f9da1bfb1c8a2510470328d031d6f791b1f77867056d1",
+    "training/framework/schema.py": "d659eec46595c2ab62212b3695a0b5585691275f4db4619f2a4d052730e04b1d",
+    "production/worker.py": "791c8078da9480e9b68b06c31f9ad22f006fcb82d705d0aa19ff5a8d79ffab64",
+    "production/service.py": "f14e303dff8e6ed762b2302e592e4ce6095074357b45caf154e83f4ccc80a476",
+    "production/evidence_basis.py": "937ac9596ef9117f2f5b00836bd902cc7ce4af07ba50bc8f40412d483420167d",
+    "production/cascade_policy.py": "32969513d55fba75bdd76538b2c05ab5dfde35ce2fa17fc0c4ad7c08133c2607",
+    "production/confidence.py": "4f0b86a712a5a6995fea627590d54c26749b1e6e057c682e9fbca3760ada66f4",
+    "production/installation.py": "4489bc7b44426b5c09055c9dd8cff01bf0ad3a45564082205e40d8e9adc7babb",
+    "production/evaluation.py": "f16b4f0d60ba219e06e1ce2da61fd4a1afe4888cf352438cb0f5b6a5d103dbc7",
+    "production/security.py": "baad5d7ccd761dd60b8fda561fa7f7df18b5f6dcabf0710a5b99615a439eaeb0",
+    "production/__init__.py": "ca184e30743620c454c819a450d3ee18da2eebff064d3d0c49a67b14ffeaebb0",
+    "production/qualification.py": "b7399fcfb38e415d96476f376dc3f0e9d358be594578cb403389f7c5f9124f08",
+    "production/storage.py": "27cfa221f7a4d12e2d05d52acb0df72fab45275d90d24d5b6904269a5b90c2dc",
+    "production/resources.py": "2f602e6a0dce849f74266a8fcec3f742c869068f850079f45bd6706c8d24d1a9",
+    "production/learning.py": "4ebebd99a6f85b5f25fd834f5a567fe3ad505bcc68c3a741d07b03fc50dc7ed5",
+    "production/operating.py": "761c5ecfa494bd821203317f76179a8a0497379ea83953d600eb56f8904e7b57"
+  },
+  "scope": "AI_CONTROLLED_COMPOSITION_ONLY",
+  "test_comparison": [
+    "FROZEN_FOUNDATION",
+    "VALIDATION_SELECTED"
+  ],
+  "training_label_support": {
+    "per_predicate": {
+      "votability": {
+        "TRAIN": {
+          "VOTABLE": {
+            "examples": 222,
+            "groups": 109
+          },
+          "NOT_VOTABLE": {
+            "examples": 7,
+            "groups": 6
+          },
+          "UNCERTAIN": {
+            "examples": 3,
+            "groups": 3
+          }
+        },
+        "VALIDATION": {
+          "VOTABLE": {
+            "examples": 600,
+            "groups": 300
+          },
+          "NOT_VOTABLE": {
+            "examples": 0,
+            "groups": 0
+          },
+          "UNCERTAIN": {
+            "examples": 0,
+            "groups": 0
+          }
+        }
+      },
+      "share_blocking": {
+        "TRAIN": {
+          "YES": {
+            "examples": 87,
+            "groups": 45
+          },
+          "NO": {
+            "examples": 144,
+            "groups": 68
+          },
+          "UNKNOWN": {
+            "examples": 1,
+            "groups": 1
+          }
+        },
+        "VALIDATION": {
+          "YES": {
+            "examples": 236,
+            "groups": 118
+          },
+          "NO": {
+            "examples": 340,
+            "groups": 170
+          },
+          "UNKNOWN": {
+            "examples": 24,
+            "groups": 12
+          }
+        }
+      },
+      "poa_required": {
+        "TRAIN": {
+          "YES": {
+            "examples": 90,
+            "groups": 47
+          },
+          "NO": {
+            "examples": 136,
+            "groups": 65
+          },
+          "UNKNOWN": {
+            "examples": 6,
+            "groups": 4
+          }
+        },
+        "VALIDATION": {
+          "YES": {
+            "examples": 224,
+            "groups": 112
+          },
+          "NO": {
+            "examples": 362,
+            "groups": 181
+          },
+          "UNKNOWN": {
+            "examples": 14,
+            "groups": 7
+          }
+        }
+      },
+      "registration_required": {
+        "TRAIN": {
+          "YES": {
+            "examples": 83,
+            "groups": 43
+          },
+          "NO": {
+            "examples": 143,
+            "groups": 69
+          },
+          "UNKNOWN": {
+            "examples": 6,
+            "groups": 4
+          }
+        },
+        "VALIDATION": {
+          "YES": {
+            "examples": 256,
+            "groups": 128
+          },
+          "NO": {
+            "examples": 328,
+            "groups": 164
+          },
+          "UNKNOWN": {
+            "examples": 16,
+            "groups": 8
+          }
+        }
+      },
+      "beneficial_owner_disclosure_required": {
+        "TRAIN": {
+          "YES": {
+            "examples": 90,
+            "groups": 46
+          },
+          "NO": {
+            "examples": 140,
+            "groups": 65
+          },
+          "UNKNOWN": {
+            "examples": 2,
+            "groups": 1
+          }
+        },
+        "VALIDATION": {
+          "YES": {
+            "examples": 256,
+            "groups": 128
+          },
+          "NO": {
+            "examples": 328,
+            "groups": 164
+          },
+          "UNKNOWN": {
+            "examples": 16,
+            "groups": 8
+          }
+        }
+      },
+      "holding_confirmation_required": {
+        "TRAIN": {
+          "YES": {
+            "examples": 103,
+            "groups": 54
+          },
+          "NO": {
+            "examples": 124,
+            "groups": 58
+          },
+          "UNKNOWN": {
+            "examples": 5,
+            "groups": 3
+          }
+        },
+        "VALIDATION": {
+          "YES": {
+            "examples": 264,
+            "groups": 132
+          },
+          "NO": {
+            "examples": 326,
+            "groups": 163
+          },
+          "UNKNOWN": {
+            "examples": 10,
+            "groups": 5
+          }
+        }
+      },
+      "split_voting_restricted": {
+        "TRAIN": {
+          "YES": {
+            "examples": 69,
+            "groups": 35
+          },
+          "NO": {
+            "examples": 154,
+            "groups": 73
+          },
+          "UNKNOWN": {
+            "examples": 9,
+            "groups": 6
+          }
+        },
+        "VALIDATION": {
+          "YES": {
+            "examples": 216,
+            "groups": 108
+          },
+          "NO": {
+            "examples": 376,
+            "groups": 188
+          },
+          "UNKNOWN": {
+            "examples": 8,
+            "groups": 4
+          }
+        }
+      },
+      "securities_lending_recall_required": {
+        "TRAIN": {
+          "YES": {
+            "examples": 89,
+            "groups": 46
+          },
+          "NO": {
+            "examples": 138,
+            "groups": 66
+          },
+          "UNKNOWN": {
+            "examples": 5,
+            "groups": 3
+          }
+        },
+        "VALIDATION": {
+          "YES": {
+            "examples": 212,
+            "groups": 106
+          },
+          "NO": {
+            "examples": 374,
+            "groups": 187
+          },
+          "UNKNOWN": {
+            "examples": 14,
+            "groups": 7
+          }
+        }
+      },
+      "other_voting_restriction": {
+        "TRAIN": {
+          "YES": {
+            "examples": 103,
+            "groups": 52
+          },
+          "NO": {
+            "examples": 127,
+            "groups": 58
+          },
+          "UNKNOWN": {
+            "examples": 2,
+            "groups": 1
+          }
+        },
+        "VALIDATION": {
+          "YES": {
+            "examples": 264,
+            "groups": 132
+          },
+          "NO": {
+            "examples": 316,
+            "groups": 158
+          },
+          "UNKNOWN": {
+            "examples": 20,
+            "groups": 10
+          }
+        }
+      }
+    },
+    "warnings": [
+      "votability:UNCERTAIN:FEWER_THAN_FIVE_TRAINING_GROUPS",
+      "share_blocking:UNKNOWN:FEWER_THAN_FIVE_TRAINING_GROUPS",
+      "poa_required:UNKNOWN:FEWER_THAN_FIVE_TRAINING_GROUPS",
+      "registration_required:UNKNOWN:FEWER_THAN_FIVE_TRAINING_GROUPS",
+      "beneficial_owner_disclosure_required:UNKNOWN:FEWER_THAN_FIVE_TRAINING_GROUPS",
+      "holding_confirmation_required:UNKNOWN:FEWER_THAN_FIVE_TRAINING_GROUPS",
+      "securities_lending_recall_required:UNKNOWN:FEWER_THAN_FIVE_TRAINING_GROUPS",
+      "other_voting_restriction:UNKNOWN:FEWER_THAN_FIVE_TRAINING_GROUPS"
+    ],
+    "scope": "Training diagnostics only; five groups is a warning threshold, not a quality/automation qualification"
+  },
+  "automation_enabled": false
+}

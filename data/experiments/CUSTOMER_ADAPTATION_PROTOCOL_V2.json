@@ -1,0 +1,36 @@
+{
+  "version": "customer-adaptation-protocol-v2",
+  "decision_source": "New VALIDATION composition shift; no frozen failures inspected",
+  "corpus_manifest_sha256": "da1e7faadc1286b67a421fbbb64605a9657f4364c89d838b629e71b935498e23",
+  "training_roles": [
+    "TRAIN"
+  ],
+  "selection_roles": [
+    "VALIDATION"
+  ],
+  "calibration_roles": [
+    "CALIBRATION"
+  ],
+  "starting_checkpoint": "frozen-learning-v3-laya / official frozen foundation; no V4 adapter",
+  "replay": "32 source TRAIN examples only: retain all non-votable/uncertain vote examples, then deterministic votable fill",
+  "first_training": {
+    "epochs": 4,
+    "learning_rate": 0.0001,
+    "encoder_learning_rate": 2.5e-05,
+    "batch_size": 2,
+    "gradient_accumulation": 8,
+    "freeze_encoder": false,
+    "seed": 42,
+    "max_length": 2048,
+    "laya_gradient_checkpointing": true,
+    "laya_sdk_validation": false,
+    "mps_memory_fraction": 0.45
+  },
+  "conditional_extension": "Only if validation critical positive recall or macro F1 <0.98: four further epochs from the new frozen checkpoint, fresh optimizer; never choose using frozen results",
+  "test_status": "First baseline evaluator may score its saved frozen predictions; adaptation configuration is predeclared here before inspecting any frozen errors",
+  "automation_enabled": false,
+  "test_models_in_product": false,
+  "supersedes_sha256": "fc7b4f69a681d553fb2e67a95b3a08347550ca7ef2cd82e85cf22971d3936d0c",
+  "engineering_change": "V1 interrupted before first epoch due to 50 GB measured physical footprint; no frozen/challenge results inspected; smaller micro-batches and gradient checkpointing, fresh job from same official foundation",
+  "validation_requirement": "SDK repeated pre/post validation disabled to avoid extra memory; independent complete 600-notice framework validation required"
+}

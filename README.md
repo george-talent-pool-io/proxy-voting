@@ -1,5 +1,19 @@
 # Laya Corporate Actions Voting Lab
 
+## Frozen starting checkpoints and customer learning
+
+The deployment separates frozen foundation checkpoints from customer corpora,
+customer derivatives and correctness calibrators. See the
+[frozen-checkpoint workflow](docs/FROZEN_CHECKPOINT_LEARNING.md) and
+[installation pins](deploy/foundation-checkpoints.json). The source release and
+Docker image exclude qualification corpora and test-trained weights.
+
+Both Laya and compatible local Qwen backends support further learning from an
+immutable parent with a fresh optimizer. Separate stage and final confidence
+calibration, group-isolated evaluation and validation-selected operating points
+control review and escalation. Unqualified predictions remain in review;
+`AUTOMATION_ENABLED=false` remains the deployment default.
+
 The event-level learning milestone connects linked Prowide messages, append-only
 AI/human reviews, protected dataset versions, durable local Laya/Qwen jobs, common
 evaluation and experimental selection/rollback. See

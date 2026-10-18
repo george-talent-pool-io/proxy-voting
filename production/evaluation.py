@@ -18,9 +18,15 @@ def input_metadata(row):
     return meta
 
 
-def predict(dataset, role, release, output, reference, check=None):
+def predict(dataset, role, release, output, reference, check=None, *, calibration_partition=None):
     """Persist complete immutable prediction rows before returning to a scorer."""
     manifest, rows = load_inputs(dataset, role)
+    if calibration_partition:
+        if role!='CALIBRATION':raise ValueError('Calibration partition requires CALIBRATION role')
+        entry=manifest.get('calibration_parts',{}).get(calibration_partition)
+        if not entry:raise ValueError('Calibration partition missing; freeze a new dataset')
+        ids=set(entry['ids']);rows=[r for r in rows if r['id'] in ids]
+        if {r['id'] for r in rows}!=ids:raise ValueError('Calibration partition input mismatch')
     if not rows: raise ValueError('Empty evaluation role')
     output = Path(output); output.mkdir(parents=True, exist_ok=False)
     model = releases.ReleaseModel(release, sealed=role != 'VALIDATION'); predictions = []
@@ -31,9 +37,12 @@ def predict(dataset, role, release, output, reference, check=None):
                 from iso_adapter.facts import semantic_facts, deadline
                 structure = row.get('active_structure')
                 d = deadline(structure, reference) if structure else None
+                meta=input_metadata(row)
+                routing_context={k:meta[k] for k in ('language','population')} if getattr(getattr(model,'spec',None),'laya_calibrator_id',None) else {}
+                if routing_context:routing_context['input_type_context']=meta['input_type']
                 result = model.analyse(row['text'], use_iso=False, reference=reference,
                             structured_context=semantic_facts(structure) if structure else {},
-                            deadline_override=d if d and d['comparisons'] else None)
+                            deadline_override=d if d and d['comparisons'] else None, **routing_context)
                 conflicts = result['reconciliation']['conflicts']
                 for key in PREDICATES:
                     pred = result['predicates'][key]
@@ -58,5 +67,6 @@ def predict(dataset, role, release, output, reference, check=None):
                 f.write(store.dumps(value) + '\n'); f.flush(); os.fsync(f.fileno()); predictions.append(value)
     finally: model.close()
     write(output / 'PREDICTIONS_SAVED.json', {'sha256': sha(output / 'predictions.jsonl'), 'count': len(predictions),
-          'created_at': store.now(), 'dataset_sha256': sha(Path(dataset) / 'manifest.json'), 'reference': reference, 'answer_keys_opened': False})
+          'created_at': store.now(), 'dataset_sha256': sha(Path(dataset) / 'manifest.json'), 'reference': reference,
+          'calibration_partition':calibration_partition, 'answer_keys_opened': False})
     return manifest, rows, predictions

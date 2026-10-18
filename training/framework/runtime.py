@@ -51,23 +51,29 @@ class RegisteredModel:
         except FileExistsError:
             if sha(archive) != RUNTIME_SHA256: raise ValueError('Archived inference runtime changed')
         self.spec = TrainSpec.model_validate(self.plan['spec'])
+        self.checkpoint_path = self.root / 'checkpoint'
+        self.checkpoint_manifest_path = self.root / 'model-manifest.json'
+        self._load_backend(adapter_path=str(self.checkpoint_path))
+
+    def _load_backend(self, *, adapter_path=None):
+        """Shared serving path for registered derivatives and dataset-free seeds."""
         offline()
         if self.spec.backend == 'LAYA_SDK':
             import laya
-            self.agent = laya.load(str(self.root / 'checkpoint'), device=self.spec.device)
+            self.agent = laya.load(str(self.checkpoint_path), device=self.spec.device)
             self.questions = json.loads((Path(self.plan['bundle']) / 'laya-questions.json').read_text())
         elif self.spec.backend == 'MLX_QLORA':
             from training.framework.mlx_process import MlxProcess
-            self.worker = MlxProcess(self.root, self.spec)
+            self.worker = MlxProcess(self.root, self.spec, checkpoint=adapter_path)
         else:
             import torch
             from transformers import AutoTokenizer, AutoModelForCausalLM
             from peft import PeftModel
-            self.tokenizer = AutoTokenizer.from_pretrained(self.root / 'checkpoint', local_files_only=True,
+            self.tokenizer = AutoTokenizer.from_pretrained(self.checkpoint_path, local_files_only=True,
                                                           trust_remote_code=False)
             base = AutoModelForCausalLM.from_pretrained(self.spec.model_path, local_files_only=True,
                                                        trust_remote_code=False, dtype=getattr(torch, self.spec.dtype))
-            self.model = PeftModel.from_pretrained(base, self.root / 'checkpoint', local_files_only=True)
+            self.model = PeftModel.from_pretrained(base, adapter_path, local_files_only=True) if adapter_path else base
             self.model.to(self.spec.device).eval()
 
     def analyse(self, text, *, reference='2026-10-17T12:00:00+00:00', use_iso=True,
@@ -97,6 +103,10 @@ class RegisteredModel:
                               'source': 'REGISTERED_LAYA_WHOLE_NOTICE', 'evidence': [],
                               'evidence_status': 'UNAVAILABLE: this decision head does not extract quotations'}
             llm = None; conflicts = ['LAYA_CONTEXT_TRUNCATED'] if truncated else []
+            if raw.get('usage',{}).get('truncated') is False:
+                from production.evidence_basis import negative_basis
+                for p in factors.values():
+                    if p['value']=='NO':p['negative_basis']=negative_basis(text,sha(getattr(self,'checkpoint_manifest_path',self.root/'model-manifest.json')))
             deadline = extract_deadline(text, reference)
         else:
             prompt = (Path(self.plan['bundle']) / 'semantic-prompt.txt').read_text()
@@ -155,6 +165,11 @@ class RegisteredModel:
             ev = validate_all(text, parsed)
             factors = {k: {'value': parsed[k], 'source': 'REGISTERED_LOCAL_LLM', 'confidence': None,
                            'scores': {}, 'evidence': [q for q in ev['predicates'][k] if q['valid']]} for k in PREDICATES}
+            if schema_valid:
+                from production.evidence_basis import negative_basis
+                for p in factors.values():
+                    if p['value']=='NO' and not p['evidence']:
+                        p['negative_basis']=negative_basis(text,sha(getattr(self,'checkpoint_manifest_path',self.root/'model-manifest.json')))
             conflicts = list(parsed['ambiguities'])
             if any(not q['valid'] for quotes in ev['predicates'].values() for q in quotes):
                 conflicts.append('INVALID_LLM_EVIDENCE')
@@ -191,7 +206,7 @@ class RegisteredModel:
         decision = decide(factors, deadline, conflicts)
         return {'architecture': 'REGISTERED_' + self.spec.family, 'job_id': self.plan['job_id'],
                 'runtime_version': 'registered-candidate-v5', 'runtime_source_sha256': RUNTIME_SHA256,
-                'checkpoint_manifest_sha256': sha(self.root / 'model-manifest.json'),
+                'checkpoint_manifest_sha256': sha(getattr(self, 'checkpoint_manifest_path', self.root / 'model-manifest.json')),
                 'input_hash': hashlib.sha256(text.encode()).hexdigest(), 'parser': parser,
                 'input_type': parser['input_type'] if parser else 'UNSTRUCTURED_NOTICE',
                 'structured_facts': structured,

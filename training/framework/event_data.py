@@ -105,9 +105,11 @@ def freeze_dataset(output, database=None, *, event_ids=None):
     jsonl(root / 'inputs.jsonl', public)
     private = root / 'private'; private.mkdir(mode=0o700)
     answer_files = write_role_answers(root, public, answers)
+    calibration_parts = write_calibration_parts(root, public, answers)
     manifest = {'version': 'event-dataset-v2', 'created_at': jobs.now(), 'input_file': 'inputs.jsonl',
                 'input_sha256': sha(root / 'inputs.jsonl'),
                 'answer_files': answer_files,
+                'calibration_parts': calibration_parts,
                 'roles': dict(Counter(v['split'] for v, _ in selected)),
                 'origins': dict(Counter(r['payload']['provenance']['origin'] for _, r in selected)),
                 'event_state_policy': events.VERSION, 'automation_enabled': False, 'customer_accuracy': None}
@@ -128,6 +130,40 @@ def write_role_answers(root, inputs, answers):
         jsonl(path, selected); path.chmod(0o600)
         files[role] = {'file': 'private/' + path.name, 'sha256': sha(path), 'count': len(selected)}
     return files
+
+
+def write_calibration_parts(root, inputs, answers):
+    """Curation-only, physical separation for nested cascade calibration."""
+    selected=[r for r in inputs if r['split']=='CALIBRATION']
+    if not selected:return {}
+    from production.qualification import independent_groups
+    groups=independent_groups(selected);members={}
+    for row in selected:members.setdefault(groups[row['id']],[]).append(row['id'])
+    group_key={g:source_hash(json.dumps(sorted(ids))) for g,ids in members.items()}
+    partition={r['id']:('LAYA_STAGE' if int(group_key[groups[r['id']]][:8],16)%2==0 else 'CASCADE_FINAL') for r in selected}
+    by_id={r['id']:r for r in answers};result={}
+    for part in ('LAYA_STAGE','CASCADE_FINAL'):
+        rows=[r for r in selected if partition[r['id']]==part]
+        path=Path(root)/'private'/('calibration-'+part.lower()+'-answers.jsonl')
+        jsonl(path,[by_id[r['id']] for r in rows]);path.chmod(0o600)
+        result[part]={'file':'private/'+path.name,'sha256':sha(path),'ids':[r['id'] for r in rows],
+                      'groups':len({groups[r['id']] for r in rows})}
+    return result
+
+
+def load_calibration_answers(dataset,manifest,part,inputs):
+    if part not in ('LAYA_STAGE','CASCADE_FINAL'):raise ValueError('Unknown calibration partition')
+    entry=manifest.get('calibration_parts',{}).get(part)
+    expected='private/calibration-'+part.lower()+'-answers.jsonl'
+    if not entry or entry['file']!=expected:raise ValueError('Explicit calibration partition migration required')
+    path=Path(dataset)/expected
+    if sha(path)!=entry['sha256']:raise ValueError('Calibration partition changed')
+    rows=[json.loads(line) for line in path.read_text().splitlines()];keys={r['id']:r for r in rows}
+    if len(keys)!=len(rows) or set(keys)!=set(entry['ids']) or set(keys)!={r['id'] for r in inputs}:
+        raise ValueError('Calibration partition membership mismatch')
+    if any(keys[r['id']]['snapshot_hash']!=r['snapshot_hash'] or r['split']!='CALIBRATION' for r in inputs):
+        raise ValueError('Calibration partition source mismatch')
+    return keys
 
 
 def load_answers(dataset, manifest, role, inputs):

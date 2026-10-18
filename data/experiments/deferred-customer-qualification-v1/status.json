@@ -1,0 +1,110 @@
+{
+  "status": "WAITING_FOR_OTHER_BENCHMARK",
+  "monitor_pid": 18708,
+  "automation_enabled": false,
+  "blockers": [
+    {
+      "pid": 45897,
+      "created_at": 1792333944.874752,
+      "command": [
+        "/opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+        "-u",
+        "-"
+      ],
+      "cwd": "/Users/georgebilchev/wavionex/local-llm-lab"
+    },
+    {
+      "pid": 58798,
+      "created_at": 1792330624.797524,
+      "command": [
+        "/opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+        "scripts/continue_campaign.py",
+        "--after-run",
+        "8d8e109e-4104-4d25-9ddc-f25330854962"
+      ],
+      "cwd": "/Users/georgebilchev/wavionex/local-llm-lab"
+    },
+    {
+      "pid": 62465,
+      "created_at": 1792334551.860346,
+      "command": [
+        "/opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+        "scripts/paired_ablations.py",
+        "--model",
+        "qwen38-llamacpp"
+      ],
+      "cwd": "/Users/georgebilchev/wavionex/local-llm-lab"
+    },
+    {
+      "pid": 62466,
+      "created_at": 1792334551.902095,
+      "command": [
+        "/opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+        "run_matrix.py",
+        "--model",
+        "qwen38-llamacpp",
+        "--suite",
+        "domain",
+        "--context",
+        "32768",
+        "--records",
+        "4",
+        "--domain-repetitions",
+        "5",
+        "--variants",
+        "baseline",
+        "compact",
+        "dedup",
+        "compact-dedup",
+        "compact-pointer",
+        "--timeout",
+        "600"
+      ],
+      "cwd": "/Users/georgebilchev/wavionex/local-llm-lab"
+    },
+    {
+      "pid": 62479,
+      "created_at": 1792334552.165918,
+      "command": [
+        "llama-server",
+        "-m",
+        "/Users/georgebilchev/.ollama/models/blobs/sha256-f5f1dd8920d417aac2718b0bda3403da274301efdd6760b4f0f4b864ff2ad57d",
+        "-c",
+        "32768",
+        "-np",
+        "1",
+        "-ngl",
+        "99",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "49632",
+        "--offline",
+        "--jinja",
+        "--reasoning",
+        "off",
+        "--metrics",
+        "--no-webui",
+        "-b",
+        "512",
+        "-ub",
+        "512",
+        "--load-mode",
+        "none"
+      ],
+      "cwd": "/Users/georgebilchev/wavionex/local-llm-lab"
+    },
+    {
+      "pid": 62609,
+      "created_at": 1792334557.537518,
+      "command": [
+        "/opt/homebrew/Cellar/python@3.12/3.12.12/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "/Users/georgebilchev/wavionex/local-llm-lab/lab/worker.py"
+      ],
+      "cwd": "/Users/georgebilchev/wavionex/local-llm-lab"
+    }
+  ],
+  "idle_seconds": 0,
+  "required_idle_seconds": 180,
+  "updated_at": "2026-10-18T14:46:59.939784+00:00"
+}

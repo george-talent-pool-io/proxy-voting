@@ -1,0 +1,217 @@
+{
+  "scope": "AI_AUTHORED_CONTROLLED_ONLY",
+  "corpus_sha256": "da1e7faadc1286b67a421fbbb64605a9657f4364c89d838b629e71b935498e23",
+  "trained_job": "data/training-workspace/jobs/laya-domain-full-v1",
+  "seeds": {
+    "laya": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/seeds/frozen-learning-v3-laya",
+    "qwen38-mlx": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/seeds/frozen-learning-v3-qwen38-mlx"
+  },
+  "training_updates": {
+    "backend": "LAYA_SDK",
+    "training": {
+      "train_items": 1152,
+      "calibration_items": 0,
+      "eval_items": 1152,
+      "skipped": {},
+      "epoch_loss": [
+        0.7086986925245987,
+        0.213511634754266,
+        0.06424721853944801,
+        0.02197166485454242
+      ],
+      "temperature": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "temperature_by_options": {},
+      "n_by_bucket": {},
+      "calibration": {
+        "choice": {
+          "items": 0,
+          "temperature": 1.0,
+          "issues": []
+        },
+        "score": {
+          "items": 0,
+          "temperature": 1.0,
+          "issues": []
+        },
+        "noul": {
+          "items": 0,
+          "temperature": 1.0,
+          "issues": []
+        }
+      },
+      "abstention_thresholds": {},
+      "train_report": {
+        "eval_source": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/bundles/laya-domain-controlled-v1/laya-validation.jsonl",
+        "eval_mode": "held_out",
+        "is_held_out": true,
+        "eval_items": 1152,
+        "note": "Metrics reflect independent held-out evaluation.",
+        "before": {
+          "items": 1152,
+          "loss": 1.8122,
+          "accuracy": 0.2517,
+          "mean_confidence": 0.761,
+          "ece": 0.5092,
+          "brier": 1.0611,
+          "brier_top1": 0.4797,
+          "by_type": {
+            "choice": {
+              "items": 1152,
+              "loss": 1.8122,
+              "accuracy": 0.2517,
+              "mean_confidence": 0.761,
+              "ece": 0.5092,
+              "brier": 1.0611,
+              "brier_top1": 0.4797
+            }
+          }
+        },
+        "after": {
+          "items": 1152,
+          "loss": 0.0133,
+          "accuracy": 0.9948,
+          "mean_confidence": 0.9977,
+          "ece": 0.0035,
+          "brier": 0.0075,
+          "brier_top1": 0.0035,
+          "by_type": {
+            "choice": {
+              "items": 1152,
+              "loss": 0.0133,
+              "accuracy": 0.9948,
+              "mean_confidence": 0.9977,
+              "ece": 0.0035,
+              "brier": 0.0075,
+              "brier_top1": 0.0035
+            }
+          }
+        },
+        "comparison": {
+          "delta_accuracy": 0.7431,
+          "delta_loss": -1.7989,
+          "delta_ece": -0.5057,
+          "delta_brier": -1.0536,
+          "delta_brier_top1": -0.4762,
+          "delta_mean_confidence": 0.2367
+        },
+        "calibration": {
+          "choice": {
+            "items": 0,
+            "temperature": 1.0,
+            "issues": []
+          },
+          "score": {
+            "items": 0,
+            "temperature": 1.0,
+            "issues": []
+          },
+          "noul": {
+            "items": 0,
+            "temperature": 1.0,
+            "issues": []
+          }
+        },
+        "abstention_thresholds": {},
+        "training": {
+          "epochs": 4,
+          "micro_batch": 4,
+          "grad_accum": 4,
+          "encoder_lr": 0.0001,
+          "head_lr": 0.0001,
+          "min_lr": 1e-06,
+          "weight_decay": 0.01,
+          "grad_clip": 1.0,
+          "loss": "soft-ce",
+          "rl_samples": 4,
+          "sigma_start": 0.4,
+          "sigma_end": 0.1,
+          "w_sph": 0.75,
+          "w_rps": 1.0,
+          "shuffle_options": [
+            "choice"
+          ],
+          "option_layout": null,
+          "freeze_encoder": false,
+          "calib_max": 0,
+          "calib_frac": 0,
+          "calib_seed": 20260922,
+          "seed": 42,
+          "max_len": 2048,
+          "head_max_len": 256,
+          "amp": null,
+          "gradient_checkpointing": null,
+          "log_every": 100,
+          "label_smoothing": 0.0,
+          "text_column": "text",
+          "label_column": "label",
+          "question_id": "label",
+          "instructions": null,
+          "eval_data": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/bundles/laya-domain-controlled-v1/laya-validation.jsonl",
+          "target_error": 0.1,
+          "min_abstain_n": 10
+        }
+      },
+      "output_dir": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/jobs/laya-domain-full-v1/checkpoint"
+    },
+    "validation_kind": "Official SDK validation diagnostics; separate semantic evaluation required",
+    "reload_parity": {
+      "passed": true,
+      "max_absolute_score_difference": 0.0,
+      "absolute_tolerance": 1e-05,
+      "probe": "First validation input, two fresh loads"
+    }
+  },
+  "conditions": [
+    "FROZEN_LAYA_WHOLE",
+    "TRAINED_LAYA_PASSAGES",
+    "TRAINED_LAYA_WHOLE"
+  ],
+  "whole_notice_evidence": "WHOLE_NOTICE_SCOPED_EVIDENCE; document model labels never changed by evidence locator",
+  "runtime_sources": {
+    "training/framework/queue.py": "78c581bf4c2027681579e44159dc52852624aaeb0f5b6561fad95958a7876642",
+    "training/framework/bundle.py": "9e88f0759b408169a5f08aa244e1eb7ad16f764ed88c3f546ae533667b6bfc15",
+    "training/framework/reviews.py": "3641f865a1d7346e45b95d805b789b100894d05749e30df0aee79e3af9509660",
+    "training/framework/events.py": "7ede74a2abf7f075ebae4da54f62e755870c3da4c56788195cd031d15eb0a328",
+    "training/framework/mlx_worker.py": "f35daf11cc72b93e49a3d9280a4d1bcc5ddd1460764487c2df3dee8371880d19",
+    "training/framework/passage_runtime.py": "03cbe3ab498a7dda1a3b80f124aac8d361137004f413772700ab1c26f33bbf84",
+    "training/framework/__init__.py": "84a950a8e035d2264f12fba4b85b4ab1cf543f0541c822a59814962379325cf2",
+    "training/framework/release_evaluation.py": "1503e10ab6e86d56fb6fade3b52440ef59855a0d164553645ce7bcce9e82d17c",
+    "training/framework/campaigns.py": "5ab3c628d64d7828acf418be2b24b4456633536b21e89198b12ed9f8ac769709",
+    "training/framework/runtime.py": "a958a5eb86ff680171048509b9d13fc588b89e807222f104d1f6a086461178a8",
+    "training/framework/comparison.py": "25a5baa57c5f0d8c599adb0c6d382d932c8a9baf1e7e67f49d6208d51647f0cc",
+    "training/framework/jobs.py": "36f1bc49ea0e7f43073b9188a458a88b5d841fbf78efa61d987ffb1ccb95c9b4",
+    "training/framework/operations.py": "0569d25b39fa07b8b6c2eaef15fcd4b8f546dd28759286552486165b804675e3",
+    "training/framework/releases.py": "9ec438a39e698b14ec24cea0efbca664a37be94f10476605dbe846cbffe8c5c4",
+    "training/framework/trainers.py": "c016d51713333bcf772ee25b394e8b8578ef569069f3460bbce583d6726d1a7f",
+    "training/framework/resources.py": "4187eea24f53581e5174bee747214d2ff63a20b2f2e9e5f58ac2b64e4c39791a",
+    "training/framework/evaluate.py": "5122d05b8fe27a9172be26e07f7b39139c29e17035b2f376f7437a239617ed62",
+    "training/framework/seeds.py": "217eadf2a6746f63a6b1ecc194a39e942233fd0e1ab0c4e3843479c5182d02f1",
+    "training/framework/mlx_process.py": "351b74b58307ec41f9d8b359a59c70c8f27263e07d6f37a3642fec2c5ca0d2b8",
+    "training/framework/selection.py": "90bdde0cd4020dabd2022100fd06c9df62703b36161adf4f82039d36cafdef22",
+    "training/framework/event_data.py": "521b3630c36787a88d3f0c567c2e9c4eb2997ded6907c8ce38e7c249a81cceac",
+    "training/framework/whole_runtime.py": "3236df0a2181f0d52796fa5177d309f5c33f02f2d2d833474a0665eb49a73f70",
+    "training/framework/__main__.py": "c157bc9df7f5f9b1cf486c9b0080824c6530e90221056a5778fff5cfeca6aa29",
+    "training/framework/calibration.py": "da1931305d3b4b008b6f9da1bfb1c8a2510470328d031d6f791b1f77867056d1",
+    "training/framework/schema.py": "80514697b4c0551087ea0c0ed8fa61e439cf51e6a2015a8fd550c8bb6cb8c86d",
+    "production/worker.py": "150d0f2f6d3edbed65e39c471d19daf70a62f32eea320aa79ddb7ca1ef546a24",
+    "production/service.py": "201e23e468462bf698fbec7a1895a7bb56b70106020c3135208a4d67811f77ec",
+    "production/evidence_basis.py": "937ac9596ef9117f2f5b00836bd902cc7ce4af07ba50bc8f40412d483420167d",
+    "production/cascade_policy.py": "19c31db2b61e0eea9de55e0191790314212c7a8a2ea2772f5018500d6c72bd39",
+    "production/confidence.py": "27eb96f254c1874c7cba4209e099477be914fc525c4ff1ea207a6286b699533d",
+    "production/installation.py": "4489bc7b44426b5c09055c9dd8cff01bf0ad3a45564082205e40d8e9adc7babb",
+    "production/evaluation.py": "984ce54389954f1037d9c8cb5418aa408dea9bf3a062ba73e0a4c4ce10853b68",
+    "production/security.py": "baad5d7ccd761dd60b8fda561fa7f7df18b5f6dcabf0710a5b99615a439eaeb0",
+    "production/__init__.py": "ca184e30743620c454c819a450d3ee18da2eebff064d3d0c49a67b14ffeaebb0",
+    "production/qualification.py": "b7399fcfb38e415d96476f376dc3f0e9d358be594578cb403389f7c5f9124f08",
+    "production/storage.py": "27cfa221f7a4d12e2d05d52acb0df72fab45275d90d24d5b6904269a5b90c2dc",
+    "production/resources.py": "2f602e6a0dce849f74266a8fcec3f742c869068f850079f45bd6706c8d24d1a9",
+    "production/learning.py": "919de9fc4e7e80d415b9ffac22ba93e46cd6c082b4135ae1c75917438af7adc6",
+    "production/operating.py": "65e888485d03c955f58c9b6a9d059592b1d2a0f7442489cf3e376c0797d010dd"
+  },
+  "calibration_support": "DEFAULT_100_FIT_50_EVALUATION_GROUPS",
+  "automation_enabled": false
+}

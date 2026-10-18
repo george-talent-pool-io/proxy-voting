@@ -38,7 +38,14 @@ def train(request):
     model.freeze()
     lora = {'rank': spec.lora_rank, 'scale': spec.lora_alpha / spec.lora_rank,
             'dropout': 0.0, 'keys': spec.target_modules}
-    linear_to_lora_layers(model, spec.lora_layers, lora)
+    if spec.initial_adapter_path:
+        parent = json.loads((Path(spec.initial_adapter_path) / 'adapter_config.json').read_text())
+        if parent['num_layers'] != spec.lora_layers or parent['lora_parameters'] != lora:
+            raise ValueError('Warm-start LoRA configuration must match the frozen adapter')
+        from mlx_lm.tuner.utils import load_adapters
+        model = load_adapters(model, spec.initial_adapter_path)
+    else:
+        linear_to_lora_layers(model, spec.lora_layers, lora)
     leaves = dict(tree_flatten(model.trainable_parameters()))
     if not leaves:
         raise ValueError('No MLX adapter parameters matched requested modules')

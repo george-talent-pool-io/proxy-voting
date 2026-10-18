@@ -82,8 +82,15 @@ def inference(task):
     from production.service import metadata
     from production import qualification
     payload = task['payload']; release = jobs.member('releases', payload['release_id'])
-    model = releases.ReleaseModel(release)
+    if payload.get('review_only_unsealed') and (payload.get('qualification_id') or payload.get('calibrator_id')):
+        raise ValueError('Unsealed bootstrap is review-only and cannot attach qualification/calibration')
+    model = releases.ReleaseModel(release,sealed=False) if payload.get('review_only_unsealed') else releases.ReleaseModel(release)
     qualified = None; qualification_problem = None
+    development_calibrator = None
+    if payload.get('calibrator_id'):
+        from production.confidence import load
+        path = jobs.member('customer-calibrators', payload['calibrator_id']).with_suffix('.json')
+        development_calibrator = load(path, model.manifest['identity'])
     if payload.get('qualification_id'):
         try:
             plan, certificate = qualification.verify(payload['qualification_id'])
@@ -96,11 +103,14 @@ def inference(task):
             check(task['id'])
             view = events.get(ident)
             if view['split'] in ('CALIBRATION', 'FROZEN_TEST'): raise ValueError('Protected data is evaluated only through the qualification workflow')
-            execution = events.classify(ident, release, reference=store.now(), model=model)
+            meta=metadata(view)
+            routing_context={k:meta[k] for k in ('language','population')} if getattr(getattr(model,'spec',None),'laya_calibrator_id',None) else None
+            if routing_context:routing_context['input_type_context']=meta['input_type']
+            execution = events.classify(ident, release, reference=store.now(), model=model, inference_context=routing_context)
             result = execution['payload']['result']
             decision = {'classification': result['decision']['classification'], 'confidence': None,
                         'confidence_kind': 'HEURISTIC / NOT YET CALIBRATED', 'review_required': True,
-                        'review_reasons': ['NO_CUSTOMER_QUALIFICATION'], 'automation_enabled': False}
+                        'review_reasons': ['NO_CUSTOMER_QUALIFICATION'], 'automation_enabled': False,'calibration':None}
             if qualification_problem: decision['review_reasons'].append(qualification_problem)
             from production.confidence import feature_row
             meta = metadata(view)
@@ -108,12 +118,18 @@ def inference(task):
                 'band': feature_row(view['current_text'], k, result['predicates'][k], language=meta['language'], input_type=meta['input_type'], conflicts=result['reconciliation']['conflicts'])['heuristic_band'],
                 'evidence': result['predicates'][k].get('evidence', []), 'kind': 'HEURISTIC / NOT YET CALIBRATED'}
                 for k in __import__('semantic_pipeline.schema', fromlist=['PREDICATES']).PREDICATES}
+            from production.evidence_basis import valid_negative_basis
+            for key,p in decision['predicate_confidence'].items():
+                pred=result['predicates'][key]
+                p['negative_basis']=pred.get('negative_basis') if valid_negative_basis(view['current_text'],pred) else None
             if qualified:
                 plan, certificate, cal = qualified
                 decision['assessment'] = qualification.assess(view['current_text'], result, metadata(view), cal, plan['release_identity'], plan['policy']['threshold'])
                 decision['confidence'] = decision['assessment']['final_decision_confidence']
                 decision['confidence_kind'] = 'CALIBRATED_IN_DECLARED_POPULATION' if decision['confidence'] is not None else decision['confidence_kind']
                 decision['predicate_confidence'] = decision['assessment']['predicates']
+                decision['calibration']={'version':cal['version'],'sha256':cal['sha256'],
+                    'model_identity':cal['identity'],'population':cal['population'],'qualification_id':payload['qualification_id']}
                 with store.connect() as c:
                     promotion = c.execute('SELECT * FROM client_promotions ORDER BY id DESC LIMIT 1').fetchone()
                     suspended = c.execute('SELECT 1 FROM client_suspensions WHERE qualification_id=?', (payload['qualification_id'],)).fetchone()
@@ -124,6 +140,17 @@ def inference(task):
                 if not permission: reasons.append('CUSTOMER_AUTOMATION_NOT_AUTHORISED')
                 decision.update(review_required=not (permission and decision['assessment']['eligible']), review_reasons=reasons,
                                 automation_enabled=bool(permission), qualification_id=payload['qualification_id'])
+            elif development_calibrator:
+                assessment = qualification.assess(view['current_text'], result, meta, development_calibrator,
+                                                   model.manifest['identity'], payload.get('simulation_threshold', .99))
+                decision.update(confidence=assessment['final_decision_confidence'],
+                                predicate_confidence=assessment['predicates'], assessment=assessment,
+                                confidence_kind='CALIBRATED_IN_DECLARED_POPULATION' if assessment['final_decision_confidence'] is not None else decision['confidence_kind'],
+                                would_auto_classify=assessment['eligible'], confidence_scope=development_calibrator['population'],
+                                review_reasons=['REVIEW_SIMULATION_ONLY_NO_CUSTOMER_QUALIFICATION'] + assessment['review_reasons'])
+                decision['calibration']={'version':development_calibrator['version'],'sha256':development_calibrator['sha256'],
+                    'model_identity':development_calibrator['identity'],'population':development_calibrator['population'],
+                    'calibrator_id':payload['calibrator_id']}
             if view['warnings']:
                 decision['review_required'] = True; decision['review_reasons'] += view['warnings']
             fresh = events.get(ident)

@@ -1,0 +1,236 @@
+{
+  "version": "controlled-composition-confidence-v1",
+  "source_type": "AI_AUTHORED_CONTROLLED_COMPOSITIONS",
+  "reference": "2026-10-18T12:00:00+00:00",
+  "limitations": [
+    "Shared AI-authored linguistic atoms across roles; only complete fact compositions and lexical near-duplicates are isolated.",
+    "Generation groups are controlled synthetic compositions, not independent real-world issuer/custodian families.",
+    "English only; no non-votable examples in this restriction-focused cohort."
+  ],
+  "excluded_training_bundle_sha256": "d9b176d99911608e44ba8acde71ac4a089eff7b524b5de4865fee2c45a5393ad",
+  "counts": {
+    "TRAIN": {
+      "examples": 102,
+      "groups": 34,
+      "classes": {
+        "votability": {
+          "VOTABLE": 102
+        },
+        "share_blocking": {
+          "YES": 45,
+          "NO": 51,
+          "UNKNOWN": 6
+        },
+        "poa_required": {
+          "YES": 54,
+          "NO": 42,
+          "UNKNOWN": 6
+        },
+        "registration_required": {
+          "YES": 57,
+          "NO": 42,
+          "UNKNOWN": 3
+        },
+        "beneficial_owner_disclosure_required": {
+          "YES": 60,
+          "NO": 36,
+          "UNKNOWN": 6
+        },
+        "holding_confirmation_required": {
+          "YES": 42,
+          "NO": 57,
+          "UNKNOWN": 3
+        },
+        "split_voting_restricted": {
+          "YES": 42,
+          "NO": 48,
+          "UNKNOWN": 12
+        },
+        "securities_lending_recall_required": {
+          "YES": 48,
+          "NO": 51,
+          "UNKNOWN": 3
+        },
+        "other_voting_restriction": {
+          "NO": 39,
+          "YES": 63
+        }
+      }
+    },
+    "VALIDATION": {
+      "examples": 150,
+      "groups": 50,
+      "classes": {
+        "votability": {
+          "VOTABLE": 150
+        },
+        "share_blocking": {
+          "YES": 66,
+          "NO": 69,
+          "UNKNOWN": 15
+        },
+        "poa_required": {
+          "YES": 78,
+          "NO": 63,
+          "UNKNOWN": 9
+        },
+        "registration_required": {
+          "YES": 72,
+          "NO": 69,
+          "UNKNOWN": 9
+        },
+        "beneficial_owner_disclosure_required": {
+          "YES": 69,
+          "NO": 78,
+          "UNKNOWN": 3
+        },
+        "holding_confirmation_required": {
+          "YES": 72,
+          "NO": 66,
+          "UNKNOWN": 12
+        },
+        "split_voting_restricted": {
+          "NO": 63,
+          "YES": 81,
+          "UNKNOWN": 6
+        },
+        "securities_lending_recall_required": {
+          "YES": 93,
+          "NO": 51,
+          "UNKNOWN": 6
+        },
+        "other_voting_restriction": {
+          "YES": 63,
+          "NO": 81,
+          "UNKNOWN": 6
+        }
+      }
+    },
+    "CALIBRATION": {
+      "examples": 501,
+      "groups": 167,
+      "classes": {
+        "votability": {
+          "VOTABLE": 501
+        },
+        "share_blocking": {
+          "YES": 240,
+          "NO": 234,
+          "UNKNOWN": 27
+        },
+        "poa_required": {
+          "YES": 255,
+          "NO": 222,
+          "UNKNOWN": 24
+        },
+        "registration_required": {
+          "YES": 249,
+          "NO": 219,
+          "UNKNOWN": 33
+        },
+        "beneficial_owner_disclosure_required": {
+          "YES": 234,
+          "NO": 240,
+          "UNKNOWN": 27
+        },
+        "holding_confirmation_required": {
+          "YES": 258,
+          "NO": 222,
+          "UNKNOWN": 21
+        },
+        "split_voting_restricted": {
+          "YES": 267,
+          "NO": 222,
+          "UNKNOWN": 12
+        },
+        "securities_lending_recall_required": {
+          "YES": 261,
+          "NO": 231,
+          "UNKNOWN": 9
+        },
+        "other_voting_restriction": {
+          "YES": 258,
+          "NO": 225,
+          "UNKNOWN": 18
+        }
+      }
+    },
+    "FROZEN_TEST": {
+      "examples": 249,
+      "groups": 83,
+      "classes": {
+        "votability": {
+          "VOTABLE": 249
+        },
+        "share_blocking": {
+          "YES": 132,
+          "NO": 102,
+          "UNKNOWN": 15
+        },
+        "poa_required": {
+          "YES": 108,
+          "NO": 132,
+          "UNKNOWN": 9
+        },
+        "registration_required": {
+          "YES": 111,
+          "NO": 129,
+          "UNKNOWN": 9
+        },
+        "beneficial_owner_disclosure_required": {
+          "YES": 156,
+          "NO": 84,
+          "UNKNOWN": 9
+        },
+        "holding_confirmation_required": {
+          "YES": 144,
+          "NO": 96,
+          "UNKNOWN": 9
+        },
+        "split_voting_restricted": {
+          "YES": 117,
+          "NO": 123,
+          "UNKNOWN": 9
+        },
+        "securities_lending_recall_required": {
+          "NO": 120,
+          "YES": 120,
+          "UNKNOWN": 9
+        },
+        "other_voting_restriction": {
+          "YES": 135,
+          "NO": 99,
+          "UNKNOWN": 15
+        }
+      }
+    }
+  },
+  "groups": 334,
+  "files": {
+    "TRAIN": {
+      "inputs": "TRAIN.inputs.jsonl",
+      "inputs_sha256": "15d6033bbd11d614f50197bfc81740502c398c0d22e90c1017d7d5aee9f6bab4",
+      "labels": "development/TRAIN.labels.jsonl",
+      "labels_sha256": "e4081deb7bd693ee0644bcc51453d56b1fe0314189c3ebb90079d75bb9aca01e"
+    },
+    "VALIDATION": {
+      "inputs": "VALIDATION.inputs.jsonl",
+      "inputs_sha256": "cd19bd735a4c8f578945a2418626c22b0bbe9c9f34922918179ee36e9b3388cc",
+      "labels": "development/VALIDATION.labels.jsonl",
+      "labels_sha256": "92852be61f61b7a0ecf0f2ee83d2ad2bd948e4223d47fdc8af0c09c65d19c602"
+    },
+    "CALIBRATION": {
+      "inputs": "CALIBRATION.inputs.jsonl",
+      "inputs_sha256": "8810505800a7a9ecfb6ed132eabd6fd5050a3a13465a362fd4270db829802904",
+      "labels": "private/CALIBRATION.labels.jsonl",
+      "labels_sha256": "e12c793aee8c4ace0e669544eb2e32655f74ba546fb5a5cea8586d8efb4b3dc7"
+    },
+    "FROZEN_TEST": {
+      "inputs": "FROZEN_TEST.inputs.jsonl",
+      "inputs_sha256": "5727686b063b3fbf4a70aba6618b533b5831a309f9ec632a6c8bef39ec79ee26",
+      "labels": "private/FROZEN_TEST.labels.jsonl",
+      "labels_sha256": "6b1c1cc3f02cf0d6fc335ef4d9c4b7de54390a14527277956706f9abf06b5bed"
+    }
+  },
+  "automation_enabled": false
+}

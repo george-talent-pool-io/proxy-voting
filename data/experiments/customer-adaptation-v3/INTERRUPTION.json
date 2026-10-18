@@ -1,0 +1,13 @@
+{
+  "status": "PAUSED_BY_USER",
+  "timestamp": "2026-10-18T14:13:55.393435+00:00",
+  "reason": "User requested pausing this qualification until the separate local-llm-lab benchmark finishes.",
+  "completed_checkpoint": "data/training-workspace/jobs/customer-domain-adaptation-v3",
+  "checkpoint_training_complete": true,
+  "checkpoint_reload_parity_passed": true,
+  "partial_validation_predictions": 333,
+  "partial_predictions_sha256": "cf87eef7a053cd890374abf6fb01e8ce45ed35b417a865ed7965f6cbd4d4d133",
+  "frozen_test_scoring_reached": false,
+  "resume_policy": "New attempt directory; reuse completed checkpoint; rerun qualification after other benchmark is idle.",
+  "automation_enabled": false
+}

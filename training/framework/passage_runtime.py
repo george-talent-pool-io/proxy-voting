@@ -32,12 +32,13 @@ def decode(answer, choices, truncated=False):
 
 
 class RegisteredPassages:
-    def __init__(self, job, *, config=None, model_factory=RegisteredModel):
+    def __init__(self, job, *, config=None, model_factory=RegisteredModel, whole_notice=False):
         self.model = model_factory(job)
         if self.model.spec.backend != 'LAYA_SDK':
             self.model.close()
             raise ValueError('Passage inference requires a registered Laya checkpoint')
         self.config = AggregationConfig(**(config or {}))
+        self.whole_notice = whole_notice
 
     def analyse(self, text, **kwargs):
         started = time.perf_counter()
@@ -62,6 +63,23 @@ class RegisteredPassages:
             pred['native_score'] = pred.pop('confidence')
             pred.update(confidence=None, source='REGISTERED_LAYA_PASSAGES',
                         whole_notice_diagnostic=original[key], truncated=any(p['truncated'] for p in native[key]))
+            if self.whole_notice:
+                # Preserve the document result learned during document training.
+                # Passage scores locate candidate evidence and contradictions;
+                # they never silently replace the matched whole-notice output.
+                chosen = original[key]['value']
+                supporting = [s for s, p in zip(spans, native[key]) if p['value'] == chosen and
+                              p['confidence'] >= self.config.min_score and not p['truncated']]
+                if chosen=='NO':
+                    # A native NO on unrelated prose is not a supporting quote.
+                    # Lexical cues locate negative evidence only; they never
+                    # veto semantic YES or alter the document classification.
+                    import re
+                    from cascade.aggregation import ANCHORS, HISTORY
+                    supporting=[s for s in supporting if re.search(ANCHORS[key],s['text'],re.I) and not HISTORY.search(s['text'])]
+                pred = {**original[key], 'evidence': [{**verify_evidence(text, s['text']), 'source': 'MATCHING_NATIVE_PASSAGE'} for s in supporting[:1]],
+                        'supporting_passage_count': len(supporting), 'passage_diagnostic': pred,
+                        'source': 'REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE'}
             result['predicates'][key] = pred
         vote = result['predicates']['votability']
         support = [(span, p) for span, p in zip(spans, native['votability'])

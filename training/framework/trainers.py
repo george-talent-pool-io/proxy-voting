@@ -18,6 +18,24 @@ from training.framework.bundle import load_bundle, sha, write
 from training.framework.schema import TrainSpec
 
 
+def training_label_support(data):
+    """Expose absent/rare classes; epochs cannot create missing supervision."""
+    from semantic_pipeline.schema import PREDICATES
+    result={};warnings=[]
+    for key in PREDICATES:
+        labels=('VOTABLE','NOT_VOTABLE','UNCERTAIN') if key=='votability' else ('YES','NO','UNKNOWN')
+        detail={}
+        for role in ('TRAIN','VALIDATION'):
+            rows=[e for e in data if e.split==role]
+            detail[role]={label:{'examples':sum(getattr(e.target,key)==label for e in rows),
+                'groups':len({e.group_id for e in rows if getattr(e.target,key)==label})} for label in labels}
+        for label,support in detail['TRAIN'].items():
+            if support['groups']<5:warnings.append(key+':'+label+(':NO_TRAINING_EXAMPLES' if not support['groups'] else ':FEWER_THAN_FIVE_TRAINING_GROUPS'))
+        result[key]=detail
+    return {'per_predicate':result,'warnings':warnings,
+            'scope':'Training diagnostics only; five groups is a warning threshold, not a quality/automation qualification'}
+
+
 def versions():
     result = {}
     for name in ['laya', 'torch', 'transformers', 'peft', 'tokenizers', 'safetensors']:
@@ -41,8 +59,23 @@ def snapshot(path):
 def preflight(bundle, spec):
     spec = spec if isinstance(spec, TrainSpec) else TrainSpec.model_validate(spec)
     manifest, data = load_bundle(bundle)
+    label_support=training_label_support(data)
     model = Path(spec.model_path).resolve()
     reasons = []
+    parent = None
+    if spec.parent_seed_path:
+        from training.framework.seeds import verify
+        parent = verify(spec.parent_seed_path)
+        if (str(model) != parent['model_location'] or spec.initial_adapter_path != parent['adapter_location']
+                or any(getattr(spec,key)!=parent['spec'][key] for key in ('backend','family','base_model_id','base_revision'))):
+            raise ValueError('Training does not match its frozen starting checkpoint')
+        if spec.initial_adapter_path and any(getattr(spec,k)!=parent['spec'][k] for k in
+                                           ('lora_rank','lora_alpha','lora_layers','target_modules')):
+            raise ValueError('Warm-start adapter architecture must match the frozen parent')
+        if sha(Path(bundle) / 'semantic-prompt.txt') != parent['prompt_sha256'] or sha(Path(bundle) / 'laya-questions.json') != parent['questions_sha256']:
+            raise ValueError('Customer bundle changed the frozen prompt/classification criteria')
+    elif spec.initial_adapter_path:
+        raise ValueError('Warm-start adapters require an immutable parent seed')
     if spec.base_revision.startswith('REPLACE_'):
         reasons.append('EXACT_BASE_REVISION_NOT_CONFIGURED')
     if not model.is_dir():
@@ -73,6 +106,8 @@ def preflight(bundle, spec):
             'hardware': {'system': platform.platform(), 'machine': platform.machine(),
                          'memory_bytes': memory.total, 'available_bytes': memory.available},
             'local_weight_bytes': weight_bytes,
+            'label_support':label_support,
+            'parent_checkpoint_identity': parent['identity'] if parent else None,
             'training_runtime': runtime,
             'scope': 'Preflight checks prerequisites, not exact-model trainer compatibility or model quality',
             'automation_enabled': False, 'customer_accuracy': None}
@@ -104,7 +139,7 @@ def train_mlx(bundle, output, spec):
         p = subprocess.run([str(Path(spec.runtime_python).absolute()), '-m',
                 'training.framework.mlx_worker', 'train', str(request)],
                 cwd=Path(__file__).resolve().parents[2], stdin=subprocess.DEVNULL,
-                stdout=log, stderr=subprocess.STDOUT, timeout=7200,
+                stdout=log, stderr=subprocess.STDOUT, timeout=spec.training_timeout_seconds,
                 env={**os.environ, 'HF_HUB_OFFLINE': '1', 'TRANSFORMERS_OFFLINE': '1',
                      'HF_HUB_DISABLE_TELEMETRY': '1', 'TOKENIZERS_PARALLELISM': 'false'})
     if p.returncode:
@@ -143,16 +178,22 @@ def train_laya(bundle, output, spec):
     if spec.max_steps is not None:
         raise ValueError('Laya SDK backend uses epochs; max_steps is not supported')
     validate_laya_encoding(bundle, spec)
-    config = TrainConfig(epochs=spec.epochs, seed=spec.seed, encoder_lr=spec.learning_rate,
+    config = TrainConfig(epochs=spec.epochs, seed=spec.seed, encoder_lr=spec.encoder_learning_rate or spec.learning_rate,
                          head_lr=spec.learning_rate, micro_batch=spec.batch_size,
                          grad_accum=spec.gradient_accumulation, max_len=spec.max_length,
                          head_max_len=256, freeze_encoder=spec.freeze_encoder,
-                         calib_frac=0, calib_max=0, loss='soft-ce', shuffle_options=('choice',),
-                         eval_data=str(Path(bundle) / 'laya-validation.jsonl'))
+                         calib_frac=0, calib_max=0, loss=spec.laya_loss, shuffle_options=('choice',),
+                         gradient_checkpointing=spec.laya_gradient_checkpointing,
+                         eval_data=str(Path(bundle) / 'laya-validation.jsonl') if spec.laya_sdk_validation else None)
     # Calibration is a separate stage. Validation is available only for validation
     # loss/model selection, never mixed into weight updates.
-    result = finetune(str(Path(bundle) / 'laya-train.jsonl'), spec.model_path,
-                      str(output), config, device=spec.device)
+    import torch
+    if spec.mps_memory_fraction is not None:torch.mps.set_per_process_memory_fraction(spec.mps_memory_fraction)
+    try:
+        result = finetune(str(Path(bundle) / 'laya-train.jsonl'), spec.model_path,
+                          str(output), config, device=spec.device)
+    finally:
+        if spec.mps_memory_fraction is not None:torch.mps.set_per_process_memory_fraction(1.)
     if any(result.get('skipped', {}).values()) or any(result.get('eval_skipped', {}).values()):
         raise ValueError('Official SDK skipped labelled items; inspect the preserved checkpoint/result')
     write(Path(output) / 'semantic-training-contract.json', {
@@ -162,7 +203,8 @@ def train_laya(bundle, output, spec):
     probe = json.loads((Path(bundle) / 'laya-validation.jsonl').read_text().splitlines()[0])
     parity = validate_laya_reload(output, probe, spec)
     return {'backend': 'LAYA_SDK', 'training': result,
-            'validation_kind': 'Official SDK validation diagnostics; separate semantic evaluation required',
+            'validation_kind': ('Official SDK validation diagnostics; separate semantic evaluation required' if spec.laya_sdk_validation else
+                                'SDK duplicate validation disabled; independent framework validation REQUIRED before sealing'),
             'reload_parity': parity}
 
 
@@ -224,9 +266,11 @@ def train_peft(bundle, output, spec):
     dtype = getattr(torch, spec.dtype)
     base = AutoModelForCausalLM.from_pretrained(spec.model_path, local_files_only=True,
                                                trust_remote_code=False, dtype=dtype)
-    model = get_peft_model(base, LoraConfig(task_type=TaskType.CAUSAL_LM,
+    from peft import PeftModel
+    model = (PeftModel.from_pretrained(base, spec.initial_adapter_path, local_files_only=True, is_trainable=True)
+             if spec.initial_adapter_path else get_peft_model(base, LoraConfig(task_type=TaskType.CAUSAL_LM,
                     r=spec.lora_rank, lora_alpha=spec.lora_alpha, lora_dropout=0.0,
-                    target_modules=spec.target_modules, bias='none'))
+                    target_modules=spec.target_modules, bias='none')))
     model.to(spec.device)
     if getattr(model.config, 'use_cache', None) is not None:
         model.config.use_cache = False

@@ -9,10 +9,10 @@ from training.framework.bundle import ROOT, write
 
 
 class MlxProcess:
-    def __init__(self, root, spec):
+    def __init__(self, root, spec, *, checkpoint='REGISTERED_DEFAULT'):
         self.lock = threading.RLock()
         request = Path(root) / 'mlx-serving-request.json'
-        value = {'spec': spec.model_dump(), 'checkpoint': str(Path(root) / 'checkpoint')}
+        value = {'spec': spec.model_dump(), 'checkpoint': str(Path(root) / 'checkpoint') if checkpoint == 'REGISTERED_DEFAULT' else checkpoint}
         if request.exists():
             if json.loads(request.read_text()) != value:
                 raise ValueError('Existing serving configuration differs from registered checkpoint')

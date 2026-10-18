@@ -33,11 +33,17 @@ def inference_admission(release):
     manifest=json.loads((Path(release)/'release.json').read_text())
     required=2*1024**3
     for model in manifest['models'].values():
-        job=jobs.member('jobs',model['job_id']);spec=json.loads((job/'plan.json').read_text())['spec']
+        if model.get('seed_id'):
+            from training.framework.seeds import verify
+            seed=verify(jobs.member('seeds',model['seed_id']));spec=seed['spec']
+            checkpoint=Path(seed['model_location'])
+        else:
+            job=jobs.member('jobs',model['job_id']);spec=json.loads((job/'plan.json').read_text())['spec']
+            checkpoint=job/'checkpoint'
         if spec['backend']=='MLX_QLORA':raise ValueError('MLX checkpoint is not a Linux serving artifact; qualify a local Transformers checkpoint')
         if spec['device']=='cuda' and not torch.cuda.is_available():raise ValueError('Serving checkpoint requires an unavailable CUDA runtime')
-        size=sum(p.stat().st_size for p in (job/'checkpoint').rglob('*.safetensors'))
-        if spec['backend']!='LAYA_SDK':size+=sum(p.stat().st_size for p in Path(spec['model_path']).rglob('*.safetensors'))
+        size=sum(p.stat().st_size for p in checkpoint.rglob('*.safetensors'))
+        if spec['backend']!='LAYA_SDK' and not model.get('seed_id'):size+=sum(p.stat().st_size for p in Path(spec['model_path']).rglob('*.safetensors'))
         required+=max(6*1024**3,2*size)
     if memory_limit()<required:raise ValueError(f'Model-serving memory admission failed; minimum floor={required}; qualify the checkpoint on a larger container')
     return {'minimum_bytes':required,'scope':'Conservative admission, not measured peak memory or throughput'}

@@ -1,0 +1,9 @@
+{
+  "selected": "FROZEN_LAYA_WHOLE",
+  "validation_assertions": {
+    "FROZEN_LAYA_WHOLE": 2882,
+    "TRAINED_LAYA_PASSAGES": 3496,
+    "TRAINED_LAYA_WHOLE": 4099
+  },
+  "frozen_answers_opened": false
+}

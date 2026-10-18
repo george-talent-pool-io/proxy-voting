@@ -15,13 +15,14 @@ import joblib
 VERSION='predicate-correctness-features-v1'
 CRITICAL=('votability','share_blocking','poa_required','registration_required')
 
-def features(text,predicate,result,*,language='en',input_type='UNSTRUCTURED_NOTICE',schema_valid=True,schema_repairs=0,repeat_agreement=None,deterministic_conflict=False):
+def features(text,predicate,result,*,language='en',input_type='UNSTRUCTURED_NOTICE',schema_valid=True,schema_repairs=0,repeat_agreement=None,deterministic_conflict=False,supported_languages=('en',)):
     ev=result.get('evidence',[]);valid=[e for e in ev if e.get('valid')]
     probs=result.get('raw_model_probability') or {};ordered=sorted(probs.values(),reverse=True)
     unknown=result.get('value') in ('UNKNOWN','UNCERTAIN','NOT_SUPPORTED')
     conflict=deterministic_conflict or bool(result.get('conflict')) or bool(re.search(r'neither has priority|no priority rule|unresolved conflict|two current instructions conflict',text,re.I))
     ood=[]
-    if language!='en':ood.append('LANGUAGE_NOT_IN_INITIAL_ENGLISH_CONFIDENCE_POPULATION')
+    if supported_languages is not None and language not in supported_languages:ood.append('LANGUAGE_NOT_IN_INITIAL_ENGLISH_CONFIDENCE_POPULATION')
+    if language in (None,'UNKNOWN','UNDECLARED',''):ood.append('LANGUAGE_NOT_DECLARED')
     if len(text)>60000:ood.append('EXTREME_LENGTH')
     if '\ufffd' in text or '\x00' in text:ood.append('CORRUPTION')
     if result.get('truncated') or result.get('error')=='CONTEXT_LIMIT_NO_TRUNCATION':ood.append('TRUNCATION_OR_CONTEXT_RISK')

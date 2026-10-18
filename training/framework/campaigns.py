@@ -25,11 +25,12 @@ class Stage(BaseModel):
     model_config = ConfigDict(extra='forbid')
     name: str = Field(pattern=r'^[A-Za-z][A-Za-z0-9_-]{0,59}$')
     reuse_job: str | None = None
+    reuse_seed: str | None = None
     training: TrainSpec | None = None
 
     @model_validator(mode='after')
     def one_source(self):
-        if (self.reuse_job is None) == (self.training is None): raise ValueError('Use exactly one stage source')
+        if sum(v is not None for v in (self.reuse_job,self.reuse_seed,self.training))!=1: raise ValueError('Use exactly one stage source')
         return self
 
 
@@ -39,6 +40,9 @@ class Candidate(BaseModel):
     mode: str
     laya_stage: str | None = None
     llm_stage: str | None = None
+    laya_inference: str = 'PASSAGES'
+    laya_calibrator_id: str | None = None
+    laya_operating_point_id: str | None = None
     policy: dict = Field(default_factory=lambda: releases.ReleaseSpec(mode='QWEN_ONLY', llm_job='placeholder').policy)
 
 
@@ -50,7 +54,7 @@ class CampaignSpec(BaseModel):
     candidates: list[Candidate] = Field(min_length=1, max_length=20)
     actor: str = Field(min_length=1)
     reference: str = '2026-10-17T12:00:00+00:00'
-    max_seconds: int = Field(default=3600, ge=30, le=86400)
+    max_seconds: int = Field(default=3600, ge=30, le=604800)
 
     @model_validator(mode='after')
     def dependencies(self):
@@ -59,7 +63,8 @@ class CampaignSpec(BaseModel):
             raise ValueError('Duplicate stage/candidate identity')
         for c in self.candidates:
             if any(n and n not in names for n in (c.laya_stage, c.llm_stage)): raise ValueError('Unknown campaign stage dependency')
-            releases.ReleaseSpec(mode=c.mode, laya_job=c.laya_stage, llm_job=c.llm_stage, policy=c.policy)
+            releases.ReleaseSpec(mode=c.mode, laya_job=c.laya_stage, llm_job=c.llm_stage, policy=c.policy,laya_inference=c.laya_inference,
+                                 laya_calibrator_id=c.laya_calibrator_id,laya_operating_point_id=c.laya_operating_point_id)
         return self
 
 
@@ -78,6 +83,9 @@ def prepare(spec, output):
             raise ValueError('Campaign bundle/dataset membership mismatch')
     if {e.id for e in examples} != set(ids): raise ValueError('Campaign bundle must cover exactly its development cohort')
     for stage in spec.stages:
+        if stage.reuse_seed:
+            from training.framework.seeds import verify
+            verify(jobs.member('seeds',stage.reuse_seed))
         if stage.reuse_job:
             from training.framework.runtime import verify_checkpoint
             _, p, _ = verify_checkpoint(jobs.member('jobs', stage.reuse_job))
@@ -160,10 +168,12 @@ def _run(root, *, database=None):
         if sha(bundle / 'manifest.json') != plan['bundle_sha256'] or sha(dataset / 'manifest.json') != plan['dataset_sha256']:
             raise ValueError('Campaign dataset changed')
         if releases.source_files() != plan['source_hashes']: raise ValueError('Campaign source changed; prepare a new campaign')
-        stage_jobs = {}
+        stage_jobs = {};stage_seeds={}
         for stage in spec.stages:
             progress('TRAINING', stage=stage.name)
-            if stage.reuse_job:
+            if stage.reuse_seed:
+                stage_seeds[stage.name]=stage.reuse_seed
+            elif stage.reuse_job:
                 stage_jobs[stage.name] = stage.reuse_job
             else:
                 ident = str(uuid.uuid4()); path = jobs.member('jobs', ident)
@@ -192,7 +202,10 @@ def _run(root, *, database=None):
             progress('VALIDATION', candidate=candidate.name)
             ident = root.name + '-' + candidate.name; path = jobs.member('releases', ident)
             releases.prepare({'mode': candidate.mode, 'laya_job': stage_jobs.get(candidate.laya_stage),
-                              'llm_job': stage_jobs.get(candidate.llm_stage), 'policy': candidate.policy}, path)
+                              'llm_job': stage_jobs.get(candidate.llm_stage), 'policy': candidate.policy,
+                              'laya_seed':stage_seeds.get(candidate.laya_stage),'llm_seed':stage_seeds.get(candidate.llm_stage),
+                              'laya_inference':candidate.laya_inference,'laya_calibrator_id':candidate.laya_calibrator_id,
+                              'laya_operating_point_id':candidate.laya_operating_point_id}, path)
             candidates[candidate.name] = ident
             with model_resource('campaign-validation'):
                 validation[candidate.name] = evaluate(dataset, path, root / ('validation-' + candidate.name), reference=spec.reference, check=check)

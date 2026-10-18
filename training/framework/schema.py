@@ -89,6 +89,16 @@ class TrainSpec(BaseModel):
     runtime_python: str | None = None
     lora_layers: int = Field(default=1, ge=1)
     generation_tokens: int = Field(default=2048, ge=32, le=8192)
+    # A frozen seed binds both initial weights and serving criteria. The parent
+    # optimizer is intentionally never resumed across customer corpora.
+    parent_seed_path: str | None = None
+    initial_adapter_path: str | None = None
+    encoder_learning_rate: float | None = Field(default=None, gt=0, le=.01)
+    laya_loss: Literal['soft-ce', 'rlcd'] = 'soft-ce'
+    laya_gradient_checkpointing: bool | None = None
+    laya_sdk_validation: bool = True
+    mps_memory_fraction: float | None = Field(default=None,ge=.1,le=.7)
+    training_timeout_seconds: int = Field(default=7200,ge=60,le=604800)
 
     @model_validator(mode='after')
     def compatible_backend(self):
@@ -98,4 +108,6 @@ class TrainSpec(BaseModel):
             raise ValueError('Use float32 or supported bfloat16 on CPU')
         if self.backend == 'LAYA_SDK' and self.max_steps is not None:
             raise ValueError('Laya SDK uses epochs; max_steps is not supported')
+        if self.mps_memory_fraction is not None and self.device!='mps':
+            raise ValueError('MPS memory fraction applies only to the MPS device')
         return self
