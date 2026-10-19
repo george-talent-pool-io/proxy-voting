@@ -7,6 +7,9 @@ def test_source_archive_contains_every_package_and_excludes_operational_data(tmp
     archive=tmp_path/'source.tar.gz'
     package(archive)
     with tarfile.open(archive) as stream:names=set(stream.getnames())
+    with tarfile.open(archive) as stream:
+        for notice in ['LICENSE', 'NOTICE', 'COMMERCIAL-LICENSE']:
+            assert stream.extractfile(notice).read() == (ROOT / notice).read_bytes()
     for folder in ROOT.iterdir():
         if folder.is_dir() and (folder/'__init__.py').exists():
             assert folder.name+'/__init__.py' in names

@@ -1,4 +1,17 @@
-# Laya Corporate Actions Voting Lab
+# Voting Intelligence Framework
+
+## Licensing
+
+The first-party software is source-available under the
+[PolyForm Noncommercial License 1.0.0](LICENSE). Commercial use outside the
+licence's express permissions requires a **separate paid commercial licence**
+from the copyright holder; internal business use is not automatically free.
+See [commercial licensing](COMMERCIAL-LICENSE) for enquiries and terms, and
+[NOTICE](NOTICE) for the copyright holder and attribution requirements.
+
+This is not an OSI-approved open-source licence. Dependencies, model weights,
+datasets, examples and fonts retain their own licences. The change does not
+revoke permissions already granted for earlier MIT-licensed copies or releases.
 
 ## Frozen starting checkpoints and customer learning
 

@@ -38,7 +38,7 @@ async function overview(){
  const [d, recent, runs, examples] = await Promise.all([api(`overview?${runQuery()}`),api(`notices?page_size=6&${runQuery()}`),api('runs'),api('demo')]);
  const run=runs.find(r=>r.id===d.run_id), b=run?.benchmark;
  const maxBin=Math.max(1,...d.confidence_bins);
- return heading('Decision operations','Voting intelligence','A measurable view of specialised, local AI for shareholder voting.',exportLink())+
+ return heading('Decision operations','Voting Intelligence Framework','Layered classification, confidence and customer-specific learning for shareholder voting.',exportLink())+
  notice(`<strong>Public example corpus.</strong> ${num(d.total)} filing excerpts, including proxy statements and contract distractors. Human verification is required before measuring accuracy. Automation is disabled.`)+
  `<div class="metrics">${metric('Notices analysed',num(d.analysed),`${num(d.total)} source rows imported`,true)}${metric('Automatically processed',pct(d.analysed?d.auto/d.analysed:null),'Policy disabled pending validation')}${metric('Sent to human review',pct(d.analysed?d.manual/d.analysed:null),`${num(d.manual)} classified records`)}${metric('Reviewed test notices',num(d.verified_test),'Factor reviews; no event-level accuracy claim')}</div>`+
  layerMetricCards(d.metric_layers)+await hybridSummaryPanel(false)+

@@ -2,6 +2,8 @@
 name = "laya-voting-lab"
 version = "0.1.0"
 description = "Auditable local corporate-actions classification experiment"
+license = "PolyForm-Noncommercial-1.0.0"
+license-files = ["LICENSE", "NOTICE", "COMMERCIAL-LICENSE"]
 requires-python = ">=3.12,<3.13"
 dependencies = ["fastapi==0.143.2", "uvicorn==0.54.0", "laya==0.4.8", "beautifulsoup4==4.15.0", "datasketch==2.0.0", "langdetect==1.0.9", "scikit-learn==1.9.1", "psutil==7.2.2", "python-multipart==0.0.32"]
 [dependency-groups]

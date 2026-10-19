@@ -69,7 +69,9 @@ def browser_app(tmp_path_factory):
 
 def test_01_dashboard(browser_app):
     from playwright.sync_api import expect
-    a=browser_app;p=a['page'];p.goto(a['url']);expect(p.get_by_role('heading',name='Voting intelligence',exact=True)).to_be_visible()
+    a=browser_app;p=a['page'];p.goto(a['url']);expect(p.get_by_role('heading',name='Voting Intelligence Framework',exact=True)).to_be_visible()
+    expect(p).to_have_title('Voting Intelligence Framework · Research workspace')
+    expect(p.get_by_role('link',name='Voting Intelligence Framework overview',exact=True)).to_be_visible()
     assert p.request.get(a['url']+'/api/overview').json()['total']==a['total']
     expect(p.get_by_role('heading',name='Accuracy by processing stage',exact=True)).to_be_visible()
     for label in ['Parser accuracy','Semantic-model accuracy','End-to-end decision accuracy']:

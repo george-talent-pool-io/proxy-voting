@@ -19,7 +19,7 @@ from evaluation.evaluate import evaluate
 async def lifespan(app):
     store.initialise()
     yield
-app=FastAPI(title='Laya Voting Intelligence',version='0.1.0',lifespan=lifespan)
+app=FastAPI(title='Voting Intelligence Framework',version='0.1.0',lifespan=lifespan)
 ROOT=Path(__file__).resolve().parents[2]
 job_lock=threading.Lock()
 

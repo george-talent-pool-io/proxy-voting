@@ -1,4 +1,5 @@
 FROM python:3.12-slim
+LABEL org.opencontainers.image.title="Voting Intelligence Framework" org.opencontainers.image.licenses="PolyForm-Noncommercial-1.0.0"
 RUN pip install --no-cache-dir uv==0.9.4
 WORKDIR /app
 COPY pyproject.toml uv.lock ./

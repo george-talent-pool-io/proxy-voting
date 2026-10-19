@@ -1,0 +1,18 @@
+Voting Intelligence Framework
+
+Required Notice: Copyright (c) 2026 george-talent-pool-io
+
+The first-party software is offered under the PolyForm Noncommercial License
+1.0.0 in LICENSE. Commercial use outside the permissions expressly granted by
+that licence requires a separate paid commercial agreement with the copyright
+holder. See COMMERCIAL-LICENSE.
+
+Third-party software, model weights, datasets, examples and fonts retain their
+own copyright notices and licences. The project licence does not replace or
+restrict those independent grants. Preserve applicable third-party notices
+when distributing them; the dependency lockfiles, model manifests and bundled
+licence files identify the relevant components.
+
+This licensing change does not revoke permissions already granted for copies
+previously released under the MIT License. Historical release archives and
+their manifests remain unchanged.

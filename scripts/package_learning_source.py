@@ -28,7 +28,7 @@ def package(output):
     paths.add(Path('deploy/Dockerfile'))
     paths.update(Path('data/reports') / name for name in ('CLIENT_PRODUCTION_GAP_PLAN.md', 'CLIENT_PRODUCTION_READINESS.md', 'FROZEN_CHECKPOINT_LEARNING_EVALUATION.md')
                  if (ROOT / 'data/reports' / name).is_file())
-    for name in ['README.md', 'LICENSE', '.dockerignore', '.gitignore', 'pyproject.toml', 'uv.lock', 'Dockerfile', 'docker-compose.yml']:
+    for name in ['README.md', 'LICENSE', 'NOTICE', 'COMMERCIAL-LICENSE', '.dockerignore', '.gitignore', 'pyproject.toml', 'uv.lock', 'Dockerfile', 'docker-compose.yml']:
         if (ROOT / name).is_file(): paths.add(Path(name))
     paths.add(Path('tools/prowide/pom.xml'))
     paths.update(p.relative_to(ROOT) for p in (ROOT / 'tools/prowide/src').rglob('*.java'))

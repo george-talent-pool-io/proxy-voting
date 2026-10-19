@@ -35,7 +35,7 @@ def create_app():
         yield
         from iso_adapter.routing import _REFERENCE
         _REFERENCE.close()
-    app = FastAPI(title='Voting Operations', version='1.0.0', lifespan=lifespan,
+    app = FastAPI(title='Voting Intelligence Framework', version='1.0.0', lifespan=lifespan,
                   docs_url=None, redoc_url=None, openapi_url=None)
     failures = OrderedDict()
 
@@ -51,7 +51,7 @@ def create_app():
         if user is None:
             failures[ip] = ((failed if now < until else 0) + 1, now + 60)
             if len(failures) > 10000: failures.popitem(last=False)
-            return JSONResponse({'detail': 'Named-user authentication required'}, 401, headers={'WWW-Authenticate': 'Basic realm="Voting Operations", charset="UTF-8"'})
+            return JSONResponse({'detail': 'Named-user authentication required'}, 401, headers={'WWW-Authenticate': 'Basic realm="Voting Intelligence Framework", charset="UTF-8"'})
         failures.pop(ip, None); request.state.user = user
         if request.method not in ('GET', 'HEAD', 'OPTIONS'):
             origin = request.headers.get('origin')

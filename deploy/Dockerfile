@@ -7,7 +7,7 @@ RUN mvn -B -q package
 
 FROM python:3.12-slim-bookworm@sha256:34386ef0cb081344d7ec1c103ba398e6e9f64e9ab3a1509accc92a4e24a07258
 ARG SOURCE_REVISION=UNSPECIFIED
-LABEL org.opencontainers.image.title="Voting learning framework" org.opencontainers.image.revision=$SOURCE_REVISION
+LABEL org.opencontainers.image.title="Voting Intelligence Framework" org.opencontainers.image.revision=$SOURCE_REVISION org.opencontainers.image.licenses="PolyForm-Noncommercial-1.0.0"
 RUN apt-get update && apt-get install -y --no-install-recommends default-jre-headless git libgomp1 && rm -rf /var/lib/apt/lists/*
 RUN pip install --no-cache-dir uv==0.9.4
 WORKDIR /app

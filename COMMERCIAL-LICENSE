@@ -1,0 +1,50 @@
+Voting Intelligence Framework - Commercial Licensing
+
+Copyright (c) 2026 george-talent-pool-io
+
+1. Default licence
+
+The default licence is the unmodified PolyForm Noncommercial License 1.0.0
+provided in LICENSE. Only the uses that it expressly permits are granted
+without a separate commercial agreement. Its permissions and exceptions remain
+as written; this document does not amend that standard licence.
+
+2. Paid commercial use
+
+Commercial use outside those express permissions requires a separate written
+commercial licence from the copyright holder identified in NOTICE and payment
+of the applicable licence fees in accordance with that agreement. Obtain the
+agreement before starting such use.
+
+Examples include using the framework in commercial proxy-voting operations;
+integrating it into paid products or hosted services; using it to deliver paid
+consulting or client services; and using its training or inference workflows
+to support a commercial offering. Internal business use is not automatically
+free merely because the software is not resold.
+
+3. Commercial terms and enquiries
+
+Contact the repository owner/copyright holder to agree pricing and terms.
+The written agreement specifies the fee, payment schedule, licence duration,
+deployment scope, permitted users and any support or maintenance obligations.
+There is no fixed price or commercial licence grant in this repository.
+Downloading the software, obtaining its source or making an unsolicited
+payment does not itself grant commercial rights.
+
+4. Third-party and customer materials
+
+This policy applies only to rights controlled by the project's copyright
+holder. Third-party software, model weights, datasets, examples and fonts
+remain subject to their own licences. No additional fee restriction is placed
+on their independent use under those licences.
+
+This policy does not transfer ownership of customer corpora, labels or other
+customer-owned materials to the framework licensor. The separate licences of
+foundation models and any applicable customer agreement continue to govern
+their respective materials.
+
+5. Earlier MIT releases
+
+This change does not revoke MIT permissions already granted for earlier copies
+or releases. The new licence is offered with the versions distributed under
+it; historical MIT releases and their existing grants are not rewritten.

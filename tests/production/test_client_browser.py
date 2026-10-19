@@ -46,6 +46,8 @@ def customer_browser(tmp_path_factory):
 def test_customer_import_review_trace_and_refresh(customer_browser):
     page, url, tmp, errors = customer_browser
     page.goto(url); page.get_by_text('CUSTOMER QUALITY GATE NOT MET', exact=False).wait_for()
+    assert page.title() == 'Voting Intelligence Framework · Client workspace'
+    assert page.locator('header strong').text_content() == 'Voting Intelligence Framework'
     file = tmp / 'import.jsonl'; file.write_text(json.dumps(row(text='Shareholders may vote. No blocking applies. <script>danger()</script>')) + '\n')
     page.locator('#import-id').fill('browser-corpus')
     page.locator('#import-file').set_input_files(file)
