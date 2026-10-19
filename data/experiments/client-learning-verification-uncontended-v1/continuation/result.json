@@ -1,0 +1,171 @@
+{
+  "results": {
+    "LAYA": {
+      "parent_identity": "535b87afd07909079b28cd70543616ea50784848a9b3ddaa66767f80345f0875",
+      "parent_unchanged": true,
+      "job": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/jobs/continuation-LAYA",
+      "result": {
+        "backend": "LAYA_SDK",
+        "training": {
+          "train_items": 18,
+          "calibration_items": 0,
+          "eval_items": 0,
+          "skipped": {},
+          "epoch_loss": [
+            2.2517293984947173e-07
+          ],
+          "temperature": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "temperature_by_options": {},
+          "n_by_bucket": {},
+          "calibration": {
+            "choice": {
+              "items": 0,
+              "temperature": 1.0,
+              "issues": []
+            },
+            "score": {
+              "items": 0,
+              "temperature": 1.0,
+              "issues": []
+            },
+            "noul": {
+              "items": 0,
+              "temperature": 1.0,
+              "issues": []
+            }
+          },
+          "abstention_thresholds": {},
+          "train_report": {
+            "eval_source": null,
+            "eval_mode": null,
+            "is_held_out": false,
+            "eval_items": 0,
+            "note": "No evaluation performed (0 calibration items and no --eval set was provided).",
+            "before": null,
+            "after": null,
+            "comparison": null,
+            "calibration": {
+              "choice": {
+                "items": 0,
+                "temperature": 1.0,
+                "issues": []
+              },
+              "score": {
+                "items": 0,
+                "temperature": 1.0,
+                "issues": []
+              },
+              "noul": {
+                "items": 0,
+                "temperature": 1.0,
+                "issues": []
+              }
+            },
+            "abstention_thresholds": {},
+            "training": {
+              "epochs": 1,
+              "micro_batch": 2,
+              "grad_accum": 1,
+              "encoder_lr": 2.5e-05,
+              "head_lr": 0.0001,
+              "min_lr": 1e-06,
+              "weight_decay": 0.01,
+              "grad_clip": 1.0,
+              "loss": "soft-ce",
+              "rl_samples": 4,
+              "sigma_start": 0.4,
+              "sigma_end": 0.1,
+              "w_sph": 0.75,
+              "w_rps": 1.0,
+              "shuffle_options": [
+                "choice"
+              ],
+              "option_layout": null,
+              "freeze_encoder": false,
+              "calib_max": 0,
+              "calib_frac": 0,
+              "calib_seed": 20260922,
+              "seed": 42,
+              "max_len": 2048,
+              "head_max_len": 256,
+              "amp": null,
+              "gradient_checkpointing": true,
+              "log_every": 100,
+              "label_smoothing": 0.0,
+              "text_column": "text",
+              "label_column": "label",
+              "question_id": "label",
+              "instructions": null,
+              "eval_data": null,
+              "target_error": 0.1,
+              "min_abstain_n": 10
+            }
+          },
+          "output_dir": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/jobs/continuation-LAYA/checkpoint"
+        },
+        "validation_kind": "SDK duplicate validation disabled; independent framework validation REQUIRED before sealing",
+        "reload_parity": {
+          "passed": true,
+          "max_absolute_score_difference": 0.0,
+          "absolute_tolerance": 1e-05,
+          "probe": "First validation input, two fresh loads"
+        }
+      },
+      "model_manifest_sha256": "42c873204b6796cd0435c8e60fe2f7f3f04b3a2d28d10555158fe6cee9f5394f"
+    },
+    "QWEN": {
+      "parent_identity": "4edd2bf110127eb154c6c9091eac167ca0a49ac97d67442b01e0102cc1a44a7b",
+      "parent_unchanged": true,
+      "job": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/jobs/continuation-QWEN",
+      "result": {
+        "backend": "MLX_QLORA",
+        "optimiser_steps": 1,
+        "micro_batches": 1,
+        "trainable_parameters": 94208,
+        "weights_changed": true,
+        "curve": [
+          {
+            "kind": "VALIDATION",
+            "iteration": 0,
+            "val_loss": 0.1401975452899933,
+            "val_time": 25.02092658309266
+          },
+          {
+            "kind": "TRAIN",
+            "iteration": 1,
+            "train_loss": 0.12451139092445374,
+            "learning_rate": 4.999999873689376e-05,
+            "iterations_per_second": 0.010082498476750712,
+            "tokens_per_second": 2.9239245582577063,
+            "trained_tokens": 290,
+            "peak_memory": 22.963117922
+          }
+        ],
+        "validation_token_cross_entropy": 0.13902804255485535,
+        "model_load_ms": 2631.266792071983,
+        "peak_mlx_allocated_bytes": 22963117922,
+        "elapsed_seconds": 154.67789979209192,
+        "reload_parity": {
+          "passed": true,
+          "max_absolute_logit_difference": 0.0,
+          "absolute_relative_tolerance": 0.005,
+          "probe_tokens": 128
+        },
+        "validation_kind": "Teacher-forced JSON loss; not semantic accuracy",
+        "training_mask": "Assistant JSON tokens only; complete source, no truncation"
+      },
+      "model_manifest_sha256": "9ed425c6de7338edf6bf399fd2f0b7e27117cc13f268d87fee6eb49b80bed4ef"
+    }
+  },
+  "scope": "AI_TEST_CONTINUATION_MECHANICS_ONLY",
+  "automation_enabled": false,
+  "eligible_training_examples": 2,
+  "new_validation_examples": 2,
+  "qwen_optimizer_steps": 1,
+  "qwen_examples_consumed": 1,
+  "test_models_in_production_delivery": false
+}

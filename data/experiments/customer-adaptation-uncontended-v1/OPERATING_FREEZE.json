@@ -1,0 +1,7 @@
+{
+  "selection_sha256": "1e192c95216dce548165c84462ea80d9c1124d72baa6135c05b45e9787f068f7",
+  "calibrator_sha256": "1db2746e38924b2cc814f26432dcc225567c59603505c964c70ea72e5fe7f07b",
+  "operating_point_sha256": "b8e86120a9e08ea880d7c21eff0bce9c22ced95ecf5c021f4ce5243787d69508",
+  "automation_enabled": false,
+  "protected_metrics_inspected": false
+}

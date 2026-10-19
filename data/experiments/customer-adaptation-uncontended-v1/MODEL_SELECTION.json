@@ -1,0 +1,18 @@
+{
+  "selected": "ADAPTED_8_EPOCHS",
+  "eligible": [
+    "FOUNDATION",
+    "ADAPTED_8_EPOCHS"
+  ],
+  "criterion": "Most correct validation assertions, with no new critical positive miss versus foundation",
+  "validation_assertions": {
+    "FOUNDATION": 2882,
+    "ADAPTED_4_EPOCHS": 5335,
+    "ADAPTED_8_EPOCHS": 5388
+  },
+  "jobs": {
+    "ADAPTED_4_EPOCHS": "data/training-workspace/jobs/customer-domain-adaptation-v3",
+    "ADAPTED_8_EPOCHS": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/jobs/customer-adaptation-uncontended-v1-8epoch"
+  },
+  "frozen_results_inspected": false
+}

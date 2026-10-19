@@ -40,6 +40,10 @@ def spawn(root):
 
 @owned
 def run(root):
+    # The standalone campaign CLI has no FastAPI lifespan to migrate the
+    # operational database. Initialise before prediction metadata is queried.
+    from production import storage
+    storage.initialise()
     root = Path(root)
     with (root/'execution.lock').open('x'): pass
     plan = json.loads((root/'campaign.json').read_text())

@@ -1,0 +1,6 @@
+{
+  "receipt": "data/experiments/client-learning-verification-uncontended-v1/continuation/result.json",
+  "sha256": "586dba3c031e3964eb3ad75754ee615e2900a66c3f883a495bbfcfb80902c0bb",
+  "checkpoints_reverified": true,
+  "training_repeated": false
+}

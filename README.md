@@ -14,6 +14,14 @@ calibration, group-isolated evaluation and validation-selected operating points
 control review and escalation. Unqualified predictions remain in review;
 `AUTOMATION_ENABLED=false` remains the deployment default.
 
+The larger controlled-data results and current qualification receipts are in
+[Frozen checkpoint learning evaluation](data/reports/FROZEN_CHECKPOINT_LEARNING_EVALUATION.md).
+The adapted specialist scored 3,591/3,600 semantic assertions and 391/400
+nine-field exact matches on held-out AI-authored compositions. This did not
+establish a low-review operating point or customer accuracy. Qwen remains the
+generative model family; see [the local model/runtime decision](docs/LOCAL_MODEL_SELECTION.md)
+for why the faster sibling-project serving profile is a distinct condition.
+
 The event-level learning milestone connects linked Prowide messages, append-only
 AI/human reviews, protected dataset versions, durable local Laya/Qwen jobs, common
 evaluation and experimental selection/rollback. See
@@ -34,7 +42,7 @@ distinct from human/expert reviews. See the [training framework guide](training/
 and Model Lab. Building and testing this workflow does not require waiting for
 expert customer labels; establishing customer accuracy still does.
 
-Latest framework verification: **2,175 software tests and 26 browser tests pass**, with real official Laya and Qwen3.8-27B quantised training/save/reload/API execution qualified separately. [Read the event-learning verification](data/reports/ISO15022_EVENT_LEARNING_VERIFICATION.md) and [earlier checkpoint qualification](data/reports/QWEN_TRAINABLE_CHECKPOINT_QUALIFICATION.md). The earlier controlled experiment also recorded13 live local-model integration test passes. The controlled A–E experiment persisted **1,025 predictions** over 205 authored/synthetic records, including 497 actual local LLM invocations. The historical public baseline remains **7,683 unlabelled source-row outputs with zero failed rows**. Authored semantic quality failures remain visible; they are not software-test passes. Automatic processing remains disabled. [Read the controlled evaluation](data/reports/LAYA_LLM_ARCHITECTURE_EVALUATION.md) and [historical public-corpus verification](data/reports/VERIFICATION.md).
+Latest framework verification: **2,249 software tests, 28 browser tests and 2 opt-in real-model release tests pass**, with real official Laya and Qwen3.8-27B quantised training/save/reload/API execution qualified separately. [Read the event-learning verification](data/reports/ISO15022_EVENT_LEARNING_VERIFICATION.md) and [earlier checkpoint qualification](data/reports/QWEN_TRAINABLE_CHECKPOINT_QUALIFICATION.md). The earlier controlled experiment also recorded13 live local-model integration test passes. The controlled A–E experiment persisted **1,025 predictions** over 205 authored/synthetic records, including 497 actual local LLM invocations. The historical public baseline remains **7,683 unlabelled source-row outputs with zero failed rows**. Authored semantic quality failures remain visible; they are not software-test passes. Automatic processing remains disabled. [Read the controlled evaluation](data/reports/LAYA_LLM_ARCHITECTURE_EVALUATION.md) and [historical public-corpus verification](data/reports/VERIFICATION.md).
 
 Historical supervised research: **supplied synthetic test all-supplied-field exact match 6/100 → 100/100; unchanged semantic challenge cases satisfying supplied partial assertions 30/57 → 37/57.** The fine-tuned model still makes **12 challenge errors with policy score ≥98%**. The supplied test has known duplicate overlap and two previously exposed labels. **Automation remains disabled; no customer accuracy claim is supported.** See [the complete study](data/reports/LAYA_TRAINING_EVALUATION.md) and [every remaining challenge failure](data/reports/LAYA_FINETUNED_CHALLENGE_ERRORS.md).
 

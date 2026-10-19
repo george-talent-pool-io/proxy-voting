@@ -5,13 +5,22 @@ release, never opens calibration/frozen answers and never promotes automation.
 """
 import argparse
 from dataclasses import asdict
-from training.framework import jobs
+from training.framework import jobs, event_data, events
 from production import learning
 from fast_cascade.routing import Policy
 
 
 def run(ident,qwen_seed,laya_job):
-    spec={'bundle_id':'event-loop-v1','dataset_id':'event-loop-isolated-v2',
+    # Older snapshots predate archived raw-message provenance. Re-freeze only
+    # the same TRAIN/VALIDATION events, never CALIBRATION/FROZEN_TEST labels.
+    previous=jobs.member('event-datasets','event-loop-isolated-v2')
+    selected=[r for role in ('TRAIN','VALIDATION') for r in event_data.load_inputs(previous,role)[1]]
+    for row in selected:
+        if events.get(row['id'])['snapshot_hash']!=row['snapshot_hash']:
+            raise ValueError('Engineering source changed; curate a new fixture explicitly')
+    dataset_id=ident+'-development'
+    event_data.freeze_dataset(jobs.member('event-datasets',dataset_id),event_ids={r['id'] for r in selected})
+    spec={'bundle_id':'event-loop-v1','dataset_id':dataset_id,
           'actor':'AI framework integration qualification','max_seconds':3600,
           'stages':[{'name':'specialist','reuse_job':laya_job},{'name':'generative','reuse_seed':qwen_seed}],
           'candidates':[{'name':'CASCADE_CONSERVATIVE','mode':'LAYA_QWEN','laya_stage':'specialist','llm_stage':'generative',

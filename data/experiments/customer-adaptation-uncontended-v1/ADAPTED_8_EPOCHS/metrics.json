@@ -1,0 +1,754 @@
+{
+  "cases": 600,
+  "cases_satisfying_all_supplied_assertions": 588,
+  "assertions": 5400,
+  "correct_assertions": 5388,
+  "assertion_accuracy": 0.9977777777777778,
+  "case_exact_match_scope": "All supplied assertions only; not all fields unless dataset is completely labelled",
+  "fields": {
+    "votability": {
+      "n": 600,
+      "correct": 600,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "f1_by_class": {
+        "VOTABLE": 1.0
+      },
+      "balanced_accuracy": 1.0,
+      "positive_label": "VOTABLE",
+      "positive_support": 600,
+      "negative_support": 0,
+      "positive_precision": 1.0,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": null,
+      "positive_f1": 1.0,
+      "support": {
+        "VOTABLE": 600
+      },
+      "predicted_support": {
+        "VOTABLE": 600
+      },
+      "labels": [
+        "VOTABLE"
+      ],
+      "confusion_matrix": [
+        [
+          600
+        ]
+      ],
+      "not_supported": 0
+    },
+    "other_voting_restriction": {
+      "n": 600,
+      "correct": 599,
+      "accuracy": 0.9983333333333333,
+      "macro_f1": 0.9988416182592917,
+      "f1_by_class": {
+        "YES": 0.998109640831758,
+        "NO": 0.9984152139461173,
+        "UNKNOWN": 1.0
+      },
+      "balanced_accuracy": 0.9989451476793249,
+      "positive_label": "YES",
+      "positive_support": 264,
+      "negative_support": 316,
+      "positive_precision": 0.9962264150943396,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 0.9968354430379747,
+      "positive_f1": 0.998109640831758,
+      "support": {
+        "YES": 264,
+        "NO": 316,
+        "UNKNOWN": 20
+      },
+      "predicted_support": {
+        "YES": 265,
+        "NO": 315,
+        "UNKNOWN": 20
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          315,
+          0,
+          1
+        ],
+        [
+          0,
+          20,
+          0
+        ],
+        [
+          0,
+          0,
+          264
+        ]
+      ],
+      "not_supported": 0
+    },
+    "registration_required": {
+      "n": 600,
+      "correct": 600,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "f1_by_class": {
+        "NO": 1.0,
+        "YES": 1.0,
+        "UNKNOWN": 1.0
+      },
+      "balanced_accuracy": 1.0,
+      "positive_label": "YES",
+      "positive_support": 256,
+      "negative_support": 328,
+      "positive_precision": 1.0,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 1.0,
+      "positive_f1": 1.0,
+      "support": {
+        "NO": 328,
+        "YES": 256,
+        "UNKNOWN": 16
+      },
+      "predicted_support": {
+        "NO": 328,
+        "YES": 256,
+        "UNKNOWN": 16
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          328,
+          0,
+          0
+        ],
+        [
+          0,
+          16,
+          0
+        ],
+        [
+          0,
+          0,
+          256
+        ]
+      ],
+      "not_supported": 0
+    },
+    "securities_lending_recall_required": {
+      "n": 600,
+      "correct": 600,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "f1_by_class": {
+        "NO": 1.0,
+        "YES": 1.0,
+        "UNKNOWN": 1.0
+      },
+      "balanced_accuracy": 1.0,
+      "positive_label": "YES",
+      "positive_support": 212,
+      "negative_support": 374,
+      "positive_precision": 1.0,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 1.0,
+      "positive_f1": 1.0,
+      "support": {
+        "NO": 374,
+        "YES": 212,
+        "UNKNOWN": 14
+      },
+      "predicted_support": {
+        "NO": 374,
+        "YES": 212,
+        "UNKNOWN": 14
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          374,
+          0,
+          0
+        ],
+        [
+          0,
+          14,
+          0
+        ],
+        [
+          0,
+          0,
+          212
+        ]
+      ],
+      "not_supported": 0
+    },
+    "share_blocking": {
+      "n": 600,
+      "correct": 592,
+      "accuracy": 0.9866666666666667,
+      "macro_f1": 0.9904761904761905,
+      "f1_by_class": {
+        "NO": 0.9880952380952381,
+        "YES": 0.9833333333333333,
+        "UNKNOWN": 1.0
+      },
+      "balanced_accuracy": 0.9921568627450981,
+      "positive_label": "YES",
+      "positive_support": 236,
+      "negative_support": 340,
+      "positive_precision": 0.9672131147540983,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 0.9764705882352941,
+      "positive_f1": 0.9833333333333333,
+      "support": {
+        "NO": 340,
+        "YES": 236,
+        "UNKNOWN": 24
+      },
+      "predicted_support": {
+        "NO": 332,
+        "YES": 244,
+        "UNKNOWN": 24
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          332,
+          0,
+          8
+        ],
+        [
+          0,
+          24,
+          0
+        ],
+        [
+          0,
+          0,
+          236
+        ]
+      ],
+      "not_supported": 0
+    },
+    "split_voting_restricted": {
+      "n": 600,
+      "correct": 597,
+      "accuracy": 0.995,
+      "macro_f1": 0.9963660359406411,
+      "f1_by_class": {
+        "NO": 0.9959946595460614,
+        "YES": 0.993103448275862,
+        "UNKNOWN": 1.0
+      },
+      "balanced_accuracy": 0.9973404255319149,
+      "positive_label": "YES",
+      "positive_support": 216,
+      "negative_support": 376,
+      "positive_precision": 0.9863013698630136,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 0.9920212765957447,
+      "positive_f1": 0.993103448275862,
+      "support": {
+        "NO": 376,
+        "YES": 216,
+        "UNKNOWN": 8
+      },
+      "predicted_support": {
+        "NO": 373,
+        "YES": 219,
+        "UNKNOWN": 8
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          373,
+          0,
+          3
+        ],
+        [
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          0,
+          216
+        ]
+      ],
+      "not_supported": 0
+    },
+    "holding_confirmation_required": {
+      "n": 600,
+      "correct": 600,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "f1_by_class": {
+        "NO": 1.0,
+        "YES": 1.0,
+        "UNKNOWN": 1.0
+      },
+      "balanced_accuracy": 1.0,
+      "positive_label": "YES",
+      "positive_support": 264,
+      "negative_support": 326,
+      "positive_precision": 1.0,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 1.0,
+      "positive_f1": 1.0,
+      "support": {
+        "NO": 326,
+        "YES": 264,
+        "UNKNOWN": 10
+      },
+      "predicted_support": {
+        "NO": 326,
+        "YES": 264,
+        "UNKNOWN": 10
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          326,
+          0,
+          0
+        ],
+        [
+          0,
+          10,
+          0
+        ],
+        [
+          0,
+          0,
+          264
+        ]
+      ],
+      "not_supported": 0
+    },
+    "poa_required": {
+      "n": 600,
+      "correct": 600,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "f1_by_class": {
+        "NO": 1.0,
+        "YES": 1.0,
+        "UNKNOWN": 1.0
+      },
+      "balanced_accuracy": 1.0,
+      "positive_label": "YES",
+      "positive_support": 224,
+      "negative_support": 362,
+      "positive_precision": 1.0,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 1.0,
+      "positive_f1": 1.0,
+      "support": {
+        "NO": 362,
+        "YES": 224,
+        "UNKNOWN": 14
+      },
+      "predicted_support": {
+        "NO": 362,
+        "YES": 224,
+        "UNKNOWN": 14
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          362,
+          0,
+          0
+        ],
+        [
+          0,
+          14,
+          0
+        ],
+        [
+          0,
+          0,
+          224
+        ]
+      ],
+      "not_supported": 0
+    },
+    "beneficial_owner_disclosure_required": {
+      "n": 600,
+      "correct": 600,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "f1_by_class": {
+        "YES": 1.0,
+        "NO": 1.0,
+        "UNKNOWN": 1.0
+      },
+      "balanced_accuracy": 1.0,
+      "positive_label": "YES",
+      "positive_support": 256,
+      "negative_support": 328,
+      "positive_precision": 1.0,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 1.0,
+      "positive_f1": 1.0,
+      "support": {
+        "YES": 256,
+        "NO": 328,
+        "UNKNOWN": 16
+      },
+      "predicted_support": {
+        "YES": 256,
+        "NO": 328,
+        "UNKNOWN": 16
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          328,
+          0,
+          0
+        ],
+        [
+          0,
+          16,
+          0
+        ],
+        [
+          0,
+          0,
+          256
+        ]
+      ],
+      "not_supported": 0
+    }
+  },
+  "final_status_labelled_cases": 0,
+  "customer_status_accuracy": null,
+  "manual_review_count": 600,
+  "uncertain_final_status_count": 118,
+  "llm_invocations": 0,
+  "llm_invalid_outputs": 0,
+  "high_confidence_wrong_assertions": 0,
+  "median_latency_ms": 119.21808344777673,
+  "p95_latency_ms": 132.60920904576778,
+  "failures": [
+    {
+      "id": "CC-288a28c87729a6ab-0",
+      "text": "The account is expressly exempt from beneficial-owner identity disclosure.\nVoting instructions are invited for the forthcoming shareholder assembly.\nRecall of the loaned position is a mandatory prerequisite for this investor to vote.\nSubmission of an ownership certificate is compulsory for voting.\nA holder who instructs a vote cannot sell the instructed position before the meeting ends.\nOnly holders with professional-investor status may cast votes.\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\nCash entitlements are reconciled separately by the income department. The payment currency has no bearing on proxy instructions.",
+      "field": "split_voting_restricted",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9928,
+        "NO": 0.0051,
+        "UNKNOWN": 0.0021
+      },
+      "confidence": null,
+      "margin": 0.9877,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "CC-288a28c87729a6ab-0"
+    },
+    {
+      "id": "CC-52fc24d56f9d10e6-0",
+      "text": "A holdings certificate may be supplied voluntarily, but no proof of ownership is required with the ballot.\nSecurities currently on loan must be recalled to exercise the voting rights.\nProfessional-investor registration is an optional service; retail holders can vote without it.\nShareholders may lodge their votes on the meeting resolutions through their custodian.\nDisclosure of the underlying beneficial owner is mandatory to exercise voting rights.\nA power of attorney is available as an optional convenience; holders can vote without it.\nRegistration for the webcast is optional and is not required for proxy voting.\nDifferent voting directions within one account are not permitted.\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\nMeeting venue directions and transport details are supplied for convenience; this paragraph does not impose an attendance condition.",
+      "field": "share_blocking",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9994,
+        "NO": 0.0004,
+        "UNKNOWN": 0.0002
+      },
+      "confidence": null,
+      "margin": 0.999,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "CC-52fc24d56f9d10e6-0"
+    },
+    {
+      "id": "CC-52fc24d56f9d10e6-1",
+      "text": "Voting investors must bring lent shares back from the borrower before voting.\n\nRegistration for the webcast is optional and is not required for proxy voting.\n\nA holdings certificate may be supplied voluntarily, but no proof of ownership is required with the ballot.\n\nA power of attorney is available as an optional convenience; holders can vote without it.\n\nProfessional-investor registration is an optional service; retail holders can vote without it.\n\nDifferent voting directions within one account are not permitted.\n\nThe holder must identify its ultimate beneficial owner before the voting agent will accept a ballot.\n\nVoting instructions are invited for the forthcoming shareholder assembly.\n\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\n\nPlease use the event reference when discussing document delivery. The contact centre cannot amend an instruction by telephone.",
+      "field": "share_blocking",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9997,
+        "NO": 0.0002,
+        "UNKNOWN": 0.0001
+      },
+      "confidence": null,
+      "margin": 0.9995,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "CC-52fc24d56f9d10e6-1"
+    },
+    {
+      "id": "CC-4d0981d2e901be26-1",
+      "text": "A holder who instructs a vote cannot sell the instructed position before the meeting ends.\n\nThe agent confirms that the additional professional-investor voting restriction does not apply to this event.\n\nVotes will be rejected unless the position is evidenced by a dated holding confirmation.\n\nSecurities currently on loan must be recalled to exercise the voting rights.\n\nShareholders may lodge their votes on the meeting resolutions through their custodian.\n\nVotes cannot be lodged without a signed power-of-attorney document.\n\nVoting instructions are accepted only after the holder has completed the separate registration procedure.\n\nProviding the ultimate owner name is voluntary; anonymous voting instructions remain accepted.\n\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\n\nAdministrative information: copies may be retained in the client document archive under the usual retention schedule.",
+      "field": "split_voting_restricted",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9967,
+        "NO": 0.0023,
+        "UNKNOWN": 0.001
+      },
+      "confidence": null,
+      "margin": 0.9944000000000001,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "CC-4d0981d2e901be26-1"
+    },
+    {
+      "id": "CC-93c6790ea5846ccc-1",
+      "text": "Voting investors must bring lent shares back from the borrower before voting.\n\nOnly holders with professional-investor status may cast votes.\n\nVoting instructions are invited for the forthcoming shareholder assembly.\n\nThe current terms expressly waive a power of attorney.\n\nA holder who instructs a vote cannot sell the instructed position before the meeting ends.\n\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\n\nThe agenda and annual accounts are available from the issuer. Requests for paper copies are administrative and optional.",
+      "field": "split_voting_restricted",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9994,
+        "NO": 0.0004,
+        "UNKNOWN": 0.0003
+      },
+      "confidence": null,
+      "margin": 0.999,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "CC-93c6790ea5846ccc-1"
+    },
+    {
+      "id": "CC-0a873d96d407054a-0",
+      "text": "Lending accounts may arrange a voluntary loan recall, but recall is not a condition for this vote.\nThe current general meeting offers eligible shareholders a proxy ballot.\nDifferent voting directions within one account are not permitted.\nA holdings certificate may be supplied voluntarily, but no proof of ownership is required with the ballot.\nThe current terms expressly waive share blocking.\nA power of attorney is available as an optional convenience; holders can vote without it.\nAnonymous voting instructions are rejected: the beneficial owner identity must be disclosed.\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\nPlease use the event reference when discussing document delivery. The contact centre cannot amend an instruction by telephone.",
+      "field": "other_voting_restriction",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.8676,
+        "NO": 0.1295,
+        "UNKNOWN": 0.0028
+      },
+      "confidence": null,
+      "margin": 0.7381,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "CC-0a873d96d407054a-0"
+    },
+    {
+      "id": "CC-8abdb1dcc0a3c7e2-0",
+      "text": "A formal power of attorney is a mandatory prerequisite for this account to vote.\nDifferent voting directions within one account are not permitted.\nThe current general meeting offers eligible shareholders a proxy ballot.\nVoting instructions are accepted only after the holder has completed the separate registration procedure.\nVoting participation is conditional on the holder satisfying the additional professional-investor qualification.\nA certificate of holdings must accompany each set of voting instructions.\nProviding the ultimate owner name is voluntary; anonymous voting instructions remain accepted.\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\nSecurity descriptions may be abbreviated in account statements. The issuer legal name remains unchanged.",
+      "field": "share_blocking",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9997,
+        "NO": 0.0002,
+        "UNKNOWN": 0.0001
+      },
+      "confidence": null,
+      "margin": 0.9995,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "CC-8abdb1dcc0a3c7e2-0"
+    },
+    {
+      "id": "CC-8abdb1dcc0a3c7e2-1",
+      "text": "A formal power of attorney is a mandatory prerequisite for this account to vote.\n\nSubmission of an ownership certificate is compulsory for voting.\n\nShareholders may lodge their votes on the meeting resolutions through their custodian.\n\nOnly holders with professional-investor status may cast votes.\n\nVoting instructions are accepted only after the holder has completed the separate registration procedure.\n\nDifferent voting directions within one account are not permitted.\n\nProviding the ultimate owner name is voluntary; anonymous voting instructions remain accepted.\n\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\n\nMeeting venue directions and transport details are supplied for convenience; this paragraph does not impose an attendance condition.",
+      "field": "share_blocking",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9997,
+        "NO": 0.0002,
+        "UNKNOWN": 0.0001
+      },
+      "confidence": null,
+      "margin": 0.9995,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "CC-8abdb1dcc0a3c7e2-1"
+    },
+    {
+      "id": "CC-23f784928bde2cb8-1",
+      "text": "Submission of an ownership certificate is compulsory for voting.\n\nThe current general meeting offers eligible shareholders a proxy ballot.\n\nA formal power of attorney is a mandatory prerequisite for this account to vote.\n\nPre-registration with the voting agent is mandatory for this holder.\n\nVoting is conditional on delivery of the beneficial owner name and identity details.\n\nNo recall of securities on loan is required for voting.\n\nDifferent voting directions within one account are not permitted.\n\nThe service accepts votes without imposing the additional professional-investor voting restriction.\n\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\n\nThe intermediary maintains separate operational records for pending trades and reconciles unmatched settlements daily.",
+      "field": "share_blocking",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9996,
+        "NO": 0.0003,
+        "UNKNOWN": 0.0001
+      },
+      "confidence": null,
+      "margin": 0.9993000000000001,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "CC-23f784928bde2cb8-1"
+    },
+    {
+      "id": "CC-7b89c31483a2d7c9-0",
+      "text": "The current terms expressly waive recall of securities on loan.\nVoting participation is conditional on the holder satisfying the additional professional-investor qualification.\nDifferent voting directions within one account are not permitted.\nA power of attorney is available as an optional convenience; holders can vote without it.\nA certificate of holdings must accompany each set of voting instructions.\nDisclosure of the underlying beneficial owner is mandatory to exercise voting rights.\nShareholders may lodge their votes on the meeting resolutions through their custodian.\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\nSecurity descriptions may be abbreviated in account statements. The issuer legal name remains unchanged.",
+      "field": "share_blocking",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9981,
+        "NO": 0.0013,
+        "UNKNOWN": 0.0006
+      },
+      "confidence": null,
+      "margin": 0.9968,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "CC-7b89c31483a2d7c9-0"
+    },
+    {
+      "id": "CC-7b89c31483a2d7c9-1",
+      "text": "Shareholders may lodge their votes on the meeting resolutions through their custodian.\n\nOnly holders with professional-investor status may cast votes.\n\nThe holder need not satisfy recall of securities on loan to vote.\n\nThe holder must identify its ultimate beneficial owner before the voting agent will accept a ballot.\n\nDifferent voting directions within one account are not permitted.\n\nA power of attorney is available as an optional convenience; holders can vote without it.\n\nSubmission of an ownership certificate is compulsory for voting.\n\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\n\nThe intermediary maintains separate operational records for pending trades and reconciles unmatched settlements daily.",
+      "field": "share_blocking",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9999,
+        "NO": 0.0001,
+        "UNKNOWN": 0.0
+      },
+      "confidence": null,
+      "margin": 0.9998,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "CC-7b89c31483a2d7c9-1"
+    },
+    {
+      "id": "CC-a26a93d4393a877f-0",
+      "text": "The current terms expressly waive the additional professional-investor voting restriction.\nVoting instructions are invited for the forthcoming shareholder assembly.\nDifferent voting directions within one account are not permitted.\nThe account is expressly exempt from additional voting registration.\nSubmission of an ownership certificate is compulsory for voting.\nAnonymous voting instructions are rejected: the beneficial owner identity must be disclosed.\nA power of attorney is available as an optional convenience; holders can vote without it.\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\nAdministrative information: copies may be retained in the client document archive under the usual retention schedule.",
+      "field": "share_blocking",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9996,
+        "NO": 0.0003,
+        "UNKNOWN": 0.0002
+      },
+      "confidence": null,
+      "margin": 0.9993000000000001,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "CC-a26a93d4393a877f-0"
+    }
+  ],
+  "scope": "Synthetic/authored research only. No customer accuracy or automation claim.",
+  "benchmark_final_status": {
+    "n": 600,
+    "correct": 484
+  },
+  "benchmark_deadline": {
+    "n": 600,
+    "correct": 600
+  }
+}

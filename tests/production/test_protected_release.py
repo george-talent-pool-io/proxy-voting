@@ -77,6 +77,24 @@ def test_lexical_duplicates_and_declared_families_form_one_independent_component
     assert len(set(groups.values()))==1
 
 
+def test_active_structured_snapshot_defines_input_type_without_message_parser_key(db):
+    storage.initialise()
+    row={'id':'unregistered','messages':[{'id':1}], 'active_structure':{'parser':'PROWIDE'}}
+    assert evaluation.input_metadata(row)['input_type']=='PROWIDE_PARSEABLE'
+    row['context_kind']='RECOVERED_REVIEW_CONTEXT'
+    assert evaluation.input_metadata(row)['input_type']=='LENIENT_ISO_RECOVERABLE'
+
+
+def test_legacy_snapshot_without_raw_sources_rejected_before_model_load(tmp_path,monkeypatch):
+    legacy={'id':'legacy','messages':[{'id':1,'source_hash':'archived'}]}
+    monkeypatch.setattr(evaluation,'load_inputs',lambda *a:({},[legacy]))
+    def unexpected(*a,**kw): pytest.fail('Legacy provenance must fail before loading any model')
+    monkeypatch.setattr(releases,'ReleaseModel',unexpected)
+    with pytest.raises(ValueError,match='raw-message provenance'):
+        evaluation.predict('dataset','VALIDATION','release',tmp_path/'predictions','2026-10-18T12:00:00+00:00')
+    assert not (tmp_path/'predictions').exists()
+
+
 def test_final_truth_inconsistency_and_timezone_are_rejected(db):
     storage.initialise()
     r=service.import_rows('a',[row()],'operator');eid=r['rows'][0]['event_id']
@@ -87,7 +105,9 @@ def test_final_truth_inconsistency_and_timezone_are_rejected(db):
 
 
 def test_customer_training_never_opens_calibration_or_frozen_keys(registered, tmp_path, monkeypatch):
-    storage.initialise()
+    # A CLI campaign must also work before the customer API has ever started.
+    with store.connect() as c:
+        assert not c.execute("SELECT name FROM sqlite_master WHERE name='client_metadata'").fetchone()
     from production import learning
     from training.framework import campaigns
     from training.framework.bundle import jsonl, sha
@@ -122,6 +142,8 @@ def test_customer_training_never_opens_calibration_or_frozen_keys(registered, tm
         def close(self):pass
     monkeypatch.setattr(releases,'ReleaseModel',Model)
     report=learning.run(root)
+    with store.connect() as c:
+        assert c.execute("SELECT name FROM sqlite_master WHERE name='client_metadata'").fetchone()
     assert report['calibration_or_test_answers_opened'] is False
     assert (jobs.member('releases',report['selected_release'])/'SEALED.json').exists()
     assert campaigns.status(root)['state']=='COMPLETED'

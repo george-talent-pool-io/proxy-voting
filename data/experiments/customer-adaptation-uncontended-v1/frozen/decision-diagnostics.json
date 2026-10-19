@@ -1,0 +1,26 @@
+{
+  "scope": "Post-scoring diagnostic only; no model/criteria/threshold changes",
+  "prediction_sha256": "df3fd7d24b31794c14d6f48be0d9cde7b37c354f90f92e5674cc66295b1b7d95",
+  "answer_sha256": "a5d510e23d8e3238c1d27303c766d9add1d31a9c5a8735db4c3894626807d5de",
+  "expected_status_support": {
+    "VOTABLE_WITH_RESTRICTION": 400
+  },
+  "confusion": [
+    {
+      "expected": "VOTABLE_WITH_RESTRICTION",
+      "predicted": "UNCERTAIN_MANUAL_REVIEW",
+      "count": 76
+    },
+    {
+      "expected": "VOTABLE_WITH_RESTRICTION",
+      "predicted": "VOTABLE_WITH_RESTRICTION",
+      "count": 324
+    }
+  ],
+  "errors": 76,
+  "all_status_errors_require_review": true,
+  "error_conflict_counts": {
+    "holding_confirmation_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION": 34,
+    "registration_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION": 42
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "release_sha256": "289a6ce5eeb7dd7a67cc87812b9e95563940b05cc3ae9881851cdf6f43350676",
+  "identity": "87c23a9692d1234eacec33a9bd007189e6c132ca245c815b8602da79928e3d0a",
+  "validation_path": "/Users/georgebilchev/wavionex/proxy-voting/data/experiments/client-learning-verification-final-v2/customer-replay/workspace/campaigns/client-replay-v1/validation-SPECIALIST",
+  "validation_sha256": "5bd9aefabcb84baa9630eeb1f260646fffa822d35368cb38b190d54cca36bdc0",
+  "calibration": null,
+  "sealed_at": "2026-10-19T09:40:54.747971+00:00",
+  "automation_enabled": false
+}

@@ -1,0 +1,21 @@
+{
+  "version": "customer-development-v1",
+  "plan_sha256": "7beb0d26ef47f9e2585d6827781d3b53a4246223e4bdea1e5b253ea7e8e6a500",
+  "production_sources": {
+    "__init__.py": "ca184e30743620c454c819a450d3ee18da2eebff064d3d0c49a67b14ffeaebb0",
+    "cascade_policy.py": "32969513d55fba75bdd76538b2c05ab5dfde35ce2fa17fc0c4ad7c08133c2607",
+    "confidence.py": "4f0b86a712a5a6995fea627590d54c26749b1e6e057c682e9fbca3760ada66f4",
+    "evaluation.py": "ed8f87b310f3cee015e4be49d29b1f5b594098de5c9af7ee9809abfe0d7a8c40",
+    "evidence_basis.py": "937ac9596ef9117f2f5b00836bd902cc7ce4af07ba50bc8f40412d483420167d",
+    "installation.py": "4489bc7b44426b5c09055c9dd8cff01bf0ad3a45564082205e40d8e9adc7babb",
+    "learning.py": "5b0495cdc4834f9045b011b8386700233718059e862f6e416abf2cef7eff0337",
+    "operating.py": "761c5ecfa494bd821203317f76179a8a0497379ea83953d600eb56f8904e7b57",
+    "qualification.py": "b7399fcfb38e415d96476f376dc3f0e9d358be594578cb403389f7c5f9124f08",
+    "resources.py": "2f602e6a0dce849f74266a8fcec3f742c869068f850079f45bd6706c8d24d1a9",
+    "security.py": "baad5d7ccd761dd60b8fda561fa7f7df18b5f6dcabf0710a5b99615a439eaeb0",
+    "service.py": "f14e303dff8e6ed762b2302e592e4ce6095074357b45caf154e83f4ccc80a476",
+    "storage.py": "27cfa221f7a4d12e2d05d52acb0df72fab45275d90d24d5b6904269a5b90c2dc",
+    "worker.py": "791c8078da9480e9b68b06c31f9ad22f006fcb82d705d0aa19ff5a8d79ffab64"
+  },
+  "calibration_or_test_scoring": false
+}

@@ -1,0 +1,181 @@
+{
+  "frozen_calibration": {
+    "votability": {
+      "n": 324,
+      "brier": 3.4807306749834163e-06,
+      "ece": 0.001865671641791411,
+      "bins": [
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 324,
+          "mean_probability": 0.9981343283582086,
+          "observed_correctness": 1.0
+        }
+      ],
+      "correct": 324,
+      "wrong": 0,
+      "available": 324,
+      "total": 400,
+      "scope": "Supported-confidence subset only; unavailable outcomes retain review/null"
+    },
+    "share_blocking": {
+      "n": 266,
+      "brier": 0.00022276676319893209,
+      "ece": 0.014925373134328512,
+      "bins": [
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 266,
+          "mean_probability": 0.9850746268656715,
+          "observed_correctness": 1.0
+        }
+      ],
+      "correct": 266,
+      "wrong": 0,
+      "available": 266,
+      "total": 400,
+      "scope": "Supported-confidence subset only; unavailable outcomes retain review/null"
+    },
+    "poa_required": {
+      "n": 322,
+      "brier": 3.4807306749834168e-06,
+      "ece": 0.001865671641791411,
+      "bins": [
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 322,
+          "mean_probability": 0.9981343283582086,
+          "observed_correctness": 1.0
+        }
+      ],
+      "correct": 322,
+      "wrong": 0,
+      "available": 322,
+      "total": 400,
+      "scope": "Supported-confidence subset only; unavailable outcomes retain review/null"
+    },
+    "registration_required": {
+      "n": 282,
+      "brier": 3.4807306749834168e-06,
+      "ece": 0.0018656716417913,
+      "bins": [
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 282,
+          "mean_probability": 0.9981343283582087,
+          "observed_correctness": 1.0
+        }
+      ],
+      "correct": 282,
+      "wrong": 0,
+      "available": 282,
+      "total": 400,
+      "scope": "Supported-confidence subset only; unavailable outcomes retain review/null"
+    },
+    "beneficial_owner_disclosure_required": {
+      "n": 285,
+      "brier": 3.480730674983416e-06,
+      "ece": 0.001865671641791411,
+      "bins": [
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 285,
+          "mean_probability": 0.9981343283582086,
+          "observed_correctness": 1.0
+        }
+      ],
+      "correct": 285,
+      "wrong": 0,
+      "available": 285,
+      "total": 400,
+      "scope": "Supported-confidence subset only; unavailable outcomes retain review/null"
+    },
+    "holding_confirmation_required": {
+      "n": 272,
+      "brier": 3.4807306749834163e-06,
+      "ece": 0.0018656716417913,
+      "bins": [
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 272,
+          "mean_probability": 0.9981343283582087,
+          "observed_correctness": 1.0
+        }
+      ],
+      "correct": 272,
+      "wrong": 0,
+      "available": 272,
+      "total": 400,
+      "scope": "Supported-confidence subset only; unavailable outcomes retain review/null"
+    },
+    "split_voting_restricted": {
+      "n": 319,
+      "brier": 0.00012530630429939804,
+      "ece": 0.011194029850746134,
+      "bins": [
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 319,
+          "mean_probability": 0.9888059701492539,
+          "observed_correctness": 1.0
+        }
+      ],
+      "correct": 319,
+      "wrong": 0,
+      "available": 319,
+      "total": 400,
+      "scope": "Supported-confidence subset only; unavailable outcomes retain review/null"
+    },
+    "securities_lending_recall_required": {
+      "n": 288,
+      "brier": 3.4807306749834168e-06,
+      "ece": 0.0018656716417913,
+      "bins": [
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 288,
+          "mean_probability": 0.9981343283582087,
+          "observed_correctness": 1.0
+        }
+      ],
+      "correct": 288,
+      "wrong": 0,
+      "available": 288,
+      "total": 400,
+      "scope": "Supported-confidence subset only; unavailable outcomes retain review/null"
+    },
+    "other_voting_restriction": {
+      "n": 276,
+      "brier": 1.3922922699932837e-05,
+      "ece": 0.003731343283581934,
+      "bins": [
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 276,
+          "mean_probability": 0.9962686567164181,
+          "observed_correctness": 1.0
+        }
+      ],
+      "correct": 276,
+      "wrong": 0,
+      "available": 276,
+      "total": 400,
+      "scope": "Supported-confidence subset only; unavailable outcomes retain review/null"
+    }
+  },
+  "calibrated_high_confidence_error_count": 0,
+  "prediction_sha256": "df3fd7d24b31794c14d6f48be0d9cde7b37c354f90f92e5674cc66295b1b7d95",
+  "confidence_sha256": "c55c2ec7632ede41c26fa5be1e6503cdb3bdd89e2dabc37178270d5147db2502",
+  "analysis_script_sha256": "a2bc1b246bfe3954d854af216f4997c3bd4d7f7f845e4d550d5050afd58e6632",
+  "threshold_diagnostic": 0.98,
+  "scope": "Post-scoring diagnostic only; no tuning or release changes"
+}

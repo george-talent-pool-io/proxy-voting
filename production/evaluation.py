@@ -14,7 +14,8 @@ def input_metadata(row):
     with store.connect() as c: found = c.execute('SELECT * FROM client_metadata WHERE event_id=?', (row['id'],)).fetchone()
     meta = dict(found) if found else {'language': 'UNKNOWN', 'population': 'UNDECLARED'}
     meta['input_type'] = ('LENIENT_ISO_RECOVERABLE' if row.get('context_kind') == 'RECOVERED_REVIEW_CONTEXT' else
-                          'PROWIDE_PARSEABLE' if any(m['parser'] == 'PROWIDE' for m in row['messages']) else 'UNSTRUCTURED_NOTICE')
+                          'PROWIDE_PARSEABLE' if (row.get('active_structure') or {}).get('parser') == 'PROWIDE' or
+                          any(m.get('parser') == 'PROWIDE' for m in row['messages']) else 'UNSTRUCTURED_NOTICE')
     return meta
 
 
@@ -28,6 +29,8 @@ def predict(dataset, role, release, output, reference, check=None, *, calibratio
         ids=set(entry['ids']);rows=[r for r in rows if r['id'] in ids]
         if {r['id'] for r in rows}!=ids:raise ValueError('Calibration partition input mismatch')
     if not rows: raise ValueError('Empty evaluation role')
+    if any('raw_source' not in message for row in rows for message in row.get('messages', [])):
+        raise ValueError('Legacy event snapshot lacks raw-message provenance; explicitly freeze a new dataset before evaluation')
     output = Path(output); output.mkdir(parents=True, exist_ok=False)
     model = releases.ReleaseModel(release, sealed=role != 'VALIDATION'); predictions = []
     try:

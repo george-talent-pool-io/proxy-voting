@@ -6,6 +6,10 @@ separate writable customer workspace. They are not part of the source release or
 Docker image. The AI qualification corpus and its trained adapters are also
 excluded. The model volume is mounted read-only during service operation.
 
+The current Qwen choice and the distinct optimized serving candidate are
+documented in [Local model selection](LOCAL_MODEL_SELECTION.md). A faster
+quantisation/runtime/profile does not inherit another release's calibration.
+
 ## Installation and starting state
 
 Use `docs/CLIENT_LINUX_DEPLOYMENT.md` for the authenticated single-tenant service.

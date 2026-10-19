@@ -1,6 +1,6 @@
 # Client ISO 15022 learning platform: implementation and readiness
 
-Date: 2026-10-18. Target agreed with the user: **single-tenant Docker on the client's Linux server**. Qualification evidence in this phase uses **AI-authored/control data**, not customer expert labels.
+Updated: 2026-10-19. Target agreed with the user: **single-tenant Docker on the client's Linux server**, potentially AWS. Qualification evidence in this phase uses **AI-authored/control data**, not customer expert labels. Model performance was measured on the development Mac, not EC2.
 
 ## Decision
 
@@ -8,12 +8,23 @@ The repository now contains a separate customer deployment and qualification pat
 
 The remaining sign-off dependencies are concrete:
 
-1. Qualify the exact Linux architecture, memory/GPU, Laya checkpoint and selected pretrained LLM on the customer's hardware. This machine's approximately 4 GB Docker VM cannot perform the required full Laya qualification. A production CUDA image/checkpoint has not been qualified or delivered as a supported profile.
-2. Fit and independently validate actual model correctness calibration on representative client data. The current real-model cohort is insufficient, so actual numerical confidence remains unavailable.
+1. Qualify the exact Linux architecture, memory/GPU, Laya checkpoint and selected pretrained LLM on the customer's hardware. Mac training/inference qualification and Linux container-service qualification are separate. A production CUDA image/checkpoint has not been qualified or delivered as a supported profile.
+2. Fit and independently validate correctness calibration on representative client data. Actual model calibration is now implemented and evaluated on the controlled AI cohort, with numerical confidence only in supported strata. It does not transfer to a new customer's population. No threshold met the controlled study's predeclared 98% precision lower-bound requirement.
 3. Measure the predeclared accuracy/critical-recall/review-rate policy on independent expert-labelled client data. AI labels can qualify software mechanics but cannot unlock customer automation.
 4. Agree the client's ISO message/profile coverage, operational capacity, monitoring, recovery objectives, identity administration and security acceptance. Prowide Core parse success is not complete SWIFT standards/business validation.
 
 These are not concealed behind the historical 57-case challenge or the 7,683 unlabelled public excerpts. There is currently no passed customer qualification and automation remains disabled.
+
+The [frozen-checkpoint learning evaluation](FROZEN_CHECKPOINT_LEARNING_EVALUATION.md)
+records the larger engineering study: 232 TRAIN notices including TRAIN-only
+replay, 600 validation, 800 calibration and 400 protected test notices. The
+selected Laya scored 3,591/3,600 factorised test assertions, 391/400 nine-field
+exact matches and 324/400 final statuses. All positive restrictions were found
+in this restricted cohort. The unchanged challenge scored 70/95 supplied
+assertions, demonstrating that the constructed-data gain does not establish
+broad language generalisation. No test-trained checkpoint or test calibrator is
+part of the product delivery. The linked report records the real application,
+continued-learning and persistence checks separately from those quality metrics.
 
 ## Implemented architecture
 

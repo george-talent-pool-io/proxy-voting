@@ -1,0 +1,43 @@
+{
+  "parent_identity": "4edd2bf110127eb154c6c9091eac167ca0a49ac97d67442b01e0102cc1a44a7b",
+  "parent_unchanged": true,
+  "job": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/jobs/continuation-QWEN",
+  "result": {
+    "backend": "MLX_QLORA",
+    "optimiser_steps": 1,
+    "micro_batches": 1,
+    "trainable_parameters": 94208,
+    "weights_changed": true,
+    "curve": [
+      {
+        "kind": "VALIDATION",
+        "iteration": 0,
+        "val_loss": 0.1401975452899933,
+        "val_time": 25.02092658309266
+      },
+      {
+        "kind": "TRAIN",
+        "iteration": 1,
+        "train_loss": 0.12451139092445374,
+        "learning_rate": 4.999999873689376e-05,
+        "iterations_per_second": 0.010082498476750712,
+        "tokens_per_second": 2.9239245582577063,
+        "trained_tokens": 290,
+        "peak_memory": 22.963117922
+      }
+    ],
+    "validation_token_cross_entropy": 0.13902804255485535,
+    "model_load_ms": 2631.266792071983,
+    "peak_mlx_allocated_bytes": 22963117922,
+    "elapsed_seconds": 154.67789979209192,
+    "reload_parity": {
+      "passed": true,
+      "max_absolute_logit_difference": 0.0,
+      "absolute_relative_tolerance": 0.005,
+      "probe_tokens": 128
+    },
+    "validation_kind": "Teacher-forced JSON loss; not semantic accuracy",
+    "training_mask": "Assistant JSON tokens only; complete source, no truncation"
+  },
+  "model_manifest_sha256": "9ed425c6de7338edf6bf399fd2f0b7e27117cc13f268d87fee6eb49b80bed4ef"
+}

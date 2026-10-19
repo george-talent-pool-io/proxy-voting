@@ -13,7 +13,7 @@ from pathlib import Path
 from training.framework.bundle import write
 
 
-def run(study,corpus,output,wait_pid=None):
+def run(study,corpus,output,wait_pid=None,continuation_receipt=None):
     output=Path(output);output.mkdir(parents=True,exist_ok=False);study=Path(study)
     if wait_pid:
         import psutil
@@ -33,8 +33,29 @@ def run(study,corpus,output,wait_pid=None):
         with (output/(name+'.log')).open('xb') as log:
             subprocess.run([sys.executable,*args],stdout=log,stderr=subprocess.STDOUT,check=True,env={**os.environ,**(env or {})})
         print('PASS '+name,flush=True)
-    continuation=output/'continuation'
-    execute('frozen-continuation',['-m','scripts.verify_frozen_continuation',str(continuation),'--corpus',corpus,'--laya-job',job])
+    if continuation_receipt:
+        # Recovery never pretends that a completed training proof ran again.
+        # Verify the original immutable checkpoints and parent seeds first.
+        from training.framework.runtime import verify_checkpoint
+        from training.framework import seeds
+        from training.framework.bundle import sha
+        receipt=Path(continuation_receipt)
+        prior=json.loads(receipt.read_text())
+        if prior['scope']!='AI_TEST_CONTINUATION_MECHANICS_ONLY' or set(prior['results'])!={'LAYA','QWEN'}:
+            raise ValueError('Wrong continuation receipt')
+        for proof in prior['results'].values():
+            path,plan,_=verify_checkpoint(proof['job'])
+            parent=seeds.verify(plan['spec']['parent_seed_path'])
+            if (not proof['parent_unchanged'] or parent['identity']!=proof['parent_identity'] or
+                sha(path/'model-manifest.json')!=proof['model_manifest_sha256'] or
+                not proof['result']['reload_parity']['passed']):
+                raise ValueError('Continuation evidence changed or failed')
+        continuation=receipt.parent
+        write(output/'REUSED_CONTINUATION.json',{'receipt':str(receipt),'sha256':sha(receipt),'checkpoints_reverified':True,
+                                               'training_repeated':False})
+    else:
+        continuation=output/(output.name+'-continuation')
+        execute('frozen-continuation',['-m','scripts.verify_frozen_continuation',str(continuation),'--corpus',corpus,'--laya-job',job])
     campaign=output.name+'-integration'
     execute('real-customer-release',['-m','scripts.verify_current_customer_release',campaign,'--qwen-seed','frozen-learning-v3-qwen38-mlx','--laya-job',Path(job).name])
     execute('real-model-tests',['-m','pytest','-q','tests/classifier/test_registered_release_real.py'],
@@ -56,4 +77,5 @@ def run(study,corpus,output,wait_pid=None):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('study');p.add_argument('corpus');p.add_argument('output');p.add_argument('--wait-pid',type=int)
-    a=p.parse_args();run(a.study,a.corpus,a.output,a.wait_pid)
+    p.add_argument('--continuation-receipt',help='Reuse an explicitly verified completed proof instead of retraining')
+    a=p.parse_args();run(a.study,a.corpus,a.output,a.wait_pid,a.continuation_receipt)

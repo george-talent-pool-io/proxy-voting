@@ -1,0 +1,12 @@
+{
+  "macro_f1": 0.9642711878246502,
+  "critical_positive_recall": {
+    "votability": 1.0,
+    "share_blocking": 0.9957627118644068,
+    "poa_required": 1.0,
+    "registration_required": 0.9921875
+  },
+  "four_more_epochs": true,
+  "decision_uses": "VALIDATION_ONLY",
+  "frozen_results_inspected": false
+}

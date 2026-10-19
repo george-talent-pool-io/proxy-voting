@@ -46,6 +46,35 @@ def report(study, output, *, replay=None, continuation=None, browser=None, integ
     plan=json.loads((root/'PLAN.json').read_text())
     corpus=Path('data/qualification-corpora/composition-confidence-v4')
     cm=json.loads((corpus/'manifest.json').read_text())
+    # Separate, post-scoring status diagnostics. They cannot select weights,
+    # criteria, a calibrator or a threshold and never alter the original run.
+    status_path=root/'frozen/decision-diagnostics.json'
+    if not status_path.exists():
+        from collections import Counter
+        entry=cm['files']['FROZEN_TEST'];answer_path=corpus/entry['labels']
+        if sha(answer_path)!=entry['labels_sha256'] or not (root/'frozen/metrics.json').exists():
+            raise ValueError('Post-scoring status diagnostics require verified, already-scored answers')
+        truth={v['id']:v for v in map(json.loads,answer_path.read_text().splitlines())}
+        if set(truth)!=set(predictions):raise ValueError('Status diagnostic membership changed')
+        matrix=Counter();failures=[];reasons=Counter()
+        for ident,prediction in predictions.items():
+            result=prediction['result'];expected=truth[ident]['final_status'];actual=result['decision']['classification']
+            matrix[(expected,actual)]+=1
+            if expected!=actual:
+                reasons.update(result['reconciliation']['conflicts'])
+                failures.append({'id':ident,'text':prediction['text'],'expected_final_status':expected,
+                    'predicted_final_status':actual,'decision':result['decision'],
+                    'conflicts':result['reconciliation']['conflicts'],'predicates':result['predicates']})
+        write(root/'frozen/final-status-errors.json',failures)
+        write(status_path,{'scope':'Post-scoring diagnostic only; no model/criteria/threshold changes',
+            'prediction_sha256':sha(root/'frozen/predictions.jsonl'),'answer_sha256':sha(answer_path),
+            'expected_status_support':dict(Counter(v['final_status'] for v in truth.values())),
+            'confusion':[{'expected':a,'predicted':b,'count':n} for (a,b),n in sorted(matrix.items())],
+            'errors':len(failures),'all_status_errors_require_review':all(f['decision']['manual_review_required'] for f in failures),
+            'error_conflict_counts':dict(reasons)})
+    status_diagnostic=json.loads(status_path.read_text())
+    if status_diagnostic['prediction_sha256']!=sha(root/'frozen/predictions.jsonl'):
+        raise ValueError('Status diagnostic source changed')
     def fmt(v):return 'N/A' if v is None else f'{v:.4f}'
     rows=['# Frozen starting checkpoints, customer learning and confidence qualification','',
       'The product is the local learning/inference/review framework. The AI-authored corpus, test-trained weights, '
@@ -103,6 +132,8 @@ def report(study, output, *, replay=None, continuation=None, browser=None, integ
       'The first baseline evaluator had already scored this controlled frozen cohort; corrective training was preregistered '
       'before its outcomes were inspected. This is not a new double-blind independent external study. '
       'The new selected model persisted every test prediction before opening its answer file.','',
+      'All 400 frozen examples also have VOTABLE_WITH_RESTRICTION as their final-status truth. '
+      'This cohort tests individual restriction combinations, not discrimination among every final-status class.','',
       '## Protected selected-model results','']
     m=r['frozen']
     rows += [f'**{m["correct_assertions"]}/{m["assertions"]} semantic assertions**; '
@@ -117,6 +148,11 @@ def report(study, output, *, replay=None, continuation=None, browser=None, integ
     rows += ['','Every confusion matrix and failure (source, native scores, margin and provenance) is retained in '
       '`'+str(root/'frozen/metrics.json')+'`; complete raw outputs are in `frozen/predictions.jsonl`. '
       'Those artifacts stay outside the product archive.','',
+      'Final-status confusion and every status failure are additionally retained in '
+      '`frozen/decision-diagnostics.json` and `frozen/final-status-errors.json`. '
+      'The status mismatches are review abstentions, not missed positive restrictions. '
+      'The following is a post-scoring explanation of those outputs, not a criteria change:','',
+      '```json',json.dumps(status_diagnostic,indent=2),'```','',
       'Foundation control on the same frozen inputs and current runtime: '
       f'{r["frozen_foundation"]["correct_assertions"]}/{r["frozen_foundation"]["assertions"]} semantic assertions; '
       f'{r["frozen_foundation"]["cases_satisfying_all_supplied_assertions"]}/{r["frozen_foundation"]["cases"]} all-nine exact. '

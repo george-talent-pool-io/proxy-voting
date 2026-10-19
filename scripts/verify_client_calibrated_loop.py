@@ -7,6 +7,7 @@ No customer dataset, test model or calibrator is packaged with the product.
 """
 import argparse
 import json
+import os
 from pathlib import Path
 from production import service, storage, worker, learning, qualification
 from training.framework import jobs, seeds, event_data, releases
@@ -21,6 +22,9 @@ def run(output,corpus,laya_job):
     seed_path.parent.mkdir(parents=True)
     parent=seeds.export_derivative(laya_job,seed_path,origin='AI_TEST_DERIVATIVE')
     jobs.WORKSPACE=output/'workspace';store.DB_PATH=str(output/'client.sqlite')
+    # This explicitly invoked isolated engineering runner executes real models.
+    # It changes only this subprocess, never the deployed service defaults.
+    os.environ['TRAINING_EXECUTION_ENABLED']='true'
     storage.initialise();worker.initialise()
     corpus=Path(corpus);manifest=json.loads((corpus/'manifest.json').read_text())
     actor={'name':'AI framework construction','expert_attested':False}
