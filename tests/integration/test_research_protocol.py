@@ -15,6 +15,7 @@ def test_frozen_cohort_before_labels(db,tmp_path):
  with pytest.raises(ValueError,match='frozen'):create_study(tmp_path/'second',db)
  with pytest.raises(ValueError,match='verification'):lock_test_labels(db)
 
+@pytest.mark.requires_artifact('data/training/laya_voting_synthetic_500.zip')
 def test_protocol_reads_whitelisted_members_only(monkeypatch):
  seen=[];real=protocol.ZipFile
  class Spy:
@@ -79,6 +80,7 @@ def test_semantic_challenge_cannot_enter_training(tmp_path):
  with pytest.raises(ValueError,match='challenge'):train(root,tmp_path/'forbidden',dry_run=True)
 
 
+@pytest.mark.requires_artifact('data/training/laya_voting_synthetic_500.zip')
 def test_supplied_exception_does_not_allow_arbitrary_rows(tmp_path):
  from tests.integration.test_training import dataset
  from training.train import train

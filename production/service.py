@@ -11,6 +11,7 @@ from apps.api import store
 from production.storage import digest, audit
 from training.framework import events, event_data, jobs, releases
 from training.framework.bundle import write, sha
+from semantic_pipeline.schema import PREDICATES
 
 
 def reference_time(value):

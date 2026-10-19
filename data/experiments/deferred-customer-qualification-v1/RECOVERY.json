@@ -1,0 +1,25 @@
+{
+  "completed_at": "2026-10-19T10:01:28.923408+00:00",
+  "previous_deferred_status": {
+    "status": "FAILED",
+    "monitor_pid": 18708,
+    "automation_enabled": false,
+    "blockers": [],
+    "idle_seconds": 180.4,
+    "required_idle_seconds": 180,
+    "updated_at": "2026-10-18T18:47:10.083292+00:00",
+    "stage": "serial-real-model-and-browser-verification",
+    "child_pid": 26756,
+    "log": "/Users/georgebilchev/wavionex/proxy-voting/artifacts/client-learning-verification-uncontended-v1.log",
+    "exit_code": 1
+  },
+  "completed_model_study": "data/experiments/customer-adaptation-uncontended-v1/result.json",
+  "explicit_recovery_verification": "data/experiments/client-learning-verification-final-v3/receipt.json",
+  "verification_sha256": "98f8987d166dbc83e5af4ed7d785475ab4c92160553553023b9a425911910264",
+  "delivery_manifest": "artifacts/releases/verification.json",
+  "all_task_experiments_stopped": true,
+  "automation_enabled": false,
+  "customer_gate_passed": false,
+  "operating_point": "NO_SUPPORTED_OPERATING_POINT",
+  "original_failures_preserved": true
+}

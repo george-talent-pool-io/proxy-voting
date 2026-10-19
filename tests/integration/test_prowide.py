@@ -21,7 +21,7 @@ def test_category5_envelope_and_typed_components(helper,mt):
     assert r['raw_source']==text and r['standards_validated'] is False
 
 def test_publisher_category5_message_and_restart(helper):
-    item=read(ROOT/'data/iso15022_corpus/prowide_reference/prowide-mt564.json');text=item['raw']
+    item=read(ROOT/'tests/fixtures/prowide-mt564.json');text=item['raw']
     a=helper.parse(text);helper.close();b=helper.parse(text)
     for key in ['fields','narratives','references','security','event','dates','options']:assert a[key]==b[key]
     assert sum(f['tag']=='16R' for f in a['fields'])==6

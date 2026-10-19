@@ -25,6 +25,7 @@ def run(output,corpus,laya_job):
     # This explicitly invoked isolated engineering runner executes real models.
     # It changes only this subprocess, never the deployed service defaults.
     os.environ['TRAINING_EXECUTION_ENABLED']='true'
+    os.environ['AUTOMATION_ENABLED']='false'
     storage.initialise();worker.initialise()
     corpus=Path(corpus);manifest=json.loads((corpus/'manifest.json').read_text())
     actor={'name':'AI framework construction','expert_attested':False}

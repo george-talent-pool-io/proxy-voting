@@ -1,0 +1,9 @@
+{
+  "sha256": "1b4ed1cf341afa49caa3ed17dacee47e943f3a2249a6e0eaf96b6a9ee245983f",
+  "count": 600,
+  "created_at": "2026-10-19T09:53:46.557139+00:00",
+  "dataset_sha256": "a4086849e468decf68a6046b477e0ae41de70abfbca910f6f165db513dfedb04",
+  "reference": "2026-10-18T12:00:00+00:00",
+  "calibration_partition": null,
+  "answer_keys_opened": false
+}

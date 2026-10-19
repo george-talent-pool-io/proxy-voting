@@ -1,4 +1,5 @@
 import json
+import pytest
 from pathlib import Path
 from fastapi.testclient import TestClient
 from apps.api.main import app
@@ -73,6 +74,7 @@ def test_configured_notice_execution_persists_trace_and_source(client,monkeypatc
     assert client.post('/api/semantic/analyse',json={'record_id':'missing'}).status_code==404
 
 
+@pytest.mark.requires_artifact('data/experiments/local-llm-v1/challenge-A.jsonl')
 def test_comparison_exposes_identical_truth_and_missing_capabilities(client):
     r=client.get('/api/semantic/comparison-case?id=obvious-votable')
     # Resolve actual immutable ID; do not hardcode an assumed label or example.

@@ -1,6 +1,7 @@
 import copy
 import json
 import pytest
+from pathlib import Path
 from apps.api import store
 from classifier.laya_classifier import load_config,LayaClassifier
 from classifier.preprocessing import source_hash
@@ -51,3 +52,25 @@ def client(db):
 def pytest_configure(config):
     config.addinivalue_line('markers','local_llm: opt-in integration tests executing the pinned real local generative model')
     config.addinivalue_line('markers','qwen_local: opt-in real Qwen3.8 Direct/xhigh integration inference')
+    config.addinivalue_line('markers','requires_artifact(path): verifies optional archived research evidence, excluded from source delivery')
+
+
+def pytest_collection_modifyitems(items):
+    for item in items:
+        for mark in item.iter_markers('requires_artifact'):
+            if not Path(mark.args[0]).exists():
+                item.add_marker(pytest.mark.skip(reason='Optional historical research evidence excluded from source delivery: '+mark.args[0]))
+
+
+@pytest.fixture(scope='session',autouse=True)
+def portable_test_configuration():
+    # Public model settings are not a corpus or inference results. Contract
+    # tests use explicit model doubles; installed models are never fabricated.
+    Path('artifacts').mkdir(exist_ok=True)
+    path=Path('data/experiments/cascade-v2/LLM-CONFIGS-v3.json')
+    created=not path.exists()
+    if created:
+        path.parent.mkdir(parents=True,exist_ok=True)
+        path.write_bytes(Path('tests/fixtures/research_llm_config.json').read_bytes())
+    yield
+    if created:path.unlink()

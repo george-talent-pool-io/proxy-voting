@@ -82,7 +82,7 @@ def test_interrupted_artifact_cannot_serve(tmp_path, monkeypatch):
 def test_renamed_challenge_input_is_rejected_without_reading_labels():
     from tests.unit.test_training_framework import example
     from classifier.preprocessing import source_hash
-    row = json.loads(Path('data/experiments/local-llm-v1/challenge-A.jsonl').read_text().splitlines()[0])
+    row = json.loads(Path('tests/fixtures/semantic.json').read_text())[0]
     e = example(); e.text = row['text']; e.source_hash = source_hash(e.text)
     e.id = 'renamed-input'; e.group_id = 'new-group'; e.generation_family = 'new-family'
     with pytest.raises(ValueError, match='Protected event'): event_data.reject_protected([e])

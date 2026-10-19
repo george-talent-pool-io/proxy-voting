@@ -1,0 +1,1869 @@
+{
+  "version": "customer-correctness-v3",
+  "identity": "c1308ba289aeef568a84a48bc92e37d80aaab4f7ec2b83a130f68480df2772f8",
+  "population": "AI_CLIENT_ENGINEERING_REPLAY",
+  "models": {
+    "beneficial_owner_disclosure_required": {
+      "method": "BETA_BINOMIAL_CONSTANT",
+      "probability": 0.998220640569395,
+      "limitation": "Constant population rate; no per-example discrimination",
+      "languages": [
+        "en"
+      ],
+      "prediction_values": [
+        "NO",
+        "YES"
+      ],
+      "supported_strata": [
+        "NO|COMPLETE_SOURCE_NEGATIVE|UNSTRUCTURED_NOTICE|en|False",
+        "NO|QUOTE|UNSTRUCTURED_NOTICE|en|False",
+        "YES|MISSING|UNSTRUCTURED_NOTICE|en|False",
+        "YES|QUOTE|UNSTRUCTURED_NOTICE|en|False"
+      ],
+      "input_types": [
+        "UNSTRUCTURED_NOTICE"
+      ]
+    },
+    "final_decision": {
+      "method": "LOGISTIC",
+      "vocabulary": {
+        "predicate=final_decision": 37,
+        "language=en": 20,
+        "input_type=UNSTRUCTURED_NOTICE": 18,
+        "text_length": 69,
+        "evidence_present": 12,
+        "evidence_exact_count": 10,
+        "invalid_evidence_count": 19,
+        "direct_evidence_candidate": 8,
+        "evidence_entailment_independently_verified": 9,
+        "supporting_passages": 68,
+        "opposing_passages": 25,
+        "contradiction": 6,
+        "supersession_cue": 67,
+        "schema_valid": 50,
+        "schema_repairs": 49,
+        "unknown": 71,
+        "ood": 24,
+        "raw_top_probability_missing": 42,
+        "raw_margin_missing": 41,
+        "raw_entropy_missing": 40,
+        "repeat_agreement_missing": 48,
+        "unusual_formatting": 72,
+        "model_self_assessment_missing": 21,
+        "token_signal_available": 70,
+        "complete_source_negative": 5,
+        "evidence_mode=QUOTE": 11,
+        "native_top_missing": 23,
+        "native_margin_missing": 22,
+        "prediction=VOTABLE_WITH_RESTRICTION": 39,
+        "source=LAYA_ONLY": 61,
+        "passage_conflict": 31,
+        "votability_value=VOTABLE": 75,
+        "votability_margin": 74,
+        "votability_evidence": 73,
+        "share_blocking_value=YES": 60,
+        "share_blocking_margin": 57,
+        "share_blocking_evidence": 56,
+        "poa_required_value=YES": 36,
+        "poa_required_margin": 33,
+        "poa_required_evidence": 32,
+        "registration_required_value=NO": 45,
+        "registration_required_margin": 44,
+        "registration_required_evidence": 43,
+        "beneficial_owner_disclosure_required_value=NO": 2,
+        "beneficial_owner_disclosure_required_margin": 1,
+        "beneficial_owner_disclosure_required_evidence": 0,
+        "holding_confirmation_required_value=YES": 17,
+        "holding_confirmation_required_margin": 14,
+        "holding_confirmation_required_evidence": 13,
+        "split_voting_restricted_value=YES": 66,
+        "split_voting_restricted_margin": 63,
+        "split_voting_restricted_evidence": 62,
+        "securities_lending_recall_required_value=YES": 55,
+        "securities_lending_recall_required_margin": 52,
+        "securities_lending_recall_required_evidence": 51,
+        "other_voting_restriction_value=NO": 28,
+        "other_voting_restriction_margin": 27,
+        "other_voting_restriction_evidence": 26,
+        "deadline_status=OPEN": 7,
+        "share_blocking_value=NO": 58,
+        "split_voting_restricted_value=NO": 64,
+        "securities_lending_recall_required_value=NO": 53,
+        "poa_required_value=NO": 34,
+        "beneficial_owner_disclosure_required_value=YES": 4,
+        "split_voting_restricted_value=UNKNOWN": 65,
+        "other_voting_restriction_value=YES": 30,
+        "registration_required_value=YES": 47,
+        "holding_confirmation_required_value=NO": 15,
+        "prediction=UNCERTAIN_MANUAL_REVIEW": 38,
+        "other_voting_restriction_value=UNKNOWN": 29,
+        "poa_required_value=UNKNOWN": 35,
+        "registration_required_value=UNKNOWN": 46,
+        "beneficial_owner_disclosure_required_value=UNKNOWN": 3,
+        "share_blocking_value=UNKNOWN": 59,
+        "securities_lending_recall_required_value=UNKNOWN": 54,
+        "holding_confirmation_required_value=UNKNOWN": 16
+      },
+      "coefficients": [
+        -0.012418874666595319,
+        -403.10963328414505,
+        0.011018484927462702,
+        -1.1445625629157632,
+        0.08799347678071569,
+        0.0,
+        -2.37020440709017,
+        0.0,
+        0.0,
+        0.0,
+        0.02042464778538445,
+        0.0,
+        0.0,
+        0.2882252020867842,
+        1578.0592653779568,
+        -0.17095864129364938,
+        -0.0345452538303821,
+        0.17298770689472448,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.15000773017449118,
+        -9.065402370432505,
+        -0.1270116267482731,
+        -0.9676758423129205,
+        0.2288479919480225,
+        0.0,
+        0.45620150537918036,
+        -1706.5649171821537,
+        0.22132849583402162,
+        -0.669060046169304,
+        -0.15744223993276082,
+        0.0,
+        -2.37020440709017,
+        2.37020440709017,
+        0.0,
+        0.0,
+        0.0,
+        -0.0845071601946916,
+        845.2940999211226,
+        0.17730197746182547,
+        0.6852830999208077,
+        -0.2627650535087459,
+        0.0,
+        0.0,
+        0.0,
+        -0.4290412897357853,
+        -758.8941336387666,
+        0.010541154469027024,
+        -0.7649901366878359,
+        0.06876483203925182,
+        -0.15220106650269066,
+        0.9883918984635839,
+        0.12224593982158671,
+        -1.3596051150830475,
+        0.013610513067703882,
+        0.0,
+        0.3771386894691581,
+        -0.38248180473410454,
+        0.07818237471796742,
+        -0.9590548408247863,
+        0.004175191621767438,
+        0.0,
+        0.02042464778538445,
+        -0.002095822170653807,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intercept": 457.3283142702127,
+      "scaling": "FIT_ONLY_STANDARDISATION_FOLDED_INTO_COEFFICIENTS",
+      "languages": [
+        "en"
+      ],
+      "prediction_values": [
+        "VOTABLE_WITH_RESTRICTION"
+      ],
+      "supported_strata": [
+        "VOTABLE_WITH_RESTRICTION|QUOTE|UNSTRUCTURED_NOTICE|en|False"
+      ],
+      "input_types": [
+        "UNSTRUCTURED_NOTICE"
+      ]
+    },
+    "holding_confirmation_required": {
+      "method": "BETA_BINOMIAL_CONSTANT",
+      "probability": 0.998220640569395,
+      "limitation": "Constant population rate; no per-example discrimination",
+      "languages": [
+        "en"
+      ],
+      "prediction_values": [
+        "NO",
+        "YES"
+      ],
+      "supported_strata": [
+        "NO|COMPLETE_SOURCE_NEGATIVE|UNSTRUCTURED_NOTICE|en|False",
+        "NO|QUOTE|UNSTRUCTURED_NOTICE|en|False",
+        "YES|QUOTE|UNSTRUCTURED_NOTICE|en|False"
+      ],
+      "input_types": [
+        "UNSTRUCTURED_NOTICE"
+      ]
+    },
+    "other_voting_restriction": {
+      "method": "BETA_BINOMIAL_CONSTANT",
+      "probability": 0.998220640569395,
+      "limitation": "Constant population rate; no per-example discrimination",
+      "languages": [
+        "en"
+      ],
+      "prediction_values": [
+        "NO",
+        "YES"
+      ],
+      "supported_strata": [
+        "NO|QUOTE|UNSTRUCTURED_NOTICE|en|False",
+        "YES|QUOTE|UNSTRUCTURED_NOTICE|en|False"
+      ],
+      "input_types": [
+        "UNSTRUCTURED_NOTICE"
+      ]
+    },
+    "poa_required": {
+      "method": "BETA_BINOMIAL_CONSTANT",
+      "probability": 0.998220640569395,
+      "limitation": "Constant population rate; no per-example discrimination",
+      "languages": [
+        "en"
+      ],
+      "prediction_values": [
+        "NO",
+        "YES"
+      ],
+      "supported_strata": [
+        "NO|QUOTE|UNSTRUCTURED_NOTICE|en|False",
+        "YES|QUOTE|UNSTRUCTURED_NOTICE|en|False"
+      ],
+      "input_types": [
+        "UNSTRUCTURED_NOTICE"
+      ]
+    },
+    "registration_required": {
+      "method": "BETA_BINOMIAL_CONSTANT",
+      "probability": 0.998220640569395,
+      "limitation": "Constant population rate; no per-example discrimination",
+      "languages": [
+        "en"
+      ],
+      "prediction_values": [
+        "NO",
+        "YES"
+      ],
+      "supported_strata": [
+        "NO|QUOTE|UNSTRUCTURED_NOTICE|en|False",
+        "YES|QUOTE|UNSTRUCTURED_NOTICE|en|False"
+      ],
+      "input_types": [
+        "UNSTRUCTURED_NOTICE"
+      ]
+    },
+    "securities_lending_recall_required": {
+      "method": "BETA_BINOMIAL_CONSTANT",
+      "probability": 0.998220640569395,
+      "limitation": "Constant population rate; no per-example discrimination",
+      "languages": [
+        "en"
+      ],
+      "prediction_values": [
+        "NO",
+        "YES"
+      ],
+      "supported_strata": [
+        "NO|QUOTE|UNSTRUCTURED_NOTICE|en|False",
+        "YES|QUOTE|UNSTRUCTURED_NOTICE|en|False"
+      ],
+      "input_types": [
+        "UNSTRUCTURED_NOTICE"
+      ]
+    },
+    "share_blocking": {
+      "method": "LOGISTIC",
+      "vocabulary": {
+        "predicate=share_blocking": 18,
+        "language=en": 11,
+        "input_type=UNSTRUCTURED_NOTICE": 9,
+        "text_length": 31,
+        "evidence_present": 8,
+        "evidence_exact_count": 4,
+        "invalid_evidence_count": 10,
+        "direct_evidence_candidate": 2,
+        "evidence_entailment_independently_verified": 3,
+        "supporting_passages": 30,
+        "opposing_passages": 16,
+        "contradiction": 1,
+        "supersession_cue": 29,
+        "schema_valid": 27,
+        "schema_repairs": 26,
+        "unknown": 33,
+        "ood": 15,
+        "raw_top_probability_missing": 24,
+        "raw_margin_missing": 23,
+        "raw_entropy_missing": 22,
+        "repeat_agreement_missing": 25,
+        "unusual_formatting": 34,
+        "model_self_assessment_missing": 12,
+        "token_signal_available": 32,
+        "complete_source_negative": 0,
+        "evidence_mode=QUOTE": 7,
+        "native_top": 14,
+        "native_margin": 13,
+        "prediction=YES": 21,
+        "source=REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE": 28,
+        "passage_conflict": 17,
+        "prediction=NO": 19,
+        "evidence_mode=COMPLETE_SOURCE_NEGATIVE": 5,
+        "evidence_mode=MISSING": 6,
+        "prediction=UNKNOWN": 20
+      },
+      "coefficients": [
+        0.4196768243346064,
+        0.39381829044658667,
+        0.6495637792784575,
+        0.0,
+        0.6495637792784575,
+        0.7245524726458995,
+        -3.7149442485026554,
+        0.6495637792784575,
+        0.6495637792784575,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.6534060194574416,
+        2.309999314660476,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.4196768243346064,
+        1.9100800530443753,
+        -0.6213196884988627,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.6495637792784575,
+        0.0013612504165733262,
+        0.0,
+        1.9100800530443751,
+        0.0
+      ],
+      "intercept": -2.2073509568970824,
+      "scaling": "FIT_ONLY_STANDARDISATION_FOLDED_INTO_COEFFICIENTS",
+      "languages": [
+        "en"
+      ],
+      "prediction_values": [
+        "NO",
+        "YES"
+      ],
+      "supported_strata": [
+        "NO|QUOTE|UNSTRUCTURED_NOTICE|en|False",
+        "YES|QUOTE|UNSTRUCTURED_NOTICE|en|False"
+      ],
+      "input_types": [
+        "UNSTRUCTURED_NOTICE"
+      ]
+    },
+    "split_voting_restricted": {
+      "method": "BETA_BINOMIAL_CONSTANT",
+      "probability": 0.9911032028469751,
+      "limitation": "Constant population rate; no per-example discrimination",
+      "languages": [
+        "en"
+      ],
+      "prediction_values": [
+        "NO",
+        "YES"
+      ],
+      "supported_strata": [
+        "NO|COMPLETE_SOURCE_NEGATIVE|UNSTRUCTURED_NOTICE|en|False",
+        "NO|QUOTE|UNSTRUCTURED_NOTICE|en|False",
+        "YES|QUOTE|UNSTRUCTURED_NOTICE|en|False"
+      ],
+      "input_types": [
+        "UNSTRUCTURED_NOTICE"
+      ]
+    },
+    "votability": {
+      "method": "BETA_BINOMIAL_CONSTANT",
+      "probability": 0.998220640569395,
+      "limitation": "Constant population rate; no per-example discrimination",
+      "languages": [
+        "en"
+      ],
+      "prediction_values": [
+        "VOTABLE"
+      ],
+      "supported_strata": [
+        "VOTABLE|QUOTE|UNSTRUCTURED_NOTICE|en|False"
+      ],
+      "input_types": [
+        "UNSTRUCTURED_NOTICE"
+      ]
+    }
+  },
+  "reports": {
+    "beneficial_owner_disclosure_required": {
+      "status": "VALIDATED_IN_DECLARED_POPULATION",
+      "evaluation": {
+        "n": 240,
+        "brier": 3.166119983283064e-06,
+        "ece": 0.001779359430605143,
+        "bins": [
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 240,
+            "mean_probability": 0.9982206405693949,
+            "observed_correctness": 1.0
+          }
+        ],
+        "correct": 240,
+        "wrong": 0
+      },
+      "support": {
+        "fit_examples": 560,
+        "evaluation_examples": 240,
+        "fit_groups": 280,
+        "evaluation_groups": 120,
+        "fit_correct": 560,
+        "fit_wrong": 0
+      },
+      "method": "BETA_BINOMIAL_CONSTANT",
+      "by_prediction": {
+        "NO": {
+          "fit": 318,
+          "fit_groups": 159,
+          "evaluation_groups": 70,
+          "evaluation": {
+            "n": 140,
+            "brier": 3.1661199832830634e-06,
+            "ece": 0.001779359430605032,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 140,
+                "mean_probability": 0.998220640569395,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 140,
+            "wrong": 0
+          }
+        },
+        "UNKNOWN": {
+          "fit": 12,
+          "fit_groups": 6,
+          "evaluation_groups": 2,
+          "evaluation": {
+            "n": 4,
+            "brier": 3.166119983283064e-06,
+            "ece": 0.001779359430605032,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 4,
+                "mean_probability": 0.998220640569395,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 4,
+            "wrong": 0
+          }
+        },
+        "YES": {
+          "fit": 230,
+          "fit_groups": 115,
+          "evaluation_groups": 48,
+          "evaluation": {
+            "n": 96,
+            "brier": 3.166119983283064e-06,
+            "ece": 0.001779359430605143,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 96,
+                "mean_probability": 0.9982206405693949,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 96,
+            "wrong": 0
+          }
+        }
+      },
+      "scope": "CUSTOMER_QUALIFICATION",
+      "coverage_curve_diagnostic_only": [
+        {
+          "threshold": 0.7,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.98,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.99,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        }
+      ],
+      "note": "Do not tune the operational threshold on the calibration evaluation fold or frozen test"
+    },
+    "final_decision": {
+      "status": "VALIDATED_IN_DECLARED_POPULATION",
+      "evaluation": {
+        "n": 240,
+        "brier": 0.0006132321651970209,
+        "ece": 0.015280411346467918,
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 36,
+            "mean_probability": 0.04805829001948604,
+            "observed_correctness": 0.0
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 2,
+            "mean_probability": 0.11268211650408597,
+            "observed_correctness": 0.0
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 202,
+            "mean_probability": 0.9915255641116701,
+            "observed_correctness": 1.0
+          }
+        ],
+        "correct": 202,
+        "wrong": 38
+      },
+      "support": {
+        "fit_examples": 560,
+        "evaluation_examples": 240,
+        "fit_groups": 280,
+        "evaluation_groups": 120,
+        "fit_correct": 462,
+        "fit_wrong": 98
+      },
+      "method": "LOGISTIC",
+      "by_prediction": {
+        "UNCERTAIN_MANUAL_REVIEW": {
+          "fit": 100,
+          "fit_groups": 50,
+          "evaluation_groups": 19,
+          "evaluation": {
+            "n": 38,
+            "brier": 0.0033293245313999924,
+            "ece": 0.0514595440449913,
+            "bins": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "n": 36,
+                "mean_probability": 0.04805829001948604,
+                "observed_correctness": 0.0
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "n": 2,
+                "mean_probability": 0.11268211650408597,
+                "observed_correctness": 0.0
+              }
+            ],
+            "correct": 0,
+            "wrong": 38
+          }
+        },
+        "VOTABLE_WITH_RESTRICTION": {
+          "fit": 460,
+          "fit_groups": 230,
+          "evaluation_groups": 101,
+          "evaluation": {
+            "n": 202,
+            "brier": 0.000102284096307353,
+            "ece": 0.008474435888329857,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 202,
+                "mean_probability": 0.9915255641116701,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 202,
+            "wrong": 0
+          }
+        }
+      },
+      "scope": "CUSTOMER_QUALIFICATION",
+      "coverage_curve_diagnostic_only": [
+        {
+          "threshold": 0.7,
+          "support": 202,
+          "coverage": 0.8416666666666667,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.15833333333333333
+        },
+        {
+          "threshold": 0.8,
+          "support": 202,
+          "coverage": 0.8416666666666667,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.15833333333333333
+        },
+        {
+          "threshold": 0.9,
+          "support": 202,
+          "coverage": 0.8416666666666667,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.15833333333333333
+        },
+        {
+          "threshold": 0.95,
+          "support": 202,
+          "coverage": 0.8416666666666667,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.15833333333333333
+        },
+        {
+          "threshold": 0.98,
+          "support": 193,
+          "coverage": 0.8041666666666667,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.1958333333333333
+        },
+        {
+          "threshold": 0.99,
+          "support": 148,
+          "coverage": 0.6166666666666667,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.3833333333333333
+        }
+      ],
+      "note": "Do not tune the operational threshold on the calibration evaluation fold or frozen test"
+    },
+    "holding_confirmation_required": {
+      "status": "VALIDATED_IN_DECLARED_POPULATION",
+      "evaluation": {
+        "n": 240,
+        "brier": 3.166119983283064e-06,
+        "ece": 0.001779359430605143,
+        "bins": [
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 240,
+            "mean_probability": 0.9982206405693949,
+            "observed_correctness": 1.0
+          }
+        ],
+        "correct": 240,
+        "wrong": 0
+      },
+      "support": {
+        "fit_examples": 560,
+        "evaluation_examples": 240,
+        "fit_groups": 280,
+        "evaluation_groups": 120,
+        "fit_correct": 560,
+        "fit_wrong": 0
+      },
+      "method": "BETA_BINOMIAL_CONSTANT",
+      "by_prediction": {
+        "NO": {
+          "fit": 298,
+          "fit_groups": 149,
+          "evaluation_groups": 72,
+          "evaluation": {
+            "n": 144,
+            "brier": 3.166119983283064e-06,
+            "ece": 0.001779359430605032,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 144,
+                "mean_probability": 0.998220640569395,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 144,
+            "wrong": 0
+          }
+        },
+        "UNKNOWN": {
+          "fit": 6,
+          "fit_groups": 3,
+          "evaluation_groups": 1,
+          "evaluation": {
+            "n": 2,
+            "brier": 3.166119983283064e-06,
+            "ece": 0.001779359430605032,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 2,
+                "mean_probability": 0.998220640569395,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 2,
+            "wrong": 0
+          }
+        },
+        "YES": {
+          "fit": 256,
+          "fit_groups": 128,
+          "evaluation_groups": 47,
+          "evaluation": {
+            "n": 94,
+            "brier": 3.166119983283063e-06,
+            "ece": 0.00177935943060481,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 94,
+                "mean_probability": 0.9982206405693952,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 94,
+            "wrong": 0
+          }
+        }
+      },
+      "scope": "CUSTOMER_QUALIFICATION",
+      "coverage_curve_diagnostic_only": [
+        {
+          "threshold": 0.7,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.98,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.99,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        }
+      ],
+      "note": "Do not tune the operational threshold on the calibration evaluation fold or frozen test"
+    },
+    "other_voting_restriction": {
+      "status": "VALIDATED_IN_DECLARED_POPULATION",
+      "evaluation": {
+        "n": 240,
+        "brier": 3.166119983283064e-06,
+        "ece": 0.001779359430605143,
+        "bins": [
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 240,
+            "mean_probability": 0.9982206405693949,
+            "observed_correctness": 1.0
+          }
+        ],
+        "correct": 240,
+        "wrong": 0
+      },
+      "support": {
+        "fit_examples": 560,
+        "evaluation_examples": 240,
+        "fit_groups": 280,
+        "evaluation_groups": 120,
+        "fit_correct": 560,
+        "fit_wrong": 0
+      },
+      "method": "BETA_BINOMIAL_CONSTANT",
+      "by_prediction": {
+        "NO": {
+          "fit": 328,
+          "fit_groups": 164,
+          "evaluation_groups": 67,
+          "evaluation": {
+            "n": 134,
+            "brier": 3.1661199832830634e-06,
+            "ece": 0.001779359430605032,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 134,
+                "mean_probability": 0.998220640569395,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 134,
+            "wrong": 0
+          }
+        },
+        "UNKNOWN": {
+          "fit": 14,
+          "fit_groups": 7,
+          "evaluation_groups": 2,
+          "evaluation": {
+            "n": 4,
+            "brier": 3.166119983283064e-06,
+            "ece": 0.001779359430605032,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 4,
+                "mean_probability": 0.998220640569395,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 4,
+            "wrong": 0
+          }
+        },
+        "YES": {
+          "fit": 218,
+          "fit_groups": 109,
+          "evaluation_groups": 51,
+          "evaluation": {
+            "n": 102,
+            "brier": 3.166119983283063e-06,
+            "ece": 0.00177935943060481,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 102,
+                "mean_probability": 0.9982206405693952,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 102,
+            "wrong": 0
+          }
+        }
+      },
+      "scope": "CUSTOMER_QUALIFICATION",
+      "coverage_curve_diagnostic_only": [
+        {
+          "threshold": 0.7,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.98,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.99,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        }
+      ],
+      "note": "Do not tune the operational threshold on the calibration evaluation fold or frozen test"
+    },
+    "poa_required": {
+      "status": "VALIDATED_IN_DECLARED_POPULATION",
+      "evaluation": {
+        "n": 240,
+        "brier": 3.166119983283064e-06,
+        "ece": 0.001779359430605143,
+        "bins": [
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 240,
+            "mean_probability": 0.9982206405693949,
+            "observed_correctness": 1.0
+          }
+        ],
+        "correct": 240,
+        "wrong": 0
+      },
+      "support": {
+        "fit_examples": 560,
+        "evaluation_examples": 240,
+        "fit_groups": 280,
+        "evaluation_groups": 120,
+        "fit_correct": 560,
+        "fit_wrong": 0
+      },
+      "method": "BETA_BINOMIAL_CONSTANT",
+      "by_prediction": {
+        "NO": {
+          "fit": 310,
+          "fit_groups": 155,
+          "evaluation_groups": 71,
+          "evaluation": {
+            "n": 142,
+            "brier": 3.166119983283064e-06,
+            "ece": 0.001779359430604921,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 142,
+                "mean_probability": 0.9982206405693951,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 142,
+            "wrong": 0
+          }
+        },
+        "UNKNOWN": {
+          "fit": 14,
+          "fit_groups": 7,
+          "evaluation_groups": 4,
+          "evaluation": {
+            "n": 8,
+            "brier": 3.166119983283064e-06,
+            "ece": 0.001779359430605032,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 8,
+                "mean_probability": 0.998220640569395,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 8,
+            "wrong": 0
+          }
+        },
+        "YES": {
+          "fit": 236,
+          "fit_groups": 118,
+          "evaluation_groups": 45,
+          "evaluation": {
+            "n": 90,
+            "brier": 3.1661199832830634e-06,
+            "ece": 0.001779359430605032,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 90,
+                "mean_probability": 0.998220640569395,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 90,
+            "wrong": 0
+          }
+        }
+      },
+      "scope": "CUSTOMER_QUALIFICATION",
+      "coverage_curve_diagnostic_only": [
+        {
+          "threshold": 0.7,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.98,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.99,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        }
+      ],
+      "note": "Do not tune the operational threshold on the calibration evaluation fold or frozen test"
+    },
+    "registration_required": {
+      "status": "VALIDATED_IN_DECLARED_POPULATION",
+      "evaluation": {
+        "n": 240,
+        "brier": 3.166119983283064e-06,
+        "ece": 0.001779359430605143,
+        "bins": [
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 240,
+            "mean_probability": 0.9982206405693949,
+            "observed_correctness": 1.0
+          }
+        ],
+        "correct": 240,
+        "wrong": 0
+      },
+      "support": {
+        "fit_examples": 560,
+        "evaluation_examples": 240,
+        "fit_groups": 280,
+        "evaluation_groups": 120,
+        "fit_correct": 560,
+        "fit_wrong": 0
+      },
+      "method": "BETA_BINOMIAL_CONSTANT",
+      "by_prediction": {
+        "NO": {
+          "fit": 332,
+          "fit_groups": 166,
+          "evaluation_groups": 68,
+          "evaluation": {
+            "n": 136,
+            "brier": 3.166119983283064e-06,
+            "ece": 0.001779359430605143,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 136,
+                "mean_probability": 0.9982206405693949,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 136,
+            "wrong": 0
+          }
+        },
+        "UNKNOWN": {
+          "fit": 16,
+          "fit_groups": 8,
+          "evaluation_groups": 2,
+          "evaluation": {
+            "n": 4,
+            "brier": 3.166119983283064e-06,
+            "ece": 0.001779359430605032,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 4,
+                "mean_probability": 0.998220640569395,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 4,
+            "wrong": 0
+          }
+        },
+        "YES": {
+          "fit": 212,
+          "fit_groups": 106,
+          "evaluation_groups": 50,
+          "evaluation": {
+            "n": 100,
+            "brier": 3.166119983283063e-06,
+            "ece": 0.001779359430604921,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 100,
+                "mean_probability": 0.9982206405693951,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 100,
+            "wrong": 0
+          }
+        }
+      },
+      "scope": "CUSTOMER_QUALIFICATION",
+      "coverage_curve_diagnostic_only": [
+        {
+          "threshold": 0.7,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.98,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.99,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        }
+      ],
+      "note": "Do not tune the operational threshold on the calibration evaluation fold or frozen test"
+    },
+    "securities_lending_recall_required": {
+      "status": "VALIDATED_IN_DECLARED_POPULATION",
+      "evaluation": {
+        "n": 240,
+        "brier": 3.166119983283064e-06,
+        "ece": 0.001779359430605143,
+        "bins": [
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 240,
+            "mean_probability": 0.9982206405693949,
+            "observed_correctness": 1.0
+          }
+        ],
+        "correct": 240,
+        "wrong": 0
+      },
+      "support": {
+        "fit_examples": 560,
+        "evaluation_examples": 240,
+        "fit_groups": 280,
+        "evaluation_groups": 120,
+        "fit_correct": 560,
+        "fit_wrong": 0
+      },
+      "method": "BETA_BINOMIAL_CONSTANT",
+      "by_prediction": {
+        "NO": {
+          "fit": 336,
+          "fit_groups": 168,
+          "evaluation_groups": 71,
+          "evaluation": {
+            "n": 142,
+            "brier": 3.166119983283064e-06,
+            "ece": 0.001779359430604921,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 142,
+                "mean_probability": 0.9982206405693951,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 142,
+            "wrong": 0
+          }
+        },
+        "UNKNOWN": {
+          "fit": 14,
+          "fit_groups": 7,
+          "evaluation_groups": 2,
+          "evaluation": {
+            "n": 4,
+            "brier": 3.166119983283064e-06,
+            "ece": 0.001779359430605032,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 4,
+                "mean_probability": 0.998220640569395,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 4,
+            "wrong": 0
+          }
+        },
+        "YES": {
+          "fit": 210,
+          "fit_groups": 105,
+          "evaluation_groups": 47,
+          "evaluation": {
+            "n": 94,
+            "brier": 3.166119983283063e-06,
+            "ece": 0.00177935943060481,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 94,
+                "mean_probability": 0.9982206405693952,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 94,
+            "wrong": 0
+          }
+        }
+      },
+      "scope": "CUSTOMER_QUALIFICATION",
+      "coverage_curve_diagnostic_only": [
+        {
+          "threshold": 0.7,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.98,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.99,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        }
+      ],
+      "note": "Do not tune the operational threshold on the calibration evaluation fold or frozen test"
+    },
+    "share_blocking": {
+      "status": "VALIDATED_IN_DECLARED_POPULATION",
+      "evaluation": {
+        "n": 240,
+        "brier": 0.0003283270103068724,
+        "ece": 0.005164140827636684,
+        "bins": [
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 2,
+            "mean_probability": 0.18010704260970256,
+            "observed_correctness": 0.0
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 238,
+            "mean_probability": 0.9963059675907,
+            "observed_correctness": 1.0
+          }
+        ],
+        "correct": 238,
+        "wrong": 2
+      },
+      "support": {
+        "fit_examples": 560,
+        "evaluation_examples": 240,
+        "fit_groups": 280,
+        "evaluation_groups": 120,
+        "fit_correct": 546,
+        "fit_wrong": 14
+      },
+      "method": "LOGISTIC",
+      "by_prediction": {
+        "NO": {
+          "fit": 322,
+          "fit_groups": 166,
+          "evaluation_groups": 61,
+          "evaluation": {
+            "n": 122,
+            "brier": 9.194490132389697e-05,
+            "ece": 0.003518602938295201,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 122,
+                "mean_probability": 0.9964813970617048,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 122,
+            "wrong": 0
+          }
+        },
+        "UNKNOWN": {
+          "fit": 14,
+          "fit_groups": 7,
+          "evaluation_groups": 1,
+          "evaluation": {
+            "n": 2,
+            "brier": 0.0006218697186427443,
+            "ece": 0.02489688079388863,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 2,
+                "mean_probability": 0.9751031192061114,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 2,
+            "wrong": 0
+          }
+        },
+        "YES": {
+          "fit": 224,
+          "fit_groups": 117,
+          "evaluation_groups": 58,
+          "evaluation": {
+            "n": 116,
+            "brier": 0.0005718746989211076,
+            "ece": 0.00655457309114664,
+            "bins": [
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "n": 2,
+                "mean_probability": 0.18010704260970256,
+                "observed_correctness": 0.0
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 114,
+                "mean_probability": 0.9964902070758456,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 114,
+            "wrong": 2
+          }
+        }
+      },
+      "scope": "CUSTOMER_QUALIFICATION",
+      "coverage_curve_diagnostic_only": [
+        {
+          "threshold": 0.7,
+          "support": 238,
+          "coverage": 0.9916666666666667,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.008333333333333304
+        },
+        {
+          "threshold": 0.8,
+          "support": 238,
+          "coverage": 0.9916666666666667,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.008333333333333304
+        },
+        {
+          "threshold": 0.9,
+          "support": 238,
+          "coverage": 0.9916666666666667,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.008333333333333304
+        },
+        {
+          "threshold": 0.95,
+          "support": 237,
+          "coverage": 0.9875,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.012499999999999956
+        },
+        {
+          "threshold": 0.98,
+          "support": 235,
+          "coverage": 0.9791666666666666,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.02083333333333337
+        },
+        {
+          "threshold": 0.99,
+          "support": 214,
+          "coverage": 0.8916666666666667,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.10833333333333328
+        }
+      ],
+      "note": "Do not tune the operational threshold on the calibration evaluation fold or frozen test"
+    },
+    "split_voting_restricted": {
+      "status": "VALIDATED_IN_DECLARED_POPULATION",
+      "evaluation": {
+        "n": 240,
+        "brier": 0.016449259761147906,
+        "ece": 0.007769869513642114,
+        "bins": [
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 240,
+            "mean_probability": 0.9911032028469754,
+            "observed_correctness": 0.9833333333333333
+          }
+        ],
+        "correct": 236,
+        "wrong": 4
+      },
+      "support": {
+        "fit_examples": 560,
+        "evaluation_examples": 240,
+        "fit_groups": 280,
+        "evaluation_groups": 120,
+        "fit_correct": 556,
+        "fit_wrong": 4
+      },
+      "method": "BETA_BINOMIAL_CONSTANT",
+      "by_prediction": {
+        "NO": {
+          "fit": 322,
+          "fit_groups": 163,
+          "evaluation_groups": 78,
+          "evaluation": {
+            "n": 152,
+            "brier": 7.915299958207262e-05,
+            "ece": 0.008896797153024716,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 152,
+                "mean_probability": 0.9911032028469753,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 152,
+            "wrong": 0
+          }
+        },
+        "UNKNOWN": {
+          "fit": 12,
+          "fit_groups": 6,
+          "evaluation_groups": 3,
+          "evaluation": {
+            "n": 6,
+            "brier": 7.915299958207264e-05,
+            "ece": 0.008896797153024827,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 6,
+                "mean_probability": 0.9911032028469752,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 6,
+            "wrong": 0
+          }
+        },
+        "YES": {
+          "fit": 226,
+          "fit_groups": 115,
+          "evaluation_groups": 43,
+          "evaluation": {
+            "n": 82,
+            "brier": 0.04799166059440891,
+            "ece": 0.039883690651853376,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 82,
+                "mean_probability": 0.9911032028469753,
+                "observed_correctness": 0.9512195121951219
+              }
+            ],
+            "correct": 78,
+            "wrong": 4
+          }
+        }
+      },
+      "scope": "CUSTOMER_QUALIFICATION",
+      "coverage_curve_diagnostic_only": [
+        {
+          "threshold": 0.7,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 0.9833333333333333,
+          "errors": 4,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 0.9833333333333333,
+          "errors": 4,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 0.9833333333333333,
+          "errors": 4,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 0.9833333333333333,
+          "errors": 4,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.98,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 0.9833333333333333,
+          "errors": 4,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.99,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 0.9833333333333333,
+          "errors": 4,
+          "review_rate": 0.0
+        }
+      ],
+      "note": "Do not tune the operational threshold on the calibration evaluation fold or frozen test"
+    },
+    "votability": {
+      "status": "VALIDATED_IN_DECLARED_POPULATION",
+      "evaluation": {
+        "n": 240,
+        "brier": 3.166119983283064e-06,
+        "ece": 0.001779359430605143,
+        "bins": [
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 240,
+            "mean_probability": 0.9982206405693949,
+            "observed_correctness": 1.0
+          }
+        ],
+        "correct": 240,
+        "wrong": 0
+      },
+      "support": {
+        "fit_examples": 560,
+        "evaluation_examples": 240,
+        "fit_groups": 280,
+        "evaluation_groups": 120,
+        "fit_correct": 560,
+        "fit_wrong": 0
+      },
+      "method": "BETA_BINOMIAL_CONSTANT",
+      "by_prediction": {
+        "VOTABLE": {
+          "fit": 560,
+          "fit_groups": 280,
+          "evaluation_groups": 120,
+          "evaluation": {
+            "n": 240,
+            "brier": 3.166119983283064e-06,
+            "ece": 0.001779359430605143,
+            "bins": [
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "n": 240,
+                "mean_probability": 0.9982206405693949,
+                "observed_correctness": 1.0
+              }
+            ],
+            "correct": 240,
+            "wrong": 0
+          }
+        }
+      },
+      "scope": "CUSTOMER_QUALIFICATION",
+      "coverage_curve_diagnostic_only": [
+        {
+          "threshold": 0.7,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.98,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        },
+        {
+          "threshold": 0.99,
+          "support": 240,
+          "coverage": 1.0,
+          "correctness": 1.0,
+          "errors": 0,
+          "review_rate": 0.0
+        }
+      ],
+      "note": "Do not tune the operational threshold on the calibration evaluation fold or frozen test"
+    }
+  },
+  "context": {
+    "dataset_sha256": "a4086849e468decf68a6046b477e0ae41de70abfbca910f6f165db513dfedb04",
+    "calibration_partition": "STANDALONE_FINAL"
+  },
+  "dataset_hash": "48ea2d359ca17bd4e3ce9d0064f1e1a6b6d267bae3e77cd90ab4d82affe233d1",
+  "label_origins": {
+    "AI_ASSISTED_OR_UNAUTHENTICATED": 8000
+  },
+  "support_policy": {
+    "min_fit_groups": 100,
+    "min_evaluation_groups": 50,
+    "min_class_examples": 10,
+    "min_stratum_groups": 20,
+    "max_ece": 0.1,
+    "scope": "CUSTOMER_QUALIFICATION"
+  },
+  "method": "Fixed logistic C=.1 when both outcomes supported; otherwise Laplace-smoothed constant; independent group-isolated evaluation",
+  "sha256": "4a9e8047d9194f81eef8575fe8fa3ca83ac56543c060c4313208a0c7a813ff34"
+}

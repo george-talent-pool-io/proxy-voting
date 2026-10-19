@@ -16,12 +16,14 @@ from classifier.schema import Decision
 def test_supplied_customer_policy_is_separate(flags,status):
  d=Decision(**{'votable':'YES',**flags});assert supplied_status(d.model_dump())==status
 
+@pytest.mark.requires_artifact('data/training/laya_voting_synthetic_500.zip')
 def test_supplied_mapping_matches_train_validation_only():
  data=rows('train')+rows('validation')
  assert all(supplied_status(decision(r).model_dump())==r['expected_customer_status'] for r in data)
  # Preserve authored challenge's distinct multi-restriction policy.
  assert Decision(votable='YES',share_blocking=True,poa_required=True).status().value=='VOTABLE_WITH_RESTRICTION'
 
+@pytest.mark.requires_artifact('data/training/laya_voting_synthetic_500.zip')
 def test_nested_training_subsets():
  data=rows('train');order=nested_order(data)
  assert {r['id'] for r in order}=={r['id'] for r in data}
@@ -29,6 +31,7 @@ def test_nested_training_subsets():
  for n in [50,100,200]:assert {r['id'] for r in order[:n]}<={r['id'] for r in order[:n+50]}
  assert {r['id'] for r in order}.isdisjoint({r['id'] for r in rows('validation')})
 
+@pytest.mark.requires_artifact('data/training/laya_voting_synthetic_500.zip')
 def test_metrics_manual_counts():
  data=rows('validation')[:2];pred=[]
  for r in data:

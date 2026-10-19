@@ -223,3 +223,20 @@ weights, adapters, private keys, databases and experiment artifacts. Keep the
 generated qualification results in a separate evidence archive. The Docker
 build has the same data/model exclusion boundary. Installation requires the
 explicitly provisioned model volume and a fresh customer workspace.
+
+On a clean source checkout, recreate the deterministic parser-only test fixtures
+before running the software suite:
+
+```sh
+python -m hybrid.corpus
+python -m scripts.expand_iso_fixtures
+python -m pytest -m 'not e2e and not model and not local_llm and not qwen_local'
+```
+
+These commands generate standards-derived parser fixtures, not semantic training
+data. The small Apache-2.0 Prowide reference example is a static test fixture.
+Historical experiment-integrity checks skip when their optional evidence store
+is absent. No test-trained weights or customer corpus is needed for the ordinary
+software suite. Docker creates its own installation source Git snapshot; a
+manual source installation should likewise initialise a Git checkout before
+preparing registered jobs, so their source revision is recorded.

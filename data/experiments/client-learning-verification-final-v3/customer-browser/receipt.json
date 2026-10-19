@@ -1,0 +1,10 @@
+{
+  "actual_persisted_decisions": 7,
+  "numerical_confidence_decisions": 5,
+  "restart_byte_semantic_parity": true,
+  "browser_errors": [],
+  "screenshot": "calibrated-decision.png",
+  "automation_enabled": false,
+  "transport": "Loopback only; temporary credential removed",
+  "scope": "AI engineering replay, not a new customer quality evaluation"
+}

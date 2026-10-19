@@ -89,6 +89,7 @@ def test_all_allowed_native_scores_required_and_renormalisation_is_not_calibrati
     r['completion_probabilities'][0]['top_probs'].pop()
     with pytest.raises(ValueError,match='all allowed'):allowed_probabilities(r)
 
+@pytest.mark.requires_artifact('data/domain-corpus/v4/MANIFEST.json')
 def test_released_corpus_has_no_cross_split_group_or_family_or_source_hash():
     from qwen_domain.protocol import CORPUS,read,load_inputs,digest
     manifest=read(CORPUS/'MANIFEST.json');groups={};families={};hashes=set();n=0

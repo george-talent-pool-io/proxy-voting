@@ -1,0 +1,3 @@
+{"timestamp": "2026-10-19T09:52:32.531303+00:00", "state": "PREPARED", "automatic_start": false}
+{"timestamp": "2026-10-19T09:52:32.538016+00:00", "state": "RUNNING", "pid": 63800, "pid_started": 1792403472.574423}
+{"timestamp": "2026-10-19T09:53:47.824225+00:00", "state": "COMPLETED", "result_sha256": "0ee720b1721603aba8b37fce1c762051698408925735f6c7802e8decfb0e33fe"}

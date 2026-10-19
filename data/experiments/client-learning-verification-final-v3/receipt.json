@@ -1,0 +1,12 @@
+{
+  "scope": "AI_ENGINEERING_QUALIFICATION_ONLY",
+  "study": "data/experiments/customer-adaptation-uncontended-v1",
+  "quality_selected": "ADAPTED_8_EPOCHS",
+  "engineering_derivative": "ADAPTED_8_EPOCHS",
+  "real_model_tests": 2,
+  "campaign": "client-learning-verification-final-v3-integration",
+  "continuation_receipt": "data/experiments/client-learning-verification-uncontended-v1/continuation/result.json",
+  "client_receipt": "data/experiments/client-learning-verification-final-v3/customer-replay/receipt.json",
+  "browser_receipt": "data/experiments/client-learning-verification-final-v3/customer-browser/receipt.json",
+  "automation_enabled": false
+}

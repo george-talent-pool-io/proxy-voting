@@ -1,0 +1,8 @@
+{
+  "study": "data/experiments/customer-adaptation-uncontended-v1",
+  "quality_selected": "ADAPTED_8_EPOCHS",
+  "engineering_derivative": "ADAPTED_8_EPOCHS",
+  "model_job": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/jobs/customer-adaptation-uncontended-v1-8epoch",
+  "engineering_replay_not_new_blind_quality": true,
+  "automation_enabled": false
+}

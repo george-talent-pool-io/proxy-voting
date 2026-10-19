@@ -95,6 +95,37 @@ def test_legacy_snapshot_without_raw_sources_rejected_before_model_load(tmp_path
     assert not (tmp_path/'predictions').exists()
 
 
+def test_customer_calibration_orchestrator_persists_before_answers_and_covers_every_field(registered,monkeypatch):
+    storage.initialise()
+    imported=service.import_rows('calibration-import',[row('CALIBRATION')],'AI_operator')
+    eid=imported['rows'][0]['event_id'];view=service.source_view(eid)
+    service.review(eid,{**body(view),'model_id':'EXPLICIT_SOFTWARE_FIXTURE'},
+                   {'name':'AI_operator','expert_attested':False},ai=True)
+    service.freeze('calibration-fixture',[eid],'AI_operator')
+    release=prepared(mode='QWEN_ONLY');identity=releases.verify(release)['identity']
+    validation(release/'valid',identity);releases.seal(release,release/'valid')
+    class ExplicitModelDouble:
+        def __init__(self,*a,**kw):pass
+        def analyse(self,*a,**kw):return result()
+        def close(self):pass
+    monkeypatch.setattr(releases,'ReleaseModel',ExplicitModelDouble)
+    original=Path.read_text
+    run=jobs.member('customer-calibration-runs','all-fields')
+    def guarded(path,*a,**kw):
+        if path.name=='calibration-answers.jsonl':
+            assert (run/'PREDICTIONS_SAVED.json').exists(),'Answers opened before durable predictions'
+        return original(path,*a,**kw)
+    monkeypatch.setattr(Path,'read_text',guarded)
+    cal=service.calibrate('all-fields',dataset_id='calibration-fixture',release_id=release.name,
+                          population='AI_FRAMEWORK',reference='2026-10-18T12:00:00+00:00',actor='AI_operator')
+    assert set(cal['reports'])=={*events.PREDICATES,'final_decision'}
+    features=json.loads((run/'features.json').read_text())
+    assert len(features)==10 and all(f['correct'] for f in features)
+    assert all(f['origin']=='AI_ASSISTED_OR_UNAUTHENTICATED' for f in features)
+    assert all(v['status']=='INSUFFICIENT_SUPPORT' for v in cal['reports'].values())
+    assert cal['models']=={},'Sparse calibration must never create numerical confidence'
+
+
 def test_final_truth_inconsistency_and_timezone_are_rejected(db):
     storage.initialise()
     r=service.import_rows('a',[row()],'operator');eid=r['rows'][0]['event_id']

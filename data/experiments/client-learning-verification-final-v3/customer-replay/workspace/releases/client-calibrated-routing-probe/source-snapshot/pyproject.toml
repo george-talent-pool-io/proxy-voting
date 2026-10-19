@@ -1,0 +1,18 @@
+[project]
+name = "laya-voting-lab"
+version = "0.1.0"
+description = "Auditable local corporate-actions classification experiment"
+requires-python = ">=3.12,<3.13"
+dependencies = ["fastapi==0.143.2", "uvicorn==0.54.0", "laya==0.4.8", "beautifulsoup4==4.15.0", "datasketch==2.0.0", "langdetect==1.0.9", "scikit-learn==1.9.1", "psutil==7.2.2", "python-multipart==0.0.32"]
+[dependency-groups]
+dev = [
+    "pytest==9.1.1",
+ "httpx==0.28.1",
+ "playwright>=1.55,<2",
+ "matplotlib==3.10.8",
+ "hypothesis==6.151.9",
+]
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+markers = ["model: downloads no weights; requires installed local Laya checkpoint", "e2e: browser tests requiring a running server"]

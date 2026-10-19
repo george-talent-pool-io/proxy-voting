@@ -1,13 +1,10 @@
 {
-  "status": "FAILED",
-  "monitor_pid": 18708,
+  "status": "COMPLETED_WITH_EXPLICIT_RECOVERY",
+  "updated_at": "2026-10-19T10:01:28.923408+00:00",
+  "stage": "Engineering qualification and delivery sealed",
+  "child_pid": null,
+  "recovery_receipt": "data/experiments/deferred-customer-qualification-v1/RECOVERY.json",
   "automation_enabled": false,
-  "blockers": [],
-  "idle_seconds": 180.4,
-  "required_idle_seconds": 180,
-  "updated_at": "2026-10-18T18:47:10.083292+00:00",
-  "stage": "serial-real-model-and-browser-verification",
-  "child_pid": 26756,
-  "log": "/Users/georgebilchev/wavionex/proxy-voting/artifacts/client-learning-verification-uncontended-v1.log",
-  "exit_code": 1
+  "customer_gate_passed": false,
+  "operating_point": "NO_SUPPORTED_OPERATING_POINT"
 }
