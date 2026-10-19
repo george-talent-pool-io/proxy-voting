@@ -1,0 +1,15 @@
+{
+  "document": "Laya_Voting_Framework_Architecture.pdf",
+  "document_version": "1.0",
+  "document_date": "19 October 2026",
+  "pages": 7,
+  "page_size": "A4 portrait",
+  "fonts": "Embedded Source Sans 3 / SIL OFL",
+  "vector_diagrams": true,
+  "text_blocks": 212,
+  "text_overlap_check": "PASSED",
+  "text_bounds_check": "PASSED",
+  "sha256": "355585db35077490671705825cb3d48b0b8954f17cbd56ef7d66ddf22e9dae83",
+  "scope": "Customer architecture and qualification operating model; no customer performance claims",
+  "source": "build_architecture_pdf.py"
+}

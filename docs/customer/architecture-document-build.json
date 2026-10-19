@@ -1,0 +1,15 @@
+{
+  "document": "Voting_Intelligence_Framework_Architecture.pdf",
+  "document_version": "1.1",
+  "document_date": "19 October 2026",
+  "pages": 7,
+  "page_size": "A4 portrait",
+  "fonts": "Embedded Source Sans 3 / SIL OFL",
+  "vector_diagrams": true,
+  "text_blocks": 212,
+  "text_overlap_check": "PASSED",
+  "text_bounds_check": "PASSED",
+  "sha256": "fe2edf8c66b166154fec2eacea51b51a69c5dbeba5c5179eb40d2eb55e41cd9f",
+  "scope": "Customer architecture and qualification operating model; no customer performance claims",
+  "source": "build_architecture_pdf.py"
+}

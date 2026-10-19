@@ -1,0 +1,17 @@
+{
+  "document": "Laya_Voting_Framework_Architecture.pdf",
+  "sha256": "355585db35077490671705825cb3d48b0b8954f17cbd56ef7d66ddf22e9dae83",
+  "bytes": 69391,
+  "pages": 7,
+  "bookmarks": 7,
+  "pdf_structure": "STRICT_PARSE_PASSED",
+  "text_extraction": "PASSED",
+  "required_content": "PASSED",
+  "private_path_and_unsupported_claim_check": "PASSED",
+  "reproducible_build": "BYTE_IDENTICAL",
+  "fonts": "All three used fonts embedded; confirmed with pdffonts",
+  "layout": "Bounds and pairwise text overlap checks passed",
+  "visual_review": "All seven pages inspected; vector diagrams, tables and typography reviewed",
+  "document_scope": "Architecture and qualification operating model; planned automated audit sampling identified explicitly",
+  "model_or_product_execution": false
+}

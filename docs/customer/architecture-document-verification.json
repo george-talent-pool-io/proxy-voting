@@ -1,0 +1,15 @@
+{
+  "document": "Voting_Intelligence_Framework_Architecture.pdf",
+  "document_version": "1.1",
+  "title": "Voting Intelligence Framework | Layered Classification, Confidence & Learning",
+  "sha256": "fe2edf8c66b166154fec2eacea51b51a69c5dbeba5c5179eb40d2eb55e41cd9f",
+  "bytes": 69495,
+  "pages": 7,
+  "bookmarks": 7,
+  "pdf_structure": "STRICT_PARSE_PASSED",
+  "branding": "Model-neutral title, cover, headers and metadata; model names retained in component descriptions",
+  "required_content": "PASSED",
+  "reproducible_build": "BYTE_IDENTICAL",
+  "layout": "Bounds and pairwise text overlap checks passed",
+  "model_or_product_execution": false
+}
