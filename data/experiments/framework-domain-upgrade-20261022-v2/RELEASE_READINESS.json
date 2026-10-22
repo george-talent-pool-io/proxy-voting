@@ -1,0 +1,16 @@
+{
+  "scope": "Post-selection diagnostic, not training/threshold selection",
+  "selection_unchanged": true,
+  "selected_identity": "b92ca07bee9e9f92b2e4d8d17e99834999e0f2f0b8d34c988ee07766694237ac",
+  "challenge_result_sha256": "c559f07c453daf47de317388653598664d6b55c942df1a6cea0f5cbccb818f5d",
+  "release_authorised": false,
+  "blockers": [
+    "INSUFFICIENT_INDEPENDENT_QUALIFICATION",
+    "CHALLENGE_NOT_VOTABLE_RECALL_0_OF_15",
+    "CHALLENGE_UNCERTAIN_RECALL_0_OF_3",
+    "NEW_MODEL_HAS_NO_CALIBRATOR"
+  ],
+  "shipped_model": false,
+  "automation_enabled": false,
+  "customer_accuracy": null
+}

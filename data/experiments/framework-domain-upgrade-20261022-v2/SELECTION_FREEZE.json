@@ -1,0 +1,12 @@
+{
+  "selected_checkpoint_identity": "b92ca07bee9e9f92b2e4d8d17e99834999e0f2f0b8d34c988ee07766694237ac",
+  "seed": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/seeds/framework-domain-upgrade-20261022-selected",
+  "selection_sha256": "3d80630a4be52bfba33dd793414b3e6b31691bd9a86ea64bc641a1bea8a058b3",
+  "driver_sha256": "d293a6cc31ba768dbd3fa2036f179d589b0d183252877dfaf8ebb1f697abeca9",
+  "challenge_sha256": "0e2f5d991a33deed25f8e9a33682185071c5ff35afd2df9179c1f8565dd17649",
+  "selection_uses": "VALIDATION_ONLY",
+  "calibration_available": false,
+  "shipped_model": false,
+  "automation_enabled": false,
+  "customer_accuracy": null
+}

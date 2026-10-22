@@ -1,0 +1,1922 @@
+{
+  "cases": 120,
+  "cases_satisfying_all_supplied_assertions": 84,
+  "assertions": 1080,
+  "correct_assertions": 1025,
+  "assertion_accuracy": 0.9490740740740741,
+  "case_exact_match_scope": "All supplied assertions only; not all fields unless dataset is completely labelled",
+  "fields": {
+    "votability": {
+      "n": 120,
+      "correct": 120,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "f1_by_class": {
+        "VOTABLE": 1.0,
+        "NOT_VOTABLE": 1.0,
+        "UNCERTAIN": 1.0
+      },
+      "balanced_accuracy": 1.0,
+      "positive_label": "VOTABLE",
+      "positive_support": 101,
+      "negative_support": 11,
+      "positive_precision": 1.0,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 1.0,
+      "positive_f1": 1.0,
+      "support": {
+        "VOTABLE": 101,
+        "NOT_VOTABLE": 11,
+        "UNCERTAIN": 8
+      },
+      "predicted_support": {
+        "VOTABLE": 101,
+        "NOT_VOTABLE": 11,
+        "UNCERTAIN": 8
+      },
+      "labels": [
+        "NOT_VOTABLE",
+        "UNCERTAIN",
+        "VOTABLE"
+      ],
+      "confusion_matrix": [
+        [
+          11,
+          0,
+          0
+        ],
+        [
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          0,
+          101
+        ]
+      ],
+      "not_supported": 0
+    },
+    "share_blocking": {
+      "n": 120,
+      "correct": 111,
+      "accuracy": 0.925,
+      "macro_f1": 0.872451358165644,
+      "f1_by_class": {
+        "YES": 0.9795918367346939,
+        "NO": 0.9454545454545454,
+        "UNKNOWN": 0.6923076923076923
+      },
+      "balanced_accuracy": 0.8389178456192603,
+      "positive_label": "YES",
+      "positive_support": 24,
+      "negative_support": 79,
+      "positive_precision": 0.96,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 0.9873417721518988,
+      "positive_f1": 0.9795918367346939,
+      "support": {
+        "YES": 24,
+        "NO": 79,
+        "UNKNOWN": 17
+      },
+      "predicted_support": {
+        "YES": 25,
+        "NO": 86,
+        "UNKNOWN": 9
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          78,
+          0,
+          1
+        ],
+        [
+          8,
+          9,
+          0
+        ],
+        [
+          0,
+          0,
+          24
+        ]
+      ],
+      "not_supported": 0
+    },
+    "poa_required": {
+      "n": 120,
+      "correct": 112,
+      "accuracy": 0.9333333333333333,
+      "macro_f1": 0.8485565143283264,
+      "f1_by_class": {
+        "NO": 0.9932885906040269,
+        "YES": 0.8857142857142857,
+        "UNKNOWN": 0.6666666666666666
+      },
+      "balanced_accuracy": 0.8288888888888889,
+      "positive_label": "YES",
+      "positive_support": 31,
+      "negative_support": 75,
+      "positive_precision": 0.7948717948717948,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 0.9866666666666667,
+      "positive_f1": 0.8857142857142857,
+      "support": {
+        "NO": 75,
+        "YES": 31,
+        "UNKNOWN": 14
+      },
+      "predicted_support": {
+        "NO": 74,
+        "YES": 39,
+        "UNKNOWN": 7
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          74,
+          0,
+          1
+        ],
+        [
+          0,
+          7,
+          7
+        ],
+        [
+          0,
+          0,
+          31
+        ]
+      ],
+      "not_supported": 0
+    },
+    "registration_required": {
+      "n": 120,
+      "correct": 114,
+      "accuracy": 0.95,
+      "macro_f1": 0.8988771380075727,
+      "f1_by_class": {
+        "NO": 0.9864864864864865,
+        "UNKNOWN": 0.782608695652174,
+        "YES": 0.927536231884058
+      },
+      "balanced_accuracy": 0.8976767676767677,
+      "positive_label": "YES",
+      "positive_support": 33,
+      "negative_support": 75,
+      "positive_precision": 0.8888888888888888,
+      "positive_recall": 0.9696969696969697,
+      "negative_recall_specificity": 0.9733333333333334,
+      "positive_f1": 0.927536231884058,
+      "support": {
+        "NO": 75,
+        "UNKNOWN": 12,
+        "YES": 33
+      },
+      "predicted_support": {
+        "NO": 73,
+        "UNKNOWN": 11,
+        "YES": 36
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          73,
+          1,
+          1
+        ],
+        [
+          0,
+          9,
+          3
+        ],
+        [
+          0,
+          1,
+          32
+        ]
+      ],
+      "not_supported": 0
+    },
+    "beneficial_owner_disclosure_required": {
+      "n": 120,
+      "correct": 116,
+      "accuracy": 0.9666666666666667,
+      "macro_f1": 0.9293627519433971,
+      "f1_by_class": {
+        "NO": 0.987012987012987,
+        "UNKNOWN": 0.8333333333333334,
+        "YES": 0.967741935483871
+      },
+      "balanced_accuracy": 0.9047619047619048,
+      "positive_label": "YES",
+      "positive_support": 30,
+      "negative_support": 76,
+      "positive_precision": 0.9375,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 1.0,
+      "positive_f1": 0.967741935483871,
+      "support": {
+        "NO": 76,
+        "UNKNOWN": 14,
+        "YES": 30
+      },
+      "predicted_support": {
+        "NO": 78,
+        "YES": 32,
+        "UNKNOWN": 10
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          76,
+          0,
+          0
+        ],
+        [
+          2,
+          10,
+          2
+        ],
+        [
+          0,
+          0,
+          30
+        ]
+      ],
+      "not_supported": 0
+    },
+    "holding_confirmation_required": {
+      "n": 120,
+      "correct": 109,
+      "accuracy": 0.9083333333333333,
+      "macro_f1": 0.8516177485486948,
+      "f1_by_class": {
+        "NO": 0.9705882352941176,
+        "YES": 0.8985507246376812,
+        "UNKNOWN": 0.6857142857142857
+      },
+      "balanced_accuracy": 0.8725442834138487,
+      "positive_label": "YES",
+      "positive_support": 36,
+      "negative_support": 69,
+      "positive_precision": 0.9393939393939394,
+      "positive_recall": 0.8611111111111112,
+      "negative_recall_specificity": 0.9565217391304348,
+      "positive_f1": 0.8985507246376812,
+      "support": {
+        "NO": 69,
+        "YES": 36,
+        "UNKNOWN": 15
+      },
+      "predicted_support": {
+        "NO": 67,
+        "UNKNOWN": 20,
+        "YES": 33
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          66,
+          3,
+          0
+        ],
+        [
+          1,
+          12,
+          2
+        ],
+        [
+          0,
+          5,
+          31
+        ]
+      ],
+      "not_supported": 0
+    },
+    "split_voting_restricted": {
+      "n": 120,
+      "correct": 114,
+      "accuracy": 0.95,
+      "macro_f1": 0.9279764306059827,
+      "f1_by_class": {
+        "NO": 0.9664429530201343,
+        "YES": 0.9508196721311475,
+        "UNKNOWN": 0.8666666666666667
+      },
+      "balanced_accuracy": 0.9125596184419713,
+      "positive_label": "YES",
+      "positive_support": 29,
+      "negative_support": 74,
+      "positive_precision": 0.90625,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 0.972972972972973,
+      "positive_f1": 0.9508196721311475,
+      "support": {
+        "NO": 74,
+        "YES": 29,
+        "UNKNOWN": 17
+      },
+      "predicted_support": {
+        "NO": 75,
+        "YES": 32,
+        "UNKNOWN": 13
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          72,
+          0,
+          2
+        ],
+        [
+          3,
+          13,
+          1
+        ],
+        [
+          0,
+          0,
+          29
+        ]
+      ],
+      "not_supported": 0
+    },
+    "securities_lending_recall_required": {
+      "n": 120,
+      "correct": 117,
+      "accuracy": 0.975,
+      "macro_f1": 0.9695499414421951,
+      "f1_by_class": {
+        "NO": 0.9784172661870504,
+        "YES": 1.0,
+        "UNKNOWN": 0.9302325581395349
+      },
+      "balanced_accuracy": 0.9565217391304347,
+      "positive_label": "YES",
+      "positive_support": 29,
+      "negative_support": 68,
+      "positive_precision": 1.0,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 1.0,
+      "positive_f1": 1.0,
+      "support": {
+        "NO": 68,
+        "YES": 29,
+        "UNKNOWN": 23
+      },
+      "predicted_support": {
+        "NO": 71,
+        "YES": 29,
+        "UNKNOWN": 20
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          68,
+          0,
+          0
+        ],
+        [
+          3,
+          20,
+          0
+        ],
+        [
+          0,
+          0,
+          29
+        ]
+      ],
+      "not_supported": 0
+    },
+    "other_voting_restriction": {
+      "n": 120,
+      "correct": 112,
+      "accuracy": 0.9333333333333333,
+      "macro_f1": 0.879263121306917,
+      "f1_by_class": {
+        "YES": 0.96,
+        "NO": 0.9635036496350365,
+        "UNKNOWN": 0.7142857142857143
+      },
+      "balanced_accuracy": 0.8518518518518517,
+      "positive_label": "YES",
+      "positive_support": 36,
+      "negative_support": 66,
+      "positive_precision": 0.9230769230769231,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 1.0,
+      "positive_f1": 0.96,
+      "support": {
+        "YES": 36,
+        "NO": 66,
+        "UNKNOWN": 18
+      },
+      "predicted_support": {
+        "YES": 39,
+        "NO": 71,
+        "UNKNOWN": 10
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          66,
+          0,
+          0
+        ],
+        [
+          5,
+          10,
+          3
+        ],
+        [
+          0,
+          0,
+          36
+        ]
+      ],
+      "not_supported": 0
+    }
+  },
+  "final_status_labelled_cases": 0,
+  "customer_status_accuracy": null,
+  "manual_review_count": 120,
+  "uncertain_final_status_count": 48,
+  "llm_invocations": 0,
+  "llm_invalid_outputs": 0,
+  "high_confidence_wrong_assertions": 0,
+  "median_latency_ms": 185.24079117923975,
+  "p95_latency_ms": 562.8767078742385,
+  "failures": [
+    {
+      "id": "QD1-021-014-1",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/014; issuer account Nacre-38; dispatch 20262114.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Annual General Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nThe current agent instruction states: The voting investor is required to recall loaned securities before exercising voting rights.\n\nCURRENT instruction 1: The current agent instruction states: The intermediary is required to disclose the beneficial owner identity as a condition of voting. CURRENT instruction 2: The holder need not satisfy beneficial-owner identity disclosure to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nThe current agent instruction states: The voting holder is required to provide a valid power of attorney before instructions are accepted.\n\nThe current agent instruction states: The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nCURRENT instruction 1: The current agent instruction states: The beneficial holder is required to complete additional voting registration with the meeting agent. CURRENT instruction 2: The holder need not satisfy additional voting registration to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\n\nCash entitlements are reconciled separately by the income department. The payment currency has no bearing on proxy instructions.\nRegards, Operations",
+      "field": "beneficial_owner_disclosure_required",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0002,
+        "NO": 0.9988,
+        "UNKNOWN": 0.0009
+      },
+      "confidence": null,
+      "margin": 0.9979,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "beneficial_owner_disclosure_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "registration_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-021-014-1"
+    },
+    {
+      "id": "QD1-021-014-1",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/014; issuer account Nacre-38; dispatch 20262114.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Annual General Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nThe current agent instruction states: The voting investor is required to recall loaned securities before exercising voting rights.\n\nCURRENT instruction 1: The current agent instruction states: The intermediary is required to disclose the beneficial owner identity as a condition of voting. CURRENT instruction 2: The holder need not satisfy beneficial-owner identity disclosure to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nThe current agent instruction states: The voting holder is required to provide a valid power of attorney before instructions are accepted.\n\nThe current agent instruction states: The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nCURRENT instruction 1: The current agent instruction states: The beneficial holder is required to complete additional voting registration with the meeting agent. CURRENT instruction 2: The holder need not satisfy additional voting registration to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\n\nCash entitlements are reconciled separately by the income department. The payment currency has no bearing on proxy instructions.\nRegards, Operations",
+      "field": "holding_confirmation_required",
+      "expected": "YES",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.3442,
+        "NO": 0.0,
+        "UNKNOWN": 0.6558
+      },
+      "confidence": null,
+      "margin": 0.31160000000000004,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "beneficial_owner_disclosure_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "registration_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-021-014-1"
+    },
+    {
+      "id": "QD1-053-007-0",
+      "text": "Operations reference 053/007; issuer account Nacre-70; dispatch 20265307.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Class Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nPlease use the event reference when discussing document delivery. The contact centre cannot amend an instruction by telephone.\n\nWhether recall of securities on loan will be required is still unconfirmed; the operative condition is missing from this notice.\n\nWhether the additional professional-investor voting restriction will be required is still unconfirmed; the operative condition is missing from this notice.\n\nUnder the operative service terms, Votes attached to an account are required to be cast identically because split voting is prohibited.\n\nUnder the operative service terms, The beneficial holder is required to complete additional voting registration with the meeting agent.\n\nVoting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.",
+      "field": "other_voting_restriction",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0002,
+        "NO": 0.9978,
+        "UNKNOWN": 0.002
+      },
+      "confidence": null,
+      "margin": 0.9958,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "other_voting_restriction:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-053-007-0"
+    },
+    {
+      "id": "QD1-053-028-0",
+      "text": "Operations reference 053/028; issuer account Nacre-70; dispatch 20265328.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Class Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nThere is no requirement for a power of attorney under the current voting terms.\n\nThere is no requirement for recall of securities on loan under the current voting terms.\n\nSecurity descriptions may be abbreviated in account statements. The issuer legal name remains unchanged.\n\nUnder the operative service terms, The intermediary is required to disclose the beneficial owner identity as a condition of voting.\n\nWhether a restriction on split voting will be required is still unconfirmed; the operative condition is missing from this notice.\n\nWhether a certificate confirming holdings will be required is still unconfirmed; the operative condition is missing from this notice.",
+      "field": "holding_confirmation_required",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9957,
+        "NO": 0.0028,
+        "UNKNOWN": 0.0015
+      },
+      "confidence": null,
+      "margin": 0.9929,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "QD1-053-028-0"
+    },
+    {
+      "id": "QD1-053-008-1",
+      "text": "Operations reference 053/008; issuer account Nacre-70; dispatch 20265308.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Bondholder Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nThe agenda and annual accounts are available from the issuer. Requests for paper copies are administrative and optional.\n\nThe current agent instruction states: Shares instructed for voting are required to remain unavailable for transfer until the meeting ends.\n\nThe current agent instruction states: A participating voter is required to satisfy the additional professional-investor eligibility condition.\n\nCURRENT instruction 1: The current agent instruction states: The voting holder is required to provide a valid power of attorney before instructions are accepted. CURRENT instruction 2: The holder need not satisfy a power of attorney to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nThe current agent instruction states: The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nThe current agent instruction states: The intermediary is required to disclose the beneficial owner identity as a condition of voting.\n\nVoting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.",
+      "field": "poa_required",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9997,
+        "NO": 0.0002,
+        "UNKNOWN": 0.0001
+      },
+      "confidence": null,
+      "margin": 0.9995,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "poa_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-053-008-1"
+    },
+    {
+      "id": "QD1-037-021-0",
+      "text": "Operations reference 037/021; issuer account Nacre-54; dispatch 20263721.\nEVENT INFORMATION / CURRENT TERMS\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\r\nThe issuer has convened its Special General Meeting; shareholders may submit proxy voting instructions through their custodian.\r\nFor this event, The beneficial holder is required to complete additional voting registration with the meeting agent.\r\nFor this event, The intermediary is required to disclose the beneficial owner identity as a condition of voting.\r\nCURRENT instruction 1: For this event, The voting holder is required to provide a valid power of attorney before instructions are accepted. CURRENT instruction 2: The agent confirms that a power of attorney does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\r\nThe intermediary maintains separate operational records for pending trades and reconciles unmatched settlements daily.\r\nPRELIMINARY CONDITION (superseded): For this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends. FINAL AMENDMENT, replacing that condition: The agent confirms that share blocking does not apply to this event.\r\nFor this event, A participating voter is required to satisfy the additional professional-investor eligibility condition.\r\nCURRENT instruction 1: For this event, Votes attached to an account are required to be cast identically because split voting is prohibited. CURRENT instruction 2: The agent confirms that a restriction on split voting does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.",
+      "field": "poa_required",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9998,
+        "NO": 0.0001,
+        "UNKNOWN": 0.0001
+      },
+      "confidence": null,
+      "margin": 0.9997,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "poa_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "share_blocking:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "split_voting_restricted:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-037-021-0"
+    },
+    {
+      "id": "QD1-037-021-0",
+      "text": "Operations reference 037/021; issuer account Nacre-54; dispatch 20263721.\nEVENT INFORMATION / CURRENT TERMS\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\r\nThe issuer has convened its Special General Meeting; shareholders may submit proxy voting instructions through their custodian.\r\nFor this event, The beneficial holder is required to complete additional voting registration with the meeting agent.\r\nFor this event, The intermediary is required to disclose the beneficial owner identity as a condition of voting.\r\nCURRENT instruction 1: For this event, The voting holder is required to provide a valid power of attorney before instructions are accepted. CURRENT instruction 2: The agent confirms that a power of attorney does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\r\nThe intermediary maintains separate operational records for pending trades and reconciles unmatched settlements daily.\r\nPRELIMINARY CONDITION (superseded): For this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends. FINAL AMENDMENT, replacing that condition: The agent confirms that share blocking does not apply to this event.\r\nFor this event, A participating voter is required to satisfy the additional professional-investor eligibility condition.\r\nCURRENT instruction 1: For this event, Votes attached to an account are required to be cast identically because split voting is prohibited. CURRENT instruction 2: The agent confirms that a restriction on split voting does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.",
+      "field": "split_voting_restricted",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.931,
+        "NO": 0.0403,
+        "UNKNOWN": 0.0288
+      },
+      "confidence": null,
+      "margin": 0.8907,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "poa_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "share_blocking:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "split_voting_restricted:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-037-021-0"
+    },
+    {
+      "id": "QD1-021-014-0",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/014; issuer account Nacre-38; dispatch 20262114.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Annual General Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nCURRENT instruction 1: The current agent instruction states: The voting investor is required to recall loaned securities before exercising voting rights. CURRENT instruction 2: The holder need not satisfy recall of securities on loan to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nCURRENT instruction 1: The current agent instruction states: The intermediary is required to disclose the beneficial owner identity as a condition of voting. CURRENT instruction 2: The holder need not satisfy beneficial-owner identity disclosure to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nThe current agent instruction states: The voting holder is required to provide a valid power of attorney before instructions are accepted.\n\nThe current agent instruction states: The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nCURRENT instruction 1: The current agent instruction states: The beneficial holder is required to complete additional voting registration with the meeting agent. CURRENT instruction 2: The holder need not satisfy additional voting registration to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\n\nCash entitlements are reconciled separately by the income department. The payment currency has no bearing on proxy instructions.\nRegards, Operations",
+      "field": "registration_required",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.7081,
+        "NO": 0.0066,
+        "UNKNOWN": 0.2853
+      },
+      "confidence": null,
+      "margin": 0.42279999999999995,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "beneficial_owner_disclosure_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "registration_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "securities_lending_recall_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-021-014-0"
+    },
+    {
+      "id": "QD1-021-014-0",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/014; issuer account Nacre-38; dispatch 20262114.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Annual General Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nCURRENT instruction 1: The current agent instruction states: The voting investor is required to recall loaned securities before exercising voting rights. CURRENT instruction 2: The holder need not satisfy recall of securities on loan to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nCURRENT instruction 1: The current agent instruction states: The intermediary is required to disclose the beneficial owner identity as a condition of voting. CURRENT instruction 2: The holder need not satisfy beneficial-owner identity disclosure to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nThe current agent instruction states: The voting holder is required to provide a valid power of attorney before instructions are accepted.\n\nThe current agent instruction states: The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nCURRENT instruction 1: The current agent instruction states: The beneficial holder is required to complete additional voting registration with the meeting agent. CURRENT instruction 2: The holder need not satisfy additional voting registration to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\n\nCash entitlements are reconciled separately by the income department. The payment currency has no bearing on proxy instructions.\nRegards, Operations",
+      "field": "beneficial_owner_disclosure_required",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.851,
+        "NO": 0.1468,
+        "UNKNOWN": 0.0021
+      },
+      "confidence": null,
+      "margin": 0.7041999999999999,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "beneficial_owner_disclosure_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "registration_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "securities_lending_recall_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-021-014-0"
+    },
+    {
+      "id": "QD1-021-014-0",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/014; issuer account Nacre-38; dispatch 20262114.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Annual General Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nCURRENT instruction 1: The current agent instruction states: The voting investor is required to recall loaned securities before exercising voting rights. CURRENT instruction 2: The holder need not satisfy recall of securities on loan to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nCURRENT instruction 1: The current agent instruction states: The intermediary is required to disclose the beneficial owner identity as a condition of voting. CURRENT instruction 2: The holder need not satisfy beneficial-owner identity disclosure to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nThe current agent instruction states: The voting holder is required to provide a valid power of attorney before instructions are accepted.\n\nThe current agent instruction states: The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nCURRENT instruction 1: The current agent instruction states: The beneficial holder is required to complete additional voting registration with the meeting agent. CURRENT instruction 2: The holder need not satisfy additional voting registration to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\n\nCash entitlements are reconciled separately by the income department. The payment currency has no bearing on proxy instructions.\nRegards, Operations",
+      "field": "holding_confirmation_required",
+      "expected": "YES",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.1859,
+        "NO": 0.0,
+        "UNKNOWN": 0.814
+      },
+      "confidence": null,
+      "margin": 0.6280999999999999,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "beneficial_owner_disclosure_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "registration_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "securities_lending_recall_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-021-014-0"
+    },
+    {
+      "id": "QD1-021-014-0",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/014; issuer account Nacre-38; dispatch 20262114.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Annual General Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nCURRENT instruction 1: The current agent instruction states: The voting investor is required to recall loaned securities before exercising voting rights. CURRENT instruction 2: The holder need not satisfy recall of securities on loan to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nCURRENT instruction 1: The current agent instruction states: The intermediary is required to disclose the beneficial owner identity as a condition of voting. CURRENT instruction 2: The holder need not satisfy beneficial-owner identity disclosure to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nThe current agent instruction states: The voting holder is required to provide a valid power of attorney before instructions are accepted.\n\nThe current agent instruction states: The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nCURRENT instruction 1: The current agent instruction states: The beneficial holder is required to complete additional voting registration with the meeting agent. CURRENT instruction 2: The holder need not satisfy additional voting registration to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\n\nCash entitlements are reconciled separately by the income department. The payment currency has no bearing on proxy instructions.\nRegards, Operations",
+      "field": "securities_lending_recall_required",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0003,
+        "NO": 0.9994,
+        "UNKNOWN": 0.0003
+      },
+      "confidence": null,
+      "margin": 0.9991,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "beneficial_owner_disclosure_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "registration_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "securities_lending_recall_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-021-014-0"
+    },
+    {
+      "id": "QD1-021-028-0",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/028; issuer account Nacre-38; dispatch 20262128.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Annual General Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nWhether a certificate confirming holdings will be required is still unconfirmed; the operative condition is missing from this notice.\n\nUnder the operative service terms, Votes attached to an account are required to be cast identically because split voting is prohibited.\n\nWhether beneficial-owner identity disclosure will be required is still unconfirmed; the operative condition is missing from this notice.\n\nThe intermediary maintains separate operational records for pending trades and reconciles unmatched settlements daily.\nRegards, Operations",
+      "field": "beneficial_owner_disclosure_required",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9847,
+        "NO": 0.0008,
+        "UNKNOWN": 0.0145
+      },
+      "confidence": null,
+      "margin": 0.9702000000000001,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "QD1-021-028-0"
+    },
+    {
+      "id": "QD1-005-002-1",
+      "text": "Operations reference 005/002; issuer account Nacre-22; dispatch 20260502.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Annual General Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nThe holder need not satisfy beneficial-owner identity disclosure to vote.\n\nCURRENT instruction 1: The current agent instruction states: A participating voter is required to satisfy the additional professional-investor eligibility condition. CURRENT instruction 2: The holder need not satisfy the additional professional-investor voting restriction to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nCURRENT instruction 1: The current agent instruction states: Shares instructed for voting are required to remain unavailable for transfer until the meeting ends. CURRENT instruction 2: The holder need not satisfy share blocking to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nThe current agent instruction states: The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nThe current agent instruction states: The beneficial holder is required to complete additional voting registration with the meeting agent.\n\nAdministrative information: copies may be retained in the client document archive under the usual retention schedule.",
+      "field": "share_blocking",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0003,
+        "NO": 0.9994,
+        "UNKNOWN": 0.0004
+      },
+      "confidence": null,
+      "margin": 0.999,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "other_voting_restriction:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "share_blocking:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-005-002-1"
+    },
+    {
+      "id": "QD1-005-002-1",
+      "text": "Operations reference 005/002; issuer account Nacre-22; dispatch 20260502.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Annual General Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nThe holder need not satisfy beneficial-owner identity disclosure to vote.\n\nCURRENT instruction 1: The current agent instruction states: A participating voter is required to satisfy the additional professional-investor eligibility condition. CURRENT instruction 2: The holder need not satisfy the additional professional-investor voting restriction to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nCURRENT instruction 1: The current agent instruction states: Shares instructed for voting are required to remain unavailable for transfer until the meeting ends. CURRENT instruction 2: The holder need not satisfy share blocking to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nThe current agent instruction states: The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nThe current agent instruction states: The beneficial holder is required to complete additional voting registration with the meeting agent.\n\nAdministrative information: copies may be retained in the client document archive under the usual retention schedule.",
+      "field": "other_voting_restriction",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9978,
+        "NO": 0.001,
+        "UNKNOWN": 0.0012
+      },
+      "confidence": null,
+      "margin": 0.9966,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "other_voting_restriction:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "share_blocking:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-005-002-1"
+    },
+    {
+      "id": "QD1-021-007-0",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/007; issuer account Nacre-38; dispatch 20262107.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Annual General Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nWhether a restriction on split voting will be required is still unconfirmed; the operative condition is missing from this notice.\n\nThere is no requirement for additional voting registration under the current voting terms.\n\nWhether the additional professional-investor voting restriction will be required is still unconfirmed; the operative condition is missing from this notice.\n\nWhether recall of securities on loan will be required is still unconfirmed; the operative condition is missing from this notice.\n\nAdministrative information: copies may be retained in the client document archive under the usual retention schedule.\n\nThere is no requirement for share blocking under the current voting terms.\nRegards, Operations",
+      "field": "other_voting_restriction",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.009,
+        "NO": 0.983,
+        "UNKNOWN": 0.0079
+      },
+      "confidence": null,
+      "margin": 0.974,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "other_voting_restriction:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-021-007-0"
+    },
+    {
+      "id": "QD1-026-005-1",
+      "text": "Operations reference 026/005; issuer account Nacre-43; dispatch 20262605.\n\nA pension mandate has reviewed the agenda with its stewardship team. Its instructions will be routed through the custodian; portfolio reporting material is supplied for administrative background only.\n\nHistorical cutoff, superseded: voting instructions were due on 2 September 2026 at 10:00 UTC.\n\nThe issuer has convened its Scheme Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nThe receiving agent has not established whether recall of securities on loan is a prerequisite; that part of the current schedule is unavailable.\n\nMeeting venue directions and transport details are supplied for convenience; this paragraph does not impose an attendance condition.\n\nBallot processing is contingent on the following step: the intermediary must disclose the beneficial owner identity as a condition of voting.\n\nBallot processing is contingent on the following step: a participating voter must satisfy the additional professional-investor eligibility condition.\n\nBallot processing is contingent on the following step: votes attached to an account must be cast identically because split voting is prohibited.\n\nBallot processing is contingent on the following step: the voting holder must provide a valid power of attorney before instructions are accepted.\n\nBallot processing is contingent on the following step: the beneficial holder must complete additional voting registration with the meeting agent.\n\nFINAL AMENDMENT: Voting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.",
+      "field": "registration_required",
+      "expected": "YES",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.3415,
+        "NO": 0.0005,
+        "UNKNOWN": 0.658
+      },
+      "confidence": null,
+      "margin": 0.3165,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "QD1-026-005-1"
+    },
+    {
+      "id": "QD1-005-007-0",
+      "text": "Operations reference 005/007; issuer account Nacre-22; dispatch 20260507.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Bondholder Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nWhether the additional professional-investor voting restriction will be required is still unconfirmed; the operative condition is missing from this notice.\n\nThe safekeeping account reference should be included in routine correspondence to facilitate matching.\n\nWhether a restriction on split voting will be required is still unconfirmed; the operative condition is missing from this notice.\n\nUnder the operative service terms, The intermediary is required to disclose the beneficial owner identity as a condition of voting.\n\nVoting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.",
+      "field": "other_voting_restriction",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0002,
+        "NO": 0.9028,
+        "UNKNOWN": 0.097
+      },
+      "confidence": null,
+      "margin": 0.8058000000000001,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "other_voting_restriction:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-005-007-0"
+    },
+    {
+      "id": "QD1-021-018-1",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/018; issuer account Nacre-38; dispatch 20262118.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Class Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nFor this event, The beneficial holder is required to complete additional voting registration with the meeting agent.\n\nFor this event, A participating voter is required to satisfy the additional professional-investor eligibility condition.\n\nPRELIMINARY CONDITION (superseded): For this event, The voting investor is required to recall loaned securities before exercising voting rights. FINAL AMENDMENT, replacing that condition: The agent confirms that recall of securities on loan does not apply to this event.\n\nFor this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends.\n\nCURRENT instruction 1: For this event, The voting holder is required to provide a valid power of attorney before instructions are accepted. CURRENT instruction 2: The agent confirms that a power of attorney does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nFor this event, Votes attached to an account are required to be cast identically because split voting is prohibited.\n\nSecurity descriptions may be abbreviated in account statements. The issuer legal name remains unchanged.\nRegards, Operations",
+      "field": "poa_required",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9992,
+        "NO": 0.0005,
+        "UNKNOWN": 0.0003
+      },
+      "confidence": null,
+      "margin": 0.9987,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "poa_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "securities_lending_recall_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-021-018-1"
+    },
+    {
+      "id": "QD1-037-021-1",
+      "text": "Operations reference 037/021; issuer account Nacre-54; dispatch 20263721.\nEVENT INFORMATION / CURRENT TERMS\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\r\nThe issuer has convened its Special General Meeting; shareholders may submit proxy voting instructions through their custodian.\r\nFor this event, The beneficial holder is required to complete additional voting registration with the meeting agent.\r\nFor this event, The intermediary is required to disclose the beneficial owner identity as a condition of voting.\r\nCURRENT instruction 1: For this event, The voting holder is required to provide a valid power of attorney before instructions are accepted. CURRENT instruction 2: The agent confirms that a power of attorney does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\r\nThe intermediary maintains separate operational records for pending trades and reconciles unmatched settlements daily.\r\nPRELIMINARY CONDITION (superseded): For this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends. FINAL AMENDMENT, replacing that condition: The agent confirms that share blocking does not apply to this event.\r\nFor this event, A participating voter is required to satisfy the additional professional-investor eligibility condition.\r\nFor this event, Votes attached to an account are required to be cast identically because split voting is prohibited.",
+      "field": "poa_required",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9087,
+        "NO": 0.0887,
+        "UNKNOWN": 0.0026
+      },
+      "confidence": null,
+      "margin": 0.82,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "poa_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "share_blocking:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-037-021-1"
+    },
+    {
+      "id": "QD1-021-027-1",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/027; issuer account Nacre-38; dispatch 20262127.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Court Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nCURRENT instruction 1: For this event, The beneficial holder is required to complete additional voting registration with the meeting agent. CURRENT instruction 2: The agent confirms that additional voting registration does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nFor this event, The voting holder is required to provide a valid power of attorney before instructions are accepted.\n\nFor this event, The intermediary is required to disclose the beneficial owner identity as a condition of voting.\n\nPlease use the event reference when discussing document delivery. The contact centre cannot amend an instruction by telephone.\n\nPRELIMINARY CONDITION (superseded): For this event, The nominee is required to supply a dated certificate confirming its holdings to lodge votes. FINAL AMENDMENT, replacing that condition: The agent confirms that a certificate confirming holdings does not apply to this event.\n\nFor this event, The voting investor is required to recall loaned securities before exercising voting rights.\n\nVoting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.\nRegards, Operations",
+      "field": "registration_required",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.7279,
+        "NO": 0.0259,
+        "UNKNOWN": 0.2462
+      },
+      "confidence": null,
+      "margin": 0.4817,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "holding_confirmation_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "registration_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-021-027-1"
+    },
+    {
+      "id": "QD1-053-018-1",
+      "text": "Operations reference 053/018; issuer account Nacre-70; dispatch 20265318.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe safekeeping account reference should be included in routine correspondence to facilitate matching.\n\nThe issuer has convened its Extraordinary General Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nPRELIMINARY CONDITION (superseded): For this event, The intermediary is required to disclose the beneficial owner identity as a condition of voting. FINAL AMENDMENT, replacing that condition: The agent confirms that beneficial-owner identity disclosure does not apply to this event.\n\nFor this event, The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nCURRENT instruction 1: For this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends. CURRENT instruction 2: The agent confirms that share blocking does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nFor this event, The beneficial holder is required to complete additional voting registration with the meeting agent.\n\nCURRENT instruction 1: For this event, A participating voter is required to satisfy the additional professional-investor eligibility condition. CURRENT instruction 2: The agent confirms that the additional professional-investor voting restriction does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nVoting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.",
+      "field": "share_blocking",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.006,
+        "NO": 0.9935,
+        "UNKNOWN": 0.0004
+      },
+      "confidence": null,
+      "margin": 0.9875,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "beneficial_owner_disclosure_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "other_voting_restriction:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "share_blocking:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-053-018-1"
+    },
+    {
+      "id": "QD1-053-018-1",
+      "text": "Operations reference 053/018; issuer account Nacre-70; dispatch 20265318.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe safekeeping account reference should be included in routine correspondence to facilitate matching.\n\nThe issuer has convened its Extraordinary General Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nPRELIMINARY CONDITION (superseded): For this event, The intermediary is required to disclose the beneficial owner identity as a condition of voting. FINAL AMENDMENT, replacing that condition: The agent confirms that beneficial-owner identity disclosure does not apply to this event.\n\nFor this event, The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nCURRENT instruction 1: For this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends. CURRENT instruction 2: The agent confirms that share blocking does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nFor this event, The beneficial holder is required to complete additional voting registration with the meeting agent.\n\nCURRENT instruction 1: For this event, A participating voter is required to satisfy the additional professional-investor eligibility condition. CURRENT instruction 2: The agent confirms that the additional professional-investor voting restriction does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nVoting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.",
+      "field": "other_voting_restriction",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9983,
+        "NO": 0.0008,
+        "UNKNOWN": 0.0009
+      },
+      "confidence": null,
+      "margin": 0.9974,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "beneficial_owner_disclosure_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "other_voting_restriction:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "share_blocking:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-053-018-1"
+    },
+    {
+      "id": "QD1-010-024-1",
+      "text": "Operations reference 010/024; issuer account Nacre-27; dispatch 20261024.\nPAGE 01 / EXTRACTED TEXT\nA pension mandate has reviewed the agenda with its stewardship team. Its instructions will be routed through the custodian; portfolio reporting material is supplied for administrative background only.\n\nThe issuer has convened its Court Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nBallot processing is contingent on the following step: the nominee must supply a dated certificate confirming its holdings to lodge votes.\n\nException confirmed by the receiving agent: votes can be processed without additional voting registration.\n\nThe receiving agent has not established whether the additional professional-investor voting restriction is a prerequisite; that part of the current schedule is unavailable.\n\nThe receiving agent has not established whether recall of securities on loan is a prerequisite; that part of the current schedule is unavailable.\n\nCash entitlements are reconciled separately by the income department. The payment currency has no bearing on proxy instructions.\n\nBallot processing is contingent on the following step: shares instructed for voting must remain unavailable for transfer until the meeting ends.\n\nVoting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.\n[End of extracted operative section]",
+      "field": "split_voting_restricted",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9981,
+        "NO": 0.0011,
+        "UNKNOWN": 0.0008
+      },
+      "confidence": null,
+      "margin": 0.997,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "QD1-010-024-1"
+    },
+    {
+      "id": "QD1-053-021-0",
+      "text": "Operations reference 053/021; issuer account Nacre-70; dispatch 20265321.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Class Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nPRELIMINARY CONDITION (superseded): For this event, The intermediary is required to disclose the beneficial owner identity as a condition of voting. FINAL AMENDMENT, replacing that condition: The agent confirms that beneficial-owner identity disclosure does not apply to this event.\n\nPRELIMINARY CONDITION (superseded): For this event, A participating voter is required to satisfy the additional professional-investor eligibility condition. FINAL AMENDMENT, replacing that condition: The agent confirms that the additional professional-investor voting restriction does not apply to this event.\n\nCURRENT instruction 1: For this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends. CURRENT instruction 2: The agent confirms that share blocking does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nCURRENT instruction 1: For this event, Votes attached to an account are required to be cast identically because split voting is prohibited. CURRENT instruction 2: The agent confirms that a restriction on split voting does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nPRELIMINARY CONDITION (superseded): For this event, The voting holder is required to provide a valid power of attorney before instructions are accepted. FINAL AMENDMENT, replacing that condition: The agent confirms that a power of attorney does not apply to this event.\n\nThe board report contains a discussion of historical performance, remuneration and the outlook for the business.\n\nVoting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.",
+      "field": "share_blocking",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0016,
+        "NO": 0.9982,
+        "UNKNOWN": 0.0002
+      },
+      "confidence": null,
+      "margin": 0.9965999999999999,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "beneficial_owner_disclosure_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "other_voting_restriction:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "poa_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "share_blocking:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "split_voting_restricted:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-053-021-0"
+    },
+    {
+      "id": "QD1-053-021-0",
+      "text": "Operations reference 053/021; issuer account Nacre-70; dispatch 20265321.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Class Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nPRELIMINARY CONDITION (superseded): For this event, The intermediary is required to disclose the beneficial owner identity as a condition of voting. FINAL AMENDMENT, replacing that condition: The agent confirms that beneficial-owner identity disclosure does not apply to this event.\n\nPRELIMINARY CONDITION (superseded): For this event, A participating voter is required to satisfy the additional professional-investor eligibility condition. FINAL AMENDMENT, replacing that condition: The agent confirms that the additional professional-investor voting restriction does not apply to this event.\n\nCURRENT instruction 1: For this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends. CURRENT instruction 2: The agent confirms that share blocking does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nCURRENT instruction 1: For this event, Votes attached to an account are required to be cast identically because split voting is prohibited. CURRENT instruction 2: The agent confirms that a restriction on split voting does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nPRELIMINARY CONDITION (superseded): For this event, The voting holder is required to provide a valid power of attorney before instructions are accepted. FINAL AMENDMENT, replacing that condition: The agent confirms that a power of attorney does not apply to this event.\n\nThe board report contains a discussion of historical performance, remuneration and the outlook for the business.\n\nVoting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.",
+      "field": "split_voting_restricted",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.391,
+        "NO": 0.4269,
+        "UNKNOWN": 0.1822
+      },
+      "confidence": null,
+      "margin": 0.03589999999999999,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "beneficial_owner_disclosure_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "other_voting_restriction:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "poa_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "share_blocking:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "split_voting_restricted:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-053-021-0"
+    },
+    {
+      "id": "QD1-053-006-1",
+      "text": "Operations reference 053/006; issuer account Nacre-70; dispatch 20265306.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Scheme Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nCURRENT instruction 1: For this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends. CURRENT instruction 2: The agent confirms that share blocking does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nFor this event, The voting holder is required to provide a valid power of attorney before instructions are accepted.\n\nThe telephone service handles settlement queries during normal business hours; this does not change the voting channel.\n\nFor this event, The voting investor is required to recall loaned securities before exercising voting rights.\n\nFor this event, The beneficial holder is required to complete additional voting registration with the meeting agent.\n\nPRELIMINARY CONDITION (superseded): For this event, A participating voter is required to satisfy the additional professional-investor eligibility condition. FINAL AMENDMENT, replacing that condition: The agent confirms that the additional professional-investor voting restriction does not apply to this event.\n\nPRELIMINARY CONDITION (superseded): For this event, The nominee is required to supply a dated certificate confirming its holdings to lodge votes. FINAL AMENDMENT, replacing that condition: The agent confirms that a certificate confirming holdings does not apply to this event.\n\nVoting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.",
+      "field": "share_blocking",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0,
+        "NO": 1.0,
+        "UNKNOWN": 0.0
+      },
+      "confidence": null,
+      "margin": 1.0,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "holding_confirmation_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "other_voting_restriction:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "share_blocking:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-053-006-1"
+    },
+    {
+      "id": "QD1-053-006-1",
+      "text": "Operations reference 053/006; issuer account Nacre-70; dispatch 20265306.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Scheme Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nCURRENT instruction 1: For this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends. CURRENT instruction 2: The agent confirms that share blocking does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nFor this event, The voting holder is required to provide a valid power of attorney before instructions are accepted.\n\nThe telephone service handles settlement queries during normal business hours; this does not change the voting channel.\n\nFor this event, The voting investor is required to recall loaned securities before exercising voting rights.\n\nFor this event, The beneficial holder is required to complete additional voting registration with the meeting agent.\n\nPRELIMINARY CONDITION (superseded): For this event, A participating voter is required to satisfy the additional professional-investor eligibility condition. FINAL AMENDMENT, replacing that condition: The agent confirms that the additional professional-investor voting restriction does not apply to this event.\n\nPRELIMINARY CONDITION (superseded): For this event, The nominee is required to supply a dated certificate confirming its holdings to lodge votes. FINAL AMENDMENT, replacing that condition: The agent confirms that a certificate confirming holdings does not apply to this event.\n\nVoting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.",
+      "field": "holding_confirmation_required",
+      "expected": "NO",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.0001,
+        "NO": 0.0,
+        "UNKNOWN": 0.9999
+      },
+      "confidence": null,
+      "margin": 0.9998,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "holding_confirmation_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "other_voting_restriction:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "share_blocking:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-053-006-1"
+    },
+    {
+      "id": "QD1-021-004-1",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/004; issuer account Nacre-38; dispatch 20262104.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nMeeting venue directions and transport details are supplied for convenience; this paragraph does not impose an attendance condition.\n\nThe issuer has convened its Class Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nUnder the operative service terms, The intermediary is required to disclose the beneficial owner identity as a condition of voting.\n\nWhether additional voting registration will be required is still unconfirmed; the operative condition is missing from this notice.\n\nUnder the operative service terms, The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nUnder the operative service terms, A participating voter is required to satisfy the additional professional-investor eligibility condition.\n\nVoting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.\nRegards, Operations",
+      "field": "holding_confirmation_required",
+      "expected": "YES",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.0656,
+        "NO": 0.0,
+        "UNKNOWN": 0.9344
+      },
+      "confidence": null,
+      "margin": 0.8688,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "QD1-021-004-1"
+    },
+    {
+      "id": "QD1-021-021-0",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/021; issuer account Nacre-38; dispatch 20262121.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Annual General Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nAdministrative information: copies may be retained in the client document archive under the usual retention schedule.\n\nCURRENT instruction 1: For this event, Votes attached to an account are required to be cast identically because split voting is prohibited. CURRENT instruction 2: The agent confirms that a restriction on split voting does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nFor this event, The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nCURRENT instruction 1: For this event, The voting investor is required to recall loaned securities before exercising voting rights. CURRENT instruction 2: The agent confirms that recall of securities on loan does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\nRegards, Operations",
+      "field": "holding_confirmation_required",
+      "expected": "YES",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.0354,
+        "NO": 0.0,
+        "UNKNOWN": 0.9646
+      },
+      "confidence": null,
+      "margin": 0.9292,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "securities_lending_recall_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "split_voting_restricted:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-021-021-0"
+    },
+    {
+      "id": "QD1-021-021-0",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/021; issuer account Nacre-38; dispatch 20262121.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Annual General Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nAdministrative information: copies may be retained in the client document archive under the usual retention schedule.\n\nCURRENT instruction 1: For this event, Votes attached to an account are required to be cast identically because split voting is prohibited. CURRENT instruction 2: The agent confirms that a restriction on split voting does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nFor this event, The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nCURRENT instruction 1: For this event, The voting investor is required to recall loaned securities before exercising voting rights. CURRENT instruction 2: The agent confirms that recall of securities on loan does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\nRegards, Operations",
+      "field": "split_voting_restricted",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0002,
+        "NO": 0.9996,
+        "UNKNOWN": 0.0002
+      },
+      "confidence": null,
+      "margin": 0.9994000000000001,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "securities_lending_recall_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "split_voting_restricted:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-021-021-0"
+    },
+    {
+      "id": "QD1-021-021-0",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/021; issuer account Nacre-38; dispatch 20262121.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Annual General Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nAdministrative information: copies may be retained in the client document archive under the usual retention schedule.\n\nCURRENT instruction 1: For this event, Votes attached to an account are required to be cast identically because split voting is prohibited. CURRENT instruction 2: The agent confirms that a restriction on split voting does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nFor this event, The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nCURRENT instruction 1: For this event, The voting investor is required to recall loaned securities before exercising voting rights. CURRENT instruction 2: The agent confirms that recall of securities on loan does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\nRegards, Operations",
+      "field": "securities_lending_recall_required",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0,
+        "NO": 1.0,
+        "UNKNOWN": 0.0
+      },
+      "confidence": null,
+      "margin": 1.0,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "securities_lending_recall_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "split_voting_restricted:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-021-021-0"
+    },
+    {
+      "id": "QD1-021-018-0",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/018; issuer account Nacre-38; dispatch 20262118.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Class Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nPRELIMINARY CONDITION (superseded): For this event, The beneficial holder is required to complete additional voting registration with the meeting agent. FINAL AMENDMENT, replacing that condition: The agent confirms that additional voting registration does not apply to this event.\n\nFor this event, A participating voter is required to satisfy the additional professional-investor eligibility condition.\n\nPRELIMINARY CONDITION (superseded): For this event, The voting investor is required to recall loaned securities before exercising voting rights. FINAL AMENDMENT, replacing that condition: The agent confirms that recall of securities on loan does not apply to this event.\n\nFor this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends.\n\nCURRENT instruction 1: For this event, The voting holder is required to provide a valid power of attorney before instructions are accepted. CURRENT instruction 2: The agent confirms that a power of attorney does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nFor this event, Votes attached to an account are required to be cast identically because split voting is prohibited.\n\nSecurity descriptions may be abbreviated in account statements. The issuer legal name remains unchanged.\nRegards, Operations",
+      "field": "poa_required",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9986,
+        "NO": 0.0009,
+        "UNKNOWN": 0.0006
+      },
+      "confidence": null,
+      "margin": 0.9977,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "poa_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "registration_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "securities_lending_recall_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-021-018-0"
+    },
+    {
+      "id": "QD1-021-018-0",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/018; issuer account Nacre-38; dispatch 20262118.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Class Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nPRELIMINARY CONDITION (superseded): For this event, The beneficial holder is required to complete additional voting registration with the meeting agent. FINAL AMENDMENT, replacing that condition: The agent confirms that additional voting registration does not apply to this event.\n\nFor this event, A participating voter is required to satisfy the additional professional-investor eligibility condition.\n\nPRELIMINARY CONDITION (superseded): For this event, The voting investor is required to recall loaned securities before exercising voting rights. FINAL AMENDMENT, replacing that condition: The agent confirms that recall of securities on loan does not apply to this event.\n\nFor this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends.\n\nCURRENT instruction 1: For this event, The voting holder is required to provide a valid power of attorney before instructions are accepted. CURRENT instruction 2: The agent confirms that a power of attorney does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nFor this event, Votes attached to an account are required to be cast identically because split voting is prohibited.\n\nSecurity descriptions may be abbreviated in account statements. The issuer legal name remains unchanged.\nRegards, Operations",
+      "field": "registration_required",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.971,
+        "NO": 0.0161,
+        "UNKNOWN": 0.0129
+      },
+      "confidence": null,
+      "margin": 0.9549,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "poa_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "registration_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "securities_lending_recall_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-021-018-0"
+    },
+    {
+      "id": "QD1-053-018-0",
+      "text": "Operations reference 053/018; issuer account Nacre-70; dispatch 20265318.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe safekeeping account reference should be included in routine correspondence to facilitate matching.\n\nThe issuer has convened its Extraordinary General Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nPRELIMINARY CONDITION (superseded): For this event, The intermediary is required to disclose the beneficial owner identity as a condition of voting. FINAL AMENDMENT, replacing that condition: The agent confirms that beneficial-owner identity disclosure does not apply to this event.\n\nFor this event, The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nCURRENT instruction 1: For this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends. CURRENT instruction 2: The agent confirms that share blocking does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nPRELIMINARY CONDITION (superseded): For this event, The beneficial holder is required to complete additional voting registration with the meeting agent. FINAL AMENDMENT, replacing that condition: The agent confirms that additional voting registration does not apply to this event.\n\nCURRENT instruction 1: For this event, A participating voter is required to satisfy the additional professional-investor eligibility condition. CURRENT instruction 2: The agent confirms that the additional professional-investor voting restriction does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nVoting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.",
+      "field": "share_blocking",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0045,
+        "NO": 0.9952,
+        "UNKNOWN": 0.0003
+      },
+      "confidence": null,
+      "margin": 0.9907,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "beneficial_owner_disclosure_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "other_voting_restriction:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "registration_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "share_blocking:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-053-018-0"
+    },
+    {
+      "id": "QD1-053-018-0",
+      "text": "Operations reference 053/018; issuer account Nacre-70; dispatch 20265318.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe safekeeping account reference should be included in routine correspondence to facilitate matching.\n\nThe issuer has convened its Extraordinary General Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nPRELIMINARY CONDITION (superseded): For this event, The intermediary is required to disclose the beneficial owner identity as a condition of voting. FINAL AMENDMENT, replacing that condition: The agent confirms that beneficial-owner identity disclosure does not apply to this event.\n\nFor this event, The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nCURRENT instruction 1: For this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends. CURRENT instruction 2: The agent confirms that share blocking does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nPRELIMINARY CONDITION (superseded): For this event, The beneficial holder is required to complete additional voting registration with the meeting agent. FINAL AMENDMENT, replacing that condition: The agent confirms that additional voting registration does not apply to this event.\n\nCURRENT instruction 1: For this event, A participating voter is required to satisfy the additional professional-investor eligibility condition. CURRENT instruction 2: The agent confirms that the additional professional-investor voting restriction does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nVoting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.",
+      "field": "registration_required",
+      "expected": "NO",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.1726,
+        "NO": 0.0042,
+        "UNKNOWN": 0.8232
+      },
+      "confidence": null,
+      "margin": 0.6506000000000001,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "beneficial_owner_disclosure_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "other_voting_restriction:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "registration_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "share_blocking:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-053-018-0"
+    },
+    {
+      "id": "QD1-053-018-0",
+      "text": "Operations reference 053/018; issuer account Nacre-70; dispatch 20265318.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe safekeeping account reference should be included in routine correspondence to facilitate matching.\n\nThe issuer has convened its Extraordinary General Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nPRELIMINARY CONDITION (superseded): For this event, The intermediary is required to disclose the beneficial owner identity as a condition of voting. FINAL AMENDMENT, replacing that condition: The agent confirms that beneficial-owner identity disclosure does not apply to this event.\n\nFor this event, The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nCURRENT instruction 1: For this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends. CURRENT instruction 2: The agent confirms that share blocking does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nPRELIMINARY CONDITION (superseded): For this event, The beneficial holder is required to complete additional voting registration with the meeting agent. FINAL AMENDMENT, replacing that condition: The agent confirms that additional voting registration does not apply to this event.\n\nCURRENT instruction 1: For this event, A participating voter is required to satisfy the additional professional-investor eligibility condition. CURRENT instruction 2: The agent confirms that the additional professional-investor voting restriction does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nVoting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.",
+      "field": "other_voting_restriction",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.017,
+        "NO": 0.9826,
+        "UNKNOWN": 0.0004
+      },
+      "confidence": null,
+      "margin": 0.9656,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "beneficial_owner_disclosure_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "other_voting_restriction:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "registration_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "share_blocking:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-053-018-0"
+    },
+    {
+      "id": "QD1-021-024-1",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/024; issuer account Nacre-38; dispatch 20262124.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Scheme Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nCash entitlements are reconciled separately by the income department. The payment currency has no bearing on proxy instructions.\n\nFor this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends.\n\nFor this event, A participating voter is required to satisfy the additional professional-investor eligibility condition.\n\nPRELIMINARY CONDITION (superseded): For this event, The voting holder is required to provide a valid power of attorney before instructions are accepted. FINAL AMENDMENT, replacing that condition: The agent confirms that a power of attorney does not apply to this event.\n\nFor this event, The beneficial holder is required to complete additional voting registration with the meeting agent.\n\nCURRENT instruction 1: For this event, Votes attached to an account are required to be cast identically because split voting is prohibited. CURRENT instruction 2: The agent confirms that a restriction on split voting does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\nRegards, Operations",
+      "field": "poa_required",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9998,
+        "NO": 0.0001,
+        "UNKNOWN": 0.0001
+      },
+      "confidence": null,
+      "margin": 0.9997,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "poa_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "split_voting_restricted:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-021-024-1"
+    },
+    {
+      "id": "QD1-021-024-1",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/024; issuer account Nacre-38; dispatch 20262124.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Scheme Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nCash entitlements are reconciled separately by the income department. The payment currency has no bearing on proxy instructions.\n\nFor this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends.\n\nFor this event, A participating voter is required to satisfy the additional professional-investor eligibility condition.\n\nPRELIMINARY CONDITION (superseded): For this event, The voting holder is required to provide a valid power of attorney before instructions are accepted. FINAL AMENDMENT, replacing that condition: The agent confirms that a power of attorney does not apply to this event.\n\nFor this event, The beneficial holder is required to complete additional voting registration with the meeting agent.\n\nCURRENT instruction 1: For this event, Votes attached to an account are required to be cast identically because split voting is prohibited. CURRENT instruction 2: The agent confirms that a restriction on split voting does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nVoting instructions must reach the custodian by 24 November 2026 at 17:00 UTC.\nRegards, Operations",
+      "field": "split_voting_restricted",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0075,
+        "NO": 0.9849,
+        "UNKNOWN": 0.0076
+      },
+      "confidence": null,
+      "margin": 0.9773,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "poa_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "split_voting_restricted:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-021-024-1"
+    },
+    {
+      "id": "QD1-037-004-0",
+      "text": "Operations reference 037/004; issuer account Nacre-54; dispatch 20263704.\nEVENT INFORMATION / CURRENT TERMS\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\r\nThe issuer has convened its Court Meeting; shareholders may submit proxy voting instructions through their custodian.\r\nWhether the additional professional-investor voting restriction will be required is still unconfirmed; the operative condition is missing from this notice.\r\nThere is no requirement for a restriction on split voting under the current voting terms.\r\nWhether recall of securities on loan will be required is still unconfirmed; the operative condition is missing from this notice.\r\nUnder the operative service terms, The intermediary is required to disclose the beneficial owner identity as a condition of voting.\r\nThere is no requirement for a certificate confirming holdings under the current voting terms.\r\nSecurity descriptions may be abbreviated in account statements. The issuer legal name remains unchanged.",
+      "field": "other_voting_restriction",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.003,
+        "NO": 0.9717,
+        "UNKNOWN": 0.0253
+      },
+      "confidence": null,
+      "margin": 0.9464,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "other_voting_restriction:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-037-004-0"
+    },
+    {
+      "id": "QD1-021-027-0",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/027; issuer account Nacre-38; dispatch 20262127.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Court Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nCURRENT instruction 1: For this event, The beneficial holder is required to complete additional voting registration with the meeting agent. CURRENT instruction 2: The agent confirms that additional voting registration does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nFor this event, The voting holder is required to provide a valid power of attorney before instructions are accepted.\n\nPRELIMINARY CONDITION (superseded): For this event, The intermediary is required to disclose the beneficial owner identity as a condition of voting. FINAL AMENDMENT, replacing that condition: The agent confirms that beneficial-owner identity disclosure does not apply to this event.\n\nPlease use the event reference when discussing document delivery. The contact centre cannot amend an instruction by telephone.\n\nPRELIMINARY CONDITION (superseded): For this event, The nominee is required to supply a dated certificate confirming its holdings to lodge votes. FINAL AMENDMENT, replacing that condition: The agent confirms that a certificate confirming holdings does not apply to this event.\n\nFor this event, The voting investor is required to recall loaned securities before exercising voting rights.\n\nVoting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.\nRegards, Operations",
+      "field": "registration_required",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.6833,
+        "NO": 0.0512,
+        "UNKNOWN": 0.2655
+      },
+      "confidence": null,
+      "margin": 0.4178,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "beneficial_owner_disclosure_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "holding_confirmation_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "registration_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-021-027-0"
+    },
+    {
+      "id": "QD1-021-027-0",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/027; issuer account Nacre-38; dispatch 20262127.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Court Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nCURRENT instruction 1: For this event, The beneficial holder is required to complete additional voting registration with the meeting agent. CURRENT instruction 2: The agent confirms that additional voting registration does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nFor this event, The voting holder is required to provide a valid power of attorney before instructions are accepted.\n\nPRELIMINARY CONDITION (superseded): For this event, The intermediary is required to disclose the beneficial owner identity as a condition of voting. FINAL AMENDMENT, replacing that condition: The agent confirms that beneficial-owner identity disclosure does not apply to this event.\n\nPlease use the event reference when discussing document delivery. The contact centre cannot amend an instruction by telephone.\n\nPRELIMINARY CONDITION (superseded): For this event, The nominee is required to supply a dated certificate confirming its holdings to lodge votes. FINAL AMENDMENT, replacing that condition: The agent confirms that a certificate confirming holdings does not apply to this event.\n\nFor this event, The voting investor is required to recall loaned securities before exercising voting rights.\n\nVoting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.\nRegards, Operations",
+      "field": "holding_confirmation_required",
+      "expected": "NO",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.0007,
+        "NO": 0.0384,
+        "UNKNOWN": 0.961
+      },
+      "confidence": null,
+      "margin": 0.9226,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "beneficial_owner_disclosure_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "holding_confirmation_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "registration_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-021-027-0"
+    },
+    {
+      "id": "QD1-053-008-0",
+      "text": "Operations reference 053/008; issuer account Nacre-70; dispatch 20265308.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Bondholder Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nThe agenda and annual accounts are available from the issuer. Requests for paper copies are administrative and optional.\n\nThe holder need not satisfy share blocking to vote.\n\nThe current agent instruction states: A participating voter is required to satisfy the additional professional-investor eligibility condition.\n\nCURRENT instruction 1: The current agent instruction states: The voting holder is required to provide a valid power of attorney before instructions are accepted. CURRENT instruction 2: The holder need not satisfy a power of attorney to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nThe current agent instruction states: The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nThe current agent instruction states: The intermediary is required to disclose the beneficial owner identity as a condition of voting.\n\nVoting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.",
+      "field": "poa_required",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9997,
+        "NO": 0.0002,
+        "UNKNOWN": 0.0001
+      },
+      "confidence": null,
+      "margin": 0.9995,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "poa_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-053-008-0"
+    },
+    {
+      "id": "QD1-005-002-0",
+      "text": "Operations reference 005/002; issuer account Nacre-22; dispatch 20260502.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Annual General Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nThe holder need not satisfy beneficial-owner identity disclosure to vote.\n\nCURRENT instruction 1: The current agent instruction states: A participating voter is required to satisfy the additional professional-investor eligibility condition. CURRENT instruction 2: The holder need not satisfy the additional professional-investor voting restriction to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nCURRENT instruction 1: The current agent instruction states: Shares instructed for voting are required to remain unavailable for transfer until the meeting ends. CURRENT instruction 2: The holder need not satisfy share blocking to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nThe current agent instruction states: The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nThe holder need not satisfy additional voting registration to vote.\n\nAdministrative information: copies may be retained in the client document archive under the usual retention schedule.",
+      "field": "share_blocking",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0001,
+        "NO": 0.9998,
+        "UNKNOWN": 0.0001
+      },
+      "confidence": null,
+      "margin": 0.9997,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "other_voting_restriction:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "share_blocking:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-005-002-0"
+    },
+    {
+      "id": "QD1-005-002-0",
+      "text": "Operations reference 005/002; issuer account Nacre-22; dispatch 20260502.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Annual General Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nThe holder need not satisfy beneficial-owner identity disclosure to vote.\n\nCURRENT instruction 1: The current agent instruction states: A participating voter is required to satisfy the additional professional-investor eligibility condition. CURRENT instruction 2: The holder need not satisfy the additional professional-investor voting restriction to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nCURRENT instruction 1: The current agent instruction states: Shares instructed for voting are required to remain unavailable for transfer until the meeting ends. CURRENT instruction 2: The holder need not satisfy share blocking to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nThe current agent instruction states: The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nThe holder need not satisfy additional voting registration to vote.\n\nAdministrative information: copies may be retained in the client document archive under the usual retention schedule.",
+      "field": "other_voting_restriction",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9973,
+        "NO": 0.0015,
+        "UNKNOWN": 0.0011
+      },
+      "confidence": null,
+      "margin": 0.9958,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "other_voting_restriction:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "share_blocking:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-005-002-0"
+    },
+    {
+      "id": "QD1-005-015-1",
+      "text": "Operations reference 005/015; issuer account Nacre-22; dispatch 20260515.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Court Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nFor this event, Votes attached to an account are required to be cast identically because split voting is prohibited.\n\nFor this event, A participating voter is required to satisfy the additional professional-investor eligibility condition.\n\nFor this event, The voting holder is required to provide a valid power of attorney before instructions are accepted.\n\nFor this event, The intermediary is required to disclose the beneficial owner identity as a condition of voting.\n\nFor this event, The beneficial holder is required to complete additional voting registration with the meeting agent.\n\nAdministrative information: copies may be retained in the client document archive under the usual retention schedule.\n\nPRELIMINARY CONDITION (superseded): For this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends. FINAL AMENDMENT, replacing that condition: The agent confirms that share blocking does not apply to this event.",
+      "field": "share_blocking",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9961,
+        "NO": 0.0038,
+        "UNKNOWN": 0.0001
+      },
+      "confidence": null,
+      "margin": 0.9923,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "share_blocking:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-005-015-1"
+    },
+    {
+      "id": "QD1-053-011-1",
+      "text": "Operations reference 053/011; issuer account Nacre-70; dispatch 20265311.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Extraordinary General Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nThe agenda and annual accounts are available from the issuer. Requests for paper copies are administrative and optional.\n\nCURRENT instruction 1: The current agent instruction states: The voting holder is required to provide a valid power of attorney before instructions are accepted. CURRENT instruction 2: The holder need not satisfy a power of attorney to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nThe current agent instruction states: The voting investor is required to recall loaned securities before exercising voting rights.\n\nThe current agent instruction states: The intermediary is required to disclose the beneficial owner identity as a condition of voting.\n\nThe holder need not satisfy a certificate confirming holdings to vote.",
+      "field": "poa_required",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9996,
+        "NO": 0.0002,
+        "UNKNOWN": 0.0002
+      },
+      "confidence": null,
+      "margin": 0.9994000000000001,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "poa_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-053-011-1"
+    },
+    {
+      "id": "QD1-037-012-1",
+      "text": "Operations reference 037/012; issuer account Nacre-54; dispatch 20263712.\nEVENT INFORMATION / CURRENT TERMS\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\r\nThe issuer has convened its Annual General Meeting; shareholders may submit proxy voting instructions through their custodian.\r\nPRELIMINARY CONDITION (superseded): For this event, Votes attached to an account are required to be cast identically because split voting is prohibited. FINAL AMENDMENT, replacing that condition: The agent confirms that a restriction on split voting does not apply to this event.\r\nPlease use the event reference when discussing document delivery. The contact centre cannot amend an instruction by telephone.\r\nFor this event, The voting holder is required to provide a valid power of attorney before instructions are accepted.\r\nPRELIMINARY CONDITION (superseded): For this event, The intermediary is required to disclose the beneficial owner identity as a condition of voting. FINAL AMENDMENT, replacing that condition: The agent confirms that beneficial-owner identity disclosure does not apply to this event.\r\nCURRENT instruction 1: For this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends. CURRENT instruction 2: The agent confirms that share blocking does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\r\nFor this event, The beneficial holder is required to complete additional voting registration with the meeting agent.\r\nFor this event, The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\r\nVoting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.",
+      "field": "share_blocking",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.4094,
+        "NO": 0.5899,
+        "UNKNOWN": 0.0007
+      },
+      "confidence": null,
+      "margin": 0.1805,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "beneficial_owner_disclosure_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "share_blocking:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "split_voting_restricted:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-037-012-1"
+    },
+    {
+      "id": "QD1-021-026-1",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/026; issuer account Nacre-38; dispatch 20262126.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Bondholder Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nThe agenda and annual accounts are available from the issuer. Requests for paper copies are administrative and optional.\n\nMeeting venue directions and transport details are supplied for convenience; this paragraph does not impose an attendance condition.\n\nThe intermediary maintains separate operational records for pending trades and reconciles unmatched settlements daily.\n\nMeeting venue directions and transport details are supplied for convenience; this paragraph does not impose an attendance condition.\n\nSecurity descriptions may be abbreviated in account statements. The issuer legal name remains unchanged.\n\nCash entitlements are reconciled separately by the income department. The payment currency has no bearing on proxy instructions.\n\nThe current agent instruction states: The intermediary is required to disclose the beneficial owner identity as a condition of voting.\n\nThe board report contains a discussion of historical performance, remuneration and the outlook for the business.\n\nThe agenda and annual accounts are available from the issuer. Requests for paper copies are administrative and optional.\n\nThe board report contains a discussion of historical performance, remuneration and the outlook for the business.\n\nThe intermediary maintains separate operational records for pending trades and reconciles unmatched settlements daily.\n\nThe current agent instruction states: The beneficial holder is required to complete additional voting registration with the meeting agent.\n\nThe safekeeping account reference should be included in routine correspondence to facilitate matching.\n\nAdministrative information: copies may be retained in the client document archive under the usual retention schedule.\n\nMeeting venue directions and transport details are supplied for convenience; this paragraph does not impose an attendance condition.\n\nCURRENT instruction 1: The current agent instruction states: The nominee is required to supply a dated certificate confirming its holdings to lodge votes. CURRENT instruction 2: The holder need not satisfy a certificate confirming holdings to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nCash entitlements are reconciled separately by the income department. The payment currency has no bearing on proxy instructions.\n\nThe safekeeping account reference should be included in routine correspondence to facilitate matching.\n\nThe telephone service handles settlement queries during normal business hours; this does not change the voting channel.\n\nThe safekeeping account reference should be included in routine correspondence to facilitate matching.\n\nSecurity descriptions may be abbreviated in account statements. The issuer legal name remains unchanged.\n\nMeeting venue directions and transport details are supplied for convenience; this paragraph does not impose an attendance condition.\n\nAdministrative information: copies may be retained in the client document archive under the usual retention schedule.\n\nAdministrative information: copies may be retained in the client document archive under the usual retention schedule.\n\nAdministrative information: copies may be retained in the client document archive under the usual retention schedule.\n\nMeeting venue directions and transport details are supplied for convenience; this paragraph does not impose an attendance condition.\n\nThe agenda and annual accounts are available from the issuer. Requests for paper copies are administrative and optional.\n\nThe safekeeping account reference should be included in routine correspondence to facilitate matching.\n\nThe holder need not satisfy recall of securities on loan to vote.\n\nCash entitlements are reconciled separately by the income department. The payment currency has no bearing on proxy instructions.\n\nThe agenda and annual accounts are available from the issuer. Requests for paper copies are administrative and optional.\n\nThe board report contains a discussion of historical performance, remuneration and the outlook for the business.\n\nPlease use the event reference when discussing document delivery. The contact centre cannot amend an instruction by telephone.\n\nPlease use the event reference when discussing document delivery. The contact centre cannot amend an instruction by telephone.\n\nThe agenda and annual accounts are available from the issuer. Requests for paper copies are administrative and optional.\n\nThe intermediary maintains separate operational records for pending trades and reconciles unmatched settlements daily.\n\nThe agenda and annual accounts are available from the issuer. Requests for paper copies are administrative and optional.\n\nThe telephone service handles settlement queries during normal business hours; this does not change the voting channel.\n\nThe holder need not satisfy a restriction on split voting to vote.\n\nSecurity descriptions may be abbreviated in account statements. The issuer legal name remains unchanged.\n\nMeeting venue directions and transport details are supplied for convenience; this paragraph does not impose an attendance condition.\nRegards, Operations",
+      "field": "holding_confirmation_required",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9498,
+        "NO": 0.0325,
+        "UNKNOWN": 0.0177
+      },
+      "confidence": null,
+      "margin": 0.9173,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "holding_confirmation_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-021-026-1"
+    },
+    {
+      "id": "QD1-026-006-1",
+      "text": "Operations reference 026/006; issuer account Nacre-43; dispatch 20262606.\n\nA pension mandate has reviewed the agenda with its stewardship team. Its instructions will be routed through the custodian; portfolio reporting material is supplied for administrative background only.\n\nThe issuer has convened its Class Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nThe receiving agent has not established whether the additional professional-investor voting restriction is a prerequisite; that part of the current schedule is unavailable.\n\nPlease use the event reference when discussing document delivery. The contact centre cannot amend an instruction by telephone.\n\nBallot processing is contingent on the following step: shares instructed for voting must remain unavailable for transfer until the meeting ends.\n\nBallot processing is contingent on the following step: the voting investor must recall loaned securities before exercising voting rights.\n\nException confirmed by the receiving agent: votes can be processed without a power of attorney.",
+      "field": "split_voting_restricted",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.5471,
+        "NO": 0.4452,
+        "UNKNOWN": 0.0077
+      },
+      "confidence": null,
+      "margin": 0.10190000000000005,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "QD1-026-006-1"
+    },
+    {
+      "id": "QD1-005-026-1",
+      "text": "Operations reference 005/026; issuer account Nacre-22; dispatch 20260526.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe telephone service handles settlement queries during normal business hours; this does not change the voting channel.\n\nThe safekeeping account reference should be included in routine correspondence to facilitate matching.\n\nPlease use the event reference when discussing document delivery. The contact centre cannot amend an instruction by telephone.\n\nThe agenda and annual accounts are available from the issuer. Requests for paper copies are administrative and optional.\n\nThe safekeeping account reference should be included in routine correspondence to facilitate matching.\n\nSecurity descriptions may be abbreviated in account statements. The issuer legal name remains unchanged.\n\nThe issuer has convened its Scheme Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nThe current agent instruction states: The beneficial holder is required to complete additional voting registration with the meeting agent.\n\nPlease use the event reference when discussing document delivery. The contact centre cannot amend an instruction by telephone.\n\nThe agenda and annual accounts are available from the issuer. Requests for paper copies are administrative and optional.\n\nCash entitlements are reconciled separately by the income department. The payment currency has no bearing on proxy instructions.\n\nThe telephone service handles settlement queries during normal business hours; this does not change the voting channel.\n\nThe agenda and annual accounts are available from the issuer. Requests for paper copies are administrative and optional.\n\nThe telephone service handles settlement queries during normal business hours; this does not change the voting channel.\n\nThe agenda and annual accounts are available from the issuer. Requests for paper copies are administrative and optional.\n\nPlease use the event reference when discussing document delivery. The contact centre cannot amend an instruction by telephone.\n\nThe current agent instruction states: The voting investor is required to recall loaned securities before exercising voting rights.\n\nMeeting venue directions and transport details are supplied for convenience; this paragraph does not impose an attendance condition.\n\nSecurity descriptions may be abbreviated in account statements. The issuer legal name remains unchanged.\n\nThe telephone service handles settlement queries during normal business hours; this does not change the voting channel.\n\nCURRENT instruction 1: The current agent instruction states: The nominee is required to supply a dated certificate confirming its holdings to lodge votes. CURRENT instruction 2: The holder need not satisfy a certificate confirming holdings to vote. Both are current. Neither has priority, and no superseding amendment is identified.\n\nSecurity descriptions may be abbreviated in account statements. The issuer legal name remains unchanged.\n\nThe agenda and annual accounts are available from the issuer. Requests for paper copies are administrative and optional.\n\nThe agenda and annual accounts are available from the issuer. Requests for paper copies are administrative and optional.\n\nMeeting venue directions and transport details are supplied for convenience; this paragraph does not impose an attendance condition.\n\nThe telephone service handles settlement queries during normal business hours; this does not change the voting channel.\n\nThe agenda and annual accounts are available from the issuer. Requests for paper copies are administrative and optional.\n\nThe agenda and annual accounts are available from the issuer. Requests for paper copies are administrative and optional.\n\nVoting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.\n\nThe intermediary maintains separate operational records for pending trades and reconciles unmatched settlements daily.\n\nThe safekeeping account reference should be included in routine correspondence to facilitate matching.\n\nThe telephone service handles settlement queries during normal business hours; this does not change the voting channel.\n\nCash entitlements are reconciled separately by the income department. The payment currency has no bearing on proxy instructions.\n\nThe telephone service handles settlement queries during normal business hours; this does not change the voting channel.\n\nAdministrative information: copies may be retained in the client document archive under the usual retention schedule.\n\nPlease use the event reference when discussing document delivery. The contact centre cannot amend an instruction by telephone.\n\nSecurity descriptions may be abbreviated in account statements. The issuer legal name remains unchanged.\n\nMeeting venue directions and transport details are supplied for convenience; this paragraph does not impose an attendance condition.\n\nCash entitlements are reconciled separately by the income department. The payment currency has no bearing on proxy instructions.\n\nThe board report contains a discussion of historical performance, remuneration and the outlook for the business.\n\nThe telephone service handles settlement queries during normal business hours; this does not change the voting channel.",
+      "field": "holding_confirmation_required",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0057,
+        "NO": 0.989,
+        "UNKNOWN": 0.0054
+      },
+      "confidence": null,
+      "margin": 0.9833,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "holding_confirmation_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-005-026-1"
+    },
+    {
+      "id": "QD1-037-006-1",
+      "text": "Operations reference 037/006; issuer account Nacre-54; dispatch 20263706.\nEVENT INFORMATION / CURRENT TERMS\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\r\nThe issuer has convened its Extraordinary General Meeting; shareholders may submit proxy voting instructions through their custodian.\r\nFor this event, The voting investor is required to recall loaned securities before exercising voting rights.\r\nThe intermediary maintains separate operational records for pending trades and reconciles unmatched settlements daily.\r\nPRELIMINARY CONDITION (superseded): For this event, The nominee is required to supply a dated certificate confirming its holdings to lodge votes. FINAL AMENDMENT, replacing that condition: The agent confirms that a certificate confirming holdings does not apply to this event.\r\nFor this event, The intermediary is required to disclose the beneficial owner identity as a condition of voting.\r\nCURRENT instruction 1: For this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends. CURRENT instruction 2: The agent confirms that share blocking does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.",
+      "field": "share_blocking",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.005,
+        "NO": 0.9945,
+        "UNKNOWN": 0.0005
+      },
+      "confidence": null,
+      "margin": 0.9895,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "holding_confirmation_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "share_blocking:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-037-006-1"
+    },
+    {
+      "id": "QD1-037-006-1",
+      "text": "Operations reference 037/006; issuer account Nacre-54; dispatch 20263706.\nEVENT INFORMATION / CURRENT TERMS\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\r\nThe issuer has convened its Extraordinary General Meeting; shareholders may submit proxy voting instructions through their custodian.\r\nFor this event, The voting investor is required to recall loaned securities before exercising voting rights.\r\nThe intermediary maintains separate operational records for pending trades and reconciles unmatched settlements daily.\r\nPRELIMINARY CONDITION (superseded): For this event, The nominee is required to supply a dated certificate confirming its holdings to lodge votes. FINAL AMENDMENT, replacing that condition: The agent confirms that a certificate confirming holdings does not apply to this event.\r\nFor this event, The intermediary is required to disclose the beneficial owner identity as a condition of voting.\r\nCURRENT instruction 1: For this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends. CURRENT instruction 2: The agent confirms that share blocking does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.",
+      "field": "holding_confirmation_required",
+      "expected": "NO",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.0002,
+        "NO": 0.0,
+        "UNKNOWN": 0.9998
+      },
+      "confidence": null,
+      "margin": 0.9996,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "holding_confirmation_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "share_blocking:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-037-006-1"
+    },
+    {
+      "id": "QD1-053-009-1",
+      "text": "Operations reference 053/009; issuer account Nacre-70; dispatch 20265309.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Court Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nFor this event, The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nAdministrative information: copies may be retained in the client document archive under the usual retention schedule.\n\nFor this event, The beneficial holder is required to complete additional voting registration with the meeting agent.\n\nPRELIMINARY CONDITION (superseded): For this event, The intermediary is required to disclose the beneficial owner identity as a condition of voting. FINAL AMENDMENT, replacing that condition: The agent confirms that beneficial-owner identity disclosure does not apply to this event.\n\nCURRENT instruction 1: For this event, The voting investor is required to recall loaned securities before exercising voting rights. CURRENT instruction 2: The agent confirms that recall of securities on loan does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nFor this event, The voting holder is required to provide a valid power of attorney before instructions are accepted.\n\nPRELIMINARY CONDITION (superseded): For this event, Shares instructed for voting are required to remain unavailable for transfer until the meeting ends. FINAL AMENDMENT, replacing that condition: The agent confirms that share blocking does not apply to this event.\n\nVoting instructions must reach the custodian by 10 October 2026 at 17:00 UTC.",
+      "field": "securities_lending_recall_required",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0,
+        "NO": 1.0,
+        "UNKNOWN": 0.0
+      },
+      "confidence": null,
+      "margin": 1.0,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "beneficial_owner_disclosure_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "securities_lending_recall_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "share_blocking:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-053-009-1"
+    },
+    {
+      "id": "QD1-021-012-1",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/012; issuer account Nacre-38; dispatch 20262112.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Bondholder Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nCURRENT instruction 1: For this event, The intermediary is required to disclose the beneficial owner identity as a condition of voting. CURRENT instruction 2: The agent confirms that beneficial-owner identity disclosure does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nPRELIMINARY CONDITION (superseded): For this event, Votes attached to an account are required to be cast identically because split voting is prohibited. FINAL AMENDMENT, replacing that condition: The agent confirms that a restriction on split voting does not apply to this event.\n\nFor this event, A participating voter is required to satisfy the additional professional-investor eligibility condition.\n\nPRELIMINARY CONDITION (superseded): For this event, The voting investor is required to recall loaned securities before exercising voting rights. FINAL AMENDMENT, replacing that condition: The agent confirms that recall of securities on loan does not apply to this event.\n\nFor this event, The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nThe board report contains a discussion of historical performance, remuneration and the outlook for the business.\nRegards, Operations",
+      "field": "beneficial_owner_disclosure_required",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0001,
+        "NO": 0.9998,
+        "UNKNOWN": 0.0001
+      },
+      "confidence": null,
+      "margin": 0.9997,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "beneficial_owner_disclosure_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "securities_lending_recall_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "split_voting_restricted:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-021-012-1"
+    },
+    {
+      "id": "QD1-021-012-1",
+      "text": "From: voting.operations@example.invalid\nSubject: Current event terms\nOperations reference 021/012; issuer account Nacre-38; dispatch 20262112.\n\nThis is a service summary prepared for the beneficial holder. Attendance arrangements, corporate records and account reconciliation are distinct from the voting requirements set out in the operative paragraphs.\n\nThe issuer has convened its Bondholder Meeting; shareholders may submit proxy voting instructions through their custodian.\n\nCURRENT instruction 1: For this event, The intermediary is required to disclose the beneficial owner identity as a condition of voting. CURRENT instruction 2: The agent confirms that beneficial-owner identity disclosure does not apply to this event. Both are current. Neither has priority, and no superseding amendment is identified.\n\nPRELIMINARY CONDITION (superseded): For this event, Votes attached to an account are required to be cast identically because split voting is prohibited. FINAL AMENDMENT, replacing that condition: The agent confirms that a restriction on split voting does not apply to this event.\n\nFor this event, A participating voter is required to satisfy the additional professional-investor eligibility condition.\n\nPRELIMINARY CONDITION (superseded): For this event, The voting investor is required to recall loaned securities before exercising voting rights. FINAL AMENDMENT, replacing that condition: The agent confirms that recall of securities on loan does not apply to this event.\n\nFor this event, The nominee is required to supply a dated certificate confirming its holdings to lodge votes.\n\nThe board report contains a discussion of historical performance, remuneration and the outlook for the business.\nRegards, Operations",
+      "field": "holding_confirmation_required",
+      "expected": "YES",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.2207,
+        "NO": 0.0,
+        "UNKNOWN": 0.7793
+      },
+      "confidence": null,
+      "margin": 0.5586,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "beneficial_owner_disclosure_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "securities_lending_recall_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION",
+        "split_voting_restricted:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "QD1-021-012-1"
+    }
+  ],
+  "scope": "Synthetic/authored research only. No customer accuracy or automation claim."
+}

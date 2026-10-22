@@ -225,6 +225,7 @@ data/raw/*
 !data/raw/.gitkeep
 data/models/
 data/*.sqlite*
+data/**/*.sqlite*
 data/normalised/*
 artifacts/*
 !artifacts/.gitkeep

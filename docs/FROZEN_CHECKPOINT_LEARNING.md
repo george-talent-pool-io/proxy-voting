@@ -108,10 +108,42 @@ validated upper limit is seven days. The enclosing campaign's `max_seconds`
 must also cover training plus validation. A short smoke run demonstrates
 optimizer/checkpoint mechanics; it does not demonstrate a domain-quality gain.
 
+Named candidate recipes now live beside those smoke configurations:
+
+| Recipe | Purpose | Budget |
+| --- | --- | --- |
+| `laya-domain-cpu.json` | Linux CPU domain candidate | 4 full-encoder epochs, separate head/encoder learning rates |
+| `laya-domain-mps.json` | Development Mac domain candidate | 4 full-encoder epochs, MPS activation/memory controls |
+| `qwen38-domain-mlx.json` | Development Mac domain candidate | 200 optimizer steps, 4 LoRA layers, rank 8 |
+
+These are bounded experiment recipes, not measured optimal training settings or
+pretrained voting models. Adapt batch/context/budget to the installed hardware
+and validation results. Keep a frozen parent's identity by supplying only tunable
+overrides to `prepare-from-checkpoint`; do not replace parent paths/digests with
+the paths from an unrelated profile. Linux customer consoles offer only compatible
+Linux recipes. Exact Qwen/GLM Linux GPU checkpoint training remains separately qualified.
+
+The starting-checkpoint API/UI now explicitly reports foundation-only,
+AI-test-derivative or customer-derivative readiness. A supplied quality receipt
+does not pass the independent deployment gate. ISO15022 structure is parsed by
+Prowide; the semantic model learns voting predicates from the routed narrative.
+There is currently no broadly independently qualified "ISO15022 voting model".
+
 Use `seeds.export_derivative` to make a new dataset-free starting checkpoint
 from a completed registered job. It preserves frozen criteria and hash-only
 training lineage. AI-trained test models are `AI_TEST_DERIVATIVE`; they cannot
 be relabelled `OFFICIAL_FOUNDATION` or customer-qualified derivatives.
+
+The authenticated customer console also provides **Freeze a completed training
+checkpoint for the next learning round** (`POST /api/client/starting-checkpoints/from-job`).
+Supply the completed registered job ID and a new immutable seed ID. The server
+derives label origin from the job manifest; the caller cannot declare foundation
+or expert status. Prepare the next campaign from that seed with a fresh optimizer.
+The customer API accepts an initial base in the managed model volume or the
+exact checkpoint of a completed managed job whose frozen derivative identity,
+weight hashes and lineage match. Arbitrary workspace paths and forged lineage
+are refused. The parent bytes stay unchanged. Recalibrate and requalify every
+selected derivative before deployment; qualification never transfers from a parent.
 
 ## Match training and inference
 

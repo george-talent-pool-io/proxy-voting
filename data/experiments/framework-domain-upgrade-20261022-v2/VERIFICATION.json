@@ -1,0 +1,28 @@
+{
+  "scope": "SOFTWARE_AND_AI_AUTHORED_ENGINEERING_VERIFICATION_ONLY",
+  "ordinary_tests": {
+    "passed": 2266,
+    "skipped": 1,
+    "log": "artifacts/framework-upgrade-regression-2026-10-22.log"
+  },
+  "browser_tests": {
+    "passed": 33,
+    "customer_tests": 6,
+    "log": "artifacts/framework-upgrade-all-browser-2026-10-22.log",
+    "customer_final_rerun": "artifacts/framework-customer-browser-upgrade-2026-10-22.log"
+  },
+  "real_model_tests": {
+    "passed": 3,
+    "seconds": 61.64,
+    "log": "artifacts/framework-real-model-tests-2026-10-22.log"
+  },
+  "actual_training_job": "framework-domain-upgrade-20261022-v2",
+  "training_and_validation_result_sha256": "3d80630a4be52bfba33dd793414b3e6b31691bd9a86ea64bc641a1bea8a058b3",
+  "challenge_result_sha256": "c559f07c453daf47de317388653598664d6b55c942df1a6cea0f5cbccb818f5d",
+  "linux_receipt_sha256": "1b333cf76c81ea88d707eccd342d10eaf338465cd7bc5c010fabe9fdae994e13",
+  "customer_release_campaign_result_sha256": "d6128a369d9900618dd343419e8abdab063785b6a41cd2d21821d10a049682a2",
+  "calibration_available_for_new_model": false,
+  "release_authorised": false,
+  "automation_enabled": false,
+  "customer_accuracy": null
+}

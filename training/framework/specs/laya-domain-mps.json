@@ -1,0 +1,21 @@
+{
+  "backend": "LAYA_SDK",
+  "family": "LAYA",
+  "model_path": "data/models/laya/multilingual",
+  "base_model_id": "convaiinnovations/laya:multilingual",
+  "base_revision": "7b928d828b7b0e022f929d9bd2e44165aa270148",
+  "epochs": 4,
+  "learning_rate": 0.0001,
+  "encoder_learning_rate": 0.000025,
+  "freeze_encoder": false,
+  "laya_loss": "soft-ce",
+  "laya_gradient_checkpointing": true,
+  "laya_sdk_validation": false,
+  "batch_size": 8,
+  "gradient_accumulation": 2,
+  "max_length": 2048,
+  "device": "mps",
+  "mps_memory_fraction": 0.45,
+  "training_timeout_seconds": 14400,
+  "seed": 42
+}

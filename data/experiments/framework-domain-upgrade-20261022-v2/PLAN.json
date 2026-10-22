@@ -1,0 +1,301 @@
+{
+  "scope": "AI_AUTHORED_DEVELOPMENT_PILOT_NOT_CUSTOMER_QUALIFICATION",
+  "source_manifest_sha256": "3a22da71d329b12cb7f9a79470fc06983383d4eb90d14b94436291cf577f3fa2",
+  "bundle_sha256": "77e5bfc05450c955917dd3e5064bf90c850419da56a021349b5c84422a527b87",
+  "counts": {
+    "TRAIN": 160,
+    "VALIDATION": 120
+  },
+  "source_counts": {
+    "TRAIN": 2160,
+    "VALIDATION": 480
+  },
+  "label_support": {
+    "per_predicate": {
+      "votability": {
+        "TRAIN": {
+          "VOTABLE": {
+            "examples": 138,
+            "groups": 41
+          },
+          "NOT_VOTABLE": {
+            "examples": 11,
+            "groups": 7
+          },
+          "UNCERTAIN": {
+            "examples": 11,
+            "groups": 7
+          }
+        },
+        "VALIDATION": {
+          "VOTABLE": {
+            "examples": 101,
+            "groups": 2
+          },
+          "NOT_VOTABLE": {
+            "examples": 11,
+            "groups": 2
+          },
+          "UNCERTAIN": {
+            "examples": 8,
+            "groups": 2
+          }
+        }
+      },
+      "share_blocking": {
+        "TRAIN": {
+          "YES": {
+            "examples": 54,
+            "groups": 25
+          },
+          "NO": {
+            "examples": 84,
+            "groups": 25
+          },
+          "UNKNOWN": {
+            "examples": 22,
+            "groups": 7
+          }
+        },
+        "VALIDATION": {
+          "YES": {
+            "examples": 24,
+            "groups": 2
+          },
+          "NO": {
+            "examples": 79,
+            "groups": 2
+          },
+          "UNKNOWN": {
+            "examples": 17,
+            "groups": 2
+          }
+        }
+      },
+      "poa_required": {
+        "TRAIN": {
+          "YES": {
+            "examples": 50,
+            "groups": 24
+          },
+          "NO": {
+            "examples": 88,
+            "groups": 24
+          },
+          "UNKNOWN": {
+            "examples": 22,
+            "groups": 11
+          }
+        },
+        "VALIDATION": {
+          "YES": {
+            "examples": 31,
+            "groups": 2
+          },
+          "NO": {
+            "examples": 75,
+            "groups": 2
+          },
+          "UNKNOWN": {
+            "examples": 14,
+            "groups": 2
+          }
+        }
+      },
+      "registration_required": {
+        "TRAIN": {
+          "YES": {
+            "examples": 48,
+            "groups": 24
+          },
+          "NO": {
+            "examples": 87,
+            "groups": 24
+          },
+          "UNKNOWN": {
+            "examples": 25,
+            "groups": 10
+          }
+        },
+        "VALIDATION": {
+          "YES": {
+            "examples": 33,
+            "groups": 2
+          },
+          "NO": {
+            "examples": 75,
+            "groups": 2
+          },
+          "UNKNOWN": {
+            "examples": 12,
+            "groups": 2
+          }
+        }
+      },
+      "beneficial_owner_disclosure_required": {
+        "TRAIN": {
+          "YES": {
+            "examples": 51,
+            "groups": 24
+          },
+          "NO": {
+            "examples": 84,
+            "groups": 25
+          },
+          "UNKNOWN": {
+            "examples": 25,
+            "groups": 9
+          }
+        },
+        "VALIDATION": {
+          "YES": {
+            "examples": 30,
+            "groups": 2
+          },
+          "NO": {
+            "examples": 76,
+            "groups": 2
+          },
+          "UNKNOWN": {
+            "examples": 14,
+            "groups": 2
+          }
+        }
+      },
+      "holding_confirmation_required": {
+        "TRAIN": {
+          "YES": {
+            "examples": 48,
+            "groups": 24
+          },
+          "NO": {
+            "examples": 84,
+            "groups": 24
+          },
+          "UNKNOWN": {
+            "examples": 28,
+            "groups": 11
+          }
+        },
+        "VALIDATION": {
+          "YES": {
+            "examples": 36,
+            "groups": 2
+          },
+          "NO": {
+            "examples": 69,
+            "groups": 2
+          },
+          "UNKNOWN": {
+            "examples": 15,
+            "groups": 2
+          }
+        }
+      },
+      "split_voting_restricted": {
+        "TRAIN": {
+          "YES": {
+            "examples": 52,
+            "groups": 23
+          },
+          "NO": {
+            "examples": 78,
+            "groups": 24
+          },
+          "UNKNOWN": {
+            "examples": 30,
+            "groups": 11
+          }
+        },
+        "VALIDATION": {
+          "YES": {
+            "examples": 29,
+            "groups": 2
+          },
+          "NO": {
+            "examples": 74,
+            "groups": 2
+          },
+          "UNKNOWN": {
+            "examples": 17,
+            "groups": 2
+          }
+        }
+      },
+      "securities_lending_recall_required": {
+        "TRAIN": {
+          "YES": {
+            "examples": 50,
+            "groups": 24
+          },
+          "NO": {
+            "examples": 85,
+            "groups": 24
+          },
+          "UNKNOWN": {
+            "examples": 25,
+            "groups": 10
+          }
+        },
+        "VALIDATION": {
+          "YES": {
+            "examples": 29,
+            "groups": 2
+          },
+          "NO": {
+            "examples": 68,
+            "groups": 2
+          },
+          "UNKNOWN": {
+            "examples": 23,
+            "groups": 2
+          }
+        }
+      },
+      "other_voting_restriction": {
+        "TRAIN": {
+          "YES": {
+            "examples": 47,
+            "groups": 25
+          },
+          "NO": {
+            "examples": 88,
+            "groups": 25
+          },
+          "UNKNOWN": {
+            "examples": 25,
+            "groups": 8
+          }
+        },
+        "VALIDATION": {
+          "YES": {
+            "examples": 36,
+            "groups": 2
+          },
+          "NO": {
+            "examples": 66,
+            "groups": 2
+          },
+          "UNKNOWN": {
+            "examples": 18,
+            "groups": 2
+          }
+        }
+      }
+    },
+    "warnings": [],
+    "scope": "Training diagnostics only; five groups is a warning threshold, not a quality/automation qualification"
+  },
+  "parent_identity": "535b87afd07909079b28cd70543616ea50784848a9b3ddaa66767f80345f0875",
+  "job": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/jobs/framework-domain-upgrade-20261022-v2",
+  "training_budget": "One full-encoder epoch; no further run selected from these results",
+  "selection": "Most validation assertions with no new critical positive misses versus parent",
+  "roles_read": [
+    "TRAIN",
+    "VALIDATION"
+  ],
+  "protected_answers_opened": false,
+  "shipped_model": false,
+  "automation_enabled": false,
+  "customer_accuracy": null
+}

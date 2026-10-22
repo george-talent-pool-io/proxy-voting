@@ -26,6 +26,35 @@ def training_admission(spec):
     return {'memory_limit_bytes':limit,'minimum_bytes':floor,'scope':'Admission floor, not measured peak-memory guarantee'}
 
 
+def training_base_admission(spec, models):
+    """Foundations stay in the model volume; continuation uses verified jobs.
+
+    An arbitrary workspace path or a self-declared derivative is insufficient.
+    The frozen seed must bind a completed registered job's exact lineage/bytes.
+    """
+    from training.framework import jobs, seeds
+    from training.framework.bundle import sha
+    from training.framework.runtime import verify_checkpoint
+    path=Path(spec.model_path).resolve();models=Path(models).resolve()
+    if models in path.parents:
+        return {'source':'MANAGED_MODEL_VOLUME'}
+    if spec.parent_seed_path:
+        seed_root=Path(spec.parent_seed_path).resolve()
+        if seed_root.parent==(jobs.WORKSPACE/'seeds').resolve():
+            seed=seeds.verify(seed_root)
+            job=path.parent
+            if (path.name=='checkpoint' and job.parent==(jobs.WORKSPACE/'jobs').resolve() and
+                seed['origin'] in ('AI_TEST_DERIVATIVE','CUSTOMER_DERIVATIVE') and
+                path==Path(seed['model_location']).resolve()):
+                registered,plan,manifest=verify_checkpoint(jobs.member('jobs',job.name))
+                lineage=seed.get('lineage') or {}
+                if (lineage.get('job_manifest_sha256')==sha(registered/'model-manifest.json') and
+                    lineage.get('training_bundle_sha256')==plan['bundle_manifest_sha256']):
+                    return {'source':'REGISTERED_FROZEN_DERIVATIVE','origin':seed['origin'],
+                            'parent_identity':seed['identity'],'job':job.name}
+    raise ValueError('Training base must be inside the managed model volume or a verified frozen registered derivative')
+
+
 def inference_admission(release):
     import json
     import torch

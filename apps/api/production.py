@@ -162,7 +162,31 @@ def create_app():
 
     @app.get('/api/client/starting-checkpoints')
     def starting_checkpoints(user=Depends(read)):
-        return [{'id': p.parent.name, **json.loads(p.read_text())} for p in (jobs.WORKSPACE / 'seeds').glob('*/seed.json')]
+        from training.framework.profiles import seed_readiness
+        values = [{'id': p.parent.name, **json.loads(p.read_text())} for p in (jobs.WORKSPACE / 'seeds').glob('*/seed.json')]
+        return [{**value, 'readiness': seed_readiness(value)} for value in values]
+
+    @app.get('/api/client/training-profiles')
+    def training_profiles(user=Depends(read)):
+        from training.framework.profiles import listing
+        return listing(linux_only=True)
+
+    class DerivativeSeed(BaseModel):
+        model_config=ConfigDict(extra='forbid')
+        id: str
+        job_id: str
+
+    @app.post('/api/client/starting-checkpoints/from-job',status_code=201)
+    def freeze_derivative(body: DerivativeSeed,user=Depends(train)):
+        from training.framework import seeds
+        from training.framework.runtime import verify_checkpoint
+        job=jobs.member('jobs',body.job_id)
+        _,_,manifest=verify_checkpoint(job)
+        origin='AI_TEST_DERIVATIVE' if any(k.startswith('AI') for k in manifest['label_origins']) else 'CUSTOMER_DERIVATIVE'
+        result=seeds.export_derivative(job,jobs.member('seeds',body.id),origin=origin)
+        storage.audit(user['name'],'DERIVATIVE_CHECKPOINT_FROZEN',{'id':body.id,'job':body.job_id,
+                      'identity':result['identity'],'origin':origin})
+        return result
 
     @app.get('/api/client/calibrators')
     def calibrators(user=Depends(read)):
@@ -188,9 +212,8 @@ def create_app():
                 if stage.training.parent_seed_path and Path(stage.training.parent_seed_path).resolve().parent != (jobs.WORKSPACE/'seeds').resolve():
                     raise ValueError('Training parent must be a managed frozen starting checkpoint')
                 if stage.training.backend == 'MLX_QLORA' or stage.training.runtime_python: raise ValueError('Linux uses LAYA_SDK or TRANSFORMERS_PEFT; executable paths are not accepted')
-                path = Path(stage.training.model_path).resolve()
-                if models not in path.parents: raise ValueError('Training base must be inside the managed model volume')
-                from production.installation import training_admission
+                from production.installation import training_admission,training_base_admission
+                training_base_admission(stage.training,models)
                 training_admission(stage.training)
         from production import learning
         result = learning.prepare(spec.model_dump(), jobs.member('campaigns', ident))

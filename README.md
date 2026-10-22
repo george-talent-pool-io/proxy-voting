@@ -233,8 +233,8 @@ Evaluation reports overall/balanced accuracy; per-status precision, recall, F1 a
 
 ```bash
 uv sync --frozen --group dev
-uv run pytest tests/unit tests/integration tests/classifier -q
-RUN_E2E=1 uv run pytest tests/e2e -q
+uv run pytest -m 'not model and not e2e and not local_llm and not qwen_local' -q
+RUN_E2E=1 uv run pytest -m e2e -q
 uv run python -m scripts.semantic_benchmark artifacts/semantic-UNIQUE.json
 RUN_MODEL_TESTS=1 uv run pytest tests/classifier -q
 ```
@@ -242,6 +242,19 @@ RUN_MODEL_TESTS=1 uv run pytest tests/classifier -q
 The first suite covers deterministic application contracts; real-model challenges are explicitly opt-in. `RUN_MODEL_TESTS=1` asserts the semantic expectations against actual local Laya and **may fail**. Those failures are scientific findings, not application test failures to conceal. The semantic benchmark writes every expectation, observed factor, actual score and pass/fail to a new artifact without changing golden labels. Its 57 authored cases include AGMs/EGMs, schemes, proxy voting, POAs, blocking, eligibility, overlapping restrictions, negation/double negation, historic quotes, deadline precedence, multiple dates, same-day time uncertainty, mandatory/voluntary events, Unicode/HTML, adversarial instructions, German, French and Spanish. These are specifications, not independent customer labels.
 
 Browser tests use Python Playwright and installed Chrome on macOS; elsewhere install Chromium with `uv run playwright install chromium`. They start an isolated server on a free port and a snapshot of the public database. Automated reviewer corrections never enter the demo's golden data. Browser batch/reproduction tests use an explicitly named **test double** inside the test-only server; separate real local inference and full-corpus runs verify the actual model. Screenshots are saved to `artifacts/overview.png`, `notice-detail.png`, `performance.png` and `methodology.png`. They are smoke artifacts, not cross-platform pixel baselines. The in-app browser connector failed during this session, so standalone Playwright supplied the verified browser path.
+
+The marker-based browser command includes the authenticated customer console in
+`tests/production/test_client_browser.py`, as well as the research interface.
+The customer journey exercises real import, review, split freezing, training-job
+registration, validation selection, release sealing, calibration, independent
+qualification, refused promotion, inference and process restart. Its expensive
+model kernels are explicitly labelled doubles. Real registered Laya/Qwen inference
+has a separate opt-in suite; neither kind of check establishes customer accuracy.
+See [qualification test scopes](docs/QUALIFICATION_TEST_SCOPE.md).
+
+The [22 October framework/model review](data/reports/FRAMEWORK_E2E_AND_MODEL_READINESS.md)
+records the strengthened two-round customer learning journey, frozen model
+readiness, actual AI-only specialist adaptation and remaining qualification gaps.
 
 ## Demo flow
 
