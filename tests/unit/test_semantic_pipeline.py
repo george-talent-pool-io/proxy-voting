@@ -102,7 +102,7 @@ def test_absent_negative_and_unsupported_are_distinct():
 @pytest.mark.parametrize('field',RESTRICTIONS)
 def test_each_independent_restriction_derives_restricted_status(field):
     fs=specialist()['predicates'];fs[field]=factor('YES','MODEL')
-    d=decide(fs,{'status':'OPEN'});assert d['classification']=='VOTABLE_WITH_RESTRICTION';assert not d['automation_enabled'];assert d['manual_review_required']
+    d=decide(fs,{'status':'OPEN'});assert d['classification']=='VOTABLE_WITH_RESTRICTION';assert not d['automation_enabled'];assert not d['manual_review_required']
 
 def test_decision_precedence():
     fs=specialist()['predicates'];fs['share_blocking']=factor('YES','MODEL')

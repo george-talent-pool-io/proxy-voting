@@ -183,7 +183,7 @@ def freeze(ident, event_ids, actor):
 
 def calibrate(ident, *, dataset_id, release_id, population, reference, actor, check=None, stage='FINAL'):
     from production import confidence
-    from production.qualification import decision_feature
+    from production.qualification import decision_feature, predicate_feature
     from training.framework.event_data import load_inputs, load_answers
     reference = reference_time(reference)
     dataset = jobs.member('event-datasets', dataset_id)
@@ -225,7 +225,7 @@ def calibrate(ident, *, dataset_id, release_id, population, reference, actor, ch
         fold = 'FIT' if int(digest(group)[:8], 16) % 3 else 'EVALUATION'
         for pred in (*PREDICATES, 'final_decision'):
             f = (decision_feature(row['text'], result, meta) if pred == 'final_decision' else
-                 confidence.feature_row(row['text'], pred, result['predicates'][pred], language=meta['language'], input_type=meta['input_type'], conflicts=result['reconciliation']['conflicts']))
+                 predicate_feature(row['text'],pred,result,meta))
             if pred == 'final_decision':
                 if key.get('expected_final_status') is None: continue
                 correct = result['decision']['classification'] == key['expected_final_status']

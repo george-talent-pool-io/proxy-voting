@@ -1,0 +1,16 @@
+{
+  "recovered_from_job": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/jobs/reliable-voting-balanced-v1-2epoch",
+  "original_state": "INTERRUPTED",
+  "saved_completed_epochs": 1,
+  "retained_optimizer_updates": 627,
+  "partially_completed_epoch_two_discarded": true,
+  "reason": "Bounded resource recovery; original full-encoder job interrupted after high memory/swap pressure",
+  "original_plan_sha256": "0f519fc73cc7d27a0f5b8ac8fb9d1c12c81a4da4741ef0f4d46f1b3c3d887491",
+  "training_log_sha256": "19fb638d66eae5a9d57c2a2741583426bdc77635f0ec5a5d34245190378c064b",
+  "weight_files": {
+    "model.safetensors": "7b98e67133c4d388573d511c3b92b631449009b06daaad1d9bf41902baf7ac37",
+    "rl_agent_config.json": "c6032db9bf710c50c2950719543dae88de33dea967c09d819403853a359ae5bb"
+  },
+  "origin": "AI_TEST_DERIVATIVE",
+  "production_promotion": false
+}

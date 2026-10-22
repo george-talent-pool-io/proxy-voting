@@ -1,0 +1,8 @@
+{
+  "classification_outputs_identical": true,
+  "raw_predictions_replayed": 964,
+  "model_inference_rerun": false,
+  "truth_not_read_for_this_assertion": true,
+  "change": "Decision uncertainty separated from operational qualification; origin is not hard-coded synthetic",
+  "existing_study_calibrators_not_transferred_to_new_release_identity": true
+}

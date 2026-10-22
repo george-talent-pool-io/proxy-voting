@@ -38,6 +38,14 @@ def spawn(root):
     return {'worker_pid':p.pid,'automatic_resume':False,'protected_evaluation':False}
 
 
+def wait_for_training(child, check, stage_began, max_seconds):
+    while child.poll() is None:
+        check()
+        if time.monotonic()-stage_began>max_seconds:
+            raise TimeoutError('Individual training-stage budget exceeded')
+        time.sleep(.2)
+
+
 @owned
 def run(root):
     # The standalone campaign CLI has no FastAPI lifespan to migrate the
@@ -71,11 +79,12 @@ def run(root):
                 note_job(job)
                 jobs.events(root,{'state':'RUNNING','phase':'TRAINING','stage':stage.name,'job_id':ident})
                 child=None
+                stage_began=time.monotonic()
                 try:
                     with (root/(stage.name+'-training.log')).open('xb') as log:
                         child=subprocess.Popen([sys.executable,'-m','training.framework','execute',str(job)],cwd=jobs.ROOT,
                                                env=os.environ.copy(),stdout=log,stderr=log,start_new_session=True,pass_fds=(inherited_fd(),))
-                        while child.poll() is None: check();time.sleep(.2)
+                        wait_for_training(child,check,stage_began,stage.training.training_timeout_seconds)
                     if child.returncode: raise ValueError('Training failed; preserved job/log identify the failure')
                 finally:
                     if child and child.poll() is None:

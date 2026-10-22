@@ -21,7 +21,7 @@ from scripts.qualify_frozen_learning import benchmark, lines
 ROOT=Path('data/experiments/reliability-programme-20261022')
 CORPUS=Path('data/qualification-corpora/reliable-voting-v1')
 PARENT='framework-domain-upgrade-20261022-selected'
-CANDIDATE='reliable-voting-balanced-v1-2epoch'
+CANDIDATE='reliable-voting-balanced-v1-head-isolated'
 POPULATION='AI_BALANCED_COMPOSITIONS_V1_ENGLISH_ONLY'
 
 
@@ -51,17 +51,17 @@ def measure(predictions,truth):
 def validation():
     target=ROOT/'validation';target.mkdir(exist_ok=False)
     factories={'PARENT':lambda:WholeNotice(jobs.member('seeds',PARENT),model_factory=seeds.FrozenModel),
-               'BALANCED_2EPOCH':lambda:WholeNotice(jobs.member('jobs',CANDIDATE))}
+               'BALANCED_RESOURCE_BOUNDED':lambda:WholeNotice(jobs.member('jobs',CANDIDATE))}
     reports={}
     with model_resource('balanced-reliability-validation'):
         for name,factory in factories.items():
             out=target/name;p=benchmark(factory,inputs('VALIDATION'),out)
             reports[name]=measure(p,answers('VALIDATION',out/'PREDICTIONS_SAVED.json'));write(out/'metrics.json',reports[name])
     def misses(m):return {(r['id'],r['field']) for r in m['failures'] if r['field'] in CRITICAL and r['expected'] in ('YES','VOTABLE')}
-    new=sorted(misses(reports['BALANCED_2EPOCH'])-misses(reports['PARENT']))
+    new=sorted(misses(reports['BALANCED_RESOURCE_BOUNDED'])-misses(reports['PARENT']))
     scores={k:statistics.mean(f['balanced_accuracy'] for f in m['fields'].values()) for k,m in reports.items()}
-    selected='BALANCED_2EPOCH' if scores['BALANCED_2EPOCH']>scores['PARENT'] and not new else 'PARENT'
-    selected_source={'kind':'job','id':CANDIDATE} if selected=='BALANCED_2EPOCH' else {'kind':'seed','id':PARENT}
+    selected='BALANCED_RESOURCE_BOUNDED' if scores['BALANCED_RESOURCE_BOUNDED']>scores['PARENT'] and not new else 'PARENT'
+    selected_source={'kind':'job','id':CANDIDATE} if selected=='BALANCED_RESOURCE_BOUNDED' else {'kind':'seed','id':PARENT}
     receipt={'selected':selected,'source':selected_source,'validation_macro_balanced_accuracy':scores,
              'new_critical_positive_misses':new,'selection_rule':'Higher mean predicate balanced accuracy, with no new critical-positive validation misses',
              'validation_predictions':{k:sha(target/k/'predictions.jsonl') for k in factories},
@@ -130,6 +130,16 @@ def qualification():
         out=ROOT/'FROZEN_TEST';p=benchmark(factory,inputs('FROZEN_TEST'),out)
         truth=answers('FROZEN_TEST',out/'PREDICTIONS_SAVED.json');metrics=measure(p,truth);write(out/'metrics.json',metrics)
         rr=risk(p,truth,cal,'FROZEN_TEST');jsonl(out/'confidence.jsonl',rr)
+        from qwen_domain.confidence import calibration_metrics
+        frozen_calibration={}
+        prediction_by_id={r['id']:r for r in p}
+        for key in (*PREDICATES,'final_decision'):
+            supported=[r for r in rr if r['predicate_confidence'][key] is not None]
+            labels=[(prediction_by_id[r['id']]['result']['decision']['classification']==truth[r['id']]['final_status'] if key=='final_decision' else
+                     r['prediction'][key]==r['truth'][key]) for r in supported]
+            frozen_calibration[key]={**calibration_metrics(labels,[r['predicate_confidence'][key] for r in supported]),
+                                     'available_fraction':len(supported)/len(rr),'total_cases':len(rr)}
+        write(out/'calibration-quality.json',frozen_calibration)
         curves=[operating.summarize(rr,t) for t in (.70,.80,.90,.95,.98,.99)]
         measured=operating.evaluate(rr,point,identity=identity,calibrator_hash=cal['sha256'])
         path=Path('tests/fixtures/semantic.json')
@@ -138,7 +148,7 @@ def qualification():
         cp=benchmark(factory,ci,ROOT/'CHALLENGE');ct={r['id']:r['expected'] for r in challenge}
         cm=summarize([{**r,'expected':ct[r['id']]} for r in cp]);write(ROOT/'CHALLENGE'/'metrics.json',cm)
         result={'selected':frozen['selected'],'frozen':metrics,'challenge':cm,'operating':measured,'coverage_curve':curves,
-            'calibration':{role:c['reports'] for role,c in reports.items()},
+            'calibration':{role:c['reports'] for role,c in reports.items()},'frozen_calibration_quality':frozen_calibration,
             'confidence_available_events':sum(r['confidence'] is not None for r in rr),'events':len(rr),
             'latency':json.loads((out/'PREDICTIONS_SAVED.json').read_text()),
             'hybrid_calibration_status':'NOT_FITTED_HERE; specialist-only calibration cannot qualify LLM results',

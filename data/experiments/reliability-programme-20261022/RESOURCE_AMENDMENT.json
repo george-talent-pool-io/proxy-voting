@@ -1,0 +1,10 @@
+{
+  "before_validation": true,
+  "new_job": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/jobs/reliable-voting-balanced-v1-head-completion",
+  "parent": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/seeds/reliable-voting-balanced-v1-epoch1-research",
+  "purpose": "Bounded, lower-memory head adaptation of the completed recovered encoder epoch",
+  "max_seconds": 1800,
+  "no_test_or_calibration_labels_used": true,
+  "original_two_epoch_run_not_completed": true,
+  "preflight_ready": true
+}

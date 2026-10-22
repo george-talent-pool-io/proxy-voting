@@ -1,12 +1,12 @@
 """Explicit shared customer-status policy, independent from automation permission."""
 from semantic_pipeline.schema import RESTRICTIONS
-VERSION='semantic-decision-2'
+VERSION='semantic-decision-3'
 
 def decide(factors, deadline, conflicts=(), quarantined=False):
     def out(status, rule, reasons=()):
         return {'classification':status,'rule':rule,'rule_version':VERSION,
-            'manual_review_required':True,'automation_enabled':False,
-            'review_reasons':list(reasons)+['Synthetic-only evaluation; customer quality gate not met']}
+            'manual_review_required':status=='UNCERTAIN_MANUAL_REVIEW','automation_enabled':False,
+            'review_reasons':list(reasons)+(['SEMANTIC_DECISION_UNRESOLVED'] if status=='UNCERTAIN_MANUAL_REVIEW' else [])}
     if quarantined: return out('UNCERTAIN_MANUAL_REVIEW','R0 unresolved lifecycle/invalid structure')
     if conflicts: return out('UNCERTAIN_MANUAL_REVIEW','R1 unresolved conflicts',conflicts)
     vote=factors.get('votability',{}).get('value','UNCERTAIN')

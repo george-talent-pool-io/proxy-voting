@@ -14,7 +14,7 @@ from typing import Literal
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 from apps.api import store
 from semantic_pipeline.schema import PREDICATES, SemanticResult
-from semantic_pipeline.decision import decide
+from semantic_pipeline.decision import decide, VERSION as DECISION_VERSION
 from fast_cascade.routing import Policy, assess, reconcile
 from training.framework import jobs, events
 from training.framework.bundle import sha, write, ROOT
@@ -100,7 +100,8 @@ def prepare(spec, output):
     sources = source_files()
     condition = {'version': VERSION, 'spec': spec.model_dump(), 'models': models, 'sources': sources,
                  'schema_sha256': digest(SemanticResult.model_json_schema()), 'event_policy': events.VERSION,
-                 'rule_version': 'semantic-decision-2', 'confidence_features': 'registered-release-confidence-v1'}
+                 'rule_version': DECISION_VERSION,
+                 'confidence_features': 'registered-release-confidence-v1'}
     if spec.laya_calibrator_id:
         from production.cascade_policy import load as load_routing
         cal_path=jobs.member('customer-calibrators',spec.laya_calibrator_id).with_suffix('.json')

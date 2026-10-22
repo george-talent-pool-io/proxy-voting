@@ -181,12 +181,14 @@ def test_official_laya_backend_receives_train_and_separate_validation(bundle, tm
     from training.framework.trainers import train_laya
     calls = []
     def finetune(data, model, output, config, device):
+        assert model != spec(tmp_path).model_path  # SDK gets a private working copy.
         calls.append((data, config))
         Path(output).mkdir()
         return {'kind': 'explicit trainer contract double, not a real model', 'updates': 1}
     monkeypatch.setattr(laya.train, 'finetune', finetune)
     monkeypatch.setattr(trainers, 'validate_laya_encoding', lambda *args: None)
     monkeypatch.setattr(trainers, 'validate_laya_reload', lambda *args: {'passed': True, 'scope': 'reload contract double'})
+    Path(spec(tmp_path).model_path).mkdir()
     result = train_laya(bundle, tmp_path / 'checkpoint', spec(tmp_path))
     assert calls[0][0].endswith('laya-train.jsonl')
     config = calls[0][1]

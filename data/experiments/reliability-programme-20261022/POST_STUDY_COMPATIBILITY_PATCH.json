@@ -1,0 +1,11 @@
+{
+  "study_source_archive": "data/training-workspace/releases/reliability-real-customer-path-20261022-CASCADE_CONSERVATIVE/source-snapshot",
+  "study_sources_verified": true,
+  "mismatched_files": [],
+  "changed_file": "training/framework/mlx_process.py",
+  "old_sha256": "351b74b58307ec41f9d8b359a59c70c8f27263e07d6f37a3642fec2c5ca0d2b8",
+  "new_sha256": "a56a162556dd28d3256ebab9072444f066cc5f615af9d087be948fb0317fbd44",
+  "reason": "Normalise newly added default-only TrainSpec fields when comparing existing MLX serving requests; no prompt/weights/Laya inference change",
+  "old_predictions_and_calibrators_not_overwritten": true,
+  "current_release_requires_current_identity_calibration": true
+}

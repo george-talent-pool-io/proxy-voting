@@ -53,7 +53,7 @@ def test_real_registered_specialist_and_local_generative_model_execute(actual_re
     assert r['llm_stage']['llm']['valid'], 'A real invocation must also return validated structured semantics'
     SemanticResult.model_validate(r['llm_stage']['llm']['parsed'])
     assert r['release_identity'] and r['checkpoint_manifest_sha256']
-    assert r['decision']['manual_review_required'] and not r['automation_enabled']
+    assert not r['automation_enabled']  # Operational review is asserted on the persisted customer decision below.
 
 
 def test_real_release_has_native_scores_exact_evidence_and_honest_confidence(actual_release):

@@ -1,0 +1,15 @@
+{
+  "image": "sha256:7815960b6daf8193917a68617845e8480efe39465a9c1891e676df705421e897",
+  "platform": "linux/arm64",
+  "named_auth": true,
+  "nonroot": true,
+  "read_only_root": true,
+  "capabilities_dropped": true,
+  "restart_persistence": true,
+  "source_imported": 1,
+  "ready": true,
+  "automation_enabled": false,
+  "model_execution": false,
+  "volume": "voting-service-check-49820-state",
+  "test_transport": "Loopback HTTP only; production Compose adds supplied-certificate TLS"
+}

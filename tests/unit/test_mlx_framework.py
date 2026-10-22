@@ -65,7 +65,7 @@ def test_pinned_reference_facts_take_precedence_and_remain_traceable(tmp_path):
     assert result['predicates']['votability']['semantic_diagnostic']['value'] == 'UNCERTAIN'
     assert result['deadline']['status'] == 'OPEN'
     assert result['decision']['classification'] == 'VOTABLE'
-    assert result['decision']['manual_review_required'] and not result['automation_enabled']
+    assert not result['automation_enabled']  # Customer permission is checked by the worker, not semantic rules.
     span = result['predicates']['votability']['evidence'][0]
     assert text[span['start']:span['end']] == span['text']
 
@@ -95,7 +95,8 @@ def test_registered_mlx_schema_repair_is_bounded_and_keeps_review(tmp_path, seco
     assert len(calls) == 2
     assert result['llm']['schema_handling']['repair_attempts'] == 1
     assert result['llm']['valid'] is second_valid
-    assert result['decision']['manual_review_required']
+    assert not result['automation_enabled']
     if not second_valid:
+        assert result['decision']['manual_review_required']
         assert result['llm']['raw_output'] is None
         assert 'LLM_OUTPUT_SCHEMA_FAILURE' in result['reconciliation']['conflicts']

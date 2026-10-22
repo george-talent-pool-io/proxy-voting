@@ -202,7 +202,11 @@ def train_laya(bundle, output, spec):
     offline()
     if spec.max_steps is not None:
         raise ValueError('Laya SDK backend uses epochs; max_steps is not supported')
-    validate_laya_encoding(bundle, spec)
+    # The official SDK may rewrite tokenizer compatibility metadata on load.
+    # It must never receive the immutable starting checkpoint as a write target.
+    working=Path(output).parent/'laya-sdk-working-base'
+    isolate_laya_base(spec.model_path,working)
+    validate_laya_encoding(bundle, spec.model_copy(update={'model_path':str(working)}))
     training_input,sampling=laya_training_input(bundle,output,spec)
     config = TrainConfig(epochs=spec.epochs, seed=spec.seed, encoder_lr=spec.encoder_learning_rate or spec.learning_rate,
                          head_lr=spec.learning_rate, micro_batch=spec.batch_size,
@@ -216,7 +220,7 @@ def train_laya(bundle, output, spec):
     import torch
     if spec.mps_memory_fraction is not None:torch.mps.set_per_process_memory_fraction(spec.mps_memory_fraction)
     try:
-        result = finetune(str(training_input), spec.model_path,
+        result = finetune(str(training_input), str(working),
                           str(output), config, device=spec.device)
     finally:
         if spec.mps_memory_fraction is not None:torch.mps.set_per_process_memory_fraction(1.)
@@ -229,9 +233,18 @@ def train_laya(bundle, output, spec):
     probe = json.loads((Path(bundle) / 'laya-validation.jsonl').read_text().splitlines()[0])
     parity = validate_laya_reload(output, probe, spec)
     return {'backend': 'LAYA_SDK', 'training': result, 'training_sampling':sampling,
+            'base_isolation':{'mode':'PRIVATE_SDK_WORKING_COPY','immutable_source':spec.model_path,
+                              'working_copy':str(working)},
             'validation_kind': ('Official SDK validation diagnostics; separate semantic evaluation required' if spec.laya_sdk_validation else
                                 'SDK duplicate validation disabled; independent framework validation REQUIRED before sealing'),
             'reload_parity': parity}
+
+
+def isolate_laya_base(source,destination):
+    import shutil
+    # Never hard-link model/tokenizer files: SDK compatibility rewrites must
+    # not write through into a frozen model or a shared Hugging Face snapshot.
+    return shutil.copytree(source,destination,ignore=shutil.ignore_patterns('checkpoint_latest'))
 
 
 def validate_laya_reload(output, probe, spec):

@@ -59,11 +59,25 @@ def independent_groups(rows):
     return {r['id']: 'group-' + str(find(i)) for i, r in enumerate(rows)}
 
 
+def repair_count(result):
+    return int(((result.get('llm') or {}).get('schema_handling') or {}).get('repair_attempts',0))
+
+
+def predicate_feature(text,key,result,meta):
+    repairs=repair_count(result)
+    f=confidence.feature_row(text,key,result['predicates'][key],language=meta['language'],input_type=meta['input_type'],
+        conflicts=result['reconciliation']['conflicts'],schema_valid=not bool(result.get('execution_error')),schema_repairs=repairs)
+    f['force_review'] |= bool(repairs)
+    if repairs:f['features']['source']+=':SCHEMA_REPAIRED'
+    f['confidence_explanation']['schema_repairs']=repairs
+    return f
+
+
 def decision_feature(text, result, meta):
     ev = [e for p in result['predicates'].values() for e in p.get('evidence', [])]
     status = result['decision']['classification']
     f = confidence.feature_row(text, 'final_decision', {'value': status, 'evidence': ev, 'source': result.get('architecture', 'UNKNOWN')},
-                              language=meta['language'], input_type=meta['input_type'], conflicts=result['reconciliation']['conflicts'])
+                              language=meta['language'], input_type=meta['input_type'], conflicts=result['reconciliation']['conflicts'],schema_repairs=repair_count(result))
     f['force_review'] |= status == 'UNCERTAIN_MANUAL_REVIEW'
     for key in PREDICATES:
         pred = result['predicates'][key]
@@ -72,6 +86,8 @@ def decision_feature(text, result, meta):
                               key + '_evidence': any(e.get('valid') for e in pred.get('evidence', []))})
     f['features']['deadline_status'] = result['deadline']['status']
     f['features']['source'] += ':LLM_INVOKED' if (result.get('llm') or {}).get('invoked') else ':SPECIALIST_OR_RULES_ONLY'
+    if repair_count(result):
+        f['features']['source']+=':SCHEMA_REPAIRED';f['force_review']=True
     return f
 
 
@@ -79,10 +95,10 @@ def assess(text, result, meta, calibrator, identity, threshold):
     out = {}; reasons = []
     scope_ok = calibrator['population'] == meta['population']
     if not scope_ok: reasons.append('POPULATION_NOT_IN_CALIBRATION_SCOPE')
+    if repair_count(result):reasons.append('LLM_SCHEMA_REPAIR_REQUIRES_REVIEW')
     for key in PREDICATES:
         pred = result['predicates'][key]
-        f = confidence.feature_row(text, key, pred, language=meta['language'], input_type=meta['input_type'],
-                                  conflicts=result['reconciliation']['conflicts'], schema_valid=not bool(result.get('execution_error')))
+        f = predicate_feature(text,key,result,meta)
         probability = confidence.predict(calibrator, key, f, identity=identity, population=meta['population']) if scope_ok else None
         out[key] = {'value': pred['value'], 'confidence': probability,
                     'kind': 'CALIBRATED_IN_DECLARED_POPULATION' if probability is not None else 'HEURISTIC / NOT YET CALIBRATED',

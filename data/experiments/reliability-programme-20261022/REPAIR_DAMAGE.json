@@ -1,0 +1,51 @@
+{
+  "votability": {
+    "REPAIRED": 231,
+    "BOTH_CORRECT": 191,
+    "BOTH_WRONG": 3
+  },
+  "share_blocking": {
+    "BOTH_CORRECT": 359,
+    "REPAIRED": 61,
+    "DAMAGED": 2,
+    "BOTH_WRONG": 3
+  },
+  "poa_required": {
+    "BOTH_CORRECT": 396,
+    "REPAIRED": 29
+  },
+  "registration_required": {
+    "BOTH_CORRECT": 398,
+    "REPAIRED": 24,
+    "DAMAGED": 2,
+    "BOTH_WRONG": 1
+  },
+  "beneficial_owner_disclosure_required": {
+    "BOTH_CORRECT": 394,
+    "BOTH_WRONG": 5,
+    "REPAIRED": 24,
+    "DAMAGED": 2
+  },
+  "holding_confirmation_required": {
+    "BOTH_CORRECT": 358,
+    "REPAIRED": 61,
+    "DAMAGED": 6
+  },
+  "split_voting_restricted": {
+    "BOTH_CORRECT": 367,
+    "REPAIRED": 50,
+    "BOTH_WRONG": 6,
+    "DAMAGED": 2
+  },
+  "securities_lending_recall_required": {
+    "BOTH_CORRECT": 407,
+    "REPAIRED": 17,
+    "DAMAGED": 1
+  },
+  "other_voting_restriction": {
+    "BOTH_CORRECT": 344,
+    "REPAIRED": 58,
+    "BOTH_WRONG": 9,
+    "DAMAGED": 14
+  }
+}

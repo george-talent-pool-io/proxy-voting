@@ -60,7 +60,13 @@ class RegisteredModel:
         offline()
         if self.spec.backend == 'LAYA_SDK':
             import laya
-            self.agent = laya.load(str(self.checkpoint_path), device=self.spec.device)
+            import tempfile
+            from training.framework.trainers import isolate_laya_base
+            cache=Path(self.root).parent.parent/'runtime-cache';cache.mkdir(parents=True,exist_ok=True)
+            self._laya_view=tempfile.TemporaryDirectory(prefix='laya-',dir=cache)
+            view=Path(self._laya_view.name)/'model'
+            isolate_laya_base(self.checkpoint_path,view)
+            self.agent = laya.load(str(view), device=self.spec.device)
             self.questions = json.loads((Path(self.plan['bundle']) / 'laya-questions.json').read_text())
         elif self.spec.backend == 'MLX_QLORA':
             from training.framework.mlx_process import MlxProcess
@@ -220,3 +226,6 @@ class RegisteredModel:
     def close(self):
         if hasattr(self, 'worker'):
             self.worker.close()
+        if hasattr(self,'agent'):del self.agent
+        if getattr(self,'_laya_view',None):
+            self._laya_view.cleanup();self._laya_view=None

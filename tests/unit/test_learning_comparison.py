@@ -92,6 +92,7 @@ def test_serving_archives_loaded_runtime_and_rejects_changed_archive(tmp_path, m
     from training.framework import runtime
     import laya
     root = tmp_path / 'job'; root.mkdir()
+    (root/'checkpoint').mkdir()  # Private SDK view copies the model fixture.
     (root / 'laya-questions.json').write_text('{}')
     plan = {'bundle': str(root), 'spec': {'backend': 'LAYA_SDK', 'family': 'LAYA',
             'model_path': 'test-only', 'base_model_id': 'TEST_DOUBLE', 'base_revision': 'test'}}

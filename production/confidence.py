@@ -34,9 +34,10 @@ class SupportPolicy(BaseModel):
     scope: str = 'CUSTOMER_QUALIFICATION'
 
 
-def feature_row(text, key, pred, *, language, input_type, conflicts=(), schema_valid=True):
+def feature_row(text, key, pred, *, language, input_type, conflicts=(), schema_valid=True, schema_repairs=0):
     base = features(text, key, pred, language=language, input_type=input_type,
-                    deterministic_conflict=bool(conflicts), schema_valid=schema_valid,supported_languages=None)
+                    deterministic_conflict=bool(conflicts), schema_valid=schema_valid,
+                    schema_repairs=schema_repairs,supported_languages=None)
     from production.evidence_basis import valid_negative_basis
     basis=valid_negative_basis(text,pred)
     exact=any(e.get('valid') for e in pred.get('evidence',[]))

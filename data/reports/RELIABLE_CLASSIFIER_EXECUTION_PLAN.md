@@ -1,6 +1,6 @@
 # Reliable voting classifier and calibrated hybrid: execution plan
 
-Version: reliability-programme-20261022-v1. Status: execution in progress.
+Version: reliability-programme-20261022-v1. Status: bounded study executed; requested autonomous production quality NOT achieved. See RELIABLE_CLASSIFIER_EVALUATION.md for measured results and explicit unpassed gates.
 
 ## Product and acceptance boundary
 
@@ -131,3 +131,13 @@ Completion means engineering evidence and supported qualification, not relabelli
 AI results as production customer accuracy. Any unavailable model, failed semantic
 gate, unsupported confidence condition or unqualified hardware remains an explicit
 release blocker. Negative outcomes are preserved; no automatic production promotion.
+
+
+## Execution disposition
+
+- Phases 0–3: executed, including resource recovery and a genuinely completed registered training job. Qwen 4 weights were unavailable.
+- Phase 4: actual specialist calibration fitted/evaluated; final hybrid numerical qualification remains unestablished. No operating point passed.
+- Phase 5: current real Laya/Qwen application execution verified. A new Qwen 4 comparison could not run; no selective low-review claim is supported.
+- Phase 6: random audits, suspension, original-time review and confidence/source controls implemented and tested.
+- Phase 7: software, browser, real-model worker and Linux-service tests pass. Target Linux/GPU model inference/training remains unqualified.
+- Experimental corpus, weights and private calibrators are excluded from delivery. Automation remains disabled.

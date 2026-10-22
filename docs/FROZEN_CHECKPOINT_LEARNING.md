@@ -287,6 +287,21 @@ are recorded. Validation/calibration/test data is never resampled. Inspect class
 and length support before adding epochs; optimizer updates cannot compensate for
 missing supervision or prove generalisation to a new customer population.
 
+The official SDK can rewrite tokenizer compatibility metadata during loading.
+Training now passes a private `laya-sdk-working-base` copy to the SDK; inference
+uses a temporary private model view and removes it on close. Files are copied,
+never hard-linked into frozen weights or shared Hugging Face blobs. The outer
+base-file hash check remains mandatory. This was verified against the actual
+SDK tokenizer rewrite. A failed base-integrity check still quarantines the job;
+it is never converted into a successful job by changing a manifest hash.
+
+Customer campaigns enforce both their overall wall-clock budget and each
+training stage's `training_timeout_seconds`. Timeout/cancellation interrupts the
+owned child process group, preserves the job/log, and leaves partial artifacts
+outside serving. The isolated tests exercise this wait with real harmless child
+processes. The low-level research CLI should be run under an explicit supervisor
+when a wall budget is required.
+
 ## Qualification artifacts versus delivery
 
 `scripts/package_learning_source.py` excludes customer/test corpora, model
@@ -311,3 +326,23 @@ is absent. No test-trained weights or customer corpus is needed for the ordinary
 software suite. Docker creates its own installation source Git snapshot; a
 manual source installation should likewise initialise a Git checkout before
 preparing registered jobs, so their source revision is recorded.
+
+## Decision uncertainty and repaired output
+
+Rule version `semantic-decision-3` reports whether the semantic decision is
+unresolved. It does not invent a synthetic/customer origin and cannot grant
+automation. The persisted customer decision separately records review and
+release permission; an unqualified deployment stays review-only even when the
+semantic status is clear. Earlier blanket-review unit assertions were replaced
+with this separation and retained worker-level refusal tests; challenge answers
+were unchanged.
+
+A generative schema repair remains review-only in the current production policy.
+Its repair count enters both predicate/final features, and repaired paths have a
+separate calibration source stratum. Direct-output confidence is never borrowed
+for repaired output. Relaxing this rule would require a new qualified condition.
+
+Existing MLX serving requests are compared after typed default normalisation.
+Adding an empty Laya-only training field does not invalidate identical effective
+LLM settings. Changes to generation settings, checkpoint or unknown fields still
+fail closed; the original request file is not rewritten.

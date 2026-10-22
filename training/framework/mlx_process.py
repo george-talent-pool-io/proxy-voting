@@ -8,13 +8,29 @@ from pathlib import Path
 from training.framework.bundle import ROOT, write
 
 
+def same_serving_condition(previous,current):
+    """Compare effective typed settings; newly added defaults are not drift.
+
+    The saved request is not rewritten. Unknown fields and real configuration
+    changes still fail closed. This permits the new Laya-only empty task weights
+    on existing MLX seeds without weakening checkpoint/prompt identity checks.
+    """
+    from training.framework.schema import TrainSpec
+    try:
+        return (set(previous)==set(current)=={'spec','checkpoint'} and
+                previous['checkpoint']==current['checkpoint'] and
+                TrainSpec.model_validate(previous['spec']).model_dump()==
+                TrainSpec.model_validate(current['spec']).model_dump())
+    except (ValueError,TypeError):return False
+
+
 class MlxProcess:
     def __init__(self, root, spec, *, checkpoint='REGISTERED_DEFAULT'):
         self.lock = threading.RLock()
         request = Path(root) / 'mlx-serving-request.json'
         value = {'spec': spec.model_dump(), 'checkpoint': str(Path(root) / 'checkpoint') if checkpoint == 'REGISTERED_DEFAULT' else checkpoint}
         if request.exists():
-            if json.loads(request.read_text()) != value:
+            if not same_serving_condition(json.loads(request.read_text()),value):
                 raise ValueError('Existing serving configuration differs from registered checkpoint')
         else:
             write(request, value)

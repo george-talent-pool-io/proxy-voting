@@ -1,0 +1,665 @@
+{
+  "cases": 57,
+  "cases_satisfying_all_supplied_assertions": 42,
+  "assertions": 95,
+  "correct_assertions": 79,
+  "assertion_accuracy": 0.8315789473684211,
+  "case_exact_match_scope": "All supplied assertions only; not all fields unless dataset is completely labelled",
+  "fields": {
+    "classification": {
+      "n": 4,
+      "correct": 3,
+      "accuracy": 0.75,
+      "macro_f1": 0.6666666666666666,
+      "f1_by_class": {
+        "VOTABLE": 1.0,
+        "NOT_VOTABLE": 0.6666666666666666,
+        "UNCERTAIN_MANUAL_REVIEW": 0.0,
+        "VOTABLE_WITH_RESTRICTION": 1.0
+      },
+      "balanced_accuracy": 0.75,
+      "positive_label": "YES",
+      "positive_support": 0,
+      "negative_support": 0,
+      "positive_precision": null,
+      "positive_recall": null,
+      "negative_recall_specificity": null,
+      "positive_f1": null,
+      "support": {
+        "VOTABLE": 1,
+        "NOT_VOTABLE": 1,
+        "UNCERTAIN_MANUAL_REVIEW": 1,
+        "VOTABLE_WITH_RESTRICTION": 1
+      },
+      "predicted_support": {
+        "VOTABLE": 1,
+        "NOT_VOTABLE": 2,
+        "VOTABLE_WITH_RESTRICTION": 1
+      },
+      "labels": [
+        "NOT_VOTABLE",
+        "UNCERTAIN_MANUAL_REVIEW",
+        "VOTABLE",
+        "VOTABLE_WITH_RESTRICTION"
+      ],
+      "confusion_matrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "not_supported": 0
+    },
+    "votability": {
+      "n": 54,
+      "correct": 45,
+      "accuracy": 0.8333333333333334,
+      "macro_f1": 0.5607099636950383,
+      "f1_by_class": {
+        "VOTABLE": 0.9253731343283582,
+        "NOT_VOTABLE": 0.7567567567567568,
+        "UNCERTAIN": 0.0
+      },
+      "balanced_accuracy": 0.5981481481481482,
+      "positive_label": "VOTABLE",
+      "positive_support": 36,
+      "negative_support": 15,
+      "positive_precision": 1.0,
+      "positive_recall": 0.8611111111111112,
+      "negative_recall_specificity": 0.9333333333333333,
+      "positive_f1": 0.9253731343283582,
+      "support": {
+        "VOTABLE": 36,
+        "NOT_VOTABLE": 15,
+        "UNCERTAIN": 3
+      },
+      "predicted_support": {
+        "VOTABLE": 31,
+        "NOT_VOTABLE": 22,
+        "UNCERTAIN": 1
+      },
+      "labels": [
+        "NOT_VOTABLE",
+        "UNCERTAIN",
+        "VOTABLE"
+      ],
+      "confusion_matrix": [
+        [
+          14,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          31
+        ]
+      ],
+      "not_supported": 0
+    },
+    "share_blocking": {
+      "n": 11,
+      "correct": 10,
+      "accuracy": 0.9090909090909091,
+      "macro_f1": 0.8705882352941177,
+      "f1_by_class": {
+        "NO": 0.9411764705882353,
+        "YES": 0.8
+      },
+      "balanced_accuracy": 0.8333333333333333,
+      "positive_label": "YES",
+      "positive_support": 3,
+      "negative_support": 8,
+      "positive_precision": 1.0,
+      "positive_recall": 0.6666666666666666,
+      "negative_recall_specificity": 1.0,
+      "positive_f1": 0.8,
+      "support": {
+        "NO": 8,
+        "YES": 3
+      },
+      "predicted_support": {
+        "NO": 9,
+        "YES": 2
+      },
+      "labels": [
+        "NO",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          8,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "not_supported": 0
+    },
+    "poa_required": {
+      "n": 8,
+      "correct": 6,
+      "accuracy": 0.75,
+      "macro_f1": 0.7333333333333334,
+      "f1_by_class": {
+        "NO": 0.8,
+        "YES": 0.6666666666666666
+      },
+      "balanced_accuracy": 0.7333333333333334,
+      "positive_label": "YES",
+      "positive_support": 3,
+      "negative_support": 5,
+      "positive_precision": 0.6666666666666666,
+      "positive_recall": 0.6666666666666666,
+      "negative_recall_specificity": 0.8,
+      "positive_f1": 0.6666666666666666,
+      "support": {
+        "NO": 5,
+        "YES": 3
+      },
+      "predicted_support": {
+        "NO": 5,
+        "YES": 3
+      },
+      "labels": [
+        "NO",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          4,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "not_supported": 0
+    },
+    "deadline_status": {
+      "n": 14,
+      "correct": 13,
+      "accuracy": 0.9285714285714286,
+      "macro_f1": 0.9326599326599326,
+      "f1_by_class": {
+        "OPEN": 1.0,
+        "PASSED": 0.8888888888888888,
+        "UNKNOWN": 0.9090909090909091
+      },
+      "balanced_accuracy": 0.9444444444444445,
+      "positive_label": "YES",
+      "positive_support": 0,
+      "negative_support": 0,
+      "positive_precision": null,
+      "positive_recall": null,
+      "negative_recall_specificity": null,
+      "positive_f1": null,
+      "support": {
+        "OPEN": 4,
+        "PASSED": 4,
+        "UNKNOWN": 6
+      },
+      "predicted_support": {
+        "OPEN": 4,
+        "PASSED": 5,
+        "UNKNOWN": 5
+      },
+      "labels": [
+        "OPEN",
+        "PASSED",
+        "UNKNOWN"
+      ],
+      "confusion_matrix": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          1,
+          5
+        ]
+      ],
+      "not_supported": 0
+    },
+    "other_restriction": {
+      "n": 4,
+      "correct": 2,
+      "accuracy": 0.5,
+      "macro_f1": 0.6666666666666666,
+      "f1_by_class": {
+        "YES": 0.6666666666666666
+      },
+      "balanced_accuracy": 0.5,
+      "positive_label": "YES",
+      "positive_support": 4,
+      "negative_support": 0,
+      "positive_precision": 1.0,
+      "positive_recall": 0.5,
+      "negative_recall_specificity": null,
+      "positive_f1": 0.6666666666666666,
+      "support": {
+        "YES": 4
+      },
+      "predicted_support": {
+        "NO": 2,
+        "YES": 2
+      },
+      "labels": [
+        "NO",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "not_supported": 0
+    }
+  },
+  "final_status_labelled_cases": 4,
+  "customer_status_accuracy": 0.75,
+  "manual_review_count": 57,
+  "uncertain_final_status_count": 24,
+  "llm_invocations": 0,
+  "llm_invalid_outputs": 0,
+  "high_confidence_wrong_assertions": 0,
+  "median_latency_ms": 67.47741717845201,
+  "p95_latency_ms": 81.87387511134148,
+  "failures": [
+    {
+      "id": "poa",
+      "text": "Beneficial owners wishing to vote must submit a valid power of attorney.",
+      "field": "votability",
+      "expected": "VOTABLE",
+      "predicted": "NOT_VOTABLE",
+      "scores": {
+        "VOTABLE": 0.0316,
+        "NOT_VOTABLE": 0.9684,
+        "UNCERTAIN": 0.0001
+      },
+      "confidence": null,
+      "margin": 0.9368000000000001,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "poa"
+    },
+    {
+      "id": "ambiguous",
+      "text": "Please contact your custodian for information regarding possible participation.",
+      "field": "classification",
+      "expected": "UNCERTAIN_MANUAL_REVIEW",
+      "predicted": "NOT_VOTABLE",
+      "scores": {},
+      "confidence": null,
+      "margin": null,
+      "source": null,
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "ambiguous"
+    },
+    {
+      "id": "ambiguous",
+      "text": "Please contact your custodian for information regarding possible participation.",
+      "field": "votability",
+      "expected": "UNCERTAIN",
+      "predicted": "NOT_VOTABLE",
+      "scores": {
+        "VOTABLE": 0.0,
+        "NOT_VOTABLE": 1.0,
+        "UNCERTAIN": 0.0
+      },
+      "confidence": null,
+      "margin": 1.0,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "ambiguous"
+    },
+    {
+      "id": "historical-results",
+      "text": "At last year’s AGM, 97% voted in favour of the remuneration policy. These are final historical results; no vote is currently open.",
+      "field": "votability",
+      "expected": "NOT_VOTABLE",
+      "predicted": "UNCERTAIN",
+      "scores": {
+        "VOTABLE": 0.0001,
+        "NOT_VOTABLE": 0.0001,
+        "UNCERTAIN": 0.9999
+      },
+      "confidence": null,
+      "margin": 0.9998,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "historical-results"
+    },
+    {
+      "id": "legal-poa",
+      "text": "The borrower grants the security agent a power of attorney to enforce collateral. This loan agreement does not concern shareholder voting.",
+      "field": "poa_required",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 1.0,
+        "NO": 0.0,
+        "UNKNOWN": 0.0
+      },
+      "confidence": null,
+      "margin": 1.0,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "securities_lending_recall_required:SCOPED_EVIDENCE_CONFLICT_OR_CONDITION"
+      ],
+      "record_id": "legal-poa"
+    },
+    {
+      "id": "eligibility",
+      "text": "Only holders of Class A shares may vote on resolution 3 at the EGM. Class B shares have no voting entitlement.",
+      "field": "other_restriction",
+      "expected": "YES",
+      "predicted": "NO",
+      "scores": {},
+      "confidence": null,
+      "margin": null,
+      "source": null,
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "eligibility"
+    },
+    {
+      "id": "contradiction",
+      "text": "Voting instructions are accepted. Voting instructions are not accepted. Both statements apply to the same meeting and no superseding notice is identified.",
+      "field": "votability",
+      "expected": "UNCERTAIN",
+      "predicted": "NOT_VOTABLE",
+      "scores": {
+        "VOTABLE": 0.0001,
+        "NOT_VOTABLE": 0.9689,
+        "UNCERTAIN": 0.0311
+      },
+      "confidence": null,
+      "margin": 0.9378,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "contradiction"
+    },
+    {
+      "id": "same-day",
+      "text": "Vote at the AGM. Voting deadline: 16 October 2026, 17:00 Tokyo time. The reference supplies a date but no time.",
+      "field": "deadline_status",
+      "expected": "UNKNOWN",
+      "predicted": "PASSED",
+      "scores": {},
+      "confidence": null,
+      "margin": null,
+      "source": null,
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "same-day"
+    },
+    {
+      "id": "poa-waived",
+      "text": "A POA was required last year. This year that requirement has been waived for all beneficial owners voting at the AGM.",
+      "field": "votability",
+      "expected": "VOTABLE",
+      "predicted": "NOT_VOTABLE",
+      "scores": {
+        "VOTABLE": 0.0076,
+        "NOT_VOTABLE": 0.9924,
+        "UNCERTAIN": 0.0
+      },
+      "confidence": null,
+      "margin": 0.9847999999999999,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "poa-waived"
+    },
+    {
+      "id": "blocking-waived",
+      "text": "Share blocking is no longer required for the current shareholder vote.",
+      "field": "votability",
+      "expected": "VOTABLE",
+      "predicted": "NOT_VOTABLE",
+      "scores": {
+        "VOTABLE": 0.0,
+        "NOT_VOTABLE": 1.0,
+        "UNCERTAIN": 0.0
+      },
+      "confidence": null,
+      "margin": 1.0,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "blocking-waived"
+    },
+    {
+      "id": "sell-restricted",
+      "text": "Holders submitting voting instructions may not sell their shares until after the EGM.",
+      "field": "share_blocking",
+      "expected": "YES",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0,
+        "NO": 1.0,
+        "UNKNOWN": 0.0
+      },
+      "confidence": null,
+      "margin": 1.0,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "sell-restricted"
+    },
+    {
+      "id": "de-vote",
+      "text": "Aktionäre können ihre Stimmrechte auf der Hauptversammlung ausüben und Weisungen zur Stimmabgabe einreichen.",
+      "field": "votability",
+      "expected": "VOTABLE",
+      "predicted": "NOT_VOTABLE",
+      "scores": {
+        "VOTABLE": 0.0,
+        "NOT_VOTABLE": 0.9999,
+        "UNCERTAIN": 0.0
+      },
+      "confidence": null,
+      "margin": 0.9999,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "de-vote"
+    },
+    {
+      "id": "fr-poa",
+      "text": "Les bénéficiaires souhaitant voter à l’assemblée doivent fournir une procuration notariée obligatoire.",
+      "field": "poa_required",
+      "expected": "YES",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0,
+        "NO": 1.0,
+        "UNKNOWN": 0.0
+      },
+      "confidence": null,
+      "margin": 1.0,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "fr-poa"
+    },
+    {
+      "id": "de-no-block",
+      "text": "Aktionäre dürfen abstimmen. Eine Sperrung der Aktien ist nicht erforderlich.",
+      "field": "votability",
+      "expected": "VOTABLE",
+      "predicted": "NOT_VOTABLE",
+      "scores": {
+        "VOTABLE": 0.0,
+        "NOT_VOTABLE": 1.0,
+        "UNCERTAIN": 0.0
+      },
+      "confidence": null,
+      "margin": 1.0,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "de-no-block"
+    },
+    {
+      "id": "foreign-restriction",
+      "text": "Foreign shareholders may vote only after obtaining local regulatory permission; domestic holders may vote freely.",
+      "field": "other_restriction",
+      "expected": "YES",
+      "predicted": "NO",
+      "scores": {},
+      "confidence": null,
+      "margin": null,
+      "source": null,
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "foreign-restriction"
+    },
+    {
+      "id": "blank-like",
+      "text": "Meeting: TBD. Participation: TBD. Voting: TBD.",
+      "field": "votability",
+      "expected": "UNCERTAIN",
+      "predicted": "NOT_VOTABLE",
+      "scores": {
+        "VOTABLE": 0.0034,
+        "NOT_VOTABLE": 0.813,
+        "UNCERTAIN": 0.1836
+      },
+      "confidence": null,
+      "margin": 0.6294,
+      "source": "REGISTERED_LAYA_WHOLE_SCOPED_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "blank-like"
+    }
+  ],
+  "scope": "Synthetic/authored research only. No customer accuracy or automation claim."
+}

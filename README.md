@@ -13,6 +13,25 @@ This is not an OSI-approved open-source licence. Dependencies, model weights,
 datasets, examples and fonts retain their own licences. The change does not
 revoke permissions already granted for earlier MIT-licensed copies or releases.
 
+## Current reliability qualification (22 October 2026)
+
+The latest balanced specialist improved from **3,243/3,825 to 3,769/3,825**
+labelled assertions on the same AI-authored frozen test. Complete nine-field
+matches improved from **55/425 to 376/425**. The unchanged authored challenge
+improved from **71/95 to 79/95** assertions (**35/57 to 42/57** partial cases).
+These are synthetic/authored benchmarks, not customer accuracy.
+
+Actual Mac specialist inference measured **103 ms median / 155 ms p95**.
+Final-status agreement was only **311/425**, with substantial evidence-guard
+escalation. **No confidence operating point passed**; automation remains disabled.
+The study fitted specialist confidence, not a numerically qualified Laya–LLM
+hybrid. Read the [full reliability and gap report](data/reports/RELIABLE_CLASSIFIER_EVALUATION.md).
+
+No official downloadable Qwen 4 checkpoint was found in the live official
+Hugging Face catalogue; see the [release verification](data/reports/MODEL_AVAILABILITY_QWEN4.md).
+No older or community model was renamed Qwen 4. Test-trained weights, generated
+qualification corpora and private calibrators are excluded from customer delivery.
+
 ## Frozen starting checkpoints and customer learning
 
 The deployment separates frozen foundation checkpoints from customer corpora,
@@ -55,7 +74,7 @@ distinct from human/expert reviews. See the [training framework guide](training/
 and Model Lab. Building and testing this workflow does not require waiting for
 expert customer labels; establishing customer accuracy still does.
 
-Latest framework verification: **2,251 software tests, 28 browser tests and 2 opt-in real-model release tests pass**, with real official Laya and Qwen3.8-27B quantised training/save/reload/API execution qualified separately. [Read the event-learning verification](data/reports/ISO15022_EVENT_LEARNING_VERIFICATION.md) and [earlier checkpoint qualification](data/reports/QWEN_TRAINABLE_CHECKPOINT_QUALIFICATION.md). The earlier controlled experiment also recorded13 live local-model integration test passes. The controlled A–E experiment persisted **1,025 predictions** over 205 authored/synthetic records, including 497 actual local LLM invocations. The historical public baseline remains **7,683 unlabelled source-row outputs with zero failed rows**. Authored semantic quality failures remain visible; they are not software-test passes. Automatic processing remains disabled. [Read the controlled evaluation](data/reports/LAYA_LLM_ARCHITECTURE_EVALUATION.md) and [historical public-corpus verification](data/reports/VERIFICATION.md).
+Historical framework verification: **2,251 software tests, 28 browser tests and 2 opt-in real-model release tests pass**, with real official Laya and Qwen3.8-27B quantised training/save/reload/API execution qualified separately. [Read the event-learning verification](data/reports/ISO15022_EVENT_LEARNING_VERIFICATION.md) and [earlier checkpoint qualification](data/reports/QWEN_TRAINABLE_CHECKPOINT_QUALIFICATION.md). The earlier controlled experiment also recorded13 live local-model integration test passes. The controlled A–E experiment persisted **1,025 predictions** over 205 authored/synthetic records, including 497 actual local LLM invocations. The historical public baseline remains **7,683 unlabelled source-row outputs with zero failed rows**. Authored semantic quality failures remain visible; they are not software-test passes. Automatic processing remains disabled. [Read the controlled evaluation](data/reports/LAYA_LLM_ARCHITECTURE_EVALUATION.md) and [historical public-corpus verification](data/reports/VERIFICATION.md).
 
 Historical supervised research: **supplied synthetic test all-supplied-field exact match 6/100 → 100/100; unchanged semantic challenge cases satisfying supplied partial assertions 30/57 → 37/57.** The fine-tuned model still makes **12 challenge errors with policy score ≥98%**. The supplied test has known duplicate overlap and two previously exposed labels. **Automation remains disabled; no customer accuracy claim is supported.** See [the complete study](data/reports/LAYA_TRAINING_EVALUATION.md) and [every remaining challenge failure](data/reports/LAYA_FINETUNED_CHALLENGE_ERRORS.md).
 
@@ -275,7 +294,7 @@ First inspect the source schema and document the record unit. Do not infer colum
 
 It demonstrates a local non-generative Laya integration, a usable operations interface, reproducible inference records, review revisions, measured execution, and a framework for testing the central hypothesis against verified independent data. It also exposes zero-shot errors rather than manufacturing confidence or labels.
 
-It does **not** establish voting accuracy without domain-expert labels, a safe automation percentage without validation support, comprehensive global market/language coverage, robust deadline reasoning, or production readiness. It does not claim 15,022 notices, fabricate a seven-class probability distribution, or report a publisher extraction score as voting confidence. Exact shingle checks cannot prove all semantic leakage absent. It lacks enterprise authentication/RBAC, durable distributed job scheduling, adjudication/blinded labelling, full regulatory controls, operational monitoring and disaster recovery. Bind it to localhost for demonstration, as the default scripts do.
+It does **not** establish voting accuracy without domain-expert labels, a safe automation percentage without validation support, comprehensive global market/language coverage, robust deadline reasoning, or production readiness. It does not claim 15,022 notices, fabricate a seven-class probability distribution, or report a publisher extraction score as voting confidence. Exact shingle checks cannot prove all semantic leakage absent. The research server remains a localhost demonstrator. The separate customer service adds named identities/roles, durable single-worker jobs, blind protected review, audit/suspension and backup/restore controls. Distributed scheduling, target-platform model qualification, customer acceptance and regulatory assurance remain separate deployment responsibilities. See the client deployment guide; do not expose the research server as the customer service.
 
 Legacy runs created before explicit question/option ordering are retained for audit and superseded by the ordered baseline. The application refuses to reproduce those legacy configurations: JSON key sorting changed option order without changing the original hash. Regression tests now check this failure mode. The failed original reproduction is preserved alongside the successful ordered reproduction.
 

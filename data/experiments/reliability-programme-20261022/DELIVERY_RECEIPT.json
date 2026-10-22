@@ -1,0 +1,26 @@
+{
+  "source_archive": "artifacts/voting-framework-reliability-20261022.tar.gz",
+  "sha256": "4a0386d1f0993ac92b9e993390dea74b5a5e6fa5174228590a6de408cce0c789",
+  "files": 386,
+  "linux_service": {
+    "image": "sha256:6a5031915b058489f1cf0ecbae72cf53bbfb2a5e340ee75bb3a3e7ed86d8a584",
+    "platform": "linux/arm64",
+    "named_auth": true,
+    "nonroot": true,
+    "read_only_root": true,
+    "capabilities_dropped": true,
+    "restart_persistence": true,
+    "source_imported": 1,
+    "ready": true,
+    "automation_enabled": false,
+    "model_execution": false,
+    "volume": "voting-service-check-51656-state",
+    "test_transport": "Loopback HTTP only; production Compose adds supplied-certificate TLS"
+  },
+  "source_verified_after_checks": true,
+  "running_experiments": false,
+  "automation_enabled": false,
+  "reliable_classifier_goal_achieved": false,
+  "qualified_hybrid_confidence": false,
+  "report": "data/reports/RELIABLE_CLASSIFIER_EVALUATION.md"
+}

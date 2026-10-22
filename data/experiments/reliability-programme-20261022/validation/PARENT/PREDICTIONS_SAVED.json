@@ -1,0 +1,23 @@
+{
+  "count": 374,
+  "sha256": "cabbe8f7417d87e783bd1f7066ab644984c36c226c5995421beb37548e011ad5",
+  "answers_opened": false,
+  "elapsed_seconds": 44.554426541086286,
+  "model_load_seconds": 4.785606750287116,
+  "latency_scope": "Request inference; model initialisation measured separately; no external queue/network",
+  "notices_per_second_including_load_and_persistence": 8.394227448073925,
+  "sampled_resources": {
+    "max_process_rss_bytes": 1694744576,
+    "max_mps_driver_allocated_bytes": 2768125952,
+    "scope": "After-notice samples, not OS-wide peak unified memory"
+  },
+  "external_model_workloads_observed": [],
+  "hardware_isolation": "No known external model worker observed; general-purpose desktop, not an isolated benchmark host",
+  "latency_seconds": {
+    "median": 0.07566083362326026,
+    "mean": 0.08631829423879717,
+    "min": 0.057691500056535006,
+    "max": 0.18863304099068046,
+    "p95": 0.13301541609689593
+  }
+}
