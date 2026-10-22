@@ -1,0 +1,20 @@
+{
+  "name": "PRE_BALANCED_VOTABILITY_TRAINING",
+  "files": {
+    "deploy/foundation-checkpoints.json": "3269a5b7cd4ffa12a2bfeeab9c9e656f850e48385f62527ef2001454e16b29c2",
+    "tests/fixtures/semantic.json": "0e2f5d991a33deed25f8e9a33682185071c5ff35afd2df9179c1f8565dd17649",
+    "data/training-workspace/seeds/framework-domain-upgrade-20261022-selected/seed.json": "7fd238befc7d040429224a86b3cc9caed1e954641494e5b5cc847b9edc1c397a",
+    "data/experiments/framework-domain-upgrade-20261022-v2/CHALLENGE_RESULT.json": "c559f07c453daf47de317388653598664d6b55c942df1a6cea0f5cbccb818f5d",
+    "data/experiments/framework-domain-upgrade-20261022-v2/SELECTION_FREEZE.json": "c771a4b66b8f5d15fd1d1d2433137e7c89706010394d1d8691c42b113d3601b6",
+    "artifacts/voting-framework-reviewed-20261022.tar.gz": "a80a60fb2085af9a2d18ea9c4ea863232056299b5b4c78b4e92e09d3610fb386"
+  },
+  "prior_candidate_authored_assertions": {
+    "correct": 71,
+    "denominator": 95,
+    "partial_cases": 35,
+    "cases": 57
+  },
+  "not_customer_accuracy": true,
+  "automation_enabled": false,
+  "prior_source_archive": "artifacts/voting-framework-reviewed-20261022.tar.gz"
+}

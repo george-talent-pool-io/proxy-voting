@@ -1,0 +1,35 @@
+{
+  "corpus_manifest_sha256": "31c59a17fab286da0e7c5c4b5c1d8bfa32b166cf5ac950697adb4895307af92a",
+  "counts": {
+    "TRAIN": {
+      "records": 836,
+      "unique_source_hashes": 624,
+      "groups": 599
+    },
+    "VALIDATION": {
+      "records": 374,
+      "unique_source_hashes": 289,
+      "groups": 279
+    },
+    "LAYA_STAGE": {
+      "records": 726,
+      "unique_source_hashes": 600,
+      "groups": 582
+    },
+    "CASCADE_FINAL": {
+      "records": 839,
+      "unique_source_hashes": 628,
+      "groups": 605
+    },
+    "FROZEN_TEST": {
+      "records": 425,
+      "unique_source_hashes": 328,
+      "groups": 318
+    }
+  },
+  "group_role_leakage": 0,
+  "exact_hash_role_leakage": 0,
+  "unique_source_hashes": 2469,
+  "records": 3200,
+  "scope": "Composition-controlled AI study; repeated text atoms and exact duplicates disclosed. Record counts are not independent text counts."
+}

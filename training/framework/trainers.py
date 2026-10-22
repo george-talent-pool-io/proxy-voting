@@ -172,12 +172,38 @@ def encode_chat(tokenizer, messages, max_length):
     return {'input_ids': full, 'labels': [-100] * len(prompt) + full[len(prompt):]}
 
 
+def laya_training_input(bundle, output, spec):
+    """Explicit TRAIN-only task weighting; never inflate unique-example counts."""
+    rows=[json.loads(line) for line in (Path(bundle)/'laya-train.jsonl').read_text().splitlines()]
+    source=Path(bundle)/'laya-train.jsonl'
+    budget={'unique_training_notices':len(rows),'source_sha256':sha(source),
+            'multipliers':spec.laya_task_multipliers,'role':'TRAIN',
+            'validation_resampled':False,'method':'Repeat official SDK question items; not new independent notices'}
+    if not spec.laya_task_multipliers:
+        return source,{**budget,'effective_question_items':sum(len(r['questions']) for r in rows)}
+    from training.framework.bundle import jsonl
+    effective=[]
+    for row in rows:
+        effective.append(row)
+        for key,multiplier in sorted(spec.laya_task_multipliers.items()):
+            if key not in row['questions'] or key not in row['expected']:raise ValueError('Weighted task absent from training row')
+            effective.extend({'state':row['state'],'questions':{key:row['questions'][key]},
+                              'expected':{key:row['expected'][key]}} for _ in range(multiplier-1))
+    target=Path(output).parent/'laya-effective-train.jsonl'
+    jsonl(target,effective)
+    receipt={**budget,'effective_question_items':sum(len(r['questions']) for r in effective),
+             'derived_sha256':sha(target)}
+    write(Path(output).parent/'laya-training-sampling.json',receipt)
+    return target,receipt
+
+
 def train_laya(bundle, output, spec):
     from laya.train import TrainConfig, finetune
     offline()
     if spec.max_steps is not None:
         raise ValueError('Laya SDK backend uses epochs; max_steps is not supported')
     validate_laya_encoding(bundle, spec)
+    training_input,sampling=laya_training_input(bundle,output,spec)
     config = TrainConfig(epochs=spec.epochs, seed=spec.seed, encoder_lr=spec.encoder_learning_rate or spec.learning_rate,
                          head_lr=spec.learning_rate, micro_batch=spec.batch_size,
                          grad_accum=spec.gradient_accumulation, max_len=spec.max_length,
@@ -190,7 +216,7 @@ def train_laya(bundle, output, spec):
     import torch
     if spec.mps_memory_fraction is not None:torch.mps.set_per_process_memory_fraction(spec.mps_memory_fraction)
     try:
-        result = finetune(str(Path(bundle) / 'laya-train.jsonl'), spec.model_path,
+        result = finetune(str(training_input), spec.model_path,
                           str(output), config, device=spec.device)
     finally:
         if spec.mps_memory_fraction is not None:torch.mps.set_per_process_memory_fraction(1.)
@@ -202,7 +228,7 @@ def train_laya(bundle, output, spec):
         'deadline_status': 'DETERMINISTIC_ONLY', 'automation_enabled': False})
     probe = json.loads((Path(bundle) / 'laya-validation.jsonl').read_text().splitlines()[0])
     parity = validate_laya_reload(output, probe, spec)
-    return {'backend': 'LAYA_SDK', 'training': result,
+    return {'backend': 'LAYA_SDK', 'training': result, 'training_sampling':sampling,
             'validation_kind': ('Official SDK validation diagnostics; separate semantic evaluation required' if spec.laya_sdk_validation else
                                 'SDK duplicate validation disabled; independent framework validation REQUIRED before sealing'),
             'reload_parity': parity}

@@ -1,0 +1,5335 @@
+{
+  "retrieved_at": "2026-10-22T13:20:20.163838+00:00",
+  "url": "https://huggingface.co/api/models?search=Qwen4&limit=80&full=true",
+  "response": [
+    {
+      "_id": "68f8a34ed482967f115d452a",
+      "id": "MedInjection/QWEN-4B-NAT-TRAD",
+      "author": "MedInjection",
+      "gated": false,
+      "lastModified": "2026-03-13T14:05:38.000Z",
+      "likes": 1,
+      "trendingScore": 1,
+      "private": false,
+      "sha": "bf6252d71c8982b97fe77f3cb38b02b2abc5e53b",
+      "downloads": 15,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "medical",
+        "conversational",
+        "fr",
+        "en",
+        "dataset:MedInjection-FR/Native",
+        "dataset:MedInjection-FR/Translated",
+        "arxiv:2603.06905",
+        "base_model:Qwen/Qwen3-4B-Instruct-2507",
+        "base_model:finetune:Qwen/Qwen3-4B-Instruct-2507",
+        "license:mit",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-10-22T09:26:38.000Z",
+      "modelId": "MedInjection/QWEN-4B-NAT-TRAD",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "chat_template.jinja"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "65df0d231ba3300ccfb445bb",
+      "id": "Defetya/qwen-4B-jax",
+      "author": "Defetya",
+      "gated": false,
+      "lastModified": "2024-02-28T10:38:27.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "72f6dd04c20cd64463b6c8cf0bdd4cdfc3e51832",
+      "downloads": 0,
+      "tags": [
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "createdAt": "2024-02-28T10:38:27.000Z",
+      "modelId": "Defetya/qwen-4B-jax",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        }
+      ]
+    },
+    {
+      "_id": "65e42bcd7a1d021d6fe1527e",
+      "id": "yyjjtt/qwen-4bit",
+      "author": "yyjjtt",
+      "gated": false,
+      "lastModified": "2024-03-03T08:27:24.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "23540dbc40a01ab5085bfe1c52299cb482119c65",
+      "downloads": 16,
+      "tags": [
+        "transformers",
+        "qwen",
+        "text-generation",
+        "custom_code",
+        "4-bit",
+        "gptq",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2024-03-03T07:50:37.000Z",
+      "modelId": "yyjjtt/qwen-4bit",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "gptq_model-4bit-128g.safetensors"
+        },
+        {
+          "rfilename": "quantize_config.json"
+        }
+      ]
+    },
+    {
+      "_id": "65e445252b28b798a0926081",
+      "id": "StatPan/qwen4b-sft",
+      "author": "StatPan",
+      "gated": false,
+      "lastModified": "2024-03-03T09:42:57.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "c9f25638da4759bc563e0da9139ee52c6359acf8",
+      "downloads": 22,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen2",
+        "text-generation",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2024-03-03T09:38:45.000Z",
+      "modelId": "StatPan/qwen4b-sft",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "661c329b8921f03a9d915458",
+      "id": "Defetya/qwen-4B-saiga",
+      "author": "Defetya",
+      "gated": false,
+      "lastModified": "2024-04-21T00:24:06.000Z",
+      "likes": 2,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "65094820f25daea6b7e5d75d20f8e5ad5cf22550",
+      "downloads": 26,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen2",
+        "text-generation",
+        "Russian",
+        "conversational",
+        "license:apache-2.0",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2024-04-14T19:46:35.000Z",
+      "modelId": "Defetya/qwen-4B-saiga",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "model-00001-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "661d60499e04cdf18692723e",
+      "id": "Sashkanik13/qwen-4b-saiga-gguf",
+      "author": "Sashkanik13",
+      "gated": false,
+      "lastModified": "2024-04-15T17:37:01.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "ea82f3756f5a7b6e0619521cf7b177c3a306e5fe",
+      "downloads": 58,
+      "tags": [
+        "gguf",
+        "ru",
+        "endpoints_compatible",
+        "region:us",
+        "conversational"
+      ],
+      "createdAt": "2024-04-15T17:13:45.000Z",
+      "modelId": "Sashkanik13/qwen-4b-saiga-gguf",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "ggml-model-q2.gguf"
+        }
+      ]
+    },
+    {
+      "_id": "662baaa0b7d133bc3009e97f",
+      "id": "Defetya/qwen-4B-glue",
+      "author": "Defetya",
+      "gated": false,
+      "lastModified": "2024-04-27T02:30:23.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "3762c36c66fa02aab418d3fe50290a0d5f68193f",
+      "downloads": 23,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen2",
+        "text-generation",
+        "conversational",
+        "license:apache-2.0",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2024-04-26T13:22:40.000Z",
+      "modelId": "Defetya/qwen-4B-glue",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "DaNetQA.jsonl"
+        },
+        {
+          "rfilename": "LiDiRus.jsonl"
+        },
+        {
+          "rfilename": "MuSeRC.jsonl"
+        },
+        {
+          "rfilename": "PARus.jsonl"
+        },
+        {
+          "rfilename": "RCB.jsonl"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "RUSSE.jsonl"
+        },
+        {
+          "rfilename": "RWSD.jsonl"
+        },
+        {
+          "rfilename": "RuCoS.jsonl"
+        },
+        {
+          "rfilename": "TERRa.jsonl"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6634b51607e55d66ce90fc6e",
+      "id": "bachtruoq/fine-tune-qwen4b",
+      "author": "bachtruoq",
+      "gated": false,
+      "lastModified": "2024-05-03T09:59:47.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "4fe634a11212c9b521064eb84f070b17b783c734",
+      "downloads": 22,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen2",
+        "text-generation",
+        "conversational",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2024-05-03T09:57:42.000Z",
+      "modelId": "bachtruoq/fine-tune-qwen4b",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00009.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00009.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00009.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00009.safetensors"
+        },
+        {
+          "rfilename": "model-00005-of-00009.safetensors"
+        },
+        {
+          "rfilename": "model-00006-of-00009.safetensors"
+        },
+        {
+          "rfilename": "model-00007-of-00009.safetensors"
+        },
+        {
+          "rfilename": "model-00008-of-00009.safetensors"
+        },
+        {
+          "rfilename": "model-00009-of-00009.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "663974bf2762b5d25263ff8d",
+      "id": "johnnyllm/qwen4b-lora",
+      "author": "johnnyllm",
+      "gated": false,
+      "lastModified": "2024-05-07T00:29:02.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "1d732750e986e37a29eb12940a6a7a380fcabace",
+      "downloads": 17,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen2",
+        "text-generation",
+        "llama-factory",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2024-05-07T00:24:31.000Z",
+      "modelId": "johnnyllm/qwen4b-lora",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "666023cb4e4648756e67e517",
+      "id": "kalo-team/qwen-4b-10k-WSD-CEdiff",
+      "author": "kalo-team",
+      "gated": false,
+      "lastModified": "2024-06-05T08:40:47.000Z",
+      "likes": 2,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "621ce1dd75d045bb4e7fb75dfec310df5d8d7ea4",
+      "downloads": 25,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen2",
+        "text-generation",
+        "conversational",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2024-06-05T08:37:31.000Z",
+      "modelId": "kalo-team/qwen-4b-10k-WSD-CEdiff",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "667a363f0761fb1593e256f4",
+      "id": "jfranklin-foundry/qwen-4b-flock-1719285373",
+      "author": "jfranklin-foundry",
+      "gated": false,
+      "lastModified": "2024-06-25T03:17:45.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "865d88008efa42de0b669586db5a421769d85f98",
+      "downloads": 16,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen2",
+        "text-generation",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2024-06-25T03:15:11.000Z",
+      "modelId": "jfranklin-foundry/qwen-4b-flock-1719285373",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "667d73cfddca7a52337b1c5b",
+      "id": "jfranklin-foundry/qwen-4b-flock-1719497736",
+      "author": "jfranklin-foundry",
+      "gated": false,
+      "lastModified": "2024-06-27T14:17:06.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "9bbcc11b962a329cd01985f593de46457c9d48c5",
+      "downloads": 11,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen2",
+        "text-generation",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2024-06-27T14:14:39.000Z",
+      "modelId": "jfranklin-foundry/qwen-4b-flock-1719497736",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "667e6da67872bf8b1cf78658",
+      "id": "jfranklin-foundry/qwen-4b-flock-1719561695",
+      "author": "jfranklin-foundry",
+      "gated": false,
+      "lastModified": "2024-06-28T08:02:55.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "f7e2b98b8d75264938d12575f9e3ea7cc0e29e62",
+      "downloads": 11,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen2",
+        "text-generation",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2024-06-28T08:00:38.000Z",
+      "modelId": "jfranklin-foundry/qwen-4b-flock-1719561695",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "667e7a66b8aa70e39bc37eaa",
+      "id": "jfranklin-foundry/qwen-4b-flock-1719564964",
+      "author": "jfranklin-foundry",
+      "gated": false,
+      "lastModified": "2024-06-28T08:57:16.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "b4c09a2eb1f24b3d60948342e997f76c43af5626",
+      "downloads": 7,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen2",
+        "text-generation",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2024-06-28T08:55:02.000Z",
+      "modelId": "jfranklin-foundry/qwen-4b-flock-1719564964",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6682cde95f3099b62d886e9b",
+      "id": "jfranklin-foundry/qwen-4b-flock-1719848483",
+      "author": "jfranklin-foundry",
+      "gated": false,
+      "lastModified": "2024-07-01T15:42:54.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "45855dbf4acb86f86c83eafd2f5180c975eda004",
+      "downloads": 8,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen2",
+        "text-generation",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2024-07-01T15:40:25.000Z",
+      "modelId": "jfranklin-foundry/qwen-4b-flock-1719848483",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6682e75fe365c0f66635b00e",
+      "id": "jfranklin-foundry/qwen-4b-flock-1719855002",
+      "author": "jfranklin-foundry",
+      "gated": false,
+      "lastModified": "2024-07-01T17:31:45.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "7e6153cc0e1b4076a734848b5ebb414a3d1f53dc",
+      "downloads": 5,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen2",
+        "text-generation",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2024-07-01T17:29:03.000Z",
+      "modelId": "jfranklin-foundry/qwen-4b-flock-1719855002",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "66ee941c9cbe3098589a06fe",
+      "id": "terry69/qwen_4_downstream",
+      "author": "terry69",
+      "gated": false,
+      "lastModified": "2024-09-21T12:13:17.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "c21310d1513f3f14a4a4b3e857defb2945e52cdb",
+      "downloads": 4,
+      "tags": [
+        "peft",
+        "tensorboard",
+        "safetensors",
+        "qwen2",
+        "alignment-handbook",
+        "trl",
+        "sft",
+        "generated_from_trainer",
+        "dataset:preference-data",
+        "base_model:Qwen/Qwen1.5-4B",
+        "base_model:adapter:Qwen/Qwen1.5-4B",
+        "license:other",
+        "region:us"
+      ],
+      "library_name": "peft",
+      "createdAt": "2024-09-21T09:38:36.000Z",
+      "modelId": "terry69/qwen_4_downstream",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "adapter_config.json"
+        },
+        {
+          "rfilename": "adapter_model.safetensors"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "all_results.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "eval_results.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "runs/Sep21_09-30-33_COE-CS-sv004/events.out.tfevents.1726911520.COE-CS-sv004.1427636.0"
+        },
+        {
+          "rfilename": "runs/Sep21_09-30-33_COE-CS-sv004/events.out.tfevents.1726920781.COE-CS-sv004.1427636.1"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "train_results.json"
+        },
+        {
+          "rfilename": "trainer_state.json"
+        },
+        {
+          "rfilename": "training_args.bin"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "66faf7f280bb3103f99aff94",
+      "id": "terry69/qwen_4.0_feedback_dirty",
+      "author": "terry69",
+      "gated": false,
+      "lastModified": "2024-09-30T19:11:46.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "714f3190d9ff23892059e4b59192aab04d9869f7",
+      "downloads": 0,
+      "tags": [
+        "region:us"
+      ],
+      "createdAt": "2024-09-30T19:11:46.000Z",
+      "modelId": "terry69/qwen_4.0_feedback_dirty",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        }
+      ]
+    },
+    {
+      "_id": "67231bd65af44ac97fd3fda4",
+      "id": "ShakirAhmed0/qwen4",
+      "author": "ShakirAhmed0",
+      "gated": false,
+      "lastModified": "2024-10-31T05:56:29.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "a89282c7221843dfcddd2fcdd57518aadf3a402d",
+      "downloads": 7,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen2",
+        "text-generation",
+        "text-generation-inference",
+        "unsloth",
+        "trl",
+        "en",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "4-bit",
+        "bitsandbytes",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2024-10-31T05:55:34.000Z",
+      "modelId": "ShakirAhmed0/qwen4",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "67231e313bb42edacaf9a207",
+      "id": "ShakirAhmed0/qwen_4",
+      "author": "ShakirAhmed0",
+      "gated": false,
+      "lastModified": "2024-10-31T06:06:34.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "f9cf839fa756ca1196cf58f3b6f2447dbcd98918",
+      "downloads": 11,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen2",
+        "text-generation",
+        "text-generation-inference",
+        "unsloth",
+        "trl",
+        "en",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "8-bit",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2024-10-31T06:05:37.000Z",
+      "modelId": "ShakirAhmed0/qwen_4",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "678c4b7eda686d5964065644",
+      "id": "mradermacher/qwen-4B-saiga-GGUF",
+      "author": "mradermacher",
+      "gated": false,
+      "lastModified": "2025-01-19T01:01:20.000Z",
+      "likes": 1,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "ec4b6d39571e5faecb394e3a69b190ebe0340873",
+      "downloads": 256,
+      "tags": [
+        "transformers",
+        "gguf",
+        "Russian",
+        "en",
+        "base_model:Defetya/qwen-4B-saiga",
+        "base_model:quantized:Defetya/qwen-4B-saiga",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us",
+        "conversational"
+      ],
+      "library_name": "transformers",
+      "createdAt": "2025-01-19T00:46:54.000Z",
+      "modelId": "mradermacher/qwen-4B-saiga-GGUF",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "qwen-4B-saiga.IQ4_XS.gguf"
+        },
+        {
+          "rfilename": "qwen-4B-saiga.Q2_K.gguf"
+        },
+        {
+          "rfilename": "qwen-4B-saiga.Q3_K_L.gguf"
+        },
+        {
+          "rfilename": "qwen-4B-saiga.Q3_K_M.gguf"
+        },
+        {
+          "rfilename": "qwen-4B-saiga.Q3_K_S.gguf"
+        },
+        {
+          "rfilename": "qwen-4B-saiga.Q4_K_M.gguf"
+        },
+        {
+          "rfilename": "qwen-4B-saiga.Q4_K_S.gguf"
+        },
+        {
+          "rfilename": "qwen-4B-saiga.Q5_K_M.gguf"
+        },
+        {
+          "rfilename": "qwen-4B-saiga.Q5_K_S.gguf"
+        },
+        {
+          "rfilename": "qwen-4B-saiga.Q6_K.gguf"
+        },
+        {
+          "rfilename": "qwen-4B-saiga.Q8_0.gguf"
+        },
+        {
+          "rfilename": "qwen-4B-saiga.f16.gguf"
+        }
+      ]
+    },
+    {
+      "_id": "67c1c4cd786adf82b78d69ca",
+      "id": "Henga/car_control_ac_qwen4",
+      "author": "Henga",
+      "gated": false,
+      "lastModified": "2025-02-28T14:15:18.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "3c54a136c5eb96716d7a74867f818325130c0068",
+      "downloads": 0,
+      "tags": [
+        "transformers",
+        "tensorboard",
+        "safetensors",
+        "generated_from_trainer",
+        "trl",
+        "sft",
+        "base_model:Qwen/Qwen2.5-0.5B-Instruct",
+        "base_model:finetune:Qwen/Qwen2.5-0.5B-Instruct",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "library_name": "transformers",
+      "createdAt": "2025-02-28T14:14:37.000Z",
+      "modelId": "Henga/car_control_ac_qwen4",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "adapter_config.json"
+        },
+        {
+          "rfilename": "adapter_model.safetensors"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "runs/Feb28_14-13-51_d4ea1da0971d/events.out.tfevents.1740752040.d4ea1da0971d.48098.0"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "training_args.bin"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "67caa617fd791db6ca0a464f",
+      "id": "PhenomenalSagar/qwen4b_5k",
+      "author": "PhenomenalSagar",
+      "gated": false,
+      "lastModified": "2025-03-07T14:12:54.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "77e9d52dfbee7b6914a5a6f2713d0c24943018d4",
+      "downloads": 3,
+      "tags": [
+        "pytorch",
+        "qwen2",
+        "unsloth",
+        "trl",
+        "sft",
+        "license:mit",
+        "region:us"
+      ],
+      "createdAt": "2025-03-07T07:53:59.000Z",
+      "modelId": "PhenomenalSagar/qwen4b_5k",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "pytorch_model-00001-of-00002.bin"
+        },
+        {
+          "rfilename": "pytorch_model-00002-of-00002.bin"
+        },
+        {
+          "rfilename": "pytorch_model.bin.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "67cac5d8c6eb2f4ff8783e6c",
+      "id": "PhenomenalSagar/qwen4b-1k-colab",
+      "author": "PhenomenalSagar",
+      "gated": false,
+      "lastModified": "2025-03-07T10:09:28.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "b71f0d6dfc062101d40dd2320b7d1b00cff5785f",
+      "downloads": 0,
+      "tags": [
+        "license:mit",
+        "region:us"
+      ],
+      "createdAt": "2025-03-07T10:09:28.000Z",
+      "modelId": "PhenomenalSagar/qwen4b-1k-colab",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        }
+      ]
+    },
+    {
+      "_id": "67cae9e9d6bb091d3bd86040",
+      "id": "PhenomenalSagar/qwen_4b_5k_colab",
+      "author": "PhenomenalSagar",
+      "gated": false,
+      "lastModified": "2025-03-07T14:21:37.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "7ddd5e6693b65ed3bb0eb085e15719b49fce3771",
+      "downloads": 8,
+      "tags": [
+        "transformers",
+        "pytorch",
+        "qwen2",
+        "text-generation",
+        "unsloth",
+        "trl",
+        "sft",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-03-07T12:43:21.000Z",
+      "modelId": "PhenomenalSagar/qwen_4b_5k_colab",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "pytorch_model-00001-of-00002.bin"
+        },
+        {
+          "rfilename": "pytorch_model-00002-of-00002.bin"
+        },
+        {
+          "rfilename": "pytorch_model.bin.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "67cf7b0bb17ca92d24cfaded",
+      "id": "George-API/qwen4bit",
+      "author": "George-API",
+      "gated": false,
+      "lastModified": "2025-03-10T23:51:39.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "2e87761da695b40f22b5626c4d1be224444931c0",
+      "downloads": 0,
+      "tags": [
+        "region:us"
+      ],
+      "createdAt": "2025-03-10T23:51:39.000Z",
+      "modelId": "George-API/qwen4bit",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "app.py"
+        }
+      ]
+    },
+    {
+      "_id": "67e782b1a694ef0ab74d2efc",
+      "id": "aarush2410/qwen4bit",
+      "author": "aarush2410",
+      "gated": false,
+      "lastModified": "2025-03-29T05:18:41.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "fe6ce51c9c485703602e0faf7606b580b1317deb",
+      "downloads": 0,
+      "tags": [
+        "region:us"
+      ],
+      "createdAt": "2025-03-29T05:18:41.000Z",
+      "modelId": "aarush2410/qwen4bit",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        }
+      ]
+    },
+    {
+      "_id": "67eca8fc9315264d7f547ba8",
+      "id": "Sid068/qwen-4bit-FORIRCHAT-v2",
+      "author": "Sid068",
+      "gated": false,
+      "lastModified": "2025-04-02T03:09:27.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "2a0957fbd5d5515dab51b67fe6f8b65d009259e7",
+      "downloads": 5,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen2_vl",
+        "feature-extraction",
+        "arxiv:1910.09700",
+        "endpoints_compatible",
+        "4-bit",
+        "bitsandbytes",
+        "region:us"
+      ],
+      "pipeline_tag": "feature-extraction",
+      "library_name": "transformers",
+      "createdAt": "2025-04-02T03:03:24.000Z",
+      "modelId": "Sid068/qwen-4bit-FORIRCHAT-v2",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "chat_template.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model.safetensors"
+        },
+        {
+          "rfilename": "preprocessor_config.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6800f4ee69bc59d53d09455c",
+      "id": "semran1/qwen42.6all",
+      "author": "semran1",
+      "gated": false,
+      "lastModified": "2025-04-17T12:52:00.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "590c2c0eab38124080aaa311ccf2ef85f1bc8a8a",
+      "downloads": 3,
+      "tags": [
+        "safetensors",
+        "qwen2",
+        "region:us"
+      ],
+      "createdAt": "2025-04-17T12:32:46.000Z",
+      "modelId": "semran1/qwen42.6all",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model.safetensors"
+        },
+        {
+          "rfilename": "optimizer.pt"
+        },
+        {
+          "rfilename": "rng_state.pth"
+        },
+        {
+          "rfilename": "scheduler.pt"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "trainer_state.json"
+        },
+        {
+          "rfilename": "training_args.bin"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6800f97db4d9835c1ddf6568",
+      "id": "semran1/qwen42.6all2",
+      "author": "semran1",
+      "gated": false,
+      "lastModified": "2025-04-17T12:53:34.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "6183609f022a64b97835307f355fb0654aaaad93",
+      "downloads": 4,
+      "tags": [
+        "safetensors",
+        "qwen2",
+        "region:us"
+      ],
+      "createdAt": "2025-04-17T12:52:13.000Z",
+      "modelId": "semran1/qwen42.6all2",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model.safetensors"
+        },
+        {
+          "rfilename": "optimizer.pt"
+        },
+        {
+          "rfilename": "rng_state.pth"
+        },
+        {
+          "rfilename": "scheduler.pt"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "trainer_state.json"
+        },
+        {
+          "rfilename": "training_args.bin"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6817a098b7f467f21a73785c",
+      "id": "xzc2002/qwen4b-notam-lora",
+      "author": "xzc2002",
+      "gated": false,
+      "lastModified": "2025-05-04T17:15:11.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "2b65fce7c007395c462d813a33a61ec9f4be41b1",
+      "downloads": 0,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "arxiv:1910.09700",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "library_name": "transformers",
+      "createdAt": "2025-05-04T17:15:04.000Z",
+      "modelId": "xzc2002/qwen4b-notam-lora",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "adapter_config.json"
+        },
+        {
+          "rfilename": "adapter_model.safetensors"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6819587764ae18f1b6f65baf",
+      "id": "connorblack/qwen-4b-dev-merged-16bit",
+      "author": "connorblack",
+      "gated": "manual",
+      "lastModified": "2025-05-06T00:33:55.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "c5ab712603061cb27cf12398eb58e2b8e967305b",
+      "downloads": 0,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "text-generation-inference",
+        "unsloth",
+        "trl",
+        "conversational",
+        "en",
+        "base_model:unsloth/Qwen3-4B-unsloth-bnb-4bit",
+        "base_model:finetune:unsloth/Qwen3-4B-unsloth-bnb-4bit",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-06T00:31:51.000Z",
+      "modelId": "connorblack/qwen-4b-dev-merged-16bit",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "68195b46adf49aa13354fbca",
+      "id": "connorblack/qwen-4b-dev-gguf",
+      "author": "connorblack",
+      "gated": false,
+      "lastModified": "2025-05-06T00:45:54.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "965f2b9d8a8bbcbbf7a4cf218fe6a2a46c1ca395",
+      "downloads": 116,
+      "tags": [
+        "transformers",
+        "gguf",
+        "qwen3",
+        "text-generation-inference",
+        "unsloth",
+        "en",
+        "base_model:unsloth/Qwen3-4B-unsloth-bnb-4bit",
+        "base_model:quantized:unsloth/Qwen3-4B-unsloth-bnb-4bit",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us",
+        "conversational"
+      ],
+      "library_name": "transformers",
+      "createdAt": "2025-05-06T00:43:50.000Z",
+      "modelId": "connorblack/qwen-4b-dev-gguf",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "unsloth.Q4_K_M.gguf"
+        },
+        {
+          "rfilename": "unsloth.Q5_K_M.gguf"
+        },
+        {
+          "rfilename": "unsloth.Q8_0.gguf"
+        }
+      ]
+    },
+    {
+      "_id": "6819eb8546a0963c2eaacce5",
+      "id": "Croaker3/Qwen-4B-Medical",
+      "author": "Croaker3",
+      "gated": false,
+      "lastModified": "2025-05-06T12:57:22.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "7b481bf4c3078887b8961b0d2026355118c172ff",
+      "downloads": 148,
+      "tags": [
+        "gguf",
+        "qwen3",
+        "endpoints_compatible",
+        "region:us",
+        "conversational"
+      ],
+      "createdAt": "2025-05-06T10:59:17.000Z",
+      "modelId": "Croaker3/Qwen-4B-Medical",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "unsloth.Q4_K_M.gguf"
+        }
+      ]
+    },
+    {
+      "_id": "681cc55943717ff38ef32d7d",
+      "id": "mradermacher/CataractCARE-Qwen4B-GGUF",
+      "author": "mradermacher",
+      "gated": false,
+      "lastModified": "2025-07-11T03:15:54.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "eb6b39cbcc84feb2b29ff8e2fd4fcaf75f47cb17",
+      "downloads": 58,
+      "tags": [
+        "transformers",
+        "gguf",
+        "llama-factory",
+        "lora",
+        "generated_from_trainer",
+        "en",
+        "base_model:my2000cup/Qwen-CSP",
+        "base_model:adapter:my2000cup/Qwen-CSP",
+        "license:other",
+        "endpoints_compatible",
+        "region:us",
+        "conversational"
+      ],
+      "library_name": "transformers",
+      "createdAt": "2025-05-08T14:53:13.000Z",
+      "modelId": "mradermacher/CataractCARE-Qwen4B-GGUF",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "CataractCARE-Qwen4B.IQ4_XS.gguf"
+        },
+        {
+          "rfilename": "CataractCARE-Qwen4B.Q2_K.gguf"
+        },
+        {
+          "rfilename": "CataractCARE-Qwen4B.Q3_K_L.gguf"
+        },
+        {
+          "rfilename": "CataractCARE-Qwen4B.Q3_K_M.gguf"
+        },
+        {
+          "rfilename": "CataractCARE-Qwen4B.Q3_K_S.gguf"
+        },
+        {
+          "rfilename": "CataractCARE-Qwen4B.Q4_K_M.gguf"
+        },
+        {
+          "rfilename": "CataractCARE-Qwen4B.Q4_K_S.gguf"
+        },
+        {
+          "rfilename": "CataractCARE-Qwen4B.Q5_K_M.gguf"
+        },
+        {
+          "rfilename": "CataractCARE-Qwen4B.Q5_K_S.gguf"
+        },
+        {
+          "rfilename": "CataractCARE-Qwen4B.Q6_K.gguf"
+        },
+        {
+          "rfilename": "CataractCARE-Qwen4B.Q8_0.gguf"
+        },
+        {
+          "rfilename": "CataractCARE-Qwen4B.f16.gguf"
+        },
+        {
+          "rfilename": "README.md"
+        }
+      ]
+    },
+    {
+      "_id": "6820ca819efc8b99858b1c77",
+      "id": "imdatta0/qwen4b_dmath_matheval_lora_unsloth",
+      "author": "imdatta0",
+      "gated": false,
+      "lastModified": "2025-05-14T13:40:37.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "9fefad93ab3f078b1c12c411c6c6b0651b4ca928",
+      "downloads": 0,
+      "tags": [
+        "safetensors",
+        "region:us"
+      ],
+      "createdAt": "2025-05-11T16:04:17.000Z",
+      "modelId": "imdatta0/qwen4b_dmath_matheval_lora_unsloth",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "adapter_config.json"
+        },
+        {
+          "rfilename": "adapter_model.safetensors"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "chat_template.jinja"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "training_args.bin"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6823d64b2062607338a792c1",
+      "id": "lisabdunlap/qwen_4096_sft_only_step_500",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-13T23:34:00.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "45ab73a2179ba415429661a32c68b09533c9a313",
+      "downloads": 7,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "unsloth",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-13T23:31:23.000Z",
+      "modelId": "lisabdunlap/qwen_4096_sft_only_step_500",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6823da0580cb7b1281d99903",
+      "id": "lisabdunlap/qwen_4096_sft_only_step_1000",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-13T23:50:11.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "528e30d87a5c67d7a3a0019e703f9141dc0bf286",
+      "downloads": 7,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "unsloth",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-13T23:47:17.000Z",
+      "modelId": "lisabdunlap/qwen_4096_sft_only_step_1000",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6823db2c765110852bc7284d",
+      "id": "lisabdunlap/qwen_4096_sft_only_step_1500",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-13T23:54:13.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "6bce7110a79a9d8748487fbb3ae2ee37f5318876",
+      "downloads": 11,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "unsloth",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-13T23:52:12.000Z",
+      "modelId": "lisabdunlap/qwen_4096_sft_only_step_1500",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6823eb4d1623fc7ea9b062a5",
+      "id": "lisabdunlap/qwen_4096_pretrain_sft",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-14T01:02:30.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "0caa3a4490d993c3e25b293495d9fa4fedf7dbcf",
+      "downloads": 13,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "text-generation-inference",
+        "unsloth",
+        "trl",
+        "sft",
+        "en",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-14T01:01:01.000Z",
+      "modelId": "lisabdunlap/qwen_4096_pretrain_sft",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        }
+      ]
+    },
+    {
+      "_id": "6823ffb35965795de7280b44",
+      "id": "lisabdunlap/qwen_4096_pretrain_sft_500",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-14T02:30:03.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "f76aa1877fe1b451b8f7bbad72e4c74f370fa0dd",
+      "downloads": 17,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "unsloth",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-14T02:28:03.000Z",
+      "modelId": "lisabdunlap/qwen_4096_pretrain_sft_500",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6824007e4c29e31afd61f4d7",
+      "id": "lisabdunlap/qwen_4096_pretrain_sft_1000",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-14T02:34:56.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "9798cca7f3e37fd7c816584ef3468a1e5ec74680",
+      "downloads": 8,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "unsloth",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-14T02:31:26.000Z",
+      "modelId": "lisabdunlap/qwen_4096_pretrain_sft_1000",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6824018278959eed1eabae12",
+      "id": "lisabdunlap/qwen_4096_pretrain_sft_1500",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-14T02:37:54.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "5573e7d640df4f698376b0f47c648cd77c98e10c",
+      "downloads": 8,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "unsloth",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-14T02:35:46.000Z",
+      "modelId": "lisabdunlap/qwen_4096_pretrain_sft_1500",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "68241ad236ea780a7a11deea",
+      "id": "lisabdunlap/qwen_4096_pretrain_sft_mix",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-14T04:25:20.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "ed1565484945e1acb1f0f83647272785fa00fad4",
+      "downloads": 7,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "text-generation-inference",
+        "unsloth",
+        "trl",
+        "sft",
+        "en",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-14T04:23:46.000Z",
+      "modelId": "lisabdunlap/qwen_4096_pretrain_sft_mix",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        }
+      ]
+    },
+    {
+      "_id": "6824b16d964db432d275560f",
+      "id": "lisabdunlap/qwen_4096_pretrain_sft_mix_500",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-14T15:08:38.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "9e02e1c6539dd7d91bfde6fa598777f10d2d98a8",
+      "downloads": 7,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "unsloth",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-14T15:06:21.000Z",
+      "modelId": "lisabdunlap/qwen_4096_pretrain_sft_mix_500",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6824b2af45bd54f8b1b8b4f4",
+      "id": "lisabdunlap/qwen_4096_pretrain_sft_mix_1000",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-14T15:13:50.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "1711f362b79cfa507bea341b266239b1fe98f9bc",
+      "downloads": 8,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "unsloth",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-14T15:11:43.000Z",
+      "modelId": "lisabdunlap/qwen_4096_pretrain_sft_mix_1000",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6824b3e57dcf7f1e42a36569",
+      "id": "lisabdunlap/qwen_4096_pretrain_sft_mix_1500",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-14T15:19:23.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "3a0588e45289198eba286a4e7e902d71367ddf78",
+      "downloads": 8,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "unsloth",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-14T15:16:53.000Z",
+      "modelId": "lisabdunlap/qwen_4096_pretrain_sft_mix_1500",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6824b60f1331c6d10a3baf3c",
+      "id": "lisabdunlap/qwen_4096_pretrain_sft_mix_2000",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-14T15:28:15.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "1b9e2a9f1d1fb749cb26812262d7693ca98a414c",
+      "downloads": 7,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "unsloth",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-14T15:26:07.000Z",
+      "modelId": "lisabdunlap/qwen_4096_pretrain_sft_mix_2000",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6824b740e8acf803b46931e2",
+      "id": "lisabdunlap/qwen_4096_pretrain_sft_mix_2500",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-14T15:33:16.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "8dc1004cbdd93051501e9e15fe5968d471dda050",
+      "downloads": 9,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "unsloth",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-14T15:31:12.000Z",
+      "modelId": "lisabdunlap/qwen_4096_pretrain_sft_mix_2500",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6824b8778397818368dd3195",
+      "id": "lisabdunlap/qwen_4096_pretrain_sft_mix_3000",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-14T15:38:29.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "99021178058fb5bcbc8cf57a95efb7f7fe55f1d8",
+      "downloads": 8,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "unsloth",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-14T15:36:23.000Z",
+      "modelId": "lisabdunlap/qwen_4096_pretrain_sft_mix_3000",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6824bd3921b4df7461eb6332",
+      "id": "lisabdunlap/qwen_4096_pretrain_sft_mix_3500",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-14T15:58:47.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "36b13bd9612a6ff5888b2bd0ed22b6063f958a57",
+      "downloads": 5,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "unsloth",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-14T15:56:41.000Z",
+      "modelId": "lisabdunlap/qwen_4096_pretrain_sft_mix_3500",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6824d9464e3eac9361575660",
+      "id": "imdatta0/qwen4b_dmath_matheval_ortholora_unsloth",
+      "author": "imdatta0",
+      "gated": false,
+      "lastModified": "2025-05-15T09:35:42.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "b01f9e0326085b1b023c9bebbbabec2854b8c033",
+      "downloads": 0,
+      "tags": [
+        "safetensors",
+        "region:us"
+      ],
+      "createdAt": "2025-05-14T17:56:22.000Z",
+      "modelId": "imdatta0/qwen4b_dmath_matheval_ortholora_unsloth",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "adapter_config.json"
+        },
+        {
+          "rfilename": "adapter_model.safetensors"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "chat_template.jinja"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "training_args.bin"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6824d94c0ee7033f3effe659",
+      "id": "lisabdunlap/qwen_4096_sft_only_low_lr",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-14T17:58:00.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "9dc8e76716a370c28d4e59f7179a8b9257b1448a",
+      "downloads": 12,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "text-generation-inference",
+        "unsloth",
+        "trl",
+        "sft",
+        "en",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-14T17:56:28.000Z",
+      "modelId": "lisabdunlap/qwen_4096_sft_only_low_lr",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        }
+      ]
+    },
+    {
+      "_id": "6824eda241b7cf671a1bc087",
+      "id": "lisabdunlap/qwen_4096_sft_only_low_lr_500",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-19T17:01:35.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "8303b7fd2e8cdb644ff7c821851695ef2663d35d",
+      "downloads": 16,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "unsloth",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-14T19:23:14.000Z",
+      "modelId": "lisabdunlap/qwen_4096_sft_only_low_lr_500",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6824ef5723d760cc450160f5",
+      "id": "lisabdunlap/qwen_4096_sft_only_low_lr_1000",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-19T16:53:53.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "faa8f03a5a90cc9d0c91db838dd14efc2f9026ea",
+      "downloads": 10,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "unsloth",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-14T19:30:31.000Z",
+      "modelId": "lisabdunlap/qwen_4096_sft_only_low_lr_1000",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6824f1cf501a31b392ceb927",
+      "id": "lisabdunlap/qwen_4096_sft_only_low_lr_1500",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-19T00:27:49.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "28dbd1159b7851481e41d4c2989106c7dc96d886",
+      "downloads": 12,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "unsloth",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-14T19:41:03.000Z",
+      "modelId": "lisabdunlap/qwen_4096_sft_only_low_lr_1500",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6828f1ecc612f947dd84e8e9",
+      "id": "Wfiles/Qwen-4bit",
+      "author": "Wfiles",
+      "gated": false,
+      "lastModified": "2025-05-17T20:33:15.000Z",
+      "likes": 1,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "c786e2274d9c78778606be1ec658bd1ca1c48ce3",
+      "downloads": 14,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "4-bit",
+        "bitsandbytes",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-17T20:30:36.000Z",
+      "modelId": "Wfiles/Qwen-4bit",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model.safetensors"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6829c02aba774b845241f856",
+      "id": "bunnycore/Qwen-4B-Stock",
+      "author": "bunnycore",
+      "gated": false,
+      "lastModified": "2025-05-18T11:12:07.000Z",
+      "likes": 1,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "d9a40c45cf7d95ba9db12109076b11fc062a8387",
+      "downloads": 8,
+      "tags": [
+        "safetensors",
+        "qwen3",
+        "merge",
+        "mergekit",
+        "lazymergekit",
+        "nbeerbower/Qwen3-4B-abliterated-TIES",
+        "ValiantLabs/Qwen3-4B-Esper3",
+        "SuperbEmphasis/Qwen3-4B-RP-Test",
+        "unsloth/Qwen3-4B",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "createdAt": "2025-05-18T11:10:34.000Z",
+      "modelId": "bunnycore/Qwen-4B-Stock",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "mergekit_config.yml"
+        },
+        {
+          "rfilename": "model-00001-of-00009.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00009.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00009.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00009.safetensors"
+        },
+        {
+          "rfilename": "model-00005-of-00009.safetensors"
+        },
+        {
+          "rfilename": "model-00006-of-00009.safetensors"
+        },
+        {
+          "rfilename": "model-00007-of-00009.safetensors"
+        },
+        {
+          "rfilename": "model-00008-of-00009.safetensors"
+        },
+        {
+          "rfilename": "model-00009-of-00009.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        }
+      ]
+    },
+    {
+      "_id": "682ab4358395c21e228090f2",
+      "id": "mradermacher/Qwen-4B-Stock-GGUF",
+      "author": "mradermacher",
+      "gated": false,
+      "lastModified": "2025-07-11T02:39:11.000Z",
+      "likes": 1,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "f614fae2f78252cfbf742ec9fdaf5d4d26c0fc60",
+      "downloads": 75,
+      "tags": [
+        "transformers",
+        "gguf",
+        "merge",
+        "mergekit",
+        "lazymergekit",
+        "nbeerbower/Qwen3-4B-abliterated-TIES",
+        "ValiantLabs/Qwen3-4B-Esper3",
+        "SuperbEmphasis/Qwen3-4B-RP-Test",
+        "unsloth/Qwen3-4B",
+        "en",
+        "base_model:bunnycore/Qwen-4B-Stock",
+        "base_model:quantized:bunnycore/Qwen-4B-Stock",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us",
+        "conversational"
+      ],
+      "library_name": "transformers",
+      "createdAt": "2025-05-19T04:31:49.000Z",
+      "modelId": "mradermacher/Qwen-4B-Stock-GGUF",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "Qwen-4B-Stock.IQ4_XS.gguf"
+        },
+        {
+          "rfilename": "Qwen-4B-Stock.Q2_K.gguf"
+        },
+        {
+          "rfilename": "Qwen-4B-Stock.Q3_K_L.gguf"
+        },
+        {
+          "rfilename": "Qwen-4B-Stock.Q3_K_M.gguf"
+        },
+        {
+          "rfilename": "Qwen-4B-Stock.Q3_K_S.gguf"
+        },
+        {
+          "rfilename": "Qwen-4B-Stock.Q4_K_M.gguf"
+        },
+        {
+          "rfilename": "Qwen-4B-Stock.Q4_K_S.gguf"
+        },
+        {
+          "rfilename": "Qwen-4B-Stock.Q5_K_M.gguf"
+        },
+        {
+          "rfilename": "Qwen-4B-Stock.Q5_K_S.gguf"
+        },
+        {
+          "rfilename": "Qwen-4B-Stock.Q6_K.gguf"
+        },
+        {
+          "rfilename": "Qwen-4B-Stock.Q8_0.gguf"
+        },
+        {
+          "rfilename": "Qwen-4B-Stock.f16.gguf"
+        },
+        {
+          "rfilename": "README.md"
+        }
+      ]
+    },
+    {
+      "_id": "682ab6251008b18adbcdb0ad",
+      "id": "jonluj/qwen4b_secreason",
+      "author": "jonluj",
+      "gated": false,
+      "lastModified": "2025-05-19T05:42:57.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "6d50f447bcad0340f2c93415bef953ae40200d5c",
+      "downloads": 16,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-19T04:40:05.000Z",
+      "modelId": "jonluj/qwen4b_secreason",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "682b641919c23ab915789994",
+      "id": "rsh-raj/qwen-4b-finetuned-1024-context",
+      "author": "rsh-raj",
+      "gated": false,
+      "lastModified": "2025-05-19T17:02:29.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "9f5d00e0b5ee3350bb40f7462624b1b4ef28d239",
+      "downloads": 0,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "text-generation-inference",
+        "unsloth",
+        "qwen3",
+        "trl",
+        "en",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "library_name": "transformers",
+      "createdAt": "2025-05-19T17:02:17.000Z",
+      "modelId": "rsh-raj/qwen-4b-finetuned-1024-context",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "adapter_config.json"
+        },
+        {
+          "rfilename": "adapter_model.safetensors"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "682b7a3a5094243f12cd1654",
+      "id": "lisabdunlap/qwen_4096_pretrain_sft-updated_6000",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-20T04:05:04.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "d0b798bc5c097f2e47fccace3999723cee3a8f23",
+      "downloads": 14,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "text-generation-inference",
+        "unsloth",
+        "trl",
+        "sft",
+        "conversational",
+        "en",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-19T18:36:42.000Z",
+      "modelId": "lisabdunlap/qwen_4096_pretrain_sft-updated_6000",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "682b90eed8acb75ce2e9edc1",
+      "id": "lisabdunlap/qwen_4096_pretrain_sft-updated_500",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-19T20:15:07.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "235ddb48a598e861f983fb7e3a95b78bab0cc2bb",
+      "downloads": 14,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "unsloth",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-19T20:13:34.000Z",
+      "modelId": "lisabdunlap/qwen_4096_pretrain_sft-updated_500",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "682b97b64cb747a9ee94fb8e",
+      "id": "lisabdunlap/qwen_4096_pretrain_sft-updated_1000",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-20T04:40:07.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "a8e63f11d614416af4390207060f6e776785c1cb",
+      "downloads": 14,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "unsloth",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-19T20:42:30.000Z",
+      "modelId": "lisabdunlap/qwen_4096_pretrain_sft-updated_1000",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "682b9bbe19c23ab91588c0f0",
+      "id": "lisabdunlap/qwen_4096_pretrain_sft-updated_1500",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-19T21:01:13.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "545f11d986615e0dfcca1f2572a8a440194cc32b",
+      "downloads": 13,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "unsloth",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-19T20:59:42.000Z",
+      "modelId": "lisabdunlap/qwen_4096_pretrain_sft-updated_1500",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "682bd7231aa499e430c03a8e",
+      "id": "lisabdunlap/qwen_4096_pretrain_sft-balanced",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-20T01:14:32.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "0e0e0ce6f864b79b66000600f5824aa06f2554cf",
+      "downloads": 13,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "text-generation-inference",
+        "unsloth",
+        "trl",
+        "sft",
+        "en",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-20T01:13:07.000Z",
+      "modelId": "lisabdunlap/qwen_4096_pretrain_sft-balanced",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        }
+      ]
+    },
+    {
+      "_id": "682c0268dbeccbbd1d38371e",
+      "id": "lisabdunlap/qwen_4096_pretrain_sft-updated_4000",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-20T04:19:40.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "7365e3d7b0a4be96b53fb0e517a3ac312b73cb11",
+      "downloads": 15,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "unsloth",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-20T04:17:44.000Z",
+      "modelId": "lisabdunlap/qwen_4096_pretrain_sft-updated_4000",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "682c05992bca89b0b160d2b1",
+      "id": "lisabdunlap/qwen_4096_pretrain_sft-updated_2000",
+      "author": "lisabdunlap",
+      "gated": false,
+      "lastModified": "2025-05-20T04:33:09.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "46ee8dbb65bcf52a0fbdcc56d220c4eda23eb83e",
+      "downloads": 16,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "unsloth",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-20T04:31:21.000Z",
+      "modelId": "lisabdunlap/qwen_4096_pretrain_sft-updated_2000",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6830bc36b05aab48c25ea98b",
+      "id": "rsh-raj/qwen-4b-finetuned",
+      "author": "rsh-raj",
+      "gated": false,
+      "lastModified": "2025-05-23T18:19:43.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "60ce246ca4c7067a3b59a002afb9eb933db6ca91",
+      "downloads": 0,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "text-generation-inference",
+        "unsloth",
+        "qwen3",
+        "trl",
+        "en",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "library_name": "transformers",
+      "createdAt": "2025-05-23T18:19:34.000Z",
+      "modelId": "rsh-raj/qwen-4b-finetuned",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "adapter_config.json"
+        },
+        {
+          "rfilename": "adapter_model.safetensors"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6830ef89e1f8b8347cf68896",
+      "id": "AIsakawaii/task_b_method2_qwen4b",
+      "author": "AIsakawaii",
+      "gated": false,
+      "lastModified": "2025-05-23T21:58:46.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "8ba6625bbb5f5a8770109f003ae55fcaef4fb117",
+      "downloads": 19,
+      "tags": [
+        "peft",
+        "safetensors",
+        "arxiv:1910.09700",
+        "base_model:Qwen/Qwen3-4B",
+        "base_model:adapter:Qwen/Qwen3-4B",
+        "region:us"
+      ],
+      "library_name": "peft",
+      "createdAt": "2025-05-23T21:58:33.000Z",
+      "modelId": "AIsakawaii/task_b_method2_qwen4b",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "adapter_config.json"
+        },
+        {
+          "rfilename": "adapter_model.safetensors"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "68377d7811d85fb095d4cb4e",
+      "id": "semran1/qwen4b_CE",
+      "author": "semran1",
+      "gated": false,
+      "lastModified": "2025-05-28T21:32:03.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "36bd9dce7b49b6aa9f55020414cbbb0e96f10d34",
+      "downloads": 11,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-28T21:17:44.000Z",
+      "modelId": "semran1/qwen4b_CE",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "chat_template.jinja"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "683782282edeaedb9651993c",
+      "id": "semran1/qwen4b_NO_CE",
+      "author": "semran1",
+      "gated": false,
+      "lastModified": "2025-05-28T21:39:30.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "c1fda3b8da5dc8d13c132b3d4cb3e40c27b8549c",
+      "downloads": 10,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-28T21:37:44.000Z",
+      "modelId": "semran1/qwen4b_NO_CE",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "chat_template.jinja"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6837abe32a8971f5778ec602",
+      "id": "semran1/qwen4b9drtbobh",
+      "author": "semran1",
+      "gated": false,
+      "lastModified": "2025-05-29T00:37:30.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "08466112a8f099a1ceb9833a1b985a2c0ad53da6",
+      "downloads": 8,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-29T00:35:47.000Z",
+      "modelId": "semran1/qwen4b9drtbobh",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "chat_template.jinja"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "68388faa023315653b0f6a63",
+      "id": "semran1/qwen4b6ad8grj6",
+      "author": "semran1",
+      "gated": false,
+      "lastModified": "2025-05-29T16:49:14.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "bdba388e016d407b4be32acc4a709bbf7e26be5b",
+      "downloads": 8,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-29T16:47:38.000Z",
+      "modelId": "semran1/qwen4b6ad8grj6",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "chat_template.jinja"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "683895360c520f65b2b10768",
+      "id": "semran1/qwen4b2k6ad8grj6",
+      "author": "semran1",
+      "gated": false,
+      "lastModified": "2025-05-29T17:13:14.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "5e9e136ea2ac5b479bc522abf2d3b51cdeae4cbb",
+      "downloads": 8,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-29T17:11:18.000Z",
+      "modelId": "semran1/qwen4b2k6ad8grj6",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "chat_template.jinja"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6838d289b7eacc2ac9549e34",
+      "id": "semran1/qwen4bupu1h9ho",
+      "author": "semran1",
+      "gated": false,
+      "lastModified": "2025-05-29T21:34:34.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "a0c048d0391dd2dd3d233266ac9761bb33a2242a",
+      "downloads": 12,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-05-29T21:32:57.000Z",
+      "modelId": "semran1/qwen4bupu1h9ho",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "chat_template.jinja"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6846baba43942b65ec7a6f74",
+      "id": "mradermacher/ThermalGuard-Qwen4B-GGUF",
+      "author": "mradermacher",
+      "gated": false,
+      "lastModified": "2025-06-09T11:12:01.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "012faa841a2922e793379d7ef231832690530bce",
+      "downloads": 47,
+      "tags": [
+        "transformers",
+        "gguf",
+        "zh",
+        "base_model:Hancock1111/ThermalGuard-Qwen4B",
+        "base_model:quantized:Hancock1111/ThermalGuard-Qwen4B",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "library_name": "transformers",
+      "createdAt": "2025-06-09T10:43:06.000Z",
+      "modelId": "mradermacher/ThermalGuard-Qwen4B-GGUF",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "ThermalGuard-Qwen4B.IQ4_XS.gguf"
+        },
+        {
+          "rfilename": "ThermalGuard-Qwen4B.Q2_K.gguf"
+        },
+        {
+          "rfilename": "ThermalGuard-Qwen4B.Q3_K_L.gguf"
+        },
+        {
+          "rfilename": "ThermalGuard-Qwen4B.Q3_K_M.gguf"
+        },
+        {
+          "rfilename": "ThermalGuard-Qwen4B.Q3_K_S.gguf"
+        },
+        {
+          "rfilename": "ThermalGuard-Qwen4B.Q4_K_M.gguf"
+        },
+        {
+          "rfilename": "ThermalGuard-Qwen4B.Q4_K_S.gguf"
+        },
+        {
+          "rfilename": "ThermalGuard-Qwen4B.Q5_K_M.gguf"
+        },
+        {
+          "rfilename": "ThermalGuard-Qwen4B.Q5_K_S.gguf"
+        },
+        {
+          "rfilename": "ThermalGuard-Qwen4B.Q6_K.gguf"
+        },
+        {
+          "rfilename": "ThermalGuard-Qwen4B.Q8_0.gguf"
+        },
+        {
+          "rfilename": "ThermalGuard-Qwen4B.f16.gguf"
+        }
+      ]
+    },
+    {
+      "_id": "6847cb270eac513809398c63",
+      "id": "semran1/qwen-4b-base-44",
+      "author": "semran1",
+      "gated": false,
+      "lastModified": "2025-06-10T06:07:27.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "9f23a613056a353835af4fa98d91d3f330191f64",
+      "downloads": 8,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-06-10T06:05:27.000Z",
+      "modelId": "semran1/qwen-4b-base-44",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "chat_template.jinja"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6847ccd63899687b7052ed66",
+      "id": "semran1/qwen-4b-base-41",
+      "author": "semran1",
+      "gated": false,
+      "lastModified": "2025-06-10T06:14:24.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "5c2b05813255cfd8bb7de29a16f1a289b60b5cac",
+      "downloads": 8,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-06-10T06:12:38.000Z",
+      "modelId": "semran1/qwen-4b-base-41",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "chat_template.jinja"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6847cea602dd05b00be44661",
+      "id": "semran1/qwen-4b-base-39",
+      "author": "semran1",
+      "gated": false,
+      "lastModified": "2025-06-10T06:22:11.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "8a4e3fd4ceca1d420d0fdd58d45b80338f0ff799",
+      "downloads": 8,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "conversational",
+        "arxiv:1910.09700",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2025-06-10T06:20:22.000Z",
+      "modelId": "semran1/qwen-4b-base-39",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "chat_template.jinja"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    }
+  ]
+}

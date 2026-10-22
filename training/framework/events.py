@@ -308,7 +308,7 @@ def classify(event_id, job, *, reference, database=None, model=None, inference_c
         result['decision'] = decide(result['predicates'], result['deadline'], result['reconciliation']['conflicts'], quarantined=True)
     if view['warnings']:
         result['decision']['review_reasons'].extend(view['warnings'])
-    result.update(event_id=event_id, event_snapshot_hash=view['snapshot_hash'], event_policy=view['policy'],
+    result.update(event_id=event_id, evaluation_time=reference, event_snapshot_hash=view['snapshot_hash'], event_policy=view['policy'],
                   event_context_kind=view['context_kind'])
     from qwen_domain.confidence import confidence_output, decision_confidence
     if result.get('release_identity'):

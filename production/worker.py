@@ -109,6 +109,7 @@ def inference(task):
             execution = events.classify(ident, release, reference=store.now(), model=model, inference_context=routing_context)
             result = execution['payload']['result']
             decision = {'classification': result['decision']['classification'], 'confidence': None,
+                        'evaluation_time': result.get('evaluation_time'),
                         'confidence_kind': 'HEURISTIC / NOT YET CALIBRATED', 'review_required': True,
                         'review_reasons': ['NO_CUSTOMER_QUALIFICATION'], 'automation_enabled': False,'calibration':None}
             if qualification_problem: decision['review_reasons'].append(qualification_problem)
@@ -171,6 +172,9 @@ def inference(task):
                     if suspended or not promotion or promotion[0] != payload['qualification_id'] or datetime.now(timezone.utc) >= datetime.fromisoformat(certificate['expires_at']):
                         decision['review_required'] = True; decision['review_reasons'].append('AUTHORISATION_CHANGED_BEFORE_COMMIT')
                         decision['automation_enabled'] = False
+                from production.monitoring import apply
+                apply(decision, '|'.join([payload['release_id'], str(payload.get('qualification_id')), ident, saved['id']]),
+                      qualified[0]['policy'].get('random_audit_rate', .02) if qualified else .02)
                 c.execute('INSERT INTO client_decisions VALUES(?,?,?,?,?)', (saved['id'], saved['created_at'], ident, execution['id'], store.dumps(saved)))
                 c.execute('UPDATE client_tasks SET progress=? WHERE id=?', (index + 1, task['id']))
     finally: model.close()

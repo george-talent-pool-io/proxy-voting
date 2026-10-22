@@ -227,6 +227,16 @@ Legacy datasets without these partitions need an explicit new curation freeze;
 they cannot silently reuse stage evaluation outcomes to validate the cascade.
 The stage and final calibrator must identify the same dataset manifest.
 
+Correctness calibration version `customer-correctness-v4` also separates
+prediction strata by engine/source. Final-decision strata distinguish a
+specialist-only path from a path that invoked an LLM. Earlier calibrators are
+rejected: refit after upgrading; changing a version string does not migrate one.
+Unsupported source/class/evidence/language strata return null rather than
+borrowing confidence from another engine. Complete-source negative evidence
+may support `NOT_VOTABLE`, as well as restriction `NO`, only when the original
+input hash, complete processing and model identity are verified. It is never
+shown as an invented quotation.
+
 Campaign candidates accept `laya_calibrator_id` and `laya_operating_point_id`
 alongside `laya_inference`; these immutable artifacts are included in release
 identity and checked again at inference. A customer may first run a specialist
@@ -247,6 +257,35 @@ Promote and roll back complete releases, never just weights. Collect later human
 corrections as revisioned new labels. Verified auto-processing errors suspend the
 qualification. Customer retraining uses a newly frozen corpus/version, repeats
 validation/calibration and requires a new independent quality evaluation.
+
+The frozen qualification policy includes `random_audit_rate` (default 2%,
+configurable 1–50%). A local secret deterministically samples otherwise accepted
+decisions independently of confidence. Selected decisions require human review
+with `RANDOM_ACCEPTED_DECISION_AUDIT`; receipts retain the original eligibility,
+inclusion probability and version. Sampling neither enables automation nor
+removes low-confidence review. The installation key lives in the private
+workspace and survives restart. Keep it with protected workspace backups.
+The qualification review-rate budget includes the expected audit load:
+confidence-review rate + accepted fraction × audit rate. Reports distinguish
+that expectation from measured low-confidence and realised audit counts.
+
+An authenticated human correction of a randomly audited error suspends the
+qualification exactly as a later error found in an auto-released case would.
+Semantic fields are compared against the original snapshot. Deadline/final-status
+comparisons additionally require the original evaluation time, so elapsed time
+does not falsely become a model error. The review form pre-fills the saved
+evaluation time. AI-authored labels cannot trigger an expert verification claim.
+
+## Task balance for specialist training
+
+`TrainSpec.laya_task_multipliers` accepts known predicate names and integer
+multipliers 1–8. For example `{"votability":4}` keeps the original nine-question
+TRAIN row and adds three single-votability-question rows. This uses the official
+Laya SDK without modifying its loss or label mapping. Unique notice counts,
+effective question counts, input hashes and the derived TRAIN-only sampling file
+are recorded. Validation/calibration/test data is never resampled. Inspect class
+and length support before adding epochs; optimizer updates cannot compensate for
+missing supervision or prove generalisation to a new customer population.
 
 ## Qualification artifacts versus delivery
 

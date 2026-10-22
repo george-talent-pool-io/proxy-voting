@@ -15,6 +15,9 @@ test-results
 playwright-report
 deploy/secrets
 deploy/tls
+training/reliability
+tests/unit/test_reliability_corpus.py
+scripts/run_reliability_programme.py
 !data/
 data/*
 !data/training/

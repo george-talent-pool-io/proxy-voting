@@ -1,0 +1,444 @@
+{
+  "plan": {
+    "version": "voting-training-framework-v1",
+    "job_id": "bf5f15e4-8a7b-4c2f-be93-a5a518d273d8",
+    "created_at": "2026-10-22T13:32:01.512570+00:00",
+    "bundle": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/bundles/reliable-voting-balanced-v1",
+    "bundle_manifest_sha256": "57a9bd2b3667c880f2a894d591a77c9f8fab5190b7f24a6ad0b5f2915d6929d0",
+    "spec": {
+      "backend": "LAYA_SDK",
+      "family": "LAYA",
+      "model_path": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/jobs/framework-domain-upgrade-20261022-v2/checkpoint",
+      "base_model_id": "convaiinnovations/laya:multilingual",
+      "base_revision": "7b928d828b7b0e022f929d9bd2e44165aa270148",
+      "seed": 42,
+      "epochs": 2,
+      "learning_rate": 0.0001,
+      "batch_size": 8,
+      "gradient_accumulation": 2,
+      "max_length": 1024,
+      "lora_rank": 8,
+      "lora_alpha": 16,
+      "target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "device": "mps",
+      "dtype": "float32",
+      "max_steps": null,
+      "freeze_encoder": false,
+      "runtime_python": null,
+      "lora_layers": 1,
+      "generation_tokens": 2048,
+      "parent_seed_path": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/seeds/framework-domain-upgrade-20261022-selected",
+      "initial_adapter_path": null,
+      "encoder_learning_rate": 1e-05,
+      "laya_loss": "soft-ce",
+      "laya_gradient_checkpointing": true,
+      "laya_sdk_validation": false,
+      "laya_task_multipliers": {
+        "votability": 4
+      },
+      "mps_memory_fraction": 0.45,
+      "training_timeout_seconds": 7200
+    },
+    "preflight": {
+      "ready": true,
+      "reasons": [],
+      "spec": {
+        "backend": "LAYA_SDK",
+        "family": "LAYA",
+        "model_path": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/jobs/framework-domain-upgrade-20261022-v2/checkpoint",
+        "base_model_id": "convaiinnovations/laya:multilingual",
+        "base_revision": "7b928d828b7b0e022f929d9bd2e44165aa270148",
+        "seed": 42,
+        "epochs": 2,
+        "learning_rate": 0.0001,
+        "batch_size": 8,
+        "gradient_accumulation": 2,
+        "max_length": 1024,
+        "lora_rank": 8,
+        "lora_alpha": 16,
+        "target_modules": [
+          "q_proj",
+          "v_proj"
+        ],
+        "device": "mps",
+        "dtype": "float32",
+        "max_steps": null,
+        "freeze_encoder": false,
+        "runtime_python": null,
+        "lora_layers": 1,
+        "generation_tokens": 2048,
+        "parent_seed_path": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/seeds/framework-domain-upgrade-20261022-selected",
+        "initial_adapter_path": null,
+        "encoder_learning_rate": 1e-05,
+        "laya_loss": "soft-ce",
+        "laya_gradient_checkpointing": true,
+        "laya_sdk_validation": false,
+        "laya_task_multipliers": {
+          "votability": 4
+        },
+        "mps_memory_fraction": 0.45,
+        "training_timeout_seconds": 7200
+      },
+      "bundle_hash": "57a9bd2b3667c880f2a894d591a77c9f8fab5190b7f24a6ad0b5f2915d6929d0",
+      "counts": {
+        "TRAIN": 836,
+        "VALIDATION": 374
+      },
+      "label_origins": {
+        "AI_AUTHORED": 1210
+      },
+      "versions": {
+        "laya": "0.4.8",
+        "torch": "2.14.1",
+        "transformers": "5.20.0",
+        "peft": null,
+        "tokenizers": "0.23.3",
+        "safetensors": "0.8.0"
+      },
+      "hardware": {
+        "system": "macOS-26.6.2-arm64-arm-64bit",
+        "machine": "arm64",
+        "memory_bytes": 68719476736,
+        "available_bytes": 32219922432
+      },
+      "local_weight_bytes": 643835524,
+      "label_support": {
+        "per_predicate": {
+          "votability": {
+            "TRAIN": {
+              "VOTABLE": {
+                "examples": 319,
+                "groups": 319
+              },
+              "NOT_VOTABLE": {
+                "examples": 319,
+                "groups": 163
+              },
+              "UNCERTAIN": {
+                "examples": 198,
+                "groups": 117
+              }
+            },
+            "VALIDATION": {
+              "VOTABLE": {
+                "examples": 149,
+                "groups": 149
+              },
+              "NOT_VOTABLE": {
+                "examples": 132,
+                "groups": 81
+              },
+              "UNCERTAIN": {
+                "examples": 93,
+                "groups": 49
+              }
+            }
+          },
+          "share_blocking": {
+            "TRAIN": {
+              "YES": {
+                "examples": 102,
+                "groups": 102
+              },
+              "NO": {
+                "examples": 711,
+                "groups": 474
+              },
+              "UNKNOWN": {
+                "examples": 23,
+                "groups": 23
+              }
+            },
+            "VALIDATION": {
+              "YES": {
+                "examples": 48,
+                "groups": 48
+              },
+              "NO": {
+                "examples": 311,
+                "groups": 216
+              },
+              "UNKNOWN": {
+                "examples": 15,
+                "groups": 15
+              }
+            }
+          },
+          "poa_required": {
+            "TRAIN": {
+              "YES": {
+                "examples": 99,
+                "groups": 99
+              },
+              "NO": {
+                "examples": 708,
+                "groups": 471
+              },
+              "UNKNOWN": {
+                "examples": 29,
+                "groups": 29
+              }
+            },
+            "VALIDATION": {
+              "YES": {
+                "examples": 45,
+                "groups": 45
+              },
+              "NO": {
+                "examples": 312,
+                "groups": 217
+              },
+              "UNKNOWN": {
+                "examples": 17,
+                "groups": 17
+              }
+            }
+          },
+          "registration_required": {
+            "TRAIN": {
+              "YES": {
+                "examples": 87,
+                "groups": 87
+              },
+              "NO": {
+                "examples": 716,
+                "groups": 479
+              },
+              "UNKNOWN": {
+                "examples": 33,
+                "groups": 33
+              }
+            },
+            "VALIDATION": {
+              "YES": {
+                "examples": 44,
+                "groups": 44
+              },
+              "NO": {
+                "examples": 310,
+                "groups": 215
+              },
+              "UNKNOWN": {
+                "examples": 20,
+                "groups": 20
+              }
+            }
+          },
+          "beneficial_owner_disclosure_required": {
+            "TRAIN": {
+              "YES": {
+                "examples": 92,
+                "groups": 92
+              },
+              "NO": {
+                "examples": 706,
+                "groups": 469
+              },
+              "UNKNOWN": {
+                "examples": 38,
+                "groups": 38
+              }
+            },
+            "VALIDATION": {
+              "YES": {
+                "examples": 42,
+                "groups": 42
+              },
+              "NO": {
+                "examples": 314,
+                "groups": 219
+              },
+              "UNKNOWN": {
+                "examples": 18,
+                "groups": 18
+              }
+            }
+          },
+          "holding_confirmation_required": {
+            "TRAIN": {
+              "YES": {
+                "examples": 90,
+                "groups": 90
+              },
+              "NO": {
+                "examples": 710,
+                "groups": 473
+              },
+              "UNKNOWN": {
+                "examples": 36,
+                "groups": 36
+              }
+            },
+            "VALIDATION": {
+              "YES": {
+                "examples": 43,
+                "groups": 43
+              },
+              "NO": {
+                "examples": 309,
+                "groups": 214
+              },
+              "UNKNOWN": {
+                "examples": 22,
+                "groups": 22
+              }
+            }
+          },
+          "split_voting_restricted": {
+            "TRAIN": {
+              "YES": {
+                "examples": 99,
+                "groups": 99
+              },
+              "NO": {
+                "examples": 695,
+                "groups": 458
+              },
+              "UNKNOWN": {
+                "examples": 42,
+                "groups": 42
+              }
+            },
+            "VALIDATION": {
+              "YES": {
+                "examples": 42,
+                "groups": 42
+              },
+              "NO": {
+                "examples": 307,
+                "groups": 212
+              },
+              "UNKNOWN": {
+                "examples": 25,
+                "groups": 25
+              }
+            }
+          },
+          "securities_lending_recall_required": {
+            "TRAIN": {
+              "YES": {
+                "examples": 104,
+                "groups": 104
+              },
+              "NO": {
+                "examples": 694,
+                "groups": 457
+              },
+              "UNKNOWN": {
+                "examples": 38,
+                "groups": 38
+              }
+            },
+            "VALIDATION": {
+              "YES": {
+                "examples": 33,
+                "groups": 33
+              },
+              "NO": {
+                "examples": 324,
+                "groups": 229
+              },
+              "UNKNOWN": {
+                "examples": 17,
+                "groups": 17
+              }
+            }
+          },
+          "other_voting_restriction": {
+            "TRAIN": {
+              "YES": {
+                "examples": 94,
+                "groups": 94
+              },
+              "NO": {
+                "examples": 700,
+                "groups": 463
+              },
+              "UNKNOWN": {
+                "examples": 42,
+                "groups": 42
+              }
+            },
+            "VALIDATION": {
+              "YES": {
+                "examples": 44,
+                "groups": 44
+              },
+              "NO": {
+                "examples": 309,
+                "groups": 214
+              },
+              "UNKNOWN": {
+                "examples": 21,
+                "groups": 21
+              }
+            }
+          }
+        },
+        "warnings": [],
+        "scope": "Training diagnostics only; five groups is a warning threshold, not a quality/automation qualification"
+      },
+      "parent_checkpoint_identity": "b92ca07bee9e9f92b2e4d8d17e99834999e0f2f0b8d34c988ee07766694237ac",
+      "training_runtime": null,
+      "scope": "Preflight checks prerequisites, not exact-model trainer compatibility or model quality",
+      "automation_enabled": false,
+      "customer_accuracy": null
+    },
+    "source_hashes": {
+      "training/framework/__init__.py": "84a950a8e035d2264f12fba4b85b4ab1cf543f0541c822a59814962379325cf2",
+      "training/framework/__main__.py": "c157bc9df7f5f9b1cf486c9b0080824c6530e90221056a5778fff5cfeca6aa29",
+      "training/framework/bundle.py": "9e88f0759b408169a5f08aa244e1eb7ad16f764ed88c3f546ae533667b6bfc15",
+      "training/framework/calibration.py": "da1931305d3b4b008b6f9da1bfb1c8a2510470328d031d6f791b1f77867056d1",
+      "training/framework/campaigns.py": "746d4bff2eca1b1791981e659606266ba74bd583845d90e4e37ae8df9051f466",
+      "training/framework/comparison.py": "25a5baa57c5f0d8c599adb0c6d382d932c8a9baf1e7e67f49d6208d51647f0cc",
+      "training/framework/evaluate.py": "5122d05b8fe27a9172be26e07f7b39139c29e17035b2f376f7437a239617ed62",
+      "training/framework/event_data.py": "69498d98ece8a364be1d13b29af0827fec7b979fd62d84decceb4d4218d7571e",
+      "training/framework/events.py": "422f6512de7dc68e9f1664c0f56ea76f962e9bac3ce00c2f4d0366dc0a3ab976",
+      "training/framework/jobs.py": "36f1bc49ea0e7f43073b9188a458a88b5d841fbf78efa61d987ffb1ccb95c9b4",
+      "training/framework/mlx_process.py": "351b74b58307ec41f9d8b359a59c70c8f27263e07d6f37a3642fec2c5ca0d2b8",
+      "training/framework/mlx_worker.py": "f35daf11cc72b93e49a3d9280a4d1bcc5ddd1460764487c2df3dee8371880d19",
+      "training/framework/operations.py": "0569d25b39fa07b8b6c2eaef15fcd4b8f546dd28759286552486165b804675e3",
+      "training/framework/passage_runtime.py": "03cbe3ab498a7dda1a3b80f124aac8d361137004f413772700ab1c26f33bbf84",
+      "training/framework/profiles.py": "bc22402551831998f5d303ebc3498907749e111cb62ea690d1eb288c5fa81b4e",
+      "training/framework/queue.py": "78c581bf4c2027681579e44159dc52852624aaeb0f5b6561fad95958a7876642",
+      "training/framework/release_evaluation.py": "1503e10ab6e86d56fb6fade3b52440ef59855a0d164553645ce7bcce9e82d17c",
+      "training/framework/releases.py": "16baa27fda687347b3e4e7cb33ad87819c64d42eb32968a9272064376611d27e",
+      "training/framework/resources.py": "4187eea24f53581e5174bee747214d2ff63a20b2f2e9e5f58ac2b64e4c39791a",
+      "training/framework/reviews.py": "3641f865a1d7346e45b95d805b789b100894d05749e30df0aee79e3af9509660",
+      "training/framework/runtime.py": "73d3fc66df5e69922fab8b3a8182ed85becd804ca65eb09c7fdad27eb2cdc377",
+      "training/framework/schema.py": "f3f9b6a42b144d37c7f32f3d5b62ed27928299c33ae29ec83cca6cb14c818af6",
+      "training/framework/seeds.py": "75193dd10337742de9cca9c25ccf8a51b1e1fc04ee8922c86ea2a9a961ffa392",
+      "training/framework/selection.py": "90bdde0cd4020dabd2022100fd06c9df62703b36161adf4f82039d36cafdef22",
+      "training/framework/trainers.py": "7b6747e4498eb89a5ea2ca56c104c67f44d544c9fde0ca6b56ee2366866dd536",
+      "training/framework/whole_runtime.py": "3c4b4e4efd22ee106a4962fb4e0f07abe3b387fbc1e4781a296615981904be1d"
+    },
+    "base_model_files": {
+      "checkpoint_latest/encoder/config.json": "01818c138acbaa64583a4a3f1fcf75ec22a4c103288d51c7fb6562baca049281",
+      "checkpoint_latest/model.safetensors": "f01aec0f47f32ff07220183a51472724c04c9e6e29facf3ca20a4eaed912d3ab",
+      "checkpoint_latest/questions.json": "feca5314c545dda2121f15ef55041fdb3c269dd7d8f1c4a0d7cd795ce5b876f9",
+      "checkpoint_latest/rl_agent_config.json": "0fcf300cb9395ced9264560a54373c6f4d28aac67883d8439c1ca45d6c56402d",
+      "checkpoint_latest/tokenizer/tokenizer.json": "dbba919c6e5e492bc22beb80abb64e6fcc7e8744dc696e8388b8c977767afa4b",
+      "checkpoint_latest/tokenizer/tokenizer_config.json": "e5e210187e4f3ed501a718bf929027ba6fb2890404a9ea35240e7e05e805b4e3",
+      "checkpoint_latest/train_report.json": "5f05e251e68c5bd22456ec5ba1d89cd00bfcaeb8559dd423532fb52010eb3ef9",
+      "encoder/config.json": "01818c138acbaa64583a4a3f1fcf75ec22a4c103288d51c7fb6562baca049281",
+      "model.safetensors": "f01aec0f47f32ff07220183a51472724c04c9e6e29facf3ca20a4eaed912d3ab",
+      "questions.json": "feca5314c545dda2121f15ef55041fdb3c269dd7d8f1c4a0d7cd795ce5b876f9",
+      "rl_agent_config.json": "0fcf300cb9395ced9264560a54373c6f4d28aac67883d8439c1ca45d6c56402d",
+      "semantic-training-contract.json": "f82bcfacb36a5b0764542e92b0b61ddb6c089170c947357bf34fdcae3ad371ae",
+      "tokenizer/tokenizer.json": "dbba919c6e5e492bc22beb80abb64e6fcc7e8744dc696e8388b8c977767afa4b",
+      "tokenizer/tokenizer_config.json": "b4b344dbc945fa1520e0ec141bd99c92fba7bce44118acb3cd6c0f3fbdb40af0",
+      "train_report.json": "5f05e251e68c5bd22456ec5ba1d89cd00bfcaeb8559dd423532fb52010eb3ef9"
+    },
+    "git_commit": "0e4d8fdbf10c84292d1275810c36896847f21108",
+    "model_execution_started": false,
+    "automation_enabled": false,
+    "customer_accuracy": null
+  },
+  "selection": "Select on VALIDATION only: maximise macro balanced accuracy with no new critical-positive misses. A single two-epoch extension is allowed only if validation remains inadequate. Never use challenge/calibration/test for selection.",
+  "corpus_manifest_sha256": "31c59a17fab286da0e7c5c4b5c1d8bfa32b166cf5ac950697adb4895307af92a",
+  "automation_enabled": false,
+  "customer_accuracy": null
+}

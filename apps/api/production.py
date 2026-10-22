@@ -97,10 +97,16 @@ def create_app():
             reviews = dict(c.execute("SELECT json_extract(payload,'$.provenance.origin'),count(*) FROM learning_reviews GROUP BY 1").fetchall())
             n = c.execute('SELECT count(*) FROM client_decisions').fetchone()[0]
             reviewed = c.execute("SELECT count(*) FROM client_decisions WHERE json_extract(payload,'$.decision.review_required')=1").fetchone()[0]
+            audits = c.execute("SELECT count(*) FROM client_decisions WHERE json_extract(payload,'$.decision.audit_selection.selected')=1").fetchone()[0]
+            eligible = c.execute("SELECT count(*) FROM client_decisions WHERE json_extract(payload,'$.decision.audit_selection.pre_audit_eligible')=1").fetchone()[0]
+            suspensions = c.execute('SELECT count(*) FROM client_suspensions').fetchone()[0]
         return {'identity': user, 'events_by_role': counts, 'label_revisions_by_origin': reviews,
                 'tasks': worker.listing(), 'worker': worker.health(), 'campaigns': [{'id': x['id'], 'state': x['state']} for x in campaigns.listing()], 'audit': storage.verify_audit(),
                 'production_promotion': json.loads(latest[0]) if latest else None,
                 'processed': n, 'review_required': reviewed, 'observed_review_rate': reviewed / n if n else None,
+                'monitoring': {'otherwise_accepted_decisions': eligible, 'random_audit_reviews': audits,
+                               'other_review_decisions': reviewed - audits, 'release_suspensions': suspensions,
+                               'observed_random_audit_rate': audits / eligible if eligible else None},
                 'automation_switch': os.environ.get('AUTOMATION_ENABLED', 'false') == 'true',
                 'customer_accuracy': None, 'deployment': 'SINGLE_TENANT_LINUX',
                 'qualification_required': True, 'training_enabled': os.environ.get('TRAINING_EXECUTION_ENABLED', 'false') == 'true'}

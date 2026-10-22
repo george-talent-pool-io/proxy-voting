@@ -23,10 +23,14 @@ def package(output):
         for p in (ROOT / folder).rglob('*'):
             if p.is_file() and not any(s in p.parts for s in ['__pycache__', '.pytest_cache']) and p.suffix in (
                     '.py', '.js', '.css', '.html', '.json', '.txt', '.md', '.sh', '.yml', '.yaml', '.lock', '.conf'):
+                relative=p.relative_to(ROOT).as_posix()
+                if relative.startswith('training/reliability/') or relative in (
+                    'tests/unit/test_reliability_corpus.py','scripts/run_reliability_programme.py'):
+                    continue  # AI qualification material is outside the product.
                 if any(s in p.relative_to(ROOT).parts for s in ('secrets', 'tls')): continue
                 paths.add(p.relative_to(ROOT))
     paths.add(Path('deploy/Dockerfile'))
-    paths.update(Path('data/reports') / name for name in ('CLIENT_PRODUCTION_GAP_PLAN.md', 'CLIENT_PRODUCTION_READINESS.md', 'FROZEN_CHECKPOINT_LEARNING_EVALUATION.md', 'FRAMEWORK_E2E_AND_MODEL_READINESS.md')
+    paths.update(Path('data/reports') / name for name in ('CLIENT_PRODUCTION_GAP_PLAN.md', 'CLIENT_PRODUCTION_READINESS.md', 'FROZEN_CHECKPOINT_LEARNING_EVALUATION.md', 'FRAMEWORK_E2E_AND_MODEL_READINESS.md', 'MODEL_AVAILABILITY_QWEN4.md', 'RELIABLE_CLASSIFIER_EVALUATION.md')
                  if (ROOT / 'data/reports' / name).is_file())
     for name in ['README.md', 'LICENSE', 'NOTICE', 'COMMERCIAL-LICENSE', '.dockerignore', '.gitignore', 'pyproject.toml', 'uv.lock', 'Dockerfile', 'docker-compose.yml']:
         if (ROOT / name).is_file(): paths.add(Path(name))

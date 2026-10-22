@@ -1,6 +1,6 @@
 """Shared annotation and job contracts for Laya and local generative models."""
 from enum import Enum
-from typing import Literal
+from typing import Literal, Annotated
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
@@ -97,11 +97,16 @@ class TrainSpec(BaseModel):
     laya_loss: Literal['soft-ce', 'rlcd'] = 'soft-ce'
     laya_gradient_checkpointing: bool | None = None
     laya_sdk_validation: bool = True
+    laya_task_multipliers: dict[str, Annotated[int, Field(strict=True,ge=1,le=8)]] = Field(default_factory=dict)
     mps_memory_fraction: float | None = Field(default=None,ge=.1,le=.7)
     training_timeout_seconds: int = Field(default=7200,ge=60,le=604800)
 
     @model_validator(mode='after')
     def compatible_backend(self):
+        if set(self.laya_task_multipliers)-set(PREDICATES):
+            raise ValueError('Unknown Laya predicate in task multipliers')
+        if self.laya_task_multipliers and self.backend!='LAYA_SDK':
+            raise ValueError('Laya task multipliers apply only to the official Laya trainer')
         if (self.backend == 'LAYA_SDK') != (self.family == 'LAYA'):
             raise ValueError('Laya uses its official SDK; generative models use the PEFT backend')
         if self.device == 'cpu' and self.dtype == 'float16':

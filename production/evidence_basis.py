@@ -17,6 +17,6 @@ def negative_basis(text,model_identity):
 
 def valid_negative_basis(text,pred):
     basis=pred.get('negative_basis') or {}
-    return bool(pred.get('value')=='NO' and basis.get('kind')==KIND and basis.get('model_identity') and
+    return bool(pred.get('value') in ('NO','NOT_VOTABLE') and basis.get('kind')==KIND and basis.get('model_identity') and
                 basis.get('complete_source_processed') is True and not pred.get('truncated') and
                 basis.get('source_sha256')==hashlib.sha256(text.encode()).hexdigest())

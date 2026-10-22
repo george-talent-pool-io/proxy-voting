@@ -14,7 +14,13 @@ from training.framework.bundle import write
 from production.storage import digest
 from pydantic import BaseModel, ConfigDict, Field
 
-VERSION = 'customer-correctness-v3'
+VERSION = 'customer-correctness-v4'
+
+
+def stratum(features):
+    # A specialist calibration stratum cannot silently qualify LLM outcomes.
+    return '|'.join(str(features.get(k,'UNSPECIFIED')) for k in
+        ('prediction','evidence_mode','input_type','language','supersession_cue','source'))
 
 
 class SupportPolicy(BaseModel):
@@ -99,13 +105,10 @@ def fit(records, *, identity, population, output, support_policy=None, context=N
             by_prediction[label] = {'fit': len(aa), 'fit_groups':fit_groups,'evaluation_groups':evaluation_groups,'evaluation': detail}
             if min(fit_groups,evaluation_groups)>=policy.min_stratum_groups and detail['ece'] <= policy.max_ece:
                 supported_predictions.append(label)
-        def stratum(r):
-            f=r['features']
-            return '|'.join(str(f.get(k,'UNSPECIFIED')) for k in ('prediction','evidence_mode','input_type','language','supersession_cue'))
         supported_strata=[]
-        for label in sorted({stratum(r) for r in a+b}):
-            aa=[r for r in a if stratum(r)==label]
-            bb=[(r,prob) for r,prob in zip(b,p) if stratum(r)==label]
+        for label in sorted({stratum(r['features']) for r in a+b}):
+            aa=[r for r in a if stratum(r['features'])==label]
+            bb=[(r,prob) for r,prob in zip(b,p) if stratum(r['features'])==label]
             detail=calibration_metrics([r['correct'] for r,_ in bb],[prob for _,prob in bb])
             if min(len({r['group'] for r in aa}),len({r['group'] for r,_ in bb}))>=policy.min_stratum_groups and detail['ece']<=policy.max_ece:supported_strata.append(label)
         curve = []
@@ -151,8 +154,7 @@ def predict(calibrator, key, feature, *, identity, population):
     if feature['features'].get('input_type') is not None and feature['features']['input_type'] not in model.get('input_types', []): return None
     f=feature['features']
     if f.get('evidence_mode') is not None:
-        stratum='|'.join(str(f.get(k,'UNSPECIFIED')) for k in ('prediction','evidence_mode','input_type','language','supersession_cue'))
-        if stratum not in model.get('supported_strata',[]):return None
+        if stratum(f) not in model.get('supported_strata',[]):return None
     if model.get('method') == 'BETA_BINOMIAL_CONSTANT': return model['probability']
     data = numeric_features(feature['features']); vector = np.zeros(len(model['vocabulary']))
     for name, value in data.items():

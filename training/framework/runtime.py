@@ -106,7 +106,7 @@ class RegisteredModel:
             if raw.get('usage',{}).get('truncated') is False:
                 from production.evidence_basis import negative_basis
                 for p in factors.values():
-                    if p['value']=='NO':p['negative_basis']=negative_basis(text,sha(getattr(self,'checkpoint_manifest_path',self.root/'model-manifest.json')))
+                    if p['value'] in ('NO','NOT_VOTABLE'):p['negative_basis']=negative_basis(text,sha(getattr(self,'checkpoint_manifest_path',self.root/'model-manifest.json')))
             deadline = extract_deadline(text, reference)
         else:
             prompt = (Path(self.plan['bundle']) / 'semantic-prompt.txt').read_text()
@@ -168,7 +168,7 @@ class RegisteredModel:
             if schema_valid:
                 from production.evidence_basis import negative_basis
                 for p in factors.values():
-                    if p['value']=='NO' and not p['evidence']:
+                    if p['value'] in ('NO','NOT_VOTABLE') and not p['evidence']:
                         p['negative_basis']=negative_basis(text,sha(getattr(self,'checkpoint_manifest_path',self.root/'model-manifest.json')))
             conflicts = list(parsed['ambiguities'])
             if any(not q['valid'] for quotes in ev['predicates'].values() for q in quotes):

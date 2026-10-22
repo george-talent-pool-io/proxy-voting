@@ -349,3 +349,28 @@ def test_customer_invalid_import_fails_without_crashing(customer_browser):
     page.locator('#message').get_by_text('JSON',exact=False).wait_for()
     assert not page.request.get(url+'/api/client/events?q=invalid-ui').json()['items']
     assert errors==[]
+
+
+def test_customer_random_audit_trace_and_original_evaluation_time(customer_browser):
+    """Persisted UI receipt fixture; no model quality or automation certificate."""
+    import sqlite3
+    from playwright.sync_api import expect
+    page,url,tmp,errors=customer_browser
+    response=page.request.post(url+'/api/client/imports',data={'id':'audit-ui-import','rows':[row(ident='AUDIT-UI')]})
+    assert response.ok,response.text()
+    eid=response.json()['rows'][0]['event_id'];view=page.request.get(url+'/api/client/events/'+eid).json()
+    decision={'id':'audit-ui','event_id':eid,'execution_id':'UI_FIXTURE','snapshot_hash':view['snapshot_hash'],
+              'created_at':'2026-10-22T12:00:00+00:00','decision':{
+                  'classification':'VOTABLE','confidence':None,'review_required':True,'automation_enabled':False,
+                  'evaluation_time':'2026-10-18T12:00:00+00:00','predicate_confidence':{},
+                  'review_reasons':['RANDOM_ACCEPTED_DECISION_AUDIT'],
+                  'audit_selection':{'selected':True,'pre_audit_eligible':True,'rate':.02}}}
+    with sqlite3.connect(tmp/'db.sqlite') as c:
+        c.execute('INSERT INTO client_decisions VALUES(?,?,?,?,?)',('audit-ui',decision['created_at'],eid,'UI_FIXTURE',json.dumps(decision)))
+    page.goto(url);open_event(page,'AUDIT-UI')
+    expect(page.locator('#event').get_by_text('RANDOM ACCEPTED-DECISION AUDIT',exact=True)).to_be_visible()
+    expect(page.locator('#review-time')).to_have_value('2026-10-18T12:00:00+00:00')
+    expect(page.locator('#metrics')).to_contain_text('Random accepted-decision audits')
+    customer_browser.restart();page.reload();open_event(page,'AUDIT-UI')
+    expect(page.locator('#event')).to_contain_text('RANDOM ACCEPTED-DECISION AUDIT')
+    assert errors==[]

@@ -134,3 +134,29 @@ def test_audit_and_task_inputs_immutable(client_app):
 def store_connection():
     from apps.api import store
     return store.connect()
+
+
+def test_verified_random_audit_error_suspends_release_and_enters_revision_history(client_app):
+    """Software-only receipt fixture; this does not manufacture a qualified model."""
+    from apps.api import store
+    from semantic_pipeline.schema import PREDICATES
+    c=client_app;eid=imported(c)
+    view=c.get('/api/client/events/'+eid,auth=auth('expert')).json();label=body(view)
+    before={'predicates':{k:{'value':label['target'][k]} for k in PREDICATES},
+            'decision':{'classification':'VOTABLE'},'deadline':{'status':'OPEN'},
+            'evaluation_time':label['evaluation_time']}
+    before['predicates']['share_blocking']['value']='YES'
+    receipt={'id':'audit-receipt','event_id':eid,'execution_id':'audit-execution','snapshot_hash':view['snapshot_hash'],
+             'decision':{'review_required':True,'qualification_id':'SOFTWARE_FIXTURE_NOT_A_CERTIFICATE',
+                         'confidence':.995,'audit_selection':{'selected':True,'pre_audit_eligible':True}}}
+    with store.connect() as db:
+        db.execute('INSERT INTO learning_executions VALUES(?,?,?,?,?,?)',('audit-execution',eid,view['snapshot_hash'],store.now(),'fixture',store.dumps({'result':before})))
+        db.execute('INSERT INTO client_decisions VALUES(?,?,?,?,?)',('audit-receipt',store.now(),eid,'audit-execution',store.dumps(receipt)))
+    response=c.post(f'/api/client/events/{eid}/reviews',json=label,auth=auth('expert'))
+    assert response.status_code==201,response.text
+    with store.connect() as db:
+        suspension=json.loads(db.execute('SELECT payload FROM client_suspensions').fetchone()[0])
+    assert suspension['fields']==['share_blocking']
+    state=c.get('/api/client/status',auth=auth('auditor')).json()
+    assert state['monitoring']['random_audit_reviews']==1 and state['monitoring']['release_suspensions']==1
+    assert state['monitoring']['other_review_decisions']==0

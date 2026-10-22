@@ -16,5 +16,6 @@ def test_source_archive_contains_every_package_and_excludes_operational_data(tmp
     assert 'tests/fixtures/prowide-mt564.json' in names
     assert {'.dockerignore','.gitignore'} <= names
     for name in names:
+        assert not name.startswith('training/reliability/')
         assert not name.startswith(('artifacts/','data/experiments/','data/qualification-corpora/','data/training-workspace/'))
         assert not name.endswith(('.safetensors','.sqlite','.sqlite3','.pem','.key'))

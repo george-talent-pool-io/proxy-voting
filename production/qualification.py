@@ -35,6 +35,7 @@ class Policy(BaseModel):
     max_review_rate: float = Field(default=.1, ge=0, le=1)
     confidence_level: float = Field(default=.95, ge=.9, lt=1)
     validity_days: int = Field(default=90, ge=1, le=180)
+    random_audit_rate: float = Field(default=.02, ge=.01, le=.5)
 
 
 def lower_bound(correct, total, alpha):
@@ -70,6 +71,7 @@ def decision_feature(text, result, meta):
         f['features'].update({key + '_value': pred['value'], key + '_margin': scores[0] - scores[1] if len(scores) > 1 else None,
                               key + '_evidence': any(e.get('valid') for e in pred.get('evidence', []))})
     f['features']['deadline_status'] = result['deadline']['status']
+    f['features']['source'] += ':LLM_INVOKED' if (result.get('llm') or {}).get('invoked') else ':SPECIALIST_OR_RULES_ONLY'
     return f
 
 
@@ -131,7 +133,8 @@ def statistics(records, policy):
     if len(by_group) < p.min_auto_groups: reasons.append('INSUFFICIENT_AUTO_ACCEPT_GROUPS')
     if precision < p.min_auto_precision_lower_bound: reasons.append('AUTO_PRECISION_LOWER_BOUND_NOT_MET')
     rate = 1 - len(accepted) / len(records)
-    if rate > p.max_review_rate: reasons.append('REVIEW_RATE_TARGET_NOT_MET')
+    total_review = rate + (1 - rate) * p.random_audit_rate
+    if total_review > p.max_review_rate: reasons.append('REVIEW_RATE_TARGET_NOT_MET')
     for key, m in recall.items():
         if m['positive_groups'] < p.min_positive_groups: reasons.append(key + ':INSUFFICIENT_POSITIVE_GROUPS')
         if m['recall_lower_bound'] < p.min_critical_recall_lower_bound: reasons.append(key + ':RECALL_LOWER_BOUND_NOT_MET')
@@ -142,7 +145,11 @@ def statistics(records, policy):
             'all_fields_exact_correct': sum(r['exact_correct'] for r in records),
             'accepted_groups': len(by_group), 'wrong_auto_processed': sum(not r['exact_correct'] for r in accepted),
             'measured_auto_precision': sum(r['exact_correct'] for r in accepted) / len(accepted) if accepted else None,
-            'auto_precision_lower_bound': precision, 'review_rate': rate, 'critical': recall,
+            'auto_precision_lower_bound': precision, 'review_rate': rate,
+            'expected_total_review_rate_including_audits': total_review,
+            'random_audit_rate_of_otherwise_accepted': p.random_audit_rate,
+            'review_rate_scope': 'review_rate is confidence/evidence review before random audits; total is the policy expected rate, not a realised finite-sample guarantee',
+            'critical': recall,
             'statistical_gate_passed': not reasons, 'reasons': reasons,
             'bound_method': 'One-sided exact binomial bounds on worst-outcome independent groups; Bonferroni over five claims',
             'policy': p.model_dump()}

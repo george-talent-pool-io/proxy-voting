@@ -1,0 +1,318 @@
+{
+  "version": "balanced-notice-compositions-v1",
+  "reference": "2026-10-22T12:00:00+00:00",
+  "count": 3200,
+  "groups": 2383,
+  "files": {
+    "TRAIN": {
+      "inputs": "TRAIN.inputs.jsonl",
+      "inputs_sha256": "e4f870e0597d566e51e5c9b28f39afbc50013642f5b6f61642e7cd58c6a794af",
+      "labels": "development/TRAIN.labels.jsonl",
+      "labels_sha256": "ab020ba1051cd3b608d5fff6d413d251dea84809c5494e0e16a72ab2bf58e199",
+      "n": 836,
+      "groups": 599,
+      "labels_by_field": {
+        "votability": {
+          "NOT_VOTABLE": 319,
+          "UNCERTAIN": 198,
+          "VOTABLE": 319
+        },
+        "share_blocking": {
+          "NO": 711,
+          "YES": 102,
+          "UNKNOWN": 23
+        },
+        "poa_required": {
+          "NO": 708,
+          "YES": 99,
+          "UNKNOWN": 29
+        },
+        "registration_required": {
+          "NO": 716,
+          "YES": 87,
+          "UNKNOWN": 33
+        },
+        "beneficial_owner_disclosure_required": {
+          "NO": 706,
+          "YES": 92,
+          "UNKNOWN": 38
+        },
+        "holding_confirmation_required": {
+          "NO": 710,
+          "YES": 90,
+          "UNKNOWN": 36
+        },
+        "split_voting_restricted": {
+          "NO": 695,
+          "YES": 99,
+          "UNKNOWN": 42
+        },
+        "securities_lending_recall_required": {
+          "NO": 694,
+          "UNKNOWN": 38,
+          "YES": 104
+        },
+        "other_voting_restriction": {
+          "NO": 700,
+          "YES": 94,
+          "UNKNOWN": 42
+        }
+      },
+      "lengths": {
+        "MEDIUM": 280,
+        "SHORT": 444,
+        "LONG": 112
+      }
+    },
+    "VALIDATION": {
+      "inputs": "VALIDATION.inputs.jsonl",
+      "inputs_sha256": "dae2da736c98445edc04cd3da19bf0a7268f6a0f6dcc8be21b24a1f8cc0023ca",
+      "labels": "development/VALIDATION.labels.jsonl",
+      "labels_sha256": "6b4e0966f3b2bb266de39b565c1db784180e141df9fc10512ea395cfc4e42f96",
+      "n": 374,
+      "groups": 279,
+      "labels_by_field": {
+        "votability": {
+          "NOT_VOTABLE": 132,
+          "UNCERTAIN": 93,
+          "VOTABLE": 149
+        },
+        "share_blocking": {
+          "NO": 311,
+          "YES": 48,
+          "UNKNOWN": 15
+        },
+        "poa_required": {
+          "NO": 312,
+          "UNKNOWN": 17,
+          "YES": 45
+        },
+        "registration_required": {
+          "NO": 310,
+          "YES": 44,
+          "UNKNOWN": 20
+        },
+        "beneficial_owner_disclosure_required": {
+          "NO": 314,
+          "YES": 42,
+          "UNKNOWN": 18
+        },
+        "holding_confirmation_required": {
+          "NO": 309,
+          "YES": 43,
+          "UNKNOWN": 22
+        },
+        "split_voting_restricted": {
+          "NO": 307,
+          "YES": 42,
+          "UNKNOWN": 25
+        },
+        "securities_lending_recall_required": {
+          "NO": 324,
+          "UNKNOWN": 17,
+          "YES": 33
+        },
+        "other_voting_restriction": {
+          "NO": 309,
+          "UNKNOWN": 21,
+          "YES": 44
+        }
+      },
+      "lengths": {
+        "SHORT": 190,
+        "LONG": 62,
+        "MEDIUM": 122
+      }
+    },
+    "LAYA_STAGE": {
+      "inputs": "LAYA_STAGE.inputs.jsonl",
+      "inputs_sha256": "4ead5263445da0fc2d104957d3b53b5793656391f06452f9dadff7297928aef3",
+      "labels": "private/LAYA_STAGE.labels.jsonl",
+      "labels_sha256": "02995b85bf36c582a04ab1a6b11de3e7294e33424fd1a631256b860d0fb54ac6",
+      "n": 726,
+      "groups": 582,
+      "labels_by_field": {
+        "votability": {
+          "UNCERTAIN": 162,
+          "NOT_VOTABLE": 236,
+          "VOTABLE": 328
+        },
+        "share_blocking": {
+          "NO": 607,
+          "YES": 87,
+          "UNKNOWN": 32
+        },
+        "poa_required": {
+          "NO": 580,
+          "YES": 108,
+          "UNKNOWN": 38
+        },
+        "registration_required": {
+          "NO": 589,
+          "YES": 107,
+          "UNKNOWN": 30
+        },
+        "beneficial_owner_disclosure_required": {
+          "NO": 588,
+          "YES": 99,
+          "UNKNOWN": 39
+        },
+        "holding_confirmation_required": {
+          "NO": 601,
+          "YES": 82,
+          "UNKNOWN": 43
+        },
+        "split_voting_restricted": {
+          "NO": 589,
+          "YES": 97,
+          "UNKNOWN": 40
+        },
+        "securities_lending_recall_required": {
+          "NO": 571,
+          "YES": 111,
+          "UNKNOWN": 44
+        },
+        "other_voting_restriction": {
+          "NO": 579,
+          "YES": 104,
+          "UNKNOWN": 43
+        }
+      },
+      "lengths": {
+        "SHORT": 343,
+        "MEDIUM": 262,
+        "LONG": 121
+      }
+    },
+    "CASCADE_FINAL": {
+      "inputs": "CASCADE_FINAL.inputs.jsonl",
+      "inputs_sha256": "23e85e16bc60a014fb22ff41dc3cf6c783d1fb84853c7512b125bb03a28c0cc0",
+      "labels": "private/CASCADE_FINAL.labels.jsonl",
+      "labels_sha256": "e541d61729787138ef5220f09dc6d70edfe3fa3b06d4334d29be7d16ad6cff5e",
+      "n": 839,
+      "groups": 605,
+      "labels_by_field": {
+        "votability": {
+          "UNCERTAIN": 247,
+          "NOT_VOTABLE": 278,
+          "VOTABLE": 314
+        },
+        "share_blocking": {
+          "NO": 699,
+          "YES": 99,
+          "UNKNOWN": 41
+        },
+        "poa_required": {
+          "NO": 706,
+          "YES": 99,
+          "UNKNOWN": 34
+        },
+        "registration_required": {
+          "NO": 704,
+          "YES": 94,
+          "UNKNOWN": 41
+        },
+        "beneficial_owner_disclosure_required": {
+          "NO": 713,
+          "YES": 91,
+          "UNKNOWN": 35
+        },
+        "holding_confirmation_required": {
+          "NO": 706,
+          "YES": 90,
+          "UNKNOWN": 43
+        },
+        "split_voting_restricted": {
+          "NO": 711,
+          "YES": 83,
+          "UNKNOWN": 45
+        },
+        "securities_lending_recall_required": {
+          "NO": 724,
+          "YES": 76,
+          "UNKNOWN": 39
+        },
+        "other_voting_restriction": {
+          "NO": 714,
+          "YES": 93,
+          "UNKNOWN": 32
+        }
+      },
+      "lengths": {
+        "MEDIUM": 295,
+        "LONG": 121,
+        "SHORT": 423
+      }
+    },
+    "FROZEN_TEST": {
+      "inputs": "FROZEN_TEST.inputs.jsonl",
+      "inputs_sha256": "5919f629b87d87bf441064e64f5c806802e27f5c6100aeb5c72f74913a7266c1",
+      "labels": "private/FROZEN_TEST.labels.jsonl",
+      "labels_sha256": "a9a6edda61329481a850dcb263e76e895eec382a8e0a04fa0bb3ad6add7777c5",
+      "n": 425,
+      "groups": 318,
+      "labels_by_field": {
+        "votability": {
+          "UNCERTAIN": 107,
+          "NOT_VOTABLE": 127,
+          "VOTABLE": 191
+        },
+        "share_blocking": {
+          "NO": 344,
+          "YES": 65,
+          "UNKNOWN": 16
+        },
+        "poa_required": {
+          "NO": 338,
+          "YES": 62,
+          "UNKNOWN": 25
+        },
+        "registration_required": {
+          "NO": 345,
+          "UNKNOWN": 24,
+          "YES": 56
+        },
+        "beneficial_owner_disclosure_required": {
+          "NO": 338,
+          "YES": 68,
+          "UNKNOWN": 19
+        },
+        "holding_confirmation_required": {
+          "NO": 335,
+          "YES": 71,
+          "UNKNOWN": 19
+        },
+        "split_voting_restricted": {
+          "NO": 345,
+          "UNKNOWN": 21,
+          "YES": 59
+        },
+        "securities_lending_recall_required": {
+          "NO": 341,
+          "UNKNOWN": 30,
+          "YES": 54
+        },
+        "other_voting_restriction": {
+          "NO": 351,
+          "YES": 57,
+          "UNKNOWN": 17
+        }
+      },
+      "lengths": {
+        "MEDIUM": 137,
+        "SHORT": 222,
+        "LONG": 66
+      }
+    }
+  },
+  "construction_sha256": "196396027810299b1de71adc5fef9944d3360d12c487bd67bf2dd166e0898bbb",
+  "material_sha256": "a74c4914e77dbb5b31bb3d4ea38c64724cdd91beae5702e3ff65cf12497136fa",
+  "label_origin": "AI_AUTHORED",
+  "customer_accuracy": null,
+  "automation_enabled": false,
+  "limitations": [
+    "Controlled synthetic notice compositions, not a representative customer sample.",
+    "Shared authored linguistic atoms across roles; composition/lexical isolation does not prove independent linguistic generalisation.",
+    "English only. Difficult/UNKNOWN conditions are deliberately oversampled; review rate is not a customer forecast."
+  ]
+}

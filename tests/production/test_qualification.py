@@ -39,6 +39,15 @@ def test_review_percentage_is_measured_target_not_promise():
     assert m['review_rate'] == pytest.approx(.2)
 
 
+def test_review_budget_includes_random_audits_of_accepted_decisions():
+    rows=controlled_records(1000)
+    for r in rows[:90]:r['accepted']=False
+    m=q.statistics(rows,{})
+    assert m['review_rate']==pytest.approx(.09)
+    assert m['expected_total_review_rate_including_audits']==pytest.approx(.1082)
+    assert 'REVIEW_RATE_TARGET_NOT_MET' in m['reasons']
+
+
 def calibration_rows():
     values=[]
     for fold,n in [('FIT',500),('EVALUATION',200)]:

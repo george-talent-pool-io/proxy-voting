@@ -144,12 +144,13 @@ def review(ident, body, user, *, ai=False):
             decisions = c.execute('SELECT * FROM client_decisions WHERE event_id=?', (ident,)).fetchall()
             for d in decisions:
                 prior = json.loads(d['payload'])
-                if prior['snapshot_hash'] != view['snapshot_hash'] or prior['decision']['review_required']: continue
+                if prior['snapshot_hash'] != view['snapshot_hash']: continue
                 execution = c.execute('SELECT payload FROM learning_executions WHERE id=?', (prior['execution_id'],)).fetchone()
                 before = json.loads(execution[0])['result']
-                wrong = [k for k in events.PREDICATES if before['predicates'][k]['value'] != data['target'][k]]
-                if data.get('expected_final_status') and before['decision']['classification'] != data['expected_final_status']: wrong.append('final_status')
-                if data.get('expected_deadline_status') and before['deadline']['status'] != data['expected_deadline_status']: wrong.append('deadline_status')
+                from production.monitoring import verified_errors
+                wrong = verified_errors(prior, before, data['target'], reference=reference,
+                                        expected_final=data.get('expected_final_status'),
+                                        expected_deadline=data.get('expected_deadline_status'))
                 if wrong:
                     c.execute('INSERT INTO client_suspensions VALUES(NULL,?,?,?,?)', (store.now(), prior['decision']['qualification_id'], r['id'],
                               store.dumps({'reason': 'POST_RELEASE_VERIFIED_AUTO_ERROR', 'event_id': ident, 'fields': wrong})))
