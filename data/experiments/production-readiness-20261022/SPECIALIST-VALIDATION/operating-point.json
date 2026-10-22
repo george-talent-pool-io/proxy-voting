@@ -1,0 +1,117 @@
+{
+  "version": "confidence-operating-point-v1",
+  "identity": "52f10bd45c3332f6c61849fc5cc591f8553c5b102518c2c853a9b1683a8616e4",
+  "calibrator_sha256": "8d8cdb9fbaae7c96820cb40b4a3ff05022062112d73eb6c81ecd9ddc4bd543db",
+  "validation_sha256": "99f37839ec9ae1fb0e57f9619fe0e028b11f365deb1e442ebbf37315a4e11506",
+  "selection": null,
+  "curve": [
+    {
+      "threshold": 0.7,
+      "n": 160,
+      "accepted": 0,
+      "accepted_groups": 0,
+      "coverage": 0.0,
+      "review_rate": 1.0,
+      "correctness": null,
+      "wrong_accepted": 0,
+      "precision_lower_bound": 0.0,
+      "critical_false_negatives_accepted": {
+        "votability": 0,
+        "share_blocking": 0,
+        "poa_required": 0,
+        "registration_required": 0
+      }
+    },
+    {
+      "threshold": 0.8,
+      "n": 160,
+      "accepted": 0,
+      "accepted_groups": 0,
+      "coverage": 0.0,
+      "review_rate": 1.0,
+      "correctness": null,
+      "wrong_accepted": 0,
+      "precision_lower_bound": 0.0,
+      "critical_false_negatives_accepted": {
+        "votability": 0,
+        "share_blocking": 0,
+        "poa_required": 0,
+        "registration_required": 0
+      }
+    },
+    {
+      "threshold": 0.9,
+      "n": 160,
+      "accepted": 0,
+      "accepted_groups": 0,
+      "coverage": 0.0,
+      "review_rate": 1.0,
+      "correctness": null,
+      "wrong_accepted": 0,
+      "precision_lower_bound": 0.0,
+      "critical_false_negatives_accepted": {
+        "votability": 0,
+        "share_blocking": 0,
+        "poa_required": 0,
+        "registration_required": 0
+      }
+    },
+    {
+      "threshold": 0.95,
+      "n": 160,
+      "accepted": 0,
+      "accepted_groups": 0,
+      "coverage": 0.0,
+      "review_rate": 1.0,
+      "correctness": null,
+      "wrong_accepted": 0,
+      "precision_lower_bound": 0.0,
+      "critical_false_negatives_accepted": {
+        "votability": 0,
+        "share_blocking": 0,
+        "poa_required": 0,
+        "registration_required": 0
+      }
+    },
+    {
+      "threshold": 0.98,
+      "n": 160,
+      "accepted": 0,
+      "accepted_groups": 0,
+      "coverage": 0.0,
+      "review_rate": 1.0,
+      "correctness": null,
+      "wrong_accepted": 0,
+      "precision_lower_bound": 0.0,
+      "critical_false_negatives_accepted": {
+        "votability": 0,
+        "share_blocking": 0,
+        "poa_required": 0,
+        "registration_required": 0
+      }
+    },
+    {
+      "threshold": 0.99,
+      "n": 160,
+      "accepted": 0,
+      "accepted_groups": 0,
+      "coverage": 0.0,
+      "review_rate": 1.0,
+      "correctness": null,
+      "wrong_accepted": 0,
+      "precision_lower_bound": 0.0,
+      "critical_false_negatives_accepted": {
+        "votability": 0,
+        "share_blocking": 0,
+        "poa_required": 0,
+        "registration_required": 0
+      }
+    }
+  ],
+  "status": "NO_SUPPORTED_OPERATING_POINT",
+  "min_precision": 0.98,
+  "min_groups": 100,
+  "scope": "Declared calibration population only; review simulation, not automation authorisation",
+  "automation_enabled": false,
+  "sha256": "6840bf880e6379cbb874ef4b4760496282cca4352ec20fcf7768d5063e848342"
+}

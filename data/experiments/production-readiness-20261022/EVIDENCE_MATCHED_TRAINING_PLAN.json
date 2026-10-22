@@ -1,0 +1,52 @@
+{
+  "job": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/jobs/reliable-voting-evidence-matched-v1",
+  "parent": "reliable-voting-balanced-v1-selected",
+  "train_role_only": true,
+  "reason": "Native passage verification reused a document-trained model; derive annotated passage question items from TRAIN only, without inventing labels for other fields.",
+  "validation_selection": [
+    "existing374",
+    "fresh160"
+  ],
+  "calibration_not_used_for_model_selection": true,
+  "frozen_keys_opened": false,
+  "challenge_used_for_training_or_selection": false,
+  "spec": {
+    "backend": "LAYA_SDK",
+    "family": "LAYA",
+    "model_path": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/jobs/reliable-voting-balanced-v1-head-isolated/checkpoint",
+    "base_model_id": "convaiinnovations/laya:multilingual",
+    "base_revision": "7b928d828b7b0e022f929d9bd2e44165aa270148",
+    "seed": 42,
+    "epochs": 2,
+    "learning_rate": 1e-05,
+    "batch_size": 16,
+    "gradient_accumulation": 1,
+    "max_length": 1024,
+    "lora_rank": 8,
+    "lora_alpha": 16,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "device": "mps",
+    "dtype": "float32",
+    "max_steps": null,
+    "freeze_encoder": true,
+    "runtime_python": null,
+    "lora_layers": 1,
+    "generation_tokens": 2048,
+    "parent_seed_path": "/Users/georgebilchev/wavionex/proxy-voting/data/training-workspace/seeds/reliable-voting-balanced-v1-selected",
+    "initial_adapter_path": null,
+    "encoder_learning_rate": 1e-05,
+    "laya_loss": "soft-ce",
+    "laya_gradient_checkpointing": true,
+    "laya_sdk_validation": false,
+    "laya_task_multipliers": {
+      "votability": 4
+    },
+    "laya_evidence_passage_multiplier": 8,
+    "mps_memory_fraction": 0.25,
+    "training_timeout_seconds": 1800
+  },
+  "automation_enabled": false
+}

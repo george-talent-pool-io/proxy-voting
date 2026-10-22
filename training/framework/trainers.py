@@ -6,6 +6,7 @@ support for a particular Qwen/GLM architecture must pass its own smoke test.
 """
 import importlib.metadata
 import importlib.util
+import hashlib
 import json
 import os
 import platform
@@ -179,7 +180,7 @@ def laya_training_input(bundle, output, spec):
     budget={'unique_training_notices':len(rows),'source_sha256':sha(source),
             'multipliers':spec.laya_task_multipliers,'role':'TRAIN',
             'validation_resampled':False,'method':'Repeat official SDK question items; not new independent notices'}
-    if not spec.laya_task_multipliers:
+    if not spec.laya_task_multipliers and not spec.laya_evidence_passage_multiplier:
         return source,{**budget,'effective_question_items':sum(len(r['questions']) for r in rows)}
     from training.framework.bundle import jsonl
     effective=[]
@@ -189,9 +190,37 @@ def laya_training_input(bundle, output, spec):
             if key not in row['questions'] or key not in row['expected']:raise ValueError('Weighted task absent from training row')
             effective.extend({'state':row['state'],'questions':{key:row['questions'][key]},
                               'expected':{key:row['expected'][key]}} for _ in range(multiplier-1))
+    evidence_budget={'enabled':False}
+    if spec.laya_evidence_passage_multiplier:
+        from training.framework.bundle import load_bundle,laya_questions
+        _,examples=load_bundle(bundle)
+        questions=laya_questions(); projected={};provenance=[]
+        for example in examples:
+            if example.split!='TRAIN':continue
+            for key,quotes in example.target.evidence.model_dump().items():
+                for quote in quotes:
+                    if not quote or quote not in example.text:raise ValueError('TRAIN evidence must be an exact source passage')
+                    label=getattr(example.target,key);identity=(key,quote)
+                    if identity in projected and projected[identity]!=label:
+                        raise ValueError('Standalone evidence has conflicting labels; retain full context instead')
+                    projected[identity]=label
+                    provenance.append({'source_id':example.id,'source_hash':example.source_hash,'predicate':key,
+                        'passage_sha256':hashlib.sha256(quote.encode()).hexdigest(),'label':label,
+                        'start':example.text.index(quote),'end':example.text.index(quote)+len(quote),
+                        'origin':example.provenance.origin,'role':'TRAIN'})
+        for (key,quote),label in sorted(projected.items()):
+            effective.extend({'state':quote,'questions':{key:questions[key]},'expected':{key:label}}
+                             for _ in range(spec.laya_evidence_passage_multiplier))
+        provenance_path=Path(output).parent/'laya-evidence-training-provenance.jsonl'
+        jsonl(provenance_path,provenance)
+        evidence_budget={'enabled':True,'unique_passage_questions':len(projected),
+            'source_annotations':len(provenance),'multiplier':spec.laya_evidence_passage_multiplier,
+            'effective_question_items':len(projected)*spec.laya_evidence_passage_multiplier,
+            'provenance_sha256':sha(provenance_path),'source_roles':['TRAIN'],
+            'method':'Exact annotated quotations; only the annotated predicate is trained; other labels are never inferred'}
     target=Path(output).parent/'laya-effective-train.jsonl'
     jsonl(target,effective)
-    receipt={**budget,'effective_question_items':sum(len(r['questions']) for r in effective),
+    receipt={**budget,'evidence_training':evidence_budget,'effective_question_items':sum(len(r['questions']) for r in effective),
              'derived_sha256':sha(target)}
     write(Path(output).parent/'laya-training-sampling.json',receipt)
     return target,receipt

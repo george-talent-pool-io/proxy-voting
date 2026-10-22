@@ -1,0 +1,75 @@
+{
+  "version": "fresh-evidence-final-v2",
+  "reference": "2026-10-22T12:00:00+00:00",
+  "source_sha256": "a388e7cb72630284350a07ecd6c48fb56ce25330289bf2a8e91a2d6c1d7aa65c",
+  "label_origin": "AI_AUTHORED",
+  "records": 371,
+  "groups": 355,
+  "deduplicated_before_execution": true,
+  "compared_prior_records": 3960,
+  "excluded_exact_or_lexical_variants": 109,
+  "linguistic_column": 3,
+  "prior_opened_test_reused": false,
+  "customer_accuracy": null,
+  "automation_enabled": false,
+  "files": {
+    "FROZEN_TEST": {
+      "inputs": "FROZEN_TEST.inputs.jsonl",
+      "inputs_sha256": "9a0c0496bfbcc8890aba21e1cf71a6fb2f8f7bd060e855f61a588d73abb9e75b",
+      "labels": "private/FROZEN_TEST.labels.jsonl",
+      "labels_sha256": "b136f78668868fb429afc9f36022732303bdfc5a0b47f0d6bcbb333a214455f3",
+      "n": 371
+    }
+  },
+  "labels_by_field": {
+    "share_blocking": {
+      "NO": 285,
+      "YES": 78,
+      "UNKNOWN": 8
+    },
+    "poa_required": {
+      "NO": 280,
+      "YES": 87,
+      "UNKNOWN": 4
+    },
+    "registration_required": {
+      "NO": 294,
+      "YES": 74,
+      "UNKNOWN": 3
+    },
+    "beneficial_owner_disclosure_required": {
+      "NO": 296,
+      "YES": 68,
+      "UNKNOWN": 7
+    },
+    "holding_confirmation_required": {
+      "NO": 297,
+      "UNKNOWN": 5,
+      "YES": 69
+    },
+    "split_voting_restricted": {
+      "NO": 290,
+      "YES": 74,
+      "UNKNOWN": 7
+    },
+    "securities_lending_recall_required": {
+      "NO": 289,
+      "YES": 74,
+      "UNKNOWN": 8
+    },
+    "other_voting_restriction": {
+      "NO": 280,
+      "YES": 79,
+      "UNKNOWN": 12
+    },
+    "votability": {
+      "NOT_VOTABLE": 1,
+      "VOTABLE": 369,
+      "UNCERTAIN": 1
+    }
+  },
+  "limitations": [
+    "Separately authored controlled linguistic column, English only, two known date formulations.",
+    "Lexical/composition grouping is not proof of independent real-world linguistic families. Synthetic truth is not expert customer truth."
+  ]
+}

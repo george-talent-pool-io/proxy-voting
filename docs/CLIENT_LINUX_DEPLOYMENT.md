@@ -40,6 +40,38 @@ Use a Linux host sized for the chosen checkpoint and training method. The curren
 5. Open the configured HTTPS origin. Check `/api/client/ready` using a named identity. Verify database, JVM, Prowide helper, workspace permissions and audit integrity. Readiness does not mean the selected model is qualified.
 6. After model prerequisites are checked, explicitly set `TRAINING_EXECUTION_ENABLED=true` and recreate the API/worker. Preparation does not start training. The Compose automation switch remains false. A customer-approved deployment override can enable it only after a valid promotion; per-event gates still apply.
 
+### Installation neural-runtime acceptance
+
+Run the selected, sealed release on the actual installation host, with networking
+disabled and the same model/state mounts as the worker:
+
+```sh
+python -m scripts.qualify_model_installation \
+  --release CUSTOMER_SELECTED_RELEASE \
+  --output /srv/voting/logs/installation-probe-001 \
+  --reference 2026-10-22T12:00:00+00:00
+```
+
+This explicit probe executes four separate smoke notices, closes/reloads the
+actual models, repeats them, verifies quotations and persists both complete raw
+traces and a hashed receipt. It records cold lazy-stage loads separately from
+wrapper loading, latency, sampled parent RSS and semantic reload stability.
+It performs no download, training or promotion. Linux memory/device admission
+runs before loading: an MLX-only checkpoint or an insufficient-memory service
+cannot be passed off as a qualified Linux neural deployment. A development-only
+`--allow-unsealed-research` option is labelled in the receipt and cannot certify
+customer automation.
+
+The receipt cannot pass runtime execution if a configured stage was never
+exercised: a Laya-only fast path does not qualify the fallback LLM runtime.
+
+Passing this probe establishes execution/reload compatibility for the exact
+release on that host. It does **not** establish semantic accuracy, training
+compatibility, production throughput, fault-recovery targets or an automation
+threshold. Complete the customer learning campaign and independent qualification
+below. A different GPU/runtime/checkpoint needs its own acceptance evidence;
+Mac MLX results do not qualify a Linux CUDA deployment.
+
 ## Corpus and review contract
 
 Import JSONL in batches of at most 1,000 rows / 16 MiB. The browser accepts JSONL or a JSON array. The API uses an explicit batch idempotency ID. Each source row declares `raw`, `sender`, `source_type`, `source_reference`, `group_id`, `family`, `split`, `language`, `population`, and optionally `country`, `market`, `declared`. `declared` supplies CORP/SEME/function/PREV only for non-authoritative excerpts. Genuine FIN identities come from Prowide. A disagreement is rejected.

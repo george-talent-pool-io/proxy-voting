@@ -15,10 +15,11 @@ from semantic_pipeline.evidence import verify_evidence
 from semantic_pipeline.decision import decide
 from training.framework.runtime import RegisteredModel
 
-VERSION='whole-notice-scoped-evidence-v2'
+VERSION='whole-notice-scoped-evidence-v3'
 SOURCE_SHA256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
-NEGATIVE=re.compile(r'not (?:be )?(?:required|mandatory|a condition|block|immobili|restrict)|no .{0,65}(?:requirement|required|applies|condition|blocking)|need not|does not|do not|waiv|exempt|optional|voluntar|without|freely|unrestricted',re.I)
+NEGATIVE=re.compile(r'not (?:be )?(?:required|mandatory|necessary|needed|applicable|a condition|block|immobili|restrict)|no .{0,65}(?:requirement|required|applies|condition|blocking)|need not|does not|do not|waiv|exempt|optional|voluntar|without|freely|unrestricted|unnecessary|no longer',re.I)
 REQUIRED=re.compile(r'cannot.{0,60}without|reject.{0,50}unless|not.{0,40}accept.{0,40}unless|only after',re.I)
+AFFIRMATIVE=re.compile(r'\b(?:must|shall|mandatory|required|prerequisite|eligible|only)\b|will be.{0,25}(?:block|immobili|froze)|cannot.{0,30}(?:sell|transfer)',re.I)
 CONDITIONAL=re.compile(r'depending on|only if.{0,50}(?:physical|residen|attendance)|which route.{0,30}not',re.I)
 OTHER=r'professional.investor|retail holder|residen|minimum (?:position|holding)|paper.only|wet.signature|in.person.only|notari[sz].{0,20}signature'
 ALIASES={
@@ -53,9 +54,13 @@ class WholeNotice:
             if value in ('YES','VOTABLE'):candidate=positive
             elif value in ('NO','NOT_VOTABLE'):candidate=negative if key!='votability' else positive+negative
             conditional=any(CONDITIONAL.search(s['text']) for s in positive+negative)
-            contrary=(value=='NO' and positive and not negative or value=='YES' and negative and not positive)
+            # A topic mention (an address for POAs, for example) is not an
+            # affirmative requirement. The locator cannot contradict a native
+            # NO solely because a keyword appears without an obligation.
+            asserted_positive=[s for s in positive if AFFIRMATIVE.search(s['text']) or REQUIRED.search(s['text'])]
+            contrary=(value=='NO' and asserted_positive and not negative or value=='YES' and negative and not asserted_positive)
             opposing=negative if value in ('YES','VOTABLE') else positive if value in ('NO','NOT_VOTABLE') else []
-            current_contradiction=key!='votability' and bool(positive and negative)
+            current_contradiction=key!='votability' and bool(asserted_positive and negative)
             if conditional or contrary or current_contradiction:
                 pred['conflict']=True;conflicts.append(key+':SCOPED_EVIDENCE_CONFLICT_OR_CONDITION')
             # Later definitive source wording is a candidate, not a label rule.

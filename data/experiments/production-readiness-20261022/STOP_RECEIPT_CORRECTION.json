@@ -1,0 +1,10 @@
+{
+  "supersedes_claim_in": "STOPPED_ON_VALIDATION_GATE.json",
+  "frozen_answers_opened_by_study": true,
+  "evidence": "SPECIALIST-FROZEN_TEST/metrics.json, confidence.jsonl and SPECIALIST-RESULT.json exist; SIGINT landed during HYBRID construction.",
+  "frozen_set_status": "OPENED_DIAGNOSTIC_ONLY; not fresh independent qualification for revised models/routing",
+  "next_independent_qualification_requires_new_holdout": true,
+  "hybrid_completed_predictions": 0,
+  "first_receipt_sha256": "0cd363a46077b3c607d0ed7509e7bc5e95c327b2134a45c51ff5aa88a0a46d2e",
+  "automation_enabled": false
+}

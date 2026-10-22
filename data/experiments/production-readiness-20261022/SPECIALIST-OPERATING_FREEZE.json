@@ -1,0 +1,7 @@
+{
+  "release_identity": "52f10bd45c3332f6c61849fc5cc591f8553c5b102518c2c853a9b1683a8616e4",
+  "calibrator_sha256": "8d8cdb9fbaae7c96820cb40b4a3ff05022062112d73eb6c81ecd9ddc4bd543db",
+  "operating_point_sha256": "6840bf880e6379cbb874ef4b4760496282cca4352ec20fcf7768d5063e848342",
+  "corpus_sha256": "a75c4171dc55b6a6c6360c1f8a6a1887e252fde6c6ea249750ac0fdd0341b90d",
+  "frozen_answers_opened": false
+}

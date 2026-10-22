@@ -60,6 +60,20 @@ def test_opposing_current_passages_remain_visible_and_force_review():
     assert p['conflict'] and out['reconciliation']['conflicts']
 
 
+def test_unnecessary_requirement_is_not_treated_as_positive():
+    text='Shareholders may vote. Share blocking is unnecessary for this vote.'
+    p=model('NO').analyse(text)['predicates']['share_blocking']
+    assert p['value']=='NO' and not p.get('conflict')
+    assert p['evidence'][0]['text']=='Share blocking is unnecessary for this vote.'
+
+
+def test_topic_mention_alone_does_not_contradict_document_negative():
+    text='Shareholders may vote. The helpdesk answers questions about share blocking.'
+    p=model('NO').analyse(text)['predicates']['share_blocking']
+    assert p['value']=='NO' and not p.get('conflict')
+    assert not p['evidence']  # No invented negative quotation.
+
+
 def test_unsealed_bootstrap_cannot_smuggle_automation_qualification():
     import pytest
     from apps.api.production import Inference

@@ -1,0 +1,184 @@
+{
+  "version": "fresh-evidence-cohort-v1",
+  "reference": "2026-10-22T12:00:00+00:00",
+  "source_sha256": "6f537ca8a95cd52c44d33d14ada8fd322ac8d74dec8284de116574a5b5d0f1a1",
+  "files": {
+    "VALIDATION": {
+      "inputs": "VALIDATION.inputs.jsonl",
+      "inputs_sha256": "276e8347c07fbe4f2bbcf5583c988273b2976182a1b755c427312e46e17bbc86",
+      "labels": "development/VALIDATION.labels.jsonl",
+      "labels_sha256": "bc84c477abd89938608ef25e6bd70439cf667ee733fe35ac5ae914c97d014366",
+      "n": 160,
+      "groups": 115,
+      "labels_by_field": {
+        "votability": {
+          "VOTABLE": 113,
+          "UNCERTAIN": 12,
+          "NOT_VOTABLE": 35
+        },
+        "share_blocking": {
+          "NO": 141,
+          "YES": 18,
+          "UNKNOWN": 1
+        },
+        "poa_required": {
+          "NO": 130,
+          "YES": 29,
+          "UNKNOWN": 1
+        },
+        "registration_required": {
+          "NO": 130,
+          "YES": 26,
+          "UNKNOWN": 4
+        },
+        "beneficial_owner_disclosure_required": {
+          "NO": 138,
+          "YES": 19,
+          "UNKNOWN": 3
+        },
+        "holding_confirmation_required": {
+          "NO": 132,
+          "YES": 27,
+          "UNKNOWN": 1
+        },
+        "split_voting_restricted": {
+          "NO": 142,
+          "YES": 15,
+          "UNKNOWN": 3
+        },
+        "securities_lending_recall_required": {
+          "NO": 132,
+          "YES": 26,
+          "UNKNOWN": 2
+        },
+        "other_voting_restriction": {
+          "NO": 135,
+          "YES": 25
+        }
+      }
+    },
+    "CALIBRATION": {
+      "inputs": "CALIBRATION.inputs.jsonl",
+      "inputs_sha256": "37396b0381b555caddba0d52f93cacd31aab4ac88af0b9f127643ff64f7079c3",
+      "labels": "development/CALIBRATION.labels.jsonl",
+      "labels_sha256": "f03003052db8664f23746f3a38856152cd5831a0552df2a26345af60b8e4fc54",
+      "n": 360,
+      "groups": 268,
+      "labels_by_field": {
+        "votability": {
+          "VOTABLE": 266,
+          "UNCERTAIN": 25,
+          "NOT_VOTABLE": 69
+        },
+        "share_blocking": {
+          "NO": 309,
+          "YES": 48,
+          "UNKNOWN": 3
+        },
+        "poa_required": {
+          "YES": 65,
+          "NO": 288,
+          "UNKNOWN": 7
+        },
+        "registration_required": {
+          "YES": 57,
+          "NO": 299,
+          "UNKNOWN": 4
+        },
+        "beneficial_owner_disclosure_required": {
+          "NO": 311,
+          "YES": 45,
+          "UNKNOWN": 4
+        },
+        "holding_confirmation_required": {
+          "YES": 57,
+          "NO": 301,
+          "UNKNOWN": 2
+        },
+        "split_voting_restricted": {
+          "NO": 288,
+          "YES": 63,
+          "UNKNOWN": 9
+        },
+        "securities_lending_recall_required": {
+          "NO": 310,
+          "UNKNOWN": 4,
+          "YES": 46
+        },
+        "other_voting_restriction": {
+          "NO": 300,
+          "YES": 56,
+          "UNKNOWN": 4
+        }
+      }
+    },
+    "FROZEN_TEST": {
+      "inputs": "FROZEN_TEST.inputs.jsonl",
+      "inputs_sha256": "2b8f7acb7e90cc4df68842a0192a728fe65103516d9e8c482e41eef17e4b2956",
+      "labels": "private/FROZEN_TEST.labels.jsonl",
+      "labels_sha256": "568775718b0cd86498891f24e2c18598821117e8fb0dbb9e6ed7fb7c25e92741",
+      "n": 240,
+      "groups": 184,
+      "labels_by_field": {
+        "votability": {
+          "VOTABLE": 183,
+          "UNCERTAIN": 17,
+          "NOT_VOTABLE": 40
+        },
+        "share_blocking": {
+          "NO": 193,
+          "YES": 45,
+          "UNKNOWN": 2
+        },
+        "poa_required": {
+          "NO": 201,
+          "YES": 36,
+          "UNKNOWN": 3
+        },
+        "registration_required": {
+          "YES": 40,
+          "NO": 197,
+          "UNKNOWN": 3
+        },
+        "beneficial_owner_disclosure_required": {
+          "NO": 202,
+          "YES": 36,
+          "UNKNOWN": 2
+        },
+        "holding_confirmation_required": {
+          "YES": 42,
+          "NO": 196,
+          "UNKNOWN": 2
+        },
+        "split_voting_restricted": {
+          "NO": 195,
+          "YES": 43,
+          "UNKNOWN": 2
+        },
+        "securities_lending_recall_required": {
+          "YES": 36,
+          "NO": 198,
+          "UNKNOWN": 6
+        },
+        "other_voting_restriction": {
+          "NO": 193,
+          "UNKNOWN": 3,
+          "YES": 44
+        }
+      }
+    }
+  },
+  "original_count": 760,
+  "count": 760,
+  "cross_role_components_excluded": 0,
+  "unique_text_hashes": 568,
+  "groups": 567,
+  "label_origin": "AI_AUTHORED",
+  "limitations": [
+    "One separately authored linguistic column per role; controlled phrasing, not broad linguistic diversity.",
+    "Compositional/lexical groups are not independent human-labelled families.",
+    "English only; two controlled date formulations; not customer accuracy or a production certificate."
+  ],
+  "automation_enabled": false,
+  "customer_accuracy": null
+}

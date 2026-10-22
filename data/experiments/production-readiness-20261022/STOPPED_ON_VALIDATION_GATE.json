@@ -1,0 +1,15 @@
+{
+  "reason": "Fresh VALIDATION final-status agreement 51/160; mismatch between document training and passage verification. Do not proceed to expensive LLM qualification before correcting development formulation.",
+  "signal": "SIGINT",
+  "pid": 85529,
+  "completed_roles": [
+    "SPECIALIST-CALIBRATION",
+    "SPECIALIST-VALIDATION"
+  ],
+  "partial_frozen_predictions": 240,
+  "partial_frozen_prediction_sha256": "ad6d47fe53b6536b5627d1fa73817d2721926e51aaf2e6d81bfc346be8e3b873",
+  "frozen_prediction_receipt_exists": true,
+  "frozen_answers_opened_by_study": false,
+  "historical_outputs_preserved": true,
+  "automation_enabled": false
+}

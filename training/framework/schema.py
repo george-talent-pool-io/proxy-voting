@@ -98,6 +98,9 @@ class TrainSpec(BaseModel):
     laya_gradient_checkpointing: bool | None = None
     laya_sdk_validation: bool = True
     laya_task_multipliers: dict[str, Annotated[int, Field(strict=True,ge=1,le=8)]] = Field(default_factory=dict)
+    # Train the evidence-verification input distribution using only exact,
+    # explicitly labelled TRAIN quotations. Zero preserves historical jobs.
+    laya_evidence_passage_multiplier: int = Field(default=0, strict=True, ge=0, le=8)
     mps_memory_fraction: float | None = Field(default=None,ge=.1,le=.7)
     training_timeout_seconds: int = Field(default=7200,ge=60,le=604800)
 
@@ -107,6 +110,8 @@ class TrainSpec(BaseModel):
             raise ValueError('Unknown Laya predicate in task multipliers')
         if self.laya_task_multipliers and self.backend!='LAYA_SDK':
             raise ValueError('Laya task multipliers apply only to the official Laya trainer')
+        if self.laya_evidence_passage_multiplier and self.backend!='LAYA_SDK':
+            raise ValueError('Evidence passage training applies only to the official Laya trainer')
         if (self.backend == 'LAYA_SDK') != (self.family == 'LAYA'):
             raise ValueError('Laya uses its official SDK; generative models use the PEFT backend')
         if self.device == 'cpu' and self.dtype == 'float16':

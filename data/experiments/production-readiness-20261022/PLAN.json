@@ -1,0 +1,10 @@
+{
+  "baseline": "reliability-programme-20261022",
+  "checkpoint": "reliable-voting-balanced-v1-head-isolated",
+  "selection_population": "VALIDATION_ONLY",
+  "condition": "WHOLE_NOTICE_WITH_PASSAGE_EVIDENCE_V2",
+  "challenge_used_for_selection": false,
+  "automation_enabled": false,
+  "runtime_sha256": "33ce4cd0945cd056af47415a2267e534ec06c9d372b42ddc93466ea9821b3136",
+  "timing_caveat": "Other project voice-model processes observed on this desktop; not isolated hardware"
+}
