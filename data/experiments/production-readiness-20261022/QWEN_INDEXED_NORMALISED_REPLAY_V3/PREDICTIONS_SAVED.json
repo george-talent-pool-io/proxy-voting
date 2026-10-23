@@ -1,0 +1,7 @@
+{
+  "sha256": "a6e462a11032f7748e78588f2f54ea9afd5c5c8544e088227870f4fc0794cf4d",
+  "native_source_sha256": "b1585645b70c4577f8fb35f87eb6aaafd2da72a3788b616ad58a57c2dbb2871f",
+  "new_neural_calls": 0,
+  "method": "Same complete fenced-JSON unwrapping already used by ordinary Qwen; no repair or altered model response",
+  "answers_opened": false
+}

@@ -13,7 +13,24 @@ This is not an OSI-approved open-source licence. Dependencies, model weights,
 datasets, examples and fonts retain their own licences. The change does not
 revoke permissions already granted for earlier MIT-licensed copies or releases.
 
-## Current reliability qualification (22 October 2026)
+## Current engineering qualification (23 October 2026)
+
+The [readiness execution plan](data/reports/PRODUCTION_READINESS_EXECUTION_PLAN.md)
+and [current engineering/evaluation report](data/reports/PRODUCTION_READINESS_EVALUATION.md)
+record the latest evidence, leakage and model-selection fixes. Serving and both
+LLM trainers now support an opt-in indexed-evidence protocol with the same
+canonical business schema. A paired 20-notice development pilot retained
+180/180 semantic assertions while reducing recorded median Qwen request time
+from 34.01 to 13.84 seconds. These are controlled pilot results, not customer
+accuracy or completed confidence/throughput qualification.
+
+The evidence-training candidate failed to improve fresh validation and was
+quarantined after a derived-input overlap audit. The frozen specialist parent
+was not replaced. New Qwen/hybrid calibration and independent qualification
+remain in progress; an interrupted host-sleep attempt is preserved separately
+from the supervised retry. No automation operating point is approved.
+
+## Historical reliability qualification (22 October 2026)
 
 The latest balanced specialist improved from **3,243/3,825 to 3,769/3,825**
 labelled assertions on the same AI-authored frozen test. Complete nine-field

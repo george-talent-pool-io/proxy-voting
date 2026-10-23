@@ -1,0 +1,21 @@
+{
+  "job": "data/training-workspace/jobs/reliable-voting-evidence-matched-v2",
+  "unique_derived_states": 565,
+  "protected_input_collisions": 0,
+  "validation_input_collisions": 9,
+  "protected_collision_hashes": [],
+  "validation_collision_hashes": [
+    "9f9380f3d6efc153944f829542dc985c449edddb3115e149634468af0e800b00",
+    "18241e38adb18e7c7154b61742eef5f0367b5261806b787da7635365f984dea7",
+    "6bf4cadf6bfacecf97e41700aa15582169f825907f21291bf8c7f8a941643a95",
+    "edd7053ac1f6e7a946a0ff24ae4bc7042ce738e8dd2215eecbccd091eb297897",
+    "fe29c2b6df53a499d08954803ebe789ae1803c00d3369bb9c26c98d152ae2bf3",
+    "cbdececd33bfa290808fe7b9456d98c9e4ea0858afbd3bbc1029412280e1ffb7",
+    "432e6941fb05ac7021e81775b3b2bb4acca0ad9ee4103237317f06f56490de32",
+    "2622a42cda02f28be1b79aa375eff4a16a211c99146a951a50959ae3cac8635f",
+    "ad777645f3e59dd8238b8e9e7b652ef011bb26fb7781e4a3daad18e8560495c3"
+  ],
+  "model_selection_eligibility": "QUARANTINED",
+  "challenge_labels_read": false,
+  "automation_enabled": false
+}

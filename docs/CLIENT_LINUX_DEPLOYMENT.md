@@ -98,6 +98,22 @@ CALIBRATION and FROZEN_TEST reviews are blind: the HTTP source view hides prior 
 
 Numerical predicate confidence estimates predicate correctness in its calibration population. Final-decision confidence has its **own correctness calibrator**; a minimum of predicate probabilities is not presented as a joint probability. Exact quote matching verifies provenance, not entailment. No language outside the initial English confidence population is auto-accepted. Human review remains available at every stage.
 
+Before scheduling qualification, calculate accepted-group support:
+
+```sh
+python -m scripts.plan_qualification_support --precision .98 --candidates 6 \
+  --validation-groups 500 --frozen-groups 500
+```
+
+With zero wrong accepted groups, a 98% one-sided precision lower bound requires
+at least 237 accepted validation groups when selecting among six thresholds and
+149 independent accepted frozen groups for the selected threshold. These are
+best-case planning counts, not total notice counts or an accuracy promise.
+Calibration support by prediction/source stratum, critical-positive recall,
+representativeness and review-budget gates still apply. Repeated synthetic
+variants are not independent customer groups. Changing the precision target or
+candidate search creates a new predeclared qualification condition.
+
 ## Queue, monitoring and recovery
 
 One model worker processes bounded tasks. It loads a release once per batch, not once per notice. The cross-process model lease serializes managed training/inference. Model calls outside this service are not governed by that lease. SIGTERM finishes the current notice, then stops. SIGKILL/container failure retains completed predictions and marks the task INTERRUPTED at restart; an operator submits a new explicit task for remaining events. Nothing automatically re-trains or re-scores frozen data on startup.

@@ -1,0 +1,1202 @@
+{
+  "cases": 20,
+  "cases_satisfying_all_supplied_assertions": 7,
+  "assertions": 180,
+  "correct_assertions": 162,
+  "assertion_accuracy": 0.9,
+  "case_exact_match_scope": "All supplied assertions only; not all fields unless dataset is completely labelled",
+  "fields": {
+    "share_blocking": {
+      "n": 20,
+      "correct": 18,
+      "accuracy": 0.9,
+      "macro_f1": 0.6444444444444445,
+      "f1_by_class": {
+        "NO": 0.9333333333333333,
+        "YES": 1.0,
+        "UNKNOWN": 0.0
+      },
+      "balanced_accuracy": 0.6444444444444445,
+      "positive_label": "YES",
+      "positive_support": 4,
+      "negative_support": 15,
+      "positive_precision": 1.0,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 0.9333333333333333,
+      "positive_f1": 1.0,
+      "support": {
+        "NO": 15,
+        "YES": 4,
+        "UNKNOWN": 1
+      },
+      "predicted_support": {
+        "NO": 15,
+        "YES": 4,
+        "UNKNOWN": 1
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          14,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          4
+        ]
+      ],
+      "not_supported": 0
+    },
+    "poa_required": {
+      "n": 20,
+      "correct": 16,
+      "accuracy": 0.8,
+      "macro_f1": 0.9166666666666667,
+      "f1_by_class": {
+        "NO": 0.8333333333333334,
+        "YES": 1.0
+      },
+      "balanced_accuracy": 0.8571428571428572,
+      "positive_label": "YES",
+      "positive_support": 6,
+      "negative_support": 14,
+      "positive_precision": 1.0,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 0.7142857142857143,
+      "positive_f1": 1.0,
+      "support": {
+        "NO": 14,
+        "YES": 6
+      },
+      "predicted_support": {
+        "NO": 10,
+        "YES": 6,
+        "UNKNOWN": 4
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          10,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6
+        ]
+      ],
+      "not_supported": 0
+    },
+    "registration_required": {
+      "n": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "f1_by_class": {
+        "NO": 1.0,
+        "YES": 1.0
+      },
+      "balanced_accuracy": 1.0,
+      "positive_label": "YES",
+      "positive_support": 4,
+      "negative_support": 16,
+      "positive_precision": 1.0,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 1.0,
+      "positive_f1": 1.0,
+      "support": {
+        "NO": 16,
+        "YES": 4
+      },
+      "predicted_support": {
+        "NO": 16,
+        "YES": 4
+      },
+      "labels": [
+        "NO",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          16,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "not_supported": 0
+    },
+    "beneficial_owner_disclosure_required": {
+      "n": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "f1_by_class": {
+        "NO": 1.0,
+        "UNKNOWN": 1.0,
+        "YES": 1.0
+      },
+      "balanced_accuracy": 1.0,
+      "positive_label": "YES",
+      "positive_support": 4,
+      "negative_support": 14,
+      "positive_precision": 1.0,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 1.0,
+      "positive_f1": 1.0,
+      "support": {
+        "NO": 14,
+        "UNKNOWN": 2,
+        "YES": 4
+      },
+      "predicted_support": {
+        "NO": 14,
+        "UNKNOWN": 2,
+        "YES": 4
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          14,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          4
+        ]
+      ],
+      "not_supported": 0
+    },
+    "holding_confirmation_required": {
+      "n": 20,
+      "correct": 17,
+      "accuracy": 0.85,
+      "macro_f1": 0.9444444444444444,
+      "f1_by_class": {
+        "NO": 0.8888888888888888,
+        "YES": 1.0
+      },
+      "balanced_accuracy": 0.9,
+      "positive_label": "YES",
+      "positive_support": 5,
+      "negative_support": 15,
+      "positive_precision": 1.0,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 0.8,
+      "positive_f1": 1.0,
+      "support": {
+        "NO": 15,
+        "YES": 5
+      },
+      "predicted_support": {
+        "NO": 12,
+        "YES": 5,
+        "UNKNOWN": 3
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          12,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "not_supported": 0
+    },
+    "split_voting_restricted": {
+      "n": 20,
+      "correct": 14,
+      "accuracy": 0.7,
+      "macro_f1": 0.47179487179487184,
+      "f1_by_class": {
+        "NO": 0.8,
+        "UNKNOWN": 0.0,
+        "YES": 0.6153846153846154
+      },
+      "balanced_accuracy": 0.5555555555555555,
+      "positive_label": "YES",
+      "positive_support": 4,
+      "negative_support": 15,
+      "positive_precision": 0.4444444444444444,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 0.6666666666666666,
+      "positive_f1": 0.6153846153846154,
+      "support": {
+        "NO": 15,
+        "UNKNOWN": 1,
+        "YES": 4
+      },
+      "predicted_support": {
+        "YES": 9,
+        "NO": 10,
+        "UNKNOWN": 1
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          10,
+          1,
+          4
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          4
+        ]
+      ],
+      "not_supported": 0
+    },
+    "securities_lending_recall_required": {
+      "n": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "f1_by_class": {
+        "NO": 1.0,
+        "YES": 1.0
+      },
+      "balanced_accuracy": 1.0,
+      "positive_label": "YES",
+      "positive_support": 6,
+      "negative_support": 14,
+      "positive_precision": 1.0,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 1.0,
+      "positive_f1": 1.0,
+      "support": {
+        "NO": 14,
+        "YES": 6
+      },
+      "predicted_support": {
+        "NO": 14,
+        "YES": 6
+      },
+      "labels": [
+        "NO",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          14,
+          0
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "not_supported": 0
+    },
+    "other_voting_restriction": {
+      "n": 20,
+      "correct": 17,
+      "accuracy": 0.85,
+      "macro_f1": 0.9444444444444444,
+      "f1_by_class": {
+        "YES": 1.0,
+        "NO": 0.8888888888888888
+      },
+      "balanced_accuracy": 0.9,
+      "positive_label": "YES",
+      "positive_support": 5,
+      "negative_support": 15,
+      "positive_precision": 1.0,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 0.8,
+      "positive_f1": 1.0,
+      "support": {
+        "YES": 5,
+        "NO": 15
+      },
+      "predicted_support": {
+        "YES": 5,
+        "NO": 12,
+        "UNKNOWN": 3
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          12,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "not_supported": 0
+    },
+    "votability": {
+      "n": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "f1_by_class": {
+        "VOTABLE": 1.0
+      },
+      "balanced_accuracy": 1.0,
+      "positive_label": "VOTABLE",
+      "positive_support": 20,
+      "negative_support": 0,
+      "positive_precision": 1.0,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": null,
+      "positive_f1": 1.0,
+      "support": {
+        "VOTABLE": 20
+      },
+      "predicted_support": {
+        "VOTABLE": 20
+      },
+      "labels": [
+        "VOTABLE"
+      ],
+      "confusion_matrix": [
+        [
+          20
+        ]
+      ],
+      "not_supported": 0
+    }
+  },
+  "final_status_labelled_cases": 0,
+  "customer_status_accuracy": null,
+  "manual_review_count": 13,
+  "uncertain_final_status_count": 13,
+  "llm_invocations": 19,
+  "llm_invalid_outputs": 0,
+  "high_confidence_wrong_assertions": 0,
+  "median_latency_ms": 675.9024164639413,
+  "p95_latency_ms": 7851.818415801972,
+  "failures": [
+    {
+      "id": "FE1-VALIDATION-00092",
+      "text": "The current meeting accepts shareholder votes on the resolutions.\n\nA certificate confirming the holding is expressly not required for this vote.\nA prohibition on splitting votes between opposing directions is available voluntarily and is not a voting prerequisite.\nDelivery of a power-of-attorney instrument is expressly not required for this vote.\nAdvance registration for voting is available voluntarily and is not a voting prerequisite.\nRecall of securities on loan before voting is expressly not required for this vote.\nDisclosure of the beneficial owner's identity is available voluntarily and is not a voting prerequisite.\nA minimum holding of 500 shares to exercise voting rights is mandatory for this vote.\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\nBlocking of the voted securities is available voluntarily and is not a voting prerequisite.",
+      "field": "split_voting_restricted",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9922,
+        "NO": 0.0071,
+        "UNKNOWN": 0.0007
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": true,
+        "requested_predicates": [
+          "registration_required"
+        ],
+        "reasons": {
+          "registration_required": [
+            "LOW_RAW_SCORE"
+          ]
+        }
+      },
+      "conflicts": [],
+      "record_id": "FE1-VALIDATION-00092"
+    },
+    {
+      "id": "FE1-VALIDATION-00075",
+      "text": "The current meeting accepts shareholder votes on the resolutions.\n\nDisclosure of the beneficial owner's identity is expressly not required for this vote.\nA certificate confirming the holding is mandatory for this vote.\nAdvance registration for voting is available voluntarily and is not a voting prerequisite.\nThe custodian voting deadline was 15 September 2026 at 12:00 UTC.\nA minimum holding of 500 shares to exercise voting rights is mandatory for this vote.\nBlocking of the voted securities is available voluntarily and is not a voting prerequisite.\nRecall of securities on loan before voting is mandatory for this vote.\nDelivery of a power-of-attorney instrument is expressly not required for this vote.\nThe requirement for A prohibition on splitting votes between opposing directions is unresolved; obtain confirmation before proceeding.",
+      "field": "split_voting_restricted",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.8433,
+        "NO": 0.0002,
+        "UNKNOWN": 0.1565
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": true,
+        "requested_predicates": [
+          "split_voting_restricted"
+        ],
+        "reasons": {
+          "split_voting_restricted": [
+            "LOW_RAW_SCORE"
+          ]
+        }
+      },
+      "conflicts": [
+        "The requirement for a prohibition on splitting votes is explicitly stated as unresolved."
+      ],
+      "record_id": "FE1-VALIDATION-00075"
+    },
+    {
+      "id": "FE1-VALIDATION-00084",
+      "text": "The current meeting accepts shareholder votes on the resolutions.\n\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\nA minimum holding of 500 shares to exercise voting rights is expressly not required for this vote.\nRecall of securities on loan before voting is available voluntarily and is not a voting prerequisite.\nA prohibition on splitting votes between opposing directions is mandatory for this vote.\nDisclosure of the beneficial owner's identity is mandatory for this vote.\nDelivery of a power-of-attorney instrument is available voluntarily and is not a voting prerequisite.\nA certificate confirming the holding is expressly not required for this vote.\nAdvance registration for voting is expressly not required for this vote.\nBlocking of the voted securities is expressly not required for this vote.",
+      "field": "poa_required",
+      "expected": "NO",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.9841,
+        "NO": 0.0154,
+        "UNKNOWN": 0.0005
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "UNRESOLVED_MODEL_DISAGREEMENT",
+      "escalation": {
+        "escalated": true,
+        "requested_predicates": [
+          "poa_required",
+          "other_voting_restriction"
+        ],
+        "reasons": {
+          "poa_required": [
+            "PASSAGE_CONFLICT",
+            "LOW_RAW_SCORE",
+            "EVIDENCE_UNAVAILABLE"
+          ],
+          "other_voting_restriction": [
+            "LOW_RAW_SCORE"
+          ]
+        }
+      },
+      "conflicts": [
+        "poa_required:MODEL_DISAGREEMENT",
+        "poa_required:PASSAGE_CONFLICT"
+      ],
+      "record_id": "FE1-VALIDATION-00084"
+    },
+    {
+      "id": "FE1-VALIDATION-00153",
+      "text": "The current meeting accepts shareholder votes on the resolutions.\n\nA certificate confirming the holding is mandatory for this vote.\nRecall of securities on loan before voting is available voluntarily and is not a voting prerequisite.\nBlocking of the voted securities is mandatory for this vote.\nDisclosure of the beneficial owner's identity is mandatory for this vote.\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\nA prohibition on splitting votes between opposing directions is expressly not required for this vote.\nAdvance registration for voting is available voluntarily and is not a voting prerequisite.\nDelivery of a power-of-attorney instrument is available voluntarily and is not a voting prerequisite.\nA minimum holding of 500 shares to exercise voting rights is expressly not required for this vote.",
+      "field": "poa_required",
+      "expected": "NO",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.9283,
+        "NO": 0.0692,
+        "UNKNOWN": 0.0025
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "UNRESOLVED_MODEL_DISAGREEMENT",
+      "escalation": {
+        "escalated": true,
+        "requested_predicates": [
+          "share_blocking",
+          "poa_required",
+          "registration_required",
+          "holding_confirmation_required",
+          "other_voting_restriction"
+        ],
+        "reasons": {
+          "share_blocking": [
+            "LOW_RAW_SCORE",
+            "EVIDENCE_UNAVAILABLE"
+          ],
+          "poa_required": [
+            "PASSAGE_CONFLICT",
+            "LOW_RAW_SCORE",
+            "EVIDENCE_UNAVAILABLE"
+          ],
+          "registration_required": [
+            "LOW_RAW_SCORE",
+            "LOW_MARGIN"
+          ],
+          "holding_confirmation_required": [
+            "PASSAGE_CONFLICT",
+            "EVIDENCE_UNAVAILABLE"
+          ],
+          "other_voting_restriction": [
+            "LOW_RAW_SCORE"
+          ]
+        }
+      },
+      "conflicts": [
+        "poa_required:MODEL_DISAGREEMENT",
+        "poa_required:PASSAGE_CONFLICT"
+      ],
+      "record_id": "FE1-VALIDATION-00153"
+    },
+    {
+      "id": "FE1-VALIDATION-00140",
+      "text": "The current meeting accepts shareholder votes on the resolutions.\n\nA minimum holding of 500 shares to exercise voting rights is mandatory for this vote.\nA prohibition on splitting votes between opposing directions is expressly not required for this vote.\nAdvance registration for voting is available voluntarily and is not a voting prerequisite.\nThe custodian voting deadline was 15 September 2026 at 12:00 UTC.\nThe requirement for Blocking of the voted securities is unresolved; obtain confirmation before proceeding.\nA certificate confirming the holding is expressly not required for this vote.\nDisclosure of the beneficial owner's identity is available voluntarily and is not a voting prerequisite.\nDelivery of a power-of-attorney instrument is expressly not required for this vote.\nRecall of securities on loan before voting is available voluntarily and is not a voting prerequisite.",
+      "field": "share_blocking",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0356,
+        "NO": 0.9606,
+        "UNKNOWN": 0.0037
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": true,
+        "requested_predicates": [
+          "share_blocking",
+          "holding_confirmation_required",
+          "securities_lending_recall_required"
+        ],
+        "reasons": {
+          "share_blocking": [
+            "LOW_RAW_SCORE"
+          ],
+          "holding_confirmation_required": [
+            "PASSAGE_CONFLICT"
+          ],
+          "securities_lending_recall_required": [
+            "LOW_RAW_SCORE"
+          ]
+        }
+      },
+      "conflicts": [
+        "The requirement for Blocking of the voted securities is explicitly stated as unresolved."
+      ],
+      "record_id": "FE1-VALIDATION-00140"
+    },
+    {
+      "id": "FE1-VALIDATION-00150",
+      "text": "The current meeting accepts shareholder votes on the resolutions.\n\nDelivery of a power-of-attorney instrument is mandatory for this vote.\nAdvance registration for voting is available voluntarily and is not a voting prerequisite.\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\nRecall of securities on loan before voting is mandatory for this vote.\nBlocking of the voted securities is available voluntarily and is not a voting prerequisite.\nA certificate confirming the holding is available voluntarily and is not a voting prerequisite.\nA prohibition on splitting votes between opposing directions is expressly not required for this vote.\nDisclosure of the beneficial owner's identity is available voluntarily and is not a voting prerequisite.\nA minimum holding of 500 shares to exercise voting rights is available voluntarily and is not a voting prerequisite.",
+      "field": "holding_confirmation_required",
+      "expected": "NO",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.9845,
+        "NO": 0.0151,
+        "UNKNOWN": 0.0003
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "UNRESOLVED_MODEL_DISAGREEMENT",
+      "escalation": {
+        "escalated": true,
+        "requested_predicates": [
+          "registration_required",
+          "beneficial_owner_disclosure_required",
+          "holding_confirmation_required",
+          "other_voting_restriction"
+        ],
+        "reasons": {
+          "registration_required": [
+            "LOW_RAW_SCORE"
+          ],
+          "beneficial_owner_disclosure_required": [
+            "LOW_RAW_SCORE"
+          ],
+          "holding_confirmation_required": [
+            "PASSAGE_CONFLICT",
+            "EVIDENCE_UNAVAILABLE"
+          ],
+          "other_voting_restriction": [
+            "LOW_RAW_SCORE",
+            "EVIDENCE_UNAVAILABLE"
+          ]
+        }
+      },
+      "conflicts": [
+        "holding_confirmation_required:MODEL_DISAGREEMENT",
+        "holding_confirmation_required:PASSAGE_CONFLICT",
+        "other_voting_restriction:MODEL_DISAGREEMENT",
+        "other_voting_restriction:PASSAGE_CONFLICT"
+      ],
+      "record_id": "FE1-VALIDATION-00150"
+    },
+    {
+      "id": "FE1-VALIDATION-00150",
+      "text": "The current meeting accepts shareholder votes on the resolutions.\n\nDelivery of a power-of-attorney instrument is mandatory for this vote.\nAdvance registration for voting is available voluntarily and is not a voting prerequisite.\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\nRecall of securities on loan before voting is mandatory for this vote.\nBlocking of the voted securities is available voluntarily and is not a voting prerequisite.\nA certificate confirming the holding is available voluntarily and is not a voting prerequisite.\nA prohibition on splitting votes between opposing directions is expressly not required for this vote.\nDisclosure of the beneficial owner's identity is available voluntarily and is not a voting prerequisite.\nA minimum holding of 500 shares to exercise voting rights is available voluntarily and is not a voting prerequisite.",
+      "field": "other_voting_restriction",
+      "expected": "NO",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.8078,
+        "NO": 0.1909,
+        "UNKNOWN": 0.0013
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "UNRESOLVED_MODEL_DISAGREEMENT",
+      "escalation": {
+        "escalated": true,
+        "requested_predicates": [
+          "registration_required",
+          "beneficial_owner_disclosure_required",
+          "holding_confirmation_required",
+          "other_voting_restriction"
+        ],
+        "reasons": {
+          "registration_required": [
+            "LOW_RAW_SCORE"
+          ],
+          "beneficial_owner_disclosure_required": [
+            "LOW_RAW_SCORE"
+          ],
+          "holding_confirmation_required": [
+            "PASSAGE_CONFLICT",
+            "EVIDENCE_UNAVAILABLE"
+          ],
+          "other_voting_restriction": [
+            "LOW_RAW_SCORE",
+            "EVIDENCE_UNAVAILABLE"
+          ]
+        }
+      },
+      "conflicts": [
+        "holding_confirmation_required:MODEL_DISAGREEMENT",
+        "holding_confirmation_required:PASSAGE_CONFLICT",
+        "other_voting_restriction:MODEL_DISAGREEMENT",
+        "other_voting_restriction:PASSAGE_CONFLICT"
+      ],
+      "record_id": "FE1-VALIDATION-00150"
+    },
+    {
+      "id": "FE1-VALIDATION-00027",
+      "text": "The current meeting accepts shareholder votes on the resolutions.\n\nA certificate confirming the holding is available voluntarily and is not a voting prerequisite.\nRecall of securities on loan before voting is mandatory for this vote.\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\nA minimum holding of 500 shares to exercise voting rights is available voluntarily and is not a voting prerequisite.\nDisclosure of the beneficial owner's identity is expressly not required for this vote.\nA prohibition on splitting votes between opposing directions is available voluntarily and is not a voting prerequisite.\nAdvance registration for voting is available voluntarily and is not a voting prerequisite.\nDelivery of a power-of-attorney instrument is available voluntarily and is not a voting prerequisite.\nBlocking of the voted securities is available voluntarily and is not a voting prerequisite.",
+      "field": "split_voting_restricted",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9998,
+        "NO": 0.0001,
+        "UNKNOWN": 0.0001
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": true,
+        "requested_predicates": [
+          "poa_required",
+          "registration_required",
+          "holding_confirmation_required",
+          "other_voting_restriction"
+        ],
+        "reasons": {
+          "poa_required": [
+            "LOW_RAW_SCORE"
+          ],
+          "registration_required": [
+            "LOW_RAW_SCORE",
+            "LOW_MARGIN"
+          ],
+          "holding_confirmation_required": [
+            "LOW_RAW_SCORE",
+            "LOW_MARGIN"
+          ],
+          "other_voting_restriction": [
+            "LOW_RAW_SCORE",
+            "EVIDENCE_UNAVAILABLE"
+          ]
+        }
+      },
+      "conflicts": [
+        "other_voting_restriction:MODEL_DISAGREEMENT",
+        "other_voting_restriction:PASSAGE_CONFLICT"
+      ],
+      "record_id": "FE1-VALIDATION-00027"
+    },
+    {
+      "id": "FE1-VALIDATION-00027",
+      "text": "The current meeting accepts shareholder votes on the resolutions.\n\nA certificate confirming the holding is available voluntarily and is not a voting prerequisite.\nRecall of securities on loan before voting is mandatory for this vote.\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\nA minimum holding of 500 shares to exercise voting rights is available voluntarily and is not a voting prerequisite.\nDisclosure of the beneficial owner's identity is expressly not required for this vote.\nA prohibition on splitting votes between opposing directions is available voluntarily and is not a voting prerequisite.\nAdvance registration for voting is available voluntarily and is not a voting prerequisite.\nDelivery of a power-of-attorney instrument is available voluntarily and is not a voting prerequisite.\nBlocking of the voted securities is available voluntarily and is not a voting prerequisite.",
+      "field": "other_voting_restriction",
+      "expected": "NO",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.8688,
+        "NO": 0.1306,
+        "UNKNOWN": 0.0006
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "UNRESOLVED_MODEL_DISAGREEMENT",
+      "escalation": {
+        "escalated": true,
+        "requested_predicates": [
+          "poa_required",
+          "registration_required",
+          "holding_confirmation_required",
+          "other_voting_restriction"
+        ],
+        "reasons": {
+          "poa_required": [
+            "LOW_RAW_SCORE"
+          ],
+          "registration_required": [
+            "LOW_RAW_SCORE",
+            "LOW_MARGIN"
+          ],
+          "holding_confirmation_required": [
+            "LOW_RAW_SCORE",
+            "LOW_MARGIN"
+          ],
+          "other_voting_restriction": [
+            "LOW_RAW_SCORE",
+            "EVIDENCE_UNAVAILABLE"
+          ]
+        }
+      },
+      "conflicts": [
+        "other_voting_restriction:MODEL_DISAGREEMENT",
+        "other_voting_restriction:PASSAGE_CONFLICT"
+      ],
+      "record_id": "FE1-VALIDATION-00027"
+    },
+    {
+      "id": "FE1-VALIDATION-00029",
+      "text": "The current meeting accepts shareholder votes on the resolutions.\n\nA certificate confirming the holding is mandatory for this vote.\nA minimum holding of 500 shares to exercise voting rights is expressly not required for this vote.\nA prohibition on splitting votes between opposing directions is mandatory for this vote.\nDisclosure of the beneficial owner's identity is mandatory for this vote.\nRecall of securities on loan before voting is available voluntarily and is not a voting prerequisite.\nDelivery of a power-of-attorney instrument is available voluntarily and is not a voting prerequisite.\nBlocking of the voted securities is mandatory for this vote.\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\nAdvance registration for voting is expressly not required for this vote.",
+      "field": "poa_required",
+      "expected": "NO",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.9933,
+        "NO": 0.0066,
+        "UNKNOWN": 0.0001
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "UNRESOLVED_MODEL_DISAGREEMENT",
+      "escalation": {
+        "escalated": true,
+        "requested_predicates": [
+          "share_blocking",
+          "poa_required",
+          "holding_confirmation_required"
+        ],
+        "reasons": {
+          "share_blocking": [
+            "EVIDENCE_UNAVAILABLE"
+          ],
+          "poa_required": [
+            "PASSAGE_CONFLICT",
+            "LOW_RAW_SCORE",
+            "EVIDENCE_UNAVAILABLE"
+          ],
+          "holding_confirmation_required": [
+            "PASSAGE_CONFLICT",
+            "EVIDENCE_UNAVAILABLE"
+          ]
+        }
+      },
+      "conflicts": [
+        "poa_required:MODEL_DISAGREEMENT",
+        "poa_required:PASSAGE_CONFLICT"
+      ],
+      "record_id": "FE1-VALIDATION-00029"
+    },
+    {
+      "id": "FE1-VALIDATION-00086",
+      "text": "The current meeting accepts shareholder votes on the resolutions.\n\nRecall of securities on loan before voting is expressly not required for this vote.\nDelivery of a power-of-attorney instrument is available voluntarily and is not a voting prerequisite.\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\nA minimum holding of 500 shares to exercise voting rights is expressly not required for this vote.\nAdvance registration for voting is expressly not required for this vote.\nA prohibition on splitting votes between opposing directions is available voluntarily and is not a voting prerequisite.\nDisclosure of the beneficial owner's identity is expressly not required for this vote.\nBlocking of the voted securities is available voluntarily and is not a voting prerequisite.\nA certificate confirming the holding is available voluntarily and is not a voting prerequisite.",
+      "field": "holding_confirmation_required",
+      "expected": "NO",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.9762,
+        "NO": 0.0232,
+        "UNKNOWN": 0.0006
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "UNRESOLVED_MODEL_DISAGREEMENT",
+      "escalation": {
+        "escalated": true,
+        "requested_predicates": [
+          "poa_required",
+          "holding_confirmation_required"
+        ],
+        "reasons": {
+          "poa_required": [
+            "LOW_RAW_SCORE"
+          ],
+          "holding_confirmation_required": [
+            "PASSAGE_CONFLICT",
+            "LOW_RAW_SCORE",
+            "EVIDENCE_UNAVAILABLE"
+          ]
+        }
+      },
+      "conflicts": [
+        "holding_confirmation_required:MODEL_DISAGREEMENT",
+        "holding_confirmation_required:PASSAGE_CONFLICT"
+      ],
+      "record_id": "FE1-VALIDATION-00086"
+    },
+    {
+      "id": "FE1-VALIDATION-00086",
+      "text": "The current meeting accepts shareholder votes on the resolutions.\n\nRecall of securities on loan before voting is expressly not required for this vote.\nDelivery of a power-of-attorney instrument is available voluntarily and is not a voting prerequisite.\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\nA minimum holding of 500 shares to exercise voting rights is expressly not required for this vote.\nAdvance registration for voting is expressly not required for this vote.\nA prohibition on splitting votes between opposing directions is available voluntarily and is not a voting prerequisite.\nDisclosure of the beneficial owner's identity is expressly not required for this vote.\nBlocking of the voted securities is available voluntarily and is not a voting prerequisite.\nA certificate confirming the holding is available voluntarily and is not a voting prerequisite.",
+      "field": "split_voting_restricted",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9972,
+        "NO": 0.0024,
+        "UNKNOWN": 0.0004
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": true,
+        "requested_predicates": [
+          "poa_required",
+          "holding_confirmation_required"
+        ],
+        "reasons": {
+          "poa_required": [
+            "LOW_RAW_SCORE"
+          ],
+          "holding_confirmation_required": [
+            "PASSAGE_CONFLICT",
+            "LOW_RAW_SCORE",
+            "EVIDENCE_UNAVAILABLE"
+          ]
+        }
+      },
+      "conflicts": [
+        "holding_confirmation_required:MODEL_DISAGREEMENT",
+        "holding_confirmation_required:PASSAGE_CONFLICT"
+      ],
+      "record_id": "FE1-VALIDATION-00086"
+    },
+    {
+      "id": "FE1-VALIDATION-00041",
+      "text": "The current meeting accepts shareholder votes on the resolutions.\n\nDisclosure of the beneficial owner's identity is available voluntarily and is not a voting prerequisite.\nDelivery of a power-of-attorney instrument is expressly not required for this vote.\nA certificate confirming the holding is mandatory for this vote.\nAdvance registration for voting is expressly not required for this vote.\nRecall of securities on loan before voting is available voluntarily and is not a voting prerequisite.\nBlocking of the voted securities is available voluntarily and is not a voting prerequisite.\nA prohibition on splitting votes between opposing directions is mandatory for this vote.\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\nA minimum holding of 500 shares to exercise voting rights is available voluntarily and is not a voting prerequisite.",
+      "field": "share_blocking",
+      "expected": "NO",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.9791,
+        "NO": 0.0202,
+        "UNKNOWN": 0.0007
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "UNRESOLVED_MODEL_DISAGREEMENT",
+      "escalation": {
+        "escalated": true,
+        "requested_predicates": [
+          "share_blocking",
+          "holding_confirmation_required",
+          "securities_lending_recall_required",
+          "other_voting_restriction"
+        ],
+        "reasons": {
+          "share_blocking": [
+            "PASSAGE_CONFLICT",
+            "LOW_RAW_SCORE",
+            "EVIDENCE_UNAVAILABLE"
+          ],
+          "holding_confirmation_required": [
+            "PASSAGE_CONFLICT",
+            "EVIDENCE_UNAVAILABLE"
+          ],
+          "securities_lending_recall_required": [
+            "LOW_RAW_SCORE"
+          ],
+          "other_voting_restriction": [
+            "LOW_RAW_SCORE",
+            "EVIDENCE_UNAVAILABLE"
+          ]
+        }
+      },
+      "conflicts": [
+        "other_voting_restriction:MODEL_DISAGREEMENT",
+        "other_voting_restriction:PASSAGE_CONFLICT",
+        "share_blocking:MODEL_DISAGREEMENT",
+        "share_blocking:PASSAGE_CONFLICT"
+      ],
+      "record_id": "FE1-VALIDATION-00041"
+    },
+    {
+      "id": "FE1-VALIDATION-00041",
+      "text": "The current meeting accepts shareholder votes on the resolutions.\n\nDisclosure of the beneficial owner's identity is available voluntarily and is not a voting prerequisite.\nDelivery of a power-of-attorney instrument is expressly not required for this vote.\nA certificate confirming the holding is mandatory for this vote.\nAdvance registration for voting is expressly not required for this vote.\nRecall of securities on loan before voting is available voluntarily and is not a voting prerequisite.\nBlocking of the voted securities is available voluntarily and is not a voting prerequisite.\nA prohibition on splitting votes between opposing directions is mandatory for this vote.\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\nA minimum holding of 500 shares to exercise voting rights is available voluntarily and is not a voting prerequisite.",
+      "field": "other_voting_restriction",
+      "expected": "NO",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.8704,
+        "NO": 0.1266,
+        "UNKNOWN": 0.0031
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "UNRESOLVED_MODEL_DISAGREEMENT",
+      "escalation": {
+        "escalated": true,
+        "requested_predicates": [
+          "share_blocking",
+          "holding_confirmation_required",
+          "securities_lending_recall_required",
+          "other_voting_restriction"
+        ],
+        "reasons": {
+          "share_blocking": [
+            "PASSAGE_CONFLICT",
+            "LOW_RAW_SCORE",
+            "EVIDENCE_UNAVAILABLE"
+          ],
+          "holding_confirmation_required": [
+            "PASSAGE_CONFLICT",
+            "EVIDENCE_UNAVAILABLE"
+          ],
+          "securities_lending_recall_required": [
+            "LOW_RAW_SCORE"
+          ],
+          "other_voting_restriction": [
+            "LOW_RAW_SCORE",
+            "EVIDENCE_UNAVAILABLE"
+          ]
+        }
+      },
+      "conflicts": [
+        "other_voting_restriction:MODEL_DISAGREEMENT",
+        "other_voting_restriction:PASSAGE_CONFLICT",
+        "share_blocking:MODEL_DISAGREEMENT",
+        "share_blocking:PASSAGE_CONFLICT"
+      ],
+      "record_id": "FE1-VALIDATION-00041"
+    },
+    {
+      "id": "FE1-VALIDATION-00052",
+      "text": "The current meeting accepts shareholder votes on the resolutions.\n\nRecall of securities on loan before voting is mandatory for this vote.\nAdvance registration for voting is expressly not required for this vote.\nA prohibition on splitting votes between opposing directions is available voluntarily and is not a voting prerequisite.\nBlocking of the voted securities is available voluntarily and is not a voting prerequisite.\nDelivery of a power-of-attorney instrument is expressly not required for this vote.\nDisclosure of the beneficial owner's identity is available voluntarily and is not a voting prerequisite.\nA minimum holding of 500 shares to exercise voting rights is expressly not required for this vote.\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\nA certificate confirming the holding is expressly not required for this vote.",
+      "field": "split_voting_restricted",
+      "expected": "NO",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.9127,
+        "NO": 0.085,
+        "UNKNOWN": 0.0024
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "UNRESOLVED_MODEL_DISAGREEMENT",
+      "escalation": {
+        "escalated": true,
+        "requested_predicates": [
+          "split_voting_restricted",
+          "other_voting_restriction"
+        ],
+        "reasons": {
+          "split_voting_restricted": [
+            "LOW_RAW_SCORE"
+          ],
+          "other_voting_restriction": [
+            "LOW_RAW_SCORE"
+          ]
+        }
+      },
+      "conflicts": [
+        "split_voting_restricted:MODEL_DISAGREEMENT",
+        "split_voting_restricted:PASSAGE_CONFLICT"
+      ],
+      "record_id": "FE1-VALIDATION-00052"
+    },
+    {
+      "id": "FE1-VALIDATION-00112",
+      "text": "The current meeting accepts shareholder votes on the resolutions.\n\nAdvance registration for voting is available voluntarily and is not a voting prerequisite.\nThe requirement for Disclosure of the beneficial owner's identity is unresolved; obtain confirmation before proceeding.\nA prohibition on splitting votes between opposing directions is available voluntarily and is not a voting prerequisite.\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\nBlocking of the voted securities is mandatory for this vote.\nRecall of securities on loan before voting is mandatory for this vote.\nA minimum holding of 500 shares to exercise voting rights is mandatory for this vote.\nDelivery of a power-of-attorney instrument is available voluntarily and is not a voting prerequisite.\nA certificate confirming the holding is available voluntarily and is not a voting prerequisite.",
+      "field": "holding_confirmation_required",
+      "expected": "NO",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.9999,
+        "NO": 0.0,
+        "UNKNOWN": 0.0
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "UNRESOLVED_MODEL_DISAGREEMENT",
+      "escalation": {
+        "escalated": true,
+        "requested_predicates": [
+          "share_blocking",
+          "poa_required",
+          "beneficial_owner_disclosure_required",
+          "holding_confirmation_required"
+        ],
+        "reasons": {
+          "share_blocking": [
+            "EVIDENCE_UNAVAILABLE"
+          ],
+          "poa_required": [
+            "LOW_RAW_SCORE"
+          ],
+          "beneficial_owner_disclosure_required": [
+            "UNKNOWN",
+            "LOW_RAW_SCORE"
+          ],
+          "holding_confirmation_required": [
+            "PASSAGE_CONFLICT",
+            "EVIDENCE_UNAVAILABLE"
+          ]
+        }
+      },
+      "conflicts": [
+        "The requirement for Disclosure of the beneficial owner's identity is unresolved; obtain confirmation before proceeding.",
+        "holding_confirmation_required:MODEL_DISAGREEMENT",
+        "holding_confirmation_required:PASSAGE_CONFLICT"
+      ],
+      "record_id": "FE1-VALIDATION-00112"
+    },
+    {
+      "id": "FE1-VALIDATION-00112",
+      "text": "The current meeting accepts shareholder votes on the resolutions.\n\nAdvance registration for voting is available voluntarily and is not a voting prerequisite.\nThe requirement for Disclosure of the beneficial owner's identity is unresolved; obtain confirmation before proceeding.\nA prohibition on splitting votes between opposing directions is available voluntarily and is not a voting prerequisite.\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\nBlocking of the voted securities is mandatory for this vote.\nRecall of securities on loan before voting is mandatory for this vote.\nA minimum holding of 500 shares to exercise voting rights is mandatory for this vote.\nDelivery of a power-of-attorney instrument is available voluntarily and is not a voting prerequisite.\nA certificate confirming the holding is available voluntarily and is not a voting prerequisite.",
+      "field": "split_voting_restricted",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9995,
+        "NO": 0.0003,
+        "UNKNOWN": 0.0002
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": true,
+        "requested_predicates": [
+          "share_blocking",
+          "poa_required",
+          "beneficial_owner_disclosure_required",
+          "holding_confirmation_required"
+        ],
+        "reasons": {
+          "share_blocking": [
+            "EVIDENCE_UNAVAILABLE"
+          ],
+          "poa_required": [
+            "LOW_RAW_SCORE"
+          ],
+          "beneficial_owner_disclosure_required": [
+            "UNKNOWN",
+            "LOW_RAW_SCORE"
+          ],
+          "holding_confirmation_required": [
+            "PASSAGE_CONFLICT",
+            "EVIDENCE_UNAVAILABLE"
+          ]
+        }
+      },
+      "conflicts": [
+        "The requirement for Disclosure of the beneficial owner's identity is unresolved; obtain confirmation before proceeding.",
+        "holding_confirmation_required:MODEL_DISAGREEMENT",
+        "holding_confirmation_required:PASSAGE_CONFLICT"
+      ],
+      "record_id": "FE1-VALIDATION-00112"
+    },
+    {
+      "id": "FE1-VALIDATION-00122",
+      "text": "The current meeting accepts shareholder votes on the resolutions.\n\nA minimum holding of 500 shares to exercise voting rights is expressly not required for this vote.\nRecall of securities on loan before voting is available voluntarily and is not a voting prerequisite.\nBlocking of the voted securities is mandatory for this vote.\nDisclosure of the beneficial owner's identity is available voluntarily and is not a voting prerequisite.\nDelivery of a power-of-attorney instrument is available voluntarily and is not a voting prerequisite.\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\nA certificate confirming the holding is expressly not required for this vote.\nAdvance registration for voting is mandatory for this vote.\nA prohibition on splitting votes between opposing directions is expressly not required for this vote.",
+      "field": "poa_required",
+      "expected": "NO",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.995,
+        "NO": 0.0048,
+        "UNKNOWN": 0.0002
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "UNRESOLVED_MODEL_DISAGREEMENT",
+      "escalation": {
+        "escalated": true,
+        "requested_predicates": [
+          "share_blocking",
+          "poa_required"
+        ],
+        "reasons": {
+          "share_blocking": [
+            "EVIDENCE_UNAVAILABLE"
+          ],
+          "poa_required": [
+            "PASSAGE_CONFLICT",
+            "EVIDENCE_UNAVAILABLE"
+          ]
+        }
+      },
+      "conflicts": [
+        "poa_required:MODEL_DISAGREEMENT",
+        "poa_required:PASSAGE_CONFLICT"
+      ],
+      "record_id": "FE1-VALIDATION-00122"
+    }
+  ],
+  "scope": "Synthetic/authored research only. No customer accuracy or automation claim.",
+  "complete_fields_exact_match": {
+    "n": 20,
+    "correct": 7
+  },
+  "final_status": {
+    "n": 20,
+    "correct": 7
+  },
+  "deadline": {
+    "n": 20,
+    "correct": 20
+  }
+}

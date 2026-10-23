@@ -31,7 +31,8 @@ def train(request):
     for split in ['train', 'validation']:
         values = []
         for line in (Path(request['bundle']) / f'llm-{split}.jsonl').read_text().splitlines():
-            e = encode_chat(tokenizer, json.loads(line)['messages'], spec.max_length)
+            from training.framework.semantic_io import training_messages
+            e = encode_chat(tokenizer, training_messages(json.loads(line)['messages'],spec.semantic_output_format), spec.max_length)
             offset = next(i for i, v in enumerate(e['labels']) if v != -100)
             values.append((e['input_ids'], offset))
         rows[split] = values

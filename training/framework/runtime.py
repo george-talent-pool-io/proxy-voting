@@ -115,11 +115,9 @@ class RegisteredModel:
                     if p['value'] in ('NO','NOT_VOTABLE'):p['negative_basis']=negative_basis(text,sha(getattr(self,'checkpoint_manifest_path',self.root/'model-manifest.json')))
             deadline = extract_deadline(text, reference)
         else:
+            from training.framework.semantic_io import request,decode
             prompt = (Path(self.plan['bundle']) / 'semantic-prompt.txt').read_text()
-            system = prompt + '\n\nRequired JSON schema:\n' + json.dumps(SemanticResult.model_json_schema(), sort_keys=True)
-            chat = [{'role': 'system', 'content': system}, {'role': 'user', 'content': json.dumps({
-                'mode': 'INDEPENDENT', 'original_notice': text, 'narrative': text,
-                'authoritative_structured_facts': structured}, ensure_ascii=False)}]
+            chat=request(prompt,text,structured,self.spec.semantic_output_format)
             generation_diagnostics = None
             if self.spec.backend == 'MLX_QLORA':
                 generation_diagnostics = self.worker.generate(chat)
@@ -140,13 +138,16 @@ class RegisteredModel:
             output, handling['normalisation'] = normalise_json_wrapper(output)
             schema_valid = True
             try:
-                parsed = SemanticResult.model_validate_json(output).model_dump()
+                parsed = decode(text,output,self.spec.semantic_output_format)
             except ValueError as error:
                 handling['first_pass_success'] = False
                 handling['schema_errors'] = ([{'type': e['type'], 'loc': e['loc'], 'message': e['msg']}
                                               for e in error.errors(include_input=False)] if hasattr(error, 'errors') else [])
                 if self.spec.backend == 'MLX_QLORA':
                     repair = Path(__file__).with_name('schema_repair_v1.txt').read_text()
+                    if self.spec.semantic_output_format=='INDEXED_EVIDENCE':
+                        repair=repair.replace('Evidence must be an exact source substring.',
+                            'Evidence must contain valid source passage IDs, never generated quotations.')
                     handling.update(repair_attempts=1, repair_prompt_version='registered_schema_repair_v1:' + hashlib.sha256(repair.encode()).hexdigest())
                     try:
                         fixed = self.worker.generate(chat + [{'role': 'assistant', 'content': original_output},
@@ -155,7 +156,7 @@ class RegisteredModel:
                         handling['repair_output_sha256'] = hashlib.sha256(output.encode()).hexdigest()
                         output, handling['repair_normalisation'] = normalise_json_wrapper(output)
                         handling['repair_generation'] = {k: v for k, v in fixed.items() if k != 'answer'}
-                        parsed = SemanticResult.model_validate_json(output).model_dump()
+                        parsed = decode(text,output,self.spec.semantic_output_format)
                         handling['repair_success'] = True
                     except (ValueError, RuntimeError, OSError) as exc:
                         handling['repair_error'] = type(exc).__name__
@@ -187,6 +188,10 @@ class RegisteredModel:
                    'evidence_validation': ev, 'model': self.spec.base_model_id,
                    'generation_diagnostics': {k: v for k, v in (generation_diagnostics or {}).items() if k != 'answer'},
                    'prompt_version': 'proxy_semantic_training_v1', 'confidence': None}
+            llm['semantic_output_format']=self.spec.semantic_output_format
+            if self.spec.semantic_output_format=='INDEXED_EVIDENCE':
+                from training.framework.semantic_io import INDEXED_VERSION
+                llm['prompt_version']=INDEXED_VERSION
             passage = parsed['deadline_information']['deadline_text']
             if passage is not None and passage not in text:
                 conflicts.append('INVALID_DEADLINE_EVIDENCE'); passage = None

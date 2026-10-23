@@ -676,3 +676,35 @@ def test_27_campaign_prepare_cancel_and_refresh(browser_app):
     assert p.request.get(a['url']+'/api/learning/campaigns/browser-campaign').json()['state']=='CANCELLED'
     p.screenshot(path='artifacts/release-campaign-controls.png',full_page=True)
     assert not a['errors']
+
+
+def test_28_learning_draft_survives_pending_page_refresh(browser_app):
+    """A delayed API render must not close or erase an operator's live form."""
+    from playwright.sync_api import expect
+    a=browser_app;p=a['page'];p.goto(a['url']+'/#model_lab')
+    expect(p.get_by_role('heading',name='Event learning loop',exact=True)).to_be_visible()
+    p.evaluate('''() => {
+      window._originalFetch = window.fetch;
+      window.fetch = (...args) => {
+        if (String(args[0]).includes('/api/semantic/experiment')) {
+          return new Promise(resolve => { window._releaseLearningRefresh = () =>
+            window._originalFetch(...args).then(resolve); });
+        }
+        return window._originalFetch(...args);
+      };
+      window.dispatchEvent(new HashChangeEvent('hashchange'));
+    }''')
+    try:
+        p.wait_for_function('typeof window._releaseLearningRefresh === "function"')
+        form=p.locator('#learning-import-form')
+        form.locator('xpath=..').evaluate('(el)=>el.open=true')
+        draft='{"raw":"Unsaved operational review draft"}'
+        form.locator('[name=payload]').fill(draft)
+        with p.expect_response(lambda response:'/api/learning/status' in response.url):
+            p.evaluate('window._releaseLearningRefresh()')
+        p.evaluate('() => new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)))')
+        expect(p.locator('#learning-import-form [name=payload]')).to_be_visible()
+        expect(p.locator('#learning-import-form [name=payload]')).to_have_value(draft)
+    finally:
+        p.evaluate('window.fetch=window._originalFetch; delete window._originalFetch; delete window._releaseLearningRefresh')
+    assert not a['errors']

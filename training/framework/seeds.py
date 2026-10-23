@@ -86,7 +86,7 @@ def training_spec(root, overrides=None):
     value = verify(root)
     updates = dict(overrides or {})
     protected = {'backend', 'family', 'model_path', 'base_model_id', 'base_revision',
-                 'parent_seed_path', 'initial_adapter_path'}
+                 'parent_seed_path', 'initial_adapter_path','semantic_output_format'}
     if protected & updates.keys():
         raise ValueError('Training cannot override frozen parent identity')
     spec = {**value['spec'], **updates, 'model_path': value['model_location'],

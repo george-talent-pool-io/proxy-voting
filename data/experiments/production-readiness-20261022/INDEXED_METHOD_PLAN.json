@@ -1,0 +1,10 @@
+{
+  "foundation_seed": "qwen38-indexed-evidence-foundation-v1",
+  "job": "qwen-indexed-format-mechanics-v1",
+  "training_records": 8,
+  "validation_records": 4,
+  "purpose": "Actual exact-model indexed-format optimiser/save/reload mechanics only",
+  "not_a_domain_model": true,
+  "must_not_be_selected_or_shipped": true,
+  "automation_enabled": false
+}

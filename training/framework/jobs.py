@@ -128,11 +128,17 @@ def execute(root):
             raise ValueError('Base checkpoint changed during training')
         write(root / 'result.json', result)
         artifacts = snapshot(root / 'checkpoint')
+        from collections import Counter
+        _,examples=load_bundle(plan['bundle'])
+        role_origins={role:dict(Counter(e.provenance.origin.value for e in examples if e.split==role))
+                      for role in ('TRAIN','VALIDATION')}
         model = {'job_id': plan['job_id'], 'created_at': now(), 'family': spec.family,
                  'backend': spec.backend, 'base_model_id': spec.base_model_id,
                  'base_revision': spec.base_revision, 'base_files_sha256': sha(root / 'base-model-files.json'),
                  'bundle_manifest_sha256': plan['bundle_manifest_sha256'],
                  'files': artifacts, 'label_origins': check['label_origins'],
+                 'label_origins_scope':'Whole development bundle; not the number of examples used for updates',
+                 'record_origins_by_role':role_origins,
                  'status': 'EXPERIMENTAL_NOT_PROMOTED', 'semantic_evaluation': 'PENDING',
                  'calibrator': None, 'automation_enabled': False, 'customer_accuracy': None}
         write(root / 'model-manifest.json', model)

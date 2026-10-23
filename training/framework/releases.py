@@ -87,7 +87,10 @@ def prepare(spec, output):
             raise ValueError('Release checkpoint backend mismatch')
         models[kind] = {'job_id': ident, 'manifest_sha256': sha(path / 'model-manifest.json'),
                         'prompt_sha256': sha(Path(plan['bundle']) / 'semantic-prompt.txt'),
-                        'base_revision': plan['spec']['base_revision'], 'base_model_id': plan['spec']['base_model_id']}
+                        'base_revision': plan['spec']['base_revision'], 'base_model_id': plan['spec']['base_model_id'],
+                        'provenance':{'kind':'REGISTERED_DERIVATIVE', 'bundle_label_origins':m.get('label_origins',{}),
+                                      'record_origins_by_role':m.get('record_origins_by_role'),
+                                      'training_count_scope':'Use role-specific counts or the training receipt; bundle counts include validation'}}
     from training.framework import seeds
     for kind, ident in [('laya', spec.laya_seed), ('llm', spec.llm_seed)]:
         if ident is None: continue
@@ -96,7 +99,8 @@ def prepare(spec, output):
             raise ValueError('Release seed backend mismatch')
         models[kind] = {'seed_id': ident, 'identity': seed['identity'], 'manifest_sha256': sha(path / 'seed.json'),
                         'prompt_sha256': seed['prompt_sha256'], 'base_revision': seed['spec']['base_revision'],
-                        'base_model_id': seed['spec']['base_model_id']}
+                        'base_model_id': seed['spec']['base_model_id'],
+                        'provenance':{'kind':seed.get('origin','UNDECLARED'), 'lineage':seed.get('lineage')}}
     sources = source_files()
     condition = {'version': VERSION, 'spec': spec.model_dump(), 'models': models, 'sources': sources,
                  'schema_sha256': digest(SemanticResult.model_json_schema()), 'event_policy': events.VERSION,
@@ -113,7 +117,8 @@ def prepare(spec, output):
         archive = root / 'source-snapshot' / name; archive.parent.mkdir(parents=True, exist_ok=True)
         archive.write_bytes((ROOT / name).read_bytes())
     manifest = {**condition, 'identity': digest(condition), 'created_at': jobs.now(),
-                'scope': 'AI_LABELLED_ENGINEERING_ONLY', 'automation_enabled': False, 'customer_accuracy': None}
+                'scope': 'UNQUALIFIED_RELEASE; label/model origins are recorded separately; customer qualification is required',
+                'automation_enabled': False, 'customer_accuracy': None}
     write(root / 'release.json', manifest)
     return manifest
 

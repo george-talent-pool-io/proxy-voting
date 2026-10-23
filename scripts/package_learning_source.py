@@ -15,6 +15,27 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def provenance(data):
+    try:
+        probe = subprocess.run(['git', 'rev-parse', '--show-toplevel'], cwd=ROOT,
+                               text=True, capture_output=True)
+    except FileNotFoundError:
+        probe = None
+    if probe is not None and probe.returncode == 0 and Path(probe.stdout.strip()).resolve() == ROOT.resolve():
+        return {'git_commit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
+                'workspace_dirty': bool(subprocess.check_output(['git', 'status', '--porcelain'], cwd=ROOT, text=True).strip()),
+                'provenance_source': 'REPOSITORY'}
+    source = ROOT / 'SOURCE-MANIFEST.json'
+    if not source.is_file():
+        raise ValueError('Source delivery requires its repository or preserved SOURCE-MANIFEST.json')
+    original = json.loads(source.read_text())
+    hashes = {k: hashlib.sha256(v).hexdigest() for k, v in data.items()}
+    return {'git_commit': original['git_commit'], 'workspace_dirty': hashes != original['files'],
+            'upstream_workspace_dirty': original['workspace_dirty'],
+            'provenance_source': 'ARCHIVE_MANIFEST',
+            'upstream_source_manifest_sha256': hashlib.sha256(source.read_bytes()).hexdigest()}
+
+
 def package(output):
     output = Path(output); output.parent.mkdir(parents=True, exist_ok=True)
     paths = set()
@@ -41,11 +62,17 @@ def package(output):
     # Input-only challenge fingerprints are training exclusion configuration,
     # not answer keys or source notices. Keep the leakage barrier on clean installs.
     paths.update(p.relative_to(ROOT) for p in (ROOT / 'data/training/exclusions').glob('*.jsonl'))
+    # Small parser demonstration/regression cases are software fixtures, not a
+    # semantic training/qualification corpus. Keep their original provenance.
+    parser_examples = ['official_examples/clearstream-dscl-excerpt.json',
+                       'standards_derived/derived-0002.json', 'standards_derived/derived-0004.json',
+                       *[f'standards_derived/chain-000-{step}.json' for step in range(4)]]
+    paths.update(Path('data/iso15022_corpus') / name for name in parser_examples)
     data = {p.as_posix(): (ROOT / p).read_bytes() for p in sorted(paths)}
     manifest = {'version': 'local-learning-source-v1', 'files': {k: hashlib.sha256(v).hexdigest() for k, v in data.items()},
-                'git_commit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
-                'workspace_dirty': bool(subprocess.check_output(['git', 'status', '--porcelain'], cwd=ROOT, text=True).strip()),
+                **provenance(data),
                 'data_included': False, 'input_only_exclusion_configuration_included': True,
+                'data_scope':'Operational/training/qualification corpora excluded; small regression fixtures, including seven provenance-bearing parser examples, are included for reproducible tests',
                 'models_included': False, 'automation_enabled': False}
     data['SOURCE-MANIFEST.json'] = (json.dumps(manifest, indent=2, sort_keys=True) + '\n').encode()
     with output.open('xb') as f:

@@ -2,6 +2,14 @@ export function installEventLearning({api,panel,esc,$,toast,frameworkExecutionTr
 const domainPredicates=["votability","share_blocking","poa_required","registration_required","beneficial_owner_disclosure_required","holding_confirmation_required","split_voting_restricted","securities_lending_recall_required","other_voting_restriction","deadline_status"];
 /* Event lifecycle controls use saved backend state; no reconstructed model trace. */
 let learningState=null,learningEvent=null;
+// An in-flight refresh may finish while an operator opens a form. Preserve
+// that interaction instead of replacing it with newly collapsed markup.
+document.addEventListener('toggle',e=>{
+ if(e.target.tagName==='DETAILS'&&e.target.open&&e.target.closest('#event-learning-panel'))invalidatePendingRender();
+},true);
+document.addEventListener('input',e=>{
+ if(e.target.closest('#event-learning-panel'))invalidatePendingRender();
+});
 async function eventLearningPanel(){
  const d=await api('learning/status'),t=await api('training/status');learningState=d;
  const candidates=t.jobs.filter(j=>j.state==='COMPLETED');

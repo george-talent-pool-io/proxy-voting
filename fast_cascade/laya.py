@@ -43,8 +43,22 @@ def vote_conflicts(text,native,value):
         words=span['text']
         if p['value']!=opposite or p['confidence']<.7 or p.get('truncated') or HISTORY.search(words):continue
         anchor=re.search(r'vot|proxy|ballot|meeting|information only|no shareholder action',words,re.I)
-        explicit_no=re.search(r'no (?:shareholder action|vot)|not (?:vot|a vot)|information only|cannot vote',words,re.I)
-        if anchor and (opposite=='YES' or explicit_no):result.append(verify_evidence(text,words))
+        # Denying a *prerequisite/restriction* does not deny the vote. Prefix
+        # matches such as "not a vot" also matched "not a voting prerequisite";
+        # "no vot" matched "no voting restriction". Require the actual object.
+        conditional=re.search(r'\b(?:unless|until|only if|without|before|after)\b',words,re.I)
+        explicit_no=re.search(r'\bno shareholder action\b|'
+            r'\b(?:there is|there will be|offers?) no (?:vote|ballot)\b|'
+            r'\bno (?:vote|ballot) (?:is|will be) (?:offered|available|held|provided)\b|'
+            r'\bno voting (?:opportunity|rights?)\b|\bnot votable\b|'
+            r'\bnot a (?:vote|ballot)\b(?!\s+(?:condition|prerequisite|requirement))|\bnot a voting (?:event|meeting|opportunity)\b|'
+            r'\bnot entitled to vote\b|'
+            r'\binformation only\b|\bcannot vote\b',words,re.I)
+        explicit_yes=re.search(r'\bshareholders? (?:may|can|are entitled to).{0,30}\bvote\b|'
+            r'\b(?:submit|cast|lodge|instruct).{0,35}\b(?:votes?|ballots?|voting instructions)\b|'
+            r'\bvoting (?:is )?(?:open|available)\b|\bvotes? (?:are |will be )?accepted\b',words,re.I)
+        if anchor and not conditional and (explicit_yes if opposite=='YES' else explicit_no):
+            result.append(verify_evidence(text,words))
     return result
 
 class BatchedLaya:

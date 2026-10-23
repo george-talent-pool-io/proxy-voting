@@ -1,0 +1,8 @@
+{
+  "count": 160,
+  "sha256": "593fbb5506537e1776153a8a457c6ee95f46a77a726b78bb3ef67194b762e999",
+  "answers_opened": false,
+  "paired_elapsed_seconds": 2806.3050828329287,
+  "physical_qwen_generations_in_this_stream": 0,
+  "latency_scope": "Deterministic replay plus actual Laya; not an end-to-end hybrid latency benchmark"
+}

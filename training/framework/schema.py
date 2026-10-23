@@ -89,6 +89,7 @@ class TrainSpec(BaseModel):
     runtime_python: str | None = None
     lora_layers: int = Field(default=1, ge=1)
     generation_tokens: int = Field(default=2048, ge=32, le=8192)
+    semantic_output_format: Literal['FULL_JSON','INDEXED_EVIDENCE'] = 'FULL_JSON'
     # A frozen seed binds both initial weights and serving criteria. The parent
     # optimizer is intentionally never resumed across customer corpora.
     parent_seed_path: str | None = None
@@ -112,6 +113,8 @@ class TrainSpec(BaseModel):
             raise ValueError('Laya task multipliers apply only to the official Laya trainer')
         if self.laya_evidence_passage_multiplier and self.backend!='LAYA_SDK':
             raise ValueError('Evidence passage training applies only to the official Laya trainer')
+        if self.backend=='LAYA_SDK' and self.semantic_output_format!='FULL_JSON':
+            raise ValueError('Semantic JSON wire formats apply to generative models')
         if (self.backend == 'LAYA_SDK') != (self.family == 'LAYA'):
             raise ValueError('Laya uses its official SDK; generative models use the PEFT backend')
         if self.device == 'cpu' and self.dtype == 'float16':

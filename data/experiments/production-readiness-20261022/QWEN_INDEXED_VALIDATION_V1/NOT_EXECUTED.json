@@ -1,0 +1,5 @@
+{
+  "state": "SUPERSEDED_BEFORE_MODEL_EXECUTION",
+  "reason": "Make final-status scoring use the same missing-positive-evidence rule as the standard path; archive loaded study source before waiting.",
+  "replacement": "QWEN_INDEXED_VALIDATION_V2"
+}

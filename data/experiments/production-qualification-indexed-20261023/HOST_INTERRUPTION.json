@@ -1,0 +1,10 @@
+{
+  "reason": "Observed repeated Dark Wake Thermal Emergency / deep idle sleep; host not suitable for uninterrupted GPU qualification.",
+  "action": "SIGINT owned driver; preserve partial predictions, do not restart under same run identity",
+  "completed_primary_pilot_predictions": 20,
+  "prediction_sha256_at_stop": "787f5a570bd670b200b67a28a72f91815ae6e08e6ff7acbee271ebf15bae8a65",
+  "calibration_predictions_saved": false,
+  "independent_frozen_answers_opened": false,
+  "automation_enabled": false,
+  "customer_accuracy": null
+}

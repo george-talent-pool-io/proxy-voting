@@ -111,16 +111,21 @@ def run(root):
                 truth=load_answers(dataset,manifest,'VALIDATION',inputs)
                 rows=[{'id':r['id'],'text':r['text'],'result':r['result'],'expected':{k:truth[r['id']]['target'][k] for k in __import__('semantic_pipeline.schema',fromlist=['PREDICATES']).PREDICATES}} for r in predictions]
                 metrics=summarize(rows)
-                report={'role':'VALIDATION','release_identity':releases.verify(release)['identity'],'metrics':metrics}
+                from production.selection import evaluate as decision_evaluation
+                report={'role':'VALIDATION','release_identity':releases.verify(release)['identity'],'metrics':metrics,
+                        'decision_evaluation':decision_evaluation(predictions,truth,role='VALIDATION')}
                 write(out/'evaluation.json',report); releases.seal(release,out)
                 reports[candidate.name]=report; candidates[candidate.name]=ident
             baseline=next(iter(reports))
             def critical_errors(report):
                 return {(f['id'],f['field']) for f in report['metrics']['failures'] if f['field'] in ('votability','share_blocking','poa_required','registration_required') and f['expected'] in ('YES','VOTABLE')}
             eligible=[k for k,v in reports.items() if not critical_errors(v)-critical_errors(reports[baseline])]
-            winner=max(eligible,key=lambda k:(reports[k]['metrics']['correct_assertions'],-reports[k]['metrics']['median_latency_ms']))
+            from production.selection import ranking
+            ranks={k:ranking(r) for k,r in reports.items()}
+            winner=max(eligible,key=lambda k:ranks[k]['rank'])
             report={'stage_jobs':trained,'stage_seeds':seed_stages,'candidates':candidates,'validation':reports,'selected':winner,
                     'selected_release':candidates[winner],'calibration_or_test_answers_opened':False,
+                    'selection_ranking':ranks,
                     'scope':'DEVELOPMENT_ONLY_NOT_CUSTOMER_QUALIFICATION','automation_enabled':False}
             write(root/'result.json',report);jobs.events(root,{'state':'COMPLETED','result_sha256':sha(root/'result.json')})
             return report

@@ -1,0 +1,22 @@
+{
+  "FULL_JSON": {
+    "n": 20,
+    "unique_text_hashes": 20,
+    "median_seconds": 34.01272141630761,
+    "mean_seconds": 33.826154695893635,
+    "min_seconds": 29.362106958869845,
+    "max_seconds": 40.85144450003281,
+    "p95_seconds": 36.7912550419569,
+    "timing_scope": "Recorded active request time on general-purpose Mac; host sleep/thermal events prevent deployment throughput qualification"
+  },
+  "INDEXED_EVIDENCE": {
+    "n": 20,
+    "unique_text_hashes": 20,
+    "median_seconds": 13.838688833406195,
+    "mean_seconds": 14.110214193817228,
+    "min_seconds": 12.731774709187448,
+    "max_seconds": 16.90855629136786,
+    "p95_seconds": 16.27481195796281,
+    "timing_scope": "Recorded active request time on general-purpose Mac; host sleep/thermal events prevent deployment throughput qualification"
+  }
+}

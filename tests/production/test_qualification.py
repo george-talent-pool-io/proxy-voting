@@ -48,6 +48,17 @@ def test_review_budget_includes_random_audits_of_accepted_decisions():
     assert 'REVIEW_RATE_TARGET_NOT_MET' in m['reasons']
 
 
+def test_truth_uncertainty_exposes_irreducible_review_floor():
+    rows=controlled_records(1000)
+    for r in rows[:200]:
+        r['truth']['poa_required']='UNKNOWN';r['prediction']['poa_required']='UNKNOWN';r['accepted']=False
+    m=q.statistics(rows,{})
+    assert m['truth_unresolved_records']==200
+    assert m['truth_review_rate_lower_bound']==pytest.approx(.2)
+    assert m['truth_review_floor_including_expected_audits']==pytest.approx(.216)
+    assert m['critical']['poa_required']['positive_support']==800
+
+
 def calibration_rows():
     values=[]
     for fold,n in [('FIT',500),('EVALUATION',200)]:

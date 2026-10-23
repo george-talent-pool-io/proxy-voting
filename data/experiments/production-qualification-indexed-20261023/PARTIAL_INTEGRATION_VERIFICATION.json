@@ -1,0 +1,10 @@
+{
+  "completed_requests": 20,
+  "real_registered_indexed_adapter": true,
+  "canonical_schema_valid": true,
+  "source_quotes_verified": true,
+  "calibration_completed": false,
+  "frozen_prediction_receipt_exists": false,
+  "automation_enabled": false,
+  "customer_accuracy": null
+}

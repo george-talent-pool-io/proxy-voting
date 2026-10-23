@@ -1,0 +1,11 @@
+{
+  "cases": 20,
+  "assertions": 180,
+  "correct_assertions": 72,
+  "all_fields_exact": 8,
+  "final_status_correct": 7,
+  "schema_failures": 12,
+  "raw_model_probabilities": null,
+  "calibrated_confidence": null,
+  "automation_enabled": false
+}

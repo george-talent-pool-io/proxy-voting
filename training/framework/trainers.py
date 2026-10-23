@@ -194,7 +194,7 @@ def laya_training_input(bundle, output, spec):
     if spec.laya_evidence_passage_multiplier:
         from training.framework.bundle import load_bundle,laya_questions
         _,examples=load_bundle(bundle)
-        questions=laya_questions(); projected={};provenance=[]
+        questions=laya_questions(); projected={};parents={};provenance=[]
         for example in examples:
             if example.split!='TRAIN':continue
             for key,quotes in example.target.evidence.model_dump().items():
@@ -204,10 +204,29 @@ def laya_training_input(bundle, output, spec):
                     if identity in projected and projected[identity]!=label:
                         raise ValueError('Standalone evidence has conflicting labels; retain full context instead')
                     projected[identity]=label
+                    parents[identity]=example
                     provenance.append({'source_id':example.id,'source_hash':example.source_hash,'predicate':key,
                         'passage_sha256':hashlib.sha256(quote.encode()).hexdigest(),'label':label,
                         'start':example.text.index(quote),'end':example.text.index(quote)+len(quote),
                         'origin':example.provenance.origin,'role':'TRAIN'})
+        # A TRAIN-only source can still contain a quotation identical to a
+        # complete held-out notice. Apply the barrier to the *derived input*,
+        # not just its parent. No labels from protected roles are read here.
+        from types import SimpleNamespace
+        from classifier.preprocessing import source_hash,normalise
+        from training.framework.event_data import reject_protected,fingerprint
+        derived=[SimpleNamespace(text=quote,source_hash=source_hash(quote),
+                    group_id=parents[(key,quote)].group_id,
+                    generation_family=parents[(key,quote)].generation_family) for key,quote in projected]
+        reject_protected(derived)
+        validation=[e for e in examples if e.split=='VALIDATION']
+        validation_hashes={source_hash(normalise(e.text)) for e in validation}
+        validation_prints=[fingerprint(e.text) for e in validation]
+        for item in derived:
+            candidate=fingerprint(item.text)
+            if (source_hash(normalise(item.text)) in validation_hashes or any(
+                f and len(candidate&f)/max(1,len(candidate|f))>=.85 for f in validation_prints)):
+                raise ValueError('Derived TRAIN evidence duplicates a VALIDATION input; regroup before augmentation')
         for (key,quote),label in sorted(projected.items()):
             effective.extend({'state':quote,'questions':{key:questions[key]},'expected':{key:label}}
                              for _ in range(spec.laya_evidence_passage_multiplier))
@@ -217,6 +236,7 @@ def laya_training_input(bundle, output, spec):
             'source_annotations':len(provenance),'multiplier':spec.laya_evidence_passage_multiplier,
             'effective_question_items':len(projected)*spec.laya_evidence_passage_multiplier,
             'provenance_sha256':sha(provenance_path),'source_roles':['TRAIN'],
+            'derived_input_isolation':'Protected input fingerprints and validation exact/lexical checks passed before updates',
             'method':'Exact annotated quotations; only the annotated predicate is trained; other labels are never inferred'}
     target=Path(output).parent/'laya-effective-train.jsonl'
     jsonl(target,effective)
@@ -329,7 +349,8 @@ def train_peft(bundle, output, spec):
         tokenizer.pad_token = tokenizer.eos_token
     rows = {}
     for split in ['train', 'validation']:
-        rows[split] = [encode_chat(tokenizer, json.loads(line)['messages'], spec.max_length)
+        from training.framework.semantic_io import training_messages
+        rows[split] = [encode_chat(tokenizer, training_messages(json.loads(line)['messages'],spec.semantic_output_format), spec.max_length)
                        for line in (Path(bundle) / f'llm-{split}.jsonl').read_text().splitlines()]
     dtype = getattr(torch, spec.dtype)
     base = AutoModelForCausalLM.from_pretrained(spec.model_path, local_files_only=True,

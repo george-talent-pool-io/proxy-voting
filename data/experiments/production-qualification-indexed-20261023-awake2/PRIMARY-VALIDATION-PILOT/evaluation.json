@@ -1,0 +1,431 @@
+{
+  "role": "VALIDATION",
+  "release_identity": "cd78772e59215b5912ac12c8f05c069945d2b6228bffc7ca17bbb3b42906606c",
+  "metrics": {
+    "cases": 20,
+    "cases_satisfying_all_supplied_assertions": 20,
+    "assertions": 180,
+    "correct_assertions": 180,
+    "assertion_accuracy": 1.0,
+    "case_exact_match_scope": "All supplied assertions only; not all fields unless dataset is completely labelled",
+    "fields": {
+      "share_blocking": {
+        "n": 20,
+        "correct": 20,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "f1_by_class": {
+          "NO": 1.0,
+          "YES": 1.0,
+          "UNKNOWN": 1.0
+        },
+        "balanced_accuracy": 1.0,
+        "positive_label": "YES",
+        "positive_support": 4,
+        "negative_support": 15,
+        "positive_precision": 1.0,
+        "positive_recall": 1.0,
+        "negative_recall_specificity": 1.0,
+        "positive_f1": 1.0,
+        "support": {
+          "NO": 15,
+          "YES": 4,
+          "UNKNOWN": 1
+        },
+        "predicted_support": {
+          "NO": 15,
+          "YES": 4,
+          "UNKNOWN": 1
+        },
+        "labels": [
+          "NO",
+          "UNKNOWN",
+          "YES"
+        ],
+        "confusion_matrix": [
+          [
+            15,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            4
+          ]
+        ],
+        "not_supported": 0
+      },
+      "poa_required": {
+        "n": 20,
+        "correct": 20,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "f1_by_class": {
+          "NO": 1.0,
+          "YES": 1.0
+        },
+        "balanced_accuracy": 1.0,
+        "positive_label": "YES",
+        "positive_support": 6,
+        "negative_support": 14,
+        "positive_precision": 1.0,
+        "positive_recall": 1.0,
+        "negative_recall_specificity": 1.0,
+        "positive_f1": 1.0,
+        "support": {
+          "NO": 14,
+          "YES": 6
+        },
+        "predicted_support": {
+          "NO": 14,
+          "YES": 6
+        },
+        "labels": [
+          "NO",
+          "YES"
+        ],
+        "confusion_matrix": [
+          [
+            14,
+            0
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "not_supported": 0
+      },
+      "registration_required": {
+        "n": 20,
+        "correct": 20,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "f1_by_class": {
+          "NO": 1.0,
+          "YES": 1.0
+        },
+        "balanced_accuracy": 1.0,
+        "positive_label": "YES",
+        "positive_support": 4,
+        "negative_support": 16,
+        "positive_precision": 1.0,
+        "positive_recall": 1.0,
+        "negative_recall_specificity": 1.0,
+        "positive_f1": 1.0,
+        "support": {
+          "NO": 16,
+          "YES": 4
+        },
+        "predicted_support": {
+          "NO": 16,
+          "YES": 4
+        },
+        "labels": [
+          "NO",
+          "YES"
+        ],
+        "confusion_matrix": [
+          [
+            16,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "not_supported": 0
+      },
+      "beneficial_owner_disclosure_required": {
+        "n": 20,
+        "correct": 20,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "f1_by_class": {
+          "NO": 1.0,
+          "UNKNOWN": 1.0,
+          "YES": 1.0
+        },
+        "balanced_accuracy": 1.0,
+        "positive_label": "YES",
+        "positive_support": 4,
+        "negative_support": 14,
+        "positive_precision": 1.0,
+        "positive_recall": 1.0,
+        "negative_recall_specificity": 1.0,
+        "positive_f1": 1.0,
+        "support": {
+          "NO": 14,
+          "UNKNOWN": 2,
+          "YES": 4
+        },
+        "predicted_support": {
+          "NO": 14,
+          "UNKNOWN": 2,
+          "YES": 4
+        },
+        "labels": [
+          "NO",
+          "UNKNOWN",
+          "YES"
+        ],
+        "confusion_matrix": [
+          [
+            14,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            4
+          ]
+        ],
+        "not_supported": 0
+      },
+      "holding_confirmation_required": {
+        "n": 20,
+        "correct": 20,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "f1_by_class": {
+          "NO": 1.0,
+          "YES": 1.0
+        },
+        "balanced_accuracy": 1.0,
+        "positive_label": "YES",
+        "positive_support": 5,
+        "negative_support": 15,
+        "positive_precision": 1.0,
+        "positive_recall": 1.0,
+        "negative_recall_specificity": 1.0,
+        "positive_f1": 1.0,
+        "support": {
+          "NO": 15,
+          "YES": 5
+        },
+        "predicted_support": {
+          "NO": 15,
+          "YES": 5
+        },
+        "labels": [
+          "NO",
+          "YES"
+        ],
+        "confusion_matrix": [
+          [
+            15,
+            0
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        "not_supported": 0
+      },
+      "split_voting_restricted": {
+        "n": 20,
+        "correct": 20,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "f1_by_class": {
+          "NO": 1.0,
+          "UNKNOWN": 1.0,
+          "YES": 1.0
+        },
+        "balanced_accuracy": 1.0,
+        "positive_label": "YES",
+        "positive_support": 4,
+        "negative_support": 15,
+        "positive_precision": 1.0,
+        "positive_recall": 1.0,
+        "negative_recall_specificity": 1.0,
+        "positive_f1": 1.0,
+        "support": {
+          "NO": 15,
+          "UNKNOWN": 1,
+          "YES": 4
+        },
+        "predicted_support": {
+          "NO": 15,
+          "UNKNOWN": 1,
+          "YES": 4
+        },
+        "labels": [
+          "NO",
+          "UNKNOWN",
+          "YES"
+        ],
+        "confusion_matrix": [
+          [
+            15,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            4
+          ]
+        ],
+        "not_supported": 0
+      },
+      "securities_lending_recall_required": {
+        "n": 20,
+        "correct": 20,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "f1_by_class": {
+          "NO": 1.0,
+          "YES": 1.0
+        },
+        "balanced_accuracy": 1.0,
+        "positive_label": "YES",
+        "positive_support": 6,
+        "negative_support": 14,
+        "positive_precision": 1.0,
+        "positive_recall": 1.0,
+        "negative_recall_specificity": 1.0,
+        "positive_f1": 1.0,
+        "support": {
+          "NO": 14,
+          "YES": 6
+        },
+        "predicted_support": {
+          "NO": 14,
+          "YES": 6
+        },
+        "labels": [
+          "NO",
+          "YES"
+        ],
+        "confusion_matrix": [
+          [
+            14,
+            0
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "not_supported": 0
+      },
+      "other_voting_restriction": {
+        "n": 20,
+        "correct": 20,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "f1_by_class": {
+          "YES": 1.0,
+          "NO": 1.0
+        },
+        "balanced_accuracy": 1.0,
+        "positive_label": "YES",
+        "positive_support": 5,
+        "negative_support": 15,
+        "positive_precision": 1.0,
+        "positive_recall": 1.0,
+        "negative_recall_specificity": 1.0,
+        "positive_f1": 1.0,
+        "support": {
+          "YES": 5,
+          "NO": 15
+        },
+        "predicted_support": {
+          "YES": 5,
+          "NO": 15
+        },
+        "labels": [
+          "NO",
+          "YES"
+        ],
+        "confusion_matrix": [
+          [
+            15,
+            0
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        "not_supported": 0
+      },
+      "votability": {
+        "n": 20,
+        "correct": 20,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "f1_by_class": {
+          "VOTABLE": 1.0
+        },
+        "balanced_accuracy": 1.0,
+        "positive_label": "VOTABLE",
+        "positive_support": 20,
+        "negative_support": 0,
+        "positive_precision": 1.0,
+        "positive_recall": 1.0,
+        "negative_recall_specificity": null,
+        "positive_f1": 1.0,
+        "support": {
+          "VOTABLE": 20
+        },
+        "predicted_support": {
+          "VOTABLE": 20
+        },
+        "labels": [
+          "VOTABLE"
+        ],
+        "confusion_matrix": [
+          [
+            20
+          ]
+        ],
+        "not_supported": 0
+      }
+    },
+    "final_status_labelled_cases": 0,
+    "customer_status_accuracy": null,
+    "manual_review_count": 4,
+    "uncertain_final_status_count": 4,
+    "llm_invocations": 20,
+    "llm_invalid_outputs": 0,
+    "high_confidence_wrong_assertions": 0,
+    "median_latency_ms": 13735.28656270355,
+    "p95_latency_ms": 22910.88137542829,
+    "failures": [],
+    "scope": "Synthetic/authored research only. No customer accuracy or automation claim.",
+    "complete_fields_exact_match": {
+      "n": 20,
+      "correct": 20
+    },
+    "final_status": {
+      "n": 20,
+      "correct": 16
+    },
+    "deadline": {
+      "n": 20,
+      "correct": 20
+    }
+  },
+  "scope": "Twenty-case development selection/integration receipt; not customer qualification"
+}

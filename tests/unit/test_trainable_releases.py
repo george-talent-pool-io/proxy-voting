@@ -45,6 +45,8 @@ def test_release_pins_all_models_sources_schema_and_rollback(registered, db):
     a = prepared(); b = prepared('r2', mode='LAYA_ONLY')
     for p in [a, b]:
         m = releases.verify(p); validation(p / 'valid', m['identity']); releases.seal(p, p / 'valid')
+        assert m['scope'].startswith('UNQUALIFIED_RELEASE')
+        assert all(v['provenance']['kind']=='REGISTERED_DERIVATIVE' for v in m['models'].values())
     first = releases.select('r1', actor='AI_TEST', reason='Contract verification', database=db)
     second = releases.select('r2', actor='AI_TEST', reason='Contract verification', expected_previous_id=first['id'], database=db)
     rolled = releases.select('r1', actor='AI_TEST', reason='Contract rollback', expected_previous_id=second['id'], rollback_id=first['id'], database=db)

@@ -1,0 +1,1459 @@
+{
+  "cases": 374,
+  "cases_satisfying_all_supplied_assertions": 339,
+  "assertions": 3366,
+  "correct_assertions": 3325,
+  "assertion_accuracy": 0.9878193701723114,
+  "case_exact_match_scope": "All supplied assertions only; not all fields unless dataset is completely labelled",
+  "fields": {
+    "share_blocking": {
+      "n": 374,
+      "correct": 370,
+      "accuracy": 0.9893048128342246,
+      "macro_f1": 0.9544185185185184,
+      "f1_by_class": {
+        "NO": 0.9952,
+        "YES": 0.9791666666666666,
+        "UNKNOWN": 0.8888888888888888
+      },
+      "balanced_accuracy": 0.9263888888888889,
+      "positive_label": "YES",
+      "positive_support": 48,
+      "negative_support": 311,
+      "positive_precision": 0.9791666666666666,
+      "positive_recall": 0.9791666666666666,
+      "negative_recall_specificity": 1.0,
+      "positive_f1": 0.9791666666666666,
+      "support": {
+        "NO": 311,
+        "YES": 48,
+        "UNKNOWN": 15
+      },
+      "predicted_support": {
+        "NO": 314,
+        "YES": 48,
+        "UNKNOWN": 12
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          311,
+          0,
+          0
+        ],
+        [
+          2,
+          12,
+          1
+        ],
+        [
+          1,
+          0,
+          47
+        ]
+      ],
+      "not_supported": 0
+    },
+    "poa_required": {
+      "n": 374,
+      "correct": 374,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "f1_by_class": {
+        "NO": 1.0,
+        "UNKNOWN": 1.0,
+        "YES": 1.0
+      },
+      "balanced_accuracy": 1.0,
+      "positive_label": "YES",
+      "positive_support": 45,
+      "negative_support": 312,
+      "positive_precision": 1.0,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 1.0,
+      "positive_f1": 1.0,
+      "support": {
+        "NO": 312,
+        "UNKNOWN": 17,
+        "YES": 45
+      },
+      "predicted_support": {
+        "NO": 312,
+        "UNKNOWN": 17,
+        "YES": 45
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          312,
+          0,
+          0
+        ],
+        [
+          0,
+          17,
+          0
+        ],
+        [
+          0,
+          0,
+          45
+        ]
+      ],
+      "not_supported": 0
+    },
+    "registration_required": {
+      "n": 374,
+      "correct": 373,
+      "accuracy": 0.9973262032085561,
+      "macro_f1": 0.9877076731009314,
+      "f1_by_class": {
+        "NO": 1.0,
+        "YES": 0.9887640449438202,
+        "UNKNOWN": 0.9743589743589743
+      },
+      "balanced_accuracy": 0.9833333333333334,
+      "positive_label": "YES",
+      "positive_support": 44,
+      "negative_support": 310,
+      "positive_precision": 0.9777777777777777,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 1.0,
+      "positive_f1": 0.9887640449438202,
+      "support": {
+        "NO": 310,
+        "YES": 44,
+        "UNKNOWN": 20
+      },
+      "predicted_support": {
+        "NO": 310,
+        "YES": 45,
+        "UNKNOWN": 19
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          310,
+          0,
+          0
+        ],
+        [
+          0,
+          19,
+          1
+        ],
+        [
+          0,
+          0,
+          44
+        ]
+      ],
+      "not_supported": 0
+    },
+    "beneficial_owner_disclosure_required": {
+      "n": 374,
+      "correct": 371,
+      "accuracy": 0.9919786096256684,
+      "macro_f1": 0.9807613231214948,
+      "f1_by_class": {
+        "NO": 0.9952456418383518,
+        "YES": 0.975609756097561,
+        "UNKNOWN": 0.9714285714285714
+      },
+      "balanced_accuracy": 0.9656084656084656,
+      "positive_label": "YES",
+      "positive_support": 42,
+      "negative_support": 314,
+      "positive_precision": 1.0,
+      "positive_recall": 0.9523809523809523,
+      "negative_recall_specificity": 1.0,
+      "positive_f1": 0.975609756097561,
+      "support": {
+        "NO": 314,
+        "YES": 42,
+        "UNKNOWN": 18
+      },
+      "predicted_support": {
+        "NO": 317,
+        "YES": 40,
+        "UNKNOWN": 17
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          314,
+          0,
+          0
+        ],
+        [
+          1,
+          17,
+          0
+        ],
+        [
+          2,
+          0,
+          40
+        ]
+      ],
+      "not_supported": 0
+    },
+    "holding_confirmation_required": {
+      "n": 374,
+      "correct": 368,
+      "accuracy": 0.983957219251337,
+      "macro_f1": 0.9667763410434421,
+      "f1_by_class": {
+        "NO": 0.990228013029316,
+        "YES": 0.9555555555555556,
+        "UNKNOWN": 0.9545454545454546
+      },
+      "balanced_accuracy": 0.9794547415906639,
+      "positive_label": "YES",
+      "positive_support": 43,
+      "negative_support": 309,
+      "positive_precision": 0.9148936170212766,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 0.9838187702265372,
+      "positive_f1": 0.9555555555555556,
+      "support": {
+        "NO": 309,
+        "YES": 43,
+        "UNKNOWN": 22
+      },
+      "predicted_support": {
+        "NO": 305,
+        "YES": 47,
+        "UNKNOWN": 22
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          304,
+          1,
+          4
+        ],
+        [
+          1,
+          21,
+          0
+        ],
+        [
+          0,
+          0,
+          43
+        ]
+      ],
+      "not_supported": 0
+    },
+    "split_voting_restricted": {
+      "n": 374,
+      "correct": 365,
+      "accuracy": 0.9759358288770054,
+      "macro_f1": 0.9381889650430421,
+      "f1_by_class": {
+        "NO": 0.9854132901134521,
+        "YES": 0.9655172413793104,
+        "UNKNOWN": 0.8636363636363636
+      },
+      "balanced_accuracy": 0.916742671009772,
+      "positive_label": "YES",
+      "positive_support": 42,
+      "negative_support": 307,
+      "positive_precision": 0.9333333333333333,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 0.990228013029316,
+      "positive_f1": 0.9655172413793104,
+      "support": {
+        "NO": 307,
+        "YES": 42,
+        "UNKNOWN": 25
+      },
+      "predicted_support": {
+        "NO": 310,
+        "YES": 45,
+        "UNKNOWN": 19
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          304,
+          0,
+          3
+        ],
+        [
+          6,
+          19,
+          0
+        ],
+        [
+          0,
+          0,
+          42
+        ]
+      ],
+      "not_supported": 0
+    },
+    "securities_lending_recall_required": {
+      "n": 374,
+      "correct": 374,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "f1_by_class": {
+        "NO": 1.0,
+        "UNKNOWN": 1.0,
+        "YES": 1.0
+      },
+      "balanced_accuracy": 1.0,
+      "positive_label": "YES",
+      "positive_support": 33,
+      "negative_support": 324,
+      "positive_precision": 1.0,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 1.0,
+      "positive_f1": 1.0,
+      "support": {
+        "NO": 324,
+        "UNKNOWN": 17,
+        "YES": 33
+      },
+      "predicted_support": {
+        "NO": 324,
+        "UNKNOWN": 17,
+        "YES": 33
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          324,
+          0,
+          0
+        ],
+        [
+          0,
+          17,
+          0
+        ],
+        [
+          0,
+          0,
+          33
+        ]
+      ],
+      "not_supported": 0
+    },
+    "other_voting_restriction": {
+      "n": 374,
+      "correct": 357,
+      "accuracy": 0.9545454545454546,
+      "macro_f1": 0.8933568479597551,
+      "f1_by_class": {
+        "NO": 0.9754500818330606,
+        "UNKNOWN": 0.8333333333333334,
+        "YES": 0.8712871287128713
+      },
+      "balanced_accuracy": 0.8928956695946987,
+      "positive_label": "YES",
+      "positive_support": 44,
+      "negative_support": 309,
+      "positive_precision": 0.7719298245614035,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 0.9644012944983819,
+      "positive_f1": 0.8712871287128713,
+      "support": {
+        "NO": 309,
+        "UNKNOWN": 21,
+        "YES": 44
+      },
+      "predicted_support": {
+        "NO": 302,
+        "UNKNOWN": 15,
+        "YES": 57
+      },
+      "labels": [
+        "NO",
+        "UNKNOWN",
+        "YES"
+      ],
+      "confusion_matrix": [
+        [
+          298,
+          0,
+          11
+        ],
+        [
+          4,
+          15,
+          2
+        ],
+        [
+          0,
+          0,
+          44
+        ]
+      ],
+      "not_supported": 0
+    },
+    "votability": {
+      "n": 374,
+      "correct": 373,
+      "accuracy": 0.9973262032085561,
+      "macro_f1": 0.9969403365629782,
+      "f1_by_class": {
+        "NOT_VOTABLE": 0.9962264150943396,
+        "UNCERTAIN": 0.9945945945945946,
+        "VOTABLE": 1.0
+      },
+      "balanced_accuracy": 0.996415770609319,
+      "positive_label": "VOTABLE",
+      "positive_support": 149,
+      "negative_support": 132,
+      "positive_precision": 1.0,
+      "positive_recall": 1.0,
+      "negative_recall_specificity": 1.0,
+      "positive_f1": 1.0,
+      "support": {
+        "NOT_VOTABLE": 132,
+        "UNCERTAIN": 93,
+        "VOTABLE": 149
+      },
+      "predicted_support": {
+        "NOT_VOTABLE": 133,
+        "UNCERTAIN": 92,
+        "VOTABLE": 149
+      },
+      "labels": [
+        "NOT_VOTABLE",
+        "UNCERTAIN",
+        "VOTABLE"
+      ],
+      "confusion_matrix": [
+        [
+          132,
+          0,
+          0
+        ],
+        [
+          1,
+          92,
+          0
+        ],
+        [
+          0,
+          0,
+          149
+        ]
+      ],
+      "not_supported": 0
+    }
+  },
+  "final_status_labelled_cases": 0,
+  "customer_status_accuracy": null,
+  "manual_review_count": 123,
+  "uncertain_final_status_count": 123,
+  "llm_invocations": 0,
+  "llm_invalid_outputs": 0,
+  "high_confidence_wrong_assertions": 0,
+  "median_latency_ms": 317.1445420011878,
+  "p95_latency_ms": 925.545375328511,
+  "failures": [
+    {
+      "id": "RC1-0715311",
+      "text": "This operational notice invites proxy votes on current shareholder resolutions. Current instructions conflict about a signed POA; neither version has priority. A custodian-issued shareholding statement is compulsory for meeting participation. The relevant annex is missing, leaving the condition concerning a securities-loan recall uncertain. Voting instructions must reach the custodian by 26 November 2026 at 16:00 UTC. The custodian cannot submit the ballot until the required meeting registration is complete. A nominee cannot divide its votes between different choices for the same resolution. Holders may vote without share blocking.",
+      "field": "other_voting_restriction",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.7075,
+        "NO": 0.2687,
+        "UNKNOWN": 0.0238
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0715311"
+    },
+    {
+      "id": "RC1-0715391",
+      "text": "You can direct the votes attached to the position shown on this meeting notification.\n\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\n\nThe registrar is still investigating the possible requirement for a further participation restriction.\n\nThe agent has not confirmed whether immobilisation of the voting shares is compulsory for this ballot.\n\nThe holder must register its voting participation in advance.\n\nThe registrar is still investigating the possible requirement for owner-name reporting.\n\nThe agent has not confirmed whether a uniform-voting condition is compulsory for this ballot.\n\nAny earlier condition for documentary proof of ownership has been withdrawn and no longer applies.\n\nThe recall of lent stock is optional and is not a prerequisite for voting.",
+      "field": "split_voting_restricted",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0561,
+        "NO": 0.7842,
+        "UNKNOWN": 0.1596
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0715391"
+    },
+    {
+      "id": "RC1-0715406",
+      "text": "- Bondholders have an opportunity to cast votes at the announced noteholder meeting.\n- A freeze on instructed securities is optional and is not a prerequisite for voting.\n- Documentary proof of ownership is optional and is not a prerequisite for voting.\n- The registrar requires the ultimate owner’s personal details before processing the ballot.\n- The registrar confirms that a restriction on dividing the votes is unnecessary for this event.\n- The beneficial owner must execute the power of attorney before votes can be accepted.\n- Voting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.",
+      "field": "beneficial_owner_disclosure_required",
+      "expected": "YES",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.4653,
+        "NO": 0.5283,
+        "UNKNOWN": 0.0065
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0715406"
+    },
+    {
+      "id": "RC1-0715505",
+      "text": "- The registered nominee can represent the beneficial holder in the forthcoming vote.\n- There is no requirement for a restriction on dividing the votes in the final terms.\n- Routine settlement enquiries should quote the custody account reference.\n- Voting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\n- The agent expressly waives documentary proof of ownership for this ballot.\n- Shares covered by an instruction cannot be sold before the end of the poll.\n- Beneficial holders with lent shares must arrange their return before voting.\n- A signed POA is not required for the current vote.\n- The definitive instructions remove the preliminary requirement for owner-name reporting.\n- The agent has not confirmed whether an extra market-specific voting condition is compulsory for this ballot.\n- The service desk is available during the custodian’s published business hours.",
+      "field": "other_voting_restriction",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.2799,
+        "NO": 0.5367,
+        "UNKNOWN": 0.1834
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0715505"
+    },
+    {
+      "id": "RC1-0715527",
+      "text": "- The attachment needed to determine whether a ballot exists is missing.\n- The register is administered by the issuer’s appointed transfer agent.\n- The issuer publishes financial reports through its investor-relations service.\n- The payment account and tax reporting arrangements are unaffected.\n- Holders should keep a copy of any correspondence for their own records.\n- The custodian maintains an archive of notices for the reporting period.\n- This communication is distributed through the usual securities-services channel.\n- The intermediary records timestamps when incoming documents are received.\n- Custody fees are reported separately on the periodic account statement.",
+      "field": "votability",
+      "expected": "UNCERTAIN",
+      "predicted": "NOT_VOTABLE",
+      "scores": {
+        "VOTABLE": 0.0046,
+        "NOT_VOTABLE": 0.9895,
+        "UNCERTAIN": 0.0059
+      },
+      "confidence": null,
+      "margin": 0.9836,
+      "source": "REGISTERED_LAYA_WHOLE_NOTICE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0715527"
+    },
+    {
+      "id": "RC1-0715554",
+      "text": "Investors may exercise their voting rights through the nominee at this meeting. A restriction on dividing the votes is optional and is not a prerequisite for voting. Contact details for administrative enquiries appear in the service directory. A disposal restriction attaches to each share committed to this ballot. Current instructions conflict about an extra market-specific voting condition; neither version has priority. Voting instructions must reach the custodian by 26 November 2026 at 16:00 UTC. Beneficial-owner disclosure is not required for the current vote. The payment account and tax reporting arrangements are unaffected. Documentary proof of ownership is optional and is not a prerequisite for voting.",
+      "field": "other_voting_restriction",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.457,
+        "NO": 0.2169,
+        "UNKNOWN": 0.3261
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0715554"
+    },
+    {
+      "id": "RC1-0715646",
+      "text": "Custody operations communication\nThe meeting agenda is open for voting by shareholders through the custody chain.\nWe cannot establish from the available terms whether advance enrolment with the registrar applies.\nWe cannot establish from the available terms whether a freeze on instructed securities applies.\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\nThe account currency does not change as a result of this notification.\nThe registrar’s postal address is unchanged from the previous circular.\nCustody fees are reported separately on the periodic account statement.\nThis communication is distributed through the usual securities-services channel.\nThe payment account and tax reporting arrangements are unaffected.\nThe current proxy process does not impose a restriction on dividing the votes.\nContact details for administrative enquiries appear in the service directory.\nCopies of the published accounts can be requested from the company secretary.\nA holdings certificate is optional and is not a prerequisite for voting.\nThe service desk is available during the custodian’s published business hours.\nThe registrar confirms that beneficial-owner disclosure is unnecessary for this event.",
+      "field": "share_blocking",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0021,
+        "NO": 0.994,
+        "UNKNOWN": 0.0039
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0715646"
+    },
+    {
+      "id": "RC1-0715703",
+      "text": "- We require your ballot preferences for the issuer’s annual meeting.\n- The relevant annex is missing, leaving the condition concerning an attorney mandate for voting uncertain.\n- The register is administered by the issuer’s appointed transfer agent.\n- Any earlier condition for a custodian position confirmation has been withdrawn and no longer applies.\n- Voting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\n- The registrar is still investigating the possible requirement for an additional investor-eligibility restriction.\n- Account reconciliations are performed after the close of each business day.\n- We cannot establish from the available terms whether a uniform-voting condition applies.",
+      "field": "split_voting_restricted",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.01,
+        "NO": 0.7725,
+        "UNKNOWN": 0.2175
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0715703"
+    },
+    {
+      "id": "RC1-0715884",
+      "text": "Please indicate how the registered holder should cast your shares at the general meeting. Voting instructions must reach the custodian by 26 November 2026 at 16:00 UTC. The current proxy process does not impose the recall of lent stock. The holder must register its voting participation in advance. The relevant annex is missing, leaving the condition concerning an extra market-specific voting condition uncertain. A confirmation of ownership from the custodian is mandatory for this vote. Disclosure of the underlying investor’s identity is required for acceptance of votes. A duly signed power of attorney must accompany the voting direction.",
+      "field": "other_voting_restriction",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0626,
+        "NO": 0.6411,
+        "UNKNOWN": 0.2963
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0715884"
+    },
+    {
+      "id": "RC1-0715898",
+      "text": "Investors may exercise their voting rights through the nominee at this meeting. The registrar confirms that immobilisation of the voting shares is unnecessary for this event. The agent expressly waives a power of attorney for this ballot. A uniform-voting condition is optional and is not a prerequisite for voting. Participation in the vote requires advance enrolment with the registrar. Holders may vote without a securities-loan recall. There is no requirement for owner-name reporting in the final terms. The proxy instruction must carry a wet-ink signature; digital signatures are refused.",
+      "field": "split_voting_restricted",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.7492,
+        "NO": 0.2457,
+        "UNKNOWN": 0.0051
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "other_voting_restriction:PASSAGE_CONFLICT"
+      ],
+      "record_id": "RC1-0715898"
+    },
+    {
+      "id": "RC1-0716093",
+      "text": "You can direct the votes attached to the position shown on this meeting notification.\n\nA disposal restriction attaches to each share committed to this ballot.\n\nCurrent instructions conflict about owner-name reporting; neither version has priority.\n\nThe custodian voting deadline was 15 September 2026 at 12:00 UTC.\n\nThe intermediary records timestamps when incoming documents are received.\n\nThe holder must use a uniform choice for all instructed shares on each motion.\n\nThe payment account and tax reporting arrangements are unaffected.\n\nPre-registration for voting is not required for the current vote.\n\nCustody fees are reported separately on the periodic account statement.\n\nThe registrar’s postal address is unchanged from the previous circular.\n\nThe service desk is available during the custodian’s published business hours.\n\nA signed POA is an optional service and is not a condition of voting.\n\nThe recall of lent stock is optional and is not a prerequisite for voting.\n\nCopies of the published accounts can be requested from the company secretary.\n\nThe account currency does not change as a result of this notification.\n\nHolders should keep a copy of any correspondence for their own records.",
+      "field": "holding_confirmation_required",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.939,
+        "NO": 0.0012,
+        "UNKNOWN": 0.0598
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0716093"
+    },
+    {
+      "id": "RC1-0716093",
+      "text": "You can direct the votes attached to the position shown on this meeting notification.\n\nA disposal restriction attaches to each share committed to this ballot.\n\nCurrent instructions conflict about owner-name reporting; neither version has priority.\n\nThe custodian voting deadline was 15 September 2026 at 12:00 UTC.\n\nThe intermediary records timestamps when incoming documents are received.\n\nThe holder must use a uniform choice for all instructed shares on each motion.\n\nThe payment account and tax reporting arrangements are unaffected.\n\nPre-registration for voting is not required for the current vote.\n\nCustody fees are reported separately on the periodic account statement.\n\nThe registrar’s postal address is unchanged from the previous circular.\n\nThe service desk is available during the custodian’s published business hours.\n\nA signed POA is an optional service and is not a condition of voting.\n\nThe recall of lent stock is optional and is not a prerequisite for voting.\n\nCopies of the published accounts can be requested from the company secretary.\n\nThe account currency does not change as a result of this notification.\n\nHolders should keep a copy of any correspondence for their own records.",
+      "field": "other_voting_restriction",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.6261,
+        "NO": 0.3708,
+        "UNKNOWN": 0.0032
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0716093"
+    },
+    {
+      "id": "RC1-0716144",
+      "text": "Eligible holders have the right to vote on the resolutions listed in the current notice.\n\nElectronic copies of account statements remain available through the portal.\n\nThe relevant annex is missing, leaving the condition concerning documentary proof of ownership uncertain.\n\nThe custodian cannot submit the ballot until the required meeting registration is complete.\n\nThe payment account and tax reporting arrangements are unaffected.\n\nCurrent instructions conflict about a prohibition on split voting; neither version has priority.\n\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\n\nOwner-name reporting is optional and is not a prerequisite for voting.\n\nCurrent instructions conflict about a freeze on instructed securities; neither version has priority.",
+      "field": "share_blocking",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0171,
+        "NO": 0.9727,
+        "UNKNOWN": 0.0101
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0716144"
+    },
+    {
+      "id": "RC1-0716144",
+      "text": "Eligible holders have the right to vote on the resolutions listed in the current notice.\n\nElectronic copies of account statements remain available through the portal.\n\nThe relevant annex is missing, leaving the condition concerning documentary proof of ownership uncertain.\n\nThe custodian cannot submit the ballot until the required meeting registration is complete.\n\nThe payment account and tax reporting arrangements are unaffected.\n\nCurrent instructions conflict about a prohibition on split voting; neither version has priority.\n\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\n\nOwner-name reporting is optional and is not a prerequisite for voting.\n\nCurrent instructions conflict about a freeze on instructed securities; neither version has priority.",
+      "field": "other_voting_restriction",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.8734,
+        "NO": 0.1248,
+        "UNKNOWN": 0.0018
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0716144"
+    },
+    {
+      "id": "RC1-0716197",
+      "text": "The shareholders’ assembly will vote on the remuneration report and election of directors.\n\nVoting representation depends on receipt of the signed power-of-attorney instrument.\n\nOnly investors satisfying the stated institutional eligibility condition can participate.\n\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\n\nThere is no requirement for a restriction on dividing the votes in the final terms.",
+      "field": "holding_confirmation_required",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9939,
+        "NO": 0.0036,
+        "UNKNOWN": 0.0025
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0716197"
+    },
+    {
+      "id": "RC1-0716444",
+      "text": "- The nominee is accepting ballots on the resolutions at the upcoming annual assembly.\n- Custody fees are reported separately on the periodic account statement.\n- The current proxy process does not impose meeting registration.\n- A custodian-issued shareholding statement is compulsory for meeting participation.\n- A uniform-voting condition is optional and is not a prerequisite for voting.\n- Voting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\n- A notarised voting power of attorney is compulsory for beneficial owners.\n- The custodian maintains an archive of notices for the reporting period.\n- The general market guide mentions a securities-loan recall, but this event is expressly exempt.\n- Current instructions conflict about a further participation restriction; neither version has priority.\n- The relevant annex is missing, leaving the condition concerning disclosure of the ultimate investor’s identity uncertain.\n- Shares covered by an instruction cannot be sold before the end of the poll.",
+      "field": "split_voting_restricted",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.7404,
+        "NO": 0.136,
+        "UNKNOWN": 0.1237
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0716444"
+    },
+    {
+      "id": "RC1-0716573",
+      "text": "Eligible holders have the right to vote on the resolutions listed in the current notice.\n\nCustody fees are reported separately on the periodic account statement.\n\nParticipation in the vote requires advance enrolment with the registrar.\n\nAn outstanding securities loan must be terminated and the shares returned for this ballot.\n\nContact details for administrative enquiries appear in the service directory.\n\nThe registrar confirms that documentary proof of ownership is unnecessary for this event.\n\nWhether voting requires beneficial-owner disclosure remains unresolved pending clarification.\n\nThe registrar is still investigating the possible requirement for an attorney mandate for voting.\n\nThe relevant annex is missing, leaving the condition concerning a uniform-voting condition uncertain.\n\nThe general market guide mentions an extra market-specific voting condition, but this event is expressly exempt.",
+      "field": "split_voting_restricted",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0274,
+        "NO": 0.894,
+        "UNKNOWN": 0.0785
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0716573"
+    },
+    {
+      "id": "RC1-0716573",
+      "text": "Eligible holders have the right to vote on the resolutions listed in the current notice.\n\nCustody fees are reported separately on the periodic account statement.\n\nParticipation in the vote requires advance enrolment with the registrar.\n\nAn outstanding securities loan must be terminated and the shares returned for this ballot.\n\nContact details for administrative enquiries appear in the service directory.\n\nThe registrar confirms that documentary proof of ownership is unnecessary for this event.\n\nWhether voting requires beneficial-owner disclosure remains unresolved pending clarification.\n\nThe registrar is still investigating the possible requirement for an attorney mandate for voting.\n\nThe relevant annex is missing, leaving the condition concerning a uniform-voting condition uncertain.\n\nThe general market guide mentions an extra market-specific voting condition, but this event is expressly exempt.",
+      "field": "other_voting_restriction",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.4973,
+        "NO": 0.4654,
+        "UNKNOWN": 0.0373
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0716573"
+    },
+    {
+      "id": "RC1-0716840",
+      "text": "Beneficiaries may vote remotely on the motions at the class meeting.\n\nOwner-name reporting is optional and is not a prerequisite for voting.\n\nThis communication is distributed through the usual securities-services channel.\n\nA securities-loan recall is optional and is not a prerequisite for voting.\n\nThe intermediary records timestamps when incoming documents are received.\n\nThe beneficial owner has to submit documentary proof of holding for this proxy ballot.\n\nA notarised voting power of attorney is compulsory for beneficial owners.\n\nCopies of the published accounts can be requested from the company secretary.\n\nThe custodian maintains an archive of notices for the reporting period.\n\nContact details for administrative enquiries appear in the service directory.\n\nAccount reconciliations are performed after the close of each business day.\n\nHolders should keep a copy of any correspondence for their own records.\n\nThe custodian voting deadline was 15 September 2026 at 12:00 UTC.\n\nThe market accepts only one voting direction for the entire nominee position.\n\nElectronic copies of account statements remain available through the portal.",
+      "field": "other_voting_restriction",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.5468,
+        "NO": 0.4495,
+        "UNKNOWN": 0.0037
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0716840"
+    },
+    {
+      "id": "RC1-0716910",
+      "text": "- This operational notice invites proxy votes on current shareholder resolutions.\n- Current instructions conflict about beneficial-owner disclosure; neither version has priority.\n- The relevant annex is missing, leaving the condition concerning a power of attorney uncertain.\n- Retail beneficial owners are excluded from this shareholder poll.\n- The relevant annex is missing, leaving the condition concerning immobilisation of the voting shares uncertain.\n- Voting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\n- Different voting choices cannot be assigned to portions of the same position.",
+      "field": "beneficial_owner_disclosure_required",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0017,
+        "NO": 0.7791,
+        "UNKNOWN": 0.2192
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0716910"
+    },
+    {
+      "id": "RC1-0717045",
+      "text": "Enclosed is the proxy card for the forthcoming extraordinary shareholder assembly.\n\nThe ultimate beneficial owner’s name and address must be disclosed with each ballot.\n\nThe definitive instructions remove the preliminary requirement for a restriction on dividing the votes.\n\nAn attorney mandate for voting is optional and is not a prerequisite for voting.\n\nThe register is administered by the issuer’s appointed transfer agent.\n\nThe registrar’s postal address is unchanged from the previous circular.\n\nA minimum holding of five hundred shares is required to exercise the ballot.\n\nThe payment account and tax reporting arrangements are unaffected.\n\nRegistration with the meeting agent is compulsory before proxy instructions can be lodged.\n\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\n\nThe voting position is frozen from instruction acceptance until the assembly closes.\n\nThe mandatory return of securities on loan is optional and is not a prerequisite for voting.\n\nThe account currency does not change as a result of this notification.\n\nThe service desk is available during the custodian’s published business hours.\n\nThe issuer publishes financial reports through its investor-relations service.\n\nHolders should keep a copy of any correspondence for their own records.\n\nThis communication is distributed through the usual securities-services channel.",
+      "field": "holding_confirmation_required",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9983,
+        "NO": 0.0008,
+        "UNKNOWN": 0.0008
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0717045"
+    },
+    {
+      "id": "RC1-0717184",
+      "text": "Your beneficial holding carries a ballot on the proposed capital reorganisation.\n\nShare blocking is optional and is not a prerequisite for voting.\n\nOnly professional investors are eligible to cast a ballot in this event.\n\nCurrent instructions conflict about the recall of lent stock; neither version has priority.\n\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\n\nVotes are accepted only after the registrar has enrolled the beneficial holder.\n\nA signed POA is an optional service and is not a condition of voting.\n\nA uniform-voting condition is not required for the current vote.\n\nThe agent has not confirmed whether owner-name reporting is compulsory for this ballot.",
+      "field": "holding_confirmation_required",
+      "expected": "NO",
+      "predicted": "UNKNOWN",
+      "scores": {
+        "YES": 0.0551,
+        "NO": 0.1105,
+        "UNKNOWN": 0.8344
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "other_voting_restriction:PASSAGE_CONFLICT"
+      ],
+      "record_id": "RC1-0717184"
+    },
+    {
+      "id": "RC1-0717198",
+      "text": "Custody operations communication\nThe meeting agenda is open for voting by shareholders through the custody chain.\nThe custodian maintains an archive of notices for the reporting period.\nThe account currency does not change as a result of this notification.\nThe register is administered by the issuer’s appointed transfer agent.\nThe registrar requires the ultimate owner’s personal details before processing the ballot.\nCustody fees are reported separately on the periodic account statement.\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\nThe registrar is still investigating the possible requirement for a custodian position confirmation.\nThe agent has not confirmed whether a uniform-voting condition is compulsory for this ballot.\nThe definitive instructions remove the preliminary requirement for an additional investor-eligibility restriction.\nThe registrar’s postal address is unchanged from the previous circular.\nAccount reconciliations are performed after the close of each business day.\nThe registrar is still investigating the possible requirement for pre-registration for voting.\nA freeze on instructed securities is an optional service and is not a condition of voting.\nElectronic copies of account statements remain available through the portal.\nCopies of the published accounts can be requested from the company secretary.",
+      "field": "split_voting_restricted",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0113,
+        "NO": 0.7865,
+        "UNKNOWN": 0.2022
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0717198"
+    },
+    {
+      "id": "RC1-0717209",
+      "text": "Custody operations communication\nThe meeting agenda is open for voting by shareholders through the custody chain.\nThe beneficial owner has to submit documentary proof of holding for this proxy ballot.\nWhether voting requires the mandatory return of securities on loan remains unresolved pending clarification.\nWhether voting requires a uniform-voting condition remains unresolved pending clarification.\nRetail beneficial owners are excluded from this shareholder poll.\nThe definitive instructions remove the preliminary requirement for an attorney mandate for voting.\nThe registrar is still investigating the possible requirement for beneficial-owner disclosure.\nPre-registration is a condition of participation in this shareholder poll.",
+      "field": "split_voting_restricted",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0192,
+        "NO": 0.7403,
+        "UNKNOWN": 0.2405
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0717209"
+    },
+    {
+      "id": "RC1-0717252",
+      "text": "- Shareholders can give the nominee an instruction on the proposed change of domicile.\n- A beneficial ownership disclosure must accompany the meeting instruction.\n- We cannot establish from the available terms whether an extra market-specific voting condition applies.\n- The custodian voting deadline was 15 September 2026 at 12:00 UTC.\n- This communication is distributed through the usual securities-services channel.\n- The recall of lent stock is optional and is not a prerequisite for voting.\n- Holders may vote without a uniform-voting condition.\n- No ballot will be rejected because the holder has not arranged meeting registration.\n- The registrar’s postal address is unchanged from the previous circular.\n- The registrar is still investigating the possible requirement for an attorney mandate for voting.\n- A custodian-issued shareholding statement is compulsory for meeting participation.",
+      "field": "split_voting_restricted",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.8228,
+        "NO": 0.1601,
+        "UNKNOWN": 0.0172
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "votability:PASSAGE_CONFLICT"
+      ],
+      "record_id": "RC1-0717252"
+    },
+    {
+      "id": "RC1-0717252",
+      "text": "- Shareholders can give the nominee an instruction on the proposed change of domicile.\n- A beneficial ownership disclosure must accompany the meeting instruction.\n- We cannot establish from the available terms whether an extra market-specific voting condition applies.\n- The custodian voting deadline was 15 September 2026 at 12:00 UTC.\n- This communication is distributed through the usual securities-services channel.\n- The recall of lent stock is optional and is not a prerequisite for voting.\n- Holders may vote without a uniform-voting condition.\n- No ballot will be rejected because the holder has not arranged meeting registration.\n- The registrar’s postal address is unchanged from the previous circular.\n- The registrar is still investigating the possible requirement for an attorney mandate for voting.\n- A custodian-issued shareholding statement is compulsory for meeting participation.",
+      "field": "other_voting_restriction",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0619,
+        "NO": 0.8904,
+        "UNKNOWN": 0.0477
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "votability:PASSAGE_CONFLICT"
+      ],
+      "record_id": "RC1-0717252"
+    },
+    {
+      "id": "RC1-0717346",
+      "text": "An electronic voting facility is open for this issuer meeting.\n\nRoutine settlement enquiries should quote the custody account reference.\n\nCopies of the published accounts can be requested from the company secretary.\n\nThe register is administered by the issuer’s appointed transfer agent.\n\nThe ultimate beneficial owner’s name and address must be disclosed with each ballot.\n\nDocumentary proof of ownership is optional and is not a prerequisite for voting.\n\nA prohibition on split voting is optional and is not a prerequisite for voting.\n\nHolders should keep a copy of any correspondence for their own records.\n\nWhether voting requires immobilisation of the voting shares remains unresolved pending clarification.\n\nThis communication is distributed through the usual securities-services channel.\n\nCustody fees are reported separately on the periodic account statement.\n\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\n\nThe current proxy process does not impose the recall of lent stock.\n\nElectronic copies of account statements remain available through the portal.\n\nThe account currency does not change as a result of this notification.",
+      "field": "other_voting_restriction",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.8671,
+        "NO": 0.1214,
+        "UNKNOWN": 0.0115
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0717346"
+    },
+    {
+      "id": "RC1-0717483",
+      "text": "Shareholders can give the nominee an instruction on the proposed change of domicile.\n\nHolders may vote without documentary proof of ownership.\n\nThe agent has not confirmed whether meeting registration is compulsory for this ballot.\n\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\n\nSubmission of proxy directions prevents transfer of the corresponding shares.\n\nThe general market guide mentions a securities-loan recall, but this event is expressly exempt.\n\nThe registrar will reject the ballot unless the holder supplies a valid POA.\n\nAny earlier condition for disclosure of the ultimate investor’s identity has been withdrawn and no longer applies.",
+      "field": "other_voting_restriction",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.9965,
+        "NO": 0.0019,
+        "UNKNOWN": 0.0015
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0717483"
+    },
+    {
+      "id": "RC1-0717658",
+      "text": "Custody operations communication\nThe election of the supervisory board is subject to the current shareholder ballot.\nCustody fees are reported separately on the periodic account statement.\nCopies of the published accounts can be requested from the company secretary.\nRoutine settlement enquiries should quote the custody account reference.\nElectronic copies of account statements remain available through the portal.\nNo ballot will be rejected because the holder has not arranged a signed POA.\nThe service desk is available during the custodian’s published business hours.\nAll shares on an instruction must receive an identical voting preference.\nCurrent instructions conflict about a holdings certificate; neither version has priority.\nAccount reconciliations are performed after the close of each business day.\nShares on loan must be recalled before the holder can participate in this vote.\nThe registrar is still investigating the possible requirement for meeting registration.\nThe registrar is still investigating the possible requirement for an extra market-specific voting condition.\nThere is no requirement for a freeze on instructed securities in the final terms.\nThe register is administered by the issuer’s appointed transfer agent.\nThis communication is distributed through the usual securities-services channel.\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.",
+      "field": "other_voting_restriction",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.6698,
+        "NO": 0.1628,
+        "UNKNOWN": 0.1674
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "votability:PASSAGE_CONFLICT"
+      ],
+      "record_id": "RC1-0717658"
+    },
+    {
+      "id": "RC1-0717667",
+      "text": "- The custodian will forward completed voting forms to the meeting registrar.\n- Partial allocation between for and against is not permitted for this ballot.\n- Whether voting requires a freeze on instructed securities remains unresolved pending clarification.\n- We cannot establish from the available terms whether an additional investor-eligibility restriction applies.\n- The general market guide mentions pre-registration for voting, but this event is expressly exempt.\n- Voting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\n- Custody fees are reported separately on the periodic account statement.\n- A power of attorney is optional and is not a prerequisite for voting.\n- The current proxy process does not impose a securities-loan recall.\n- Documentary proof of ownership is optional and is not a prerequisite for voting.\n- The intermediary records timestamps when incoming documents are received.",
+      "field": "share_blocking",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.5044,
+        "NO": 0.0531,
+        "UNKNOWN": 0.4425
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0717667"
+    },
+    {
+      "id": "RC1-0717836",
+      "text": "- Voting on the auditor appointment is now available through the proxy service.\n- A securities-loan recall is an optional service and is not a condition of voting.\n- Electronic copies of account statements remain available through the portal.\n- A confirmation of ownership from the custodian is mandatory for this vote.\n- An attorney mandate for voting is an optional service and is not a condition of voting.\n- A disposal restriction attaches to each share committed to this ballot.\n- The intermediary records timestamps when incoming documents are received.\n- The current proxy process does not impose beneficial-owner disclosure.\n- Voting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.",
+      "field": "other_voting_restriction",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.5248,
+        "NO": 0.4723,
+        "UNKNOWN": 0.0029
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "other_voting_restriction:PASSAGE_CONFLICT"
+      ],
+      "record_id": "RC1-0717836"
+    },
+    {
+      "id": "RC1-0717945",
+      "text": "- You can direct the votes attached to the position shown on this meeting notification.\n- Current instructions conflict about a restriction on dividing the votes; neither version has priority.\n- Current instructions conflict about advance enrolment with the registrar; neither version has priority.\n- Any earlier condition for a power of attorney has been withdrawn and no longer applies.\n- Lodging a ballot immobilises the voted position until the meeting concludes.\n- The custodian voting deadline was 15 September 2026 at 12:00 UTC.\n- The instruction is valid only when accompanied by the required position certificate.\n- Holders may vote without owner-name reporting.\n- There is no requirement for the mandatory return of securities on loan in the final terms.",
+      "field": "registration_required",
+      "expected": "UNKNOWN",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.7346,
+        "NO": 0.0029,
+        "UNKNOWN": 0.2625
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0717945"
+    },
+    {
+      "id": "RC1-0717945",
+      "text": "- You can direct the votes attached to the position shown on this meeting notification.\n- Current instructions conflict about a restriction on dividing the votes; neither version has priority.\n- Current instructions conflict about advance enrolment with the registrar; neither version has priority.\n- Any earlier condition for a power of attorney has been withdrawn and no longer applies.\n- Lodging a ballot immobilises the voted position until the meeting concludes.\n- The custodian voting deadline was 15 September 2026 at 12:00 UTC.\n- The instruction is valid only when accompanied by the required position certificate.\n- Holders may vote without owner-name reporting.\n- There is no requirement for the mandatory return of securities on loan in the final terms.",
+      "field": "other_voting_restriction",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.774,
+        "NO": 0.2228,
+        "UNKNOWN": 0.0032
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0717945"
+    },
+    {
+      "id": "RC1-0717950",
+      "text": "- An electronic voting facility is open for this issuer meeting.\n- Current instructions conflict about a uniform-voting condition; neither version has priority.\n- Documentary proof of ownership is optional and is not a prerequisite for voting.\n- Proxy directions are admissible only with the required attorney mandate.\n- Voting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\n- The registrar requires the ultimate owner’s personal details before processing the ballot.",
+      "field": "beneficial_owner_disclosure_required",
+      "expected": "YES",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.2285,
+        "NO": 0.7653,
+        "UNKNOWN": 0.0062
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0717950"
+    },
+    {
+      "id": "RC1-0717950",
+      "text": "- An electronic voting facility is open for this issuer meeting.\n- Current instructions conflict about a uniform-voting condition; neither version has priority.\n- Documentary proof of ownership is optional and is not a prerequisite for voting.\n- Proxy directions are admissible only with the required attorney mandate.\n- Voting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\n- The registrar requires the ultimate owner’s personal details before processing the ballot.",
+      "field": "split_voting_restricted",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0109,
+        "NO": 0.8965,
+        "UNKNOWN": 0.0926
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0717950"
+    },
+    {
+      "id": "RC1-0717971",
+      "text": "- The custodian will forward completed voting forms to the meeting registrar.\n- A minimum holding of five hundred shares is required to exercise the ballot.\n- We cannot establish from the available terms whether an attorney mandate for voting applies.\n- A nominee cannot divide its votes between different choices for the same resolution.\n- The registrar confirms that the mandatory return of securities on loan is unnecessary for this event.\n- The service desk is available during the custodian’s published business hours.\n- The voting position is frozen from instruction acceptance until the assembly closes.\n- The agent has not confirmed whether owner-name reporting is compulsory for this ballot.\n- Votes are accepted only after the registrar has enrolled the beneficial holder.\n- This communication is distributed through the usual securities-services channel.\n- Voting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.",
+      "field": "holding_confirmation_required",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.8481,
+        "NO": 0.1477,
+        "UNKNOWN": 0.0042
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0717971"
+    },
+    {
+      "id": "RC1-0718161",
+      "text": "The shareholders’ assembly will vote on the remuneration report and election of directors.\n\nDisclosure of the ultimate investor’s identity is optional and is not a prerequisite for voting.\n\nDifferent voting choices cannot be assigned to portions of the same position.\n\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\n\nBeneficial holders with lent shares must arrange their return before voting.\n\nMeeting registration is an optional service and is not a condition of voting.\n\nA duly signed power of attorney must accompany the voting direction.\n\nA further participation restriction is optional and is not a prerequisite for voting.\n\nA disposal restriction attaches to each share committed to this ballot.",
+      "field": "share_blocking",
+      "expected": "YES",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.4058,
+        "NO": 0.5803,
+        "UNKNOWN": 0.014
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0718161"
+    },
+    {
+      "id": "RC1-0718272",
+      "text": "You can direct the votes attached to the position shown on this meeting notification.\n\nThe agent expressly waives a signed POA for this ballot.\n\nBeneficial-owner disclosure is optional and is not a prerequisite for voting.\n\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\n\nThe relevant annex is missing, leaving the condition concerning a holdings certificate uncertain.\n\nThe service desk is available during the custodian’s published business hours.\n\nContact details for administrative enquiries appear in the service directory.\n\nThe current proxy process does not impose meeting registration.",
+      "field": "holding_confirmation_required",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.0002,
+        "NO": 0.6324,
+        "UNKNOWN": 0.3674
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0718272"
+    },
+    {
+      "id": "RC1-0718313",
+      "text": "A proxy voting entitlement is attached to this notification.\n\nThe agent has not confirmed whether documentary proof of ownership is compulsory for this ballot.\n\nAll shares on an instruction must receive an identical voting preference.\n\nWe cannot establish from the available terms whether the recall of lent stock applies.\n\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\n\nThe power of attorney is a mandatory document for this shareholder ballot.\n\nThe custodian cannot submit the ballot until the required meeting registration is complete.\n\nThe voting position is frozen from instruction acceptance until the assembly closes.",
+      "field": "other_voting_restriction",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.7005,
+        "NO": 0.2973,
+        "UNKNOWN": 0.0021
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0718313"
+    },
+    {
+      "id": "RC1-0718373",
+      "text": "Custody operations communication\nShareholder approval is being sought by written resolution; voting directions are accepted.\nThe account currency does not change as a result of this notification.\nRegistration is mandatory even for holders voting electronically through the nominee.\nThe agent expressly waives a uniform-voting condition for this ballot.\nThe registrar’s postal address is unchanged from the previous circular.\nRoutine settlement enquiries should quote the custody account reference.\nThe voting service requires a recall of the relevant securities-lending positions.\nElectronic copies of account statements remain available through the portal.\nThe custodian maintains an archive of notices for the reporting period.\nCopies of the published accounts can be requested from the company secretary.\nAccount reconciliations are performed after the close of each business day.\nDisclosure of the ultimate investor’s identity is optional and is not a prerequisite for voting.\nVoting eligibility must be supported by a current ownership certificate.\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\nHolders should keep a copy of any correspondence for their own records.\nThis market requires an original POA to authorise the nominee’s meeting vote.",
+      "field": "other_voting_restriction",
+      "expected": "NO",
+      "predicted": "YES",
+      "scores": {
+        "YES": 0.8916,
+        "NO": 0.1061,
+        "UNKNOWN": 0.0023
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [
+        "other_voting_restriction:PASSAGE_CONFLICT"
+      ],
+      "record_id": "RC1-0718373"
+    },
+    {
+      "id": "RC1-0718397",
+      "text": "Custody operations communication\nThis operational notice invites proxy votes on current shareholder resolutions.\nThe voting form must identify the beneficial owner behind the custody account.\nThe registrar confirms that a custodian position confirmation is unnecessary for this event.\nMeeting registration is optional and is not a prerequisite for voting.\nThe custodian must recall lent stock as a condition of proxy voting.\nVoting instructions must reach the custodian by 26 November 2026 at 16:00 UTC.\nThere is no requirement for a power of attorney in the final terms.\nThe agent has not confirmed whether an extra market-specific voting condition is compulsory for this ballot.",
+      "field": "other_voting_restriction",
+      "expected": "UNKNOWN",
+      "predicted": "NO",
+      "scores": {
+        "YES": 0.1344,
+        "NO": 0.4582,
+        "UNKNOWN": 0.4074
+      },
+      "confidence": null,
+      "margin": null,
+      "source": "REGISTERED_LAYA_WHOLE_WITH_PASSAGE_EVIDENCE",
+      "escalation": {
+        "escalated": false,
+        "reasons": [
+          "TRAINED_CANDIDATE_BENCHMARK_ONLY"
+        ]
+      },
+      "conflicts": [],
+      "record_id": "RC1-0718397"
+    }
+  ],
+  "scope": "Synthetic/authored research only. No customer accuracy or automation claim.",
+  "complete_fields_exact_match": {
+    "n": 374,
+    "correct": 339
+  },
+  "final_status": {
+    "n": 374,
+    "correct": 347
+  },
+  "deadline": {
+    "n": 374,
+    "correct": 374
+  }
+}

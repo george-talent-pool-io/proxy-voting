@@ -1,0 +1,8 @@
+{
+  "count": 20,
+  "sha256": "787f5a570bd670b200b67a28a72f91815ae6e08e6ff7acbee271ebf15bae8a65",
+  "answers_opened": false,
+  "paired_elapsed_seconds": 307.20935708330944,
+  "physical_qwen_generations_in_this_stream": 20,
+  "latency_scope": "Actual sequential primary requests including lazy cold stage loads"
+}

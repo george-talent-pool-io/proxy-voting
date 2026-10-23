@@ -1,0 +1,18 @@
+{
+  "same_frozen_llm_manifest": true,
+  "model": {
+    "seed_id": "qwen38-indexed-evidence-foundation-v1",
+    "identity": "96f96ff68b62e88245c13d0aab3559084bff5132f7d6f7bdb476ca928b44eb64",
+    "manifest_sha256": "15e0ee8c52c30a055ce39e9cb67aaf380028ddbf2aa92c0e06a1bff19408578e",
+    "prompt_sha256": "9b2c32f2995b11a68aed478cb201d62c75c057157946c3595080c349e0340ca6",
+    "base_revision": "10c35caafbb80f7dc6a7a432cdd11af10a6d4818",
+    "base_model_id": "mlx-community/Qwen3.8-27B-4bit",
+    "provenance": {
+      "kind": "OFFICIAL_FOUNDATION",
+      "lineage": null
+    }
+  },
+  "source_and_schema_equal": true,
+  "independent_mode_context": "Both use the same original notice and empty structured context; no Laya outputs enter the LLM prompt",
+  "scope": "Actual paired native-stage reuse verification; does not turn replay time into measured end-to-end hybrid latency"
+}

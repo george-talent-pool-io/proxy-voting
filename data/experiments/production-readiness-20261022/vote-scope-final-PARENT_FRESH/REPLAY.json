@@ -1,0 +1,7 @@
+{
+  "native_source_sha256": "e9f96437a1f85247fd62a0cf2977e601780c93ed3deb86ddeadcaa025f690e52",
+  "native_scores_unchanged": true,
+  "vote_scope_source_sha256": "13021b9bce96471a769d2f9f17af8af9b70d34f3849c694a490994442c9139d9",
+  "neural_calls": 0,
+  "scope": "Validation-only deterministic replay; not an inference latency benchmark"
+}

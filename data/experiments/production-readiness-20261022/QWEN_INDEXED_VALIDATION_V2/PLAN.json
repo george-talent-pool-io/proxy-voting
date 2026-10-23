@@ -1,0 +1,93 @@
+{
+  "version": "indexed-evidence-pilot-v2",
+  "ids": [
+    "FE1-VALIDATION-00010",
+    "FE1-VALIDATION-00027",
+    "FE1-VALIDATION-00029",
+    "FE1-VALIDATION-00041",
+    "FE1-VALIDATION-00052",
+    "FE1-VALIDATION-00058",
+    "FE1-VALIDATION-00062",
+    "FE1-VALIDATION-00064",
+    "FE1-VALIDATION-00075",
+    "FE1-VALIDATION-00084",
+    "FE1-VALIDATION-00086",
+    "FE1-VALIDATION-00092",
+    "FE1-VALIDATION-00106",
+    "FE1-VALIDATION-00112",
+    "FE1-VALIDATION-00122",
+    "FE1-VALIDATION-00124",
+    "FE1-VALIDATION-00139",
+    "FE1-VALIDATION-00140",
+    "FE1-VALIDATION-00150",
+    "FE1-VALIDATION-00153"
+  ],
+  "prompt_sha256": "8f81737915ca7cbe4843a1614588097c9f5ec5bd1fe0013a3b870408d256c6ee",
+  "source_sha256": "d4d4b6b0ee1092668e617ab9e31a575925d6259d68061d15b3e9ab50874cf064",
+  "schema": {
+    "additionalProperties": false,
+    "properties": {
+      "values": {
+        "items": {
+          "enum": [
+            "VOTABLE",
+            "NOT_VOTABLE",
+            "UNCERTAIN",
+            "YES",
+            "NO",
+            "UNKNOWN"
+          ],
+          "type": "string"
+        },
+        "maxItems": 9,
+        "minItems": 9,
+        "title": "Values",
+        "type": "array"
+      },
+      "evidence": {
+        "items": {
+          "items": {
+            "type": "integer"
+          },
+          "type": "array"
+        },
+        "maxItems": 9,
+        "minItems": 9,
+        "title": "Evidence",
+        "type": "array"
+      },
+      "deadline_mentioned": {
+        "title": "Deadline Mentioned",
+        "type": "boolean"
+      },
+      "deadline": {
+        "items": {
+          "type": "integer"
+        },
+        "title": "Deadline",
+        "type": "array"
+      },
+      "ambiguities": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Ambiguities",
+        "type": "array"
+      }
+    },
+    "required": [
+      "values",
+      "evidence",
+      "deadline_mentioned",
+      "deadline",
+      "ambiguities"
+    ],
+    "title": "Indexed",
+    "type": "object"
+  },
+  "training": false,
+  "population": "DEVELOPMENT_VALIDATION_ONLY",
+  "baseline_freeze_sha256": "5cf867e07e1828530dfc173a360ddd55f33c161303f7e1faa4f2e8bfe40979dc",
+  "raw_class_probabilities": "NOT_REQUESTED_OR_AVAILABLE_IN_THIS_EXPERIMENT",
+  "automation_enabled": false
+}

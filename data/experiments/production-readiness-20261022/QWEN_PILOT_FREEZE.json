@@ -1,0 +1,29 @@
+{
+  "release_identity": "2f4f4889df8bef291948d5e28e8b916d9653457c372a980c1b8bbc53d8619007",
+  "ids": [
+    "FE1-VALIDATION-00092",
+    "FE1-VALIDATION-00010",
+    "FE1-VALIDATION-00075",
+    "FE1-VALIDATION-00064",
+    "FE1-VALIDATION-00084",
+    "FE1-VALIDATION-00153",
+    "FE1-VALIDATION-00106",
+    "FE1-VALIDATION-00140",
+    "FE1-VALIDATION-00150",
+    "FE1-VALIDATION-00124",
+    "FE1-VALIDATION-00062",
+    "FE1-VALIDATION-00027",
+    "FE1-VALIDATION-00029",
+    "FE1-VALIDATION-00139",
+    "FE1-VALIDATION-00086",
+    "FE1-VALIDATION-00041",
+    "FE1-VALIDATION-00052",
+    "FE1-VALIDATION-00058",
+    "FE1-VALIDATION-00112",
+    "FE1-VALIDATION-00122"
+  ],
+  "selection": "First20 validation source hashes, selected before Qwen outputs; development only",
+  "model": "mlx-community/Qwen3.8-27B-4bit",
+  "qwen4_available": false,
+  "automation_enabled": false
+}

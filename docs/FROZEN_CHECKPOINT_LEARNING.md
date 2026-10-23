@@ -24,6 +24,24 @@ uses the official Laya SDK and the pinned MLX conversion of Qwen. An MLX artifac
 is not a Linux CUDA artifact; qualify the exact Linux/Transformers artifact before
 claiming its measured model accuracy, memory use or latency there.
 
+### Semantic wire format
+
+Generative serving and both LLM trainers support `semantic_output_format`:
+`FULL_JSON` (default) or opt-in `INDEXED_EVIDENCE`. The latter emits nine factors
+and integer source-passage IDs. The framework expands those IDs into the same
+canonical semantic result and exact source quotations; it does not fabricate
+probabilities or call them calibrated confidence. Invalid IDs fail validation.
+Both formats use the same complete-JSON-fence normalisation and bounded repair
+policy. The indexed format has its own prompt/protocol version.
+
+Choose the format **before freezing a foundation**. A continuation job cannot
+override its parent's frozen format. New model/format combinations require new
+validation, calibration and independent qualification; existing confidence does
+not transfer. Repeated ambiguous quotations and multi-sentence deadline targets
+that cannot be represented safely fail the indexed training transformation;
+retain `FULL_JSON` or curate an unambiguous annotation. A successful two-update
+format smoke is not a trained domain model.
+
 Freeze a dataset-free starting checkpoint:
 
 ```sh
@@ -90,6 +108,16 @@ Preflight now reports per-predicate, per-class example and group support in both
 development roles. Absent classes and fewer than five training groups produce
 explicit diagnostics; five is a warning threshold, not proof of sufficient
 training. More epochs cannot replace missing supervision or linguistic diversity.
+
+Optional `laya_evidence_passage_multiplier` (0 by default; maximum 8) adds exact
+annotated TRAIN evidence questions alongside complete notices. Only the annotated
+predicate is projected; other sentence labels are not inferred. Unique passages,
+effective repetitions, source IDs/offsets and label origins are recorded. The
+derived inputs themselves must pass protected-input and validation-duplicate
+checks before updates. If a training quotation equals a short validation notice,
+regroup the data before augmentation. A TRAIN-only parent alone is insufficient
+leakage protection. A quarantined attempt cannot serve or be exported as a new
+starting checkpoint.
 The SDK supports separate encoder/head learning rates; the framework now exposes
 them separately. Official SDK reference:
 https://nandhakishorm.github.io/laya/reference/train/ (retrieved 2026-10-18).

@@ -157,6 +157,8 @@ def statistics(records, policy):
     from semantic_pipeline.metrics import field_metrics
     fields = {k: field_metrics([r['truth'][k] for r in records], [r['prediction'][k] for r in records],
                                'VOTABLE' if k == 'votability' else 'YES') for k in PREDICATES}
+    unresolved_truth=sum(any(r['truth'][k] in ('UNKNOWN','UNCERTAIN') for k in PREDICATES) for r in records)
+    truth_review_floor=unresolved_truth/len(records)
     return {'cases': len(records), 'independent_groups': len(groups), 'accepted': len(accepted), 'per_predicate': fields,
             'all_fields_exact_correct': sum(r['exact_correct'] for r in records),
             'accepted_groups': len(by_group), 'wrong_auto_processed': sum(not r['exact_correct'] for r in accepted),
@@ -165,6 +167,10 @@ def statistics(records, policy):
             'expected_total_review_rate_including_audits': total_review,
             'random_audit_rate_of_otherwise_accepted': p.random_audit_rate,
             'review_rate_scope': 'review_rate is confidence/evidence review before random audits; total is the policy expected rate, not a realised finite-sample guarantee',
+            'truth_unresolved_records':unresolved_truth,
+            'truth_review_rate_lower_bound':truth_review_floor,
+            'truth_review_floor_including_expected_audits':truth_review_floor+(1-truth_review_floor)*p.random_audit_rate,
+            'truth_review_floor_scope':'Analytical lower bound from independently scored UNKNOWN/UNCERTAIN semantic truth when all nine requested fields must be resolved; excludes additional deadline/evidence/OOD review. Not a routing policy or customer-population forecast.',
             'critical': recall,
             'statistical_gate_passed': not reasons, 'reasons': reasons,
             'bound_method': 'One-sided exact binomial bounds on worst-outcome independent groups; Bonferroni over five claims',

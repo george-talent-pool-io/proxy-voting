@@ -49,3 +49,20 @@ def test_fresh_cohort_roles_keys_and_fact_first_evidence(tmp_path):
         if role=='FROZEN_TEST':assert entry['labels'].startswith('private/')
     assert all(len(v)==1 for v in memberships.values())
     assert m['customer_accuracy'] is None and not m['automation_enabled']
+
+
+def test_indexed_output_resolves_only_exact_source_spans():
+    from training.reliability.indexed_pilot import expand
+    text='Shareholders may vote. A power of attorney is required.'
+    output={'values':['VOTABLE','NO','YES','NO','NO','NO','NO','NO','NO'],
+            'evidence':[[0],[],[1],[],[],[],[],[],[]],
+            'deadline_mentioned':False,'deadline':[],'ambiguities':[]}
+    result=expand(text,json.dumps(output))
+    assert result['evidence']['poa_required']==['A power of attorney is required.']
+    import pytest
+    output['evidence'][2]=[20]
+    with pytest.raises(ValueError,match='outside complete source'):expand(text,json.dumps(output))
+    output['evidence'][2]=[1,1]
+    with pytest.raises(ValueError,match='Duplicate evidence'):expand(text,json.dumps(output))
+    output['evidence'][2]=[1];output['values'][0]='YES'
+    with pytest.raises(ValueError):expand(text,json.dumps(output))

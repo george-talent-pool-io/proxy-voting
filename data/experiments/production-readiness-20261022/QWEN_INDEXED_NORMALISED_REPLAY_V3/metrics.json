@@ -1,0 +1,10 @@
+{
+  "cases": 20,
+  "assertions": 180,
+  "correct_assertions": 180,
+  "final_status_correct": 16,
+  "schema_failures": 0,
+  "normalised_whole_json_fences": 12,
+  "latency_median_seconds": 13.838688833406195,
+  "generated_tokens_mean": 146.4
+}

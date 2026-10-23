@@ -59,3 +59,31 @@ def test_invalid_evidence_training_multiplier_rejected(tmp_path,multiplier):
 def test_llm_cannot_silently_enable_laya_projection(tmp_path):
     with pytest.raises(ValidationError,match='Evidence passage training'):
         TrainSpec.model_validate({**spec(tmp_path,'TRANSFORMERS_PEFT').model_dump(),'laya_evidence_passage_multiplier':1})
+
+
+def test_derived_quote_matching_complete_validation_notice_is_rejected(bundle,tmp_path,monkeypatch):
+    from training.framework import bundle as module
+    a=example();b=example('b','VALIDATION')
+    # Full TRAIN text differs, but the projected evidence equals the validation
+    # input. Checking only complete parent notices would miss this leakage.
+    a.text='New operational wrapper. '+b.text
+    a.target.evidence.votability=[b.text]
+    monkeypatch.setattr(module,'load_bundle',lambda p:({},[a,b]))
+    with pytest.raises(ValueError,match='Derived TRAIN evidence duplicates'):
+        laya_training_input(bundle,tmp_path/'checkpoint',spec(tmp_path).model_copy(update={'laya_evidence_passage_multiplier':1}))
+
+
+def test_protected_guard_receives_derived_source_not_only_parent(bundle,tmp_path,monkeypatch):
+    from training.framework import event_data
+    calls=[]
+    def refuse(examples):
+        calls.extend(examples);raise ValueError('Protected derived input')
+    monkeypatch.setattr(event_data,'reject_protected',refuse)
+    # load_bundle invokes the same barrier on full parents first. Allow that
+    # call, then assert the derived input is independently checked.
+    def inspect(examples):
+        if examples and not hasattr(examples[0],'target'):return refuse(examples)
+    monkeypatch.setattr(event_data,'reject_protected',inspect)
+    with pytest.raises(ValueError,match='Protected derived input'):
+        laya_training_input(bundle,tmp_path/'checkpoint',spec(tmp_path).model_copy(update={'laya_evidence_passage_multiplier':1}))
+    assert calls and calls[0].text==example().text
